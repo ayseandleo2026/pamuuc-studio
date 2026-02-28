@@ -1154,6 +1154,19 @@ html[lang="en"] .cta-shell h2 {
     hyphens: auto;
   }
 
+  html[lang="en"] .hero-content h1,
+  html[lang="en"] .hero-content h2,
+  html[lang="en"] .hero-content h3,
+  html[lang="en"] .positioning-shell h2,
+  html[lang="en"] .split-copy h2,
+  html[lang="en"] .section-heading h2,
+  html[lang="en"] .comparison-heading h2,
+  html[lang="en"] .cta-shell h2 {
+    white-space: normal;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
   .split-copy p,
   .process-step p,
   .comparison-table p,
@@ -1776,6 +1789,10 @@ html[lang="en"] .cta-shell h2 {
     gap: 5px;
   }
 
+  .header-actions {
+    gap: 4px;
+  }
+
   .brand-icon {
     width: 30px;
     height: 30px;
@@ -1826,6 +1843,17 @@ html[lang="en"] .cta-shell h2 {
 
   .hero-content h3 {
     font-size: 0.7rem;
+  }
+
+  html[lang="en"] .hero-content h1,
+  html[lang="en"] .hero-content h2,
+  html[lang="en"] .hero-content h3,
+  html[lang="en"] .positioning-shell h2,
+  html[lang="en"] .split-copy h2,
+  html[lang="en"] .section-heading h2,
+  html[lang="en"] .comparison-heading h2,
+  html[lang="en"] .cta-shell h2 {
+    white-space: normal;
   }
 
   .positioning-shell,
