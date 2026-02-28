@@ -50,12 +50,25 @@
             aria-label="Language selector"
             data-i18n-label="accessibility.languages"
           >
-            <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
-              EN
+            <button
+              class="language-toggle"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Language selector"
+              data-i18n-label="accessibility.languages"
+            >
+              <span class="language-current">EN</span>
+              <span class="language-chevron" aria-hidden="true"></span>
             </button>
-            <button class="language-button" type="button" data-lang="fr" aria-pressed="false">FR</button>
-            <button class="language-button" type="button" data-lang="es" aria-pressed="false">ES</button>
-            <button class="language-button" type="button" data-lang="it" aria-pressed="false">IT</button>
+            <div class="language-options">
+              <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
+                EN
+              </button>
+              <button class="language-button" type="button" data-lang="fr" aria-pressed="false">FR</button>
+              <button class="language-button" type="button" data-lang="es" aria-pressed="false">ES</button>
+              <button class="language-button" type="button" data-lang="it" aria-pressed="false">IT</button>
+            </div>
           </div>
 
           <button
@@ -169,7 +182,10 @@
       <section class="site-section comparison-section">
         <div class="comparison-shell">
           <div class="comparison-heading">
-            <h2 data-i18n="comparison.title">FROM BESPOKE DEVELOPMENT TO LONG-TERM OPERATIONAL SYSTEM</h2>
+            <h2 data-i18n-html="comparison.titleHtml">
+              <span class="mobile-title-line">FROM BESPOKE DEVELOPMENT</span>
+              <span class="mobile-title-line">TO LONG-TERM OPERATIONAL SYSTEM</span>
+            </h2>
             <p class="comparison-intro" data-i18n="comparison.intro">
               Every project begins as a fully bespoke development. Once validated, it becomes a
               long-term operational system.
@@ -470,7 +486,10 @@
 
       <section class="site-section cta-section">
         <div class="cta-shell">
-          <h2 data-i18n="cta.title">UNLOCK FULLY PERSONALISED UNIFORMS FOR YOU AND YOUR TEAM</h2>
+          <h2 data-i18n-html="cta.titleHtml">
+            <span class="mobile-title-line">UNLOCK FULLY PERSONALISED UNIFORMS</span>
+            <span class="mobile-title-line">FOR YOU AND YOUR TEAM</span>
+          </h2>
           <p data-i18n="cta.body">
             Nothing is standard. From fabrics to finishes, every element is selected and developed to
             match your environment, your team, and your brand identity.

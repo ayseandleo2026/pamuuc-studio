@@ -43,6 +43,8 @@ const translations = {
     "signature.p3":
       "Each garment is resolved as part of one system: front of house, management, kitchen, reception, and service teams aligned through a controlled visual language.",
     "comparison.title": "FROM BESPOKE DEVELOPMENT TO LONG-TERM OPERATIONAL SYSTEM",
+    "comparison.titleHtml":
+      '<span class="mobile-title-line">FROM BESPOKE DEVELOPMENT</span><span class="mobile-title-line">TO LONG-TERM OPERATIONAL SYSTEM</span>',
     "comparison.intro":
       "Every project begins as a fully bespoke development. Once validated, it becomes a long-term operational system.",
     "comparison.columns.one": "ONE OF ONE",
@@ -146,6 +148,8 @@ const translations = {
     "materials.branding.item7": "Custom colour matching",
     "materials.branding.item8": "Internal naming systems",
     "cta.title": "UNLOCK FULLY PERSONALISED UNIFORMS FOR YOU AND YOUR TEAM",
+    "cta.titleHtml":
+      '<span class="mobile-title-line">UNLOCK FULLY PERSONALISED UNIFORMS</span><span class="mobile-title-line">FOR YOU AND YOUR TEAM</span>',
     "cta.body":
       "Nothing is standard. From fabrics to finishes, every element is selected and developed to match your environment, your team, and your brand identity.",
     "team.title": "MEET THE TEAM",
@@ -221,6 +225,8 @@ const translations = {
     "signature.p3":
       "Chaque piece est resolue comme un systeme unique: salle, management, cuisine, reception et service, relies par un langage visuel controle.",
     "comparison.title": "DU DEVELOPPEMENT SUR MESURE A UN SYSTEME OPERATIONNEL DURABLE",
+    "comparison.titleHtml":
+      '<span class="mobile-title-line">DU DEVELOPPEMENT SUR MESURE</span><span class="mobile-title-line">A UN SYSTEME OPERATIONNEL DURABLE</span>',
     "comparison.intro":
       "Chaque projet commence comme un developpement entierement sur mesure. Une fois valide, il devient un systeme operationnel de long terme.",
     "comparison.columns.one": "ONE OF ONE",
@@ -324,6 +330,8 @@ const translations = {
     "materials.branding.item7": "Correspondance couleur sur mesure",
     "materials.branding.item8": "Systemes de nomenclature internes",
     "cta.title": "DEBLOQUEZ DES UNIFORMES ENTIEREMENT PERSONNALISES POUR VOUS ET VOTRE EQUIPE",
+    "cta.titleHtml":
+      '<span class="mobile-title-line">DEBLOQUEZ DES UNIFORMES</span><span class="mobile-title-line">ENTIEREMENT PERSONNALISES POUR VOTRE EQUIPE</span>',
     "cta.body":
       "Rien n'est standard. Des tissus aux finitions, chaque element est selectionne et developpe pour correspondre a votre environnement, votre equipe et votre identite de marque.",
     "team.title": "RENCONTREZ L'EQUIPE",
@@ -399,6 +407,8 @@ const translations = {
     "signature.p3":
       "Cada prenda se resuelve como parte de un solo sistema: sala, direccion, cocina, recepcion y servicio alineados mediante un lenguaje visual controlado.",
     "comparison.title": "DEL DESARROLLO A MEDIDA A UN SISTEMA OPERATIVO A LARGO PLAZO",
+    "comparison.titleHtml":
+      '<span class="mobile-title-line">DEL DESARROLLO A MEDIDA</span><span class="mobile-title-line">A UN SISTEMA OPERATIVO A LARGO PLAZO</span>',
     "comparison.intro":
       "Cada proyecto comienza como un desarrollo totalmente a medida. Una vez validado, se convierte en un sistema operativo a largo plazo.",
     "comparison.columns.one": "ONE OF ONE",
@@ -502,6 +512,8 @@ const translations = {
     "materials.branding.item7": "Igualacion de color personalizada",
     "materials.branding.item8": "Sistemas internos de nomenclatura",
     "cta.title": "DESBLOQUEE UNIFORMES TOTALMENTE PERSONALIZADOS PARA USTED Y SU EQUIPO",
+    "cta.titleHtml":
+      '<span class="mobile-title-line">DESBLOQUEE UNIFORMES</span><span class="mobile-title-line">TOTALMENTE PERSONALIZADOS PARA SU EQUIPO</span>',
     "cta.body":
       "Nada es estandar. Desde los tejidos hasta los acabados, cada elemento se selecciona y se desarrolla para encajar con su entorno, su equipo y su identidad de marca.",
     "team.title": "CONOZCA AL EQUIPO",
@@ -577,6 +589,8 @@ const translations = {
     "signature.p3":
       "Ogni capo viene risolto come parte di un unico sistema: sala, management, cucina, reception e servizio allineati attraverso un linguaggio visivo controllato.",
     "comparison.title": "DALLO SVILUPPO BESPOKE A UN SISTEMA OPERATIVO DI LUNGO TERMINE",
+    "comparison.titleHtml":
+      '<span class="mobile-title-line">DALLO SVILUPPO BESPOKE</span><span class="mobile-title-line">A UN SISTEMA OPERATIVO DI LUNGO TERMINE</span>',
     "comparison.intro":
       "Ogni progetto inizia come uno sviluppo completamente bespoke. Una volta validato, diventa un sistema operativo di lungo termine.",
     "comparison.columns.one": "ONE OF ONE",
@@ -680,6 +694,8 @@ const translations = {
     "materials.branding.item7": "Abbinamento colore personalizzato",
     "materials.branding.item8": "Sistemi interni di denominazione",
     "cta.title": "SBLOCCATE UNIFORMI TOTALMENTE PERSONALIZZATE PER VOI E IL VOSTRO TEAM",
+    "cta.titleHtml":
+      '<span class="mobile-title-line">SBLOCCATE UNIFORMI</span><span class="mobile-title-line">TOTALMENTE PERSONALIZZATE PER IL VOSTRO TEAM</span>',
     "cta.body":
       "Nulla e standard. Dai tessuti alle finiture, ogni elemento viene selezionato e sviluppato per adattarsi al vostro ambiente, al vostro team e alla vostra identita di brand.",
     "team.title": "INCONTRATE IL TEAM",
@@ -715,8 +731,12 @@ const translations = {
 
 const languageButtons = document.querySelectorAll(".language-button");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
+const translatableHtmlNodes = document.querySelectorAll("[data-i18n-html]");
 const labelNodes = document.querySelectorAll("[data-i18n-label]");
 const titleNodes = document.querySelectorAll("[data-i18n-title]");
+const languageSwitcher = document.querySelector(".language-switcher");
+const languageToggle = document.querySelector(".language-toggle");
+const languageCurrent = document.querySelector(".language-current");
 const menuButton = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector(".site-nav");
 const metaDescription = document.querySelector('meta[name="description"]');
@@ -725,6 +745,15 @@ const menuMediaQuery = window.matchMedia("(max-width: 1024px)");
 function closeMenu() {
   document.body.classList.remove("menu-open");
   menuButton.setAttribute("aria-expanded", "false");
+}
+
+function closeLanguageMenu() {
+  if (!languageSwitcher || !languageToggle) {
+    return;
+  }
+
+  languageSwitcher.classList.remove("is-open");
+  languageToggle.setAttribute("aria-expanded", "false");
 }
 
 function applyLanguage(lang) {
@@ -738,6 +767,13 @@ function applyLanguage(lang) {
     const key = node.dataset.i18n;
     if (dictionary[key]) {
       node.textContent = dictionary[key];
+    }
+  });
+
+  translatableHtmlNodes.forEach((node) => {
+    const key = node.dataset.i18nHtml;
+    if (dictionary[key]) {
+      node.innerHTML = dictionary[key];
     }
   });
 
@@ -760,18 +796,33 @@ function applyLanguage(lang) {
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
+
+  if (languageCurrent) {
+    languageCurrent.textContent = lang.toUpperCase();
+  }
 }
 
 menuButton.addEventListener("click", () => {
+  closeLanguageMenu();
   const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
   document.body.classList.toggle("menu-open", !isExpanded);
   menuButton.setAttribute("aria-expanded", String(!isExpanded));
 });
 
+if (languageToggle) {
+  languageToggle.addEventListener("click", () => {
+    closeMenu();
+    const isExpanded = languageToggle.getAttribute("aria-expanded") === "true";
+    languageSwitcher.classList.toggle("is-open", !isExpanded);
+    languageToggle.setAttribute("aria-expanded", String(!isExpanded));
+  });
+}
+
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
     applyLanguage(button.dataset.lang);
     closeMenu();
+    closeLanguageMenu();
   });
 });
 
@@ -784,24 +835,33 @@ siteNav.querySelectorAll("a").forEach((link) => {
 });
 
 document.addEventListener("click", (event) => {
-  if (!menuMediaQuery.matches || !document.body.classList.contains("menu-open")) {
-    return;
+  if (menuMediaQuery.matches && document.body.classList.contains("menu-open")) {
+    if (!siteNav.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMenu();
+    }
   }
 
-  if (!siteNav.contains(event.target) && !menuButton.contains(event.target)) {
-    closeMenu();
+  if (menuMediaQuery.matches && languageSwitcher && languageSwitcher.classList.contains("is-open")) {
+    if (!languageSwitcher.contains(event.target)) {
+      closeLanguageMenu();
+    }
   }
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && document.body.classList.contains("menu-open")) {
-    closeMenu();
+  if (event.key === "Escape") {
+    if (document.body.classList.contains("menu-open")) {
+      closeMenu();
+    }
+
+    closeLanguageMenu();
   }
 });
 
 menuMediaQuery.addEventListener("change", (event) => {
   if (!event.matches) {
     closeMenu();
+    closeLanguageMenu();
   }
 });
 
