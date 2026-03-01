@@ -1,763 +1,750 @@
-const translations = {
+const copy = {
   en: {
-    "meta.title": "PAMUUC STUDIO | Custom Uniforms for Premium Hospitality Teams",
+    "meta.title": "PAMUUC STUDIO | Bespoke Wardrobe Systems for Premium Hospitality",
     "meta.description":
-      "PAMUUC STUDIO designs and produces custom uniform systems for premium hospitality and service teams with craftsmanship, local production control, and operational precision.",
+      "Pamuuc Studio designs and produces bespoke wardrobe systems for premium hospitality and high-performing service teams through spatial analysis, technical development, and controlled local production.",
     "accessibility.skip": "Skip to content",
-    "accessibility.home": "PAMUUC Studio home",
+    "accessibility.home": "Pamuuc Studio home",
     "accessibility.menu": "Open navigation menu",
     "accessibility.languages": "Language selector",
-    "accessibility.cta": "Move to contact section",
-    "nav.whyUs": "Why Us",
+    "nav.approach": "Approach",
     "nav.process": "Process",
+    "nav.parameters": "Parameters",
     "nav.team": "Team",
     "nav.contact": "Contact",
-    "hero.h1": "YOUR VISION, OUR CRAFT",
-    "hero.h2": "Garments Shaped by the Experience You Deserve",
-    "hero.h3": "Crafted to Inspire. Designed to Belong.",
-    "placeholders.heroDesktop": "Desktop hero image placeholder",
-    "placeholders.heroMobile": "Mobile hero image placeholder",
-    "placeholders.purposeImage": "Philosophy image placeholder",
-    "placeholders.signatureImage": "Signature image placeholder",
-    "placeholders.capabilitiesImage": "Collection development image placeholder",
-    "placeholders.team1Portrait": "Portrait placeholder",
-    "placeholders.team2Portrait": "Portrait placeholder",
-    "placeholders.team3Portrait": "Portrait placeholder",
-    "placeholders.team4Portrait": "Portrait placeholder",
-    "why.title": "A NEW WAY OF DEVELOPING UNIFORMS",
-    "why.body":
-      "We design and produce structured wardrobe systems for premium and high-performing teams, built around space, hierarchy, and operational reality.",
-    "philosophy.title": "OUR PURPOSE",
-    "philosophy.p1":
-      "We shape the identity of luxury and high-performing spaces through tailored garments designed with intention and crafted with restraint.",
-    "philosophy.p2": "We do not begin with a garment. We begin with the space.",
-    "philosophy.p3":
-      "Architecture, atmosphere, service rhythm, climate, and operational reality define every project. From there, we construct wardrobe systems that feel natural, functional, and enduring.",
-    "philosophy.p4":
-      "Developed close to Barcelona, each project is built through proximity, dialogue, and controlled production. Vision translates into form with clarity and precision.",
-    "signature.title": "A SIGNATURE, NOT A UNIFORM",
-    "signature.p1":
-      "A wardrobe should never feel borrowed from another context. It should read as part of the environment, as deliberate as the materials, the lighting, and the rhythm of service.",
-    "signature.p2":
-      "We translate brand positioning into silhouettes, proportions, and details that reinforce hierarchy without theatricality. The result is coherent, recognisable, and immediately usable on the floor.",
-    "signature.p3":
-      "Each garment is resolved as part of one system: front of house, management, kitchen, reception, and service teams aligned through a controlled visual language.",
-    "comparison.title": "FROM BESPOKE DEVELOPMENT TO LONG-TERM OPERATIONAL SYSTEM",
-    "comparison.titleHtml":
-      '<span class="mobile-title-line">FROM BESPOKE DEVELOPMENT</span><span class="mobile-title-line">TO LONG-TERM OPERATIONAL SYSTEM</span>',
+    "hero.eyebrow": "Design and production studio",
+    "hero.title": "STRUCTURED WARDROBE SYSTEMS FOR PREMIUM HOSPITALITY",
+    "hero.summary":
+      "Pamuuc Studio develops bespoke wardrobe systems for hospitality and service teams through spatial analysis, technical refinement, and controlled local production.",
+    "hero.metaOne": "Barcelona-based oversight",
+    "hero.metaTwo": "One client, one execution",
+    "hero.metaThree": "Patterns archived for continuity",
+    "hero.cta": "Start building with us",
+    "approach.label": "Positioning",
+    "approach.title": "We begin with the space",
+    "approach.p1":
+      "Architecture, light, materiality, atmosphere, service rhythm, and guest interaction define every commission before a garment is drawn.",
+    "approach.p2":
+      "Each collaboration opens with structured analysis. Roles, posture, heat exposure, laundering cycles, movement, and strain points are treated as design inputs, not production afterthoughts.",
+    "approach.p3":
+      "The wardrobe is developed as a structural extension of the environment, aligned with hierarchy, performance, and real working conditions.",
+    "system.label": "Method",
+    "system.title": "Not isolated pieces. A system.",
+    "system.p1":
+      "Silhouette, fabric weight, colour logic, and branding placement are coordinated across roles so leadership, floor staff, reception, and kitchen-adjacent functions remain coherent without appearing identical.",
+    "system.p2":
+      "Tailoring can sharpen where authority matters and relax where mobility and breathability are critical. Accessories are developed as structural components with a clear operational purpose.",
+    "system.p3":
+      "Every collection is developed exclusively for the client. No catalogue. No resale. One wardrobe system for one operational context.",
+    "comparison.label": "Continuity model",
+    "comparison.title": "Bespoke phase. Operational continuity.",
     "comparison.intro":
-      "Every project begins as a fully bespoke development. Once validated, it becomes a long-term operational system.",
-    "comparison.columns.one": "ONE OF ONE",
-    "comparison.columns.ongoing": "ONGOING",
-    "comparison.rows.scope.label": "Scope",
-    "comparison.rows.scope.one":
-      "A fully custom wardrobe system developed exclusively for your space, your team structure, and your brand positioning.",
+      "Each project begins as bespoke development and becomes a stable wardrobe system once fit, pattern, and construction are validated.",
+    "comparison.headings.criteria": "Criteria",
+    "comparison.headings.bespoke": "Bespoke phase",
+    "comparison.headings.ongoing": "Operational phase",
+    "comparison.rows.scope.title": "Scope",
+    "comparison.rows.scope.bespoke":
+      "Developed around your space, hierarchy, climate, and service model.",
     "comparison.rows.scope.ongoing":
-      "The approved wardrobe becomes a stable operational system that can be reordered, maintained, and evolved over time.",
-    "comparison.rows.development.label": "Development",
-    "comparison.rows.development.one":
-      "Designed from scratch. Patterns, fits, fabrics, and construction are developed specifically for your environment.",
+      "Maintained as an operational asset for reorders, new hires, and expansion.",
+    "comparison.rows.development.title": "Development",
+    "comparison.rows.development.bespoke":
+      "Patterns, fabrics, and construction logic are specified and tested from the ground up.",
     "comparison.rows.development.ongoing":
-      "Validated patterns are archived. Future production uses the same approved bases to guarantee consistency.",
-    "comparison.rows.duplication.label": "Duplication",
-    "comparison.rows.duplication.one":
-      "The system is created uniquely for you. It is not reused, resold, or replicated for other clients.",
-    "comparison.rows.duplication.ongoing":
-      "The system remains exclusive to you while being reproduced internally for your future operational needs.",
-    "comparison.rows.reorders.label": "Reorders",
-    "comparison.rows.reorders.one":
-      "After approval, garments can be reordered using the validated patterns without restarting development.",
-    "comparison.rows.reorders.ongoing":
-      "Reorders are seamless, fast, and aligned with your existing standards.",
-    "process.title": "PROCESS",
+      "Approved bases are archived and reactivated without reopening the design phase.",
+    "comparison.rows.exclusivity.title": "Exclusivity",
+    "comparison.rows.exclusivity.bespoke":
+      "One client, one collection, one execution, with no resale of developed garments.",
+    "comparison.rows.exclusivity.ongoing":
+      "The system remains exclusive while production scales with consistency.",
+    "comparison.rows.speed.title": "Continuity",
+    "comparison.rows.speed.bespoke":
+      "Fittings, sampling, and refinements establish the correct performance standard.",
+    "comparison.rows.speed.ongoing":
+      "Reorders move faster because fit, grading, and construction rules are already controlled.",
+    "midCta.text": "Start building with us",
+    "process.label": "Process",
+    "process.title": "Defined stages. Controlled execution.",
     "process.intro":
-      "From first brief to final delivery, each stage is structured to keep decisions clear, lead times controlled, and the wardrobe aligned with operations.",
-    "process.steps.analysis.title": "Space & Operational Analysis",
-    "process.steps.analysis.body":
-      "We read the space, the service model, the climate, and the team hierarchy before drawing a single line.",
-    "process.steps.selection.title": "Base Pattern & Fabric Selection",
-    "process.steps.selection.body":
-      "We build from proven foundations, selecting the right base fits, fabrication families, and technical finishes.",
-    "process.steps.sampling.title": "Sampling & Refinement",
-    "process.steps.sampling.body":
-      "First samples are tested on the body and in context. Proportions, comfort, and visual balance are refined.",
-    "process.steps.production.title": "Production & Delivery",
-    "process.steps.production.body":
-      "Approved styles move into controlled local production with graded sizes, planned timelines, and consistent execution.",
-    "process.timeline.development": "Average Development: 4 to 6 weeks",
-    "process.timeline.production": "Average Production: 3 to 5 weeks",
-    "process.timeline.custom": "Fully custom projects: approx. 8 weeks total",
-    "process.timeline.simple": "Simpler constructions: 5 to 6 weeks",
-    "capabilities.title": "CAPABILITIES & PRODUCTION PARAMETERS",
-    "capabilities.leftTitle": "WHAT WE DEVELOP",
-    "capabilities.items.shirts": "Tailored Shirts",
-    "capabilities.items.trousers": "Structured Trousers",
-    "capabilities.items.tailoring": "Blazers & Tailoring",
-    "capabilities.items.dresses": "Dresses & Skirts",
-    "capabilities.items.knitwear": "Knitwear",
-    "capabilities.items.aprons": "Aprons & Accessories",
-    "capabilities.items.systems": "Complete Wardrobe Systems",
-    "capabilities.support":
-      "Every garment is built from a proven base and refined to reflect your identity.",
-    "parameters.title": "PRODUCTION PARAMETERS",
-    "parameters.moq.title": "Minimum Order Quantities",
-    "parameters.moq.line1": "Woven styles: from 50 pieces per style",
-    "parameters.moq.line2": "Knitwear: 100 to 150 pieces per style",
-    "parameters.smallRuns.title": "SMALLER RUNS",
-    "parameters.smallRuns.p1":
-      "Smaller production runs are possible. However, lower quantities result in higher unit costs due to reduced production efficiency and increased development allocation.",
-    "parameters.smallRuns.p2":
-      "Below 50 pieces per style, pricing will increase proportionally.",
-    "parameters.price.title": "Typical Price Range",
-    "parameters.price.body": "€25 to €120 per piece (VAT excluded)",
-    "parameters.impact.title": "What impacts pricing",
-    "parameters.impact.item1": "Fabric selection and weight",
-    "parameters.impact.item2": "Construction complexity",
-    "parameters.impact.item3": "Trims, labels, buttons, and branding",
-    "parameters.impact.item4": "Embroidery or printing techniques",
-    "parameters.impact.item5": "Custom colour development (300+ pieces in same fabric)",
-    "parameters.note.title": "Note",
-    "parameters.note.body":
-      "All prices include a base level of customization. Additional personalization may increase cost due to extra development and production complexity.",
-    "materials.title": "MATERIALS & TECHNIQUES",
-    "materials.fabrics.title": "FABRICS",
-    "materials.fabrics.item1": "Cotton poplin",
-    "materials.fabrics.item2": "Stretch twill",
-    "materials.fabrics.item3": "Gabardine",
-    "materials.fabrics.item4": "Wool blends",
-    "materials.fabrics.item5": "Performance jersey",
-    "materials.fabrics.item6": "Knit structures",
-    "materials.fabrics.item7": "Apron canvas",
-    "materials.fabrics.item8": "Washable suiting",
-    "materials.construction.title": "CONSTRUCTION & TRIMS",
-    "materials.construction.item1": "Pattern development",
-    "materials.construction.item2": "Fit grading",
-    "materials.construction.item3": "Reinforced seams",
-    "materials.construction.item4": "Custom buttons",
-    "materials.construction.item5": "Hidden closures",
-    "materials.construction.item6": "Contrast piping",
-    "materials.construction.item7": "Care labelling",
-    "materials.construction.item8": "Apron hardware",
-    "materials.branding.title": "BRANDING TECHNIQUES",
-    "materials.branding.item1": "Embroidery",
-    "materials.branding.item2": "Woven labels",
-    "materials.branding.item3": "Screen printing",
-    "materials.branding.item4": "Heat transfers",
-    "materials.branding.item5": "Laser engraving",
-    "materials.branding.item6": "Tonal monograms",
-    "materials.branding.item7": "Custom colour matching",
-    "materials.branding.item8": "Internal naming systems",
-    "cta.title": "UNLOCK FULLY PERSONALISED UNIFORMS FOR YOU AND YOUR TEAM",
-    "cta.titleHtml":
-      '<span class="mobile-title-line">UNLOCK FULLY PERSONALISED UNIFORMS</span><span class="mobile-title-line">FOR YOU AND YOUR TEAM</span>',
-    "cta.body":
-      "Nothing is standard. From fabrics to finishes, every element is selected and developed to match your environment, your team, and your brand identity.",
-    "team.title": "MEET THE TEAM",
+      "Development moves through fixed checkpoints so visual direction, technical approval, and production timing remain clear at every stage.",
+    "process.steps.analysis.title": "Analysis",
+    "process.steps.analysis.body": "Spatial, operational, and role mapping.",
+    "process.steps.pattern.title": "Base pattern",
+    "process.steps.pattern.body": "Technical base selection and specification.",
+    "process.steps.fabric.title": "Fabric validation",
+    "process.steps.fabric.body": "Weight, weave, recovery, and exposure testing.",
+    "process.steps.sample.title": "Prototype sampling",
+    "process.steps.sample.body": "Construction review in movement, not on mannequins.",
+    "process.steps.fit.title": "Fittings",
+    "process.steps.fit.body": "Refinement across body types within the team.",
+    "process.steps.validation.title": "Pre-production",
+    "process.steps.validation.body": "Final validation of finishes, grading, and branding.",
+    "process.steps.production.title": "Local production",
+    "process.steps.production.body": "Controlled manufacturing close to Barcelona.",
+    "process.timeline.one": "Development 4-6 weeks",
+    "process.timeline.two": "Production 3-5 weeks",
+    "process.timeline.three": "Full custom about 8 weeks",
+    "process.timeline.four": "Simple builds 5-6 weeks",
+    "capabilities.label": "Capabilities",
+    "capabilities.title": "What we develop",
+    "capabilities.items.one": "Tailored shirts and structured trousers",
+    "capabilities.items.two": "Blazers, waistcoats, dresses, and skirts",
+    "capabilities.items.three": "Knitwear, aprons, overshirts, and light outer layers",
+    "capabilities.items.four": "Technical accessories and seasonal system updates",
+    "capabilities.body":
+      "Construction details may include reinforced plackets, ergonomic strap systems, hidden compartments, stretch panels, concealed closures, technical lining, and tone-on-tone branding.",
+    "parameters.label": "Parameters",
+    "parameters.title": "Production parameters",
+    "parameters.moq.title": "Minimum quantities",
+    "parameters.moq.body":
+      "Woven garments typically begin at 50 pieces per style. Knitwear usually requires 100 to 150 pieces per style because of machine setup constraints.",
+    "parameters.price.title": "Typical pricing",
+    "parameters.price.body":
+      "Typical ranges extend from EUR25 to EUR120 per piece excluding VAT, depending on fabric, tailoring complexity, finishing, and branding method.",
+    "parameters.custom.title": "Customization level",
+    "parameters.custom.body":
+      "Base customization is included. Exclusive hardware, custom weaving, special trims, and complex embroidery increase development and production time.",
+    "parameters.pricingDrivers.title": "What shapes cost",
+    "parameters.pricingDrivers.one": "Fabric sourcing, weight, and weave structure",
+    "parameters.pricingDrivers.two": "Construction detail, lining, and reinforcement",
+    "parameters.pricingDrivers.three": "Embroidery, printing, labels, and custom hardware",
+    "parameters.pricingDrivers.four": "Custom colour development above 300 pieces per fabric",
+    "materials.label": "Materials and techniques",
+    "materials.title": "Function first. Refined with restraint.",
+    "materials.intro":
+      "Material selection is defined by exposure, laundering frequency, recovery, drape, and the operational posture of each role.",
+    "materials.columns.fabrics.title": "Fabrics",
+    "materials.columns.fabrics.one": "Cotton, linen, tencel, bamboo, and technical blends",
+    "materials.columns.fabrics.two": "Wovens, knits, washable suiting, and stretch constructions",
+    "materials.columns.fabrics.three": "Weights and fibre mixes calibrated to climate and wear frequency",
+    "materials.columns.construction.title": "Construction",
+    "materials.columns.construction.one": "Reinforced seams, concealed closures, and ergonomic placement",
+    "materials.columns.construction.two": "Pocket logic, button durability, wash performance, and recovery checks",
+    "materials.columns.construction.three": "Fit testing across multiple body types within the team",
+    "materials.columns.branding.title": "Branding",
+    "materials.columns.branding.one": "Tone-on-tone embroidery and restrained placement",
+    "materials.columns.branding.two": "Woven labels, interior branding, and operational naming systems",
+    "materials.columns.branding.three": "Print or transfer methods only when aligned with the environment",
+    "continuity.label": "Long-term model",
+    "continuity.title": "Continuity is designed in",
+    "continuity.p1":
+      "Once development is approved, patterns are archived for immediate reorders without resampling. New hires and additional locations can be integrated without breaking silhouette continuity.",
+    "continuity.p2":
+      "Production is developed close to Barcelona to keep communication direct, fitting revisions fast, and quality control grounded in real technical dialogue.",
+    "continuity.p3":
+      "Each garment is inspected before delivery for seams, finishing, sizing consistency, and labelling so the wardrobe arrives ready for operational deployment.",
+    "team.label": "Studio leadership",
+    "team.title": "Design, production, operational insight",
     "team.intro":
-      "Design, hospitality, and production expertise aligned around one outcome: wardrobe systems that perform as well as they position.",
-    "team.card1.name": "Leonardo Gobbato",
-    "team.card1.title": "Founder & Product Lead",
-    "team.card1.body":
-      "Over a decade bridging design and production, designing the sketches for each project and working hands-on with ateliers and manufacturers. Based in Barcelona, Leonardo collaborates closely with trusted local partners to ensure craftsmanship, reliable timelines, and informed decisions.",
-    "team.card2.name": "Andreas Gonzalez",
-    "team.card2.title": "Co-founder & Sales Director",
-    "team.card2.body":
-      "Hospitality leader with deep experience in luxury hotels and high-profile restaurants, bringing operational insight into the design of uniforms that enhance performance and reinforce brand identity.",
-    "team.card3.name": "Giovanna Gottardo",
-    "team.card3.title": "Fashion Designer",
-    "team.card3.body":
-      "With experience at Dolce & Gabbana ateliers in Milan and Padova, she leads garment design with a strong focus on shapes, proportions, and construction. She oversees production from prototype to final delivery, ensuring precision, consistency, and the highest standards of quality throughout.",
-    "team.card4.name": "Federica Bianzon",
-    "team.card4.title": "Co-founder & Project Management",
-    "team.card4.body":
-      "Federica leads project management for our B2B work, overseeing timelines, budgets, and delivery. She ensures clear stakeholder communication and aligns each project with the client's brand visual identity, guaranteeing structure, consistency, and smooth execution end to end.",
-    "contact.title": "GET IN TOUCH",
+      "Pamuuc Studio is led across product, project structure, and hospitality operations so aesthetic decisions remain technically grounded.",
+    "team.cards.one.name": "Leonardo Gobbato",
+    "team.cards.one.role": "Founder and Product Lead",
+    "team.cards.one.body":
+      "Leonardo bridges design and garment construction across every project, keeping visual direction aligned with technical feasibility and workshop realities.",
+    "team.cards.two.name": "Federica Vianson",
+    "team.cards.two.role": "Co-Founder and Project Manager",
+    "team.cards.two.body":
+      "Federica oversees timing, budgeting, and stakeholder alignment so the full process remains structured, transparent, and controlled from first consultation to delivery.",
+    "team.cards.three.name": "Andreas Gonzalez",
+    "team.cards.three.role": "Co-Founder and Operations Insight",
+    "team.cards.three.body":
+      "Andreas brings first-hand experience from luxury hotels and high-profile restaurants, ensuring garments support movement, durability, hierarchy, and service rhythm.",
+    "contact.label": "Contact",
+    "contact.title": "Contact us",
     "contact.intro":
-      "Every project begins with conversation. Before scheduling a meeting, please complete our short project questionnaire. This allows us to understand your space, team structure, and operational needs, ensuring our first discussion is focused and strategic.",
+      "Every collaboration begins with a conversation about team scale, operating rhythm, expansion plans, and brand position. The objective is long-term coherence.",
+    "contact.cta": "Contact us",
+    "contact.emailLabel": "Email",
+    "contact.phoneLabel": "Phone",
+    "contact.questionnaireLabel": "Questionnaire",
     "contact.questionnaire": "Request the project questionnaire",
-    "contact.calendarTitle": "PAMUUC Studio appointment scheduling",
-    "footer.legal.privacy": "Privacy Policy",
-    "footer.legal.terms": "Terms & Conditions",
-    "footer.legal.production": "Production Policy",
-    "footer.address": "Pasaje de Maiol 9, 08013, Barcelona, Spain"
+    "contact.calendarFallback": "Open scheduling in a new tab",
+    "contact.calendarTitle": "Pamuuc Studio appointment scheduling",
+    "footer.address": "Pasaje de Maiol 9, 08013 Barcelona, Spain",
+    "captions.approach": "Spatial reading informs every material and silhouette decision.",
+    "captions.system": "Cohesion is built across roles without forcing uniformity.",
+    "captions.materials": "Fabric, recovery, resistance, and drape are evaluated together.",
+    "captions.continuity": "Patterns are archived so the wardrobe can scale without losing control.",
+    "images.hero":
+      "Editorial architectural composition showing a hospitality interior and structured garments.",
+    "images.approach":
+      "Architectural hospitality environment rendered with warm, restrained framing.",
+    "images.system":
+      "Structured wardrobe study with tailoring, fabric fields, and operational notes.",
+    "images.materials":
+      "Material study showing folded textiles and tailored construction surfaces.",
+    "images.continuity":
+      "Local atelier composition with pattern storage and quality control surfaces.",
+    "images.teamOne": "Abstract portrait card representing Leonardo Gobbato.",
+    "images.teamTwo": "Abstract portrait card representing Federica Vianson.",
+    "images.teamThree": "Abstract portrait card representing Andreas Gonzalez."
   },
   fr: {
-    "meta.title": "PAMUUC STUDIO | Uniformes sur mesure pour les équipes premium de l'hôtellerie et du service",
+    "meta.title": "PAMUUC STUDIO | Systèmes vestimentaires sur mesure pour l'hospitalité premium",
     "meta.description":
-      "PAMUUC STUDIO conçoit et produit des systèmes d'uniformes sur mesure pour les équipes premium de l'hôtellerie et des métiers de service, avec exigence artisanale, production locale maîtrisée et précision opérationnelle.",
+      "Pamuuc Studio conçoit et produit des systèmes vestimentaires sur mesure pour l'hospitalité premium et les équipes de service à haute exigence, à travers une lecture du lieu, un développement technique rigoureux et une production locale maîtrisée.",
     "accessibility.skip": "Aller au contenu",
-    "accessibility.home": "Accueil PAMUUC Studio",
-    "accessibility.menu": "Ouvrir le menu",
-    "accessibility.languages": "Choisir la langue",
-    "accessibility.cta": "Aller à la section contact",
-    "nav.whyUs": "Pourquoi nous",
+    "accessibility.home": "Accueil Pamuuc Studio",
+    "accessibility.menu": "Ouvrir le menu de navigation",
+    "accessibility.languages": "Sélecteur de langue",
+    "nav.approach": "Approche",
     "nav.process": "Processus",
+    "nav.parameters": "Paramètres",
     "nav.team": "Équipe",
     "nav.contact": "Contact",
-    "hero.h1": "VOTRE VISION, NOTRE SAVOIR-FAIRE",
-    "hero.h2": "Des pièces à la hauteur de l'expérience que vous voulez offrir",
-    "hero.h3": "Créées pour inspirer. Pensées pour appartenir au lieu.",
-    "placeholders.heroDesktop": "Visuel hero desktop à intégrer",
-    "placeholders.heroMobile": "Visuel hero mobile à intégrer",
-    "placeholders.purposeImage": "Visuel philosophie à intégrer",
-    "placeholders.signatureImage": "Visuel signature à intégrer",
-    "placeholders.capabilitiesImage": "Visuel développement collection à intégrer",
-    "placeholders.team1Portrait": "Portrait à intégrer",
-    "placeholders.team2Portrait": "Portrait à intégrer",
-    "placeholders.team3Portrait": "Portrait à intégrer",
-    "placeholders.team4Portrait": "Portrait à intégrer",
-    "why.title": "UNE NOUVELLE MANIÈRE DE CONCEVOIR L'UNIFORME",
-    "why.body":
-      "Nous concevons et produisons des vestiaires structurés pour des équipes premium et exigeantes, pensés à partir du lieu, de la hiérarchie et de la réalité opérationnelle.",
-    "philosophy.title": "NOTRE RAISON D'ÊTRE",
-    "philosophy.p1":
-      "Nous façonnons l'identité des lieux de luxe et des environnements à haute performance à travers des vêtements conçus avec intention et réalisés avec retenue.",
-    "philosophy.p2": "Nous ne partons pas du vêtement. Nous partons du lieu.",
-    "philosophy.p3":
-      "Architecture, atmosphère, rythme du service, climat et réalité opérationnelle dessinent chaque projet. À partir de là, nous construisons des vestiaires qui paraissent évidents, fonctionnels et durables.",
-    "philosophy.p4":
-      "Développé près de Barcelone, chaque projet prend forme dans la proximité, le dialogue et une production maîtrisée. La vision se traduit en vêtement avec clarté et précision.",
-    "signature.title": "UNE SIGNATURE, PAS UN UNIFORME",
-    "signature.p1":
-      "Un vestiaire ne doit jamais sembler importé d'un autre contexte. Il doit appartenir au lieu, avec autant d'intention que les matières, la lumière ou le rythme du service.",
-    "signature.p2":
-      "Nous traduisons le positionnement de marque en silhouettes, proportions et détails qui affirment la hiérarchie sans jamais verser dans l'effet. Le résultat est cohérent, identifiable et immédiatement juste sur le terrain.",
-    "signature.p3":
-      "Chaque pièce s'inscrit dans un même système : salle, management, cuisine, réception et service reliés par un langage visuel maîtrisé.",
-    "comparison.title": "DU SUR-MESURE INITIAL À UN SYSTÈME OPÉRATIONNEL DURABLE",
-    "comparison.titleHtml":
-      '<span class="mobile-title-line">DU SUR-MESURE INITIAL</span><span class="mobile-title-line">À UN SYSTÈME OPÉRATIONNEL DURABLE</span>',
+    "hero.eyebrow": "Studio de design et de production",
+    "hero.title": "SYSTÈMES VESTIMENTAIRES STRUCTURÉS POUR L'HOSPITALITÉ PREMIUM",
+    "hero.summary":
+      "Pamuuc Studio développe des systèmes vestimentaires sur mesure pour les équipes d'hospitalité et de service grâce à une lecture du lieu, un affinage technique et une production locale maîtrisée.",
+    "hero.metaOne": "Supervision depuis Barcelone",
+    "hero.metaTwo": "Un client, une exécution",
+    "hero.metaThree": "Patronages archivés pour la continuité",
+    "hero.cta": "Commencer à construire avec nous",
+    "approach.label": "Positionnement",
+    "approach.title": "Nous commençons par le lieu",
+    "approach.p1":
+      "Architecture, lumière, matérialité, atmosphère, rythme du service et interaction avec le client définissent chaque projet avant même qu'un vêtement soit dessiné.",
+    "approach.p2":
+      "Chaque collaboration s'ouvre sur une analyse structurée. Rôles, posture, exposition thermique, cycles de lavage, mouvement et points de tension sont traités comme des données de conception, jamais comme des conséquences de la production.",
+    "approach.p3":
+      "Le vestiaire est développé comme une extension structurelle de l'environnement, alignée sur la hiérarchie, la performance et les conditions réelles de travail.",
+    "system.label": "Méthode",
+    "system.title": "Pas des pièces isolées. Un système.",
+    "system.p1":
+      "Silhouette, poids des matières, logique colorielle et placement du branding sont coordonnés entre les rôles afin que direction, salle, réception et fonctions proches de la cuisine restent cohérents sans sembler identiques.",
+    "system.p2":
+      "La ligne peut se structurer davantage là où l'autorité doit s'affirmer, et s'assouplir là où la mobilité et la respirabilité priment. Les accessoires sont conçus comme des éléments structurels à fonction réelle.",
+    "system.p3":
+      "Chaque collection est développée exclusivement pour le client. Aucun catalogue. Aucune revente. Un système vestimentaire pour un seul contexte opérationnel.",
+    "comparison.label": "Modèle de continuité",
+    "comparison.title": "Phase sur mesure. Continuité opérationnelle.",
     "comparison.intro":
-      "Chaque projet commence par un développement entièrement sur mesure. Une fois validé, il devient un système opérationnel durable.",
-    "comparison.columns.one": "SUR MESURE",
-    "comparison.columns.ongoing": "DANS LA DURÉE",
-    "comparison.rows.scope.label": "Portée",
-    "comparison.rows.scope.one":
-      "Un vestiaire entièrement sur mesure, développé exclusivement pour votre lieu, l'organisation de votre équipe et votre positionnement de marque.",
+      "Chaque projet commence comme un développement sur mesure et devient un système vestimentaire stable une fois le patronage, le fit et la construction validés.",
+    "comparison.headings.criteria": "Critère",
+    "comparison.headings.bespoke": "Phase sur mesure",
+    "comparison.headings.ongoing": "Phase opérationnelle",
+    "comparison.rows.scope.title": "Portée",
+    "comparison.rows.scope.bespoke":
+      "Développé autour de votre lieu, de votre hiérarchie, de votre climat et de votre modèle de service.",
     "comparison.rows.scope.ongoing":
-      "Le vestiaire validé devient un système opérationnel stable, facile à réassortir, à maintenir et à faire évoluer dans le temps.",
-    "comparison.rows.development.label": "Développement",
-    "comparison.rows.development.one":
-      "Conçu à partir de zéro. Patronages, coupes, matières et construction sont développés spécifiquement pour votre environnement.",
+      "Maintenu comme un actif opérationnel pour les réassorts, les nouvelles recrues et le développement.",
+    "comparison.rows.development.title": "Développement",
+    "comparison.rows.development.bespoke":
+      "Patronages, matières et logique de construction sont définis et testés à partir de zéro.",
     "comparison.rows.development.ongoing":
-      "Les patronages validés sont archivés. Les productions suivantes s'appuient sur les mêmes bases approuvées afin de garantir une parfaite constance.",
-    "comparison.rows.duplication.label": "Exclusivité",
-    "comparison.rows.duplication.one":
-      "Le système est créé uniquement pour vous. Il n'est ni réutilisé, ni revendu, ni reproduit pour d'autres clients.",
-    "comparison.rows.duplication.ongoing":
-      "Le système reste exclusif tout en étant reproduit en interne pour vos besoins opérationnels futurs.",
-    "comparison.rows.reorders.label": "Réassorts",
-    "comparison.rows.reorders.one":
-      "Une fois le vestiaire validé, les pièces peuvent être relancées à partir des patronages approuvés sans recommencer le développement.",
-    "comparison.rows.reorders.ongoing":
-      "Les réassorts sont fluides, rapides et alignés sur vos standards existants.",
-    "process.title": "PROCESSUS",
+      "Les bases validées sont archivées et réactivées sans rouvrir la phase de design.",
+    "comparison.rows.exclusivity.title": "Exclusivité",
+    "comparison.rows.exclusivity.bespoke":
+      "Un client, une collection, une exécution, sans revente des pièces développées.",
+    "comparison.rows.exclusivity.ongoing":
+      "Le système reste exclusif tout en pouvant être reproduit avec constance.",
+    "comparison.rows.speed.title": "Continuité",
+    "comparison.rows.speed.bespoke":
+      "Essayages, prototypes et ajustements fixent le bon standard de performance.",
+    "comparison.rows.speed.ongoing":
+      "Les réassorts vont plus vite car le fit, le grading et les règles de construction sont déjà maîtrisés.",
+    "midCta.text": "Commencer à construire avec nous",
+    "process.label": "Processus",
+    "process.title": "Étapes définies. Exécution maîtrisée.",
     "process.intro":
-      "Du premier brief à la livraison finale, chaque étape est structurée pour garder les décisions lisibles, les délais maîtrisés et le vestiaire parfaitement aligné avec l'opérationnel.",
-    "process.steps.analysis.title": "Analyse du lieu et des usages",
-    "process.steps.analysis.body":
-      "Nous lisons le lieu, le rythme du service, le climat et la hiérarchie des équipes avant de tracer la moindre ligne.",
-    "process.steps.selection.title": "Sélection du patron de base et des matières",
-    "process.steps.selection.body":
-      "Nous partons de bases éprouvées pour choisir les bonnes coupes, les bonnes familles de matières et les finitions techniques adaptées.",
-    "process.steps.sampling.title": "Prototypage et ajustements",
-    "process.steps.sampling.body":
-      "Les premiers prototypes sont testés sur le corps et dans leur contexte réel. Proportions, confort et équilibre visuel sont ensuite affinés.",
-    "process.steps.production.title": "Production et livraison",
-    "process.steps.production.body":
-      "Les modèles validés passent en production locale maîtrisée avec gradation des tailles, calendrier précis et exécution constante.",
-    "process.timeline.development": "Développement moyen : 4 à 6 semaines",
-    "process.timeline.production": "Production moyenne : 3 à 5 semaines",
-    "process.timeline.custom": "Projets entièrement sur mesure : env. 8 semaines au total",
-    "process.timeline.simple": "Constructions plus simples : 5 à 6 semaines",
-    "capabilities.title": "SAVOIR-FAIRE & PARAMÈTRES DE PRODUCTION",
-    "capabilities.leftTitle": "CE QUE NOUS DÉVELOPPONS",
-    "capabilities.items.shirts": "Chemises tailleur",
-    "capabilities.items.trousers": "Pantalons structurés",
-    "capabilities.items.tailoring": "Blazers & tailleur",
-    "capabilities.items.dresses": "Robes & jupes",
-    "capabilities.items.knitwear": "Maille",
-    "capabilities.items.aprons": "Tabliers & accessoires",
-    "capabilities.items.systems": "Vestiaires complets",
-    "capabilities.support":
-      "Chaque pièce part d'une base éprouvée puis est affinée pour exprimer votre identité.",
-    "parameters.title": "PARAMÈTRES DE PRODUCTION",
-    "parameters.moq.title": "Quantités minimales de commande",
-    "parameters.moq.line1": "Modèles tissés : à partir de 50 pièces par modèle",
-    "parameters.moq.line2": "Maille : de 100 à 150 pièces par modèle",
-    "parameters.smallRuns.title": "PETITES SÉRIES",
-    "parameters.smallRuns.p1":
-      "Des séries plus courtes sont possibles. En revanche, à plus faible volume, le coût unitaire augmente en raison d'une efficacité de production moindre et d'une part de développement plus importante.",
-    "parameters.smallRuns.p2":
-      "En dessous de 50 pièces par modèle, le prix augmente de manière proportionnelle.",
-    "parameters.price.title": "Fourchette de prix habituelle",
-    "parameters.price.body": "25 € à 120 € par pièce (hors TVA)",
-    "parameters.impact.title": "Ce qui influence le prix",
-    "parameters.impact.item1": "Choix et poids du tissu",
-    "parameters.impact.item2": "Complexité de construction",
-    "parameters.impact.item3": "Fournitures, étiquettes, boutons et éléments de marque",
-    "parameters.impact.item4": "Techniques de broderie ou d'impression",
-    "parameters.impact.item5": "Développement de couleur sur mesure (300+ pièces dans le même tissu)",
-    "parameters.note.title": "Note",
-    "parameters.note.body":
-      "Tous les prix incluent un premier niveau de personnalisation. Toute personnalisation supplémentaire peut faire évoluer le coût en raison d'un développement et d'une production plus complexes.",
-    "materials.title": "MATIÈRES & TECHNIQUES",
-    "materials.fabrics.title": "TISSUS",
-    "materials.fabrics.item1": "Popeline de coton",
-    "materials.fabrics.item2": "Twill stretch",
-    "materials.fabrics.item3": "Gabardine",
-    "materials.fabrics.item4": "Mélanges laine",
-    "materials.fabrics.item5": "Jersey technique",
-    "materials.fabrics.item6": "Maille structurée",
-    "materials.fabrics.item7": "Canvas pour tabliers",
-    "materials.fabrics.item8": "Tissus tailleur lavables",
-    "materials.construction.title": "CONSTRUCTION & FINITIONS",
-    "materials.construction.item1": "Développement du patronage",
-    "materials.construction.item2": "Gradation des tailles",
-    "materials.construction.item3": "Coutures renforcées",
-    "materials.construction.item4": "Boutons sur mesure",
-    "materials.construction.item5": "Fermetures dissimulées",
-    "materials.construction.item6": "Passepoil contrasté",
-    "materials.construction.item7": "Étiquetage d'entretien",
-    "materials.construction.item8": "Quincaillerie pour tabliers",
-    "materials.branding.title": "TECHNIQUES DE MARQUAGE",
-    "materials.branding.item1": "Broderie",
-    "materials.branding.item2": "Étiquettes tissées",
-    "materials.branding.item3": "Sérigraphie",
-    "materials.branding.item4": "Transferts thermiques",
-    "materials.branding.item5": "Gravure laser",
-    "materials.branding.item6": "Monogrammes ton sur ton",
-    "materials.branding.item7": "Mise au point couleur sur mesure",
-    "materials.branding.item8": "Systèmes de dénomination internes",
-    "cta.title": "ACCÉDEZ À DES UNIFORMES ENTIÈREMENT PERSONNALISÉS POUR VOTRE ÉQUIPE",
-    "cta.titleHtml":
-      '<span class="mobile-title-line">ACCÉDEZ À DES UNIFORMES</span><span class="mobile-title-line">ENTIÈREMENT PERSONNALISÉS POUR VOTRE ÉQUIPE</span>',
-    "cta.body":
-      "Rien n'est standard. Des matières aux finitions, chaque élément est sélectionné et développé pour correspondre à votre environnement, à votre équipe et à l'identité de votre marque.",
-    "team.title": "RENCONTREZ L'ÉQUIPE",
+      "Le développement avance par jalons fixes afin que direction visuelle, validation technique et calendrier de production restent lisibles à chaque étape.",
+    "process.steps.analysis.title": "Analyse",
+    "process.steps.analysis.body": "Lecture spatiale, opérationnelle et cartographie des rôles.",
+    "process.steps.pattern.title": "Base patronage",
+    "process.steps.pattern.body": "Sélection de la base technique et spécification.",
+    "process.steps.fabric.title": "Validation matière",
+    "process.steps.fabric.body": "Poids, armure, récupération et résistance à l'usage.",
+    "process.steps.sample.title": "Prototype",
+    "process.steps.sample.body": "Relecture de la construction en mouvement, jamais sur mannequin seul.",
+    "process.steps.fit.title": "Essayages",
+    "process.steps.fit.body": "Ajustement sur plusieurs morphologies au sein de l'équipe.",
+    "process.steps.validation.title": "Pré-production",
+    "process.steps.validation.body": "Validation finale des finitions, du grading et du branding.",
+    "process.steps.production.title": "Production locale",
+    "process.steps.production.body": "Fabrication contrôlée près de Barcelone.",
+    "process.timeline.one": "Développement 4-6 semaines",
+    "process.timeline.two": "Production 3-5 semaines",
+    "process.timeline.three": "Full custom environ 8 semaines",
+    "process.timeline.four": "Constructions simples 5-6 semaines",
+    "capabilities.label": "Capacités",
+    "capabilities.title": "Ce que nous développons",
+    "capabilities.items.one": "Chemises tailleur et pantalons structurés",
+    "capabilities.items.two": "Blazers, gilets, robes et jupes",
+    "capabilities.items.three": "Maille, tabliers, overshirts et couches légères",
+    "capabilities.items.four": "Accessoires techniques et évolutions saisonnières du système",
+    "capabilities.body":
+      "Les détails de construction peuvent inclure des pattes renforcées, des systèmes de sangles ergonomiques, des compartiments cachés, des panneaux stretch, des fermetures dissimulées, des doublures techniques et un branding ton sur ton.",
+    "parameters.label": "Paramètres",
+    "parameters.title": "Paramètres de production",
+    "parameters.moq.title": "Quantités minimales",
+    "parameters.moq.body":
+      "Les pièces en tissu commencent généralement à 50 unités par style. La maille demande souvent entre 100 et 150 unités par style en raison des contraintes de réglage machine.",
+    "parameters.price.title": "Prix indicatifs",
+    "parameters.price.body":
+      "Les fourchettes habituelles vont de 25 EUR à 120 EUR par pièce hors TVA, selon la matière, la complexité du montage, les finitions et la méthode de branding.",
+    "parameters.custom.title": "Niveau de personnalisation",
+    "parameters.custom.body":
+      "Un premier niveau de personnalisation est inclus. Hardware exclusif, tissage spécifique, finitions spéciales et broderies complexes augmentent le temps de développement et de production.",
+    "parameters.pricingDrivers.title": "Ce qui influence le coût",
+    "parameters.pricingDrivers.one": "Sourcing matière, poids et structure du tissu",
+    "parameters.pricingDrivers.two": "Détail de construction, doublure et renforts",
+    "parameters.pricingDrivers.three": "Broderie, impression, étiquettes et hardware personnalisé",
+    "parameters.pricingDrivers.four": "Développement couleur au-delà de 300 pièces par matière",
+    "materials.label": "Matières et techniques",
+    "materials.title": "La fonction d'abord. La retenue ensuite.",
+    "materials.intro":
+      "Le choix des matières est guidé par l'exposition, la fréquence de lavage, la récupération, le tombé et la posture opérationnelle de chaque rôle.",
+    "materials.columns.fabrics.title": "Matières",
+    "materials.columns.fabrics.one": "Coton, lin, tencel, bambou et mélanges techniques",
+    "materials.columns.fabrics.two": "Tissés, mailles, tailoring lavable et constructions stretch",
+    "materials.columns.fabrics.three": "Poids et compositions calibrés selon le climat et la fréquence d'usage",
+    "materials.columns.construction.title": "Construction",
+    "materials.columns.construction.one": "Coutures renforcées, fermetures dissimulées et placement ergonomique",
+    "materials.columns.construction.two": "Logique des poches, tenue des boutons, lavage et récupération",
+    "materials.columns.construction.three": "Tests de fit sur plusieurs morphologies au sein de l'équipe",
+    "materials.columns.branding.title": "Branding",
+    "materials.columns.branding.one": "Broderie ton sur ton et placement mesuré",
+    "materials.columns.branding.two": "Étiquettes tissées, branding intérieur et systèmes de dénomination opérationnels",
+    "materials.columns.branding.three": "Impression ou transfert seulement lorsque l'environnement le justifie",
+    "continuity.label": "Modèle long terme",
+    "continuity.title": "La continuité est pensée dès l'origine",
+    "continuity.p1":
+      "Une fois le développement validé, les patronages sont archivés pour permettre des réassorts immédiats sans nouveau prototypage. Les nouvelles recrues et les nouvelles adresses peuvent être intégrées sans rompre la continuité de la silhouette.",
+    "continuity.p2":
+      "La production est développée près de Barcelone afin de garder un dialogue direct, des retouches rapides et un contrôle qualité nourri d'échanges techniques réels.",
+    "continuity.p3":
+      "Chaque pièce est inspectée avant livraison sur les coutures, les finitions, la cohérence du taillage et l'étiquetage afin que le vestiaire arrive prêt au déploiement opérationnel.",
+    "team.label": "Direction du studio",
+    "team.title": "Design, production, lecture opérationnelle",
     "team.intro":
-      "Design, hôtellerie et production réunis autour d'un même résultat : des vestiaires aussi performants qu'alignés avec un positionnement fort.",
-    "team.card1.name": "Leonardo Gobbato",
-    "team.card1.title": "Fondateur & directeur produit",
-    "team.card1.body":
-      "Plus de dix ans à faire le lien entre design et production, en dessinant chaque projet et en travaillant au plus près des ateliers et fabricants. Basé à Barcelone, Leonardo collabore étroitement avec des partenaires locaux de confiance pour garantir savoir-faire, délais fiables et décisions éclairées.",
-    "team.card2.name": "Andreas Gonzalez",
-    "team.card2.title": "Cofondateur & directeur commercial",
-    "team.card2.body":
-      "Professionnel de l'hôtellerie avec une solide expérience dans les hôtels de luxe et les restaurants de haut niveau, il apporte une lecture opérationnelle à la conception d'uniformes qui renforcent la performance et l'identité de marque.",
-    "team.card3.name": "Giovanna Gottardo",
-    "team.card3.title": "Styliste",
-    "team.card3.body":
-      "Forte d'une expérience dans les ateliers Dolce & Gabbana à Milan et Padoue, elle dirige le design des pièces avec une attention particulière aux formes, aux proportions et à la construction. Elle supervise la production du prototype à la livraison finale avec précision, constance et exigence.",
-    "team.card4.name": "Federica Bianzon",
-    "team.card4.title": "Cofondatrice & direction de projet",
-    "team.card4.body":
-      "Federica pilote la gestion de projet de notre activité B2B, en supervisant délais, budgets et livraison. Elle assure une communication claire avec les parties prenantes et aligne chaque projet avec l'identité visuelle du client, garantissant structure, cohérence et fluidité d'exécution de bout en bout.",
-    "contact.title": "CONTACT",
+      "Pamuuc Studio est dirigé à l'intersection du produit, de la gestion de projet et des opérations hospitality afin que chaque décision esthétique reste techniquement fondée.",
+    "team.cards.one.name": "Leonardo Gobbato",
+    "team.cards.one.role": "Fondateur et Product Lead",
+    "team.cards.one.body":
+      "Leonardo relie design et construction du vêtement sur chaque projet, en gardant la direction visuelle alignée avec la faisabilité technique et la réalité de l'atelier.",
+    "team.cards.two.name": "Federica Vianson",
+    "team.cards.two.role": "Co-fondatrice et Project Manager",
+    "team.cards.two.body":
+      "Federica pilote planning, budget et alignement des parties prenantes afin que l'ensemble du processus reste structuré, transparent et maîtrisé du premier échange à la livraison.",
+    "team.cards.three.name": "Andreas Gonzalez",
+    "team.cards.three.role": "Co-fondateur et vision opérationnelle",
+    "team.cards.three.body":
+      "Andreas apporte une expérience directe de l'hôtellerie de luxe et de la restauration haut de gamme, afin que les pièces soutiennent mouvement, durabilité, hiérarchie et rythme du service.",
+    "contact.label": "Contact",
+    "contact.title": "Nous contacter",
     "contact.intro":
-      "Chaque projet commence par une conversation. Avant de planifier un rendez-vous, merci de compléter notre court questionnaire projet. Il nous permet de comprendre votre lieu, la structure de votre équipe et vos besoins opérationnels afin que notre premier échange soit déjà précis et stratégique.",
+      "Chaque collaboration commence par un échange sur la taille de l'équipe, le rythme opérationnel, les plans d'expansion et le positionnement de marque. L'objectif reste toujours la cohérence dans la durée.",
+    "contact.cta": "Nous contacter",
+    "contact.emailLabel": "Email",
+    "contact.phoneLabel": "Téléphone",
+    "contact.questionnaireLabel": "Questionnaire",
     "contact.questionnaire": "Demander le questionnaire projet",
-    "contact.calendarTitle": "Prise de rendez-vous PAMUUC Studio",
-    "footer.legal.privacy": "Politique de confidentialité",
-    "footer.legal.terms": "Conditions générales",
-    "footer.legal.production": "Politique de production",
-    "footer.address": "Pasaje de Maiol 9, 08013, Barcelone, Espagne"
+    "contact.calendarFallback": "Ouvrir la prise de rendez-vous dans un nouvel onglet",
+    "contact.calendarTitle": "Prise de rendez-vous Pamuuc Studio",
+    "footer.address": "Pasaje de Maiol 9, 08013 Barcelone, Espagne",
+    "captions.approach": "La lecture du lieu oriente chaque décision de matière et de silhouette.",
+    "captions.system": "La cohérence se construit entre les rôles sans imposer l'uniformité.",
+    "captions.materials": "Matière, récupération, résistance et tombé sont évalués ensemble.",
+    "captions.continuity": "Les patronages sont archivés pour faire évoluer le vestiaire sans perdre le contrôle.",
+    "images.hero":
+      "Composition éditoriale architecturale montrant un intérieur hospitality et des vêtements structurés.",
+    "images.approach":
+      "Environnement hospitality architectural traité avec une lumière chaude et retenue.",
+    "images.system":
+      "Étude de vestiaire structuré avec tailoring, matières et notes opérationnelles.",
+    "images.materials":
+      "Étude matière montrant textiles pliés et surfaces de construction tailleur.",
+    "images.continuity":
+      "Composition d'atelier local avec archivage des patronages et surfaces de contrôle qualité.",
+    "images.teamOne": "Portrait abstrait représentant Leonardo Gobbato.",
+    "images.teamTwo": "Portrait abstrait représentant Federica Vianson.",
+    "images.teamThree": "Portrait abstrait représentant Andreas Gonzalez."
   },
   es: {
-    "meta.title": "PAMUUC STUDIO | Uniformes a medida para equipos premium de hostelería y servicios",
+    "meta.title": "PAMUUC STUDIO | Sistemas de vestuario a medida para hospitality premium",
     "meta.description":
-      "PAMUUC STUDIO diseña y produce sistemas de uniformes a medida para equipos premium de hostelería y servicios, con oficio, control local de la producción y precisión operativa.",
-    "accessibility.skip": "Saltar al contenido",
-    "accessibility.home": "Inicio de PAMUUC Studio",
-    "accessibility.menu": "Abrir el menú",
-    "accessibility.languages": "Elegir idioma",
-    "accessibility.cta": "Ir a la sección de contacto",
-    "nav.whyUs": "Por qué nosotros",
+      "Pamuuc Studio diseña y produce sistemas de vestuario a medida para hospitality premium y equipos de servicio de alta exigencia a través de lectura espacial, desarrollo técnico y producción local controlada.",
+    "accessibility.skip": "Ir al contenido",
+    "accessibility.home": "Inicio de Pamuuc Studio",
+    "accessibility.menu": "Abrir menú de navegación",
+    "accessibility.languages": "Selector de idioma",
+    "nav.approach": "Enfoque",
     "nav.process": "Proceso",
+    "nav.parameters": "Parámetros",
     "nav.team": "Equipo",
     "nav.contact": "Contacto",
-    "hero.h1": "SU VISIÓN, NUESTRO OFICIO",
-    "hero.h2": "Prendas a la altura de la experiencia que quiere ofrecer",
-    "hero.h3": "Creadas para inspirar. Pensadas para pertenecer.",
-    "placeholders.heroDesktop": "Visual hero desktop pendiente",
-    "placeholders.heroMobile": "Visual hero mobile pendiente",
-    "placeholders.purposeImage": "Visual de filosofía pendiente",
-    "placeholders.signatureImage": "Visual de firma pendiente",
-    "placeholders.capabilitiesImage": "Visual de desarrollo de colección pendiente",
-    "placeholders.team1Portrait": "Retrato pendiente",
-    "placeholders.team2Portrait": "Retrato pendiente",
-    "placeholders.team3Portrait": "Retrato pendiente",
-    "placeholders.team4Portrait": "Retrato pendiente",
-    "why.title": "UNA NUEVA MANERA DE ENTENDER EL UNIFORME",
-    "why.body":
-      "Diseñamos y producimos sistemas de vestuario estructurados para equipos premium y de alto rendimiento, definidos por el espacio, la jerarquía y la realidad operativa.",
-    "philosophy.title": "NUESTRO PROPÓSITO",
-    "philosophy.p1":
-      "Damos forma a la identidad de espacios de lujo y alto rendimiento a través de prendas concebidas con intención y ejecutadas con contención.",
-    "philosophy.p2": "No empezamos por la prenda. Empezamos por el espacio.",
-    "philosophy.p3":
-      "La arquitectura, la atmósfera, el ritmo del servicio, el clima y la realidad operativa definen cada proyecto. A partir de ahí, construimos sistemas de vestuario que resultan naturales, funcionales y duraderos.",
-    "philosophy.p4":
-      "Desarrollado cerca de Barcelona, cada proyecto se construye desde la cercanía, el diálogo y una producción controlada. La visión se traduce en forma con claridad y precisión.",
-    "signature.title": "UNA FIRMA, NO UN UNIFORME",
-    "signature.p1":
-      "Un vestuario nunca debe parecer prestado de otro contexto. Debe pertenecer al espacio, con la misma intención que los materiales, la luz o el ritmo del servicio.",
-    "signature.p2":
-      "Traducimos el posicionamiento de marca en siluetas, proporciones y detalles que refuerzan la jerarquía sin artificio. El resultado es coherente, reconocible e inmediatamente funcional en la operación.",
-    "signature.p3":
-      "Cada prenda se resuelve como parte de un único sistema: sala, dirección, cocina, recepción y servicio unidos por un lenguaje visual controlado.",
-    "comparison.title": "DEL DESARROLLO A MEDIDA A UN SISTEMA OPERATIVO DURADERO",
-    "comparison.titleHtml":
-      '<span class="mobile-title-line">DEL DESARROLLO A MEDIDA</span><span class="mobile-title-line">A UN SISTEMA OPERATIVO DURADERO</span>',
+    "hero.eyebrow": "Estudio de diseño y producción",
+    "hero.title": "SISTEMAS DE VESTUARIO ESTRUCTURADOS PARA HOSPITALITY PREMIUM",
+    "hero.summary":
+      "Pamuuc Studio desarrolla sistemas de vestuario a medida para equipos de hospitality y servicio mediante lectura del espacio, refinamiento técnico y producción local controlada.",
+    "hero.metaOne": "Supervisión desde Barcelona",
+    "hero.metaTwo": "Un cliente, una ejecución",
+    "hero.metaThree": "Patrones archivados para continuidad",
+    "hero.cta": "Empezar a construir con nosotros",
+    "approach.label": "Posicionamiento",
+    "approach.title": "Empezamos por el espacio",
+    "approach.p1":
+      "Arquitectura, luz, materialidad, atmósfera, ritmo del servicio e interacción con el huésped definen cada proyecto antes de dibujar una sola prenda.",
+    "approach.p2":
+      "Cada colaboración se abre con un análisis estructurado. Roles, postura, exposición térmica, ciclos de lavado, movimiento y puntos de desgaste se tratan como datos de diseño, no como consecuencias de producción.",
+    "approach.p3":
+      "El vestuario se desarrolla como una extensión estructural del entorno, alineada con jerarquía, rendimiento y condiciones reales de trabajo.",
+    "system.label": "Método",
+    "system.title": "No son piezas sueltas. Es un sistema.",
+    "system.p1":
+      "Silueta, peso del tejido, lógica cromática y colocación del branding se coordinan entre roles para que dirección, sala, recepción y funciones próximas a cocina se lean coherentes sin parecer idénticas.",
+    "system.p2":
+      "La sastrería puede ganar autoridad donde hace falta presencia y relajarse donde mandan la movilidad y la transpirabilidad. Los accesorios se desarrollan como elementos estructurales con función real.",
+    "system.p3":
+      "Cada colección se desarrolla en exclusiva para el cliente. Sin catálogo. Sin reventa. Un sistema de vestuario para un solo contexto operativo.",
+    "comparison.label": "Modelo de continuidad",
+    "comparison.title": "Fase a medida. Continuidad operativa.",
     "comparison.intro":
-      "Cada proyecto nace como un desarrollo totalmente a medida. Una vez validado, se convierte en un sistema operativo de largo recorrido.",
-    "comparison.columns.one": "A MEDIDA",
-    "comparison.columns.ongoing": "CONTINUIDAD",
-    "comparison.rows.scope.label": "Alcance",
-    "comparison.rows.scope.one":
-      "Un sistema de vestuario completamente a medida, desarrollado en exclusiva para su espacio, la estructura de su equipo y el posicionamiento de su marca.",
+      "Cada proyecto nace como desarrollo a medida y se convierte en un sistema de vestuario estable cuando patrón, ajuste y construcción quedan validados.",
+    "comparison.headings.criteria": "Criterio",
+    "comparison.headings.bespoke": "Fase a medida",
+    "comparison.headings.ongoing": "Fase operativa",
+    "comparison.rows.scope.title": "Alcance",
+    "comparison.rows.scope.bespoke":
+      "Desarrollado según tu espacio, jerarquía, clima y modelo de servicio.",
     "comparison.rows.scope.ongoing":
-      "El vestuario aprobado se convierte en un sistema operativo estable que puede reponerse, mantenerse y evolucionar con el tiempo.",
-    "comparison.rows.development.label": "Desarrollo",
-    "comparison.rows.development.one":
-      "Diseñado desde cero. Patronaje, fit, tejidos y confección se desarrollan específicamente para su entorno.",
+      "Mantenido como activo operativo para reposiciones, nuevas incorporaciones y expansión.",
+    "comparison.rows.development.title": "Desarrollo",
+    "comparison.rows.development.bespoke":
+      "Patrones, tejidos y lógica constructiva se definen y se prueban desde cero.",
     "comparison.rows.development.ongoing":
-      "Los patrones validados se archivan. La producción futura parte de las mismas bases aprobadas para garantizar consistencia.",
-    "comparison.rows.duplication.label": "Exclusividad",
-    "comparison.rows.duplication.one":
-      "El sistema se crea únicamente para usted. No se reutiliza, no se revende y no se replica para otros clientes.",
-    "comparison.rows.duplication.ongoing":
-      "El sistema sigue siendo exclusivo para usted, aunque se reproduzca internamente para cubrir futuras necesidades operativas.",
-    "comparison.rows.reorders.label": "Reposiciones",
-    "comparison.rows.reorders.one":
-      "Una vez aprobado, el vestuario puede reponerse a partir de los patrones validados sin reiniciar el desarrollo.",
-    "comparison.rows.reorders.ongoing":
-      "Las reposiciones son ágiles, rápidas y coherentes con sus estándares actuales.",
-    "process.title": "PROCESO",
+      "Las bases aprobadas se archivan y se reactivan sin reabrir la fase de diseño.",
+    "comparison.rows.exclusivity.title": "Exclusividad",
+    "comparison.rows.exclusivity.bespoke":
+      "Un cliente, una colección, una ejecución, sin reventa de las prendas desarrolladas.",
+    "comparison.rows.exclusivity.ongoing":
+      "El sistema se mantiene exclusivo mientras la producción escala con consistencia.",
+    "comparison.rows.speed.title": "Continuidad",
+    "comparison.rows.speed.bespoke":
+      "Pruebas, muestras y ajustes fijan el estándar correcto de rendimiento.",
+    "comparison.rows.speed.ongoing":
+      "Las reposiciones avanzan más rápido porque ajuste, escalado y reglas constructivas ya están controlados.",
+    "midCta.text": "Empezar a construir con nosotros",
+    "process.label": "Proceso",
+    "process.title": "Etapas definidas. Ejecución controlada.",
     "process.intro":
-      "Desde el primer brief hasta la entrega final, cada fase está estructurada para mantener claras las decisiones, controlar los plazos y alinear el vestuario con la operativa real.",
-    "process.steps.analysis.title": "Análisis del espacio y la operativa",
-    "process.steps.analysis.body":
-      "Leemos el espacio, el modelo de servicio, el clima y la jerarquía del equipo antes de dibujar una sola línea.",
-    "process.steps.selection.title": "Selección de patronaje base y tejidos",
-    "process.steps.selection.body":
-      "Partimos de bases probadas para escoger los fits adecuados, las familias de tejido correctas y los acabados técnicos necesarios.",
-    "process.steps.sampling.title": "Muestreo y ajuste",
-    "process.steps.sampling.body":
-      "Las primeras muestras se prueban sobre el cuerpo y dentro del contexto real. Se afinan proporciones, confort y equilibrio visual.",
-    "process.steps.production.title": "Producción y entrega",
-    "process.steps.production.body":
-      "Los modelos aprobados pasan a una producción local controlada, con escalado de tallas, plazos planificados y una ejecución consistente.",
-    "process.timeline.development": "Desarrollo medio: 4 a 6 semanas",
-    "process.timeline.production": "Producción media: 3 a 5 semanas",
-    "process.timeline.custom": "Proyectos totalmente personalizados: aprox. 8 semanas en total",
-    "process.timeline.simple": "Construcciones más simples: 5 a 6 semanas",
-    "capabilities.title": "CAPACIDADES Y PARÁMETROS DE PRODUCCIÓN",
-    "capabilities.leftTitle": "QUÉ DESARROLLAMOS",
-    "capabilities.items.shirts": "Camisas entalladas",
-    "capabilities.items.trousers": "Pantalones estructurados",
-    "capabilities.items.tailoring": "Blazers y sastrería",
-    "capabilities.items.dresses": "Vestidos y faldas",
-    "capabilities.items.knitwear": "Punto",
-    "capabilities.items.aprons": "Delantales y accesorios",
-    "capabilities.items.systems": "Sistemas completos de vestuario",
-    "capabilities.support":
-      "Cada prenda parte de una base probada y se ajusta para expresar su identidad.",
-    "parameters.title": "PARÁMETROS DE PRODUCCIÓN",
-    "parameters.moq.title": "Cantidades mínimas de pedido",
-    "parameters.moq.line1": "Modelos tejidos: desde 50 piezas por modelo",
-    "parameters.moq.line2": "Punto: de 100 a 150 piezas por modelo",
-    "parameters.smallRuns.title": "TIRADAS CORTAS",
-    "parameters.smallRuns.p1":
-      "Se pueden plantear producciones más cortas. Sin embargo, al bajar el volumen, el coste unitario aumenta por la menor eficiencia productiva y la mayor carga de desarrollo.",
-    "parameters.smallRuns.p2":
-      "Por debajo de 50 piezas por modelo, el precio aumentará de forma proporcional.",
-    "parameters.price.title": "Rango de precio habitual",
-    "parameters.price.body": "25 € a 120 € por pieza (IVA no incluido)",
-    "parameters.impact.title": "Qué influye en el precio",
-    "parameters.impact.item1": "Selección y gramaje del tejido",
-    "parameters.impact.item2": "Complejidad de confección",
-    "parameters.impact.item3": "Fornituras, etiquetas, botones y elementos de marca",
-    "parameters.impact.item4": "Técnicas de bordado o estampación",
-    "parameters.impact.item5": "Desarrollo de color a medida (300+ piezas en el mismo tejido)",
-    "parameters.note.title": "Nota",
-    "parameters.note.body":
-      "Todos los precios incluyen un nivel base de personalización. Cualquier personalización adicional puede elevar el coste por la mayor complejidad de desarrollo y producción.",
-    "materials.title": "MATERIALES Y TÉCNICAS",
-    "materials.fabrics.title": "TEJIDOS",
-    "materials.fabrics.item1": "Popelina de algodón",
-    "materials.fabrics.item2": "Twill stretch",
-    "materials.fabrics.item3": "Gabardina",
-    "materials.fabrics.item4": "Mezclas de lana",
-    "materials.fabrics.item5": "Jersey técnico",
-    "materials.fabrics.item6": "Estructuras de punto",
-    "materials.fabrics.item7": "Lona para delantales",
-    "materials.fabrics.item8": "Sastrería lavable",
-    "materials.construction.title": "CONSTRUCCIÓN Y ACABADOS",
-    "materials.construction.item1": "Desarrollo de patronaje",
-    "materials.construction.item2": "Escalado de tallas",
-    "materials.construction.item3": "Costuras reforzadas",
-    "materials.construction.item4": "Botones personalizados",
-    "materials.construction.item5": "Cierres ocultos",
-    "materials.construction.item6": "Vivos en contraste",
-    "materials.construction.item7": "Etiquetado de cuidado",
-    "materials.construction.item8": "Herrajes para delantales",
-    "materials.branding.title": "TÉCNICAS DE MARCA",
-    "materials.branding.item1": "Bordado",
-    "materials.branding.item2": "Etiquetas tejidas",
-    "materials.branding.item3": "Serigrafía",
-    "materials.branding.item4": "Transfer térmico",
-    "materials.branding.item5": "Grabado láser",
-    "materials.branding.item6": "Monogramas tono sobre tono",
-    "materials.branding.item7": "Igualación de color a medida",
-    "materials.branding.item8": "Sistemas internos de nomenclatura",
-    "cta.title": "DESCUBRA UNIFORMES TOTALMENTE PERSONALIZADOS PARA SU EQUIPO",
-    "cta.titleHtml":
-      '<span class="mobile-title-line">DESCUBRA UNIFORMES</span><span class="mobile-title-line">TOTALMENTE PERSONALIZADOS PARA SU EQUIPO</span>',
-    "cta.body":
-      "Nada es estándar. Desde los tejidos hasta los acabados, cada elemento se selecciona y se desarrolla para responder a su entorno, a su equipo y a la identidad de su marca.",
-    "team.title": "CONOZCA AL EQUIPO",
+      "El desarrollo avanza por hitos fijos para que dirección visual, validación técnica y calendario de producción permanezcan claros en todo momento.",
+    "process.steps.analysis.title": "Análisis",
+    "process.steps.analysis.body": "Lectura espacial, operativa y de roles.",
+    "process.steps.pattern.title": "Base de patrón",
+    "process.steps.pattern.body": "Selección de la base técnica y especificación.",
+    "process.steps.fabric.title": "Validación textil",
+    "process.steps.fabric.body": "Peso, ligamento, recuperación y resistencia al uso.",
+    "process.steps.sample.title": "Prototipo",
+    "process.steps.sample.body": "Revisión constructiva en movimiento, no sobre maniquí.",
+    "process.steps.fit.title": "Pruebas",
+    "process.steps.fit.body": "Ajuste sobre distintas morfologías del equipo.",
+    "process.steps.validation.title": "Preproducción",
+    "process.steps.validation.body": "Validación final de acabados, tallaje y branding.",
+    "process.steps.production.title": "Producción local",
+    "process.steps.production.body": "Fabricación controlada cerca de Barcelona.",
+    "process.timeline.one": "Desarrollo 4-6 semanas",
+    "process.timeline.two": "Producción 3-5 semanas",
+    "process.timeline.three": "Full custom unas 8 semanas",
+    "process.timeline.four": "Construcciones simples 5-6 semanas",
+    "capabilities.label": "Capacidades",
+    "capabilities.title": "Qué desarrollamos",
+    "capabilities.items.one": "Camisas de sastrería y pantalones estructurados",
+    "capabilities.items.two": "Blazers, chalecos, vestidos y faldas",
+    "capabilities.items.three": "Punto, delantales, overshirts y capas ligeras",
+    "capabilities.items.four": "Accesorios técnicos y evoluciones estacionales del sistema",
+    "capabilities.body":
+      "Los detalles de construcción pueden incluir plackets reforzados, sistemas ergonómicos de tirantes, compartimentos ocultos, paneles elásticos, cierres invisibles, forrería técnica y branding tono sobre tono.",
+    "parameters.label": "Parámetros",
+    "parameters.title": "Parámetros de producción",
+    "parameters.moq.title": "Cantidades mínimas",
+    "parameters.moq.body":
+      "Las prendas tejidas suelen comenzar en 50 unidades por estilo. El punto requiere normalmente entre 100 y 150 unidades por estilo por las restricciones de preparación de máquina.",
+    "parameters.price.title": "Precio orientativo",
+    "parameters.price.body":
+      "Los rangos habituales van de 25 EUR a 120 EUR por pieza sin IVA, según tejido, complejidad de confección, acabados y método de branding.",
+    "parameters.custom.title": "Nivel de personalización",
+    "parameters.custom.body":
+      "La personalización base está incluida. Herrajes exclusivos, tejidos desarrollados, fornituras especiales y bordados complejos aumentan el tiempo de desarrollo y producción.",
+    "parameters.pricingDrivers.title": "Qué determina el coste",
+    "parameters.pricingDrivers.one": "Sourcing textil, peso y estructura del tejido",
+    "parameters.pricingDrivers.two": "Detalle constructivo, forrería y refuerzos",
+    "parameters.pricingDrivers.three": "Bordado, impresión, etiquetas y herrajes personalizados",
+    "parameters.pricingDrivers.four": "Desarrollo de color propio por encima de 300 piezas por tejido",
+    "materials.label": "Materiales y técnicas",
+    "materials.title": "Función primero. Refinado con contención.",
+    "materials.intro":
+      "La selección material se define por exposición, frecuencia de lavado, recuperación, caída y postura operativa de cada rol.",
+    "materials.columns.fabrics.title": "Tejidos",
+    "materials.columns.fabrics.one": "Algodón, lino, tencel, bambú y mezclas técnicas",
+    "materials.columns.fabrics.two": "Tejidos planos, punto, sastrería lavable y construcciones elásticas",
+    "materials.columns.fabrics.three": "Pesos y composiciones calibrados según clima y frecuencia de uso",
+    "materials.columns.construction.title": "Construcción",
+    "materials.columns.construction.one": "Costuras reforzadas, cierres invisibles y colocación ergonómica",
+    "materials.columns.construction.two": "Lógica de bolsillos, durabilidad del botón, lavado y recuperación",
+    "materials.columns.construction.three": "Pruebas de fit sobre varios tipos de cuerpo del equipo",
+    "materials.columns.branding.title": "Branding",
+    "materials.columns.branding.one": "Bordado tono sobre tono y colocación discreta",
+    "materials.columns.branding.two": "Etiquetas tejidas, branding interior y sistemas operativos de nomenclatura",
+    "materials.columns.branding.three": "Impresión o transferencia solo cuando encajan con el entorno",
+    "continuity.label": "Modelo a largo plazo",
+    "continuity.title": "La continuidad está diseñada de origen",
+    "continuity.p1":
+      "Una vez aprobado el desarrollo, los patrones se archivan para reposiciones inmediatas sin volver a muestrear. Nuevas incorporaciones y nuevas ubicaciones pueden integrarse sin romper la continuidad de la silueta.",
+    "continuity.p2":
+      "La producción se desarrolla cerca de Barcelona para mantener una comunicación directa, correcciones rápidas y control de calidad basado en diálogo técnico real.",
+    "continuity.p3":
+      "Cada prenda se inspecciona antes de la entrega en costuras, acabados, consistencia de tallas y etiquetado para llegar lista al despliegue operativo.",
+    "team.label": "Dirección del estudio",
+    "team.title": "Diseño, producción, visión operativa",
     "team.intro":
-      "Diseño, hostelería y producción alineados hacia un mismo resultado: sistemas de vestuario que rinden tan bien como posicionan la marca.",
-    "team.card1.name": "Leonardo Gobbato",
-    "team.card1.title": "Fundador y responsable de producto",
-    "team.card1.body":
-      "Más de una década uniendo diseño y producción, dibujando cada proyecto y trabajando mano a mano con ateliers y fabricantes. Desde Barcelona, Leonardo colabora estrechamente con socios locales de confianza para garantizar oficio, plazos fiables y decisiones bien fundamentadas.",
-    "team.card2.name": "Andreas Gonzalez",
-    "team.card2.title": "Cofundador y director comercial",
-    "team.card2.body":
-      "Profesional de la hostelería con amplia experiencia en hoteles de lujo y restaurantes de alto nivel, aporta una visión operativa al diseño de uniformes que mejoran el rendimiento y refuerzan la identidad de marca.",
-    "team.card3.name": "Giovanna Gottardo",
-    "team.card3.title": "Diseñadora de moda",
-    "team.card3.body":
-      "Con experiencia en los ateliers de Dolce & Gabbana en Milán y Padua, lidera el diseño de prenda con una atención especial a las formas, las proporciones y la construcción. Supervisa la producción desde el prototipo hasta la entrega final, asegurando precisión, consistencia y el máximo nivel de calidad.",
-    "team.card4.name": "Federica Bianzon",
-    "team.card4.title": "Cofundadora y dirección de proyectos",
-    "team.card4.body":
-      "Federica lidera la gestión de proyectos de nuestro trabajo B2B, supervisando plazos, presupuestos y entregas. Garantiza una comunicación clara con todas las partes implicadas y alinea cada proyecto con la identidad visual del cliente, asegurando estructura, consistencia y una ejecución fluida de principio a fin.",
-    "contact.title": "CONTACTO",
+      "Pamuuc Studio se dirige desde producto, estructura de proyecto y operaciones hospitality para que cada decisión estética siga anclada en la técnica.",
+    "team.cards.one.name": "Leonardo Gobbato",
+    "team.cards.one.role": "Fundador y Director de Producto",
+    "team.cards.one.body":
+      "Leonardo conecta diseño y construcción de prenda en cada proyecto, manteniendo la dirección visual alineada con la viabilidad técnica y la realidad del taller.",
+    "team.cards.two.name": "Federica Vianson",
+    "team.cards.two.role": "Cofundadora y Directora de Proyecto",
+    "team.cards.two.body":
+      "Federica dirige tiempos, presupuesto y alineación con stakeholders para que todo el proceso permanezca estructurado, transparente y controlado de principio a fin.",
+    "team.cards.three.name": "Andreas Gonzalez",
+    "team.cards.three.role": "Cofundador y mirada operativa",
+    "team.cards.three.body":
+      "Andreas aporta experiencia directa en hoteles de lujo y restaurantes de alto nivel, asegurando que las prendas respondan a movimiento, durabilidad, jerarquía y ritmo de servicio.",
+    "contact.label": "Contacto",
+    "contact.title": "Contactar",
     "contact.intro":
-      "Cada proyecto comienza con una conversación. Antes de concertar una reunión, complete nuestro breve cuestionario de proyecto. Nos permite entender su espacio, la estructura del equipo y sus necesidades operativas para que la primera conversación sea precisa y estratégica.",
-    "contact.questionnaire": "Solicitar el cuestionario del proyecto",
-    "contact.calendarTitle": "Reserva de cita de PAMUUC Studio",
-    "footer.legal.privacy": "Política de privacidad",
-    "footer.legal.terms": "Términos y condiciones",
-    "footer.legal.production": "Política de producción",
-    "footer.address": "Pasaje de Maiol 9, 08013, Barcelona, España"
+      "Cada colaboración comienza con una conversación sobre escala de equipo, ritmo operativo, planes de expansión y posicionamiento de marca. El objetivo es la coherencia a largo plazo.",
+    "contact.cta": "Contactar",
+    "contact.emailLabel": "Correo",
+    "contact.phoneLabel": "Teléfono",
+    "contact.questionnaireLabel": "Cuestionario",
+    "contact.questionnaire": "Solicitar el cuestionario de proyecto",
+    "contact.calendarFallback": "Abrir agenda en una nueva pestaña",
+    "contact.calendarTitle": "Reserva de cita de Pamuuc Studio",
+    "footer.address": "Pasaje de Maiol 9, 08013 Barcelona, España",
+    "captions.approach": "La lectura espacial orienta cada decisión material y de silueta.",
+    "captions.system": "La coherencia se construye entre roles sin forzar uniformidad.",
+    "captions.materials": "Tejido, recuperación, resistencia y caída se evalúan en conjunto.",
+    "captions.continuity": "Los patrones se archivan para que el vestuario escale sin perder control.",
+    "images.hero":
+      "Composición editorial arquitectónica con interior hospitality y prendas estructuradas.",
+    "images.approach":
+      "Entorno hospitality arquitectónico con encuadre cálido y contenido.",
+    "images.system":
+      "Estudio de vestuario estructurado con sastrería, tejidos y notas operativas.",
+    "images.materials":
+      "Estudio de materiales con textiles plegados y superficies de construcción sartorial.",
+    "images.continuity":
+      "Composición de atelier local con archivo de patrones y superficies de control de calidad.",
+    "images.teamOne": "Tarjeta de retrato abstracta que representa a Leonardo Gobbato.",
+    "images.teamTwo": "Tarjeta de retrato abstracta que representa a Federica Vianson.",
+    "images.teamThree": "Tarjeta de retrato abstracta que representa a Andreas Gonzalez."
   },
   it: {
-    "meta.title": "PAMUUC STUDIO | Uniformi su misura per team premium dell'ospitalità e dei servizi",
+    "meta.title": "PAMUUC STUDIO | Sistemi di guardaroba su misura per l'ospitalità premium",
     "meta.description":
-      "PAMUUC STUDIO progetta e produce sistemi di uniformi su misura per team premium dell'ospitalità e dei servizi, con artigianalità, controllo locale della produzione e precisione operativa.",
+      "Pamuuc Studio progetta e produce sistemi di guardaroba su misura per l'ospitalità premium e i team di servizio ad alta intensità, attraverso lettura dello spazio, sviluppo tecnico e produzione locale controllata.",
     "accessibility.skip": "Vai al contenuto",
-    "accessibility.home": "Home PAMUUC Studio",
-    "accessibility.menu": "Apri il menu",
-    "accessibility.languages": "Scegli la lingua",
-    "accessibility.cta": "Vai alla sezione contatti",
-    "nav.whyUs": "Perché noi",
+    "accessibility.home": "Home Pamuuc Studio",
+    "accessibility.menu": "Apri il menu di navigazione",
+    "accessibility.languages": "Selettore lingua",
+    "nav.approach": "Approccio",
     "nav.process": "Processo",
+    "nav.parameters": "Parametri",
     "nav.team": "Team",
-    "nav.contact": "Contatti",
-    "hero.h1": "LA VOSTRA VISIONE, IL NOSTRO SAPER FARE",
-    "hero.h2": "Capi all'altezza dell'esperienza che volete offrire",
-    "hero.h3": "Creati per ispirare. Pensati per appartenere.",
-    "placeholders.heroDesktop": "Visual hero desktop da inserire",
-    "placeholders.heroMobile": "Visual hero mobile da inserire",
-    "placeholders.purposeImage": "Visual filosofia da inserire",
-    "placeholders.signatureImage": "Visual signature da inserire",
-    "placeholders.capabilitiesImage": "Visual sviluppo collezione da inserire",
-    "placeholders.team1Portrait": "Ritratto da inserire",
-    "placeholders.team2Portrait": "Ritratto da inserire",
-    "placeholders.team3Portrait": "Ritratto da inserire",
-    "placeholders.team4Portrait": "Ritratto da inserire",
-    "why.title": "UN NUOVO MODO DI PENSARE L'UNIFORME",
-    "why.body":
-      "Progettiamo e produciamo sistemi di guardaroba strutturati per team premium e ad alte prestazioni, costruiti intorno allo spazio, alla gerarchia e alla realtà operativa.",
-    "philosophy.title": "IL NOSTRO SCOPO",
-    "philosophy.p1":
-      "Diamo forma all'identità di luoghi di lusso e contesti ad alte prestazioni attraverso capi concepiti con intenzione e realizzati con misura.",
-    "philosophy.p2": "Non partiamo dal capo. Partiamo dallo spazio.",
-    "philosophy.p3":
-      "Architettura, atmosfera, ritmo del servizio, clima e realtà operativa definiscono ogni progetto. Da lì costruiamo sistemi di guardaroba naturali, funzionali e durevoli.",
-    "philosophy.p4":
-      "Sviluppato vicino a Barcellona, ogni progetto prende forma attraverso prossimità, dialogo e una produzione controllata. La visione si traduce in forma con chiarezza e precisione.",
-    "signature.title": "UNA FIRMA, NON UNA DIVISA",
-    "signature.p1":
-      "Un guardaroba non deve mai sembrare preso in prestito da un altro contesto. Deve appartenere al luogo, con la stessa intenzione dei materiali, della luce e del ritmo del servizio.",
-    "signature.p2":
-      "Traduciamo il posizionamento del brand in silhouette, proporzioni e dettagli che definiscono la gerarchia senza teatralità. Il risultato è coerente, riconoscibile e subito credibile nel quotidiano.",
-    "signature.p3":
-      "Ogni capo fa parte di un unico sistema: sala, management, cucina, reception e servizio tenuti insieme da un linguaggio visivo controllato.",
-    "comparison.title": "DALLO SVILUPPO SU MISURA A UN SISTEMA OPERATIVO DURATURO",
-    "comparison.titleHtml":
-      '<span class="mobile-title-line">DALLO SVILUPPO SU MISURA</span><span class="mobile-title-line">A UN SISTEMA OPERATIVO DURATURO</span>',
+    "nav.contact": "Contatto",
+    "hero.eyebrow": "Studio di design e produzione",
+    "hero.title": "SISTEMI DI GUARDAROBA STRUTTURATI PER L'OSPITALITÀ PREMIUM",
+    "hero.summary":
+      "Pamuuc Studio sviluppa sistemi di guardaroba su misura per team hospitality e di servizio attraverso lettura dello spazio, affinamento tecnico e produzione locale controllata.",
+    "hero.metaOne": "Supervisione da Barcellona",
+    "hero.metaTwo": "Un cliente, una esecuzione",
+    "hero.metaThree": "Cartamodelli archiviati per continuità",
+    "hero.cta": "Iniziamo a costruire insieme",
+    "approach.label": "Posizionamento",
+    "approach.title": "Partiamo dallo spazio",
+    "approach.p1":
+      "Architettura, luce, materialità, atmosfera, ritmo del servizio e interazione con l'ospite definiscono ogni progetto prima ancora di tracciare un capo.",
+    "approach.p2":
+      "Ogni collaborazione si apre con un'analisi strutturata. Ruoli, postura, esposizione termica, cicli di lavaggio, movimento e punti di stress vengono trattati come dati di progetto, non come conseguenze della produzione.",
+    "approach.p3":
+      "Il guardaroba viene sviluppato come estensione strutturale dell'ambiente, allineata a gerarchia, performance e condizioni reali di utilizzo.",
+    "system.label": "Metodo",
+    "system.title": "Non capi isolati. Un sistema.",
+    "system.p1":
+      "Silhouette, peso del tessuto, logica colore e posizionamento del branding sono coordinati tra i ruoli affinché direzione, floor staff, reception e funzioni vicine alla cucina restino coerenti senza apparire identici.",
+    "system.p2":
+      "La linea può irrigidirsi dove serve autorevolezza e alleggerirsi dove mobilità e traspirazione sono decisive. Gli accessori vengono sviluppati come elementi strutturali con una funzione precisa.",
+    "system.p3":
+      "Ogni collezione viene sviluppata esclusivamente per il cliente. Nessun catalogo. Nessuna rivendita. Un sistema di guardaroba per un solo contesto operativo.",
+    "comparison.label": "Modello di continuità",
+    "comparison.title": "Fase su misura. Continuità operativa.",
     "comparison.intro":
-      "Ogni progetto nasce come uno sviluppo interamente su misura. Una volta validato, diventa un sistema operativo destinato a durare.",
-    "comparison.columns.one": "SU MISURA",
-    "comparison.columns.ongoing": "CONTINUITÀ",
-    "comparison.rows.scope.label": "Ambito",
-    "comparison.rows.scope.one":
-      "Un sistema di guardaroba completamente su misura, sviluppato in esclusiva per il vostro spazio, la struttura del team e il posizionamento del brand.",
+      "Ogni progetto nasce come sviluppo su misura e diventa un sistema stabile quando fitting, cartamodelli e costruzione sono validati.",
+    "comparison.headings.criteria": "Criterio",
+    "comparison.headings.bespoke": "Fase su misura",
+    "comparison.headings.ongoing": "Fase operativa",
+    "comparison.rows.scope.title": "Ambito",
+    "comparison.rows.scope.bespoke":
+      "Sviluppato intorno a spazio, gerarchia, clima e modello di servizio.",
     "comparison.rows.scope.ongoing":
-      "Il guardaroba approvato diventa un sistema operativo stabile, riordinabile, gestibile ed evolutivo nel tempo.",
-    "comparison.rows.development.label": "Sviluppo",
-    "comparison.rows.development.one":
-      "Disegnato da zero. Cartamodelli, vestibilità, tessuti e costruzione vengono sviluppati specificamente per il vostro contesto.",
+      "Mantenuto come asset operativo per riordini, nuovi ingressi ed espansione.",
+    "comparison.rows.development.title": "Sviluppo",
+    "comparison.rows.development.bespoke":
+      "Cartamodelli, tessuti e logica costruttiva vengono definiti e testati da zero.",
     "comparison.rows.development.ongoing":
-      "I cartamodelli validati vengono archiviati. Le produzioni future partono dalle stesse basi approvate per garantire coerenza.",
-    "comparison.rows.duplication.label": "Esclusività",
-    "comparison.rows.duplication.one":
-      "Il sistema nasce esclusivamente per voi. Non viene riutilizzato, rivenduto o replicato per altri clienti.",
-    "comparison.rows.duplication.ongoing":
-      "Il sistema resta esclusivo, pur venendo riprodotto internamente per le vostre esigenze operative future.",
-    "comparison.rows.reorders.label": "Riordini",
-    "comparison.rows.reorders.one":
-      "Dopo l'approvazione, i capi possono essere riordinati utilizzando i cartamodelli validati senza riaprire lo sviluppo.",
-    "comparison.rows.reorders.ongoing":
-      "I riordini sono rapidi, fluidi e perfettamente allineati ai vostri standard.",
-    "process.title": "PROCESSO",
+      "Le basi approvate vengono archiviate e riattivate senza riaprire la fase di design.",
+    "comparison.rows.exclusivity.title": "Esclusività",
+    "comparison.rows.exclusivity.bespoke":
+      "Un cliente, una collezione, una esecuzione, senza rivendita dei capi sviluppati.",
+    "comparison.rows.exclusivity.ongoing":
+      "Il sistema resta esclusivo mentre la produzione cresce con coerenza.",
+    "comparison.rows.speed.title": "Continuità",
+    "comparison.rows.speed.bespoke":
+      "Fitting, campionature e correzioni fissano il corretto standard di performance.",
+    "comparison.rows.speed.ongoing":
+      "I riordini procedono più velocemente perché fit, grading e regole costruttive sono già controllati.",
+    "midCta.text": "Iniziamo a costruire insieme",
+    "process.label": "Processo",
+    "process.title": "Fasi definite. Esecuzione controllata.",
     "process.intro":
-      "Dal primo brief alla consegna finale, ogni fase è strutturata per mantenere chiare le decisioni, governare i tempi e allineare il guardaroba con l'operatività reale.",
-    "process.steps.analysis.title": "Analisi dello spazio e dell'operatività",
-    "process.steps.analysis.body":
-      "Leggiamo lo spazio, il modello di servizio, il clima e la gerarchia del team prima di tracciare una sola linea.",
-    "process.steps.selection.title": "Selezione di basi e tessuti",
-    "process.steps.selection.body":
-      "Partiamo da fondamenta collaudate per scegliere le giuste vestibilità, le famiglie di tessuto corrette e le finiture tecniche necessarie.",
-    "process.steps.sampling.title": "Campionatura e affinamento",
-    "process.steps.sampling.body":
-      "I primi campioni vengono testati sul corpo e nel contesto reale. Proporzioni, comfort ed equilibrio visivo vengono poi affinati.",
-    "process.steps.production.title": "Produzione e consegna",
-    "process.steps.production.body":
-      "I modelli approvati passano in produzione locale controllata con gradazione delle taglie, tempi pianificati ed esecuzione coerente.",
-    "process.timeline.development": "Sviluppo medio: 4 a 6 settimane",
-    "process.timeline.production": "Produzione media: 3 a 5 settimane",
-    "process.timeline.custom": "Progetti completamente su misura: circa 8 settimane in totale",
-    "process.timeline.simple": "Costruzioni più semplici: 5 a 6 settimane",
-    "capabilities.title": "CAPACITÀ E PARAMETRI DI PRODUZIONE",
-    "capabilities.leftTitle": "COSA SVILUPPIAMO",
-    "capabilities.items.shirts": "Camicie sartoriali",
-    "capabilities.items.trousers": "Pantaloni strutturati",
-    "capabilities.items.tailoring": "Blazer e sartoria",
-    "capabilities.items.dresses": "Abiti e gonne",
-    "capabilities.items.knitwear": "Maglieria",
-    "capabilities.items.aprons": "Grembiuli e accessori",
-    "capabilities.items.systems": "Sistemi guardaroba completi",
-    "capabilities.support":
-      "Ogni capo nasce da una base collaudata e viene affinato per riflettere la vostra identità.",
-    "parameters.title": "PARAMETRI DI PRODUZIONE",
-    "parameters.moq.title": "Quantitativi minimi d'ordine",
-    "parameters.moq.line1": "Modelli tessuti: da 50 pezzi per modello",
-    "parameters.moq.line2": "Maglieria: da 100 a 150 pezzi per modello",
-    "parameters.smallRuns.title": "PICCOLE SERIE",
-    "parameters.smallRuns.p1":
-      "Sono possibili produzioni più contenute. Tuttavia, al diminuire dei volumi, il costo unitario aumenta per via di una minore efficienza produttiva e di una quota di sviluppo più alta.",
-    "parameters.smallRuns.p2":
-      "Sotto i 50 pezzi per modello, il prezzo aumenta in modo proporzionale.",
-    "parameters.price.title": "Fascia di prezzo abituale",
-    "parameters.price.body": "25 € a 120 € per capo (IVA esclusa)",
-    "parameters.impact.title": "Cosa incide sul prezzo",
-    "parameters.impact.item1": "Scelta e peso del tessuto",
-    "parameters.impact.item2": "Complessità costruttiva",
-    "parameters.impact.item3": "Accessori, etichette, bottoni ed elementi di brand",
-    "parameters.impact.item4": "Tecniche di ricamo o stampa",
-    "parameters.impact.item5": "Sviluppo colore su misura (300+ pezzi nello stesso tessuto)",
-    "parameters.note.title": "Nota",
-    "parameters.note.body":
-      "Tutti i prezzi includono un primo livello di personalizzazione. Personalizzazioni aggiuntive possono far crescere il costo per la maggiore complessità di sviluppo e produzione.",
-    "materials.title": "MATERIALI E TECNICHE",
-    "materials.fabrics.title": "TESSUTI",
-    "materials.fabrics.item1": "Popeline di cotone",
-    "materials.fabrics.item2": "Twill stretch",
-    "materials.fabrics.item3": "Gabardine",
-    "materials.fabrics.item4": "Miscele di lana",
-    "materials.fabrics.item5": "Jersey tecnico",
-    "materials.fabrics.item6": "Strutture in maglia",
-    "materials.fabrics.item7": "Canvas per grembiuli",
-    "materials.fabrics.item8": "Sartoria lavabile",
-    "materials.construction.title": "COSTRUZIONE E FINITURE",
-    "materials.construction.item1": "Sviluppo cartamodelli",
-    "materials.construction.item2": "Gradazione taglie",
-    "materials.construction.item3": "Cuciture rinforzate",
-    "materials.construction.item4": "Bottoni personalizzati",
-    "materials.construction.item5": "Chiusure nascoste",
-    "materials.construction.item6": "Profilature a contrasto",
-    "materials.construction.item7": "Etichette di cura",
-    "materials.construction.item8": "Ferramenta per grembiuli",
-    "materials.branding.title": "TECNICHE DI BRANDING",
-    "materials.branding.item1": "Ricamo",
-    "materials.branding.item2": "Etichette tessute",
-    "materials.branding.item3": "Serigrafia",
-    "materials.branding.item4": "Transfer termici",
-    "materials.branding.item5": "Incisione laser",
-    "materials.branding.item6": "Monogrammi tono su tono",
-    "materials.branding.item7": "Abbinamento colore su misura",
-    "materials.branding.item8": "Sistemi interni di denominazione",
-    "cta.title": "SCOPRITE UNIFORMI TOTALMENTE PERSONALIZZATE PER IL VOSTRO TEAM",
-    "cta.titleHtml":
-      '<span class="mobile-title-line">SCOPRITE UNIFORMI</span><span class="mobile-title-line">TOTALMENTE PERSONALIZZATE PER IL VOSTRO TEAM</span>',
-    "cta.body":
-      "Nulla è standard. Dai tessuti alle finiture, ogni elemento viene selezionato e sviluppato per rispondere al vostro ambiente, al vostro team e all'identità del vostro brand.",
-    "team.title": "IL TEAM",
+      "Lo sviluppo procede attraverso checkpoint fissi affinché direzione visiva, validazione tecnica e tempi di produzione restino chiari in ogni fase.",
+    "process.steps.analysis.title": "Analisi",
+    "process.steps.analysis.body": "Lettura spaziale, operativa e dei ruoli.",
+    "process.steps.pattern.title": "Base modello",
+    "process.steps.pattern.body": "Selezione della base tecnica e specifica.",
+    "process.steps.fabric.title": "Validazione tessile",
+    "process.steps.fabric.body": "Peso, armatura, recupero e resistenza all'uso.",
+    "process.steps.sample.title": "Prototipo",
+    "process.steps.sample.body": "Revisione costruttiva in movimento, non su manichino.",
+    "process.steps.fit.title": "Fitting",
+    "process.steps.fit.body": "Affinamento su più fisicità all'interno del team.",
+    "process.steps.validation.title": "Pre-produzione",
+    "process.steps.validation.body": "Validazione finale di finiture, grading e branding.",
+    "process.steps.production.title": "Produzione locale",
+    "process.steps.production.body": "Produzione controllata vicino a Barcellona.",
+    "process.timeline.one": "Sviluppo 4-6 settimane",
+    "process.timeline.two": "Produzione 3-5 settimane",
+    "process.timeline.three": "Full custom circa 8 settimane",
+    "process.timeline.four": "Costruzioni semplici 5-6 settimane",
+    "capabilities.label": "Capacità",
+    "capabilities.title": "Cosa sviluppiamo",
+    "capabilities.items.one": "Camicie sartoriali e pantaloni strutturati",
+    "capabilities.items.two": "Blazer, gilet, abiti e gonne",
+    "capabilities.items.three": "Maglieria, grembiuli, overshirt e capi leggeri",
+    "capabilities.items.four": "Accessori tecnici ed evoluzioni stagionali del sistema",
+    "capabilities.body":
+      "I dettagli costruttivi possono includere paramonture rinforzate, sistemi di cinghie ergonomiche, comparti nascosti, pannelli stretch, chiusure coperte, fodere tecniche e branding tono su tono.",
+    "parameters.label": "Parametri",
+    "parameters.title": "Parametri di produzione",
+    "parameters.moq.title": "Quantità minime",
+    "parameters.moq.body":
+      "I capi in tessuto partono normalmente da 50 pezzi per stile. La maglieria richiede spesso tra 100 e 150 pezzi per stile a causa dei vincoli di set-up macchina.",
+    "parameters.price.title": "Prezzi indicativi",
+    "parameters.price.body":
+      "Le fasce tipiche vanno da 25 EUR a 120 EUR per capo IVA esclusa, in base a tessuto, complessità sartoriale, finiture e metodo di branding.",
+    "parameters.custom.title": "Livello di personalizzazione",
+    "parameters.custom.body":
+      "La personalizzazione base è inclusa. Hardware esclusivo, tessiture custom, finiture speciali e ricami complessi aumentano tempi di sviluppo e produzione.",
+    "parameters.pricingDrivers.title": "Cosa incide sul costo",
+    "parameters.pricingDrivers.one": "Ricerca del tessuto, peso e struttura",
+    "parameters.pricingDrivers.two": "Dettaglio costruttivo, fodere e rinforzi",
+    "parameters.pricingDrivers.three": "Ricamo, stampa, etichette e hardware custom",
+    "parameters.pricingDrivers.four": "Sviluppo colore dedicato oltre 300 pezzi per tessuto",
+    "materials.label": "Materiali e tecniche",
+    "materials.title": "Funzione prima. Rifiniti con misura.",
+    "materials.intro":
+      "La scelta dei materiali dipende da esposizione, frequenza di lavaggio, recupero, caduta e postura operativa di ciascun ruolo.",
+    "materials.columns.fabrics.title": "Tessuti",
+    "materials.columns.fabrics.one": "Cotone, lino, tencel, bamboo e blend tecnici",
+    "materials.columns.fabrics.two": "Tessuti piani, maglieria, sartoria lavabile e costruzioni stretch",
+    "materials.columns.fabrics.three": "Pesi e composizioni calibrati su clima e frequenza d'uso",
+    "materials.columns.construction.title": "Costruzione",
+    "materials.columns.construction.one": "Cuciture rinforzate, chiusure coperte e posizionamento ergonomico",
+    "materials.columns.construction.two": "Logica tasche, durata dei bottoni, test di lavaggio e recupero",
+    "materials.columns.construction.three": "Prove fitting su diverse fisicità interne al team",
+    "materials.columns.branding.title": "Branding",
+    "materials.columns.branding.one": "Ricamo tono su tono e placement misurato",
+    "materials.columns.branding.two": "Etichette tessute, branding interno e sistemi di naming operativo",
+    "materials.columns.branding.three": "Stampa o transfer solo se coerenti con l'ambiente",
+    "continuity.label": "Modello di lungo periodo",
+    "continuity.title": "La continuità è pensata dall'inizio",
+    "continuity.p1":
+      "Una volta approvato lo sviluppo, i cartamodelli vengono archiviati per riordini immediati senza nuova campionatura. Nuove assunzioni e nuove sedi possono essere integrate senza interrompere la continuità della silhouette.",
+    "continuity.p2":
+      "La produzione viene sviluppata vicino a Barcellona per mantenere comunicazione diretta, revisioni rapide e controllo qualità fondato su dialogo tecnico reale.",
+    "continuity.p3":
+      "Ogni capo viene ispezionato prima della consegna per cuciture, finiture, coerenza taglie ed etichettatura, così da arrivare pronto all'uso operativo.",
+    "team.label": "Leadership dello studio",
+    "team.title": "Design, produzione, visione operativa",
     "team.intro":
-      "Design, ospitalità e produzione allineati su un unico risultato: sistemi di guardaroba che funzionano quanto rafforzano il posizionamento del brand.",
-    "team.card1.name": "Leonardo Gobbato",
-    "team.card1.title": "Fondatore e responsabile prodotto",
-    "team.card1.body":
-      "Oltre un decennio a collegare design e produzione, disegnando ogni progetto e lavorando a stretto contatto con atelier e produttori. Basato a Barcellona, Leonardo collabora con partner locali fidati per garantire artigianalità, tempi affidabili e decisioni ben fondate.",
-    "team.card2.name": "Andreas Gonzalez",
-    "team.card2.title": "Cofondatore e direttore commerciale",
-    "team.card2.body":
-      "Professionista dell'ospitalità con una profonda esperienza in hotel di lusso e ristoranti di alto profilo, porta una lettura operativa nella progettazione di uniformi che migliorano la performance e rafforzano l'identità del brand.",
-    "team.card3.name": "Giovanna Gottardo",
-    "team.card3.title": "Fashion designer",
-    "team.card3.body":
-      "Con esperienza negli atelier Dolce & Gabbana di Milano e Padova, guida il design dei capi con forte attenzione a forme, proporzioni e costruzione. Supervisiona la produzione dal prototipo alla consegna finale, assicurando precisione, coerenza e i più alti standard qualitativi.",
-    "team.card4.name": "Federica Bianzon",
-    "team.card4.title": "Cofondatrice e direzione progetti",
-    "team.card4.body":
-      "Federica guida il project management della nostra attività B2B, supervisionando tempi, budget e consegna. Garantisce una comunicazione chiara con gli stakeholder e allinea ogni progetto con l'identità visiva del cliente, assicurando struttura, coerenza e fluidità dall'inizio alla fine.",
-    "contact.title": "CONTATTO",
+      "Pamuuc Studio è guidato tra prodotto, struttura di progetto e operatività hospitality, così che ogni decisione estetica resti tecnicamente fondata.",
+    "team.cards.one.name": "Leonardo Gobbato",
+    "team.cards.one.role": "Fondatore e Product Lead",
+    "team.cards.one.body":
+      "Leonardo collega design e costruzione del capo in ogni progetto, mantenendo la direzione visiva allineata con fattibilità tecnica e realtà di laboratorio.",
+    "team.cards.two.name": "Federica Vianson",
+    "team.cards.two.role": "Co-Founder e Project Manager",
+    "team.cards.two.body":
+      "Federica governa tempi, budget e allineamento degli stakeholder affinché l'intero processo resti strutturato, trasparente e controllato dall'inizio alla consegna.",
+    "team.cards.three.name": "Andreas Gonzalez",
+    "team.cards.three.role": "Co-Founder e visione operativa",
+    "team.cards.three.body":
+      "Andreas porta esperienza diretta da hotel di lusso e ristoranti di alto profilo, assicurando che i capi sostengano movimento, durabilità, gerarchia e ritmo del servizio.",
+    "contact.label": "Contatto",
+    "contact.title": "Contattaci",
     "contact.intro":
-      "Ogni progetto nasce da una conversazione. Prima di fissare una riunione, compilate il nostro breve questionario di progetto. Ci permette di comprendere il vostro spazio, la struttura del team e le esigenze operative così da rendere il primo confronto già preciso e strategico.",
-    "contact.questionnaire": "Richiedete il questionario di progetto",
-    "contact.calendarTitle": "Prenotazione appuntamento PAMUUC Studio",
-    "footer.legal.privacy": "Informativa sulla privacy",
-    "footer.legal.terms": "Termini e condizioni",
-    "footer.legal.production": "Politica di produzione",
-    "footer.address": "Pasaje de Maiol 9, 08013, Barcellona, Spagna"
+      "Ogni collaborazione nasce da una conversazione su dimensione del team, ritmo operativo, piani di espansione e posizionamento del brand. L'obiettivo resta sempre la coerenza nel lungo periodo.",
+    "contact.cta": "Contattaci",
+    "contact.emailLabel": "Email",
+    "contact.phoneLabel": "Telefono",
+    "contact.questionnaireLabel": "Questionario",
+    "contact.questionnaire": "Richiedi il questionario di progetto",
+    "contact.calendarFallback": "Apri la calendarizzazione in una nuova scheda",
+    "contact.calendarTitle": "Prenotazione appuntamento Pamuuc Studio",
+    "footer.address": "Pasaje de Maiol 9, 08013 Barcellona, Spagna",
+    "captions.approach": "La lettura dello spazio orienta ogni decisione su materiali e silhouette.",
+    "captions.system": "La coerenza viene costruita tra i ruoli senza imporre uniformità.",
+    "captions.materials": "Tessuto, recupero, resistenza e caduta vengono valutati insieme.",
+    "captions.continuity": "I cartamodelli vengono archiviati così che il sistema cresca senza perdere controllo.",
+    "images.hero":
+      "Composizione editoriale architettonica con interno hospitality e capi strutturati.",
+    "images.approach":
+      "Ambiente hospitality architettonico con inquadratura calda e controllata.",
+    "images.system":
+      "Studio di guardaroba strutturato con sartoria, tessuti e note operative.",
+    "images.materials":
+      "Studio materiali con tessuti piegati e superfici di costruzione sartoriale.",
+    "images.continuity":
+      "Composizione di atelier locale con archivio cartamodelli e superfici di controllo qualità.",
+    "images.teamOne": "Scheda ritratto astratta che rappresenta Leonardo Gobbato.",
+    "images.teamTwo": "Scheda ritratto astratta che rappresenta Federica Vianson.",
+    "images.teamThree": "Scheda ritratto astratta che rappresenta Andreas Gonzalez."
   }
 };
 
-const languageButtons = document.querySelectorAll(".language-button");
 const translatableNodes = document.querySelectorAll("[data-i18n]");
-const translatableHtmlNodes = document.querySelectorAll("[data-i18n-html]");
 const labelNodes = document.querySelectorAll("[data-i18n-label]");
 const titleNodes = document.querySelectorAll("[data-i18n-title]");
-const languageSwitcher = document.querySelector(".language-switcher");
-const languageToggle = document.querySelector(".language-toggle");
-const languageCurrent = document.querySelector(".language-current");
+const altNodes = document.querySelectorAll("[data-i18n-alt]");
+const languageButtons = document.querySelectorAll(".language-button");
 const menuButton = document.querySelector(".menu-toggle");
-const siteNav = document.querySelector(".site-nav");
+const nav = document.querySelector(".site-nav");
 const metaDescription = document.querySelector('meta[name="description"]');
-const menuMediaQuery = window.matchMedia("(max-width: 1024px)");
+const revealNodes = document.querySelectorAll("[data-reveal]");
+const calendarFrame = document.querySelector(".calendar-embed");
+const mobileQuery = window.matchMedia("(max-width: 1024px)");
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 function closeMenu() {
   document.body.classList.remove("menu-open");
   menuButton.setAttribute("aria-expanded", "false");
 }
 
-function closeLanguageMenu() {
-  if (!languageSwitcher || !languageToggle) {
-    return;
-  }
-
-  languageSwitcher.classList.remove("is-open");
-  languageToggle.setAttribute("aria-expanded", "false");
-}
-
 function applyLanguage(lang) {
-  const dictionary = translations[lang] || translations.en;
+  const dictionary = copy[lang] || copy.en;
 
   document.documentElement.lang = lang;
   document.title = dictionary["meta.title"];
@@ -767,13 +754,6 @@ function applyLanguage(lang) {
     const key = node.dataset.i18n;
     if (dictionary[key]) {
       node.textContent = dictionary[key];
-    }
-  });
-
-  translatableHtmlNodes.forEach((node) => {
-    const key = node.dataset.i18nHtml;
-    if (dictionary[key]) {
-      node.innerHTML = dictionary[key];
     }
   });
 
@@ -791,78 +771,129 @@ function applyLanguage(lang) {
     }
   });
 
+  altNodes.forEach((node) => {
+    const key = node.dataset.i18nAlt;
+    if (dictionary[key]) {
+      node.setAttribute("alt", dictionary[key]);
+    }
+  });
+
   languageButtons.forEach((button) => {
     const isActive = button.dataset.lang === lang;
     button.classList.toggle("is-active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
   });
 
-  if (languageCurrent) {
-    languageCurrent.textContent = lang.toUpperCase();
+  try {
+    window.localStorage.setItem("pamuuc-language", lang);
+  } catch (error) {
+    // Ignore storage failures so switching still works in restricted contexts.
   }
 }
 
-menuButton.addEventListener("click", () => {
-  closeLanguageMenu();
-  const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
-  document.body.classList.toggle("menu-open", !isExpanded);
-  menuButton.setAttribute("aria-expanded", String(!isExpanded));
-});
+function initReveals() {
+  if (reducedMotionQuery.matches) {
+    revealNodes.forEach((node) => node.classList.add("is-visible"));
+    return;
+  }
 
-if (languageToggle) {
-  languageToggle.addEventListener("click", () => {
-    closeMenu();
-    const isExpanded = languageToggle.getAttribute("aria-expanded") === "true";
-    languageSwitcher.classList.toggle("is-open", !isExpanded);
-    languageToggle.setAttribute("aria-expanded", String(!isExpanded));
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.14, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  revealNodes.forEach((node) => observer.observe(node));
 }
+
+function initCalendarLoad() {
+  if (!calendarFrame) {
+    return;
+  }
+
+  const loadCalendar = () => {
+    if (!calendarFrame.src) {
+      calendarFrame.src = calendarFrame.dataset.src;
+    }
+  };
+
+  if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+    loadCalendar();
+    return;
+  }
+
+  const calendarObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadCalendar();
+          calendarObserver.disconnect();
+        }
+      });
+    },
+    { rootMargin: "280px 0px" }
+  );
+
+  calendarObserver.observe(calendarFrame);
+}
+
+menuButton.addEventListener("click", () => {
+  const open = menuButton.getAttribute("aria-expanded") === "true";
+  document.body.classList.toggle("menu-open", !open);
+  menuButton.setAttribute("aria-expanded", String(!open));
+});
 
 languageButtons.forEach((button) => {
   button.addEventListener("click", () => {
     applyLanguage(button.dataset.lang);
     closeMenu();
-    closeLanguageMenu();
   });
 });
 
-siteNav.querySelectorAll("a").forEach((link) => {
+nav.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", () => {
-    if (menuMediaQuery.matches) {
+    if (mobileQuery.matches) {
       closeMenu();
     }
   });
 });
 
 document.addEventListener("click", (event) => {
-  if (menuMediaQuery.matches && document.body.classList.contains("menu-open")) {
-    if (!siteNav.contains(event.target) && !menuButton.contains(event.target)) {
-      closeMenu();
-    }
+  if (!mobileQuery.matches || !document.body.classList.contains("menu-open")) {
+    return;
   }
 
-  if (menuMediaQuery.matches && languageSwitcher && languageSwitcher.classList.contains("is-open")) {
-    if (!languageSwitcher.contains(event.target)) {
-      closeLanguageMenu();
-    }
+  if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
+    closeMenu();
   }
 });
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    if (document.body.classList.contains("menu-open")) {
-      closeMenu();
-    }
-
-    closeLanguageMenu();
+    closeMenu();
   }
 });
 
-menuMediaQuery.addEventListener("change", (event) => {
+mobileQuery.addEventListener("change", (event) => {
   if (!event.matches) {
     closeMenu();
-    closeLanguageMenu();
   }
 });
 
-applyLanguage("en");
+let preferredLanguage = "en";
+
+try {
+  preferredLanguage = window.localStorage.getItem("pamuuc-language") || "en";
+} catch (error) {
+  preferredLanguage = "en";
+}
+
+applyLanguage(preferredLanguage && copy[preferredLanguage] ? preferredLanguage : "en");
+initReveals();
+initCalendarLoad();
