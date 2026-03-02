@@ -1009,7 +1009,50 @@ a:focus-visible {
   }
 
   body {
-    font-size: 15px;
+    font-size: 12px;
+    line-height: 1.52;
+  }
+
+  .site-nav a,
+  .language-button,
+  .section-label,
+  .eyebrow,
+  .hero-meta,
+  .team-role,
+  .comparison-table thead th,
+  .comparison-mobile-label,
+  .contact-line span {
+    font-size: 10px;
+  }
+
+  .hero-summary,
+  .section-intro,
+  .editorial-copy p,
+  .support-copy,
+  .parameter-block p,
+  .team-copy p,
+  .contact-line,
+  .footer-address,
+  .footer-links,
+  .comparison-table td,
+  .process-step p,
+  .line-list p,
+  figcaption {
+    font-size: 13px;
+  }
+
+  h3,
+  .process-step h3,
+  .materials-column h3,
+  .team-copy h3,
+  .parameter-block h3,
+  .comparison-table tbody th {
+    font-size: 13px;
+  }
+
+  .button,
+  .calendar-fallback {
+    font-size: 11px;
   }
 
   .header-shell {
@@ -1070,12 +1113,12 @@ a:focus-visible {
   .editorial-copy h2,
   .title-wide {
     max-width: none;
-    font-size: clamp(1.56rem, 3.2vw, 2.4rem);
+    font-size: clamp(1.375rem, 2.8vw, 2.15rem);
   }
 
   .materials-panel .section-heading h2,
   .team-panel .section-heading h2 {
-    font-size: clamp(1.56rem, 3.1vw, 2.3rem);
+    font-size: clamp(1.375rem, 2.7vw, 2.05rem);
   }
 
   .editorial-grid,
@@ -1111,7 +1154,7 @@ a:focus-visible {
 
   .timeline-pills span {
     padding-inline: 12px;
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .comparison-table,
@@ -1175,6 +1218,10 @@ a:focus-visible {
     gap: 8px;
   }
 
+  .process-index {
+    font-size: 1.15rem;
+  }
+
   .site-main {
     gap: 20px;
   }
@@ -1199,12 +1246,12 @@ a:focus-visible {
 
   h1 {
     max-width: none;
-    font-size: clamp(2.2rem, 13vw, 3.9rem);
+    font-size: clamp(1.6875rem, 10.8vw, 3.3375rem);
   }
 
   h2 {
     max-width: none;
-    font-size: clamp(1.6rem, 8vw, 2.4rem);
+    font-size: clamp(1.4rem, 7vw, 2.15rem);
   }
 
   body::before {
