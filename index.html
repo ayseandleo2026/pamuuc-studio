@@ -2,767 +2,844 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PAMUUC STUDIO | Structured Wardrobe Systems</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pamuuc Studio | Fully Custom Uniform Systems</title>
     <meta
       name="description"
-      content="Pamuuc Studio designs bespoke wardrobe systems for premium hospitality and service teams through spatial analysis, controlled development, and local production."
+      content="Pamuuc Studio designs fully custom uniform systems for hospitality, medical, and service teams, with local development, controlled production, and long term continuity."
     />
+    <meta name="theme-color" content="#fcf9f3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
       rel="icon"
+      type="image/png"
       href="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Icon_Logo_Red.png?v=1772224283"
     />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <a class="skip-link" href="#main" data-i18n="accessibility.skip">Skip to content</a>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header class="site-header">
-      <div class="shell header-shell">
-        <a
-          class="brand-link"
-          href="#top"
-          aria-label="Pamuuc Studio home"
-          data-i18n-label="accessibility.home"
-        >
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a class="brand" href="#top" aria-label="Pamuuc Studio home">
           <img
-            src="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Icon_Logo_Red.png?v=1772224283"
-            alt="Pamuuc Studio icon"
-            width="60"
-            height="60"
+            class="brand-logo"
+            src="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Name_Logo_Red.png?v=1772223889"
+            alt="Pamuuc Studio"
+            width="190"
+            height="34"
           />
         </a>
 
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle menu</span>
+        </button>
+
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
-          <a href="#approach" data-i18n="nav.approach">Approach</a>
-          <a href="#process" data-i18n="nav.process">Process</a>
-          <a href="#parameters" data-i18n="nav.parameters">Parameters</a>
-          <a href="#team" data-i18n="nav.team">Team</a>
-          <a href="#contact" data-i18n="nav.contact">Contact</a>
+          <ul class="site-nav-list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#sectors">Sectors</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact" class="nav-cta">Request a first meeting</a></li>
+          </ul>
         </nav>
-
-        <div class="header-controls">
-          <div
-            class="language-switcher"
-            role="group"
-            aria-label="Language selector"
-            data-i18n-label="accessibility.languages"
-          >
-            <button class="language-button is-active" type="button" data-lang="en" aria-pressed="true">
-              EN
-            </button>
-            <button class="language-button" type="button" data-lang="fr" aria-pressed="false">FR</button>
-            <button class="language-button" type="button" data-lang="es" aria-pressed="false">ES</button>
-            <button class="language-button" type="button" data-lang="it" aria-pressed="false">IT</button>
-          </div>
-
-          <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Open navigation menu"
-            data-i18n-label="accessibility.menu"
-            aria-controls="site-nav"
-            aria-expanded="false"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
       </div>
     </header>
 
-    <main id="main" class="site-main">
-      <section class="hero-section page-section" id="top">
-        <div class="shell">
-          <div class="hero-panel" data-reveal>
-            <picture class="hero-media">
-              <source
-                media="(max-width: 767px)"
-                srcset="assets/images/hero-mobile.svg"
-                type="image/svg+xml"
-              />
-              <source
-                media="(min-width: 768px)"
-                srcset="assets/images/hero-desktop.svg"
-                type="image/svg+xml"
-              />
+    <main id="main">
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Fully custom uniform design and production studio</p>
+            <h1>Uniform systems built around the team, the space, and the way work really happens</h1>
+            <p class="hero-lead">
+              We design garments that belong to the space, the team, and the way the work is actually done. Each
+              project is developed locally, built with care, and prepared for long term continuity.
+            </p>
+
+            <div class="pill-row hero-pill-row" aria-label="Studio highlights">
+              <span class="pill">Fully custom uniforms</span>
+              <span class="pill">Local development</span>
+              <span class="pill">Reorder ready</span>
+              <span class="pill">Built for daily work</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button button-primary" href="#contact">Request a first meeting</a>
+              <a class="button button-secondary" href="#projects">See recent projects</a>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="visual-card visual-card-main">
+              <picture>
+                <source media="(max-width: 767px)" srcset="assets/images/hero-mobile.svg" type="image/svg+xml" />
+                <img
+                  src="assets/images/hero-desktop.svg"
+                  alt="Editorial composition for custom uniform direction"
+                  width="560"
+                  height="440"
+                  fetchpriority="high"
+                />
+              </picture>
+            </div>
+            <div class="floating-proof floating-proof-top">
+              <strong>One of one</strong>
+              <span>Developed around one client, one space, and one real use case.</span>
+            </div>
+            <div class="floating-proof floating-proof-bottom">
+              <strong>Ongoing</strong>
+              <span>Approved patterns stay archived for faster reorders and team growth.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-band section-divider-soft">
+        <div class="container logo-band-inner reveal">
+          <p>Built for teams where clothing shapes the experience</p>
+          <div class="logo-band-points six-grid">
+            <span>Architecture aware</span>
+            <span>Operationally grounded</span>
+            <span>Produced close to Barcelona</span>
+            <span>Designed to last</span>
+            <span>Built for daily wear</span>
+            <span>Uniform systems, not isolated pieces</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Services</p>
+            <h2>A clear structure from the first conversation</h2>
+            <p>
+              The main service is fully custom uniforms. Selected branded pieces can exist when they support the wider
+              wardrobe system, but they are not the centre of the offer.
+            </p>
+          </div>
+
+          <div class="service-split">
+            <article class="service-card service-card-primary reveal">
+              <div class="service-topline">Primary project path</div>
+              <h3>Fully custom uniform projects</h3>
+              <p>
+                Built from scratch for teams that need a coherent wardrobe system shaped by hierarchy, movement,
+                durability, comfort, and the identity of the organisation.
+              </p>
+              <ul class="feature-list">
+                <li>Best for hospitality, medical, wellness, and service teams</li>
+                <li>Development shaped around silhouettes, fabrics, trims, branding, and fittings</li>
+                <li>Prepared for long term continuity, reorders, and new hires</li>
+              </ul>
+              <a href="#contact" class="text-link">Start a custom uniform project</a>
+            </article>
+
+            <article class="service-card service-card-secondary reveal">
+              <div class="service-topline">Secondary capability</div>
+              <h3>Selected branded pieces</h3>
+              <p>
+                Used occasionally for launches, events, gifting, or a specific supporting need when it fits the
+                project logic.
+              </p>
+              <ul class="feature-list compact-list">
+                <li>Smaller, complementary developments</li>
+                <li>Useful when strong bases already exist</li>
+                <li>Handled with the same control and restraint</li>
+              </ul>
+              <a href="#contact" class="text-link">Discuss a complementary brief</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="sectors">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Who this is for</p>
+            <h2>Built for teams where uniforms shape the experience</h2>
+            <p>
+              Our work is built for teams that represent a space every day. From hospitality and wellness to medical
+              and service environments, uniforms are designed around identity, comfort, and operational reality.
+            </p>
+          </div>
+
+          <div class="sector-grid sector-grid-six">
+            <article class="mini-card reveal">
+              <h3>Hotels</h3>
+              <p>Uniform systems aligned with guest experience, hierarchy, and long operational days.</p>
+            </article>
+            <article class="mini-card reveal">
+              <h3>Restaurants</h3>
+              <p>Garments designed for movement, heat, durability, and front of house presence.</p>
+            </article>
+            <article class="mini-card reveal">
+              <h3>Wellness</h3>
+              <p>Soft visual authority, calm proportions, and comfort that stays polished.</p>
+            </article>
+            <article class="mini-card reveal">
+              <h3>Medical &amp; clinics</h3>
+              <p>Clean, functional uniforms built for long shifts, comfort, and professional clarity.</p>
+            </article>
+            <article class="mini-card reveal">
+              <h3>Service teams</h3>
+              <p>Reception, concierge, operations, and support roles where appearance supports trust.</p>
+            </article>
+            <article class="mini-card reveal">
+              <h3>Guest services</h3>
+              <p>Teams that need ease, clarity, and a strong first impression from the first contact.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="approach">
+        <div class="container method-layout">
+          <div class="method-copy reveal">
+            <p class="section-kicker">How we design</p>
+            <h2>We build a wardrobe system, not isolated pieces</h2>
+            <p>
+              Each project starts with the real conditions of the space, then moves through role definition,
+              silhouette building, and operational decisions that keep the system usable over time.
+            </p>
+          </div>
+
+          <div class="method-grid">
+            <article class="method-card reveal">
+              <span class="method-number">01</span>
+              <h3>Space</h3>
+              <p>
+                We start from atmosphere, materiality, architecture, and the identity the organisation wants to
+                project.
+              </p>
+            </article>
+            <article class="method-card reveal">
+              <span class="method-number">02</span>
+              <h3>Roles</h3>
+              <p>Each function is mapped through movement, exposure, service rhythm, and the reality of daily wear.</p>
+            </article>
+            <article class="method-card reveal">
+              <span class="method-number">03</span>
+              <h3>Silhouette</h3>
+              <p>Fits, proportions, garment categories, and details are shaped to feel coherent across the team.</p>
+            </article>
+            <article class="method-card reveal">
+              <span class="method-number">04</span>
+              <h3>Operations</h3>
+              <p>Durability, fittings, revisions, laundering, and reorder logic are built in from the start.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="categories">
+        <div class="container category-layout">
+          <div class="category-copy reveal">
+            <p class="section-kicker">What can be built</p>
+            <h2>Each project defines its own scope</h2>
+            <p>
+              From one key garment to a full wardrobe system, the collection grows from what is actually needed.
+              Nothing more.
+            </p>
+
+            <div class="scope-groups">
+              <div class="scope-group reveal">
+                <p class="scope-label">Garment categories</p>
+                <div class="pill-grid pill-grid-garments">
+                  <span class="pill pill-garment">Shirts</span>
+                  <span class="pill pill-garment">Trousers</span>
+                  <span class="pill pill-garment">Tops</span>
+                  <span class="pill pill-garment">Dresses &amp; skirts</span>
+                  <span class="pill pill-garment">Aprons</span>
+                  <span class="pill pill-garment">Knitwear</span>
+                  <span class="pill pill-garment">Outer layers</span>
+                  <span class="pill pill-garment">Accessories</span>
+                </div>
+              </div>
+
+              <div class="scope-group reveal">
+                <p class="scope-label">Branding &amp; identity</p>
+                <div class="pill-grid pill-grid-branding">
+                  <span class="pill pill-branding">Embroidery</span>
+                  <span class="pill pill-branding">Woven labels</span>
+                  <span class="pill pill-branding">Custom trims</span>
+                </div>
+              </div>
+
+              <div class="scope-group reveal">
+                <p class="scope-label">Technical construction</p>
+                <div class="pill-grid pill-grid-technical">
+                  <span class="pill pill-technical">Washable suiting</span>
+                  <span class="pill pill-technical">Stretch constructions</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="category-visual reveal">
+            <picture>
+              <source media="(max-width: 767px)" srcset="assets/images/system-mobile.svg" type="image/svg+xml" />
               <img
-                src="assets/images/hero-desktop.svg"
-                alt="Editorial architectural composition showing a hospitality interior and structured garments."
-                data-i18n-alt="images.hero"
-                width="1440"
-                height="900"
-                fetchpriority="high"
+                src="assets/images/system-desktop.svg"
+                alt="Wardrobe system illustration"
+                loading="lazy"
+                decoding="async"
+                width="540"
+                height="430"
               />
             </picture>
+          </div>
+        </div>
+      </section>
 
-            <div class="hero-copy">
-              <p class="eyebrow" data-i18n="hero.eyebrow">Design and production studio</p>
-              <h1 data-i18n="hero.title">STRUCTURED WARDROBE SYSTEMS FOR PREMIUM HOSPITALITY</h1>
-              <p class="hero-summary" data-i18n="hero.summary">
-                Pamuuc Studio develops bespoke uniform systems for service teams through spatial
-                analysis, technical refinement, and controlled local production.
-              </p>
+      <section class="section" id="process">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Process</p>
+            <h2>Controlled from first analysis to production</h2>
+            <p>
+              The process stays simple to follow. Discovery sets the direction, development shapes the garment, and
+              production turns approved work into something teams can wear daily.
+            </p>
+          </div>
 
-              <div class="hero-meta" aria-label="Studio attributes">
-                <span data-i18n="hero.metaOne">Barcelona-based oversight</span>
-                <span data-i18n="hero.metaTwo">One client, one execution</span>
-                <span data-i18n="hero.metaThree">Patterns archived for continuity</span>
+          <div class="phase-grid">
+            <article class="phase-card reveal">
+              <p class="phase-tag">Phase 01</p>
+              <h3>Discovery</h3>
+              <ul>
+                <li>Operational analysis</li>
+                <li>Space and role mapping</li>
+                <li>Base pattern direction</li>
+              </ul>
+            </article>
+            <article class="phase-card reveal">
+              <p class="phase-tag">Phase 02</p>
+              <h3>Development</h3>
+              <ul>
+                <li>Fabric validation</li>
+                <li>Prototype sampling</li>
+                <li>Fittings and revisions</li>
+              </ul>
+            </article>
+            <article class="phase-card reveal">
+              <p class="phase-tag">Phase 03</p>
+              <h3>Production</h3>
+              <ul>
+                <li>Pre production approval</li>
+                <li>Local manufacturing</li>
+                <li>Delivery and continuity setup</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="stat-band reveal">
+            <div class="stat-item">
+              <strong>4 to 6 weeks</strong>
+              <span>Typical development window</span>
+            </div>
+            <div class="stat-item">
+              <strong>3 to 5 weeks</strong>
+              <span>Typical production window</span>
+            </div>
+            <div class="stat-item">
+              <strong>About 8 weeks</strong>
+              <span>Full custom projects</span>
+            </div>
+            <div class="stat-item">
+              <strong>Faster when bases exist</strong>
+              <span>For simpler supporting needs</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt" id="personalised">
+        <div class="container personalisation-layout">
+          <div class="category-copy reveal">
+            <p class="section-kicker">Everything is personalised</p>
+            <h2>Nothing is standard</h2>
+            <p>
+              Buyers should be able to scan the range fast, then open details only when they need them. What matters
+              is not endless choice, but controlled choice.
+            </p>
+          </div>
+
+          <div class="accordion-group reveal" data-accordion-group>
+            <details>
+              <summary>Fabrics</summary>
+              <div class="accordion-body">
+                Cotton, linen, technical blends, washed constructions, and selected materials chosen around use,
+                durability, drape, and care requirements.
               </div>
-
-              <a class="button button-primary" href="#contact" data-i18n="hero.cta">
-                Start building with us
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="soft-divider" aria-hidden="true"></div>
-
-      <section class="page-section" id="approach">
-        <div class="shell">
-          <div class="editorial-panel">
-            <div class="editorial-grid">
-              <div class="editorial-copy editorial-copy-accent" data-reveal>
-                <p class="section-label" data-i18n="approach.label">Positioning</p>
-                <h2 data-i18n="approach.title">We begin with the space</h2>
-                <p data-i18n="approach.p1">
-                  Architecture, lighting, materiality, atmosphere, service rhythm, and guest
-                  interaction define every project before a garment is drawn.
-                </p>
-                <p data-i18n="approach.p2">
-                  Each collaboration starts with structured analysis. Roles, posture, temperature
-                  exposure, laundering cycles, movement, and physical strain are treated as design
-                  inputs rather than production afterthoughts.
-                </p>
-                <p data-i18n="approach.p3">
-                  The wardrobe becomes a structural extension of the environment, tuned to hierarchy,
-                  performance, and daily use in real working conditions.
-                </p>
+            </details>
+            <details>
+              <summary>Colors</summary>
+              <div class="accordion-body">
+                Projects can work from strong mill color libraries first, or move into more specific development when
+                quantities support it.
               </div>
-
-              <figure class="media-frame span-5" data-reveal>
-                <picture>
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="assets/images/approach-mobile.svg"
-                    type="image/svg+xml"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="assets/images/approach-desktop.svg"
-                    type="image/svg+xml"
-                  />
-                  <img
-                    src="assets/images/approach-desktop.svg"
-                    alt="Architectural hospitality environment rendered with warm, restrained framing."
-                    data-i18n-alt="images.approach"
-                    width="1200"
-                    height="960"
-                    loading="lazy"
-                  />
-                </picture>
-                <figcaption data-i18n="captions.approach">
-                  Spatial reading informs every material and silhouette decision.
-                </figcaption>
-              </figure>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section">
-        <div class="shell">
-          <div class="editorial-panel">
-            <div class="editorial-grid editorial-grid-reverse">
-              <figure class="media-frame span-5" data-reveal>
-                <picture>
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="assets/images/system-mobile.svg"
-                    type="image/svg+xml"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="assets/images/system-desktop.svg"
-                    type="image/svg+xml"
-                  />
-                  <img
-                    src="assets/images/system-desktop.svg"
-                    alt="Structured wardrobe study with tailoring, fabric fields, and operational notes."
-                    data-i18n-alt="images.system"
-                    width="1200"
-                    height="960"
-                    loading="lazy"
-                  />
-                </picture>
-                <figcaption data-i18n="captions.system">
-                  Cohesion is built across roles without forcing uniformity.
-                </figcaption>
-              </figure>
-
-              <div class="editorial-copy" data-reveal>
-                <p class="section-label" data-i18n="system.label">Method</p>
-                <h2 data-i18n="system.title">Not isolated pieces. A system.</h2>
-                <p data-i18n="system.p1">
-                  Silhouette, fabric weight, colour logic, and branding placement are aligned across
-                  roles so leadership, floor staff, reception, and kitchen-adjacent functions remain
-                  coherent without reading as identical.
-                </p>
-                <p data-i18n="system.p2">
-                  Tailoring can be sharpened where authority matters and relaxed where mobility and
-                  breathability dominate. Accessories are treated as structural elements with a
-                  functional reason to exist.
-                </p>
-                <p data-i18n="system.p3">
-                  Every collection is developed exclusively for the client. No catalogue. No resale.
-                  One wardrobe system drafted for one operational context.
-                </p>
+            </details>
+            <details>
+              <summary>Accessories and trims</summary>
+              <div class="accordion-body">
+                Buttons, zips, labels, threads, piping, and trim details are selected to reinforce identity while
+                staying practical for daily wear.
               </div>
-            </div>
+            </details>
+            <details>
+              <summary>Branding methods</summary>
+              <div class="accordion-body">
+                Embroidery, screen print, woven labels, tonal branding, and restrained placement can all be integrated
+                when they support the project.
+              </div>
+            </details>
           </div>
-        </div>
-      </section>
 
-      <section class="page-section">
-        <div class="shell">
-          <div class="comparison-panel" data-reveal>
-            <div class="section-heading">
-              <p class="section-label" data-i18n="comparison.label">Continuity model</p>
-              <h2 class="title-wide" data-i18n="comparison.title">
-                Bespoke development. Operational continuity.
-              </h2>
-              <p class="section-intro" data-i18n="comparison.intro">
-                Every project starts as one-off development and becomes a stable wardrobe system once
-                patterns, fit, and construction are validated.
-              </p>
-            </div>
-
-            <table class="comparison-table">
-              <thead>
-                <tr>
-                  <th scope="col" data-i18n="comparison.headings.criteria">Criteria</th>
-                  <th scope="col" data-i18n="comparison.headings.bespoke">Bespoke development</th>
-                  <th scope="col" data-i18n="comparison.headings.ongoing">Ongoing system</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row" data-i18n="comparison.rows.scope.title">Scope</th>
-                  <td data-label="Bespoke development">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.bespoke">
-                      Bespoke development
-                    </span>
-                    <span data-i18n="comparison.rows.scope.bespoke">
-                      Developed around your space, hierarchy, climate, and service model.
-                    </span>
-                  </td>
-                  <td class="is-ongoing" data-label="Ongoing system">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.ongoing">
-                      Ongoing system
-                    </span>
-                    <span data-i18n="comparison.rows.scope.ongoing">
-                      Maintained as an operational asset for reorders, new hires, and expansion.
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" data-i18n="comparison.rows.development.title">Development</th>
-                  <td data-label="Bespoke development">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.bespoke">
-                      Bespoke development
-                    </span>
-                    <span data-i18n="comparison.rows.development.bespoke">
-                      Patterns, fabrics, and construction logic are specified and tested from the
-                      ground up.
-                    </span>
-                  </td>
-                  <td class="is-ongoing" data-label="Ongoing system">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.ongoing">
-                      Ongoing system
-                    </span>
-                    <span data-i18n="comparison.rows.development.ongoing">
-                      Approved bases are archived and reactivated without restarting the design phase.
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" data-i18n="comparison.rows.exclusivity.title">Exclusivity</th>
-                  <td data-label="Bespoke development">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.bespoke">
-                      Bespoke development
-                    </span>
-                    <span data-i18n="comparison.rows.exclusivity.bespoke">
-                      One client, one collection, one execution with no resale of developed garments.
-                    </span>
-                  </td>
-                  <td class="is-ongoing" data-label="Ongoing system">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.ongoing">
-                      Ongoing system
-                    </span>
-                    <span data-i18n="comparison.rows.exclusivity.ongoing">
-                      The exclusive system stays intact while production scales with consistency.
-                    </span>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" data-i18n="comparison.rows.speed.title">Continuity</th>
-                  <td data-label="Bespoke development">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.bespoke">
-                      Bespoke development
-                    </span>
-                    <span data-i18n="comparison.rows.speed.bespoke">
-                      Fittings, sampling, and refinements establish the correct performance standard.
-                    </span>
-                  </td>
-                  <td class="is-ongoing" data-label="Ongoing system">
-                    <span class="comparison-mobile-label" data-i18n="comparison.headings.ongoing">
-                      Ongoing system
-                    </span>
-                    <span data-i18n="comparison.rows.speed.ongoing">
-                      Reorders move faster because fit, grading, and construction rules are already
-                      controlled.
-                    </span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section page-section-compact">
-        <div class="shell">
-          <div class="cta-band" data-reveal>
-            <a class="button button-secondary" href="#contact" data-i18n="midCta.text">
-              Start building with us
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section" id="process">
-        <div class="shell">
-          <div class="process-panel" data-reveal>
-            <div class="section-heading">
-              <p class="section-label" data-i18n="process.label">Process</p>
-              <h2 class="title-wide" data-i18n="process.title">Defined stages. Controlled execution.</h2>
-              <p class="section-intro" data-i18n="process.intro">
-                Development moves through fixed checkpoints so visual direction, technical approval,
-                and production timing remain clear at every stage.
-              </p>
-            </div>
-
-            <ol class="process-flow">
-              <li class="process-step">
-                <span class="process-index">01</span>
-                <h3 data-i18n="process.steps.analysis.title">Analysis</h3>
-                <p data-i18n="process.steps.analysis.body">
-                  Spatial, operational, and role mapping.
-                </p>
-              </li>
-              <li class="process-step">
-                <span class="process-index">02</span>
-                <h3 data-i18n="process.steps.pattern.title">Base pattern</h3>
-                <p data-i18n="process.steps.pattern.body">
-                  Technical base selection and specification.
-                </p>
-              </li>
-              <li class="process-step">
-                <span class="process-index">03</span>
-                <h3 data-i18n="process.steps.fabric.title">Fabric validation</h3>
-                <p data-i18n="process.steps.fabric.body">
-                  Weight, weave, recovery, and exposure testing.
-                </p>
-              </li>
-              <li class="process-step">
-                <span class="process-index">04</span>
-                <h3 data-i18n="process.steps.sample.title">Prototype sampling</h3>
-                <p data-i18n="process.steps.sample.body">
-                  Construction review in movement, not on mannequins.
-                </p>
-              </li>
-              <li class="process-step">
-                <span class="process-index">05</span>
-                <h3 data-i18n="process.steps.fit.title">Fittings</h3>
-                <p data-i18n="process.steps.fit.body">
-                  Refinement across body types within the team.
-                </p>
-              </li>
-              <li class="process-step">
-                <span class="process-index">06</span>
-                <h3 data-i18n="process.steps.validation.title">Pre-production</h3>
-                <p data-i18n="process.steps.validation.body">
-                  Final validation of finishes, grading, and branding.
-                </p>
-              </li>
-              <li class="process-step">
-                <span class="process-index">07</span>
-                <h3 data-i18n="process.steps.production.title">Local production</h3>
-                <p data-i18n="process.steps.production.body">
-                  Controlled manufacturing close to Barcelona.
-                </p>
-              </li>
-            </ol>
-
-            <div class="timeline-pills" aria-label="Typical timelines">
-              <span data-i18n="process.timeline.one">Development 4-6 weeks</span>
-              <span data-i18n="process.timeline.two">Production 3-5 weeks</span>
-              <span data-i18n="process.timeline.three">Full custom about 8 weeks</span>
-              <span data-i18n="process.timeline.four">Simple builds 5-6 weeks</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section" id="parameters">
-        <div class="shell">
-          <div class="capabilities-panel">
-            <div class="capabilities-grid">
-              <article class="capabilities-column" data-reveal>
-                <div class="section-heading left-aligned">
-                  <p class="section-label" data-i18n="capabilities.label">Capabilities</p>
-                  <h2 class="title-wide" data-i18n="capabilities.title">What we develop</h2>
-                </div>
-
-                <div class="line-list">
-                  <p data-i18n="capabilities.items.one">Tailored shirts and structured trousers</p>
-                  <p data-i18n="capabilities.items.two">Blazers, waistcoats, dresses, and skirts</p>
-                  <p data-i18n="capabilities.items.three">Knitwear, aprons, overshirts, and outer layers</p>
-                  <p data-i18n="capabilities.items.four">Technical accessories and seasonal system updates</p>
-                </div>
-
-                <p class="support-copy" data-i18n="capabilities.body">
-                  Construction details can include reinforced plackets, ergonomic strap systems,
-                  hidden compartments, stretch panels, concealed closures, technical lining, and
-                  tone-on-tone branding.
-                </p>
-
-                <figure class="media-frame media-frame-short">
-                  <img
-                    src="assets/images/materials-detail.svg"
-                    alt="Material study showing folded textiles and tailored construction surfaces."
-                    data-i18n-alt="images.materials"
-                    width="1200"
-                    height="900"
-                    loading="lazy"
-                  />
-                  <figcaption data-i18n="captions.materials">
-                    Fabric, recovery, resistance, and drape are evaluated together.
-                  </figcaption>
-                </figure>
-              </article>
-
-              <article class="capabilities-column" data-reveal>
-                <div class="section-heading left-aligned">
-                  <p class="section-label" data-i18n="parameters.label">Parameters</p>
-                  <h2 class="title-wide" data-i18n="parameters.title">Production parameters</h2>
-                </div>
-
-                <div class="parameter-stack">
-                  <section class="parameter-block">
-                    <h3 data-i18n="parameters.moq.title">Minimum quantities</h3>
-                    <p data-i18n="parameters.moq.body">
-                      Woven garments usually begin at 50 pieces per style. Knitwear commonly requires
-                      100 to 150 pieces per style because of machine setup.
-                    </p>
-                  </section>
-
-                  <section class="parameter-block">
-                    <h3 data-i18n="parameters.price.title">Typical pricing</h3>
-                    <p data-i18n="parameters.price.body">
-                      Typical ranges extend from €25 to €120 per piece excluding VAT, depending on
-                      fabric, tailoring complexity, finishing, and branding method.
-                    </p>
-                  </section>
-
-                  <section class="parameter-block">
-                    <h3 data-i18n="parameters.custom.title">Customization level</h3>
-                    <p data-i18n="parameters.custom.body">
-                      Base customization is included. Exclusive hardware, custom weaving, special
-                      trims, and complex embroidery increase development and production time.
-                    </p>
-                  </section>
-
-                  <section class="parameter-block">
-                    <h3 data-i18n="parameters.pricingDrivers.title">What shapes cost</h3>
-                    <div class="line-list line-list-tight">
-                      <p data-i18n="parameters.pricingDrivers.one">Fabric sourcing, weight, and weave structure</p>
-                      <p data-i18n="parameters.pricingDrivers.two">Construction detail, lining, and reinforcement</p>
-                      <p data-i18n="parameters.pricingDrivers.three">Embroidery, printing, labels, and custom hardware</p>
-                      <p data-i18n="parameters.pricingDrivers.four">Custom colour development above 300 pieces per fabric</p>
-                    </div>
-                  </section>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section">
-        <div class="shell">
-          <div class="materials-panel" data-reveal>
-            <div class="section-heading">
-              <p class="section-label" data-i18n="materials.label">Materials and techniques</p>
-              <h2 class="title-wide" data-i18n="materials.title">Function first. Refined with restraint.</h2>
-              <p class="section-intro" data-i18n="materials.intro">
-                Material selection is driven by exposure, laundering frequency, recovery, drape, and
-                the operational posture of each role.
-              </p>
-            </div>
-
-            <div class="materials-grid">
-              <article class="materials-column">
-                <h3 data-i18n="materials.columns.fabrics.title">Fabrics</h3>
-                <div class="line-list">
-                  <p data-i18n="materials.columns.fabrics.one">Cotton, linen, tencel, bamboo, and technical blends</p>
-                  <p data-i18n="materials.columns.fabrics.two">Wovens, knits, washable suiting, and stretch constructions</p>
-                  <p data-i18n="materials.columns.fabrics.three">Weights and fibre mixes calibrated to climate and wear frequency</p>
-                </div>
-              </article>
-
-              <article class="materials-column">
-                <h3 data-i18n="materials.columns.construction.title">Construction</h3>
-                <div class="line-list">
-                  <p data-i18n="materials.columns.construction.one">Reinforced seams, concealed closures, and ergonomic placement</p>
-                  <p data-i18n="materials.columns.construction.two">Pocket logic, button durability, wash performance, and recovery checks</p>
-                  <p data-i18n="materials.columns.construction.three">Fit testing across multiple body types within the team</p>
-                </div>
-              </article>
-
-              <article class="materials-column">
-                <h3 data-i18n="materials.columns.branding.title">Branding</h3>
-                <div class="line-list">
-                  <p data-i18n="materials.columns.branding.one">Tone-on-tone embroidery and restrained placement</p>
-                  <p data-i18n="materials.columns.branding.two">Woven labels, interior branding, and operational naming systems</p>
-                  <p data-i18n="materials.columns.branding.three">Screen or transfer methods only when aligned with the environment</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page-section">
-        <div class="shell">
-          <div class="editorial-panel continuity-panel">
-            <div class="editorial-grid">
-              <div class="editorial-copy" data-reveal>
-                <p class="section-label" data-i18n="continuity.label">Long-term model</p>
-                <h2 class="title-wide" data-i18n="continuity.title">Continuity is designed in</h2>
-                <p data-i18n="continuity.p1">
-                  Once development is approved, patterns are archived for immediate reorders without
-                  resampling. Future hires and additional locations can be integrated without
-                  breaking silhouette continuity.
-                </p>
-                <p data-i18n="continuity.p2">
-                  Production is developed close to Barcelona to keep communication direct, fitting
-                  revisions fast, and quality control grounded in real technical dialogue.
-                </p>
-                <p data-i18n="continuity.p3">
-                  Each garment is inspected before delivery for seams, finishing, sizing consistency,
-                  and labelling so the wardrobe arrives ready for operational deployment.
+          <div class="trust-grid full-span">
+            <article class="material-card reveal">
+              <img
+                src="assets/images/materials-detail.svg"
+                alt="Local development illustration"
+                loading="lazy"
+                decoding="async"
+                width="94"
+                height="94"
+              />
+              <div>
+                <h3>Close to home</h3>
+                <p>
+                  Development stays near the workshops so fittings, revisions, and technical dialogue stay fast and
+                  controlled.
                 </p>
               </div>
+            </article>
+            <article class="material-card reveal">
+              <img
+                src="assets/images/materials-detail.svg"
+                alt="Operational design illustration"
+                loading="lazy"
+                decoding="async"
+                width="94"
+                height="94"
+              />
+              <div>
+                <h3>Developed around real work</h3>
+                <p>Garments are designed around movement, long shifts, temperature, and the practical reality of daily use.</p>
+              </div>
+            </article>
+            <article class="material-card reveal">
+              <img
+                src="assets/images/materials-detail.svg"
+                alt="Continuity illustration"
+                loading="lazy"
+                decoding="async"
+                width="94"
+                height="94"
+              />
+              <div>
+                <h3>Built for continuity</h3>
+                <p>Patterns, fabrics, and trims are archived so uniforms can be reproduced consistently as teams grow.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-              <figure class="media-frame span-5" data-reveal>
-                <picture>
-                  <source
-                    media="(max-width: 767px)"
-                    srcset="assets/images/continuity-mobile.svg"
-                    type="image/svg+xml"
-                  />
-                  <source
-                    media="(min-width: 768px)"
-                    srcset="assets/images/continuity-desktop.svg"
-                    type="image/svg+xml"
-                  />
-                  <img
-                    src="assets/images/continuity-desktop.svg"
-                    alt="Local atelier composition with pattern storage and quality control surfaces."
-                    data-i18n-alt="images.continuity"
-                    width="1200"
-                    height="960"
-                    loading="lazy"
-                  />
-                </picture>
-                <figcaption data-i18n="captions.continuity">
-                  Patterns are archived so the wardrobe can scale without losing control.
-                </figcaption>
-              </figure>
+      <section class="section" id="parameters">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Production parameters</p>
+            <h2>Commercial clarity at a glance</h2>
+            <p>
+              The key numbers should be clear without forcing heavy reading. These are the main thresholds buyers
+              usually need first.
+            </p>
+          </div>
+
+          <div class="parameter-grid parameter-grid-four">
+            <article class="parameter-card reveal parameter-card-stat">
+              <h3>Minimum quantities</h3>
+              <div class="value-stack">
+                <div>
+                  <strong>50 pcs</strong>
+                  <span>Woven garments per style</span>
+                </div>
+                <div>
+                  <strong>100 to 150 pcs</strong>
+                  <span>Knitwear per style</span>
+                </div>
+              </div>
+            </article>
+            <article class="parameter-card reveal parameter-card-stat">
+              <h3>Typical garment price</h3>
+              <div class="value-stack single-value">
+                <div>
+                  <strong>25€ to 120€</strong>
+                  <span>Excluding VAT, depending on fabric, complexity, and finishing</span>
+                </div>
+              </div>
+            </article>
+            <article class="parameter-card reveal">
+              <h3>What affects cost</h3>
+              <ul class="parameter-list">
+                <li>Fabric choice</li>
+                <li>Construction complexity</li>
+                <li>Branding method</li>
+                <li>Custom trims</li>
+              </ul>
+            </article>
+            <article class="parameter-card reveal">
+              <h3>What affects timing</h3>
+              <ul class="parameter-list">
+                <li>Pattern development</li>
+                <li>Fittings</li>
+                <li>Special constructions</li>
+                <li>Complex finishes</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-dark" id="continuity">
+        <div class="container">
+          <div class="section-heading reveal light">
+            <p class="section-kicker">Continuity model</p>
+            <h2>One of one first. Ongoing after approval.</h2>
+            <p>
+              The first execution defines the system. After approval, the same wardrobe can continue without starting
+              from zero again.
+            </p>
+          </div>
+
+          <div class="comparison-wrap reveal">
+            <div class="comparison-table">
+              <div class="comparison-row comparison-head">
+                <div>Criteria</div>
+                <div>One of one</div>
+                <div>Ongoing</div>
+              </div>
+              <div class="comparison-row">
+                <div>Scope</div>
+                <div>Built around your space, roles, hierarchy, and daily operational needs.</div>
+                <div>Maintained as an operational wardrobe system for reorders, new hires, and growth.</div>
+              </div>
+              <div class="comparison-row">
+                <div>Development</div>
+                <div>Patterns, fabrics, and construction are defined, tested, and approved with you.</div>
+                <div>Approved bases are reactivated without restarting the full design phase.</div>
+              </div>
+              <div class="comparison-row">
+                <div>Reorders</div>
+                <div>
+                  First execution is controlled, fitted, and signed off before production continuity begins.
+                </div>
+                <div>Consistency stays in place as the team evolves or the project expands.</div>
+              </div>
+            </div>
+
+            <div class="loop-card" aria-label="Continuity flow">
+              <span class="loop-step">Approve once</span>
+              <span class="loop-arrow" aria-hidden="true">→</span>
+              <span class="loop-step">Archive patterns</span>
+              <span class="loop-arrow" aria-hidden="true">→</span>
+              <span class="loop-step">Reorder faster</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="page-section" id="team">
-        <div class="shell">
-          <div class="team-panel" data-reveal>
-            <div class="section-heading">
-              <p class="section-label" data-i18n="team.label">Studio leadership</p>
-              <h2 class="title-wide" data-i18n="team.title">Design, production, operational insight</h2>
-              <p class="section-intro" data-i18n="team.intro">
-                Pamuuc Studio is led across product, project structure, and hospitality operations so
-                aesthetic decisions remain technically grounded.
-              </p>
-            </div>
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Selected projects</p>
+            <h2>Proof should feel real, not abstract</h2>
+            <p>The right proof layer shows how projects translate into use, not just how they sound in theory.</p>
+          </div>
 
-            <div class="team-grid">
-              <article class="team-card">
+          <div class="project-grid">
+            <article class="project-card reveal">
+              <picture>
+                <source media="(max-width: 767px)" srcset="assets/images/approach-mobile.svg" type="image/svg+xml" />
                 <img
-                  src="assets/images/team-leonardo.svg"
-                  alt="Abstract portrait card representing Leonardo Gobbato."
-                  data-i18n-alt="images.teamOne"
-                  width="800"
-                  height="1000"
+                  src="assets/images/approach-desktop.svg"
+                  alt="Project visual for hospitality environment"
                   loading="lazy"
+                  decoding="async"
+                  width="520"
+                  height="250"
                 />
-                <div class="team-copy">
-                  <h3 data-i18n="team.cards.one.name">Leonardo Gobbato</h3>
-                  <p class="team-role" data-i18n="team.cards.one.role">Founder and Product Lead</p>
-                  <p data-i18n="team.cards.one.body">
-                    Leonardo bridges design and garment construction across every project, keeping
-                    visual direction aligned with technical feasibility and workshop realities.
-                  </p>
-                </div>
-              </article>
-
-              <article class="team-card">
+              </picture>
+              <div class="project-body">
+                <span class="project-tag">Hospitality wardrobe system</span>
+                <h3>Boutique hotel team</h3>
+                <p>
+                  Front office, host, and guest facing garments developed around a calm architectural identity and long
+                  operational days.
+                </p>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="assets/images/continuity-mobile.svg"
+                  type="image/svg+xml"
+                />
                 <img
-                  src="assets/images/team-federica.svg"
-                  alt="Abstract portrait card representing Federica Vianson."
-                  data-i18n-alt="images.teamTwo"
-                  width="800"
-                  height="1000"
+                  src="assets/images/continuity-desktop.svg"
+                  alt="Project visual for continuity and reorders"
                   loading="lazy"
+                  decoding="async"
+                  width="520"
+                  height="250"
                 />
-                <div class="team-copy">
-                  <h3 data-i18n="team.cards.two.name">Federica Vianson</h3>
-                  <p class="team-role" data-i18n="team.cards.two.role">Co-Founder and Project Manager</p>
-                  <p data-i18n="team.cards.two.body">
-                    Federica oversees timing, budgeting, and stakeholder alignment so the entire
-                    process remains structured, transparent, and controlled from first consultation to
-                    delivery.
-                  </p>
-                </div>
-              </article>
-
-              <article class="team-card">
+              </picture>
+              <div class="project-body">
+                <span class="project-tag">Operational continuity</span>
+                <h3>Multi role service team</h3>
+                <p>
+                  Approved silhouettes archived once, then reactivated for new hires, replacements, and future scaling
+                  with consistency.
+                </p>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <picture>
+                <source media="(max-width: 767px)" srcset="assets/images/system-mobile.svg" type="image/svg+xml" />
                 <img
-                  src="assets/images/team-andreas.svg"
-                  alt="Abstract portrait card representing Andreas Gonzalez."
-                  data-i18n-alt="images.teamThree"
-                  width="800"
-                  height="1000"
+                  src="assets/images/system-desktop.svg"
+                  alt="Project visual for medical and service uniforms"
                   loading="lazy"
+                  decoding="async"
+                  width="520"
+                  height="250"
                 />
-                <div class="team-copy">
-                  <h3 data-i18n="team.cards.three.name">Andreas Gonzalez</h3>
-                  <p class="team-role" data-i18n="team.cards.three.role">Co-Founder and Operations Insight</p>
-                  <p data-i18n="team.cards.three.body">
-                    Andreas brings direct experience from luxury hotels and high-profile restaurants,
-                    ensuring garments support movement, durability, hierarchy, and service rhythm.
-                  </p>
-                </div>
-              </article>
-            </div>
+              </picture>
+              <div class="project-body">
+                <span class="project-tag">Uniform design direction</span>
+                <h3>Clinic and wellness use case</h3>
+                <p>
+                  Clean silhouettes, comfort-led construction, and a controlled visual language shaped for trust,
+                  clarity, and daily wear.
+                </p>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <section class="page-section" id="contact">
-        <div class="shell">
-          <div class="contact-panel" data-reveal>
-            <div class="section-heading">
-              <p class="section-label" data-i18n="contact.label">Contact</p>
-              <h2 data-i18n="contact.title">Contact us</h2>
-              <p class="section-intro" data-i18n="contact.intro">
-                Every collaboration begins with conversation about team scale, operating rhythm,
-                expansion plans, and brand position. The objective is long-term coherence.
+      <section class="section section-alt" id="team">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-kicker">Team</p>
+            <h2>Three people, three clear roles</h2>
+            <p>
+              A small team can stay more focused. Each role is direct, and each project stays close to the people
+              shaping it.
+            </p>
+          </div>
+
+          <div class="team-grid team-grid-three">
+            <article class="team-card reveal">
+              <img
+                src="assets/images/team-leonardo.svg"
+                alt="Leonardo team illustration"
+                loading="lazy"
+                decoding="async"
+                width="120"
+                height="120"
+              />
+              <h3>Leonardo Gobbato</h3>
+              <p class="team-role">Founder and Product Lead</p>
+              <p>Leads visual direction, garment construction, and product development across each project.</p>
+            </article>
+            <article class="team-card reveal">
+              <img
+                src="assets/images/team-federica.svg"
+                alt="Federica team illustration"
+                loading="lazy"
+                decoding="async"
+                width="120"
+                height="120"
+              />
+              <h3>Federica Vianson</h3>
+              <p class="team-role">Co Founder and Project Manager</p>
+              <p>Keeps timelines, stakeholders, and project structure clear from first call to delivery.</p>
+            </article>
+            <article class="team-card reveal">
+              <img
+                src="assets/images/team-andreas.svg"
+                alt="Andreas team illustration"
+                loading="lazy"
+                decoding="async"
+                width="120"
+                height="120"
+              />
+              <h3>Andreas Gonzalez</h3>
+              <p class="team-role">Co Founder and Operations Insight</p>
+              <p>
+                Brings first hand hospitality knowledge so garments stay grounded in real use, movement, and service
+                rhythm.
               </p>
-            </div>
+            </article>
+          </div>
+        </div>
+      </section>
 
-            <a class="button button-primary" href="mailto:andreas@pamuuc.com" data-i18n="contact.cta">
-              Contact us
-            </a>
-
-            <div class="contact-grid">
-              <div class="contact-meta">
-                <p class="contact-line">
-                  <span data-i18n="contact.emailLabel">Email</span>
-                  <a href="mailto:andreas@pamuuc.com">andreas@pamuuc.com</a>
-                </p>
-                <p class="contact-line">
-                  <span data-i18n="contact.phoneLabel">Phone</span>
-                  <a href="tel:+34658852478">+34 658 852 478</a>
-                </p>
-                <p class="contact-line">
-                  <span data-i18n="contact.questionnaireLabel">Questionnaire</span>
-                  <a href="mailto:andreas@pamuuc.com?subject=Project%20Questionnaire%20Request" data-i18n="contact.questionnaire">
-                    Request the project questionnaire
-                  </a>
-                </p>
+      <section class="section faq-section" id="faq">
+        <div class="container faq-layout">
+          <div class="section-heading reveal left-align">
+            <p class="section-kicker">FAQ</p>
+            <h2>Useful answers, without heavy policy language</h2>
+            <p>Clear answers help buyers understand the process before the first call and keep the page light.</p>
+          </div>
+          <div class="accordion-group reveal" data-accordion-group>
+            <details>
+              <summary>Do you work from a catalogue?</summary>
+              <div class="accordion-body">
+                No. Projects are built around real needs. Existing bases can help move faster, but the result is shaped
+                for the specific context.
               </div>
-
-              <div class="calendar-shell">
-                <div class="calendar-frame">
-                  <iframe
-                    class="calendar-embed"
-                    data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2tqoWbvhbCTCYuwJlTQL52tJ9fCiFLaO0N4t11fHLcO3RaBBjloFidXsq-aha98tqcVJYej50M?gv=true"
-                    title="Pamuuc Studio appointment scheduling"
-                    data-i18n-title="contact.calendarTitle"
-                    loading="lazy"
-                    width="100%"
-                    height="640"
-                    frameborder="0"
-                  ></iframe>
-                </div>
-
-                <a
-                  class="calendar-fallback"
-                  href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2tqoWbvhbCTCYuwJlTQL52tJ9fCiFLaO0N4t11fHLcO3RaBBjloFidXsq-aha98tqcVJYej50M?gv=true"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-i18n="contact.calendarFallback"
-                >
-                  Open scheduling in a new tab
-                </a>
+            </details>
+            <details>
+              <summary>Can you help with reorders later on?</summary>
+              <div class="accordion-body">
+                Yes. Once a project is approved, patterns and specifications can be archived so the wardrobe can
+                continue without starting from zero again.
               </div>
+            </details>
+            <details>
+              <summary>Do you only do full uniforms?</summary>
+              <div class="accordion-body">
+                No. Some projects start with one key garment or a small set of pieces. Others become complete wardrobe
+                systems over time.
+              </div>
+            </details>
+            <details>
+              <summary>Can you produce custom colors?</summary>
+              <div class="accordion-body">
+                Yes, when quantities support it. In many cases, we first work within strong mill color libraries to
+                keep the project efficient and controlled.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cta-section" id="contact">
+        <div class="container cta-panel reveal">
+          <div class="cta-copy">
+            <p class="section-kicker">Start the conversation</p>
+            <h2>Let’s define what your team actually needs</h2>
+            <p>
+              Share the type of organisation, team size, and what you want to build. We will come back with the
+              clearest next step.
+            </p>
+            <div class="cta-actions">
+              <a class="button button-primary" href="mailto:leo.gobbato@pamuuc.com?subject=Pamuuc%20Studio%20project%20request"
+                >Prefer email instead</a
+              >
+              <a class="button button-secondary" href="#top">Back to top</a>
             </div>
           </div>
+
+          <form
+            class="contact-card"
+            id="contact-form"
+            action="mailto:leo.gobbato@pamuuc.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input id="name" type="text" name="name" placeholder="Your name" autocomplete="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="you@company.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+            <div class="form-field">
+              <label for="company">Company</label>
+              <input
+                id="company"
+                type="text"
+                name="company"
+                placeholder="Company name"
+                autocomplete="organization"
+              />
+            </div>
+            <div class="form-field">
+              <label for="project-type">Project type</label>
+              <select id="project-type" name="project-type">
+                <option>Fully custom uniform project</option>
+                <option>Selected branded pieces</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="brief">Brief</label>
+              <textarea
+                id="brief"
+                name="brief"
+                rows="4"
+                placeholder="Tell us a bit about the space, the team, and what you need"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="button button-primary button-full">Request a first meeting</button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="shell footer-shell">
-        <img
-          class="wordmark"
-          src="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Name_Logo_Red.png?v=1772223889"
-          alt="Pamuuc Studio wordmark"
-          width="150"
-          height="30"
-        />
-
-        <address class="footer-address">
-          <span>Pamuuc Studio</span>
-          <span data-i18n="footer.address">Pasaje de Maiol 9, 08013 Barcelona, Spain</span>
-        </address>
-
-        <div class="footer-links">
-          <a href="mailto:andreas@pamuuc.com">andreas@pamuuc.com</a>
-          <a href="tel:+34658852478">+34 658 852 478</a>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img
+            class="footer-logo"
+            src="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Name_Logo_Red.png?v=1772223889"
+            alt="Pamuuc Studio"
+            width="170"
+            height="30"
+            loading="lazy"
+            decoding="async"
+          />
+          <p>Fully custom uniform systems designed close to Barcelona.</p>
         </div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="mailto:leo.gobbato@pamuuc.com">leo.gobbato@pamuuc.com</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Projects</a>
+        </nav>
       </div>
     </footer>
   </body>
