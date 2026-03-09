@@ -10,47 +10,93 @@
   const STORAGE_COOKIE = "pamuuc_cookie_consent";
 
   const supportedLanguages = ["en", "fr", "it", "es"];
-  const knownTopLevelPaths = new Set([
-    "index.html",
-    "404.html",
-    "robots.txt",
-    "sitemap.xml",
-    "privacy-policy.html",
-    "cookie-policy.html",
-    "terms-and-conditions.html",
-    "legal-notice.html",
-    ...supportedLanguages
-  ]);
 
+  // Support both custom-domain root deploys and GitHub Pages project subpaths.
   const rawPathParts = window.location.pathname.split("/").filter(Boolean);
-  const isGithubPagesHost = window.location.hostname.endsWith("github.io");
-  const needsRepoBase =
-    isGithubPagesHost && rawPathParts.length > 0 && !knownTopLevelPaths.has(rawPathParts[0]);
-  const repoBasePath = needsRepoBase ? `/${rawPathParts[0]}` : "";
+  const isGithubProjectHost = /\.github\.io$/i.test(window.location.hostname);
+  let basePath = "";
+  let contentPathParts = rawPathParts;
+
+  if (isGithubProjectHost && rawPathParts.length > 0) {
+    const firstPart = rawPathParts[0];
+    const isLanguageFolder = supportedLanguages.includes(firstPart);
+    const isFileName = firstPart.includes(".");
+
+    if (!isLanguageFolder && !isFileName) {
+      basePath = `/${firstPart}`;
+      contentPathParts = rawPathParts.slice(1);
+    }
+  }
 
   const getPathWithBase = (path) => {
-    const normalized = path.startsWith("/") ? path : `/${path}`;
-    return `${repoBasePath}${normalized}`;
+    if (!path || !path.startsWith("/")) {
+      return path;
+    }
+
+    return `${basePath}${path}`;
   };
 
-  const pathParts = needsRepoBase ? rawPathParts.slice(1) : rawPathParts;
-  const languageFromPath = supportedLanguages.includes(pathParts[0]) ? pathParts[0] : null;
+  const languageFromPath = supportedLanguages.includes(contentPathParts[0]) ? contentPathParts[0] : null;
   const currentLanguage = languageFromPath || document.body.dataset.language || document.documentElement.lang || "en";
+
+  const uiCopyMap = {
+    en: {
+      sendingButton: "Sending...",
+      sendingStatus: "Sending your request...",
+      successStatus: "Success: your request was sent. We usually reply within 1 business day.",
+      errorStatus: "We could not send your request right now. Please try again or use Prefer email instead.",
+      submitButton: "Send project request"
+    },
+    fr: {
+      sendingButton: "Envoi...",
+      sendingStatus: "Envoi de votre demande...",
+      successStatus: "Succès : votre demande a été envoyée. Nous répondons généralement sous 1 jour ouvré.",
+      errorStatus: "Nous ne pouvons pas envoyer votre demande pour le moment. Réessayez ou utilisez l'option e-mail.",
+      submitButton: "Envoyer la demande projet"
+    },
+    it: {
+      sendingButton: "Invio...",
+      sendingStatus: "Invio della richiesta...",
+      successStatus: "Richiesta inviata con successo. Di solito rispondiamo entro 1 giorno lavorativo.",
+      errorStatus: "Non riusciamo a inviare la richiesta ora. Riprova o usa l'opzione e-mail.",
+      submitButton: "Invia richiesta progetto"
+    },
+    es: {
+      sendingButton: "Enviando...",
+      sendingStatus: "Enviando tu solicitud...",
+      successStatus: "Solicitud enviada correctamente. Normalmente respondemos en 1 día laborable.",
+      errorStatus: "No hemos podido enviar la solicitud ahora. Inténtalo de nuevo o usa la opción por e-mail.",
+      submitButton: "Enviar solicitud de proyecto"
+    }
+  };
+  const uiCopy = uiCopyMap[currentLanguage] || uiCopyMap.en;
 
   const body = document.body;
 
-  // Make root-absolute links GitHub Pages-safe when hosted under /<repo>.
-  if (repoBasePath) {
-    document.querySelectorAll('a[href^="/"]').forEach((anchor) => {
-      const href = anchor.getAttribute("href");
+  const normalizeRootAbsoluteLinks = () => {
+    if (!basePath) {
+      return;
+    }
+
+    document.querySelectorAll("a[href^='/']").forEach((link) => {
+      const href = link.getAttribute("href");
       if (!href || href.startsWith("//")) {
         return;
       }
-      anchor.setAttribute("href", `${repoBasePath}${href}`);
+
+      if (href === basePath || href.startsWith(`${basePath}/`)) {
+        return;
+      }
+
+      link.setAttribute("href", getPathWithBase(href));
     });
-  }
+  };
+
+  normalizeRootAbsoluteLinks();
 
   let gaLoaded = false;
+  let gaLoading = false;
+  let pageViewTracked = false;
   let analyticsAllowed = false;
   const pendingEvents = [];
 
@@ -73,9 +119,10 @@
   };
 
   const loadGa = () => {
-    if (gaLoaded) {
+    if (gaLoaded || gaLoading) {
       return;
     }
+    gaLoading = true;
 
     const script = document.createElement("script");
     script.async = true;
@@ -89,18 +136,27 @@
       window.gtag("js", new Date());
       window.gtag("config", GA_ID, {
         anonymize_ip: true,
-        allow_google_signals: false
+        allow_google_signals: false,
+        send_page_view: false
       });
 
       gaLoaded = true;
+      gaLoading = false;
       while (pendingEvents.length) {
         const [eventName, payload] = pendingEvents.shift();
         window.gtag("event", eventName, payload);
       }
-      trackEvent("page_view", {
-        page_path: window.location.pathname,
-        page_title: document.title
-      });
+
+      if (!pageViewTracked) {
+        pageViewTracked = true;
+        trackEvent("page_view", {
+          page_path: window.location.pathname,
+          page_title: document.title
+        });
+      }
+    };
+    script.onerror = () => {
+      gaLoading = false;
     };
 
     document.head.appendChild(script);
@@ -118,6 +174,12 @@
   };
 
   const setCookieConsent = (value, source = "button") => {
+    const current = window.localStorage.getItem(STORAGE_COOKIE);
+    if (current === value) {
+      hideCookieBanner();
+      return;
+    }
+
     window.localStorage.setItem(STORAGE_COOKIE, value);
     hideCookieBanner();
 
@@ -141,6 +203,39 @@
       pendingEvents.length = 0;
     }
   };
+
+  const scrollThresholds = [25, 50, 75, 100];
+  const trackedScrollThresholds = new Set();
+  let scrollTrackingTicking = false;
+
+  const handleScrollTracking = () => {
+    scrollTrackingTicking = false;
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) {
+      return;
+    }
+
+    const percent = Math.min(100, Math.round((window.scrollY / scrollable) * 100));
+    scrollThresholds.forEach((threshold) => {
+      if (percent >= threshold && !trackedScrollThresholds.has(threshold)) {
+        trackedScrollThresholds.add(threshold);
+        trackEvent("scroll_depth", { item_name: `${threshold}%` });
+      }
+    });
+  };
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!analyticsAllowed || scrollTrackingTicking) {
+        return;
+      }
+      scrollTrackingTicking = true;
+      window.requestAnimationFrame(handleScrollTracking);
+    },
+    { passive: true }
+  );
 
   const storedCookieConsent = window.localStorage.getItem(STORAGE_COOKIE);
   if (storedCookieConsent === "accepted") {
@@ -178,7 +273,7 @@
   const languageModal = document.querySelector("#language-modal");
   const storedLanguage = window.localStorage.getItem(STORAGE_LANGUAGE);
 
-  const isRootPage = window.location.pathname === "/" || window.location.pathname === "/index.html";
+  const isRootPage = contentPathParts.length === 0 || (contentPathParts.length === 1 && contentPathParts[0] === "index.html");
 
   if (!storedLanguage && !isRootPage && currentLanguage) {
     window.localStorage.setItem(STORAGE_LANGUAGE, currentLanguage);
@@ -521,33 +616,54 @@
         consent: consentAccepted,
         cookieConsent: window.localStorage.getItem(STORAGE_COOKIE) || "unset",
         userAgent: window.navigator.userAgent,
-        origin: STUDIO_ORIGIN
+        origin: window.location.origin || STUDIO_ORIGIN
       };
+
+      const encodedPayload = new URLSearchParams();
+      Object.entries(payload).forEach(([key, value]) => {
+        encodedPayload.append(key, String(value));
+      });
 
       if (submitButton) {
         submitButton.disabled = true;
-        submitButton.textContent = "Sending...";
+        submitButton.textContent = uiCopy.sendingButton;
       }
 
       if (formStatus) {
-        formStatus.textContent = "Sending your request...";
+        formStatus.textContent = uiCopy.sendingStatus;
       }
 
       try {
         const response = await fetch(FORM_ENDPOINT, {
           method: "POST",
+          mode: "cors",
           headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
           },
-          body: JSON.stringify(payload)
+          body: encodedPayload.toString()
         });
+
+        const rawBody = await response.text();
+        let responseBody = null;
+
+        if (rawBody) {
+          try {
+            responseBody = JSON.parse(rawBody);
+          } catch (_parseError) {
+            throw new Error("Unexpected response format from form endpoint.");
+          }
+        }
 
         if (!response.ok) {
           throw new Error(`Request failed with status ${response.status}`);
         }
 
+        if (responseBody && responseBody.ok === false) {
+          throw new Error(responseBody.error || "Form endpoint returned an error.");
+        }
+
         if (formStatus) {
-          formStatus.textContent = "Success: your request was sent. We usually reply within 1 business day.";
+          formStatus.textContent = uiCopy.successStatus;
         }
 
         trackEvent("contact_form_submit", {
@@ -558,12 +674,12 @@
         contactForm.reset();
       } catch (_error) {
         if (formStatus) {
-          formStatus.textContent = "We could not send your request right now. Please try again or use Prefer email instead.";
+          formStatus.textContent = uiCopy.errorStatus;
         }
       } finally {
         if (submitButton) {
           submitButton.disabled = false;
-          submitButton.textContent = "Send project request";
+          submitButton.textContent = uiCopy.submitButton;
         }
       }
     });

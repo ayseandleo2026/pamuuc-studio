@@ -109,10 +109,10 @@
         </nav>
 
         <nav class="language-switcher" aria-label="Language selector">
-          <a href="/en/" class="lang-link is-active" data-lang-switch="en">EN</a>
-          <a href="/fr/" class="lang-link" data-lang-switch="fr">FR</a>
-          <a href="/it/" class="lang-link" data-lang-switch="it">IT</a>
-          <a href="/es/" class="lang-link" data-lang-switch="es">ES</a>
+          <a href="en/" class="lang-link is-active" data-lang-switch="en">EN</a>
+          <a href="fr/" class="lang-link" data-lang-switch="fr">FR</a>
+          <a href="it/" class="lang-link" data-lang-switch="it">IT</a>
+          <a href="es/" class="lang-link" data-lang-switch="es">ES</a>
         </nav>
       </div>
     </header>
@@ -930,7 +930,7 @@
             <div class="form-field form-field-consent">
               <label class="checkbox-label" for="consent">
                 <input id="consent" type="checkbox" name="consent" required />
-                <span>I accept the <a href="/privacy-policy.html">privacy policy</a> and <a href="/terms-and-conditions.html">terms</a>.</span>
+                <span>I accept the <a href="privacy-policy.html">privacy policy</a> and <a href="terms-and-conditions.html">terms</a>.</span>
               </label>
             </div>
 
@@ -955,20 +955,26 @@
           />
           <p>Fully custom uniform systems designed close to Barcelona.</p>
         </div>
-        <nav class="footer-links" aria-label="Footer links">
-          <a href="mailto:leo.gobbato@pamuuc.com">leo.gobbato@pamuuc.com</a>
-          <a href="#services">Services</a>
-          <a href="#projects">Projects</a>
-          <a href="/privacy-policy.html">Privacy Policy</a>
-          <a href="/cookie-policy.html">Cookie Policy</a>
-          <a href="/terms-and-conditions.html">Terms and Conditions</a>
-          <a href="/legal-notice.html">Legal Notice</a>
-        </nav>
+        <div class="footer-links-columns">
+          <nav class="footer-links footer-links-info" aria-label="Studio links">
+            <p class="footer-links-title">Studio</p>
+            <a href="mailto:leo.gobbato@pamuuc.com">leo.gobbato@pamuuc.com</a>
+            <a href="#services">Services</a>
+            <a href="#projects">Projects</a>
+          </nav>
+          <nav class="footer-links footer-links-policies" aria-label="Policy links">
+            <p class="footer-links-title">Policies</p>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="cookie-policy.html">Cookie Policy</a>
+            <a href="terms-and-conditions.html">Terms and Conditions</a>
+            <a href="legal-notice.html">Legal Notice</a>
+          </nav>
+        </div>
         <nav class="language-switcher footer-language-switcher" aria-label="Language selector">
-          <a href="/en/" class="lang-link is-active" data-lang-switch="en">EN</a>
-          <a href="/fr/" class="lang-link" data-lang-switch="fr">FR</a>
-          <a href="/it/" class="lang-link" data-lang-switch="it">IT</a>
-          <a href="/es/" class="lang-link" data-lang-switch="es">ES</a>
+          <a href="en/" class="lang-link is-active" data-lang-switch="en">EN</a>
+          <a href="fr/" class="lang-link" data-lang-switch="fr">FR</a>
+          <a href="it/" class="lang-link" data-lang-switch="it">IT</a>
+          <a href="es/" class="lang-link" data-lang-switch="es">ES</a>
         </nav>
       </div>
     </footer>
@@ -1004,387 +1010,63 @@
     </div>
 
     <template id="modal-service-custom">
-      <article class="modal-article">
-        <p class="modal-kicker">Fully Custom Uniform Systems</p>
-        <h2>Overview</h2>
-        <p class="modal-intro">A complete uniform program built around your operation, your team structure, and your brand.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>What it includes</h3>
-            <ul>
-              <li>Role-by-role garment planning</li>
-              <li>Fabric and construction development</li>
-              <li>Branding integration and fitting rounds</li>
-              <li>Production setup and reorder continuity</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why it matters</h3>
-            <ul>
-              <li>Consistent visual standards across teams</li>
-              <li>Better comfort and durability in daily use</li>
-              <li>Less friction for future reorders and onboarding</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-service-merchandising">
-      <article class="modal-article">
-        <p class="modal-kicker">MERCHANDISING</p>
-        <h2>What merchandising means in this context</h2>
-        <p class="modal-intro">Merchandising is a branded product layer that complements uniforms, not a replacement for them.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical products</h3>
-            <ul>
-              <li>T-shirts and polos</li>
-              <li>Caps and bags</li>
-              <li>Light knitwear and accessories</li>
-              <li>Event and launch pieces</li>
-            </ul>
-          </section>
-          <section>
-            <h3>When companies use it</h3>
-            <ul>
-              <li>Openings and seasonal campaigns</li>
-              <li>Gifting and internal culture touchpoints</li>
-              <li>As a support layer around core uniforms</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-sector-hotels">
-      <article class="modal-article">
-        <p class="modal-kicker">Hotels</p>
-        <h2>Operational context</h2>
-        <p class="modal-intro">Hotels need consistent appearance across multiple roles and long service shifts.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical garments</h3>
-            <ul>
-              <li>Shirts, trousers, blazers, waistcoats</li>
-              <li>Housekeeping workwear and aprons</li>
-              <li>Seasonal outer layers for door and concierge teams</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why uniforms matter</h3>
-            <ul>
-              <li>Instant role recognition for guests</li>
-              <li>Consistent premium experience</li>
-              <li>Durability for high rotation and laundering</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-sector-restaurants">
-      <article class="modal-article">
-        <p class="modal-kicker">Restaurants</p>
-        <h2>Operational context</h2>
-        <p class="modal-intro">Restaurant uniforms must balance brand image with heat, movement, and speed of service.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical garments</h3>
-            <ul>
-              <li>Shirts, tees, polos, aprons</li>
-              <li>Trousers and easy-movement layers</li>
-              <li>Front-of-house and back-of-house variants</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why uniforms matter</h3>
-            <ul>
-              <li>Supports hygiene and professional standards</li>
-              <li>Improves team coordination in fast service</li>
-              <li>Strengthens brand coherence in guest view</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-sector-wellness">
-      <article class="modal-article">
-        <p class="modal-kicker">Wellness</p>
-        <h2>Operational context</h2>
-        <p class="modal-intro">Wellness spaces need calm visual language, comfort, and movement-friendly garments.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical garments</h3>
-            <ul>
-              <li>Tunics, tops, trousers, knitwear</li>
-              <li>Lightweight jackets and layering pieces</li>
-              <li>Brand-consistent accessories</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why uniforms matter</h3>
-            <ul>
-              <li>Reinforces a calm premium environment</li>
-              <li>Keeps staff comfortable in long sessions</li>
-              <li>Supports trust and visual consistency</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-sector-medical">
-      <article class="modal-article">
-        <p class="modal-kicker">Medical &amp; clinics</p>
-        <h2>Operational context</h2>
-        <p class="modal-intro">Medical teams require practical uniforms built for long shifts, frequent wash cycles, and clear role cues.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical garments</h3>
-            <ul>
-              <li>Tunics, scrub-inspired tops, trousers</li>
-              <li>Light layering garments</li>
-              <li>Name and role identification elements</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why uniforms matter</h3>
-            <ul>
-              <li>Improves patient trust and team clarity</li>
-              <li>Supports comfort in high-activity days</li>
-              <li>Keeps presentation professional and consistent</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-sector-service">
-      <article class="modal-article">
-        <p class="modal-kicker">Service teams</p>
-        <h2>Operational context</h2>
-        <p class="modal-intro">Service teams often work across areas and need garments that stay clear, durable, and easy to maintain.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical garments</h3>
-            <ul>
-              <li>Shirts, polos, trousers, lightweight jackets</li>
-              <li>Utility-focused pieces with practical pockets</li>
-              <li>Layer options for indoor and outdoor tasks</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why uniforms matter</h3>
-            <ul>
-              <li>Improves role clarity for customers and teams</li>
-              <li>Supports operational efficiency</li>
-              <li>Maintains brand standards in dynamic workflows</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-sector-guest">
-      <article class="modal-article">
-        <p class="modal-kicker">Guest services</p>
-        <h2>Operational context</h2>
-        <p class="modal-intro">Guest service teams need a polished first impression with practical garments for high-contact roles.</p>
-        <div class="modal-columns">
-          <section>
-            <h3>Typical garments</h3>
-            <ul>
-              <li>Shirts, blazers, trousers, dresses</li>
-              <li>Reception and host role-specific variants</li>
-              <li>Seasonal outer layers for entry points</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Why uniforms matter</h3>
-            <ul>
-              <li>Creates immediate trust at first contact</li>
-              <li>Supports brand positioning and consistency</li>
-              <li>Improves confidence in front-line interactions</li>
-            </ul>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-phase-1">
-      <article class="modal-article">
-        <p class="modal-kicker">Phase 01</p>
-        <h2>Discovery</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>Objective</h3>
-            <p>Define the right direction before sampling starts.</p>
-            <h3>Main actions</h3>
-            <ul>
-              <li>Operational and role analysis</li>
-              <li>Workwear and uniform benchmark review</li>
-              <li>Initial garment architecture proposal</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Outputs</h3>
-            <ul>
-              <li>Clear scope and role matrix</li>
-              <li>Priority garment list</li>
-              <li>Development brief for phase 2</li>
-            </ul>
-            <h3>Why it matters</h3>
-            <p>Reduces costly revisions and improves decision quality in later phases.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-phase-2">
-      <article class="modal-article">
-        <p class="modal-kicker">Phase 02</p>
-        <h2>Development</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>Objective</h3>
-            <p>Turn approved direction into production-ready garments.</p>
-            <h3>Main actions</h3>
-            <ul>
-              <li>Fabric and trim validation</li>
-              <li>Sample development and fittings</li>
-              <li>Construction revisions and final approvals</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Outputs</h3>
-            <ul>
-              <li>Approved patterns and silhouettes</li>
-              <li>Final branding and construction specs</li>
-              <li>Production package for manufacturing</li>
-            </ul>
-            <h3>Why it matters</h3>
-            <p>Ensures quality, fit, and durability are resolved before production scale.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-phase-3">
-      <article class="modal-article">
-        <p class="modal-kicker">Phase 03</p>
-        <h2>Production</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>Objective</h3>
-            <p>Deliver approved uniforms with consistent quality and continuity setup.</p>
-            <h3>Main actions</h3>
-            <ul>
-              <li>Pre-production alignment</li>
-              <li>Local manufacturing execution</li>
-              <li>Delivery and post-delivery checks</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Outputs</h3>
-            <ul>
-              <li>Operational-ready uniform rollout</li>
-              <li>Archived patterns and trim references</li>
-              <li>Reorder pathway for future needs</li>
-            </ul>
-            <h3>Why it matters</h3>
-            <p>Keeps consistency across shifts, new hires, and future production cycles.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-parameter-quantities">
-      <article class="modal-article">
-        <p class="modal-kicker">Minimum quantities</p>
-        <h2>How quantity thresholds work</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>Standard thresholds</h3>
-            <ul>
-              <li>Woven garments usually start around 50 pcs per style</li>
-              <li>Knitwear often starts around 100 to 150 pcs per style</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Important clarification</h3>
-            <p>Smaller quantities are possible in some cases, but they are usually less cost effective due to setup and production overhead.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-parameter-pricing">
-      <article class="modal-article">
-        <p class="modal-kicker">Pricing logic</p>
-        <h2>Pricing is variable, not fixed</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>Main variables</h3>
-            <ul>
-              <li>Fabric type and sourcing route</li>
-              <li>Construction complexity</li>
-              <li>Branding method and placement</li>
-              <li>Quantity per style</li>
-              <li>Garment category mix</li>
-            </ul>
-          </section>
-          <section>
-            <h3>What this means for buyers</h3>
-            <p>Accurate pricing comes from your real scope and priorities, not a generic static price list.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-parameter-cost-drivers">
-      <article class="modal-article">
-        <p class="modal-kicker">Cost drivers</p>
-        <h2>Where budget impact usually appears</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>High impact areas</h3>
-            <ul>
-              <li>Premium or technical fabrics</li>
-              <li>Complex pattern and construction details</li>
-              <li>Multiple branding techniques</li>
-              <li>Low quantities across many styles</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Optimization approach</h3>
-            <p>We help prioritize high-impact choices and simplify lower-value complexity to keep budget efficient.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
 
     <template id="modal-parameter-timing">
-      <article class="modal-article">
-        <p class="modal-kicker">Timing drivers</p>
-        <h2>What usually affects lead times</h2>
-        <div class="modal-columns">
-          <section>
-            <h3>Main factors</h3>
-            <ul>
-              <li>Pattern development and fit rounds</li>
-              <li>Fabric and trim availability</li>
-              <li>Special constructions or finishing</li>
-              <li>Approval speed across stakeholders</li>
-            </ul>
-          </section>
-          <section>
-            <h3>How timing is controlled</h3>
-            <p>Clear phase gates and pre-approved decisions reduce delays and keep delivery predictable.</p>
-          </section>
-        </div>
-      </article>
+      <article class="modal-article"></article>
     </template>
   </body>
 </html>
