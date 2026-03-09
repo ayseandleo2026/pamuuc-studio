@@ -236,8 +236,8 @@
           </div>
 
           <div class="sector-pill-grid reveal" aria-label="Sector pills">
-            <button class="sector-pill" type="button" data-modal-target="modal-sector-hotels" data-track-event="sector_click" data-item-name="hotels">Hotels</button>
-            <button class="sector-pill" type="button" data-modal-target="modal-sector-restaurants" data-track-event="sector_click" data-item-name="restaurants">Restaurants</button>
+            <button class="sector-pill" type="button" data-modal-target="modal-sector-hotels" data-track-event="sector_click" data-item-name="hotels">Hotel</button>
+            <button class="sector-pill" type="button" data-modal-target="modal-sector-restaurants" data-track-event="sector_click" data-item-name="restaurants">Ristoranti</button>
             <button class="sector-pill" type="button" data-modal-target="modal-sector-wellness" data-track-event="sector_click" data-item-name="wellness">Wellness</button>
             <button class="sector-pill" type="button" data-modal-target="modal-sector-medical" data-track-event="sector_click" data-item-name="medical">Medicale &amp; cliniche</button>
             <button class="sector-pill" type="button" data-modal-target="modal-sector-service" data-track-event="sector_click" data-item-name="service_teams">Team di servizio</button>
@@ -252,6 +252,16 @@
             <p class="section-kicker">Come progettiamo</p>
             <h2>Sistemi di uniformi, non capi isolati</h2>
             <p>La direzione parte dallo spazio, poi allinea ruoli, capi e operatività.</p>
+            <figure class="method-visual" aria-hidden="true">
+              <img
+                src="../assets/images/approach-desktop.svg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="420"
+              />
+            </figure>
           </div>
 
           <div class="method-grid">
@@ -534,7 +544,7 @@
           <div class="section-heading reveal">
             <p class="section-kicker">Parametri di produzione</p>
             <h2>Informazioni commerciali chiave a colpo d’occhio</h2>
-            <p>Clicca ogni riquadro per dettagli su quantita, logica prezzi e variabili di timing.</p>
+            <p>Clicca ogni riquadro per dettagli su quantità, logica prezzi e variabili di timing.</p>
           </div>
 
           <div class="parameter-grid parameter-grid-four">
@@ -543,17 +553,18 @@
               data-modal-target="modal-parameter-quantities" data-track-event="production_parameter_click" data-item-name="minimum_quantities"
               role="button"
               tabindex="0"
-              aria-label="Apri i dettagli delle quantita minime"
+              aria-label="Apri i dettagli delle quantità minime"
             >
-              <h3>Quantità minime</h3>
+              <h3>Quantità minime ideali</h3>
+              <p class="parameter-note">Possiamo produrre meno, ma il prezzo può aumentare di conseguenza.</p>
               <div class="value-stack">
                 <div>
                   <strong>50 pcs</strong>
-                  <span>Woven garments per style</span>
+                  <span>Capi in tessuto per modello</span>
                 </div>
                 <div>
-                  <strong>100 to 150 pcs</strong>
-                  <span>Knitwear per style</span>
+                  <strong>100 a 150 pcs</strong>
+                  <span>Maglieria per modello</span>
                 </div>
               </div>
               <span class="card-hint">Clicca per i dettagli</span>
@@ -566,10 +577,11 @@
               aria-label="Apri la spiegazione dei prezzi"
             >
               <h3>Approccio ai prezzi</h3>
+              <p class="parameter-note">Fascia indicativa per pezzo, IVA esclusa.</p>
               <div class="value-stack single-value">
                 <div>
-                  <strong>Variabile per progetto</strong>
-                  <span>Il prezzo dipende da tessuto, complessita costruttiva, branding, quantita e tipologia di capo</span>
+                  <strong>Di solito tra 25€ e 150€</strong>
+                  <span>Il prezzo dipende da tessuto, complessità costruttiva, branding, quantità e tipologia di capo</span>
                 </div>
               </div>
               <span class="card-hint">Clicca per i dettagli</span>
@@ -582,11 +594,12 @@
               aria-label="Apri i dettagli dei driver di costo"
             >
               <h3>Driver di costo</h3>
+              <p class="parameter-note">Fattori principali che possono aumentare il costo unitario.</p>
               <ul class="parameter-list">
-                <li>Fabric choice</li>
-                <li>Construction complexity</li>
-                <li>Branding method</li>
-                <li>Quantita e mix capi</li>
+                <li>Scelta dei tessuti</li>
+                <li>Complessità di costruzione</li>
+                <li>Metodo di branding</li>
+                <li>Quantità e mix capi</li>
               </ul>
               <span class="card-hint">Clicca per i dettagli</span>
             </article>
@@ -598,11 +611,12 @@
               aria-label="Apri i dettagli delle tempistiche"
             >
               <h3>Driver di tempistica</h3>
+              <p class="parameter-note">Fattori principali che possono allungare i tempi.</p>
               <ul class="parameter-list">
                 <li>Sviluppo modelli</li>
                 <li>Fitting e revisioni</li>
-                <li>Special constructions</li>
-                <li>Finishing complexity</li>
+                <li>Confezioni speciali</li>
+                <li>Complessità delle finiture</li>
               </ul>
               <span class="card-hint">Clicca per i dettagli</span>
             </article>
@@ -628,7 +642,7 @@
               <div class="comparison-row">
                 <div>Ambito</div>
                 <div>Costruito attorno al tuo spazio, ai ruoli e alle esigenze operative.</div>
-                <div>Maintained as a repeatable wardrobe system.</div>
+                <div>Mantenuto come sistema di guardaroba ripetibile.</div>
               </div>
               <div class="comparison-row">
                 <div>Sviluppo</div>
@@ -643,7 +657,7 @@
             </div>
 
             <div class="loop-card" aria-label="Continuity flow">
-              <span class="loop-step">Approve once</span>
+              <span class="loop-step">Approva una volta</span>
               <span class="loop-arrow" aria-hidden="true">→</span>
               <span class="loop-step">Archivia i modelli</span>
               <span class="loop-arrow" aria-hidden="true">→</span>
@@ -845,9 +859,10 @@
           <form
             class="contact-card"
             id="contact-form"
-            action="mailto:andreas@pamuuc.com,federica@pamuuc.com,leo.gobbato@pamuuc.com"
+            action="https://script.google.com/macros/s/AKfycbxvyqSSrvI3yGlPEk9ySbFE2yfFzirmHFz_BzdzkOAAOtk7HtiwLrdWinZdLVAy1g5p/exec"
             method="post"
-            enctype="text/plain"
+            enctype="application/x-www-form-urlencoded"
+            autocomplete="on"
           >
             <p class="form-hint">La compilazione richiede circa 2 minuti. Di solito rispondiamo entro 1 giorno lavorativo.</p>
 
@@ -957,7 +972,8 @@
         <div class="footer-links-columns">
           <nav class="footer-links footer-links-info" aria-label="Link studio">
             <p class="footer-links-title">Studio</p>
-            <a href="mailto:leo.gobbato@pamuuc.com">leo.gobbato@pamuuc.com</a>
+            <a href="../sitemap.xml">Mappa del sito</a>
+            <a href="https://pamuuc.com" target="_blank" rel="noopener noreferrer">PAMUUC.COM</a>
             <a href="#services">Servizi</a>
             <a href="#projects">Progetti</a>
           </nav>
@@ -1009,63 +1025,448 @@
     </div>
 
     <template id="modal-service-custom">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>SISTEMI DI UNIFORMI COMPLETAMENTE SU MISURA</h2>
+        <p>Guardaroba professionali progettati intorno al vostro spazio, al vostro team e</p>
+        <p>alle vostre operazioni.</p>
+        <p>I progetti completamente su misura partono da una pagina bianca. Invece di</p>
+        <p>adattare un prodotto di catalogo, sviluppiamo capi specifici per il vostro</p>
+        <p>ambiente, la struttura del team e la realtà quotidiana del servizio.</p>
+        <p>Le uniformi sono pensate come un sistema di guardaroba coerente, non come</p>
+        <p>capi isolati. Ogni capo funziona insieme agli altri sia dal punto di vista visivo che</p>
+        <p>funzionale all’interno del team.</p>
+        <p>Cosa definisce un progetto completamente su misura</p>
+        <p>Progettato a partire dallo spazio</p>
+        <p>Architettura, materiali degli interni, illuminazione e atmosfera del brand</p>
+        <p>definiscono la direzione visiva del guardaroba.</p>
+        <p>Sviluppo dei capi per ruolo</p>
+        <p>Ogni funzione viene analizzata singolarmente: reception, servizio,</p>
+        <p>management, operazioni. I capi si adattano ai movimenti e al ritmo di ogni ruolo.</p>
+        <p>Silhouette su misura</p>
+        <p>Vestibilità, lunghezze e proporzioni vengono definite affinché i capi risultino</p>
+        <p>naturali nell’ambiente e confortevoli durante lunghi turni di lavoro.</p>
+        <p>Cosa viene sviluppato</p>
+        <ul>
+          <li>Camicie e overshirt</li>
+          <li>Pantaloni e gonne</li>
+          <li>Abiti e capi sartoriali</li>
+          <li>Grembiuli e capi operativi</li>
+          <li>Maglieria e capispalla</li>
+          <li>Accessori</li>
+        </ul>
+        <p>Cosa devono sapere i clienti</p>
+        <p>Ogni progetto definisce il proprio perimetro. Alcuni clienti sviluppano un singolo</p>
+        <p>capo chiave, altri costruiscono un sistema completo di guardaroba per tutto il</p>
+        <p>team.</p>
+        <p>Una volta approvati, modelli e finiture vengono archiviati per permettere riordini</p>
+        <p>rapidi e coerenti.</p>
+      </article>
     </template>
 
     <template id="modal-service-merchandising">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>MERCHANDISING</h2>
+        <p>Capi brandizzati che estendono l’identità del brand oltre l’uniforme.</p>
+        <p>I prodotti di merchandising rafforzano la visibilità del brand durante eventi,</p>
+        <p>aperture, iniziative del team ed esperienze con gli ospiti.</p>
+        <p>Sono progettati per completare il sistema di uniformi, consentendo maggiore</p>
+        <p>flessibilità nei materiali, nei colori e nelle tecniche di personalizzazione.</p>
+        <p>Articoli di merchandising tipici</p>
+        <ul>
+          <li>Cappellini</li>
+          <li>T-shirt</li>
+          <li>Polo</li>
+          <li>Borse e tote bag</li>
+          <li>Felpe</li>
+          <li>Accessori</li>
+        </ul>
+        <p>Possibilità di branding</p>
+        <ul>
+          <li>Ricamo</li>
+          <li>Serigrafia</li>
+          <li>Stampa digitale</li>
+          <li>Etichette tessute</li>
+          <li>Finiture personalizzate</li>
+        </ul>
+        <p>Utilizzi tipici</p>
+        <ul>
+          <li>Eventi di apertura</li>
+          <li>Regali per il team</li>
+          <li>Attività promozionali</li>
+          <li>Prodotti brandizzati per gli ospiti</li>
+        </ul>
+        <p>Il merchandising può essere sviluppato in modo indipendente oppure insieme ai</p>
+        <p>progetti di uniformi.</p>
+      </article>
     </template>
 
     <template id="modal-sector-hotels">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>HOTEL</h2>
+        <p>Sistemi di uniformi progettati per team di ospitalità complessi.</p>
+        <p>Gli hotel includono spesso diversi reparti che interagiscono con gli ospiti in</p>
+        <p>ambienti differenti. Le uniformi devono riflettere l’identità della struttura</p>
+        <p>rimanendo allo stesso tempo pratiche per le operazioni quotidiane.</p>
+        <p>Ruoli tipici</p>
+        <ul>
+          <li>Reception e front office</li>
+          <li>Concierge e guest services</li>
+          <li>Personale di ristorante e bar</li>
+          <li>Management</li>
+          <li>Housekeeping</li>
+        </ul>
+        <p>Esempi di capi</p>
+        <ul>
+          <li>Camicie sartoriali</li>
+          <li>Pantaloni e gonne</li>
+          <li>Abiti</li>
+          <li>Blazer</li>
+          <li>Grembiuli</li>
+          <li>Maglieria</li>
+        </ul>
+        <p>Priorità di design</p>
+        <ul>
+          <li>Coerenza visiva tra i reparti</li>
+          <li>Comfort durante lunghi turni</li>
+          <li>Durabilità per l’uso quotidiano</li>
+          <li>Coerenza con architettura e identità del brand</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-restaurants">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>RISTORANTI</h2>
+        <p>Uniformi progettate per ambienti di servizio dinamici.</p>
+        <p>I team dei ristoranti necessitano di capi che bilancino durabilità, comfort e</p>
+        <p>identità visiva.</p>
+        <p>Le uniformi devono supportare un servizio attivo rafforzando allo stesso tempo</p>
+        <p>l’atmosfera del ristorante.</p>
+        <p>Capi tipici</p>
+        <ul>
+          <li>Camicie e overshirt</li>
+          <li>Grembiuli</li>
+          <li>Pantaloni</li>
+          <li>Polo</li>
+          <li>Giacche leggere</li>
+        </ul>
+        <p>Aspetti chiave del design</p>
+        <ul>
+          <li>Libertà di movimento</li>
+          <li>Tessuti traspiranti</li>
+          <li>Resistenza alle macchie</li>
+          <li>Cuciture rinforzate</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-wellness">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>WELLNESS</h2>
+        <p>Capi progettati per ambienti calmi e confortevoli.</p>
+        <p>I team di spa e wellness necessitano di uniformi che trasmettano serenità e</p>
+        <p>fiducia.</p>
+        <p>Il design privilegia morbidezza, silhouette pulite e tessuti traspiranti</p>
+        <p>mantenendo coerenza con l’identità del brand.</p>
+        <p>Capi tipici</p>
+        <ul>
+          <li>Tuniche</li>
+          <li>Top morbidi</li>
+          <li>Pantaloni</li>
+          <li>Abiti</li>
+        </ul>
+        <p>Priorità dei tessuti</p>
+        <ul>
+          <li>Traspirabilità</li>
+          <li>Comfort leggero</li>
+          <li>Materiali morbidi al tatto</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-medical">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>MEDICAL &amp; CLINICS</h2>
+        <p>Uniformi professionali per ambienti sanitari.</p>
+        <p>I professionisti sanitari necessitano di capi che accompagnino lunghe ore di</p>
+        <p>movimento mantenendo allo stesso tempo un aspetto pulito e rassicurante.</p>
+        <p>Il nostro approccio privilegia la funzionalità mantenendo un’estetica curata.</p>
+        <p>Capi tipici</p>
+        <ul>
+          <li>Top medicali</li>
+          <li>Scrubs</li>
+          <li>Pantaloni</li>
+          <li>Overshirt</li>
+        </ul>
+        <p>Priorità di design</p>
+        <ul>
+          <li>Tessuti traspiranti</li>
+          <li>Facilità di lavaggio e manutenzione</li>
+          <li>Durabilità</li>
+          <li>Comfort durante lunghi turni</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-service">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>SERVICE TEAMS</h2>
+        <p>Capi resistenti per ruoli operativi.</p>
+        <p>I team di servizio operano nella manutenzione, nella logistica e nel supporto</p>
+        <p>operativo. Le uniformi devono resistere a movimenti continui mantenendo</p>
+        <p>un’identità visiva coerente con il brand.</p>
+        <p>Capi tipici</p>
+        <ul>
+          <li>Camicie da lavoro</li>
+          <li>Pantaloni tecnici</li>
+          <li>Overshirt</li>
+          <li>Giacche leggere</li>
+        </ul>
+        <p>Priorità tecniche</p>
+        <ul>
+          <li>Cuciture rinforzate</li>
+          <li>Tessuti resistenti</li>
+          <li>Tasche funzionali</li>
+          <li>Facilità di manutenzione</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-guest">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>GUEST SERVICES</h2>
+        <p>Capi per ruoli a contatto con gli ospiti.</p>
+        <p>I team a contatto con gli ospiti rappresentano visivamente il brand. Le uniformi</p>
+        <p>devono trasmettere professionalità ed eleganza rimanendo confortevoli per</p>
+        <p>l’interazione quotidiana.</p>
+        <p>Capi tipici</p>
+        <ul>
+          <li>Camicie</li>
+          <li>Pantaloni sartoriali</li>
+          <li>Abiti</li>
+          <li>Blazer</li>
+        </ul>
+        <p>Priorità di design</p>
+        <ul>
+          <li>Identità visiva chiara</li>
+          <li>Comfort durante lunghi turni</li>
+          <li>Eleganza e semplicità</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-phase-1">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FASE 01 — DISCOVERY</h2>
+        <p>Comprendere l’ambiente e le esigenze operative.</p>
+        <p>Ogni progetto inizia con una fase di discovery durante la quale analizziamo il</p>
+        <p>contesto in cui i capi verranno utilizzati.</p>
+        <p>Architettura, flusso del servizio, ruoli del team e identità del brand definiscono</p>
+        <p>la direzione del guardaroba.</p>
+        <p>Attività</p>
+        <ul>
+          <li>Analisi operativa</li>
+          <li>Mappatura dei ruoli</li>
+          <li>Analisi dello spazio e del brand</li>
+          <li>Prima direzione dei capi</li>
+        </ul>
+        <p>L’obiettivo è stabilire una base chiara prima di iniziare lo sviluppo.</p>
+      </article>
     </template>
 
     <template id="modal-phase-2">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FASE 02 — DEVELOPMENT</h2>
+        <p>Trasformare la direzione creativa in capi reali.</p>
+        <p>Durante lo sviluppo definiamo tessuti, modelli e costruzione dei capi.</p>
+        <p>I prototipi vengono realizzati e testati attraverso fitting per garantire comfort,</p>
+        <p>funzionalità e coerenza visiva.</p>
+        <p>Attività</p>
+        <ul>
+          <li>Validazione dei tessuti</li>
+          <li>Sviluppo dei modelli</li>
+          <li>Creazione dei prototipi</li>
+          <li>Fitting e revisioni</li>
+        </ul>
+        <p>Questa fase garantisce che i capi funzionino correttamente nelle reali</p>
+        <p>condizioni di lavoro.</p>
+      </article>
     </template>
 
     <template id="modal-phase-3">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FASE 03 — PRODUZIONE</h2>
+        <p>Produzione dei modelli approvati.</p>
+        <p>Una volta approvati i capi, la produzione inizia con modelli, tessuti e finiture</p>
+        <p>finalizzati.</p>
+        <p>La produzione locale consente un controllo qualità più preciso e tempi</p>
+        <p>affidabili.</p>
+        <p>Attività</p>
+        <ul>
+          <li>Approvazione pre-produzione</li>
+          <li>Sviluppo delle taglie</li>
+          <li>Produzione</li>
+          <li>Preparazione della consegna</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-parameter-quantities">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>QUANTITÀ MINIME</h2>
+        <p>Le quantità minime dipendono dalla costruzione del capo e dai materiali</p>
+        <p>utilizzati.</p>
+        <p>Quantità tipiche</p>
+        <p>Capi in tessuto</p>
+        <p>50 pezzi per modello</p>
+        <p>Suddivisi tra taglie e colori.</p>
+        <p>Maglieria</p>
+        <p>100–150 pezzi per modello.</p>
+        <p>Quantità inferiori possono essere possibili ma possono influenzare il prezzo a</p>
+        <p>causa dell’efficienza produttiva.</p>
+      </article>
     </template>
 
     <template id="modal-parameter-pricing">
-      <article class="modal-article"></article>
+      <article class="modal-article">
+        <h2>APPROCCIO AI PREZZI</h2>
+        <p>I prezzi variano in base alla complessità tecnica e creativa del progetto.</p>
+        <p>Ogni progetto viene valutato individualmente in base ai capi sviluppati e ai parametri di produzione.</p>
+        <p>Il prezzo dipende da</p>
+        <ul>
+          <li>Selezione dei tessuti</li>
+          <li>Complessità della costruzione</li>
+          <li>Tecniche di branding</li>
+          <li>Quantità ordinate</li>
+          <li>Composizione del guardaroba</li>
+        </ul>
+        <p>Le fasce di prezzo possono variare significativamente in base a queste variabili.</p>
+        <p>Tutti i prezzi sono indicativi per pezzo (IVA esclusa).</p>
+        <div class="modal-table-wrap" role="region" aria-label="Fasce di prezzo indicative per prodotto">
+          <table class="modal-price-table">
+            <thead>
+              <tr>
+                <th scope="col">Tipo di prodotto</th>
+                <th scope="col">Fascia di prezzo (€/unità)</th>
+                <th scope="col">Note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>T-shirt</td>
+                <td>25€ – 40€</td>
+                <td>Cotone o blend di cotone, branding semplice</td>
+              </tr>
+              <tr>
+                <td>Polo</td>
+                <td>30€ – 50€</td>
+                <td>Ricamo o etichetta tessuta</td>
+              </tr>
+              <tr>
+                <td>Camicie (ospitalità)</td>
+                <td>45€ – 75€</td>
+                <td>Capo centrale del sistema uniforme</td>
+              </tr>
+              <tr>
+                <td>Overshirt</td>
+                <td>60€ – 95€</td>
+                <td>Spesso utilizzate per team di servizio</td>
+              </tr>
+              <tr>
+                <td>Pantaloni</td>
+                <td>65€ – 95€</td>
+                <td>Cuciture rinforzate e tessuti resistenti</td>
+              </tr>
+              <tr>
+                <td>Gonne</td>
+                <td>55€ – 85€</td>
+                <td>Silhouette pensate per l’ospitalità</td>
+              </tr>
+              <tr>
+                <td>Abiti</td>
+                <td>75€ – 120€</td>
+                <td>Costruzione più complessa</td>
+              </tr>
+              <tr>
+                <td>Grembiuli</td>
+                <td>30€ – 60€</td>
+                <td>Dipende da tessuto e funzionalità</td>
+              </tr>
+              <tr>
+                <td>Maglieria (maglioni / cardigan)</td>
+                <td>70€ – 110€</td>
+                <td>Quantità minime più elevate</td>
+              </tr>
+              <tr>
+                <td>Blazer / giacche sartoriali</td>
+                <td>95€ – 150€+</td>
+                <td>Costruzione strutturata</td>
+              </tr>
+              <tr>
+                <td>Giacche leggere / capispalla</td>
+                <td>80€ – 140€</td>
+                <td>Dipende da tessuti e finiture</td>
+              </tr>
+              <tr>
+                <td>Cappellini</td>
+                <td>15€ – 30€</td>
+                <td>Ricamo o etichetta</td>
+              </tr>
+              <tr>
+                <td>Tote bag</td>
+                <td>12€ – 25€</td>
+                <td>Cotone o canvas</td>
+              </tr>
+              <tr>
+                <td>Felpe / hoodies</td>
+                <td>45€ – 80€</td>
+                <td>Stampa o ricamo</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La maggior parte dei progetti combina diversi capi per creare un sistema di guardaroba coerente.</p>
+        <p>Il prezzo finale dipende dalla selezione dei tessuti, dalla complessità costruttiva, dalle tecniche di branding e dalle quantità prodotte.</p>
+      </article>
     </template>
 
     <template id="modal-parameter-cost-drivers">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FATTORI DI COSTO</h2>
+        <p>Diversi elementi influenzano il costo finale di un progetto di uniformi.</p>
+        <p>Principali fattori</p>
+        <p>Qualità dei tessuti</p>
+        <p>Tessuti tecnici o fibre naturali spesso aumentano il costo.</p>
+        <p>Complessità della costruzione</p>
+        <p>Capi sartoriali o modelli complessi richiedono più sviluppo.</p>
+        <p>Tecniche di branding</p>
+        <p>Ricami, finiture personalizzate e stampe speciali aggiungono passaggi</p>
+        <p>produttivi.</p>
+        <p>Quantità ordinate</p>
+        <p>Quantità maggiori riducono il costo unitario.</p>
+      </article>
     </template>
 
     <template id="modal-parameter-timing">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FATTORI DI TEMPO</h2>
+        <p>Le tempistiche del progetto dipendono dalla complessità dello sviluppo e dalla</p>
+        <p>pianificazione della produzione.</p>
+        <p>Tempistiche tipiche</p>
+        <p>Sviluppo: 4–6 settimane</p>
+        <p>Produzione: 3–5 settimane</p>
+        <p>I progetti completamente su misura richiedono generalmente circa 8 settimane</p>
+        <p>dall’idea alla consegna.</p>
+        <p>Fattori che influenzano i tempi</p>
+        <ul>
+          <li>Sviluppo dei modelli</li>
+          <li>Fitting e revisioni</li>
+          <li>Costruzioni speciali</li>
+          <li>Approvvigionamento dei tessuti</li>
+        </ul>
+        <p>Una buona pianificazione consente uno sviluppo più fluido e tempi di consegna</p>
+        <p>affidabili.</p>
+      </article>
     </template>
   </body>
 </html>

@@ -236,8 +236,8 @@
           </div>
 
           <div class="sector-pill-grid reveal" aria-label="Sector pills">
-            <button class="sector-pill" type="button" data-modal-target="modal-sector-hotels" data-track-event="sector_click" data-item-name="hotels">Hotels</button>
-            <button class="sector-pill" type="button" data-modal-target="modal-sector-restaurants" data-track-event="sector_click" data-item-name="restaurants">Restaurants</button>
+            <button class="sector-pill" type="button" data-modal-target="modal-sector-hotels" data-track-event="sector_click" data-item-name="hotels">Hoteles</button>
+            <button class="sector-pill" type="button" data-modal-target="modal-sector-restaurants" data-track-event="sector_click" data-item-name="restaurants">Restaurantes</button>
             <button class="sector-pill" type="button" data-modal-target="modal-sector-wellness" data-track-event="sector_click" data-item-name="wellness">Wellness</button>
             <button class="sector-pill" type="button" data-modal-target="modal-sector-medical" data-track-event="sector_click" data-item-name="medical">Médico &amp; clínicas</button>
             <button class="sector-pill" type="button" data-modal-target="modal-sector-service" data-track-event="sector_click" data-item-name="service_teams">Equipos de servicio</button>
@@ -252,6 +252,16 @@
             <p class="section-kicker">Cómo diseñamos</p>
             <h2>Sistemas de uniformes, no prendas aisladas</h2>
             <p>La dirección parte del espacio y después alinea roles, prendas y operación.</p>
+            <figure class="method-visual" aria-hidden="true">
+              <img
+                src="../assets/images/approach-desktop.svg"
+                alt=""
+                loading="lazy"
+                decoding="async"
+                width="640"
+                height="420"
+              />
+            </figure>
           </div>
 
           <div class="method-grid">
@@ -534,7 +544,7 @@
           <div class="section-heading reveal">
             <p class="section-kicker">Parámetros de producción</p>
             <h2>Información comercial clave de un vistazo</h2>
-            <p>Haz clic en cada bloque para ver detalles sobre cantidades, logica de precios y variables de plazo.</p>
+            <p>Haz clic en cada bloque para ver detalles sobre cantidades, lógica de precios y variables de plazo.</p>
           </div>
 
           <div class="parameter-grid parameter-grid-four">
@@ -543,17 +553,18 @@
               data-modal-target="modal-parameter-quantities" data-track-event="production_parameter_click" data-item-name="minimum_quantities"
               role="button"
               tabindex="0"
-              aria-label="Abrir detalles de cantidades minimas"
+              aria-label="Abrir detalles de cantidades mínimas"
             >
-              <h3>Cantidades mínimas</h3>
+              <h3>Cantidades mínimas ideales</h3>
+              <p class="parameter-note">Podemos producir menos, pero el precio puede aumentar como resultado.</p>
               <div class="value-stack">
                 <div>
                   <strong>50 pcs</strong>
-                  <span>Woven garments per style</span>
+                  <span>Prendas de tejido plano por modelo</span>
                 </div>
                 <div>
-                  <strong>100 to 150 pcs</strong>
-                  <span>Knitwear per style</span>
+                  <strong>100 a 150 pcs</strong>
+                  <span>Prendas de punto por modelo</span>
                 </div>
               </div>
               <span class="card-hint">Haz clic para ver detalles</span>
@@ -563,13 +574,14 @@
               data-modal-target="modal-parameter-pricing" data-track-event="production_parameter_click" data-item-name="pricing_variables"
               role="button"
               tabindex="0"
-              aria-label="Abrir explicacion de precios"
+              aria-label="Abrir explicación de precios"
             >
               <h3>Enfoque de precios</h3>
+              <p class="parameter-note">Rango orientativo por pieza, sin IVA.</p>
               <div class="value-stack single-value">
                 <div>
-                  <strong>Variable segun proyecto</strong>
-                  <span>El precio depende del tejido, la complejidad de confeccion, el branding, las cantidades y el tipo de prenda</span>
+                  <strong>Normalmente entre 25€ y 150€</strong>
+                  <span>El precio depende del tejido, la complejidad de confección, el branding, las cantidades y el tipo de prenda</span>
                 </div>
               </div>
               <span class="card-hint">Haz clic para ver detalles</span>
@@ -582,10 +594,11 @@
               aria-label="Abrir detalles de factores de coste"
             >
               <h3>Factores de coste</h3>
+              <p class="parameter-note">Factores principales que pueden aumentar el coste por unidad.</p>
               <ul class="parameter-list">
-                <li>Fabric choice</li>
-                <li>Construction complexity</li>
-                <li>Branding method</li>
+                <li>Selección de tejidos</li>
+                <li>Complejidad de confección</li>
+                <li>Técnica de branding</li>
                 <li>Cantidades y mezcla de prendas</li>
               </ul>
               <span class="card-hint">Haz clic para ver detalles</span>
@@ -598,11 +611,12 @@
               aria-label="Abrir detalles de plazos"
             >
               <h3>Factores de plazo</h3>
+              <p class="parameter-note">Factores principales que pueden alargar los plazos.</p>
               <ul class="parameter-list">
                 <li>Desarrollo de patrones</li>
                 <li>Fittings y revisiones</li>
-                <li>Special constructions</li>
-                <li>Finishing complexity</li>
+                <li>Confecciones especiales</li>
+                <li>Complejidad de acabados</li>
               </ul>
               <span class="card-hint">Haz clic para ver detalles</span>
             </article>
@@ -628,7 +642,7 @@
               <div class="comparison-row">
                 <div>Alcance</div>
                 <div>Construido en torno a tu espacio, tus roles y tus necesidades operativas.</div>
-                <div>Maintained as a repeatable wardrobe system.</div>
+                <div>Mantenido como un sistema de vestuario repetible.</div>
               </div>
               <div class="comparison-row">
                 <div>Desarrollo</div>
@@ -643,7 +657,7 @@
             </div>
 
             <div class="loop-card" aria-label="Continuity flow">
-              <span class="loop-step">Approve once</span>
+              <span class="loop-step">Aprueba una vez</span>
               <span class="loop-arrow" aria-hidden="true">→</span>
               <span class="loop-step">Archiva patrones</span>
               <span class="loop-arrow" aria-hidden="true">→</span>
@@ -808,7 +822,7 @@
             <details>
               <summary>¿Podeis desarrollar colores y detalles de branding personalizados?</summary>
               <div class="accordion-body">
-                <p>Si. Podemos usar bibliotecas de color en stock para ir mas rapido o desarrollar colores y acabados personalizados cuando las cantidades lo permiten.</p>
+                <p>Si. Podemos usar bibliotecas de color en stock para ir más rápido o desarrollar colores y acabados personalizados cuando las cantidades lo permiten.</p>
                 <p>Los métodos de branding se seleccionan por durabilidad, legibilidad y tipo de prenda.</p>
               </div>
             </details>
@@ -821,7 +835,7 @@
           <div class="cta-copy">
             <p class="section-kicker">Empecemos la conversación</p>
             <h2>Comparte los detalles de tu proyecto y definiremos el siguiente paso optimo</h2>
-            <p>Respondemos rapido, aclaramos la viabilidad y te guiamos hacia la ruta correcta de uniformes o merchandising.</p>
+            <p>Respondemos rápido, aclaramos la viabilidad y te guiamos hacia la ruta correcta de uniformes o merchandising.</p>
 
             <div class="reassurance-card">
               <h3>Proyectos habituales que recibimos</h3>
@@ -845,9 +859,10 @@
           <form
             class="contact-card"
             id="contact-form"
-            action="mailto:andreas@pamuuc.com,federica@pamuuc.com,leo.gobbato@pamuuc.com"
+            action="https://script.google.com/macros/s/AKfycbxvyqSSrvI3yGlPEk9ySbFE2yfFzirmHFz_BzdzkOAAOtk7HtiwLrdWinZdLVAy1g5p/exec"
             method="post"
-            enctype="text/plain"
+            enctype="application/x-www-form-urlencoded"
+            autocomplete="on"
           >
             <p class="form-hint">El envio tarda unos 2 minutos. Normalmente respondemos en 1 dia laborable.</p>
 
@@ -957,7 +972,8 @@
         <div class="footer-links-columns">
           <nav class="footer-links footer-links-info" aria-label="Enlaces del estudio">
             <p class="footer-links-title">Estudio</p>
-            <a href="mailto:leo.gobbato@pamuuc.com">leo.gobbato@pamuuc.com</a>
+            <a href="../sitemap.xml">Mapa del sitio</a>
+            <a href="https://pamuuc.com" target="_blank" rel="noopener noreferrer">PAMUUC.COM</a>
             <a href="#services">Servicios</a>
             <a href="#projects">Proyectos</a>
           </nav>
@@ -1009,63 +1025,430 @@
     </div>
 
     <template id="modal-service-custom">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>SISTEMAS DE UNIFORMES TOTALMENTE PERSONALIZADOS</h2>
+        <p>Vestuario profesional diseñado alrededor de vuestro espacio, equipo y</p>
+        <p>operativa.</p>
+        <p>Los proyectos totalmente personalizados comienzan desde cero. En lugar de</p>
+        <p>adaptar un producto de catálogo, desarrollamos prendas específicamente para</p>
+        <p>vuestro entorno, la estructura de vuestro equipo y la realidad diaria del servicio.</p>
+        <p>Los uniformes se plantean como un sistema de vestuario coherente, no como</p>
+        <p>piezas aisladas. Cada prenda funciona visual y funcionalmente con el resto del</p>
+        <p>equipo.</p>
+        <p>Qué define un proyecto totalmente personalizado</p>
+        <p>Diseño que parte del espacio</p>
+        <p>La arquitectura, los materiales del interior, la iluminación y la atmósfera de la</p>
+        <p>marca definen la dirección visual del vestuario.</p>
+        <p>Desarrollo de prendas por función</p>
+        <p>Cada función se analiza individualmente: recepción, servicio, dirección,</p>
+        <p>operaciones. Las prendas se adaptan al movimiento y al ritmo de cada rol.</p>
+        <p>Siluetas a medida</p>
+        <p>Los cortes, largos y proporciones se ajustan para que las prendas encajen de</p>
+        <p>forma natural en el entorno, manteniendo la comodidad durante turnos largos.</p>
+        <p>Qué se desarrolla</p>
+        <ul>
+          <li>Camisas y sobrecamisas</li>
+          <li>Pantalones y faldas</li>
+          <li>Vestidos y piezas de sastrería</li>
+          <li>Delantales y prendas operativas</li>
+          <li>Prendas de punto y capas exteriores</li>
+          <li>Accesorios</li>
+        </ul>
+        <p>Lo que los clientes deben saber</p>
+        <p>Cada proyecto define su propio alcance. Algunos clientes desarrollan una sola</p>
+        <p>prenda clave, mientras que otros construyen un sistema completo de vestuario</p>
+        <p>para todo el equipo.</p>
+        <p>Una vez aprobado, los patrones y acabados se archivan para que futuras</p>
+        <p>reposiciones puedan producirse de forma rápida y consistente.</p>
+      </article>
     </template>
 
     <template id="modal-service-merchandising">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>MERCHANDISING</h2>
+        <p>Prendas de marca que amplían vuestra identidad más allá del uniforme.</p>
+        <p>Las piezas de merchandising refuerzan la visibilidad de la marca durante</p>
+        <p>eventos, aperturas, iniciativas del equipo o experiencias con clientes.</p>
+        <p>Se diseñan para complementar el sistema de uniformes, permitiendo mayor</p>
+        <p>flexibilidad en materiales, colores y técnicas de branding.</p>
+        <p>Productos de merchandising habituales</p>
+        <ul>
+          <li>Gorras</li>
+          <li>Camisetas</li>
+          <li>Polos</li>
+          <li>Bolsas y tote bags</li>
+          <li>Sudaderas</li>
+          <li>Accesorios</li>
+        </ul>
+        <p>Opciones de personalización</p>
+        <ul>
+          <li>Bordado</li>
+          <li>Serigrafía</li>
+          <li>Impresión digital</li>
+          <li>Etiquetas tejidas</li>
+          <li>Acabados personalizados</li>
+        </ul>
+        <p>Usos habituales</p>
+        <ul>
+          <li>Eventos de apertura</li>
+          <li>Regalos para el equipo</li>
+          <li>Acciones promocionales</li>
+          <li>Productos de marca para clientes</li>
+        </ul>
+        <p>El merchandising puede desarrollarse de forma independiente o junto con</p>
+        <p>proyectos de uniformes.</p>
+      </article>
     </template>
 
     <template id="modal-sector-hotels">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>HOTELES</h2>
+        <p>Sistemas de uniformes diseñados para equipos de hostelería complejos.</p>
+        <p>Los hoteles suelen incluir múltiples departamentos que interactúan con los</p>
+        <p>huéspedes en distintos espacios. Los uniformes deben reflejar la identidad del</p>
+        <p>establecimiento sin perder funcionalidad para la operativa diaria.</p>
+        <p>Roles habituales</p>
+        <ul>
+          <li>Recepción y front office</li>
+          <li>Concierge y guest services</li>
+          <li>Personal de restaurante y bar</li>
+          <li>Dirección</li>
+          <li>Housekeeping</li>
+        </ul>
+        <p>Ejemplos de prendas</p>
+        <ul>
+          <li>Camisas de sastrería</li>
+          <li>Pantalones y faldas</li>
+          <li>Vestidos</li>
+          <li>Blazers</li>
+          <li>Delantales</li>
+          <li>Prendas de punto</li>
+        </ul>
+        <p>Prioridades de diseño</p>
+        <ul>
+          <li>Coherencia visual entre departamentos</li>
+          <li>Comodidad durante turnos largos</li>
+          <li>Durabilidad para uso diario</li>
+          <li>Coherencia con la arquitectura y la identidad de marca</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-restaurants">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>RESTAURANTES</h2>
+        <p>Uniformes diseñados para entornos de servicio dinámicos.</p>
+        <p>Los equipos de restaurante necesitan prendas que equilibren durabilidad,</p>
+        <p>comodidad e identidad visual.</p>
+        <p>Los uniformes deben permitir un servicio ágil mientras refuerzan la atmósfera</p>
+        <p>del restaurante.</p>
+        <p>Prendas habituales</p>
+        <ul>
+          <li>Camisas y sobrecamisas</li>
+          <li>Delantales</li>
+          <li>Pantalones</li>
+          <li>Polos</li>
+          <li>Chaquetas ligeras</li>
+        </ul>
+        <p>Aspectos clave de diseño</p>
+        <ul>
+          <li>Libertad de movimiento</li>
+          <li>Tejidos transpirables</li>
+          <li>Resistencia a manchas</li>
+          <li>Costuras reforzadas</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-wellness">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>WELLNESS</h2>
+        <p>Prendas diseñadas para entornos tranquilos y confortables.</p>
+        <p>Los equipos de spa y bienestar necesitan uniformes que transmitan serenidad y</p>
+        <p>confianza.</p>
+        <p>El diseño prioriza suavidad, siluetas limpias y tejidos transpirables manteniendo</p>
+        <p>coherencia con la identidad de marca.</p>
+        <p>Prendas habituales</p>
+        <ul>
+          <li>Túnicas</li>
+          <li>Tops suaves</li>
+          <li>Pantalones</li>
+          <li>Vestidos</li>
+        </ul>
+        <p>Prioridades de tejido</p>
+        <ul>
+          <li>Transpirabilidad</li>
+          <li>Ligereza</li>
+          <li>Materiales suaves al tacto</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-medical">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>MEDICAL &amp; CLINICS</h2>
+        <p>Uniformes profesionales para entornos sanitarios.</p>
+        <p>Los profesionales de la salud necesitan prendas que acompañen largas</p>
+        <p>jornadas de movimiento manteniendo una apariencia limpia y profesional.</p>
+        <p>Nuestro enfoque combina funcionalidad con una estética cuidada.</p>
+        <p>Prendas habituales</p>
+        <ul>
+          <li>Tops médicos</li>
+          <li>Scrubs</li>
+          <li>Pantalones</li>
+          <li>Sobrecamisas</li>
+        </ul>
+        <p>Prioridades de diseño</p>
+        <ul>
+          <li>Tejidos transpirables</li>
+          <li>Fácil lavado y mantenimiento</li>
+          <li>Durabilidad</li>
+          <li>Comodidad durante turnos largos</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-service">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>SERVICE TEAMS</h2>
+        <p>Prendas resistentes para funciones operativas.</p>
+        <p>Los equipos de servicio trabajan en mantenimiento, logística y soporte</p>
+        <p>operativo. Los uniformes deben soportar movimiento constante manteniendo</p>
+        <p>coherencia visual con la marca.</p>
+        <p>Prendas habituales</p>
+        <ul>
+          <li>Camisas de trabajo</li>
+          <li>Pantalones técnicos</li>
+          <li>Sobrecamisas</li>
+          <li>Chaquetas ligeras</li>
+        </ul>
+        <p>Prioridades técnicas</p>
+        <ul>
+          <li>Costuras reforzadas</li>
+          <li>Tejidos resistentes</li>
+          <li>Bolsillos funcionales</li>
+          <li>Fácil mantenimiento</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-sector-guest">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>GUEST SERVICES</h2>
+        <p>Prendas para funciones de atención al cliente.</p>
+        <p>Los equipos de atención al cliente representan visualmente la marca. Los</p>
+        <p>uniformes deben transmitir profesionalidad y elegancia manteniendo</p>
+        <p>comodidad durante largas jornadas de interacción.</p>
+        <p>Prendas habituales</p>
+        <ul>
+          <li>Camisas</li>
+          <li>Pantalones de sastrería</li>
+          <li>Vestidos</li>
+          <li>Blazers</li>
+        </ul>
+        <p>Prioridades de diseño</p>
+        <ul>
+          <li>Identidad visual clara</li>
+          <li>Comodidad durante turnos largos</li>
+          <li>Elegancia y simplicidad</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-phase-1">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FASE 01 — DESCUBRIMIENTO</h2>
+        <p>Comprender el entorno y las necesidades operativas.</p>
+        <p>Cada proyecto comienza con una fase de descubrimiento en la que analizamos el contexto en el que funcionarán las prendas.</p>
+        <p>La arquitectura, el flujo de servicio, los roles del equipo y la identidad de marca definen la dirección del vestuario.</p>
+        <p>Actividades</p>
+        <ul>
+          <li>Análisis operativo</li>
+          <li>Mapeo de roles</li>
+          <li>Revisión del espacio y de la marca</li>
+          <li>Dirección inicial de prendas</li>
+        </ul>
+        <p>El objetivo es establecer una base clara antes de comenzar el desarrollo.</p>
+      </article>
     </template>
 
     <template id="modal-phase-2">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FASE 02 — DESARROLLO</h2>
+        <p>Transformar la dirección creativa en prendas reales.</p>
+        <p>Durante el desarrollo refinamos tejidos, patrones y construcción de las prendas.</p>
+        <p>Se producen prototipos y se prueban mediante fittings para asegurar comodidad, funcionalidad y coherencia visual.</p>
+        <p>Actividades</p>
+        <ul>
+          <li>Validación de tejidos</li>
+          <li>Desarrollo de patrones</li>
+          <li>Creación de prototipos</li>
+          <li>Fittings y revisiones Esta fase garantiza que las prendas funcionen correctamente en condiciones reales de trabajo.</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-phase-3">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FASE 03 — PRODUCCIÓN</h2>
+        <p>Fabricación de los diseños aprobados.</p>
+        <p>Una vez aprobadas las prendas, la producción comienza con patrones, tejidos y acabados finalizados.</p>
+        <p>La fabricación local permite un control de calidad cercano y plazos fiables.</p>
+        <p>Actividades</p>
+        <ul>
+          <li>Aprobación de preproducción</li>
+          <li>Gradación de tallas</li>
+          <li>Fabricación</li>
+          <li>Preparación de entrega</li>
+        </ul>
+      </article>
     </template>
 
     <template id="modal-parameter-quantities">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>CANTIDADES MÍNIMAS</h2>
+        <p>Las cantidades mínimas dependen de la construcción de la prenda y de los materiales.</p>
+        <p>Mínimos habituales</p>
+        <p>Prendas de tejido plano</p>
+        <p>50 piezas por modelo</p>
+        <p>Repartidas entre tallas y colores.</p>
+        <p>Prenda de punto</p>
+        <p>100 a 150 piezas por modelo.</p>
+        <p>Pueden ser posibles tiradas más pequeñas, pero pueden afectar al precio por eficiencia de producción.</p>
+      </article>
     </template>
 
     <template id="modal-parameter-pricing">
-      <article class="modal-article"></article>
+      <article class="modal-article">
+        <h2>ENFOQUE DE PRECIOS</h2>
+        <p>El precio varía según el alcance técnico y creativo del proyecto.</p>
+        <p>Cada proyecto se evalúa de forma individual en función de las prendas desarrolladas y de los parámetros de producción.</p>
+        <p>El precio depende de</p>
+        <ul>
+          <li>Selección de tejidos</li>
+          <li>Complejidad de confección</li>
+          <li>Técnicas de branding</li>
+          <li>Cantidades pedidas</li>
+          <li>Mezcla de prendas</li>
+        </ul>
+        <p>Los rangos de precio pueden variar de forma significativa según estas variables.</p>
+        <p>Todos los precios son orientativos por pieza (sin IVA).</p>
+        <div class="modal-table-wrap" role="region" aria-label="Rangos de precios orientativos por producto">
+          <table class="modal-price-table">
+            <thead>
+              <tr>
+                <th scope="col">Tipo de producto</th>
+                <th scope="col">Rango de precio (€/unidad)</th>
+                <th scope="col">Notas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Camisetas</td>
+                <td>25€ – 40€</td>
+                <td>Algodón o mezcla de algodón, branding básico</td>
+              </tr>
+              <tr>
+                <td>Polos</td>
+                <td>30€ – 50€</td>
+                <td>Bordado o etiqueta tejida</td>
+              </tr>
+              <tr>
+                <td>Camisas (hostelería)</td>
+                <td>45€ – 75€</td>
+                <td>Pieza central del sistema de uniformes</td>
+              </tr>
+              <tr>
+                <td>Sobrecamisas</td>
+                <td>60€ – 95€</td>
+                <td>Muy utilizadas en equipos de servicio</td>
+              </tr>
+              <tr>
+                <td>Pantalones</td>
+                <td>65€ – 95€</td>
+                <td>Costuras reforzadas y tejidos resistentes</td>
+              </tr>
+              <tr>
+                <td>Faldas</td>
+                <td>55€ – 85€</td>
+                <td>Siluetas pensadas para equipos de hospitalidad</td>
+              </tr>
+              <tr>
+                <td>Vestidos</td>
+                <td>75€ – 120€</td>
+                <td>Confección más compleja</td>
+              </tr>
+              <tr>
+                <td>Delantales</td>
+                <td>30€ – 60€</td>
+                <td>Según tejido y funcionalidad</td>
+              </tr>
+              <tr>
+                <td>Punto (jerséis / cárdigans)</td>
+                <td>70€ – 110€</td>
+                <td>Cantidades mínimas más altas</td>
+              </tr>
+              <tr>
+                <td>Blazers / chaquetas sastre</td>
+                <td>95€ – 150€+</td>
+                <td>Prendas estructuradas</td>
+              </tr>
+              <tr>
+                <td>Chaquetas ligeras / capas exteriores</td>
+                <td>80€ – 140€</td>
+                <td>Según tejido y acabados</td>
+              </tr>
+              <tr>
+                <td>Gorras</td>
+                <td>15€ – 30€</td>
+                <td>Bordado o etiqueta</td>
+              </tr>
+              <tr>
+                <td>Bolsas tote</td>
+                <td>12€ – 25€</td>
+                <td>Algodón o lona</td>
+              </tr>
+              <tr>
+                <td>Sudaderas / hoodies</td>
+                <td>45€ – 80€</td>
+                <td>Impresión o bordado</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>La mayoría de los proyectos combinan varias prendas para crear un vestuario coherente.</p>
+        <p>El precio final depende de la selección de tejidos, la complejidad de confección, las técnicas de branding y las cantidades producidas.</p>
+      </article>
     </template>
 
     <template id="modal-parameter-cost-drivers">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FACTORES DE COSTE</h2>
+        <p>Varios elementos influyen en el coste final de un proyecto de uniformes.</p>
+        <p>Factores principales</p>
+        <p>Calidad de tejidos</p>
+        <p>Complejidad de confección</p>
+        <p>Técnicas de branding</p>
+        <p>Cantidades pedidas</p>
+      </article>
     </template>
 
     <template id="modal-parameter-timing">
-      <article class="modal-article"></article>
+                  <article class="modal-article">
+        <h2>FACTORES DE PLAZO</h2>
+        <p>Los tiempos del proyecto dependen de la complejidad del desarrollo y de la planificación de producción.</p>
+        <p>Plazos habituales</p>
+        <p>Desarrollo: 4–6 semanas</p>
+        <p>Producción: 3–5 semanas</p>
+        <p>Factores que pueden ampliar los tiempos</p>
+        <ul>
+          <li>Número de prendas y variaciones</li>
+          <li>Desarrollo de tejidos o colores personalizados</li>
+          <li>Complejidad de fittings y revisiones</li>
+          <li>Carga de producción en temporada alta</li>
+        </ul>
+        <p>Un briefing claro y decisiones ágiles reducen los plazos de forma significativa.</p>
+      </article>
     </template>
   </body>
 </html>
