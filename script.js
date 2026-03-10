@@ -8,6 +8,9 @@
 
   const STORAGE_LANGUAGE = "pamuuc_lang";
   const STORAGE_COOKIE = "pamuuc_cookie_consent";
+  const STORAGE_COOKIE_TIMESTAMP = "pamuuc_cookie_consent_timestamp";
+  const COOKIE_CONSENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+  const COOKIE_AUTO_ACCEPT_MS = 15 * 1000;
 
   const supportedLanguages = ["en", "fr", "it", "es"];
 
@@ -70,6 +73,12 @@
     }
   };
   const uiCopy = uiCopyMap[currentLanguage] || uiCopyMap.en;
+  const cookieTermsLinkCopyMap = {
+    en: "Read terms and conditions.",
+    fr: "Lire les conditions générales.",
+    it: "Leggi termini e condizioni.",
+    es: "Leer términos y condiciones."
+  };
 
   const body = document.body;
 
@@ -107,7 +116,30 @@
   let gaLoaded = false;
   let gaLoading = false;
   let analyticsAllowed = false;
+  let gaConsentState = "rejected";
   const pendingEvents = [];
+
+  const getGaConsentPayload = (value) => {
+    const analyticsState = value === "accepted" ? "granted" : "denied";
+    return {
+      analytics_storage: analyticsState,
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      functionality_storage: "granted",
+      security_storage: "granted"
+    };
+  };
+
+  const applyGaConsent = (value, mode = "update") => {
+    gaConsentState = value === "accepted" ? "accepted" : "rejected";
+
+    if (!gaLoaded || typeof window.gtag !== "function") {
+      return;
+    }
+
+    window.gtag("consent", mode, getGaConsentPayload(gaConsentState));
+  };
 
   const trackEvent = (name, params = {}) => {
     if (!analyticsAllowed) {
@@ -127,7 +159,7 @@
     window.gtag("event", name, payload);
   };
 
-  const loadGa = () => {
+  const loadGa = (initialConsent = gaConsentState) => {
     if (gaLoaded || gaLoading) {
       return;
     }
@@ -144,14 +176,26 @@
       const hasConfigCall = window.dataLayer.some((entry) => {
         return Array.isArray(entry) && entry[0] === "config" && entry[1] === GA_ID;
       });
+      const hasConsentDefaultCall = window.dataLayer.some((entry) => {
+        return Array.isArray(entry) && entry[0] === "consent" && entry[1] === "default";
+      });
+
+      if (!hasConsentDefaultCall) {
+        window.gtag("consent", "default", getGaConsentPayload(initialConsent));
+      }
 
       if (!hasConfigCall) {
         window.gtag("js", new Date());
-        window.gtag("config", GA_ID);
+        window.gtag("config", GA_ID, {
+          anonymize_ip: true,
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false
+        });
       }
 
       gaLoaded = true;
       gaLoading = false;
+      applyGaConsent(gaConsentState);
       while (pendingEvents.length) {
         const [eventName, payload] = pendingEvents.shift();
         window.gtag("event", eventName, payload);
@@ -193,38 +237,106 @@
   const cookieAccept = document.querySelector("#cookie-accept");
   const cookieReject = document.querySelector("#cookie-reject");
   let scrollAutoAcceptHandler = null;
+  let cookieAutoAcceptTimerId = null;
+
+  const clearCookieAutoAcceptTimer = () => {
+    if (cookieAutoAcceptTimerId) {
+      window.clearTimeout(cookieAutoAcceptTimerId);
+      cookieAutoAcceptTimerId = null;
+    }
+  };
+
+  const clearCookieAutoAcceptTriggers = () => {
+    clearCookieAutoAcceptTimer();
+    if (scrollAutoAcceptHandler) {
+      window.removeEventListener("scroll", scrollAutoAcceptHandler);
+      scrollAutoAcceptHandler = null;
+    }
+  };
+
+  const getStoredCookieConsent = () => {
+    const storedValue = window.localStorage.getItem(STORAGE_COOKIE);
+    const storedTimestampRaw = window.localStorage.getItem(STORAGE_COOKIE_TIMESTAMP);
+    const storedTimestamp = Number.parseInt(storedTimestampRaw || "", 10);
+
+    if (storedValue !== "accepted" && storedValue !== "rejected") {
+      window.localStorage.removeItem(STORAGE_COOKIE);
+      window.localStorage.removeItem(STORAGE_COOKIE_TIMESTAMP);
+      return null;
+    }
+
+    if (!Number.isFinite(storedTimestamp)) {
+      window.localStorage.removeItem(STORAGE_COOKIE);
+      window.localStorage.removeItem(STORAGE_COOKIE_TIMESTAMP);
+      return null;
+    }
+
+    if (Date.now() - storedTimestamp >= COOKIE_CONSENT_TTL_MS) {
+      window.localStorage.removeItem(STORAGE_COOKIE);
+      window.localStorage.removeItem(STORAGE_COOKIE_TIMESTAMP);
+      return null;
+    }
+
+    return storedValue;
+  };
+
+  const decorateCookieBanner = () => {
+    if (!cookieBanner) {
+      return;
+    }
+
+    const copy = cookieTermsLinkCopyMap[currentLanguage] || cookieTermsLinkCopyMap.en;
+    const cookieText = cookieBanner.querySelector("p");
+    if (cookieText && !cookieText.querySelector(".cookie-terms-link")) {
+      const termsLink = document.createElement("a");
+      termsLink.href = "terms-and-conditions.html";
+      termsLink.className = "cookie-terms-link";
+      termsLink.textContent = copy;
+      cookieText.append(document.createTextNode(" "), termsLink);
+    }
+
+    if (cookieAccept) {
+      cookieAccept.classList.add("cookie-accept-cta");
+    }
+
+    if (cookieReject) {
+      cookieReject.classList.remove("button", "button-secondary");
+      cookieReject.classList.add("cookie-reject-link");
+    }
+  };
+
+  decorateCookieBanner();
 
   const hideCookieBanner = () => {
     if (cookieBanner) {
       cookieBanner.classList.remove("is-visible");
     }
+    clearCookieAutoAcceptTriggers();
   };
 
   const setCookieConsent = (value, source = "button") => {
-    const current = window.localStorage.getItem(STORAGE_COOKIE);
-    if (current === value) {
+    const normalizedValue = value === "accepted" ? "accepted" : "rejected";
+    const current = getStoredCookieConsent();
+    if (current === normalizedValue) {
       hideCookieBanner();
+      applyGaConsent(normalizedValue);
       return;
     }
 
-    window.localStorage.setItem(STORAGE_COOKIE, value);
+    window.localStorage.setItem(STORAGE_COOKIE, normalizedValue);
+    window.localStorage.setItem(STORAGE_COOKIE_TIMESTAMP, String(Date.now()));
     hideCookieBanner();
 
-    if (scrollAutoAcceptHandler) {
-      window.removeEventListener("scroll", scrollAutoAcceptHandler);
-      scrollAutoAcceptHandler = null;
-    }
+    analyticsAllowed = normalizedValue === "accepted";
+    applyGaConsent(normalizedValue);
+    loadGa(normalizedValue);
 
-    analyticsAllowed = value === "accepted";
-
-    if (value === "accepted") {
-      loadGa();
+    if (normalizedValue === "accepted") {
       trackEvent("cookie_accept", { item_name: source });
     } else {
       if (gaLoaded && typeof window.gtag === "function") {
         window.gtag("event", "cookie_reject", {
-          language: currentLanguage,
-          item_name: source
+          non_interaction: true
         });
       }
       pendingEvents.length = 0;
@@ -264,13 +376,10 @@
     { passive: true }
   );
 
-  const storedCookieConsent = window.localStorage.getItem(STORAGE_COOKIE);
-  if (storedCookieConsent === "rejected") {
-    analyticsAllowed = false;
-  } else {
-    analyticsAllowed = true;
-    loadGa();
-  }
+  const storedCookieConsent = getStoredCookieConsent();
+  analyticsAllowed = storedCookieConsent === "accepted";
+  gaConsentState = analyticsAllowed ? "accepted" : "rejected";
+  loadGa(gaConsentState);
 
   if (!storedCookieConsent && cookieBanner) {
     cookieBanner.classList.add("is-visible");
@@ -297,6 +406,9 @@
     };
 
     window.addEventListener("scroll", scrollAutoAcceptHandler, { passive: true });
+    cookieAutoAcceptTimerId = window.setTimeout(() => {
+      setCookieConsent("accepted", "timeout_15_seconds");
+    }, COOKIE_AUTO_ACCEPT_MS);
   }
 
   const languageModal = document.querySelector("#language-modal");
@@ -995,32 +1107,26 @@
       }
 
       try {
+        const controller = new AbortController();
+        const timeoutId = window.setTimeout(() => controller.abort(), 12000);
+
         const response = await fetch(FORM_ENDPOINT, {
           method: "POST",
-          mode: "cors",
+          mode: "no-cors",
           headers: {
             "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
           },
-          body: encodedPayload.toString()
+          body: encodedPayload.toString(),
+          signal: controller.signal
         });
+        window.clearTimeout(timeoutId);
 
-        const rawBody = await response.text();
-        let responseBody = null;
-
-        if (rawBody) {
-          try {
-            responseBody = JSON.parse(rawBody);
-          } catch (_parseError) {
-            throw new Error("Unexpected response format from form endpoint.");
-          }
-        }
-
-        if (!response.ok) {
+        // Apps Script endpoints are frequently opaque in browsers (no readable CORS body),
+        // even when the submission is correctly received and written to Sheets.
+        const isOpaqueSuccess = response.type === "opaque";
+        const isRegularSuccess = response.ok;
+        if (!isOpaqueSuccess && !isRegularSuccess) {
           throw new Error(`Request failed with status ${response.status}`);
-        }
-
-        if (responseBody && responseBody.ok === false) {
-          throw new Error(responseBody.error || "Form endpoint returned an error.");
         }
 
         if (formStatus) {
