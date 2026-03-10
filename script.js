@@ -81,6 +81,7 @@
   };
 
   const body = document.body;
+  const isHomePage = body?.dataset.pageType === "home";
 
   const normalizeRootAbsoluteLinks = () => {
     if (!basePath) {
@@ -330,6 +331,9 @@
     analyticsAllowed = normalizedValue === "accepted";
     applyGaConsent(normalizedValue);
     loadGa(normalizedValue);
+    if (analyticsAllowed) {
+      bindScrollTracking();
+    }
 
     if (normalizedValue === "accepted") {
       trackEvent("cookie_accept", { item_name: source });
@@ -346,6 +350,7 @@
   const scrollThresholds = [25, 50, 75, 100];
   const trackedScrollThresholds = new Set();
   let scrollTrackingTicking = false;
+  let scrollTrackingBound = false;
 
   const handleScrollTracking = () => {
     scrollTrackingTicking = false;
@@ -364,22 +369,33 @@
     });
   };
 
-  window.addEventListener(
-    "scroll",
-    () => {
-      if (!analyticsAllowed || scrollTrackingTicking) {
-        return;
-      }
-      scrollTrackingTicking = true;
-      window.requestAnimationFrame(handleScrollTracking);
-    },
-    { passive: true }
-  );
+  const bindScrollTracking = () => {
+    if (scrollTrackingBound) {
+      return;
+    }
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!analyticsAllowed || scrollTrackingTicking) {
+          return;
+        }
+        scrollTrackingTicking = true;
+        window.requestAnimationFrame(handleScrollTracking);
+      },
+      { passive: true }
+    );
+
+    scrollTrackingBound = true;
+  };
 
   const storedCookieConsent = getStoredCookieConsent();
   analyticsAllowed = storedCookieConsent === "accepted";
   gaConsentState = analyticsAllowed ? "accepted" : "rejected";
   loadGa(gaConsentState);
+  if (analyticsAllowed) {
+    bindScrollTracking();
+  }
 
   if (!storedCookieConsent && cookieBanner) {
     cookieBanner.classList.add("is-visible");
@@ -567,28 +583,32 @@
     });
   }
 
-  const revealItems = document.querySelectorAll(".reveal");
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (isHomePage) {
+    window.requestAnimationFrame(() => {
+      window.setTimeout(() => {
+    const revealItems = document.querySelectorAll(".reveal");
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    body.classList.add("js-motion-ready");
 
-  if (!revealItems.length || prefersReducedMotion) {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-  } else if ("IntersectionObserver" in window) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.14, rootMargin: "0px 0px -48px 0px" }
-    );
+    if (!revealItems.length || prefersReducedMotion) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    } else if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14, rootMargin: "0px 0px -48px 0px" }
+      );
 
-    revealItems.forEach((item) => observer.observe(item));
-  } else {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-  }
+      revealItems.forEach((item) => observer.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    }
 
   const isLikelyModalSubheading = (text) => {
     const value = (text || "").trim();
@@ -652,13 +672,9 @@
     article.dataset.formatted = "true";
   };
 
-  document.querySelectorAll("template .modal-article").forEach((article) => {
-    formatModalArticle(article);
-  });
-
-  const mobileTabDefaultOpen = new Set(["categories", "process", "contact"]);
-  const mobileTabsQuery = window.matchMedia("(max-width: 780px)");
-  const mobileTabLabelMap = {
+    const mobileTabDefaultOpen = new Set(["categories", "process", "contact"]);
+    const mobileTabsQuery = window.matchMedia("(max-width: 780px)");
+    const mobileTabLabelMap = {
     en: {
       "logo-band": "Built for teams",
       services: "Services",
@@ -721,7 +737,7 @@
     }
   };
 
-  const getMobileTabKey = (section) => {
+    const getMobileTabKey = (section) => {
     if (section.id) {
       return section.id;
     }
@@ -733,7 +749,7 @@
     return "";
   };
 
-  const getMobileTabLabel = (section) => {
+    const getMobileTabLabel = (section) => {
     const kicker = section.querySelector(".section-kicker")?.textContent?.trim();
     if (kicker) {
       return kicker;
@@ -757,7 +773,7 @@
     return "Section";
   };
 
-  const wrapSectionsInMobileTabs = () => {
+    const wrapSectionsInMobileTabs = () => {
     document.querySelectorAll("main > section").forEach((section) => {
       if (section.classList.contains("hero-section")) {
         return;
@@ -788,7 +804,7 @@
     });
   };
 
-  const unwrapSectionsFromMobileTabs = () => {
+    const unwrapSectionsFromMobileTabs = () => {
     document.querySelectorAll("main > section[data-mobile-tabbed='true']").forEach((section) => {
       const shell = section.querySelector(".mobile-tab-shell");
       if (!shell) {
@@ -812,7 +828,7 @@
     });
   };
 
-  const syncMobileTabs = () => {
+    const syncMobileTabs = () => {
     if (mobileTabsQuery.matches) {
       wrapSectionsInMobileTabs();
     } else {
@@ -820,7 +836,7 @@
     }
   };
 
-  const openHashSectionTab = () => {
+    const openHashSectionTab = () => {
     if (!mobileTabsQuery.matches || !window.location.hash) {
       return;
     }
@@ -845,29 +861,29 @@
     }
   };
 
-  syncMobileTabs();
-  openHashSectionTab();
+    syncMobileTabs();
+    openHashSectionTab();
 
-  if (typeof mobileTabsQuery.addEventListener === "function") {
-    mobileTabsQuery.addEventListener("change", () => {
-      syncMobileTabs();
-      openHashSectionTab();
-    });
-  } else if (typeof mobileTabsQuery.addListener === "function") {
-    mobileTabsQuery.addListener(() => {
-      syncMobileTabs();
-      openHashSectionTab();
-    });
-  }
+    if (typeof mobileTabsQuery.addEventListener === "function") {
+      mobileTabsQuery.addEventListener("change", () => {
+        syncMobileTabs();
+        openHashSectionTab();
+      });
+    } else if (typeof mobileTabsQuery.addListener === "function") {
+      mobileTabsQuery.addListener(() => {
+        syncMobileTabs();
+        openHashSectionTab();
+      });
+    }
 
-  window.addEventListener("hashchange", openHashSectionTab);
+    window.addEventListener("hashchange", openHashSectionTab);
 
-  const modal = document.querySelector("#site-modal");
-  const modalContent = document.querySelector("#modal-content");
-  const modalPanel = document.querySelector(".modal-panel");
-  let lastFocusedElement = null;
+    const modal = document.querySelector("#site-modal");
+    const modalContent = document.querySelector("#modal-content");
+    const modalPanel = document.querySelector(".modal-panel");
+    let lastFocusedElement = null;
 
-  const focusableSelector = [
+    const focusableSelector = [
     "a[href]",
     "button:not([disabled])",
     "textarea:not([disabled])",
@@ -876,7 +892,7 @@
     "[tabindex]:not([tabindex='-1'])"
   ].join(",");
 
-  const getFocusableElements = (container) => {
+    const getFocusableElements = (container) => {
     if (!container) {
       return [];
     }
@@ -886,7 +902,7 @@
     });
   };
 
-  const closeModal = () => {
+    const closeModal = () => {
     if (!modal || !modalContent) {
       return;
     }
@@ -903,7 +919,7 @@
     lastFocusedElement = null;
   };
 
-  const openModal = (templateId, trigger) => {
+    const openModal = (templateId, trigger) => {
     if (!modal || !modalContent) {
       return;
     }
@@ -933,8 +949,8 @@
     }
   };
 
-  if (modal && modalContent) {
-    document.addEventListener("click", (event) => {
+    if (modal && modalContent) {
+      document.addEventListener("click", (event) => {
       const closeTarget = event.target.closest("[data-modal-close]");
       if (closeTarget) {
         closeModal();
@@ -960,8 +976,8 @@
       }
     });
 
-    document.querySelectorAll("[data-modal-target][role='button']").forEach((trigger) => {
-      trigger.addEventListener("keydown", (event) => {
+      document.querySelectorAll("[data-modal-target][role='button']").forEach((trigger) => {
+        trigger.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           trigger.click();
@@ -969,7 +985,7 @@
       });
     });
 
-    document.addEventListener("keydown", (event) => {
+      document.addEventListener("keydown", (event) => {
       if (event.key === "Escape") {
         closeModal();
         return;
@@ -995,14 +1011,14 @@
         event.preventDefault();
         first.focus();
       }
-    });
-  }
+      });
+    }
 
-  document.querySelectorAll("[data-accordion-group]").forEach((group) => {
-    const detailsNodes = group.querySelectorAll("details");
+    document.querySelectorAll("[data-accordion-group]").forEach((group) => {
+      const detailsNodes = group.querySelectorAll("details");
 
-    detailsNodes.forEach((detail) => {
-      detail.addEventListener("toggle", () => {
+      detailsNodes.forEach((detail) => {
+        detail.addEventListener("toggle", () => {
         if (!detail.open) {
           return;
         }
@@ -1015,52 +1031,52 @@
 
         const title = detail.querySelector("summary")?.textContent?.trim() || "faq_item";
         trackEvent("faq_open", { item_name: title });
+        });
       });
     });
-  });
 
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest("a[href]");
-    if (!link) {
-      return;
-    }
-
-    const href = link.getAttribute("href") || "";
-
-    if (href.startsWith("mailto:")) {
-      trackEvent("email_click", { item_name: href });
-      return;
-    }
-
-    if (href.startsWith("http://") || href.startsWith("https://")) {
-      try {
-        const targetUrl = new URL(href);
-        if (targetUrl.host !== window.location.host) {
-          trackEvent("outbound_click", { item_name: targetUrl.hostname });
-        }
-      } catch (_error) {
-        // Ignore malformed URLs.
-      }
-    }
-  });
-
-  const contactForm = document.querySelector("#contact-form");
-  const formStatus = document.querySelector("#form-status");
-
-  if (contactForm) {
-    const submitButton = contactForm.querySelector("button[type='submit']");
-    let hasStartedForm = false;
-
-    contactForm.addEventListener("input", () => {
-      if (hasStartedForm) {
+    document.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (!link) {
         return;
       }
 
-      hasStartedForm = true;
-      trackEvent("contact_form_start", { section_name: "contact" });
+      const href = link.getAttribute("href") || "";
+
+      if (href.startsWith("mailto:")) {
+        trackEvent("email_click", { item_name: href });
+        return;
+      }
+
+      if (href.startsWith("http://") || href.startsWith("https://")) {
+        try {
+          const targetUrl = new URL(href);
+          if (targetUrl.host !== window.location.host) {
+            trackEvent("outbound_click", { item_name: targetUrl.hostname });
+          }
+        } catch (_error) {
+          // Ignore malformed URLs.
+        }
+      }
     });
 
-    contactForm.addEventListener("submit", async (event) => {
+    const contactForm = document.querySelector("#contact-form");
+    const formStatus = document.querySelector("#form-status");
+
+    if (contactForm) {
+      const submitButton = contactForm.querySelector("button[type='submit']");
+      let hasStartedForm = false;
+
+      contactForm.addEventListener("input", () => {
+        if (hasStartedForm) {
+          return;
+        }
+
+        hasStartedForm = true;
+        trackEvent("contact_form_start", { section_name: "contact" });
+      });
+
+      contactForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
       if (!contactForm.checkValidity()) {
@@ -1149,6 +1165,9 @@
           submitButton.textContent = uiCopy.submitButton;
         }
       }
+      });
+    }
+      }, 0);
     });
   }
 })();
