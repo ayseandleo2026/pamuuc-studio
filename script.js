@@ -470,7 +470,7 @@
     });
   });
 
-  const mobileNavBreakpoint = 860;
+  const mobileNavBreakpoint = 1100;
   const menuToggle = document.querySelector(".menu-toggle");
   const siteNav = document.querySelector(".site-nav");
   const headerLanguageSwitcher = document.querySelector(".language-switcher");
