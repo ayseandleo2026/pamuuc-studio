@@ -3365,7 +3365,7 @@ body.modal-open {
 
 .blog-shell-article {
   gap: 1rem;
-  width: 60%;
+  inline-size: min(100%, clamp(46rem, 60vw, 72rem));
   margin-inline: auto;
 }
 
@@ -3527,7 +3527,7 @@ body.modal-open {
 
 .blog-content {
   width: 100%;
-  max-width: none;
+  max-width: 70ch;
   display: grid;
   gap: 0.95rem;
 }
@@ -3636,13 +3636,13 @@ body.modal-open {
   }
 
   .blog-shell-article {
-    width: 80%;
+    inline-size: min(100%, 52rem);
   }
 }
 
 @media (max-width: 780px) {
   .blog-shell-article {
-    width: 100%;
+    inline-size: 100%;
   }
 
   .blog-article-meta {
