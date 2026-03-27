@@ -1,0 +1,18 @@
+body[data-page-type="legal"] .legal-main {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+body[data-page-type="legal"] .legal-card {
+  max-inline-size: 78ch;
+  margin-inline: auto;
+}
+
+body[data-page-type="legal"] .legal-card > section,
+body[data-page-type="legal"] .legal-card > p,
+body[data-page-type="legal"] .legal-card li {
+  overflow-wrap: anywhere;
+}
+
+body[data-page-type="legal"] .site-nav-list {
+  flex-wrap: wrap;
+}

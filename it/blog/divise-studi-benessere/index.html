@@ -41,10 +41,8 @@
     <meta name="theme-color" content="#fcf9f3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <link
       rel="icon"
       type="image/png"
@@ -105,6 +103,8 @@
       }
     </script>
     <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../assets/css/shared.css" />
+    <link rel="stylesheet" href="../../../assets/css/pages/blog.css" />
     <script src="../../../script.js" defer></script>
   </head>
   <body data-language="it" data-page-type="blog-post">
@@ -274,7 +274,7 @@
                 <h3>Divise personalizzate per clinica dentale a Barcellona</h3>
                 <p>Caso studio clinico premium orientato a brand, comfort e lavoro quotidiano.</p>
                 <a href="../divise-clinica-dentale-personalizzate-barcellona/">Leggi articolo</a>
-              </article>
+        </article>
               <article class="blog-related-card">
                 <h3>Divise personalizzate per l’ospitalità</h3>
                 <p>Sistema per ruoli progettato per l’operatività alberghiera ad alta intensità.</p>
@@ -283,6 +283,15 @@
               <article class="blog-related-card blog-related-card-empty" aria-hidden="true"></article>
             </div>
           </section>
+
+          <aside class="blog-service-links" aria-labelledby="blog-service-links-title">
+            <p class="section-kicker">Servizi dello studio</p>
+            <h2 id="blog-service-links-title">Hai bisogno di un sistema di uniformi su misura per il tuo team?</h2>
+            <p>Torna alla pagina dello studio per vedere il servizio di uniformi su misura, i progetti selezionati e il percorso di contatto per un primo confronto.</p>
+            <div class="blog-service-links-actions">
+              <a class="button button-primary" href="../../">Vedi uniformi su misura</a>
+            </div>
+          </aside>
         </article>
       </div>
     </main>

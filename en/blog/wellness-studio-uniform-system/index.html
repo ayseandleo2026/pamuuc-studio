@@ -41,10 +41,8 @@
     <meta name="theme-color" content="#fcf9f3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <link
       rel="icon"
       type="image/png"
@@ -105,6 +103,8 @@
       }
     </script>
     <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../assets/css/shared.css" />
+    <link rel="stylesheet" href="../../../assets/css/pages/blog.css" />
     <script src="../../../script.js" defer></script>
   </head>
   <body data-language="en" data-page-type="blog-post">
@@ -275,7 +275,7 @@
                 <h3>Custom dental clinic uniforms</h3>
                 <p>A Barcelona clinic case study focused on brand coherence and daily use.</p>
                 <a href="../custom-dental-clinic-uniforms-barcelona/">Read article</a>
-              </article>
+        </article>
               <article class="blog-related-card">
                 <h3>Custom hospitality uniforms</h3>
                 <p>How a five-star hotel team built a durable, role-based uniform system.</p>
@@ -284,6 +284,15 @@
               <article class="blog-related-card blog-related-card-empty" aria-hidden="true"></article>
             </div>
           </section>
+
+          <aside class="blog-service-links" aria-labelledby="blog-service-links-title">
+            <p class="section-kicker">Studio services</p>
+            <h2 id="blog-service-links-title">Need a custom uniform system for your team?</h2>
+            <p>Use the studio homepage to review the fully custom uniform service, selected projects, and the contact path for a first conversation.</p>
+            <div class="blog-service-links-actions">
+              <a class="button button-primary" href="../../">View fully custom uniforms</a>
+            </div>
+          </aside>
         </article>
       </div>
     </main>

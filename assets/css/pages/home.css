@@ -1,0 +1,17 @@
+body[data-page-type="home"] .service-card-link,
+body[data-page-type="home"] .method-card,
+body[data-page-type="home"] .team-card,
+body[data-page-type="home"] .contact-card,
+body[data-page-type="home"] .project-card,
+body[data-page-type="home"] .mini-card {
+  min-width: 0;
+}
+
+body[data-page-type="home"] .hero-copy,
+body[data-page-type="home"] .hero-visual,
+body[data-page-type="home"] .logo-band-points,
+body[data-page-type="home"] .method-copy,
+body[data-page-type="home"] .category-copy,
+body[data-page-type="home"] .cta-copy {
+  min-width: 0;
+}

@@ -47,10 +47,8 @@
     <meta name="theme-color" content="#fcf9f3" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
     <link
       rel="icon"
       type="image/png"
@@ -111,6 +109,8 @@
       }
     </script>
     <link rel="stylesheet" href="../../../styles.css" />
+    <link rel="stylesheet" href="../../../assets/css/shared.css" />
+    <link rel="stylesheet" href="../../../assets/css/pages/blog.css" />
     <script src="../../../script.js" defer></script>
   </head>
   <body data-language="es" data-page-type="blog-post">
@@ -319,7 +319,7 @@
                 <h3>Uniformes personalizados para clínica dental en Barcelona</h3>
                 <p>Caso de clínica premium centrado en marca, confort y operativa diaria.</p>
                 <a href="../uniformes-clinica-dental-personalizados-barcelona/">Leer artículo</a>
-              </article>
+        </article>
               <article class="blog-related-card">
                 <h3>Diseño de uniformes para estudios de bienestar modernos</h3>
                 <p>Enfoque de continuidad operativa para equipos multirrol en bienestar.</p>
@@ -328,6 +328,15 @@
               <article class="blog-related-card blog-related-card-empty" aria-hidden="true"></article>
             </div>
           </section>
+
+          <aside class="blog-service-links" aria-labelledby="blog-service-links-title">
+            <p class="section-kicker">Servicios del estudio</p>
+            <h2 id="blog-service-links-title">¿Necesitas un sistema de uniformes a medida para tu equipo?</h2>
+            <p>Vuelve a la página del estudio para revisar el servicio de uniformes a medida, los proyectos seleccionados y la vía de contacto para una primera conversación.</p>
+            <div class="blog-service-links-actions">
+              <a class="button button-primary" href="../../">Ver uniformes a medida</a>
+            </div>
+          </aside>
         </article>
       </div>
     </main>
