@@ -58,7 +58,7 @@ body[data-page-type="blog-post"] .blog-article-header {
 
 body[data-page-type="blog-post"] .blog-article-header h1 {
   max-inline-size: 14ch;
-  font-size: clamp(2.2rem, 5vw, 4.35rem);
+  font-size: clamp(1.9rem, calc(5vw - 5px), 4.0375rem);
   line-height: 0.98;
   letter-spacing: -0.055em;
 }
