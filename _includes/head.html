@@ -1,0 +1,119 @@
+{% assign site_meta = site.data.site %}
+{% if page.page_type == "legal" %}
+  {% assign default_robots = "noindex,follow,max-image-preview:large" %}
+{% else %}
+  {% assign default_robots = "index,follow,max-image-preview:large" %}
+{% endif %}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{ page.title | escape }}</title>
+<meta name="description" content="{{ page.description | escape }}" />
+<meta name="robots" content="{{ page.robots | default: default_robots | escape }}" />
+<meta name="googlebot" content="{{ page.googlebot | default: page.robots | default: default_robots | escape }}" />
+{% if page.canonical_path %}
+  <link rel="canonical" href="{{ site.url }}{{ page.canonical_path }}" />
+{% endif %}
+{% if page.redirect_to %}
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}" />
+{% endif %}
+{% assign alternate_order = "en,fr,it,es,x-default" | split: "," %}
+{% for code in alternate_order %}
+  {% assign alternate_path = page.alternates[code] %}
+  {% if alternate_path %}
+    <link rel="alternate" hreflang="{{ code }}" href="{{ site.url }}{{ alternate_path }}" />
+  {% endif %}
+{% endfor %}
+<meta property="og:type" content="{{ page.og_type | default: 'website' | escape }}" />
+<meta property="og:title" content="{{ page.og_title | default: page.title | escape }}" />
+<meta property="og:description" content="{{ page.og_description | default: page.description | escape }}" />
+<meta property="og:url" content="{{ site.url }}{{ page.canonical_path | default: page.url }}" />
+<meta property="og:site_name" content="{{ site_meta.name }}" />
+<meta property="og:image" content="{{ site.url }}{{ page.og_image | default: site_meta.default_social_image }}" />
+<meta property="og:image:alt" content="{{ page.og_image_alt | default: site_meta.default_social_image_alt | escape }}" />
+<meta name="twitter:card" content="{{ page.twitter_card | default: 'summary_large_image' | escape }}" />
+<meta name="twitter:title" content="{{ page.twitter_title | default: page.og_title | default: page.title | escape }}" />
+<meta name="twitter:description" content="{{ page.twitter_description | default: page.og_description | default: page.description | escape }}" />
+<meta name="twitter:image" content="{{ site.url }}{{ page.twitter_image | default: page.og_image | default: site_meta.default_social_image }}" />
+<meta name="twitter:image:alt" content="{{ page.twitter_image_alt | default: page.og_image_alt | default: site_meta.default_social_image_alt | escape }}" />
+<meta name="theme-color" content="#fcf9f3" />
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://cdn.shopify.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'{% if page.use_alpine %} 'unsafe-eval'{% endif %} https://cdn.jsdelivr.net https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; form-action https://formspree.io; upgrade-insecure-requests"
+/>
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://cdn.shopify.com" />
+{% if page.use_gsap or page.use_alpine %}
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+{% endif %}
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" /></noscript>
+<link rel="icon" type="image/png" href="{{ site_meta.logo }}" />
+{% if page.page_type == "home" %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": {{ site_meta.name | jsonify }},
+      "url": {{ site_meta.url | append: '/' | jsonify }},
+      "logo": {{ site_meta.logo | jsonify }},
+      "email": {{ site_meta.email | jsonify }}
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": {{ site_meta.name | jsonify }},
+      "url": {{ site_meta.url | append: '/' | jsonify }},
+      "serviceType": {{ site_meta.service_type | jsonify }},
+      "areaServed": {{ site_meta.area_served | jsonify }},
+      "description": {{ page.og_description | default: page.description | jsonify }}
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ site_meta.name | jsonify }},
+      "url": {{ site_meta.url | append: '/' | jsonify }},
+      "inLanguage": {{ site_meta.supported_languages | jsonify }}
+    }
+  </script>
+{% endif %}
+{% if page.inline_critical_css %}
+  <style>{% include critical-home.css %}</style>
+{% endif %}
+{% if page.use_gsap %}
+  <script>document.documentElement.classList.add('gsap-pending');</script>
+{% endif %}
+<link rel="preload" as="style" href="{{ '/styles.css' | relative_url }}" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link href="{{ '/styles.css' | relative_url }}" rel="stylesheet" /></noscript>
+{% for stylesheet in page.styles %}
+  <link rel="stylesheet" href="{{ stylesheet | relative_url }}" />
+{% endfor %}
+{% if page.use_gsap %}
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"
+    integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"
+    integrity="sha384-xNHNOfrykny9oFwnmpfNbkSc6isny38d1GZvTRVuFV0l9fTMIZKhULvomyQJSMRl"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="{{ '/assets/js/gsap-home.js' | relative_url }}"></script>
+{% endif %}
+<script defer src="{{ '/script.js' | relative_url }}"></script>
+{% if page.use_alpine %}
+  <script defer src="{{ '/assets/js/alpine-home.js' | relative_url }}"></script>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.2/dist/cdn.min.js"
+    crossorigin="anonymous"
+  ></script>
+{% endif %}

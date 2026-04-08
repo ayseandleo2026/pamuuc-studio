@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'en' }}">
+  <head>
+    {% include head.html %}
+  </head>
+  <body
+    data-language="{{ page.lang | default: 'en' }}"
+    data-page-type="{{ page.page_type | default: 'page' }}"
+    {% if page.use_alpine %}
+      x-data="{{ page.alpine_component }}"
+      x-init="init()"
+      @click="handleClick($event)"
+      @keydown="handleKeydown($event)"
+      :class="{ 'nav-ready': true, 'menu-open': menuOpen, 'modal-open': modalOpen }"
+    {% endif %}
+  >
+    {{ content }}
+  </body>
+</html>

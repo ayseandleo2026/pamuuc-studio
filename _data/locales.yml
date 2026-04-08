@@ -1,0 +1,60 @@
+en:
+  skip_link: Skip to content
+  header:
+    brand_aria: Pamuuc Studio home
+    menu_label: Toggle menu
+    nav_label: Primary navigation
+    language_label: Language selector
+    services: Services
+    sectors: Sectors
+    process: Process
+    projects: Projects
+    blog: Blog
+    faq: FAQ
+    cta: Request a first meeting
+    contact: Contact
+fr:
+  skip_link: Aller au contenu
+  header:
+    brand_aria: Accueil Pamuuc Studio
+    menu_label: Ouvrir le menu
+    nav_label: Navigation principale
+    language_label: Sélecteur de langue
+    services: Services
+    sectors: Secteurs
+    process: Processus
+    projects: Projets
+    blog: Blog
+    faq: FAQ
+    cta: Demander un premier rendez-vous
+    contact: Contact
+it:
+  skip_link: Vai al contenuto
+  header:
+    brand_aria: Home Pamuuc Studio
+    menu_label: Apri menu
+    nav_label: Navigazione principale
+    language_label: Selettore lingua
+    services: Servizi
+    sectors: Settori
+    process: Processo
+    projects: Progetti
+    blog: Blog
+    faq: FAQ
+    cta: Richiedi un primo incontro
+    contact: Contatto
+es:
+  skip_link: Ir al contenido
+  header:
+    brand_aria: Inicio Pamuuc Studio
+    menu_label: Abrir menú
+    nav_label: Navegación principal
+    language_label: Selector de idioma
+    services: Servicios
+    sectors: Sectores
+    process: Proceso
+    projects: Proyectos
+    blog: Blog
+    faq: FAQ
+    cta: Solicitar una primera reunión
+    contact: Contacto

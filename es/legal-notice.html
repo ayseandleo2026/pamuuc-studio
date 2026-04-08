@@ -1,52 +1,28 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aviso legal | Pamuuc Studio</title>
-    <meta name="description" content="Información legal de studio.pamuuc.com" />
-    <link rel="canonical" href="https://studio.pamuuc.com/es/legal-notice.html" />
-    <link rel="alternate" hreflang="en" href="https://studio.pamuuc.com/en/legal-notice.html" />
-    <link rel="alternate" hreflang="fr" href="https://studio.pamuuc.com/fr/legal-notice.html" />
-    <link rel="alternate" hreflang="it" href="https://studio.pamuuc.com/it/legal-notice.html" />
-    <link rel="alternate" hreflang="es" href="https://studio.pamuuc.com/es/legal-notice.html" />
-    <link rel="alternate" hreflang="x-default" href="https://studio.pamuuc.com/legal-notice.html" />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
-    <meta name="googlebot" content="index,follow,max-image-preview:large" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Aviso legal | Pamuuc Studio" />
-    <meta property="og:description" content="Información legal de studio.pamuuc.com" />
-    <meta property="og:url" content="https://studio.pamuuc.com/es/legal-notice.html" />
-    <meta property="og:image" content="https://studio.pamuuc.com/assets/images/hero-desktop.svg" />
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="../assets/css/shared.css" />
-    <link rel="stylesheet" href="../assets/css/pages/legal.css" />
-    <script src="../script.js" defer></script>
-  </head>
-  <body data-language="es" data-page-type="legal">
-    <a class="skip-link" href="#main">Ir al contenido</a>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="brand" href="./" aria-label="Inicio Pamuuc Studio">
-          <img class="brand-logo" src="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Name_Logo_Red.png?v=1772223889" alt="Pamuuc Studio" width="190" height="34" />
-        </a>
-        <nav class="site-nav" aria-label="Navegación principal">
-          <ul class="site-nav-list">
-            <li><a href="./#services">Servicios</a></li>
-            <li><a href="blog/">Blog</a></li>
-            <li><a href="./#contact" class="nav-cta">Contacto</a></li>
-          </ul>
-        </nav>
-        <nav class="language-switcher" aria-label="Selector de idioma">
-          <a href="../en/" class="lang-link" data-lang-switch="en">EN</a>
-          <a href="../fr/" class="lang-link" data-lang-switch="fr">FR</a>
-          <a href="../it/" class="lang-link" data-lang-switch="it">IT</a>
-          <a href="./" class="lang-link is-active" data-lang-switch="es">ES</a>
-        </nav>
-      </div>
-    </header>
-
-    <main id="main" class="legal-main">
+---
+layout: legal
+lang: es
+active_language: es
+page_type: legal
+title: Aviso legal | Pamuuc Studio
+description: Información legal de studio.pamuuc.com
+canonical_path: /es/legal-notice.html
+home_path: /es/
+styles:
+  - /assets/css/shared.css
+  - /assets/css/pages/legal.css
+alternates:
+  en: /legal-notice.html
+  fr: /fr/legal-notice.html
+  it: /it/legal-notice.html
+  es: /es/legal-notice.html
+  "x-default": /legal-notice.html
+language_paths:
+  en: /legal-notice.html
+  fr: /fr/legal-notice.html
+  it: /it/legal-notice.html
+  es: /es/legal-notice.html
+---
+<main id="main" class="legal-main">
       <div class="container">
                 <article class="legal-card">
           <h1>Aviso legal</h1>
@@ -58,8 +34,8 @@
             <p>NIF/CIF: B0541782</p>
             <p>Email: info@pamuuc.com</p>
             <p>Sitio web: studio.pamuuc.com</p>
-            <p>Domicilio social: [insertar domicilio social completo]</p>
-            <p>Datos del Registro Mercantil: [insertar provincia, tomo, libro, sección, página y hoja si aplica]</p>
+            {% if site.data.company.registered_office %}<p>Domicilio social: {{ site.data.company.registered_office }}</p>{% endif %}
+            {% if site.data.company.mercantile_registry_details %}<p>Datos del Registro Mercantil: {{ site.data.company.mercantile_registry_details }}</p>{% endif %}
           </section>
           <section>
             <h2>2. OBJETO DEL SITIO WEB</h2>
@@ -120,5 +96,4 @@
         <button type="button" class="button button-secondary" id="cookie-reject">Rechazar</button>
       </div>
     </aside>
-  </body>
-</html>
+  

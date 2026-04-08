@@ -1,3 +1,5 @@
+import { installWebVitalsReporter } from "./web-vitals.js";
+
 (() => {
   "use strict";
 
@@ -6,7 +8,7 @@
   const STORAGE_COOKIE = "pamuuc_cookie_consent";
   const STORAGE_COOKIE_TIMESTAMP = "pamuuc_cookie_consent_timestamp";
   const COOKIE_CONSENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
-  const COOKIE_AUTO_ACCEPT_MS = 15 * 1000;
+  const COOKIE_BANNER_VISIBLE_CLASS = "cookie-banner-visible";
 
   const supportedLanguages = ["en", "fr", "it", "es"];
 
@@ -37,6 +39,9 @@
 
   const languageFromPath = supportedLanguages.includes(contentPathParts[0]) ? contentPathParts[0] : null;
   const currentLanguage = languageFromPath || document.body.dataset.language || document.documentElement.lang || "en";
+  const getLanguageHomePath = (language) => (!language || language === "en" ? "/" : `/${language}/`);
+  const getLegalPath = (language, slug) => (!language || language === "en" ? `/${slug}` : `/${language}/${slug}`);
+  const legalTermsPath = getLegalPath(currentLanguage, "terms-and-conditions.html");
 
   const uiCopyMap = {
     en: {
@@ -104,7 +109,7 @@
     }
 
     const copy = promoBannerCopyMap[currentLanguage] || promoBannerCopyMap.en;
-    const homePath = languageFromPath ? `/${currentLanguage}/` : "/";
+    const homePath = getLanguageHomePath(currentLanguage);
     const ctaHref = isHomePage ? "#contact" : getPathWithBase(`${homePath}#contact`);
     const ctaLabel = copy.cta;
 
@@ -178,6 +183,31 @@
   let analyticsAllowed = false;
   let gaConsentState = "rejected";
   const pendingEvents = [];
+  const pendingVitalMetrics = new Map();
+  const getStorageItem = (key) => {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (_error) {
+      return null;
+    }
+  };
+
+  const setStorageItem = (key, value) => {
+    try {
+      window.localStorage.setItem(key, value);
+      return true;
+    } catch (_error) {
+      return false;
+    }
+  };
+
+  const removeStorageItem = (key) => {
+    try {
+      window.localStorage.removeItem(key);
+    } catch (_error) {
+      // Ignore storage errors in restricted environments.
+    }
+  };
 
   const getGaConsentPayload = (value) => {
     const analyticsState = value === "accepted" ? "granted" : "denied";
@@ -219,10 +249,69 @@
     window.gtag("event", name, payload);
   };
 
+  const getVitalDebugTarget = (metric) => {
+    const target =
+      metric.attribution?.interactionTarget ||
+      metric.attribution?.largestShiftTarget ||
+      metric.attribution?.target ||
+      metric.attribution?.element ||
+      "";
+
+    if (!target) {
+      return undefined;
+    }
+
+    return String(target).replace(/\s+/g, " ").trim().slice(0, 120);
+  };
+
+  const buildVitalPayload = (metric) => {
+    const payload = {
+      value: Number(metric.delta.toFixed(metric.name === "CLS" ? 4 : 0)),
+      metric_id: metric.id,
+      metric_value: Number(metric.value.toFixed(metric.name === "CLS" ? 4 : 0)),
+      metric_delta: Number(metric.delta.toFixed(metric.name === "CLS" ? 4 : 0)),
+      metric_rating: metric.rating,
+      metric_navigation_type: metric.navigationType,
+      page_path: window.location.pathname,
+      page_type: body?.dataset.pageType || "page"
+    };
+
+    const debugTarget = getVitalDebugTarget(metric);
+    if (debugTarget) {
+      payload.debug_target = debugTarget;
+    }
+
+    return payload;
+  };
+
+  const flushPendingVitalMetrics = () => {
+    if (!analyticsAllowed || pendingVitalMetrics.size === 0) {
+      return;
+    }
+
+    pendingVitalMetrics.forEach(({ name, payload }) => {
+      trackEvent(name, payload);
+    });
+    pendingVitalMetrics.clear();
+  };
+
+  installWebVitalsReporter((metric) => {
+    const payload = buildVitalPayload(metric);
+    const metricKey = `${metric.name}:${metric.id}`;
+
+    if (!analyticsAllowed) {
+      pendingVitalMetrics.set(metricKey, { name: metric.name, payload });
+      return;
+    }
+
+    trackEvent(metric.name, payload);
+  });
+
   // Expose a minimal public API for page-specific modules.
   window.PamuucStudio = Object.assign(window.PamuucStudio || {}, {
     currentLanguage,
     getPathWithBase,
+    isRootPage: contentPathParts.length === 0 || (contentPathParts.length === 1 && contentPathParts[0] === "index.html"),
     supportedLanguages: [...supportedLanguages],
     trackEvent
   });
@@ -268,6 +357,7 @@
         const [eventName, payload] = pendingEvents.shift();
         window.gtag("event", eventName, payload);
       }
+      flushPendingVitalMetrics();
     };
 
     const existingGaScript = document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${GA_ID}"]`);
@@ -304,44 +394,27 @@
   const cookieBanner = document.querySelector("#cookie-banner");
   const cookieAccept = document.querySelector("#cookie-accept");
   const cookieReject = document.querySelector("#cookie-reject");
-  let scrollAutoAcceptHandler = null;
-  let cookieAutoAcceptTimerId = null;
-
-  const clearCookieAutoAcceptTimer = () => {
-    if (cookieAutoAcceptTimerId) {
-      window.clearTimeout(cookieAutoAcceptTimerId);
-      cookieAutoAcceptTimerId = null;
-    }
-  };
-
-  const clearCookieAutoAcceptTriggers = () => {
-    clearCookieAutoAcceptTimer();
-    if (scrollAutoAcceptHandler) {
-      window.removeEventListener("scroll", scrollAutoAcceptHandler);
-      scrollAutoAcceptHandler = null;
-    }
-  };
 
   const getStoredCookieConsent = () => {
-    const storedValue = window.localStorage.getItem(STORAGE_COOKIE);
-    const storedTimestampRaw = window.localStorage.getItem(STORAGE_COOKIE_TIMESTAMP);
+    const storedValue = getStorageItem(STORAGE_COOKIE);
+    const storedTimestampRaw = getStorageItem(STORAGE_COOKIE_TIMESTAMP);
     const storedTimestamp = Number.parseInt(storedTimestampRaw || "", 10);
 
     if (storedValue !== "accepted" && storedValue !== "rejected") {
-      window.localStorage.removeItem(STORAGE_COOKIE);
-      window.localStorage.removeItem(STORAGE_COOKIE_TIMESTAMP);
+      removeStorageItem(STORAGE_COOKIE);
+      removeStorageItem(STORAGE_COOKIE_TIMESTAMP);
       return null;
     }
 
     if (!Number.isFinite(storedTimestamp)) {
-      window.localStorage.removeItem(STORAGE_COOKIE);
-      window.localStorage.removeItem(STORAGE_COOKIE_TIMESTAMP);
+      removeStorageItem(STORAGE_COOKIE);
+      removeStorageItem(STORAGE_COOKIE_TIMESTAMP);
       return null;
     }
 
     if (Date.now() - storedTimestamp >= COOKIE_CONSENT_TTL_MS) {
-      window.localStorage.removeItem(STORAGE_COOKIE);
-      window.localStorage.removeItem(STORAGE_COOKIE_TIMESTAMP);
+      removeStorageItem(STORAGE_COOKIE);
+      removeStorageItem(STORAGE_COOKIE_TIMESTAMP);
       return null;
     }
 
@@ -357,7 +430,7 @@
     const cookieText = cookieBanner.querySelector("p");
     if (cookieText && !cookieText.querySelector(".cookie-terms-link")) {
       const termsLink = document.createElement("a");
-      termsLink.href = "terms-and-conditions.html";
+      termsLink.href = getPathWithBase(legalTermsPath);
       termsLink.className = "cookie-terms-link";
       termsLink.textContent = copy;
       cookieText.append(document.createTextNode(" "), termsLink);
@@ -379,7 +452,16 @@
     if (cookieBanner) {
       cookieBanner.classList.remove("is-visible");
     }
-    clearCookieAutoAcceptTriggers();
+    body?.classList.remove(COOKIE_BANNER_VISIBLE_CLASS);
+  };
+
+  const showCookieBanner = () => {
+    if (!cookieBanner) {
+      return;
+    }
+
+    cookieBanner.classList.add("is-visible");
+    body?.classList.add(COOKIE_BANNER_VISIBLE_CLASS);
   };
 
   const setCookieConsent = (value, source = "button") => {
@@ -388,23 +470,31 @@
     if (current === normalizedValue) {
       hideCookieBanner();
       applyGaConsent(normalizedValue);
+      if (normalizedValue === "accepted") {
+        analyticsAllowed = true;
+        loadGa(normalizedValue);
+        bindScrollTracking();
+        flushPendingVitalMetrics();
+      }
       return;
     }
 
-    window.localStorage.setItem(STORAGE_COOKIE, normalizedValue);
-    window.localStorage.setItem(STORAGE_COOKIE_TIMESTAMP, String(Date.now()));
+    setStorageItem(STORAGE_COOKIE, normalizedValue);
+    setStorageItem(STORAGE_COOKIE_TIMESTAMP, String(Date.now()));
     hideCookieBanner();
 
     analyticsAllowed = normalizedValue === "accepted";
     applyGaConsent(normalizedValue);
-    loadGa(normalizedValue);
     if (analyticsAllowed) {
+      loadGa(normalizedValue);
       bindScrollTracking();
+      flushPendingVitalMetrics();
     }
 
     if (normalizedValue === "accepted") {
       trackEvent("cookie_accept", { item_name: source });
     } else {
+      pendingVitalMetrics.clear();
       if (gaLoaded && typeof window.gtag === "function") {
         window.gtag("event", "cookie_reject", {
           non_interaction: true
@@ -459,13 +549,14 @@
   const storedCookieConsent = getStoredCookieConsent();
   analyticsAllowed = storedCookieConsent === "accepted";
   gaConsentState = analyticsAllowed ? "accepted" : "rejected";
-  loadGa(gaConsentState);
   if (analyticsAllowed) {
+    loadGa(gaConsentState);
     bindScrollTracking();
+    flushPendingVitalMetrics();
   }
 
   if (!storedCookieConsent && cookieBanner) {
-    cookieBanner.classList.add("is-visible");
+    showCookieBanner();
 
     if (cookieAccept) {
       cookieAccept.addEventListener("click", () => setCookieConsent("accepted", "accept_button"));
@@ -474,56 +565,14 @@
     if (cookieReject) {
       cookieReject.addEventListener("click", () => setCookieConsent("rejected", "reject_button"));
     }
-
-    scrollAutoAcceptHandler = () => {
-      const doc = document.documentElement;
-      const scrollable = doc.scrollHeight - window.innerHeight;
-      if (scrollable <= 0) {
-        return;
-      }
-
-      const progress = (window.scrollY / scrollable) * 100;
-      if (progress >= 5) {
-        setCookieConsent("accepted", "scroll_5_percent");
-      }
-    };
-
-    window.addEventListener("scroll", scrollAutoAcceptHandler, { passive: true });
-    cookieAutoAcceptTimerId = window.setTimeout(() => {
-      setCookieConsent("accepted", "timeout_15_seconds");
-    }, COOKIE_AUTO_ACCEPT_MS);
   }
 
-  const languageModal = document.querySelector("#language-modal");
-  const storedLanguage = window.localStorage.getItem(STORAGE_LANGUAGE);
-
+  const storedLanguage = getStorageItem(STORAGE_LANGUAGE);
   const isRootPage = contentPathParts.length === 0 || (contentPathParts.length === 1 && contentPathParts[0] === "index.html");
 
   if (!storedLanguage && !isRootPage && currentLanguage) {
-    window.localStorage.setItem(STORAGE_LANGUAGE, currentLanguage);
+    setStorageItem(STORAGE_LANGUAGE, currentLanguage);
   }
-
-  if (!storedLanguage && isRootPage && languageModal) {
-    languageModal.classList.add("is-visible");
-    languageModal.setAttribute("aria-hidden", "false");
-  }
-
-  if (storedLanguage && isRootPage && supportedLanguages.includes(storedLanguage) && storedLanguage !== "en") {
-    window.location.replace(getPathWithBase(`/${storedLanguage}/`));
-  }
-
-  document.querySelectorAll("[data-lang-choice]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const selected = button.getAttribute("data-lang-choice");
-      if (!selected || !supportedLanguages.includes(selected)) {
-        return;
-      }
-
-      window.localStorage.setItem(STORAGE_LANGUAGE, selected);
-      trackEvent("language_selected", { item_name: selected });
-      window.location.href = getPathWithBase(`/${selected}/`);
-    });
-  });
 
   document.querySelectorAll("[data-lang-switch]").forEach((link) => {
     link.addEventListener("click", () => {
@@ -532,123 +581,10 @@
         return;
       }
 
-      window.localStorage.setItem(STORAGE_LANGUAGE, selected);
+      setStorageItem(STORAGE_LANGUAGE, selected);
       trackEvent("language_switch", { item_name: selected });
     });
   });
-
-  const mobileNavBreakpoint = 1100;
-  const menuToggle = document.querySelector(".menu-toggle");
-  const siteNav = document.querySelector(".site-nav");
-  const headerLanguageSwitcher = document.querySelector(".language-switcher");
-
-  if (menuToggle && siteNav && body) {
-    body.classList.add("nav-ready");
-
-    const closeMenu = () => {
-      siteNav.classList.remove("is-open");
-      body.classList.remove("menu-open");
-      menuToggle.setAttribute("aria-expanded", "false");
-    };
-
-    const openMenu = () => {
-      siteNav.classList.add("is-open");
-      body.classList.add("menu-open");
-      menuToggle.setAttribute("aria-expanded", "true");
-    };
-
-    let mobileLanguageDropdown = null;
-    const closeLanguageDropdown = () => {
-      if (mobileLanguageDropdown) {
-        mobileLanguageDropdown.open = false;
-      }
-    };
-
-    if (headerLanguageSwitcher && menuToggle.parentElement && !menuToggle.parentElement.querySelector(".mobile-language-dropdown")) {
-      const languageLabel = headerLanguageSwitcher.getAttribute("aria-label") || "Language selector";
-      mobileLanguageDropdown = document.createElement("details");
-      mobileLanguageDropdown.className = "mobile-language-dropdown";
-
-      const languageTrigger = document.createElement("summary");
-      languageTrigger.className = "mobile-language-trigger";
-      languageTrigger.setAttribute("aria-label", languageLabel);
-      languageTrigger.textContent = currentLanguage.toUpperCase();
-
-      const languageMenu = document.createElement("nav");
-      languageMenu.className = "mobile-language-menu";
-      languageMenu.setAttribute("aria-label", languageLabel);
-
-      headerLanguageSwitcher.querySelectorAll("[data-lang-switch]").forEach((link) => {
-        const mobileLink = link.cloneNode(true);
-        const selected = (mobileLink.getAttribute("data-lang-switch") || "").toLowerCase();
-        mobileLink.classList.toggle("is-active", selected === currentLanguage.toLowerCase());
-        mobileLink.addEventListener("click", () => {
-          const nextLanguage = mobileLink.getAttribute("data-lang-switch");
-          if (!nextLanguage) {
-            return;
-          }
-
-          window.localStorage.setItem(STORAGE_LANGUAGE, nextLanguage);
-          trackEvent("language_switch", { item_name: nextLanguage });
-          closeLanguageDropdown();
-          closeMenu();
-        });
-        languageMenu.appendChild(mobileLink);
-      });
-
-      mobileLanguageDropdown.append(languageTrigger, languageMenu);
-      menuToggle.insertAdjacentElement("beforebegin", mobileLanguageDropdown);
-    }
-
-    menuToggle.addEventListener("click", () => {
-      closeLanguageDropdown();
-      if (siteNav.classList.contains("is-open")) {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    siteNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", closeMenu);
-    });
-
-    document.addEventListener("click", (event) => {
-      if (
-        window.innerWidth <= mobileNavBreakpoint &&
-        siteNav.classList.contains("is-open") &&
-        !siteNav.contains(event.target) &&
-        !menuToggle.contains(event.target)
-      ) {
-        closeMenu();
-      }
-
-      if (
-        mobileLanguageDropdown &&
-        mobileLanguageDropdown.open &&
-        !mobileLanguageDropdown.contains(event.target)
-      ) {
-        closeLanguageDropdown();
-      }
-    });
-
-    window.addEventListener(
-      "resize",
-      () => {
-        if (window.innerWidth > mobileNavBreakpoint) {
-          closeMenu();
-          closeLanguageDropdown();
-        }
-      },
-      { passive: true }
-    );
-
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") {
-        closeLanguageDropdown();
-      }
-    });
-  }
 
   const pageScriptMap = {
     home: "./pages/home.js",

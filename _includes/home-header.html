@@ -1,0 +1,79 @@
+{% assign locale = site.data.locales[page.lang] %}
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a aria-label="{{ locale.header.brand_aria }}" class="brand" href="#top">
+      <img
+        alt="{{ site.data.site.name }}"
+        class="brand-logo"
+        height="34"
+        src="{{ site.data.site.wordmark }}"
+        width="190"
+      />
+    </a>
+    <button
+      aria-controls="site-nav"
+      :aria-expanded="menuOpen.toString()"
+      aria-label="{{ locale.header.menu_label }}"
+      class="menu-toggle"
+      @click.stop="toggleMenu()"
+      type="button"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">{{ locale.header.menu_label }}</span>
+    </button>
+    <div class="mobile-language-dropdown" :class="{ 'is-open': mobileLanguageOpen }" @click.outside="closeMobileLanguage()">
+      <button
+        class="mobile-language-trigger"
+        type="button"
+        :aria-expanded="mobileLanguageOpen.toString()"
+        aria-haspopup="true"
+        @click.stop="toggleMobileLanguage()"
+      >
+        <span x-text="currentLanguage.toUpperCase()"></span>
+      </button>
+      <nav class="mobile-language-menu" aria-label="{{ locale.header.language_label }}" x-cloak x-show="mobileLanguageOpen">
+        {% assign language_order = "en,fr,it,es" | split: "," %}
+        {% for code in language_order %}
+          {% assign href = page.language_paths[code] %}
+          <a
+            class="lang-link{% if code == page.lang %} is-active{% endif %}"
+            data-lang-switch="{{ code }}"
+            href="{{ href | relative_url }}"
+            @click="rememberLanguage('{{ code }}')"
+          >{{ code | upcase }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+    <nav
+      aria-label="{{ locale.header.nav_label }}"
+      class="site-nav"
+      id="site-nav"
+      :class="{ 'is-open': menuOpen }"
+      @click.outside="closeMenu()"
+    >
+      <ul class="site-nav-list">
+        <li><a href="#services" @click="closeMenu()">{{ locale.header.services }}</a></li>
+        <li><a href="#sectors" @click="closeMenu()">{{ locale.header.sectors }}</a></li>
+        <li><a href="#process" @click="closeMenu()">{{ locale.header.process }}</a></li>
+        <li><a href="#projects" @click="closeMenu()">{{ locale.header.projects }}</a></li>
+        <li><a href="{{ page.blog_path | relative_url }}" @click="closeMenu()">{{ locale.header.blog }}</a></li>
+        <li><a href="#faq" @click="closeMenu()">{{ locale.header.faq }}</a></li>
+        <li><a class="nav-cta" href="#contact" @click="closeMenu()">{{ locale.header.cta }}</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="{{ locale.header.language_label }}" class="language-switcher">
+      {% assign language_order = "en,fr,it,es" | split: "," %}
+      {% for code in language_order %}
+        {% assign href = page.language_paths[code] %}
+        <a
+          class="lang-link{% if code == page.lang %} is-active{% endif %}"
+          data-lang-switch="{{ code }}"
+          href="{{ href | relative_url }}"
+          @click="rememberLanguage('{{ code }}')"
+        >{{ code | upcase }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

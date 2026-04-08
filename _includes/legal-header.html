@@ -1,0 +1,31 @@
+{% assign locale = site.data.locales[page.lang] %}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ page.home_path | relative_url }}" aria-label="{{ locale.header.brand_aria }}">
+      <img
+        class="brand-logo"
+        src="{{ site.data.site.wordmark }}"
+        alt="{{ site.data.site.name }}"
+        width="190"
+        height="34"
+      />
+    </a>
+    <nav class="site-nav" aria-label="{{ locale.header.nav_label }}">
+      <ul class="site-nav-list">
+        <li><a href="{{ page.home_path | relative_url }}#services">{{ locale.header.services }}</a></li>
+        <li><a href="{{ page.home_path | relative_url }}#contact" class="nav-cta">{{ locale.header.contact }}</a></li>
+      </ul>
+    </nav>
+    <nav class="language-switcher" aria-label="{{ locale.header.language_label }}">
+      {% assign language_order = "en,fr,it,es" | split: "," %}
+      {% for code in language_order %}
+        {% assign href = page.language_paths[code] %}
+        <a
+          class="lang-link{% if code == page.active_language %} is-active{% endif %}"
+          data-lang-switch="{{ code }}"
+          href="{{ href | relative_url }}"
+        >{{ code | upcase }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>

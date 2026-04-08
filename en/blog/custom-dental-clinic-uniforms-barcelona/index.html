@@ -29,6 +29,8 @@
     <meta property="article:modified_time" content="2026-03-10" />
     <meta property="article:author" content="Pamuuc Studio" />
     <meta property="og:image" content="https://studio.pamuuc.com/assets/images/blog/custom-dental-clinic-uniforms-barcelona.jpg" />
+    <meta property="og:image:width" content="2700" />
+    <meta property="og:image:height" content="2138" />
     <meta
       property="og:image:alt"
       content="Dental clinic team in coordinated custom uniforms inside a refined Barcelona practice"
@@ -45,6 +47,8 @@
       content="Dental clinic team in coordinated custom uniforms inside a refined Barcelona practice"
     />
     <meta name="theme-color" content="#fcf9f3" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://cdn.shopify.com https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; upgrade-insecure-requests" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
@@ -91,7 +95,7 @@
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://studio.pamuuc.com/en/"
+            "item": "https://studio.pamuuc.com/"
           },
           {
             "@type": "ListItem",
@@ -118,7 +122,7 @@
 
     <header class="site-header" id="top">
       <div class="container header-inner">
-        <a class="brand" href="../../" aria-label="Pamuuc Studio home">
+        <a class="brand" href="/" aria-label="Pamuuc Studio home">
           <img
             class="brand-logo"
             src="https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Name_Logo_Red.png?v=1772223889"
@@ -143,12 +147,12 @@
 
         <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
           <ul class="site-nav-list">
-            <li><a href="../../#services">Services</a></li>
-            <li><a href="../../#sectors">Sectors</a></li>
-            <li><a href="../../#process">Process</a></li>
-            <li><a href="../../#projects">Projects</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/#sectors">Sectors</a></li>
+            <li><a href="/#process">Process</a></li>
+            <li><a href="/#projects">Projects</a></li>
             <li><a href="../" aria-current="page">Blog</a></li>
-            <li><a href="../../#contact" class="nav-cta">Request a first meeting</a></li>
+            <li><a href="/#contact" class="nav-cta">Request a first meeting</a></li>
           </ul>
         </nav>
 
@@ -165,7 +169,7 @@
       <div class="container blog-shell blog-shell-article">
         <nav class="blog-breadcrumb" aria-label="Breadcrumb">
           <ol>
-            <li><a href="../../">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="../">Blog</a></li>
             <li aria-current="page">Custom dental clinic uniforms</li>
           </ol>
@@ -189,6 +193,8 @@
               width="1600"
               height="1000"
               loading="eager"
+              fetchpriority="high"
+              sizes="(max-width: 767px) calc(100vw - 40px), (max-width: 1199px) 54rem, 60vw"
               decoding="async"
             />
           </figure>
@@ -307,7 +313,7 @@
             <h2 id="blog-service-links-title">Need a custom uniform system for your team?</h2>
             <p>Use the studio homepage to review the fully custom uniform service, selected projects, and the contact path for a first conversation.</p>
             <div class="blog-service-links-actions">
-              <a class="button button-primary" href="../../">View fully custom uniforms</a>
+              <a class="button button-primary" href="/">View fully custom uniforms</a>
             </div>
           </aside>
         </article>
@@ -333,16 +339,16 @@
             <p class="footer-links-title">Studio</p>
             <a href="../../../sitemap.xml">Sitemap</a>
             <a href="https://pamuuc.com" target="_blank" rel="noopener noreferrer">PAMUUC.COM</a>
-            <a href="../../#services">Services</a>
-            <a href="../../#projects">Projects</a>
+            <a href="/#services">Services</a>
+            <a href="/#projects">Projects</a>
             <a href="../">Blog</a>
           </nav>
           <nav class="footer-links footer-links-policies" aria-label="Policy links">
             <p class="footer-links-title">Policies</p>
-            <a href="../../privacy-policy.html">Privacy Policy</a>
-            <a href="../../cookie-policy.html">Cookie Policy</a>
-            <a href="../../terms-and-conditions.html">Terms and Conditions</a>
-            <a href="../../legal-notice.html">Legal Notice</a>
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="/cookie-policy.html">Cookie Policy</a>
+            <a href="/terms-and-conditions.html">Terms and Conditions</a>
+            <a href="/legal-notice.html">Legal Notice</a>
           </nav>
         </div>
         <nav class="language-switcher footer-language-switcher" aria-label="Language selector">
