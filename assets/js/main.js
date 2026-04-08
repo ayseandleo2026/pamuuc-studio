@@ -40,8 +40,8 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const languageFromPath = supportedLanguages.includes(contentPathParts[0]) ? contentPathParts[0] : null;
   const currentLanguage = languageFromPath || document.body.dataset.language || document.documentElement.lang || "en";
   const getLanguageHomePath = (language) => (!language || language === "en" ? "/" : `/${language}/`);
-  const getLegalPath = (language, slug) => (!language || language === "en" ? `/${slug}` : `/${language}/${slug}`);
-  const legalTermsPath = getLegalPath(currentLanguage, "terms-and-conditions.html");
+  const getLegalPath = (language, slug) => (!language || language === "en" ? `/${slug}/` : `/${language}/${slug}/`);
+  const legalTermsPath = getLegalPath(currentLanguage, "terms-and-conditions");
 
   const uiCopyMap = {
     en: {

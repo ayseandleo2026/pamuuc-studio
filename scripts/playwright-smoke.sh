@@ -54,7 +54,7 @@ SUMMARY_FILE="$OUT_DIR/home-smoke.md"
 
 pw open "${normalized_base}/" >/dev/null
 
-for path in / /en/ /fr/ /it/ /es/; do
+for path in / /fr/ /it/ /es/ /en/blog/; do
   page_url="${normalized_base}${path}"
   pw goto "$page_url" >/dev/null
 
@@ -65,21 +65,21 @@ for path in / /en/ /fr/ /it/ /es/; do
   } >>"$SUMMARY_FILE"
 done
 
-pw goto "${normalized_base}/en/" >/dev/null
+pw goto "${normalized_base}/" >/dev/null
 pw resize 1440 980 >/dev/null
-take_screenshot "${OUT_DIR}/en-home-desktop.png"
+take_screenshot "${OUT_DIR}/home-desktop.png"
 
 {
-  echo "## /en/ Console Errors"
+  echo "## / Console Errors"
   pw console error
   echo
 } >>"$SUMMARY_FILE"
 
 pw resize 390 844 >/dev/null
-take_screenshot "${OUT_DIR}/en-home-mobile.png"
+take_screenshot "${OUT_DIR}/home-mobile.png"
 
 {
-  echo "## /en/ Mobile State"
+  echo "## / Mobile State"
   pw eval "({ width: window.innerWidth, hasMenuButton: !!document.querySelector('.menu-toggle'), menuVisible: !!document.querySelector('.site-nav.is-open') })" | json_from_eval
   echo
 } >>"$SUMMARY_FILE"
@@ -100,8 +100,8 @@ pw resize 390 844 >/dev/null
 take_screenshot "${OUT_DIR}/root-mobile.png"
 
 {
-  echo "## / Root Modal"
-  pw eval "({ languageModalVisible: !!document.querySelector('#language-modal.is-visible'), bodyClasses: document.body.className })" | json_from_eval
+  echo "## / Root Language State"
+  pw eval "({ languageModalVisible: !!document.querySelector('#language-modal.is-visible'), englishHomepageCanonical: document.querySelector('link[rel=\"canonical\"]')?.getAttribute('href') || null, bodyClasses: document.body.className })" | json_from_eval
   echo
 } >>"$SUMMARY_FILE"
 

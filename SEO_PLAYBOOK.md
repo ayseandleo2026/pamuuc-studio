@@ -1,6 +1,6 @@
 # SEO Playbook
 
-Last reviewed: `2026-03-27`
+Last reviewed: `2026-04-08`
 
 This file captures the current SEO operating model for `studio.pamuuc.com` and the main learnings from the latest audit.
 
@@ -10,7 +10,6 @@ The intended public indexable set is:
 
 - Homepages:
   - `/`
-  - `/en/`
   - `/fr/`
   - `/it/`
   - `/es/`
@@ -22,23 +21,19 @@ The intended public indexable set is:
 - Blog articles:
   - 3 per language at the moment
 - Legal pages:
-  - privacy policy
-  - cookie policy
-  - terms and conditions
-  - legal notice
+  - intentionally crawlable but `noindex`
+  - excluded from the sitemap
 
 The merchandising section is intentionally removed from the publishable site for now and must stay out of the sitemap until it comes back as live `200` pages.
 
 ## Current local status
 
-Latest local audit result:
+Latest repo-level audit target:
 
-- `41` sitemap URLs
-- `41` matched files
-- `0` canonical issues
-- `0` indexability-meta issues
-- `0` broken internal links
-- `0` leftover merchandising references in the publishable tree
+- `20` canonical sitemap URLs driven from `_data/indexable_urls.yml`
+- English homepage canonicalized to `/`, with `/en/` kept only as a redirect alias
+- legal pages excluded from the sitemap and marked `noindex,follow`
+- browser health check coverage for desktop and mobile image loading across the whole public indexable set
 
 This means the repository is locally ready for deployment. Live indexing still depends on the deployed URLs returning `200 OK`.
 

@@ -24,6 +24,34 @@
 
   gsap.registerPlugin(ScrollTrigger);
 
+  const hasTarget = (target) => gsap.utils.toArray(target).length > 0;
+
+  const timelineFromIfPresent = (timeline, target, vars, position) => {
+    if (hasTarget(target)) {
+      timeline.from(target, vars, position);
+    }
+
+    return timeline;
+  };
+
+  const fromIfPresent = (target, vars) => {
+    if (hasTarget(target)) {
+      gsap.from(target, vars);
+    }
+  };
+
+  const fromToIfPresent = (target, fromVars, toVars) => {
+    if (hasTarget(target)) {
+      gsap.fromTo(target, fromVars, toVars);
+    }
+  };
+
+  const toIfPresent = (target, vars) => {
+    if (hasTarget(target)) {
+      gsap.to(target, vars);
+    }
+  };
+
   const initMotion = () => {
     root.classList.remove("gsap-pending");
     body.classList.add("gsap-motion-ready");
@@ -35,18 +63,37 @@
       }
     });
 
-    heroTimeline
-      .from(".promo-banner", { y: -18, autoAlpha: 0, duration: 0.55 }, 0)
-      .from(".site-header", { y: -20, autoAlpha: 0, duration: 0.7 }, 0.05)
-      .from(".hero-copy .eyebrow", { y: 18, autoAlpha: 0 }, 0.14)
-      .from(".hero-copy h1", { y: 34, autoAlpha: 0, duration: 1.05 }, 0.2)
-      .from(".hero-copy .hero-lead", { y: 20, autoAlpha: 0 }, 0.32)
-      .from(".hero-pill-row .pill", { y: 16, autoAlpha: 0, stagger: 0.06, duration: 0.55 }, 0.4)
-      .from(".hero-actions .button", { y: 14, autoAlpha: 0, stagger: 0.08, duration: 0.55 }, 0.48)
-      .from(".hero-visual .visual-card-main", { y: 26, autoAlpha: 0, scale: 0.97, duration: 1 }, 0.28)
-      .from(".hero-visual .floating-proof", { y: 18, autoAlpha: 0, stagger: 0.1, duration: 0.65 }, 0.62);
+    timelineFromIfPresent(heroTimeline, ".promo-banner", { y: -18, autoAlpha: 0, duration: 0.55 }, 0);
+    timelineFromIfPresent(heroTimeline, ".site-header", { y: -20, autoAlpha: 0, duration: 0.7 }, 0.05);
+    timelineFromIfPresent(heroTimeline, ".hero-copy .eyebrow", { y: 18, autoAlpha: 0 }, 0.14);
+    timelineFromIfPresent(heroTimeline, ".hero-copy h1", { y: 34, autoAlpha: 0, duration: 1.05 }, 0.2);
+    timelineFromIfPresent(heroTimeline, ".hero-copy .hero-lead", { y: 20, autoAlpha: 0 }, 0.32);
+    timelineFromIfPresent(
+      heroTimeline,
+      ".hero-pill-row .pill",
+      { y: 16, autoAlpha: 0, stagger: 0.06, duration: 0.55 },
+      0.4
+    );
+    timelineFromIfPresent(
+      heroTimeline,
+      ".hero-actions .button",
+      { y: 14, autoAlpha: 0, stagger: 0.08, duration: 0.55 },
+      0.48
+    );
+    timelineFromIfPresent(
+      heroTimeline,
+      ".hero-visual .visual-card-main",
+      { y: 26, autoAlpha: 0, scale: 0.97, duration: 1 },
+      0.28
+    );
+    timelineFromIfPresent(
+      heroTimeline,
+      ".hero-visual .floating-proof",
+      { y: 18, autoAlpha: 0, stagger: 0.1, duration: 0.65 },
+      0.62
+    );
 
-    gsap.fromTo(
+    fromToIfPresent(
       ".hero-visual .visual-card-main",
       { yPercent: -2, scale: 0.985 },
       {
@@ -62,7 +109,7 @@
       }
     );
 
-    gsap.to(".floating-proof-top", {
+    toIfPresent(".floating-proof-top", {
       yPercent: -10,
       xPercent: 3,
       ease: "none",
@@ -74,7 +121,7 @@
       }
     });
 
-    gsap.to(".floating-proof-bottom", {
+    toIfPresent(".floating-proof-bottom", {
       yPercent: 12,
       xPercent: -4,
       ease: "none",
@@ -90,7 +137,7 @@
       .toArray(".reveal")
       .filter((element) => !element.closest(".hero-section"))
       .forEach((element) => {
-        gsap.from(element, {
+        fromIfPresent(element, {
           y: 24,
           autoAlpha: 0,
           duration: 0.8,
@@ -103,7 +150,7 @@
         });
       });
 
-    gsap.from(".logo-band-points span", {
+    fromIfPresent(".logo-band-points span", {
       y: 18,
       autoAlpha: 0,
       duration: 0.55,
