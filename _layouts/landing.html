@@ -1,0 +1,10 @@
+---
+layout: base
+---
+{% assign locale = site.data.locales[page.lang] %}
+<a class="skip-link" href="#main">{{ locale.skip_link }}</a>
+{% include home-header.html %}
+<main id="main" class="landing-main">
+  {{ content }}
+</main>
+{% include page-footer.html %}

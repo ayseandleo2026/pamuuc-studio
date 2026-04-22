@@ -159,6 +159,7 @@
       modalOpen: false,
       lastFocusedElement: null,
       mobileTabsQuery: null,
+      enableMobileTabs: false,
 
       init() {
         const { basePath, contentPathParts } = getBasePathContext();
@@ -166,6 +167,7 @@
         this.contentPathParts = contentPathParts;
         this.isRootPage = contentPathParts.length === 0 || (contentPathParts.length === 1 && contentPathParts[0] === "index.html");
         this.currentLanguage = document.body?.dataset.language || document.documentElement.lang || "en";
+        this.enableMobileTabs = document.body?.dataset.pageType === "home";
         this.modal = document.querySelector("#site-modal");
         this.modalContent = document.querySelector("#modal-content");
         this.modalPanel = document.querySelector(".modal-panel");
@@ -512,11 +514,17 @@
           return;
         }
 
+        if (!this.enableMobileTabs) {
+          this.unwrapSectionsFromMobileTabs();
+          return;
+        }
+
         if (this.mobileTabsQuery.matches) this.wrapSectionsInMobileTabs();
         else this.unwrapSectionsFromMobileTabs();
       },
 
       openHashSectionTab() {
+        if (!this.enableMobileTabs) return;
         if (!this.mobileTabsQuery || !this.mobileTabsQuery.matches || !window.location.hash) return;
         const targetId = decodeURIComponent(window.location.hash.slice(1));
         if (!targetId) return;
