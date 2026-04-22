@@ -1,0 +1,48 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img
+        alt="Pamuuc Studio"
+        class="footer-logo"
+        decoding="async"
+        height="30"
+        loading="lazy"
+        src="{{ site.data.site.wordmark }}"
+        width="170"
+      />
+      <p>Fully custom uniform systems designed close to Barcelona.</p>
+    </div>
+    <div class="footer-links-columns">
+      <nav aria-label="Studio links" class="footer-links footer-links-info">
+        <p class="footer-links-title">Studio</p>
+        <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
+        <a href="https://pamuuc.com" rel="noopener noreferrer" target="_blank">PAMUUC.COM</a>
+        <a href="{{ page.home_path | default: '/' | relative_url }}#services">Services</a>
+        <a href="{{ '/sectors/' | relative_url }}">Sectors</a>
+        <a href="{{ '/process/' | relative_url }}">Process</a>
+        <a href="{{ '/production/' | relative_url }}">Production</a>
+        <a href="{{ page.blog_path | default: '/en/blog/' | relative_url }}">Blog</a>
+      </nav>
+      <nav aria-label="Policy links" class="footer-links footer-links-policies">
+        <p class="footer-links-title">Policies</p>
+        <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
+        <a href="{{ '/cookie-policy/' | relative_url }}">Cookie Policy</a>
+        <a href="{{ '/terms-and-conditions/' | relative_url }}">Terms and Conditions</a>
+        <a href="{{ '/legal-notice/' | relative_url }}">Legal Notice</a>
+      </nav>
+    </div>
+    <nav aria-label="Language selector" class="language-switcher footer-language-switcher">
+      {% assign language_order = "en,fr,it,es" | split: "," %}
+      {% for code in language_order %}
+        {% assign href = page.language_paths[code] %}
+        {% if href %}
+          <a
+            class="lang-link{% if code == page.lang %} is-active{% endif %}"
+            data-lang-switch="{{ code }}"
+            href="{{ href | relative_url }}"
+          >{{ code | upcase }}</a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</footer>

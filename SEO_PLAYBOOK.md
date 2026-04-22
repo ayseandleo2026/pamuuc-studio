@@ -1,6 +1,6 @@
 # SEO Playbook
 
-Last reviewed: `2026-04-08`
+Last reviewed: `2026-04-22`
 
 This file captures the current SEO operating model for `studio.pamuuc.com` and the main learnings from the latest audit.
 
@@ -13,6 +13,16 @@ The intended public indexable set is:
   - `/fr/`
   - `/it/`
   - `/es/`
+- English landing pages:
+  - `/sectors/`
+  - `/sectors/hotel-uniforms/`
+  - `/sectors/restaurant-uniforms/`
+  - `/sectors/wellness-uniforms/`
+  - `/sectors/medical-clinic-uniforms/`
+  - `/sectors/service-team-uniforms/`
+  - `/sectors/guest-service-uniforms/`
+  - `/process/`
+  - `/production/`
 - Blog indexes:
   - `/en/blog/`
   - `/fr/blog/`
@@ -30,10 +40,12 @@ The merchandising section is intentionally removed from the publishable site for
 
 Latest repo-level audit target:
 
-- `20` canonical sitemap URLs driven from `_data/indexable_urls.yml`
+- `29` canonical sitemap URLs driven from `_data/indexable_urls.yml`
 - English homepage canonicalized to `/`, with `/en/` kept only as a redirect alias
 - legal pages excluded from the sitemap and marked `noindex,follow`
-- browser health check coverage for desktop and mobile image loading across the whole public indexable set
+- sector, process, and production topics moved from homepage interactions into crawlable landing pages
+- static indexing audit coverage for canonicals, alternates, robots directives, internal links, and asset references
+- GitHub Pages deployment pinned to Actions with pre-deploy auditing
 
 This means the repository is locally ready for deployment. Live indexing still depends on the deployed URLs returning `200 OK`.
 
@@ -84,6 +96,7 @@ Primary references:
 
 - Use standard anchors, not click handlers without hrefs.
 - Keep key pages linked from the homepage, nav, footer, blog indexes, and relevant posts.
+- Homepage overview sections can summarize a topic, but sector and commercial-intent detail should live on dedicated URLs.
 - New pages should not rely only on the sitemap for discovery.
 
 ### 4. Canonicals
@@ -120,6 +133,10 @@ Partial removal creates crawl waste and confusing Search Console reports.
 ### Static HTML is an advantage here
 
 Because this project ships content directly in HTML, it avoids many JavaScript rendering risks. For this site, that is a real SEO strength and should be preserved.
+
+### Homepage interactions should not carry the full SEO burden
+
+Buttons, accordions, and modal panels are fine for UX, but they are weak as the only home for commercially important content. The homepage can still use those patterns, but the index-worthy material should also exist on standalone URLs.
 
 ### Search Console should be used as feedback, not as the first source of truth
 
@@ -162,6 +179,7 @@ Based on current Google documentation:
 After every meaningful release:
 
 1. Open the live homepage in every language.
+2. Open the live sector hub, one sector landing page, the process page, and the production page.
 2. Open the live blog index in every language.
 3. Open every new article URL.
 4. Open the live sitemap.

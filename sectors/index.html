@@ -1,0 +1,127 @@
+---
+layout: landing
+lang: en
+page_type: landing
+title: Uniform Sectors | Pamuuc Studio
+description: Explore sector-specific uniform pages for hotels, restaurants, wellness studios, clinics, service teams, and guest-facing roles.
+canonical_path: /sectors/
+home_path: /
+services_path: /#services
+sectors_path: /sectors/
+process_path: /process/
+projects_path: /#projects
+faq_path: /#faq
+contact_path: /#contact
+blog_path: /en/blog/
+styles:
+  - /assets/css/shared.css
+  - /assets/css/pages/landing.css
+use_alpine: true
+alpine_component: pamuucHome()
+alternates:
+  en: /sectors/
+  "x-default": /sectors/
+language_paths:
+  en: /sectors/
+  fr: /fr/
+  it: /it/
+  es: /es/
+---
+<section class="section landing-hero">
+  <div class="container landing-hero-grid">
+    <div class="landing-copy reveal">
+      <nav aria-label="Breadcrumb" class="page-breadcrumb">
+        <ol>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li aria-current="page">Sectors</li>
+        </ol>
+      </nav>
+      <p class="section-kicker">SECTOR PAGES</p>
+      <h1>Uniform systems organised by the way each team actually works.</h1>
+      <p class="landing-lead">These landing pages turn the studio's main operational contexts into crawlable documents. Each one explains role mix, garment direction, production logic, and the continuity model behind future reorders.</p>
+      <div class="landing-actions">
+        <a class="button button-primary" href="{{ '/#contact' | relative_url }}">Request a first meeting</a>
+        <a class="button button-secondary" href="{{ '/process/' | relative_url }}">See the process</a>
+      </div>
+    </div>
+    <div class="landing-media reveal">
+      <img
+        alt="Editorial overview of custom uniform development sectors"
+        class="landing-cover"
+        decoding="async"
+        height="440"
+        loading="eager"
+        src="{{ '/assets/images/hero-desktop.svg' | relative_url }}"
+        width="560"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt landing-overview">
+  <div class="container landing-body-grid">
+    <div class="landing-copy-block reveal">
+      <p class="section-kicker">WHY THIS STRUCTURE</p>
+      <h2>Better for users, stronger for indexing</h2>
+      <p>The homepage still gives a fast overview, but these pages hold the detail Google needs to understand the studio's real commercial scope. Instead of hiding the strongest intent inside buttons and modal panels, the site now exposes stable URLs that can be linked, crawled, indexed, and revisited.</p>
+      <p>That matters especially on GitHub Pages, where the technical stack is already lightweight and crawl-friendly. The biggest SEO wins come from stronger page architecture, clearer internal links, and a sitemap that matches the content you genuinely want indexed.</p>
+    </div>
+    <div class="landing-stat-card reveal">
+      <p class="landing-stat-label">Built for</p>
+      <strong>High-intent discovery</strong>
+      <p>Hotels, clinics, wellness studios, and multi-role service teams can now each resolve to a dedicated landing page instead of sharing one broad homepage section.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section landing-columns">
+  <div class="container sector-overview-grid">
+    <article class="sector-overview-card reveal">
+      <h2>Hotel uniforms</h2>
+      <p>Multi-department wardrobes for front office, concierge, housekeeping, F&amp;B, and management.</p>
+      <a class="button button-secondary" href="{{ '/sectors/hotel-uniforms/' | relative_url }}">Open page</a>
+    </article>
+    <article class="sector-overview-card reveal">
+      <h2>Restaurant uniforms</h2>
+      <p>Fast-moving service garments built around movement, durability, and atmosphere.</p>
+      <a class="button button-secondary" href="{{ '/sectors/restaurant-uniforms/' | relative_url }}">Open page</a>
+    </article>
+    <article class="sector-overview-card reveal">
+      <h2>Wellness uniforms</h2>
+      <p>Soft-touch systems for calm spaces where trust, comfort, and visual restraint matter.</p>
+      <a class="button button-secondary" href="{{ '/sectors/wellness-uniforms/' | relative_url }}">Open page</a>
+    </article>
+    <article class="sector-overview-card reveal">
+      <h2>Medical and clinic uniforms</h2>
+      <p>Professional, easy-care garments for teams working long shifts in patient-facing settings.</p>
+      <a class="button button-secondary" href="{{ '/sectors/medical-clinic-uniforms/' | relative_url }}">Open page</a>
+    </article>
+    <article class="sector-overview-card reveal">
+      <h2>Service team uniforms</h2>
+      <p>Operational wardrobes for logistics, maintenance, and behind-the-scenes roles.</p>
+      <a class="button button-secondary" href="{{ '/sectors/service-team-uniforms/' | relative_url }}">Open page</a>
+    </article>
+    <article class="sector-overview-card reveal">
+      <h2>Guest service uniforms</h2>
+      <p>Guest-facing systems with cleaner tailoring, stronger brand alignment, and daily comfort.</p>
+      <a class="button button-secondary" href="{{ '/sectors/guest-service-uniforms/' | relative_url }}">Open page</a>
+    </article>
+  </div>
+</section>
+
+<section class="section landing-related">
+  <div class="container landing-card-grid landing-card-grid-two">
+    <article class="landing-card reveal">
+      <p class="landing-card-label">Related reading</p>
+      <h2>See how sector thinking turns into a live project.</h2>
+      <p>The hospitality case study shows how architecture, role mapping, fitting, and durability combine into a complete wardrobe system.</p>
+      <a class="button button-secondary" href="{{ '/en/blog/custom-hospitality-uniforms/' | relative_url }}">Read the hospitality case study</a>
+    </article>
+    <article class="landing-card reveal landing-card-accent">
+      <p class="landing-card-label">Next step</p>
+      <h2>Connect sector fit to process and production.</h2>
+      <p>Once the sector direction is clear, the next pages explain how the project moves through discovery, development, minimum quantities, pricing ranges, and reorder continuity.</p>
+      <a class="button button-primary" href="{{ '/production/' | relative_url }}">See production details</a>
+    </article>
+  </div>
+</section>

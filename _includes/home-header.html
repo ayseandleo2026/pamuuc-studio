@@ -1,7 +1,15 @@
 {% assign locale = site.data.locales[page.lang] %}
+{% assign brand_href = page.home_path | default: page.canonical_path | default: '/' %}
+{% assign services_href = page.services_path | default: '#services' %}
+{% assign sectors_href = page.sectors_path | default: '#sectors' %}
+{% assign process_href = page.process_path | default: '#process' %}
+{% assign projects_href = page.projects_path | default: '#projects' %}
+{% assign faq_href = page.faq_path | default: '#faq' %}
+{% assign contact_href = page.contact_path | default: '#contact' %}
+{% assign blog_href = page.blog_path | default: '/en/blog/' %}
 <header class="site-header" id="top">
   <div class="container header-inner">
-    <a aria-label="{{ locale.header.brand_aria }}" class="brand" href="#top">
+    <a aria-label="{{ locale.header.brand_aria }}" class="brand" href="{{ brand_href | relative_url }}">
       <img
         alt="{{ site.data.site.name }}"
         class="brand-logo"
@@ -37,12 +45,14 @@
         {% assign language_order = "en,fr,it,es" | split: "," %}
         {% for code in language_order %}
           {% assign href = page.language_paths[code] %}
-          <a
-            class="lang-link{% if code == page.lang %} is-active{% endif %}"
-            data-lang-switch="{{ code }}"
-            href="{{ href | relative_url }}"
-            @click="rememberLanguage('{{ code }}')"
-          >{{ code | upcase }}</a>
+          {% if href %}
+            <a
+              class="lang-link{% if code == page.lang %} is-active{% endif %}"
+              data-lang-switch="{{ code }}"
+              href="{{ href | relative_url }}"
+              @click="rememberLanguage('{{ code }}')"
+            >{{ code | upcase }}</a>
+          {% endif %}
         {% endfor %}
       </nav>
     </div>
@@ -54,25 +64,27 @@
       @click.outside="closeMenu()"
     >
       <ul class="site-nav-list">
-        <li><a href="#services" @click="closeMenu()">{{ locale.header.services }}</a></li>
-        <li><a href="#sectors" @click="closeMenu()">{{ locale.header.sectors }}</a></li>
-        <li><a href="#process" @click="closeMenu()">{{ locale.header.process }}</a></li>
-        <li><a href="#projects" @click="closeMenu()">{{ locale.header.projects }}</a></li>
-        <li><a href="{{ page.blog_path | relative_url }}" @click="closeMenu()">{{ locale.header.blog }}</a></li>
-        <li><a href="#faq" @click="closeMenu()">{{ locale.header.faq }}</a></li>
-        <li><a class="nav-cta" href="#contact" @click="closeMenu()">{{ locale.header.cta }}</a></li>
+        <li><a href="{{ services_href | relative_url }}" @click="closeMenu()">{{ locale.header.services }}</a></li>
+        <li><a href="{{ sectors_href | relative_url }}" @click="closeMenu()">{{ locale.header.sectors }}</a></li>
+        <li><a href="{{ process_href | relative_url }}" @click="closeMenu()">{{ locale.header.process }}</a></li>
+        <li><a href="{{ projects_href | relative_url }}" @click="closeMenu()">{{ locale.header.projects }}</a></li>
+        <li><a href="{{ blog_href | relative_url }}" @click="closeMenu()">{{ locale.header.blog }}</a></li>
+        <li><a href="{{ faq_href | relative_url }}" @click="closeMenu()">{{ locale.header.faq }}</a></li>
+        <li><a class="nav-cta" href="{{ contact_href | relative_url }}" @click="closeMenu()">{{ locale.header.cta }}</a></li>
       </ul>
     </nav>
     <nav aria-label="{{ locale.header.language_label }}" class="language-switcher">
       {% assign language_order = "en,fr,it,es" | split: "," %}
       {% for code in language_order %}
         {% assign href = page.language_paths[code] %}
-        <a
-          class="lang-link{% if code == page.lang %} is-active{% endif %}"
-          data-lang-switch="{{ code }}"
-          href="{{ href | relative_url }}"
-          @click="rememberLanguage('{{ code }}')"
-        >{{ code | upcase }}</a>
+        {% if href %}
+          <a
+            class="lang-link{% if code == page.lang %} is-active{% endif %}"
+            data-lang-switch="{{ code }}"
+            href="{{ href | relative_url }}"
+            @click="rememberLanguage('{{ code }}')"
+          >{{ code | upcase }}</a>
+        {% endif %}
       {% endfor %}
     </nav>
   </div>

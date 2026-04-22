@@ -1,0 +1,207 @@
+---
+layout: landing
+lang: en
+page_type: landing
+title: Uniform Production Details | Pamuuc Studio
+description: Minimum quantities, indicative pricing, cost drivers, and timing guidance for custom uniform production.
+canonical_path: /production/
+home_path: /
+services_path: /#services
+sectors_path: /sectors/
+process_path: /process/
+projects_path: /#projects
+faq_path: /#faq
+contact_path: /#contact
+blog_path: /en/blog/
+styles:
+  - /assets/css/shared.css
+  - /assets/css/pages/landing.css
+use_alpine: true
+alpine_component: pamuucHome()
+alternates:
+  en: /production/
+  "x-default": /production/
+language_paths:
+  en: /production/
+  fr: /fr/
+  it: /it/
+  es: /es/
+---
+<section class="section landing-hero">
+  <div class="container landing-hero-grid">
+    <div class="landing-copy reveal">
+      <nav aria-label="Breadcrumb" class="page-breadcrumb">
+        <ol>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li aria-current="page">Production</li>
+        </ol>
+      </nav>
+      <p class="section-kicker">PRODUCTION DETAILS</p>
+      <h1>Commercial and operational parameters for custom uniform production.</h1>
+      <p class="landing-lead">This page brings minimum quantities, indicative pricing, cost drivers, and timing guidance into one stable URL. It is designed to answer the recurring commercial questions that should not be buried inside modal windows or left out of the sitemap.</p>
+      <div class="landing-actions">
+        <a class="button button-primary" href="{{ '/#contact' | relative_url }}">Discuss a project</a>
+        <a class="button button-secondary" href="{{ '/process/' | relative_url }}">Review the process</a>
+      </div>
+    </div>
+    <div class="landing-media reveal">
+      <img
+        alt="Illustration of wardrobe system and production planning"
+        class="landing-cover"
+        decoding="async"
+        height="430"
+        loading="eager"
+        src="{{ '/assets/images/system-desktop.svg' | relative_url }}"
+        width="540"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt landing-overview" id="minimum-quantities">
+  <div class="container landing-body-grid">
+    <div class="landing-copy-block reveal">
+      <p class="section-kicker">MINIMUM QUANTITIES</p>
+      <h2>Typical starting points depend on garment type.</h2>
+      <p>Minimums are driven by construction and fabric choice rather than by a single fixed threshold. Woven garments generally start around 50 pieces per style, split across sizes and colors. Knitwear often sits higher, usually between 100 and 150 pieces per style.</p>
+      <p>Smaller runs may still be possible, but they usually carry less efficient pricing because development, cutting, and production setup are spread over fewer units.</p>
+    </div>
+    <div class="landing-stat-card reveal">
+      <p class="landing-stat-label">Typical minimums</p>
+      <strong>50 pcs woven / 100-150 pcs knitwear</strong>
+      <p>These are working references, not rigid promises. Final numbers depend on the garment family and the production setup behind it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section landing-columns" id="pricing-approach">
+  <div class="container landing-card-grid landing-card-grid-two">
+    <article class="pricing-card reveal">
+      <p class="landing-card-label">Pricing approach</p>
+      <h2>Indicative ranges only</h2>
+      <p>Pricing depends on fabric selection, construction complexity, branding technique, quantities, and the garment mix inside the wardrobe. These ranges are useful for orientation, but each project still needs to be evaluated on its own technical scope.</p>
+      <ul>
+        <li>Fabric selection</li>
+        <li>Construction complexity</li>
+        <li>Branding methods</li>
+        <li>Quantities ordered</li>
+        <li>Garment mix</li>
+      </ul>
+    </article>
+    <article class="pricing-card reveal">
+      <p class="landing-card-label">Cost drivers</p>
+      <h2 id="cost-drivers">What tends to move cost upward</h2>
+      <ul>
+        <li>Higher-grade or more technical fabrics</li>
+        <li>Tailored construction and pattern complexity</li>
+        <li>Embroidery, trims, and specialized branding steps</li>
+        <li>Lower quantities and fragmented garment mixes</li>
+      </ul>
+      <p>In practice, the commercial conversation usually becomes much clearer once the garment family is narrowed and the branding level is defined.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <article class="pricing-card reveal">
+      <p class="landing-card-label">Indicative product pricing</p>
+      <h2>Reference table for common product types</h2>
+      <div class="pricing-table-wrap">
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th scope="col">Product type</th>
+              <th scope="col">Typical price range</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>T-shirts</td>
+              <td>EUR 25 to EUR 40</td>
+              <td>Cotton or cotton blends, basic branding</td>
+            </tr>
+            <tr>
+              <td>Polos</td>
+              <td>EUR 30 to EUR 50</td>
+              <td>Embroidery or woven label branding</td>
+            </tr>
+            <tr>
+              <td>Shirts</td>
+              <td>EUR 65 to EUR 85</td>
+              <td>Core hospitality or guest-facing piece</td>
+            </tr>
+            <tr>
+              <td>Overshirts</td>
+              <td>EUR 60 to EUR 95</td>
+              <td>Common in service or hybrid wardrobes</td>
+            </tr>
+            <tr>
+              <td>Trousers</td>
+              <td>EUR 65 to EUR 95</td>
+              <td>Often affected by fit and reinforcement details</td>
+            </tr>
+            <tr>
+              <td>Dresses</td>
+              <td>EUR 75 to EUR 120</td>
+              <td>Higher development and construction complexity</td>
+            </tr>
+            <tr>
+              <td>Aprons</td>
+              <td>EUR 30 to EUR 60</td>
+              <td>Depends on fabric weight and pocketing</td>
+            </tr>
+            <tr>
+              <td>Knitwear</td>
+              <td>EUR 70 to EUR 110</td>
+              <td>Usually paired with higher minimum quantities</td>
+            </tr>
+            <tr>
+              <td>Blazers or tailored jackets</td>
+              <td>EUR 95 to EUR 150+</td>
+              <td>Structured garments with more complex construction</td>
+            </tr>
+            <tr>
+              <td>Outer layers</td>
+              <td>EUR 80 to EUR 140</td>
+              <td>Varies with fabric and finishing</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section section-dark landing-detail-band" id="timing-drivers">
+  <div class="container landing-detail-grid">
+    <article class="detail-card reveal">
+      <p class="landing-card-label">Timing drivers</p>
+      <h2>Development usually sets the pace.</h2>
+      <p>Project timelines depend on pattern development, fittings, revision rounds, special constructions, and fabric sourcing. A common shape is 4 to 6 weeks for development followed by 3 to 5 weeks for production, with fully custom projects often landing around 8 weeks in total.</p>
+    </article>
+    <article class="detail-card reveal">
+      <p class="landing-card-label">Why this matters for indexing</p>
+      <h2>Commercial detail is now indexable content.</h2>
+      <p>Instead of leaving pricing and timing guidance hidden behind interactions, this page exposes the information on a normal crawlable URL that can be discovered from the homepage, sitemap, and internal links.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section landing-related">
+  <div class="container landing-card-grid landing-card-grid-two">
+    <article class="landing-card reveal">
+      <p class="landing-card-label">Related reading</p>
+      <h2>See how these production decisions show up in a real project.</h2>
+      <p>The hospitality case study gives a more concrete example of how garment mix, durability, development, and long-term reorder logic work together.</p>
+      <a class="button button-secondary" href="{{ '/en/blog/custom-hospitality-uniforms/' | relative_url }}">Read the hospitality case study</a>
+    </article>
+    <article class="landing-card reveal landing-card-accent">
+      <p class="landing-card-label">Next step</p>
+      <h2>Choose the sector context first.</h2>
+      <p>If the commercial parameters are clear, the next useful step is usually the sector page that most closely matches the team and the space.</p>
+      <a class="button button-primary" href="{{ '/sectors/' | relative_url }}">Browse sector pages</a>
+    </article>
+  </div>
+</section>

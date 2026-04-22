@@ -46,6 +46,60 @@
       path: /es/
     - lang: x-default
       path: /
+- loc: /sectors/
+  alternates:
+    - lang: en
+      path: /sectors/
+    - lang: x-default
+      path: /sectors/
+- loc: /sectors/hotel-uniforms/
+  alternates:
+    - lang: en
+      path: /sectors/hotel-uniforms/
+    - lang: x-default
+      path: /sectors/hotel-uniforms/
+- loc: /sectors/restaurant-uniforms/
+  alternates:
+    - lang: en
+      path: /sectors/restaurant-uniforms/
+    - lang: x-default
+      path: /sectors/restaurant-uniforms/
+- loc: /sectors/wellness-uniforms/
+  alternates:
+    - lang: en
+      path: /sectors/wellness-uniforms/
+    - lang: x-default
+      path: /sectors/wellness-uniforms/
+- loc: /sectors/medical-clinic-uniforms/
+  alternates:
+    - lang: en
+      path: /sectors/medical-clinic-uniforms/
+    - lang: x-default
+      path: /sectors/medical-clinic-uniforms/
+- loc: /sectors/service-team-uniforms/
+  alternates:
+    - lang: en
+      path: /sectors/service-team-uniforms/
+    - lang: x-default
+      path: /sectors/service-team-uniforms/
+- loc: /sectors/guest-service-uniforms/
+  alternates:
+    - lang: en
+      path: /sectors/guest-service-uniforms/
+    - lang: x-default
+      path: /sectors/guest-service-uniforms/
+- loc: /process/
+  alternates:
+    - lang: en
+      path: /process/
+    - lang: x-default
+      path: /process/
+- loc: /production/
+  alternates:
+    - lang: en
+      path: /production/
+    - lang: x-default
+      path: /production/
 - loc: /en/blog/
   alternates:
     - lang: en
