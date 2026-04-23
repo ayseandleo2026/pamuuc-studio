@@ -1,0 +1,28 @@
+Pamuuc Studio GitHub upload archive
+Generated: 2026-04-22
+
+Archive file:
+output/releases/pamuuc-studio-github-repo-2026-04-22.zip
+
+Archive size:
+9574325 bytes
+
+Purpose:
+Repository-ready upload package for creating a fresh GitHub repository from the current project state.
+
+Included:
+- Website pages and multilingual content
+- Assets and images
+- Jekyll layouts, includes, and data files
+- GitHub workflow files under .github/workflows
+- Scripts, docs, config files, and CNAME
+- New sector, process, and production landing pages
+
+Excluded:
+- output/*
+- .playwright-cli/*
+- .DS_Store
+- _site/*
+- node_modules/*
+- .sass-cache/*
+- .jekyll-cache/*
