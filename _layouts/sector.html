@@ -1,13 +1,14 @@
 ---
 layout: landing
 ---
+{% assign locale = site.data.locales[page.lang] %}
 <section class="section landing-hero">
   <div class="container landing-hero-grid">
     <div class="landing-copy reveal">
       <nav aria-label="Breadcrumb" class="page-breadcrumb">
         <ol>
-          <li><a href="{{ page.home_path | default: '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/sectors/' | relative_url }}">Sectors</a></li>
+          <li><a href="{{ page.home_path | default: '/' | relative_url }}">{{ page.breadcrumb_home | default: locale.landing.home }}</a></li>
+          <li><a href="{{ page.sectors_index_path | default: '/sectors/' | relative_url }}">{{ page.breadcrumb_sectors | default: locale.landing.sectors }}</a></li>
           <li aria-current="page">{{ page.short_title }}</li>
         </ol>
       </nav>
@@ -99,13 +100,13 @@ layout: landing
 <section class="section landing-related">
   <div class="container landing-card-grid landing-card-grid-two">
     <article class="landing-card reveal">
-      <p class="landing-card-label">Related reading</p>
+      <p class="landing-card-label">{{ page.related_label | default: locale.landing.related }}</p>
       <h2>{{ page.related_title }}</h2>
       <p>{{ page.related_copy }}</p>
       <a class="button button-secondary" href="{{ page.related_href | relative_url }}">{{ page.related_cta_label | default: 'Read the related article' }}</a>
     </article>
     <article class="landing-card reveal landing-card-accent">
-      <p class="landing-card-label">Next step</p>
+      <p class="landing-card-label">{{ page.next_step_label | default: locale.landing.next_step }}</p>
       <h2>{{ page.next_step_title | default: 'Turn the sector brief into a real project plan' }}</h2>
       <p>{{ page.next_step_copy | default: 'We can help map garment mix, development scope, quantities, and reorder logic around your team and your space.' }}</p>
       <a class="button button-primary" href="{{ page.primary_cta_href | default: '/#contact' | relative_url }}">{{ page.primary_cta_label | default: 'Request a first meeting' }}</a>

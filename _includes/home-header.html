@@ -6,7 +6,13 @@
 {% assign projects_href = page.projects_path | default: '#projects' %}
 {% assign faq_href = page.faq_path | default: '#faq' %}
 {% assign contact_href = page.contact_path | default: '#contact' %}
-{% assign blog_href = page.blog_path | default: '/en/blog/' %}
+{% if page.blog_path %}
+  {% assign blog_href = page.blog_path %}
+{% elsif page.lang == 'en' or page.lang == nil %}
+  {% assign blog_href = '/en/blog/' %}
+{% else %}
+  {% assign blog_href = '/' | append: page.lang | append: '/blog/' %}
+{% endif %}
 <header class="site-header" id="top">
   <div class="container header-inner">
     <a aria-label="{{ locale.header.brand_aria }}" class="brand" href="{{ brand_href | relative_url }}">
@@ -42,7 +48,7 @@
         <span x-text="currentLanguage.toUpperCase()"></span>
       </button>
       <nav class="mobile-language-menu" aria-label="{{ locale.header.language_label }}" x-cloak x-show="mobileLanguageOpen">
-        {% assign language_order = "en,fr,it,es" | split: "," %}
+        {% assign language_order = "en,fr,it,es,de" | split: "," %}
         {% for code in language_order %}
           {% assign href = page.language_paths[code] %}
           {% if href %}
@@ -64,7 +70,6 @@
       @click.outside="closeMenu()"
     >
       <ul class="site-nav-list">
-        <li><a href="{{ services_href | relative_url }}" @click="closeMenu()">{{ locale.header.services }}</a></li>
         <li><a href="{{ sectors_href | relative_url }}" @click="closeMenu()">{{ locale.header.sectors }}</a></li>
         <li><a href="{{ process_href | relative_url }}" @click="closeMenu()">{{ locale.header.process }}</a></li>
         <li><a href="{{ projects_href | relative_url }}" @click="closeMenu()">{{ locale.header.projects }}</a></li>
@@ -74,7 +79,7 @@
       </ul>
     </nav>
     <nav aria-label="{{ locale.header.language_label }}" class="language-switcher">
-      {% assign language_order = "en,fr,it,es" | split: "," %}
+      {% assign language_order = "en,fr,it,es,de" | split: "," %}
       {% for code in language_order %}
         {% assign href = page.language_paths[code] %}
         {% if href %}

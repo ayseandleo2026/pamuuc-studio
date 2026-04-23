@@ -1,3 +1,21 @@
+{% assign locale = site.data.locales[page.lang] %}
+{% assign lang_prefix = '' %}
+{% if page.lang and page.lang != 'en' %}
+  {% assign lang_prefix = '/' | append: page.lang %}
+{% endif %}
+{% assign default_home = lang_prefix | append: '/' %}
+{% assign default_sectors = lang_prefix | append: '/sectors/' %}
+{% assign default_process = lang_prefix | append: '/process/' %}
+{% assign default_production = lang_prefix | append: '/production/' %}
+{% assign default_privacy = lang_prefix | append: '/privacy-policy/' %}
+{% assign default_cookie = lang_prefix | append: '/cookie-policy/' %}
+{% assign default_terms = lang_prefix | append: '/terms-and-conditions/' %}
+{% assign default_legal = lang_prefix | append: '/legal-notice/' %}
+{% if page.lang == 'en' or page.lang == nil %}
+  {% assign default_blog = '/en/blog/' %}
+{% else %}
+  {% assign default_blog = lang_prefix | append: '/blog/' %}
+{% endif %}
 <footer class="site-footer">
   <div class="container footer-inner">
     <div class="footer-brand">
@@ -10,29 +28,29 @@
         src="{{ site.data.site.wordmark }}"
         width="170"
       />
-      <p>Fully custom uniform systems designed close to Barcelona.</p>
+      <p>{{ locale.footer.intro }}</p>
     </div>
     <div class="footer-links-columns">
-      <nav aria-label="Studio links" class="footer-links footer-links-info">
-        <p class="footer-links-title">Studio</p>
-        <a href="{{ '/sitemap.xml' | relative_url }}">Sitemap</a>
-        <a href="https://pamuuc.com" rel="noopener noreferrer" target="_blank">PAMUUC.COM</a>
-        <a href="{{ page.home_path | default: '/' | relative_url }}#services">Services</a>
-        <a href="{{ '/sectors/' | relative_url }}">Sectors</a>
-        <a href="{{ '/process/' | relative_url }}">Process</a>
-        <a href="{{ '/production/' | relative_url }}">Production</a>
-        <a href="{{ page.blog_path | default: '/en/blog/' | relative_url }}">Blog</a>
+      <nav aria-label="{{ locale.footer.studio }}" class="footer-links footer-links-info">
+        <p class="footer-links-title">{{ locale.footer.studio }}</p>
+        <a href="{{ '/sitemap.xml' | relative_url }}">{{ locale.footer.sitemap }}</a>
+        <a href="https://pamuuc.com" rel="noopener noreferrer" target="_blank">{{ locale.footer.external_site }}</a>
+        <a href="{{ page.home_path | default: default_home | relative_url }}">{{ locale.footer.home }}</a>
+        <a href="{{ page.sectors_path | default: default_sectors | relative_url }}">{{ locale.footer.sectors }}</a>
+        <a href="{{ page.process_path | default: default_process | relative_url }}">{{ locale.footer.process }}</a>
+        <a href="{{ page.production_path | default: default_production | relative_url }}">{{ locale.footer.production }}</a>
+        <a href="{{ page.blog_path | default: default_blog | relative_url }}">{{ locale.footer.blog }}</a>
       </nav>
-      <nav aria-label="Policy links" class="footer-links footer-links-policies">
-        <p class="footer-links-title">Policies</p>
-        <a href="{{ '/privacy-policy/' | relative_url }}">Privacy Policy</a>
-        <a href="{{ '/cookie-policy/' | relative_url }}">Cookie Policy</a>
-        <a href="{{ '/terms-and-conditions/' | relative_url }}">Terms and Conditions</a>
-        <a href="{{ '/legal-notice/' | relative_url }}">Legal Notice</a>
+      <nav aria-label="{{ locale.footer.policies }}" class="footer-links footer-links-policies">
+        <p class="footer-links-title">{{ locale.footer.policies }}</p>
+        <a href="{{ page.privacy_policy_path | default: default_privacy | relative_url }}">{{ locale.footer.privacy_policy }}</a>
+        <a href="{{ page.cookie_policy_path | default: default_cookie | relative_url }}">{{ locale.footer.cookie_policy }}</a>
+        <a href="{{ page.terms_path | default: default_terms | relative_url }}">{{ locale.footer.terms_and_conditions }}</a>
+        <a href="{{ page.legal_notice_path | default: default_legal | relative_url }}">{{ locale.footer.legal_notice }}</a>
       </nav>
     </div>
-    <nav aria-label="Language selector" class="language-switcher footer-language-switcher">
-      {% assign language_order = "en,fr,it,es" | split: "," %}
+    <nav aria-label="{{ locale.footer.language_selector }}" class="language-switcher footer-language-switcher">
+      {% assign language_order = "en,fr,it,es,de" | split: "," %}
       {% for code in language_order %}
         {% assign href = page.language_paths[code] %}
         {% if href %}

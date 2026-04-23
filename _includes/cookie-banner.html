@@ -1,0 +1,8 @@
+{% assign locale = site.data.locales[page.lang] %}
+<aside aria-label="Cookie preferences" aria-live="polite" class="cookie-banner" id="cookie-banner">
+  <p>{{ locale.cookie.text }}</p>
+  <div class="cookie-actions">
+    <button class="button button-primary" id="cookie-accept" type="button">{{ locale.cookie.accept }}</button>
+    <button class="button button-secondary" id="cookie-reject" type="button">{{ locale.cookie.reject }}</button>
+  </div>
+</aside>

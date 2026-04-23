@@ -13,6 +13,31 @@ en:
     faq: FAQ
     cta: Request a first meeting
     contact: Contact
+  landing:
+    home: Home
+    sectors: Sectors
+    related: Related reading
+    next_step: Next step
+  footer:
+    intro: Fully custom uniform systems designed close to Barcelona.
+    studio: Studio
+    sitemap: Sitemap
+    external_site: PAMUUC.COM
+    home: Home
+    sectors: Sectors
+    process: Process
+    production: Production
+    blog: Blog
+    policies: Policies
+    privacy_policy: Privacy Policy
+    cookie_policy: Cookie Policy
+    terms_and_conditions: Terms and Conditions
+    legal_notice: Legal Notice
+    language_selector: Language selector
+  cookie:
+    text: We use analytics cookies to improve studio.pamuuc.com. You can accept or reject tracking.
+    accept: Accept
+    reject: Reject
 fr:
   skip_link: Aller au contenu
   header:
@@ -28,6 +53,31 @@ fr:
     faq: FAQ
     cta: Demander un premier rendez-vous
     contact: Contact
+  landing:
+    home: Accueil
+    sectors: Secteurs
+    related: Lecture associée
+    next_step: Étape suivante
+  footer:
+    intro: Systèmes d’uniformes entièrement sur mesure conçus près de Barcelone.
+    studio: Studio
+    sitemap: Sitemap
+    external_site: PAMUUC.COM
+    home: Accueil
+    sectors: Secteurs
+    process: Processus
+    production: Production
+    blog: Blog
+    policies: Politiques
+    privacy_policy: Politique de confidentialité
+    cookie_policy: Politique de cookies
+    terms_and_conditions: Conditions générales
+    legal_notice: Mentions légales
+    language_selector: Sélecteur de langue
+  cookie:
+    text: Nous utilisons des cookies analytiques pour améliorer studio.pamuuc.com. Vous pouvez accepter ou refuser le suivi.
+    accept: Accepter
+    reject: Refuser
 it:
   skip_link: Vai al contenuto
   header:
@@ -43,6 +93,31 @@ it:
     faq: FAQ
     cta: Richiedi un primo incontro
     contact: Contatto
+  landing:
+    home: Home
+    sectors: Settori
+    related: Lettura correlata
+    next_step: Prossimo passo
+  footer:
+    intro: Sistemi di uniformi completamente su misura sviluppati vicino a Barcellona.
+    studio: Studio
+    sitemap: Sitemap
+    external_site: PAMUUC.COM
+    home: Home
+    sectors: Settori
+    process: Processo
+    production: Produzione
+    blog: Blog
+    policies: Policy
+    privacy_policy: Informativa sulla privacy
+    cookie_policy: Cookie policy
+    terms_and_conditions: Termini e condizioni
+    legal_notice: Note legali
+    language_selector: Selettore lingua
+  cookie:
+    text: Utilizziamo cookie analitici per migliorare studio.pamuuc.com. Puoi accettare o rifiutare il tracciamento.
+    accept: Accetta
+    reject: Rifiuta
 es:
   skip_link: Ir al contenido
   header:
@@ -58,3 +133,68 @@ es:
     faq: FAQ
     cta: Solicitar una primera reunión
     contact: Contacto
+  landing:
+    home: Inicio
+    sectors: Sectores
+    related: Lectura relacionada
+    next_step: Siguiente paso
+  footer:
+    intro: Sistemas de uniformes totalmente a medida desarrollados cerca de Barcelona.
+    studio: Studio
+    sitemap: Sitemap
+    external_site: PAMUUC.COM
+    home: Inicio
+    sectors: Sectores
+    process: Proceso
+    production: Producción
+    blog: Blog
+    policies: Políticas
+    privacy_policy: Política de privacidad
+    cookie_policy: Política de cookies
+    terms_and_conditions: Términos y condiciones
+    legal_notice: Aviso legal
+    language_selector: Selector de idioma
+  cookie:
+    text: Usamos cookies analíticas para mejorar studio.pamuuc.com. Puedes aceptar o rechazar el seguimiento.
+    accept: Aceptar
+    reject: Rechazar
+de:
+  skip_link: Zum Inhalt springen
+  header:
+    brand_aria: Pamuuc Studio Startseite
+    menu_label: Menü öffnen
+    nav_label: Hauptnavigation
+    language_label: Sprachauswahl
+    services: Leistungen
+    sectors: Bereiche
+    process: Prozess
+    projects: Projekte
+    blog: Blog
+    faq: FAQ
+    cta: Ein Erstgespräch anfragen
+    contact: Kontakt
+  landing:
+    home: Startseite
+    sectors: Bereiche
+    related: Weiterführende Lektüre
+    next_step: Nächster Schritt
+  footer:
+    intro: Vollständig individuelle Uniformsysteme in der Nähe von Barcelona entwickelt.
+    studio: Studio
+    sitemap: Sitemap
+    external_site: PAMUUC.COM
+    home: Startseite
+    sectors: Bereiche
+    process: Prozess
+    production: Produktion
+    blog: Blog
+    policies: Richtlinien
+    privacy_policy: Datenschutzerklärung
+    cookie_policy: Cookie-Richtlinie
+    terms_and_conditions: Nutzungsbedingungen
+    legal_notice: Impressum
+    language_selector: Sprachauswahl
+  cookie:
+    text: Wir verwenden Analyse-Cookies, um studio.pamuuc.com zu verbessern. Sie können das Tracking akzeptieren oder ablehnen.
+    accept: Akzeptieren
+    reject: Ablehnen
