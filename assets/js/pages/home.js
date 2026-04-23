@@ -63,6 +63,13 @@
       successStatus: "Solicitud enviada correctamente. Normalmente respondemos en 1 día laborable.",
       errorStatus: "No hemos podido enviar la solicitud ahora. Inténtalo de nuevo o usa la opción por e-mail.",
       submitButton: "Enviar solicitud de proyecto"
+    },
+    de: {
+      sendingButton: "Wird gesendet...",
+      sendingStatus: "Ihre Anfrage wird gesendet...",
+      successStatus: "Projektanfrage erfolgreich gesendet. Wir antworten in der Regel innerhalb eines Arbeitstags.",
+      errorStatus: "Die Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es erneut oder nutzen Sie die E-Mail-Option.",
+      submitButton: "Projektanfrage senden"
     }
   };
   const uiCopy = uiCopyMap[currentLanguage] || uiCopyMap.en;

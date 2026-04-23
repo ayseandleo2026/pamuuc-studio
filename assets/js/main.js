@@ -10,7 +10,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const COOKIE_CONSENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
   const COOKIE_BANNER_VISIBLE_CLASS = "cookie-banner-visible";
 
-  const supportedLanguages = ["en", "fr", "it", "es"];
+  const supportedLanguages = ["en", "fr", "it", "es", "de"];
 
   // Support both custom-domain root deploys and GitHub Pages project subpaths.
   const rawPathParts = window.location.pathname.split("/").filter(Boolean);
@@ -40,7 +40,13 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const languageFromPath = supportedLanguages.includes(contentPathParts[0]) ? contentPathParts[0] : null;
   const currentLanguage = languageFromPath || document.body.dataset.language || document.documentElement.lang || "en";
   const getLanguageHomePath = (language) => (!language || language === "en" ? "/" : `/${language}/`);
-  const getLegalPath = (language, slug) => (!language || language === "en" ? `/${slug}/` : `/${language}/${slug}/`);
+  const getLegalPath = (language, slug) => {
+    if (!language || language === "en") {
+      return `/${slug}/`;
+    }
+
+    return `/${language}/${slug}/`;
+  };
   const legalTermsPath = getLegalPath(currentLanguage, "terms-and-conditions");
 
   const uiCopyMap = {
@@ -71,6 +77,13 @@ import { installWebVitalsReporter } from "./web-vitals.js";
       successStatus: "Solicitud enviada correctamente. Normalmente respondemos en 1 día laborable.",
       errorStatus: "No hemos podido enviar la solicitud ahora. Inténtalo de nuevo o usa la opción por e-mail.",
       submitButton: "Enviar solicitud de proyecto"
+    },
+    de: {
+      sendingButton: "Wird gesendet...",
+      sendingStatus: "Ihre Anfrage wird gesendet...",
+      successStatus: "Erfolg: Ihre Anfrage wurde gesendet. Wir antworten in der Regel innerhalb eines Arbeitstags.",
+      errorStatus: "Ihre Anfrage konnte gerade nicht gesendet werden. Bitte versuchen Sie es erneut oder nutzen Sie die E-Mail-Option.",
+      submitButton: "Projektanfrage senden"
     }
   };
   const uiCopy = uiCopyMap[currentLanguage] || uiCopyMap.en;
@@ -79,6 +92,8 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     fr: "Lire les conditions générales.",
     it: "Leggi termini e condizioni.",
     es: "Leer términos y condiciones."
+    ,
+    de: "Nutzungsbedingungen lesen."
   };
 
   const body = document.body;
@@ -99,6 +114,10 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     es: {
       parts: ["Uniformes totalmente a medida", "Desarrollo coordinado desde Barcelona", "Solicitud de proyecto clara"],
       cta: "Solicitar una primera reunión"
+    },
+    de: {
+      parts: ["Vollständig individuelle Uniformen", "Entwicklung aus Barcelona", "Klare Projektanfrage"],
+      cta: "Ein Erstgespräch anfragen"
     }
   };
 

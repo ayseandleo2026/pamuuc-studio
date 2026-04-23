@@ -2,7 +2,7 @@
   "use strict";
 
   const STORAGE_LANGUAGE = "pamuuc_lang";
-  const supportedLanguages = ["en", "fr", "it", "es"];
+  const supportedLanguages = ["en", "fr", "it", "es", "de"];
   const mobileTabDefaultOpen = new Set(["categories", "process", "contact"]);
   const mobileTabLabelMap = {
     en: {
@@ -64,6 +64,21 @@
       team: "Squadra",
       faq: "FAQ",
       contact: "Inizia la conversazione"
+    },
+    de: {
+      "logo-band": "Grundprinzipien",
+      services: "Leistungen",
+      sectors: "Für wen es gedacht ist",
+      approach: "Wie wir gestalten",
+      categories: "Was wir entwickeln",
+      process: "Prozess",
+      personalised: "Individualisierung",
+      parameters: "Produktionsparameter",
+      continuity: "Kontinuitätsmodell",
+      projects: "Ausgewählte Projekte",
+      team: "Team",
+      faq: "FAQ",
+      contact: "Lassen Sie uns Ihr Projekt formen"
     }
   };
 

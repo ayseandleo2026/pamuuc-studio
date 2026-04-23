@@ -4,96 +4,75 @@ lang: es
 active_language: es
 page_type: legal
 title: Aviso legal | Pamuuc Studio
-description: Información legal de studio.pamuuc.com
-canonical_path: /es/legal-notice/
-home_path: /es/
+description: Información legal sobre studio.pamuuc.com
+canonical_path: "/es/legal-notice/"
+home_path: "/es/"
 styles:
-  - /assets/css/shared.css
-  - /assets/css/pages/legal.css
+- "/assets/css/shared.css"
+- "/assets/css/pages/legal.css"
 alternates:
-  en: /legal-notice/
-  fr: /fr/legal-notice/
-  it: /it/legal-notice/
-  es: /es/legal-notice/
-  "x-default": /legal-notice/
+  en: "/legal-notice/"
+  fr: "/fr/legal-notice/"
+  it: "/it/legal-notice/"
+  es: "/es/legal-notice/"
+  de: "/de/legal-notice/"
+  x-default: "/legal-notice/"
 language_paths:
-  en: /legal-notice/
-  fr: /fr/legal-notice/
-  it: /it/legal-notice/
-  es: /es/legal-notice/
+  en: "/legal-notice/"
+  fr: "/fr/legal-notice/"
+  it: "/it/legal-notice/"
+  es: "/es/legal-notice/"
+  de: "/de/legal-notice/"
 ---
 <main id="main" class="legal-main">
-      <div class="container">
-                <article class="legal-card">
-          <h1>Aviso legal</h1>
-          <p>Última actualización: 9 de marzo de 2026</p>
-          <section>
-            <h2>1. TITULAR DEL SITIO WEB</h2>
-            <p>En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE), se facilita a las personas usuarias la siguiente información identificativa:</p>
-            <p>Razón social: PAMUUC ORGANIC CLOTHING S.L.</p>
-            <p>NIF/CIF: B0541782</p>
-            <p>Email: info@pamuuc.com</p>
-            <p>Sitio web: studio.pamuuc.com</p>
-            {% if site.data.company.registered_office %}<p>Domicilio social: {{ site.data.company.registered_office }}</p>{% endif %}
-            {% if site.data.company.mercantile_registry_details %}<p>Datos del Registro Mercantil: {{ site.data.company.mercantile_registry_details }}</p>{% endif %}
-          </section>
-          <section>
-            <h2>2. OBJETO DEL SITIO WEB</h2>
-            <p>El objeto de este sitio web es informar sobre los servicios ofrecidos por PAMUUC ORGANIC CLOTHING S.L., incluida la coordinación del diseño y la producción de uniformes a medida y proyectos de workwear.</p>
-          </section>
-          <section>
-            <h2>3. CONDICIONES DE USO</h2>
-            <p>El acceso a este sitio web implica la aceptación de las condiciones descritas en este Aviso legal y en el resto de políticas publicadas en el sitio web.</p>
-            <p>Las personas usuarias se comprometen a utilizar el sitio web de forma lícita y responsable.</p>
-          </section>
-          <section>
-            <h2>4. PROPIEDAD INTELECTUAL</h2>
-            <p>Todos los elementos del sitio web, incluidos textos, imágenes, diseño, logotipos, gráficos y estructura, están protegidos por derechos de propiedad intelectual titularidad de PAMUUC ORGANIC CLOTHING S.L. o de terceros que han autorizado su uso.</p>
-            <p>Queda prohibida la reproducción, distribución, transformación o comunicación pública de cualquier contenido del sitio web sin autorización previa.</p>
-          </section>
-          <section>
-            <h2>5. RESPONSABILIDAD</h2>
-            <p>PAMUUC ORGANIC CLOTHING S.L. no se responsabiliza de daños derivados de:</p>
-            <ul>
-              <li>la indisponibilidad temporal del sitio web</li>
-              <li>errores técnicos fuera de su control razonable</li>
-              <li>uso indebido del sitio web por parte de usuarios</li>
-              <li>contenidos de terceros accesibles mediante enlaces</li>
-            </ul>
-          </section>
-          <section>
-            <h2>6. ENLACES EXTERNOS</h2>
-            <p>Cuando este sitio web incluya enlaces a sitios de terceros, dichos enlaces se facilitan únicamente con finalidad informativa.</p>
-            <p>PAMUUC ORGANIC CLOTHING S.L. no es responsable del contenido ni de las prácticas de sitios web externos.</p>
-          </section>
-          <section>
-            <h2>7. LEGISLACIÓN APLICABLE</h2>
-            <p>Este Aviso legal se rige por la legislación española.</p>
-            <p>Cualquier controversia relacionada con el sitio web quedará sujeta a la jurisdicción determinada por la normativa española aplicable.</p>
-          </section>
-        </article>
-      </div>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <div class="footer-brand"><p>Pamuuc Studio</p></div>
-        <nav class="footer-links" aria-label="Enlaces del pie">
-          <a href="./">Inicio</a>
-          <a href="blog/">Blog</a>
-          <a href="privacy-policy/">Política de privacidad</a>
-          <a href="cookie-policy/">Política de cookies</a>
-          <a href="terms-and-conditions/">Términos y condiciones</a>
-          <a href="legal-notice/">Aviso legal</a>
-        </nav>
-      </div>
-    </footer>
-
-    <aside class="cookie-banner" id="cookie-banner" aria-live="polite" aria-label="Preferencias de cookies">
-      <p>Usamos cookies analíticas para mejorar studio.pamuuc.com. Puedes aceptar o rechazar este seguimiento.</p>
-      <div class="cookie-actions">
-        <button type="button" class="button button-primary" id="cookie-accept">Aceptar</button>
-        <button type="button" class="button button-secondary" id="cookie-reject">Rechazar</button>
-      </div>
-    </aside>
-  
+  <div class="container">
+    <article class="legal-card">
+      <h1>Aviso legal</h1>
+      <p>Última actualización: 9 marzo 2026</p>
+      <section>
+        <h2>1. TITULAR DEL SITIO WEB</h2>
+        <p>De conformidad con la Ley 34/2002 de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se facilita a los usuarios de este sitio web la siguiente información identificativa.</p>
+        <p>Nombre de la empresa: {{ site.data.company.name }}</p>
+        <p>NIF/CIF: {{ site.data.company.nif }}</p>
+        <p>Correo electrónico: {{ site.data.company.email }}</p>
+        <p>Sitio web: {{ site.data.company.website }}</p>
+        {% if site.data.company.registered_office %}<p>Domicilio social: {{ site.data.company.registered_office }}</p>{% endif %}
+        {% if site.data.company.mercantile_registry_details %}<p>Datos del Registro Mercantil: {{ site.data.company.mercantile_registry_details }}</p>{% endif %}
+      </section>
+      <section>
+        <h2>2. FINALIDAD DEL SITIO WEB</h2>
+        <p>La finalidad de este sitio web es facilitar información sobre los servicios ofrecidos por PAMUUC ORGANIC CLOTHING S.L., incluidos el diseño y la coordinación de la producción de uniformes a medida y proyectos de ropa de trabajo.</p>
+      </section>
+      <section>
+        <h2>3. CONDICIONES DE USO</h2>
+        <p>El acceso a este sitio web implica la aceptación de las condiciones descritas en este Aviso legal y en las demás políticas publicadas en el sitio web.</p>
+        <p>Los usuarios se comprometen a utilizar el sitio web de forma lícita y responsable.</p>
+      </section>
+      <section>
+        <h2>4. PROPIEDAD INTELECTUAL</h2>
+        <p>Todos los elementos de este sitio web, incluidos textos, imágenes, diseño, logotipos, gráficos y estructura, están protegidos por derechos de propiedad intelectual titularidad de PAMUUC ORGANIC CLOTHING S.L. o de terceros que han autorizado su uso.</p>
+        <p>Queda prohibida la reproducción, distribución, transformación o comunicación pública de cualquier contenido de este sitio web sin autorización previa.</p>
+      </section>
+      <section>
+        <h2>5. RESPONSABILIDAD</h2>
+        <p>PAMUUC ORGANIC CLOTHING S.L. no se responsabiliza de los daños derivados de:</p>
+        <ul>
+          <li>la indisponibilidad temporal del sitio web</li>
+          <li>errores técnicos fuera de un control razonable</li>
+          <li>uso indebido del sitio web por parte de los usuarios</li>
+          <li>contenidos de terceros accesibles mediante enlaces presentes en el sitio</li>
+        </ul>
+      </section>
+      <section>
+        <h2>6. ENLACES EXTERNOS</h2>
+        <p>Cuando este sitio web contenga enlaces a sitios web de terceros, dichos enlaces se facilitan únicamente con fines informativos.</p>
+        <p>PAMUUC ORGANIC CLOTHING S.L. no se responsabiliza del contenido ni de las prácticas de los sitios web externos.</p>
+      </section>
+      <section>
+        <h2>7. LEY APLICABLE</h2>
+        <p>Este Aviso legal se rige por la legislación española.</p>
+        <p>Cualquier controversia relacionada con el sitio web se someterá a la jurisdicción que determine la legislación española aplicable.</p>
+      </section>
+    </article>
+  </div>
+</main>
