@@ -10,7 +10,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const COOKIE_CONSENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
   const COOKIE_BANNER_VISIBLE_CLASS = "cookie-banner-visible";
 
-  const supportedLanguages = ["en", "fr", "it", "es"];
+  const supportedLanguages = ["en", "fr", "it", "es", "de"];
 
   // Support both custom-domain root deploys and GitHub Pages project subpaths.
   const rawPathParts = window.location.pathname.split("/").filter(Boolean);
@@ -71,6 +71,13 @@ import { installWebVitalsReporter } from "./web-vitals.js";
       successStatus: "Solicitud enviada correctamente. Normalmente respondemos en 1 día laborable.",
       errorStatus: "No hemos podido enviar la solicitud ahora. Inténtalo de nuevo o usa la opción por e-mail.",
       submitButton: "Enviar solicitud de proyecto"
+    },
+    de: {
+      sendingButton: "Wird gesendet...",
+      sendingStatus: "Ihre Anfrage wird gesendet...",
+      successStatus: "Ihre Anfrage wurde gesendet. Wir antworten in der Regel innerhalb eines Werktags.",
+      errorStatus: "Anfrage konnte nicht gesendet werden. Bitte erneut versuchen oder per E-Mail schreiben.",
+      submitButton: "Projektanfrage senden"
     }
   };
   const uiCopy = uiCopyMap[currentLanguage] || uiCopyMap.en;
@@ -78,7 +85,8 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     en: "Read terms and conditions.",
     fr: "Lire les conditions générales.",
     it: "Leggi termini e condizioni.",
-    es: "Leer términos y condiciones."
+    es: "Leer términos y condiciones.",
+    de: "AGB lesen."
   };
 
   const body = document.body;
@@ -99,6 +107,10 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     es: {
       parts: ["Uniformes totalmente a medida", "Desarrollo coordinado desde Barcelona", "Solicitud de proyecto clara"],
       cta: "Solicitar una primera reunión"
+    },
+    de: {
+      parts: ["Vollständig maßgefertigte Uniformen", "Entwicklung aus Barcelona", "Klare Projektanfrage"],
+      cta: "Erstgespräch anfragen"
     }
   };
 
