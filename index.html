@@ -9,21 +9,12 @@
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <meta content="index,follow,max-image-preview:large" name="googlebot"/>
 <link href="https://studio.pamuuc.com/" rel="canonical"/><link href="https://studio.pamuuc.com/" hreflang="en" rel="alternate"/><link href="https://studio.pamuuc.com/fr/" hreflang="fr" rel="alternate"/><link href="https://studio.pamuuc.com/it/" hreflang="it" rel="alternate"/><link href="https://studio.pamuuc.com/es/" hreflang="es" rel="alternate"/><link href="https://studio.pamuuc.com/de/" hreflang="de" rel="alternate"/><link href="https://studio.pamuuc.com/" hreflang="x-default" rel="alternate"/>
-
-
-
-
-
 <meta content="website" property="og:type"/>
 <meta content="Pamuuc Studio | Custom uniforms designed in harmony with your space and your operational needs" property="og:title"/>
 <meta content="Pamuuc Studio designs bespoke professional uniforms for hospitality, healthcare, and service teams, with local development and reliable repeat orders." property="og:description"/>
 <meta content="https://studio.pamuuc.com/" property="og:url"/>
 <meta content="Pamuuc Studio" property="og:site_name"/>
 <meta content="en_US" property="og:locale"/>
-<meta content="fr_FR" property="og:locale:alternate"/>
-<meta content="it_IT" property="og:locale:alternate"/>
-<meta content="es_ES" property="og:locale:alternate"/>
-<meta content="de_DE" property="og:locale:alternate"/>
 <meta content="https://studio.pamuuc.com/assets/images/social-home-preview.jpg" property="og:image"/>
 <meta content="Pamuuc Studio custom uniform systems preview" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
@@ -80,7 +71,7 @@
 <script crossorigin="anonymous" defer="" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script crossorigin="anonymous" defer="" integrity="sha384-xNHNOfrykny9oFwnmpfNbkSc6isny38d1GZvTRVuFV0l9fTMIZKhULvomyQJSMRl" src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 <script defer="" src="/assets/js/gsap-home.js"></script>
-<link rel="modulepreload" href="/assets/js/main.js"/>
+<link href="/assets/js/main.js" rel="modulepreload"/>
 <script defer="" src="/script.js"></script>
 <script defer="" src="/assets/js/alpine-home.js"></script>
 <script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.2/dist/cdn.min.js"></script>
@@ -102,13 +93,7 @@
 <button :aria-expanded="mobileLanguageOpen.toString()" @click.stop="toggleMobileLanguage()" aria-haspopup="true" class="mobile-language-trigger" type="button">
 <span x-text="currentLanguage.toUpperCase()"></span>
 </button>
-<nav aria-label="Language selector" class="mobile-language-menu" x-cloak="" x-show="mobileLanguageOpen">
-<a @click="rememberLanguage('en')" class="lang-link is-active" data-lang-switch="en" href="/">EN</a>
-<a @click="rememberLanguage('fr')" class="lang-link" data-lang-switch="fr" href="/fr/">FR</a>
-<a @click="rememberLanguage('it')" class="lang-link" data-lang-switch="it" href="/it/">IT</a>
-<a @click="rememberLanguage('es')" class="lang-link" data-lang-switch="es" href="/es/">ES</a>
-<a @click="rememberLanguage('de')" class="lang-link" data-lang-switch="de" href="/de/">DE</a>
-</nav>
+<nav aria-label="Language selector" class="mobile-language-menu" x-cloak="" x-show="mobileLanguageOpen"><a @click="rememberLanguage('en')" class="lang-link is-active" data-lang-switch="en" href="/">EN</a><a @click="rememberLanguage('fr')" class="lang-link" data-lang-switch="fr" href="/fr/">FR</a><a @click="rememberLanguage('it')" class="lang-link" data-lang-switch="it" href="/it/">IT</a><a @click="rememberLanguage('es')" class="lang-link" data-lang-switch="es" href="/es/">ES</a><a @click="rememberLanguage('de')" class="lang-link" data-lang-switch="de" href="/de/">DE</a></nav>
 </div>
 <nav :class="{ 'is-open': menuOpen }" @click.outside="closeMenu()" aria-label="Primary navigation" class="site-nav" id="site-nav">
 <ul class="site-nav-list"><li><a href="/#sectors">Sectors</a></li><li><a href="/#process">Process</a></li><li><a href="/#projects">Projects</a></li><li><a href="/en/blog/">Blog</a></li><li><a class="nav-cta" href="/#contact">Book an appointment</a></li></ul>
@@ -160,7 +145,7 @@
 <p>The studio focuses on the design and production of fully custom uniforms for hospitality, healthcare, and service teams.</p>
 </div>
 <div class="service-split">
-<a aria-label="Open fully custom uniform systems page" class="service-card service-card-primary reveal interactive-card service-card-link" href="/">
+<a aria-label="Open fully custom uniform systems page" class="service-card service-card-primary reveal interactive-card service-card-link" data-modal-target="modal-service-custom" href="#" role="button">
 <div class="service-topline">STUDIO SERVICE</div>
 <h3>Custom uniforms</h3>
 <p>Developed on a project basis to respond precisely to operational roles, movement requirements, long-term durability, and alignment with brand identity.</p>
@@ -189,14 +174,13 @@
 <h2>Designed for six operational contexts</h2>
 <p>Select a sector to explore representative garments, application contexts, and the role clothing plays in the everyday experience</p>
 </div>
-
 <div aria-label="Sector pills" class="sector-pill-grid reveal">
-<a class="sector-pill" href="/sectors/hotel-uniforms/">Hospitality</a>
-<a class="sector-pill" href="/sectors/restaurant-uniforms/">Food and beverage</a>
-<a class="sector-pill" href="/sectors/wellness-uniforms/">Wellness</a>
-<a class="sector-pill" href="/sectors/medical-clinic-uniforms/">Healthcare</a>
-<a class="sector-pill" href="/sectors/service-team-uniforms/">Service staff</a>
-<a class="sector-pill" href="/sectors/guest-service-uniforms/">Guest services</a>
+<a class="sector-pill" data-modal-target="modal-sector-hotels" href="#" role="button">Hospitality</a>
+<a class="sector-pill" data-modal-target="modal-sector-restaurants" href="#" role="button">Food and beverage</a>
+<a class="sector-pill" data-modal-target="modal-sector-wellness" href="#" role="button">Wellness</a>
+<a class="sector-pill" data-modal-target="modal-sector-medical" href="#" role="button">Healthcare</a>
+<a class="sector-pill" data-modal-target="modal-sector-service" href="#" role="button">Service staff</a>
+<a class="sector-pill" data-modal-target="modal-sector-guest" href="#" role="button">Guest services</a>
 </div>
 </div>
 </section>
@@ -254,7 +238,6 @@
 <span class="pill pill-garment">Jackets</span>
 <span class="pill pill-garment">Outerwear</span>
 <span class="pill pill-garment">Coordinated accessories</span>
-<span class="pill pill-garment">Accessories</span>
 </div>
 </div>
 <div class="scope-group reveal">
@@ -301,19 +284,19 @@
 <p>Each phase is structured to define objectives, guide the work, and produce tangible results, contributing to the overall success of the project.</p>
 </div>
 <div class="phase-grid">
-<a aria-label="Open discovery phase page" class="phase-card reveal interactive-card service-card-link" href="/process/#discovery">
+<a aria-label="Open discovery phase page" class="phase-card reveal interactive-card service-card-link" data-modal-target="modal-phase-1" href="#" role="button">
 <p class="phase-tag">- PHASE 01</p>
 <h3>Discovery</h3><p class="phase-description">We define the project clearly before beginning development</p>
 <ul><li>Analysis of operational dynamics</li><li>Mapping roles and functional needs</li><li>Definition of the initial product direction</li></ul>
 <span class="card-hint">Learn more about the phase</span>
 </a>
-<a aria-label="Open development phase page" class="phase-card reveal interactive-card service-card-link" href="/process/#development">
+<a aria-label="Open development phase page" class="phase-card reveal interactive-card service-card-link" data-modal-target="modal-phase-2" href="#" role="button">
 <p class="phase-tag">- PHASE 02</p>
 <h3>Development</h3><p class="phase-description">We test, refine, and prepare the product for production</p>
 <ul><li>Material and fabric validation</li><li>Prototype development, sampling, and fittings</li><li>Review and optimisation cycles</li></ul>
 <span class="card-hint">Learn more about the phase</span>
 </a>
-<a aria-label="Open production phase page" class="phase-card reveal interactive-card service-card-link" href="/process/#production">
+<a aria-label="Open production phase page" class="phase-card reveal interactive-card service-card-link" data-modal-target="modal-phase-3" href="#" role="button">
 <p class="phase-tag">- PHASE 03</p>
 <h3>Production</h3><p class="phase-description">From final approval to manufacturing and delivery</p>
 <ul><li>Pre-production approval</li><li>Local production</li><li>Delivery and replenishment setup</li></ul>
@@ -410,35 +393,22 @@
 <p>Open each section to explore quantities and variables linked to lead times.</p>
 </div>
 <div class="parameter-grid parameter-grid-three">
-<a aria-label="Open minimum quantities page section" class="parameter-card reveal parameter-card-stat interactive-card service-card-link" href="/production/#minimum-quantities">
+<a aria-label="Open minimum quantities page section" class="parameter-card reveal parameter-card-stat interactive-card service-card-link" data-modal-target="modal-parameter-quantities" href="#" role="button">
 <h3>Recommended minimum quantities</h3>
-<p class="parameter-note">We can produce from as low as 5 pieces per style, although pricing will be impacted.</p>
-<div class="value-stack">
-<div>
-<strong>10–15 pieces</strong>
-<span>Woven garments per style. This allows us to also serve small teams with bespoke uniforms.</span>
-</div>
-<div>
-<strong>100–150 pieces</strong>
-<span>Knitwear per style. Due to the manufacturing process, knitwear requires higher quantities.</span>
-</div>
-</div>
+<p class="parameter-note">Lower quantities are possible, with a possible increase in unit cost.</p>
 <span class="card-hint">Click to view details</span>
 </a>
-<a aria-label="Open pricing page section" class="parameter-card reveal parameter-card-stat interactive-card service-card-link" href="/production/#pricing-approach">
+<a aria-label="Open pricing page section" class="parameter-card reveal parameter-card-stat interactive-card service-card-link" data-modal-target="modal-parameter-pricing" href="#" role="button">
 <h3>A BESPOKE INVESTMENT</h3>
 <p class="parameter-note">Every project has its own characteristics, and pricing is defined accordingly. We do not work with rigid price lists. Each proposal is developed around your brand’s actual needs, finding the right balance between aesthetics, functionality, and budget.</p>
-
-<span class="card-hint">Learn more about the details</span>
+<p class="parameter-note">Our approach is direct: we start from your priorities, image, operational use, long-term durability, and build the project around those elements. Every choice is calibrated carefully, from material selection to customisation solutions, to ensure consistency between the visual result, garment performance, and overall investment. This allows us to maintain control and clarity throughout the process.</p><p class="parameter-note">The final cost is influenced by several factors, such as the selected materials, level of customisation, garment complexity, and quantities. The overall composition of the wardrobe also contributes to the final result.</p><span class="card-hint">Learn more about the details</span>
 </a>
-<a aria-label="Open cost driver page section" class="parameter-card reveal interactive-card service-card-link" href="/production/#cost-drivers">
+<a aria-label="Open cost driver page section" class="parameter-card reveal interactive-card service-card-link" data-modal-target="modal-parameter-timing" href="#" role="button">
 <h3>Timing factors</h3>
 <p class="parameter-note">The elements that influence development and production timelines:</p>
 <ul class="parameter-list"><li>Pattern development and definition</li><li>Fittings, checks, and review cycles</li><li>Technical constructions or bespoke solutions</li><li>Level of finishing complexity</li></ul>
 <span class="card-hint">Learn more about the details</span>
 </a>
-
-
 </div>
 </div>
 </section>
@@ -597,7 +567,6 @@
 <div class="reassurance-card"><p>We invite you to complete the form. You will be contacted shortly to arrange a dedicated meeting, in your space in Barcelona or in your city in Spain or abroad, or an initial introductory video call designed to understand your context, operational needs, and project identity in depth.</p></div>
 <div class="cta-actions">
 <a class="button button-primary" href="mailto:andreas@pamuuc.com,federica@pamuuc.com,leo.gobbato@pamuuc.com?subject=Pamuuc%20Studio%20project%20request">Prefer email</a>
-
 </div>
 </div>
 <form action="https://formspree.io/f/mlgpvble" autocomplete="on" class="contact-card" enctype="application/x-www-form-urlencoded" id="contact-form" method="post">
@@ -702,7 +671,6 @@
 <template id="modal-phase-3"><article class="modal-article"><h2>PHASE 03 — PRODUCTION</h2><p>Continuity, precision, control</p><p>Once approved, the garments move into production with finalised patterns, materials, and finishes.</p><p>Local production allows direct quality control and greater reliability on delivery timelines.</p><p>Main activities</p><p>Pre-production approval</p><p>Size development</p><p>Production</p><p>Preparation and delivery</p></article></template>
 <template id="modal-parameter-quantities"><article class="modal-article"><h2>MINIMUM QUANTITIES</h2><p>A balance between quality and production sustainability</p><p>Minimum quantities vary according to garment construction and selected materials.</p><p>General guidance</p><p>Woven garments: starting from around 50 pieces per style, distributed across sizes and variants</p><p>Knitwear: generally between 100 and 150 pieces per style</p><p>Lower quantities can be considered, with possible variations linked to production efficiency.</p></article></template>
 <template id="modal-parameter-pricing"><article class="modal-article"><h2>TAILORED TO YOUR BUDGET</h2><p>We believe every company should be able to rely on professional uniforms without compromising its budget. That is why we adapt to your economic needs, offering flexible, customised solutions that guarantee quality, style, and consistency with your brand identity. We work alongside you to find the right balance between investment and result, creating uniforms that strengthen your brand.</p></article></template>
-
-<template id="modal-parameter-timing"><article class="modal-article"><h2>TIME FACTORS</h2><p>Project timelines depend on the complexity of development and the production schedule.</p><p>Typical timelines</p><p>Development: 4–6 weeks</p><p>Production: 3–5 weeks</p><p>Fully bespoke projects generally require around 8 weeks from initial idea to delivery.</p><p>Factors that influence timing</p><ul><li>Pattern development</li><li>Fittings and revisions</li><li>Special constructions</li><li>Fabric sourcing</li></ul></article></template>
+<template id="modal-parameter-timing"><article class="modal-article"><h2>TIME FACTORS</h2><p>Project timelines depend on the complexity of development and the production schedule.</p><p>Typical timelines</p><p>Development: 4–6 weeks</p><p>Production: 3–5 weeks</p><p>Fully bespoke projects generally require around 8 weeks from initial idea to delivery.</p><p>Factors that influence timing</p><ul><li>Pattern development</li><li>Fittings and revisions</li><li>Special constructions</li><li>Fabric sourcing</li></ul><p>Good planning allows for smoother development and reliable delivery timelines.</p></article></template>
 </body>
 </html>

@@ -9,28 +9,19 @@
 <meta content="index,follow,max-image-preview:large" name="robots"/>
 <meta content="index,follow,max-image-preview:large" name="googlebot"/>
 <link href="https://studio.pamuuc.com/fr/" rel="canonical"/><link href="https://studio.pamuuc.com/" hreflang="en" rel="alternate"/><link href="https://studio.pamuuc.com/fr/" hreflang="fr" rel="alternate"/><link href="https://studio.pamuuc.com/it/" hreflang="it" rel="alternate"/><link href="https://studio.pamuuc.com/es/" hreflang="es" rel="alternate"/><link href="https://studio.pamuuc.com/de/" hreflang="de" rel="alternate"/><link href="https://studio.pamuuc.com/" hreflang="x-default" rel="alternate"/>
-
-
-
-
-
 <meta content="website" property="og:type"/>
 <meta content="Pamuuc Studio | Uniformes sur mesure conçus en harmonie avec votre espace et vos besoins opérationnels" property="og:title"/>
 <meta content="Pamuuc Studio conçoit des uniformes professionnels sur mesure pour l’hôtellerie, la santé et les équipes de service, avec un développement local et des réassorts fiables." property="og:description"/>
 <meta content="https://studio.pamuuc.com/fr/" property="og:url"/>
 <meta content="Pamuuc Studio" property="og:site_name"/>
 <meta content="fr_FR" property="og:locale"/>
-<meta content="en_US" property="og:locale:alternate"/>
-<meta content="it_IT" property="og:locale:alternate"/>
-<meta content="es_ES" property="og:locale:alternate"/>
-<meta content="de_DE" property="og:locale:alternate"/>
 <meta content="https://studio.pamuuc.com/assets/images/social-home-preview.jpg" property="og:image"/>
-<meta content="Aperçu des systèmes d’uniformes sur mesure de Pamuuc Studio" property="og:image:alt"/>
+<meta content="Pamuuc Studio custom uniform systems preview" property="og:image:alt"/>
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="Pamuuc Studio | Uniformes sur mesure conçus en harmonie avec votre espace et vos besoins opérationnels" name="twitter:title"/>
 <meta content="Pamuuc Studio conçoit des uniformes professionnels sur mesure pour l’hôtellerie, la santé et les équipes de service, avec un développement local et des réassorts fiables." name="twitter:description"/>
 <meta content="https://studio.pamuuc.com/assets/images/social-home-preview.jpg" name="twitter:image"/>
-<meta content="Aperçu des systèmes d’uniformes sur mesure de Pamuuc Studio" name="twitter:image:alt"/>
+<meta content="Pamuuc Studio custom uniform systems preview" name="twitter:image:alt"/>
 <meta content="#fcf9f3" name="theme-color"/>
 <meta content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; form-action https://formspree.io; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
 <meta content="strict-origin-when-cross-origin" name="referrer"/>
@@ -58,7 +49,7 @@
       "url": "https://studio.pamuuc.com/",
       "serviceType": "Custom uniform design and workwear development",
       "areaServed": "Europe",
-      "description": "Uniformes et tenues de travail sur mesure pour l’hôtellerie, le médical et les équipes de service."
+      "description": "Custom uniforms and workwear for hospitality, medical, and service teams."
     }
   </script>
 <script type="application/ld+json">
@@ -80,7 +71,7 @@
 <script crossorigin="anonymous" defer="" integrity="sha384-sG0Hv1tP1lZCk9KQmrIbY/XNwi+OY84GQqhMscbnsoBFqAz8KNCil1kvfL3Hbbk2" src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
 <script crossorigin="anonymous" defer="" integrity="sha384-xNHNOfrykny9oFwnmpfNbkSc6isny38d1GZvTRVuFV0l9fTMIZKhULvomyQJSMRl" src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/ScrollTrigger.min.js"></script>
 <script defer="" src="/assets/js/gsap-home.js"></script>
-<link rel="modulepreload" href="/assets/js/main.js"/>
+<link href="/assets/js/main.js" rel="modulepreload"/>
 <script defer="" src="/script.js"></script>
 <script defer="" src="/assets/js/alpine-home.js"></script>
 <script crossorigin="anonymous" defer="" src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.2/dist/cdn.min.js"></script>
@@ -89,10 +80,10 @@
 <a class="skip-link" href="#main">Aller au contenu</a>
 <header class="site-header" id="top">
 <div class="container header-inner">
-<a aria-label="Accueil Pamuuc Studio" class="brand" href="/fr/">
+<a aria-label="Pamuuc Studio home" class="brand" href="/fr/">
 <img alt="Pamuuc Studio" class="brand-logo" height="34" src="/assets/images/logo.png" width="190"/>
 </a>
-<button :aria-expanded="menuOpen.toString()" @click.stop="toggleMenu()" aria-controls="site-nav" aria-label="Ouvrir le menu" class="menu-toggle" type="button">
+<button :aria-expanded="menuOpen.toString()" @click.stop="toggleMenu()" aria-controls="site-nav" aria-label="Open menu" class="menu-toggle" type="button">
 <span></span>
 <span></span>
 <span></span>
@@ -102,18 +93,12 @@
 <button :aria-expanded="mobileLanguageOpen.toString()" @click.stop="toggleMobileLanguage()" aria-haspopup="true" class="mobile-language-trigger" type="button">
 <span x-text="currentLanguage.toUpperCase()"></span>
 </button>
-<nav aria-label="Sélecteur de langue" class="mobile-language-menu" x-cloak="" x-show="mobileLanguageOpen">
-<a @click="rememberLanguage('en')" class="lang-link" data-lang-switch="en" href="/">EN</a>
-<a @click="rememberLanguage('fr')" class="lang-link is-active" data-lang-switch="fr" href="/fr/">FR</a>
-<a @click="rememberLanguage('it')" class="lang-link" data-lang-switch="it" href="/it/">IT</a>
-<a @click="rememberLanguage('es')" class="lang-link" data-lang-switch="es" href="/es/">ES</a>
-<a @click="rememberLanguage('de')" class="lang-link" data-lang-switch="de" href="/de/">DE</a>
-</nav>
+<nav aria-label="Language selector" class="mobile-language-menu" x-cloak="" x-show="mobileLanguageOpen"><a @click="rememberLanguage('en')" class="lang-link" data-lang-switch="en" href="/">EN</a><a @click="rememberLanguage('fr')" class="lang-link is-active" data-lang-switch="fr" href="/fr/">FR</a><a @click="rememberLanguage('it')" class="lang-link" data-lang-switch="it" href="/it/">IT</a><a @click="rememberLanguage('es')" class="lang-link" data-lang-switch="es" href="/es/">ES</a><a @click="rememberLanguage('de')" class="lang-link" data-lang-switch="de" href="/de/">DE</a></nav>
 </div>
-<nav :class="{ 'is-open': menuOpen }" @click.outside="closeMenu()" aria-label="Navigation principale" class="site-nav" id="site-nav">
+<nav :class="{ 'is-open': menuOpen }" @click.outside="closeMenu()" aria-label="Primary navigation" class="site-nav" id="site-nav">
 <ul class="site-nav-list"><li><a href="/fr/#sectors">Secteurs</a></li><li><a href="/fr/#process">Processus</a></li><li><a href="/fr/#projects">Projets</a></li><li><a href="/fr/blog/">Blog</a></li><li><a class="nav-cta" href="/fr/#contact">Réserver un rendez-vous</a></li></ul>
 </nav>
-<nav aria-label="Sélecteur de langue" class="language-switcher"><a class="lang-link" data-lang-switch="en" href="/">EN</a><a class="lang-link is-active" data-lang-switch="fr" href="/fr/">FR</a><a class="lang-link" data-lang-switch="it" href="/it/">IT</a><a class="lang-link" data-lang-switch="es" href="/es/">ES</a><a class="lang-link" data-lang-switch="de" href="/de/">DE</a></nav>
+<nav aria-label="Language selector" class="language-switcher"><a class="lang-link" data-lang-switch="en" href="/">EN</a><a class="lang-link is-active" data-lang-switch="fr" href="/fr/">FR</a><a class="lang-link" data-lang-switch="it" href="/it/">IT</a><a class="lang-link" data-lang-switch="es" href="/es/">ES</a><a class="lang-link" data-lang-switch="de" href="/de/">DE</a></nav>
 </div>
 </header>
 <main id="main">
@@ -123,7 +108,7 @@
 <p class="eyebrow">STUDIO DE DESIGN ET DE PRODUCTION D’UNIFORMES SUR MESURE</p>
 <h1>Des uniformes conçus en harmonie avec votre espace et vos besoins opérationnels</h1>
 <p class="hero-lead">Pas seulement un uniforme, mais un reflet de votre professionnalisme : pensé pour votre activité, façonné autour de votre histoire.</p>
-<div aria-label="Points clés du studio" class="pill-row hero-pill-row">
+<div aria-label="Studio highlights" class="pill-row hero-pill-row">
 <span class="pill">Uniformes sur mesure</span>
 <span class="pill">Fonctionnalité élégante</span>
 <span class="pill">Contrôle direct et stratégique de la production locale</span>
@@ -138,7 +123,7 @@
 <div class="visual-card visual-card-main">
 <picture>
 <source media="(max-width: 767px)" srcset="../assets/images/hero-mobile.svg" type="image/svg+xml"/>
-<img alt="Composition éditoriale pour la direction des uniformes sur mesure" fetchpriority="high" height="440" src="../assets/images/hero-desktop.svg" width="560"/>
+<img alt="Editorial composition for custom uniform direction" fetchpriority="high" height="440" src="../assets/images/hero-desktop.svg" width="560"/>
 </picture>
 </div>
 <div class="floating-proof floating-proof-top">
@@ -160,7 +145,7 @@
 <p>Le studio se concentre sur le design et la production d’uniformes entièrement personnalisés pour l’hôtellerie, la santé et les équipes de service.</p>
 </div>
 <div class="service-split">
-<a aria-label="Ouvrir la page des uniformes sur mesure" class="service-card service-card-primary reveal interactive-card service-card-link" href="/fr/">
+<a aria-label="Open fully custom uniform systems page" class="service-card service-card-primary reveal interactive-card service-card-link" data-modal-target="modal-service-custom" href="#" role="button">
 <div class="service-topline">SERVICE DU STUDIO</div>
 <h3>Uniformes sur mesure</h3>
 <p>Développés projet par projet pour répondre avec précision aux rôles opérationnels, aux besoins de mouvement, à la durabilité dans le temps et à l’alignement avec l’identité de marque.</p>
@@ -189,13 +174,13 @@
 <h2>Conçu pour six contextes opérationnels</h2>
 <p>Sélectionnez un secteur pour découvrir des pièces représentatives, leurs contextes d’application et le rôle que joue le vêtement dans l’expérience quotidienne</p>
 </div>
-<div aria-label="Pills secteurs" class="sector-pill-grid reveal">
-<button class="sector-pill" data-item-name="hotels" data-modal-target="modal-sector-hotels" data-track-event="sector_click" type="button">Hôtellerie</button>
-<button class="sector-pill" data-item-name="restaurants" data-modal-target="modal-sector-restaurants" data-track-event="sector_click" type="button">Restauration</button>
-<button class="sector-pill" data-item-name="wellness" data-modal-target="modal-sector-wellness" data-track-event="sector_click" type="button">Bien-être</button>
-<button class="sector-pill" data-item-name="medical" data-modal-target="modal-sector-medical" data-track-event="sector_click" type="button">Santé</button>
-<button class="sector-pill" data-item-name="service_teams" data-modal-target="modal-sector-service" data-track-event="sector_click" type="button">Personnel de service</button>
-<button class="sector-pill" data-item-name="guest_services" data-modal-target="modal-sector-guest" data-track-event="sector_click" type="button">Services aux clients</button>
+<div aria-label="Sector pills" class="sector-pill-grid reveal">
+<a class="sector-pill" data-modal-target="modal-sector-hotels" href="#" role="button">Hôtellerie</a>
+<a class="sector-pill" data-modal-target="modal-sector-restaurants" href="#" role="button">Restauration</a>
+<a class="sector-pill" data-modal-target="modal-sector-wellness" href="#" role="button">Bien-être</a>
+<a class="sector-pill" data-modal-target="modal-sector-medical" href="#" role="button">Santé</a>
+<a class="sector-pill" data-modal-target="modal-sector-service" href="#" role="button">Personnel de service</a>
+<a class="sector-pill" data-modal-target="modal-sector-guest" href="#" role="button">Services aux clients</a>
 </div>
 </div>
 </section>
@@ -205,28 +190,28 @@
 <p class="section-kicker">NOTRE APPROCHE DU DESIGN</p>
 <p>Une approche qui part du lieu et se traduit en uniformes pensés pour l’équipe et pour l’expérience dans son ensemble.</p>
 <figure aria-hidden="true" class="method-visual">
-<img alt="Processus de prise de mesure textile et développement des pièces" decoding="async" height="420" loading="lazy" src="../assets/images/approach-desktop.svg" width="640"/>
+<img alt="Fabric measurement and garment development process" decoding="async" height="420" loading="lazy" src="../assets/images/approach-desktop.svg" width="640"/>
 </figure>
 </div>
 <div class="method-grid">
 <article class="method-card reveal">
-<span class="method-number">01 | L’espace</span>
-<h3></h3>
+<span class="method-number">01</span>
+<h3>L’espace</h3>
 <p>L’architecture, les matières et l’atmosphère définissent la direction esthétique et créative.</p>
 </article>
 <article class="method-card reveal">
-<span class="method-number">02 | Les rôles</span>
-<h3></h3>
+<span class="method-number">02</span>
+<h3>Les rôles</h3>
 <p>Chaque fonction est analysée en lien avec le mouvement, le rythme opérationnel et les tâches du quotidien.</p>
 </article>
 <article class="method-card reveal">
-<span class="method-number">03 | Les pièces</span>
-<h3></h3>
+<span class="method-number">03</span>
+<h3>Les pièces</h3>
 <p>La coupe, la silhouette et les catégories de produits sont harmonisées afin d’assurer une cohérence visuelle et fonctionnelle.</p>
 </article>
 <article class="method-card reveal">
-<span class="method-number">04 | Les opérations</span>
-<h3></h3>
+<span class="method-number">04</span>
+<h3>Les opérations</h3>
 <p>Les solutions sont développées pour répondre aux besoins réels d’usage, en garantissant efficacité, confort et continuité dans le temps.</p>
 </article>
 </div>
@@ -253,7 +238,6 @@
 <span class="pill pill-garment">Vestes</span>
 <span class="pill pill-garment">Vêtements d’extérieur</span>
 <span class="pill pill-garment">Accessoires coordonnés</span>
-<span class="pill pill-garment">Accessoires</span>
 </div>
 </div>
 <div class="scope-group reveal">
@@ -287,7 +271,7 @@
 <div class="category-visual reveal">
 <picture>
 <source media="(max-width: 767px)" srcset="../assets/images/system-mobile.svg" type="image/svg+xml"/>
-<img alt="Illustration du système vestimentaire" decoding="async" height="430" loading="lazy" src="../assets/images/system-desktop.svg" width="540"/>
+<img alt="Wardrobe system illustration" decoding="async" height="430" loading="lazy" src="../assets/images/system-desktop.svg" width="540"/>
 </picture>
 </div>
 </div>
@@ -300,24 +284,24 @@
 <p>Chaque phase est structurée pour définir les objectifs, guider le travail et produire des résultats concrets, au service de la réussite globale du projet.</p>
 </div>
 <div class="phase-grid">
-<article aria-label="Ouvrir les détails de la phase d'analyse" class="phase-card reveal interactive-card" data-item-name="phase_1_discovery" data-modal-target="modal-phase-1" data-track-event="process_phase_click" role="button" tabindex="0">
-<p class="phase-tag">- PHASE 01 | Découverte</p>
-<h3></h3><p class="phase-description">Nous définissons clairement le projet avant de lancer le développement</p>
+<a aria-label="Open discovery phase page" class="phase-card reveal interactive-card service-card-link" data-modal-target="modal-phase-1" href="#" role="button">
+<p class="phase-tag">- PHASE 01</p>
+<h3>Découverte</h3><p class="phase-description">Nous définissons clairement le projet avant de lancer le développement</p>
 <ul><li>Analyse des dynamiques opérationnelles</li><li>Cartographie des rôles et des besoins fonctionnels</li><li>Définition de la direction produit initiale</li></ul>
 <span class="card-hint">En savoir plus sur cette phase</span>
-</article>
-<article aria-label="Ouvrir les détails de la phase de developpement" class="phase-card reveal interactive-card" data-item-name="phase_2_development" data-modal-target="modal-phase-2" data-track-event="process_phase_click" role="button" tabindex="0">
-<p class="phase-tag">- PHASE 02 | Développement</p>
-<h3></h3><p class="phase-description">Nous testons, affinons et préparons le produit pour la production</p>
+</a>
+<a aria-label="Open development phase page" class="phase-card reveal interactive-card service-card-link" data-modal-target="modal-phase-2" href="#" role="button">
+<p class="phase-tag">- PHASE 02</p>
+<h3>Développement</h3><p class="phase-description">Nous testons, affinons et préparons le produit pour la production</p>
 <ul><li>Validation des matières et des tissus</li><li>Développement des prototypes, échantillonnage et essayages</li><li>Cycles de révision et d’optimisation</li></ul>
 <span class="card-hint">En savoir plus sur cette phase</span>
-</article>
-<article aria-label="Ouvrir les détails de la phase de production" class="phase-card reveal interactive-card" data-item-name="phase_3_production" data-modal-target="modal-phase-3" data-track-event="process_phase_click" role="button" tabindex="0">
-<p class="phase-tag">- PHASE 03 | Production</p>
-<h3></h3><p class="phase-description">De l’approbation finale à la fabrication et à la livraison</p>
+</a>
+<a aria-label="Open production phase page" class="phase-card reveal interactive-card service-card-link" data-modal-target="modal-phase-3" href="#" role="button">
+<p class="phase-tag">- PHASE 03</p>
+<h3>Production</h3><p class="phase-description">De l’approbation finale à la fabrication et à la livraison</p>
 <ul><li>Validation préproduction</li><li>Production locale</li><li>Livraison et mise en place des réassorts</li></ul>
 <span class="card-hint">En savoir plus sur cette phase</span>
-</article>
+</a>
 </div>
 <h3 class="stat-band-label">Délais indicatifs</h3><div class="stat-band reveal">
 <div class="stat-item">
@@ -378,21 +362,21 @@
 </div>
 <div class="trust-grid full-span">
 <article class="material-card reveal">
-<img alt="Illustration du développement local" decoding="async" height="94" loading="lazy" src="../assets/images/icon-local-development.svg" width="94"/>
+<img alt="Local development illustration" decoding="async" height="94" loading="lazy" src="../assets/images/icon-local-development.svg" width="94"/>
 <div>
 <h3>Au plus près du projet</h3>
 <p>L’échantillonnage et les essayages réalisés localement permettent des décisions techniques plus rapides, plus précises et plus éclairées.</p>
 </div>
 </article>
 <article class="material-card reveal">
-<img alt="Illustration du design opérationnel" decoding="async" height="94" loading="lazy" src="../assets/images/icon-operational-design.svg" width="94"/>
+<img alt="Operational design illustration" decoding="async" height="94" loading="lazy" src="../assets/images/icon-operational-design.svg" width="94"/>
 <div>
 <h3>Pensé pour le travail réel</h3>
 <p>Chaque pièce est développée en tenant compte du mouvement, de la durée des services et du rythme opérationnel quotidien.</p>
 </div>
 </article>
 <article class="material-card reveal">
-<img alt="Illustration de la continuité" decoding="async" height="94" loading="lazy" src="../assets/images/icon-continuity.svg" width="94"/>
+<img alt="Continuity illustration" decoding="async" height="94" loading="lazy" src="../assets/images/icon-continuity.svg" width="94"/>
 <div>
 <h3>Préparé pour la continuité</h3>
 <p>Les patronages, finitions et spécifications sont archivés pour assurer des réassorts cohérents dans le temps et accompagner l’évolution de l’équipe.</p>
@@ -409,34 +393,22 @@
 <p>Ouvrez chaque section pour découvrir les quantités et les variables liées aux délais.</p>
 </div>
 <div class="parameter-grid parameter-grid-three">
-<article aria-label="Ouvrir les détails des quantités minimales" class="parameter-card reveal parameter-card-stat interactive-card" data-item-name="minimum_quantities" data-modal-target="modal-parameter-quantities" data-track-event="production_parameter_click" role="button" tabindex="0">
+<a aria-label="Open minimum quantities page section" class="parameter-card reveal parameter-card-stat interactive-card service-card-link" data-modal-target="modal-parameter-quantities" href="#" role="button">
 <h3>Quantités minimales recommandées</h3>
-<p class="parameter-note">Nous pouvons produire à partir de 5 pièces par modèle, bien que cela puisse impacter le prix.</p>
-<div class="value-stack">
-<div>
-<strong>10–15 pièces</strong>
-<span>Vêtements tissés par modèle. Cela nous permet également de servir les petites équipes avec des uniformes sur mesure.</span>
-</div>
-<div>
-<strong>100–150 pièces</strong>
-<span>Maille par modèle. En raison du processus de fabrication, la maille nécessite des quantités plus élevées.</span>
-</div>
-</div>
+<p class="parameter-note">Des quantités inférieures sont possibles, avec une éventuelle hausse du coût unitaire.</p>
 <span class="card-hint">Cliquez pour voir les détails</span>
-</article>
-<article aria-label="Ouvrir l'explication des prix" class="parameter-card reveal parameter-card-stat interactive-card" data-item-name="pricing_variables" data-modal-target="modal-parameter-pricing" data-track-event="production_parameter_click" role="button" tabindex="0">
+</a>
+<a aria-label="Open pricing page section" class="parameter-card reveal parameter-card-stat interactive-card service-card-link" data-modal-target="modal-parameter-pricing" href="#" role="button">
 <h3>UN INVESTISSEMENT SUR MESURE</h3>
 <p class="parameter-note">Chaque projet a ses propres caractéristiques, et le prix est défini en conséquence. Nous ne travaillons pas avec des grilles tarifaires rigides. Chaque proposition est construite autour des besoins réels de votre marque, en trouvant le bon équilibre entre esthétique, fonctionnalité et budget.</p>
-
-<span class="card-hint">En savoir plus</span>
-</article>
-<article aria-label="Ouvrir les détails des facteurs de cout" class="parameter-card reveal interactive-card" data-item-name="cost_drivers" data-modal-target="modal-parameter-cost-drivers" data-track-event="production_parameter_click" role="button" tabindex="0">
+<p class="parameter-note">Notre approche est directe : nous partons de vos priorités, image, usage opérationnel, durabilité dans le temps, puis nous construisons le projet autour de ces éléments. Chaque choix est calibré avec soin, de la sélection des matières aux solutions de personnalisation, afin d’assurer une cohérence entre le rendu visuel, la performance du vêtement et l’investissement global. Cela nous permet de garder le contrôle et une vraie clarté tout au long du processus.</p><p class="parameter-note">Le coût final dépend de plusieurs facteurs, comme les matières sélectionnées, le niveau de personnalisation, la complexité des pièces et les quantités. La composition globale de la garde-robe contribue elle aussi au résultat final.</p><span class="card-hint">En savoir plus</span>
+</a>
+<a aria-label="Open cost driver page section" class="parameter-card reveal interactive-card service-card-link" data-modal-target="modal-parameter-timing" href="#" role="button">
 <h3>Facteurs de délai</h3>
 <p class="parameter-note">Les éléments qui influencent les délais de développement et de production :</p>
 <ul class="parameter-list"><li>Développement et définition des patronages</li><li>Essayages, contrôles et cycles de révision</li><li>Constructions techniques ou solutions sur mesure</li><li>Niveau de complexité des finitions</li></ul>
 <span class="card-hint">En savoir plus</span>
-</article>
-
+</a>
 </div>
 </div>
 </section>
@@ -470,7 +442,7 @@
 <div>Avec le temps, la cohérence reste intacte, même lorsque l’équipe évolue.</div>
 </div>
 </div>
-<div aria-label="Flux de continuité" class="loop-card">
+<div aria-label="Continuity flow" class="loop-card">
 <span class="loop-step">Valider une fois</span>
 <span aria-hidden="true" class="loop-arrow">→</span>
 <span class="loop-step">Archiver les patronages</span>
@@ -489,10 +461,10 @@
 </div>
 <div class="project-grid">
 <article class="project-card reveal">
-<a aria-label="Lire l’article sur les uniformes personnalisés pour l’hôtellerie" class="project-card-link" href="blog/uniformes-hotellerie-personnalises/">
+<a aria-label="Read the METT Barcelona hospitality uniforms blog post" class="project-card-link" href="en/blog/custom-hospitality-uniforms/">
 <picture>
 <source media="(max-width: 767px)" srcset="../assets/images/project-hospitality-editorial.svg" type="image/svg+xml"/>
-<img alt="Visuel projet pour environnement hotelier" decoding="async" height="250" loading="lazy" src="../assets/images/project-hospitality-editorial.svg" width="520"/>
+<img alt="Project visual for hospitality environment" decoding="async" height="250" loading="lazy" src="../assets/images/project-hospitality-editorial.svg" width="520"/>
 </picture>
 <div class="project-body">
 <span class="project-tag">GARDE-ROBE HÔTELLERIE</span>
@@ -502,10 +474,10 @@
 </a>
 </article>
 <article class="project-card reveal">
-<a aria-label="Lire l’article sur les uniformes pour studios de bien-être" class="project-card-link" href="blog/uniformes-studios-bien-etre/">
+<a aria-label="Read the wellness studio uniforms blog post" class="project-card-link" href="en/blog/wellness-studio-uniform-system/">
 <picture>
 <source media="(max-width: 767px)" srcset="../assets/images/project-multi-role-service-team.svg" type="image/svg+xml"/>
-<img alt="Visuel projet pour continuite et reassorts" decoding="async" height="250" loading="lazy" src="../assets/images/project-multi-role-service-team.svg" width="520"/>
+<img alt="Project visual for continuity and reorders" decoding="async" height="250" loading="lazy" src="../assets/images/project-multi-role-service-team.svg" width="520"/>
 </picture>
 <div class="project-body">
 <span class="project-tag">CONTINUITÉ OPÉRATIONNELLE</span>
@@ -515,10 +487,10 @@
 </a>
 </article>
 <article class="project-card reveal">
-<a aria-label="Lire l’article sur les uniformes de clinique dentaire sur mesure" class="project-card-link" href="blog/uniformes-clinique-dentaire-sur-mesure-barcelone/">
+<a aria-label="Read the custom dental clinic uniforms blog post" class="project-card-link" href="en/blog/custom-dental-clinic-uniforms-barcelona/">
 <picture>
 <source media="(max-width: 767px)" srcset="../assets/images/project-clinic-editorial.svg" type="image/svg+xml"/>
-<img alt="Visuel projet pour uniformes medicaux et de service" decoding="async" height="250" loading="lazy" src="../assets/images/project-clinic-editorial.svg" width="520"/>
+<img alt="Project visual for medical and service uniforms" decoding="async" height="250" loading="lazy" src="../assets/images/project-clinic-editorial.svg" width="520"/>
 </picture>
 <div class="project-body">
 <span class="project-tag">DIRECTION UNIFORME</span>
@@ -539,19 +511,19 @@
 </div>
 <div class="team-grid team-grid-three">
 <article class="team-card reveal">
-<img alt="Illustration de Leonardo" decoding="async" height="120" loading="lazy" src="../assets/images/team-leonardo.svg" width="120"/>
+<img alt="Leonardo team illustration" decoding="async" height="120" loading="lazy" src="../assets/images/team-leonardo.svg" width="120"/>
 <h3>Leonardo Gobbato</h3>
 <p class="team-role">Fondateur | Directeur des opérations produit</p>
 <p>Parcours dans le design et le développement produit. Il définit les silhouettes, la logique de coupe et les décisions techniques orientées vers une production précise et reproductible.</p>
 </article>
 <article class="team-card reveal">
-<img alt="Illustration de Federica" decoding="async" height="120" loading="lazy" src="../assets/images/team-federica.svg" width="120"/>
+<img alt="Federica team illustration" decoding="async" height="120" loading="lazy" src="../assets/images/team-federica.svg" width="120"/>
 <h3>Federica Vianson Cocco</h3>
 <p class="team-role">Cofondatrice | Directrice du développement commercial</p>
 <p>Elle pilote le développement commercial en structurant les relations stratégiques et les opportunités de croissance. Elle supervise la coordination entre le client et l’équipe, en assurant cohérence, clarté et continuité tout au long du parcours, du premier contact à la livraison finale.</p>
 </article>
 <article class="team-card reveal">
-<img alt="Illustration d’Andreas" decoding="async" height="120" loading="lazy" src="../assets/images/team-andreas.svg" width="120"/>
+<img alt="Andreas team illustration" decoding="async" height="120" loading="lazy" src="../assets/images/team-andreas.svg" width="120"/>
 <h3>Andreas Gonzalez</h3>
 <p class="team-role">Cofondateur | CEO</p>
 <p>Il apporte une expertise directe acquise dans les opérations hôtelières, avec une compréhension fine des besoins réels de celles et ceux qui portent les uniformes au quotidien. Il transforme l’expérience de terrain en décisions de design concrètes, pour garantir des pièces fonctionnelles, confortables et pleinement alignées avec le rythme du service.</p>
@@ -595,26 +567,25 @@
 <div class="reassurance-card"><p>Nous vous invitons à remplir le formulaire. Vous serez recontacté rapidement pour organiser un rendez-vous dédié, dans votre espace à Barcelone ou dans votre ville en Espagne ou à l’étranger, ou un premier échange en visioconférence conçu pour comprendre en profondeur votre contexte, vos besoins opérationnels et l’identité de votre projet.</p></div>
 <div class="cta-actions">
 <a class="button button-primary" href="mailto:andreas@pamuuc.com,federica@pamuuc.com,leo.gobbato@pamuuc.com?subject=Pamuuc%20Studio%20project%20request">Préférer l’e-mail</a>
-
 </div>
 </div>
 <form action="https://formspree.io/f/mlgpvble" autocomplete="on" class="contact-card" enctype="application/x-www-form-urlencoded" id="contact-form" method="post">
 <p class="form-hint">Le formulaire prend environ 2 minutes à remplir. Nous répondons généralement sous 1 jour ouvré.</p>
 <div class="form-field">
 <label for="name">Nom complet</label>
-<input autocomplete="name" id="name" maxlength="100" name="name" placeholder="Votre nom" required="" type="text"/>
+<input autocomplete="name" id="name" maxlength="100" name="name" placeholder="Your name" required="" type="text"/>
 </div>
 <div class="form-field">
 <label for="email">E-mail professionnel</label>
-<input autocapitalize="none" autocomplete="email" id="email" inputmode="email" maxlength="120" name="email" placeholder="vous@entreprise.com" required="" spellcheck="false" type="email"/>
+<input autocapitalize="none" autocomplete="email" id="email" inputmode="email" maxlength="120" name="email" placeholder="you@company.com" required="" spellcheck="false" type="email"/>
 </div>
 <div class="form-field">
 <label for="phone">Numéro de téléphone</label>
-<input autocomplete="tel" id="phone" inputmode="tel" maxlength="30" name="phone" placeholder="+34 ..." required="" type="tel"/>
+<input autocomplete="tel" id="phone" inputmode="tel" maxlength="30" name="phone" placeholder="+34 ..." type="tel"/>
 </div>
 <div class="form-field">
 <label for="company">Nom de l’entreprise</label>
-<input autocomplete="organization" id="company" maxlength="120" name="company" placeholder="Nom de l’entreprise" required="" type="text"/>
+<input autocomplete="organization" id="company" maxlength="120" name="company" placeholder="Company name" required="" type="text"/>
 </div>
 <div class="form-field">
 <label for="team-size">Taille de l’équipe</label>
@@ -635,7 +606,7 @@
 </div>
 <div class="form-field">
 <label for="brief">Description du projet</label>
-<textarea id="brief" maxlength="2000" name="brief" placeholder="Quelle équipe, quel environnement et quels objectifs pour les vêtements ?" rows="4"></textarea>
+<textarea id="brief" maxlength="2000" name="brief" placeholder="What team, what environment, and what should the garments achieve?" rows="4"></textarea>
 </div>
 <div aria-hidden="true" class="sr-only">
 <label for="website">Site web</label>
@@ -644,7 +615,7 @@
 <div class="form-field form-field-consent">
 <label class="checkbox-label" for="consent">
 <input id="consent" name="consent" required="" type="checkbox"/>
-<span>J’accepte la politique de confidentialité et les conditions.</span>
+<span>J’accepte la <a href="/fr/privacy-policy/">politique de confidentialité</a> et les <a href="/fr/terms-and-conditions/">conditions</a>.</span>
 </label>
 </div>
 <button class="button button-primary button-full" type="submit">Envoyer</button>
@@ -660,10 +631,10 @@
 <p>Systèmes d’uniformes sur mesure développés à Barcelone.</p>
 </div>
 <div class="footer-links-columns">
-<nav aria-label="Liens studio" class="footer-links footer-links-info"><p class="footer-links-title">Studio</p><a href="/sitemap.xml">Plan du site</a><a href="https://pamuuc.com" rel="noopener noreferrer" target="_blank">PAMUUC.COM</a><a href="/fr/#services">Services</a><a href="/fr/#projects">Projets</a><a href="/fr/blog/">Blog</a></nav>
-<nav aria-label="Liens légaux" class="footer-links footer-links-policies"><p class="footer-links-title">Politiques</p><a href="/fr/privacy-policy/">Politique de confidentialité</a><a href="/fr/cookie-policy/">Politique de cookies</a><a href="/fr/terms-and-conditions/">Termes et conditions</a><a href="/fr/legal-notice/">Mentions légales</a></nav>
+<nav aria-label="Studio links" class="footer-links footer-links-info"><p class="footer-links-title">Studio</p><a href="/sitemap.xml">Plan du site</a><a href="https://pamuuc.com" rel="noopener noreferrer" target="_blank">PAMUUC.COM</a><a href="/fr/#services">Services</a><a href="/fr/#projects">Projets</a><a href="/fr/blog/">Blog</a></nav>
+<nav aria-label="Policy links" class="footer-links footer-links-policies"><p class="footer-links-title">Politiques</p><a href="/fr/privacy-policy/">Politique de confidentialité</a><a href="/fr/cookie-policy/">Politique de cookies</a><a href="/fr/terms-and-conditions/">Termes et conditions</a><a href="/fr/legal-notice/">Mentions légales</a></nav>
 </div>
-<nav aria-label="Sélecteur de langue" class="language-switcher footer-language-switcher"><a class="lang-link" data-lang-switch="en" href="/">EN</a><a class="lang-link is-active" data-lang-switch="fr" href="/fr/">FR</a><a class="lang-link" data-lang-switch="it" href="/it/">IT</a><a class="lang-link" data-lang-switch="es" href="/es/">ES</a><a class="lang-link" data-lang-switch="de" href="/de/">DE</a></nav>
+<nav aria-label="Language selector" class="language-switcher footer-language-switcher"><a class="lang-link" data-lang-switch="en" href="/">EN</a><a class="lang-link is-active" data-lang-switch="fr" href="/fr/">FR</a><a class="lang-link" data-lang-switch="it" href="/it/">IT</a><a class="lang-link" data-lang-switch="es" href="/es/">ES</a><a class="lang-link" data-lang-switch="de" href="/de/">DE</a></nav>
 </div>
 </footer>
 <div :aria-hidden="(!languageModalOpen).toString()" :class="{ 'is-visible': languageModalOpen }" aria-labelledby="language-modal-title" aria-modal="true" class="language-modal" id="language-modal" role="dialog">
@@ -674,7 +645,7 @@
 <div class="language-modal-actions"><button @click="selectLanguage('en')" class="lang-choice" data-lang-choice="en" type="button">English</button><button @click="selectLanguage('fr')" class="lang-choice" data-lang-choice="fr" type="button">Français</button><button @click="selectLanguage('it')" class="lang-choice" data-lang-choice="it" type="button">Italiano</button><button @click="selectLanguage('es')" class="lang-choice" data-lang-choice="es" type="button">Español</button><button @click="selectLanguage('de')" class="lang-choice" data-lang-choice="de" type="button">Deutsch</button></div>
 </div>
 </div>
-<aside aria-label="Préférences de cookies" aria-live="polite" class="cookie-banner" id="cookie-banner">
+<aside aria-label="Cookie preferences" aria-live="polite" class="cookie-banner" id="cookie-banner">
 <p>Nous utilisons des cookies analytiques pour améliorer studio.pamuuc.com. Vous pouvez accepter ou refuser le suivi.</p>
 <div class="cookie-actions">
 <button class="button button-primary" id="cookie-accept" type="button">Accepter</button>
@@ -683,8 +654,8 @@
 </aside>
 <div :aria-hidden="(!modalOpen).toString()" :class="{ 'is-open': modalOpen }" class="modal-overlay" id="site-modal">
 <div class="modal-backdrop" data-modal-close=""></div>
-<section aria-label="Panneau d'information" aria-modal="true" class="modal-panel" role="dialog">
-<button aria-label="Fermer le panneau" class="modal-close" data-modal-close="" type="button">×</button>
+<section aria-label="Information panel" aria-modal="true" class="modal-panel" role="dialog">
+<button aria-label="Close panel" class="modal-close" data-modal-close="" type="button">×</button>
 <div class="modal-content" id="modal-content" tabindex="-1"></div>
 </section>
 </div>
@@ -700,7 +671,6 @@
 <template id="modal-phase-3"><article class="modal-article"><h2>PHASE 03 | Production</h2><p>Continuité, précision, maîtrise</p><p>Une fois approuvées, les pièces passent en production avec des patronages, matières et finitions finalisés.</p><p>La production locale permet un contrôle qualité direct et une plus grande fiabilité sur les délais de livraison.</p><p>Activités principales</p><p>Validation préproduction</p><p>Développement des tailles</p><p>Production</p><p>Préparation et livraison</p></article></template>
 <template id="modal-parameter-quantities"><article class="modal-article"><h2>QUANTITÉS MINIMALES</h2><p>Un équilibre entre qualité et soutenabilité de production</p><p>Les quantités minimales varient selon la construction du vêtement et les matières sélectionnées.</p><p>Indications générales</p><p>Pièces tissées : à partir d’environ 50 unités par modèle, réparties entre les tailles et les variantes</p><p>Maille : généralement entre 100 et 150 unités par modèle</p><p>Des quantités inférieures peuvent être envisagées, avec d’éventuelles variations liées à l’efficacité de production.</p></article></template>
 <template id="modal-parameter-pricing"><article class="modal-article"><h2>ADAPTÉ À VOTRE BUDGET</h2><p>Nous pensons que chaque entreprise doit pouvoir s’appuyer sur des uniformes professionnels sans compromettre son budget. C’est pourquoi nous nous adaptons à vos contraintes économiques, en proposant des solutions souples et personnalisées qui garantissent qualité, style et cohérence avec votre identité de marque. Nous travaillons à vos côtés pour trouver le bon équilibre entre investissement et résultat, en créant des uniformes qui renforcent votre marque.</p></article></template>
-
-<template id="modal-parameter-timing"><article class="modal-article"><h2>FACTEURS DE TEMPS</h2><p>Les délais du projet dépendent de la complexité du développement et du planning de production.</p><p>Délais types</p><p>Développement : 4 à 6 semaines</p><p>Production : 3 à 5 semaines</p><p>Les projets entièrement sur mesure demandent généralement environ 8 semaines entre l’idée initiale et la livraison.</p><p>Facteurs qui influencent les délais</p><ul><li>Développement des patronages</li><li>Essayages et révisions</li><li>Constructions spéciales</li><li>Approvisionnement des tissus</li></ul></article></template>
+<template id="modal-parameter-timing"><article class="modal-article"><h2>FACTEURS DE TEMPS</h2><p>Les délais du projet dépendent de la complexité du développement et du planning de production.</p><p>Délais types</p><p>Développement : 4 à 6 semaines</p><p>Production : 3 à 5 semaines</p><p>Les projets entièrement sur mesure demandent généralement environ 8 semaines entre l’idée initiale et la livraison.</p><p>Facteurs qui influencent les délais</p><ul><li>Développement des patronages</li><li>Essayages et révisions</li><li>Constructions spéciales</li><li>Approvisionnement des tissus</li></ul><p>Une bonne planification permet un développement plus fluide et des délais de livraison fiables.</p></article></template>
 </body>
 </html>

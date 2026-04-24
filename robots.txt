@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /apply_copy_updates.py
 Sitemap: https://studio.pamuuc.com/sitemap.xml

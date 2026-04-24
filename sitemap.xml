@@ -1,268 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://studio.pamuuc.com/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Home pages -->
-  <url>
-    <loc>https://studio.pamuuc.com/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/en/blog/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/en/blog/custom-dental-clinic-uniforms-barcelona/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/en/blog/custom-hospitality-uniforms/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/en/blog/wellness-studio-uniform-system/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Services -->
-  <url>
-    <loc>https://studio.pamuuc.com/services/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/services/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/services/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/services/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/services/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/fr/blog/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/blog/uniformes-clinique-dentaire-sur-mesure-barcelone/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/blog/uniformes-hotellerie-personnalises/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/blog/uniformes-studios-bien-etre/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Sectors -->
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/hotel-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/restaurant-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/wellness-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/medical-clinic-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/service-team-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/sectors/guest-service-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/it/blog/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/blog/divise-clinica-dentale-personalizzate-barcellona/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/blog/divise-hospitalita-personalizzate/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/blog/divise-studi-benessere/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Process & Production -->
-  <url>
-    <loc>https://studio.pamuuc.com/process/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/production/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/es/blog/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/blog/uniformes-clinica-dental-personalizados-barcelona/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/blog/uniformes-hosteleria-personalizados/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/blog/uniformes-estudios-bienestar/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Blog — English -->
-  <url>
-    <loc>https://studio.pamuuc.com/en/blog/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/en/blog/custom-dental-clinic-uniforms-barcelona/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/en/blog/custom-hospitality-uniforms/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/en/blog/wellness-studio-uniform-system/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/de/blog/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/blog/uniformen-zahnarztpraxen-barcelona/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/blog/uniformen-hotellerie/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/blog/uniformen-wellness-studios/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Blog — French -->
-  <url>
-    <loc>https://studio.pamuuc.com/fr/blog/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/blog/uniformes-clinique-dentaire-sur-mesure-barcelone/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/blog/uniformes-hotellerie-personnalises/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/blog/uniformes-studios-bien-etre/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/privacy-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/cookie-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/terms-and-conditions/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/legal-notice/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Blog — Italian -->
-  <url>
-    <loc>https://studio.pamuuc.com/it/blog/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/blog/divise-clinica-dentale-personalizzate-barcellona/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/blog/divise-hospitalita-personalizzate/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/blog/divise-studi-benessere/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/fr/privacy-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/cookie-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/terms-and-conditions/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/fr/legal-notice/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Blog — Spanish -->
-  <url>
-    <loc>https://studio.pamuuc.com/es/blog/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/blog/uniformes-clinica-dental-personalizados-barcelona/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/blog/uniformes-hosteleria-personalizados/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/blog/uniformes-estudios-bienestar/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/it/privacy-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/cookie-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/terms-and-conditions/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/it/legal-notice/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Blog — German -->
-  <url>
-    <loc>https://studio.pamuuc.com/de/blog/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/blog/uniformen-zahnarztpraxen-barcelona/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/blog/uniformen-hotellerie/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/blog/uniformen-wellness-studios/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
+  <url><loc>https://studio.pamuuc.com/es/privacy-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/cookie-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/terms-and-conditions/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/es/legal-notice/</loc><lastmod>2026-04-24</lastmod></url>
 
-  <!-- Legal pages — root (English) -->
-  <url>
-    <loc>https://studio.pamuuc.com/privacy-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/cookie-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/terms-and-conditions/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/legal-notice/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-
-  <!-- Legal pages — French -->
-  <url>
-    <loc>https://studio.pamuuc.com/fr/privacy-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/cookie-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/terms-and-conditions/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/fr/legal-notice/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-
-  <!-- Legal pages — Italian -->
-  <url>
-    <loc>https://studio.pamuuc.com/it/privacy-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/cookie-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/terms-and-conditions/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/it/legal-notice/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-
-  <!-- Legal pages — Spanish -->
-  <url>
-    <loc>https://studio.pamuuc.com/es/privacy-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/cookie-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/terms-and-conditions/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/es/legal-notice/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-
-  <!-- Legal pages — German -->
-  <url>
-    <loc>https://studio.pamuuc.com/de/privacy-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/cookie-policy/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/terms-and-conditions/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-  <url>
-    <loc>https://studio.pamuuc.com/de/legal-notice/</loc>
-    <lastmod>2026-04-24</lastmod>
-  </url>
-
+  <url><loc>https://studio.pamuuc.com/de/privacy-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/cookie-policy/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/terms-and-conditions/</loc><lastmod>2026-04-24</lastmod></url>
+  <url><loc>https://studio.pamuuc.com/de/legal-notice/</loc><lastmod>2026-04-24</lastmod></url>
 </urlset>
