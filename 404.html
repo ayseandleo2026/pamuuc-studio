@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://studio.pamuuc.com/" />
   <meta property="og:site_name" content="Pamuuc Studio" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:image" content="https://studio.pamuuc.com/assets/images/social-home-preview.png" />
+  <meta property="og:image" content="https://studio.pamuuc.com/assets/images/social-home-preview.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="stylesheet" href="/styles.css" />
@@ -48,6 +48,32 @@
   <p>We use analytics cookies to improve studio.pamuuc.com. You can accept or reject tracking.</p>
   <div><button type="button" data-cookie-choice="accept">Accept</button><button type="button" data-cookie-choice="reject">Reject</button></div>
 </aside>
+<link rel="modulepreload" href="/assets/js/main.js"/>
 <script src="/script.js" defer></script>
+<script>
+(function(){
+  var copy = {
+    fr: { h1: "Page introuvable", p: "La page que vous recherchez n'est pas disponible.", a: "Retour à l'accueil", home: "/fr/" },
+    it: { h1: "Pagina non trovata", p: "La pagina che stai cercando non è disponibile.", a: "Torna alla home", home: "/it/" },
+    es: { h1: "Página no encontrada", p: "La página que estás buscando no está disponible.", a: "Volver al inicio", home: "/es/" },
+    de: { h1: "Seite nicht gefunden", p: "Die gesuchte Seite ist nicht verfügbar.", a: "Zurück zur Startseite", home: "/de/" }
+  };
+  var lang = (window.location.pathname.match(/^\/(fr|it|es|de)\//) || [])[1];
+  if (!lang) return;
+  var t = copy[lang];
+  document.documentElement.lang = lang;
+  var hero = document.querySelector('.page-hero');
+  if (hero) {
+    hero.querySelector('h1').textContent = t.h1;
+    hero.querySelector('p').textContent = t.p;
+    var btn = hero.querySelector('a.button');
+    btn.textContent = t.a;
+    btn.href = t.home;
+  }
+  document.querySelectorAll('.language-menu .lang').forEach(function(a) {
+    a.classList.toggle('is-active', a.getAttribute('hreflang') === lang);
+  });
+})();
+</script>
 </body>
 </html>
