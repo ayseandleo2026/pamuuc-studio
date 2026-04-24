@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" role="img" aria-labelledby="title desc">
+  <title id="title">Hospitality project illustration</title>
+  <desc id="desc">An abstract boutique hotel team scene with coordinated uniforms.</desc>
+  <rect width="520" height="250" rx="28" fill="#fcf9f3"/>
+  <rect x="26" y="24" width="468" height="202" rx="24" fill="#f2e9dc"/>
+  <path d="M60 180c42-68 92-102 150-102 46 0 82 17 113 47 19 18 34 36 48 55H60Z" fill="#d9c3aa"/>
+  <path d="M112 112h296v18H112z" fill="#d7b695"/>
+  <path d="M130 80h118v52H130zM272 80h118v52H272z" fill="#fff9f0" stroke="#c8a17e" stroke-width="4"/>
+  <circle cx="184" cy="144" r="20" fill="#b97b58"/>
+  <path d="M156 210c2-28 13-47 28-47s26 19 28 47h-56Z" fill="#0f4a49"/>
+  <path d="M165 177h38l11 33h-60z" fill="#1a6563"/>
+  <circle cx="260" cy="134" r="16" fill="#b97b58"/>
+  <path d="M239 206c0-23 9-39 21-39s21 16 21 39h-42Z" fill="#7c4d39"/>
+  <path d="M228 178h64v18h-64z" fill="#96624b"/>
+  <circle cx="342" cy="146" r="19" fill="#b97b58"/>
+  <path d="M316 210c1-27 12-45 26-45 13 0 24 18 26 45h-52Z" fill="#264b69"/>
+  <path d="M320 178h46l8 32h-62z" fill="#2f617f"/>
+  <path d="M408 84h46v108h-46z" fill="#cda786"/>
+  <path d="M418 74h26v10h-26zM422 96h18v8h-18zM422 112h18v8h-18z" fill="#8d5b37"/>
+</svg>
+

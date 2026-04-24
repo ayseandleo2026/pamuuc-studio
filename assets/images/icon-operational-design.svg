@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Operational design icon</title>
+  <desc id="desc">A garment pattern with measured guides.</desc>
+  <rect width="96" height="96" rx="24" fill="#fcf9f3"/>
+  <rect x="18" y="18" width="60" height="60" rx="18" fill="#f3eadb" stroke="#d1b99f" stroke-width="2"/>
+  <path d="M36 67V44l8-7 6 4 6-4 8 7v23H36Z" fill="#0f4a49"/>
+  <path d="M44 37V31h8v10M52 31h8v6" stroke="#0f4a49" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M30 34h10M30 50h10M30 62h10M66 34h10M66 50h10M66 62h10" stroke="#8d5b37" stroke-linecap="round" stroke-width="2.5"/>
+</svg>
+

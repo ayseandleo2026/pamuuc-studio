@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 250" role="img" aria-labelledby="title desc">
+  <title id="title">Medical and service project illustration</title>
+  <desc id="desc">An abstract clinic and wellness team scene with structured uniforms.</desc>
+  <rect width="520" height="250" rx="28" fill="#fcf9f3"/>
+  <rect x="26" y="24" width="468" height="202" rx="24" fill="#edf3f1"/>
+  <path d="M74 192c34-58 76-86 127-86 44 0 82 18 115 48 18 16 34 29 51 38H74Z" fill="#d0e1db"/>
+  <path d="M114 66h92v74h-92zM224 54h76v86h-76zM324 78h82v62h-82z" fill="#fdfefe" stroke="#a9c5bb" stroke-width="4"/>
+  <path d="M257 78h10v18h18v10h-18v18h-10v-18h-18V96h18z" fill="#0f4a49"/>
+  <circle cx="166" cy="152" r="18" fill="#bf8466"/>
+  <path d="M142 210c0-24 10-41 24-41s24 17 24 41h-48Z" fill="#3f7d78"/>
+  <path d="M146 177h40l7 33h-54z" fill="#4f948d"/>
+  <circle cx="260" cy="150" r="18" fill="#bf8466"/>
+  <path d="M236 210c1-25 11-42 24-42 14 0 24 17 24 42h-48Z" fill="#ffffff" stroke="#a9c5bb" stroke-width="3"/>
+  <path d="M246 176h28v34h-28z" fill="#dce9e5"/>
+  <circle cx="354" cy="152" r="18" fill="#bf8466"/>
+  <path d="M328 210c1-24 11-41 26-41 14 0 24 17 26 41h-52Z" fill="#264b69"/>
+  <path d="M334 176h40l7 34h-54z" fill="#326381"/>
+  <path d="M422 74h34v118h-34z" fill="#b7d1c9"/>
+  <path d="M430 86h18v34h-18zM430 128h18v10h-18zM430 146h18v10h-18z" fill="#5d8f86"/>
+</svg>
+
