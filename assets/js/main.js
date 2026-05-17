@@ -406,6 +406,10 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const cookieBanner = document.querySelector("#cookie-banner");
   const cookieAccept = document.querySelector("#cookie-accept");
   const cookieReject = document.querySelector("#cookie-reject");
+  const cookieCustomize = document.querySelector("#cookie-customize");
+  const cookiePreferences = document.querySelector("#cookie-preferences");
+  const cookieAnalytics = document.querySelector("#cookie-analytics");
+  const cookieSave = document.querySelector("#cookie-save");
 
   const getStoredCookieConsent = () => {
     const storedValue = getStorageItem(STORAGE_COOKIE);
@@ -456,6 +460,11 @@ import { installWebVitalsReporter } from "./web-vitals.js";
       cookieReject.classList.remove("button", "button-secondary");
       cookieReject.classList.add("cookie-reject-link");
     }
+
+    if (cookieCustomize && cookiePreferences) {
+      cookieCustomize.setAttribute("aria-controls", "cookie-preferences");
+      cookieCustomize.setAttribute("aria-expanded", (!cookiePreferences.hidden).toString());
+    }
   };
 
   decorateCookieBanner();
@@ -474,6 +483,15 @@ import { installWebVitalsReporter } from "./web-vitals.js";
 
     cookieBanner.classList.add("is-visible");
     body?.classList.add(COOKIE_BANNER_VISIBLE_CLASS);
+  };
+
+  const setCookiePreferencesOpen = (open) => {
+    if (!cookiePreferences || !cookieCustomize) {
+      return;
+    }
+
+    cookiePreferences.hidden = !open;
+    cookieCustomize.setAttribute("aria-expanded", open.toString());
   };
 
   const setCookieConsent = (value, source = "button") => {
@@ -561,6 +579,9 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const storedCookieConsent = getStoredCookieConsent();
   analyticsAllowed = storedCookieConsent === "accepted";
   gaConsentState = analyticsAllowed ? "accepted" : "rejected";
+  if (cookieAnalytics) {
+    cookieAnalytics.checked = analyticsAllowed;
+  }
   if (analyticsAllowed) {
     loadGa(gaConsentState);
     bindScrollTracking();
@@ -576,6 +597,19 @@ import { installWebVitalsReporter } from "./web-vitals.js";
 
     if (cookieReject) {
       cookieReject.addEventListener("click", () => setCookieConsent("rejected", "reject_button"));
+    }
+
+    if (cookieCustomize) {
+      cookieCustomize.addEventListener("click", () => {
+        setCookiePreferencesOpen(cookiePreferences ? cookiePreferences.hidden : false);
+      });
+    }
+
+    if (cookieSave) {
+      cookieSave.addEventListener("click", () => {
+        const value = cookieAnalytics && cookieAnalytics.checked ? "accepted" : "rejected";
+        setCookieConsent(value, "preferences_panel");
+      });
     }
   }
 

@@ -2,7 +2,7 @@
   "use strict";
 
   const STORAGE_LANGUAGE = "pamuuc_lang";
-  const supportedLanguages = ["en", "fr", "it", "es"];
+  const supportedLanguages = ["en", "fr", "it", "es", "de"];
   const mobileTabDefaultOpen = new Set(["categories", "process", "contact"]);
   const mobileTabLabelMap = {
     en: {
@@ -417,13 +417,27 @@
       initAccordions() {
         document.querySelectorAll("[data-accordion-group]").forEach((group) => {
           const detailsNodes = group.querySelectorAll("details");
-          detailsNodes.forEach((detail) => {
+          detailsNodes.forEach((detail, index) => {
             if (detail.dataset.alpineBound === "true") {
               return;
             }
 
             detail.dataset.alpineBound = "true";
+            const summary = detail.querySelector("summary");
+            const body = detail.querySelector(".accordion-body");
+            if (summary && body) {
+              const groupKey = detail.closest("section")?.id || "accordion";
+              const bodyId = body.id || `${groupKey}-panel-${index + 1}`;
+              body.id = bodyId;
+              summary.setAttribute("aria-controls", bodyId);
+              summary.setAttribute("aria-expanded", detail.open.toString());
+            }
             detail.addEventListener("toggle", () => {
+              const summary = detail.querySelector("summary");
+              if (summary) {
+                summary.setAttribute("aria-expanded", detail.open.toString());
+              }
+
               if (!detail.open) {
                 return;
               }
@@ -431,6 +445,10 @@
               detailsNodes.forEach((otherDetail) => {
                 if (otherDetail !== detail) {
                   otherDetail.open = false;
+                  const otherSummary = otherDetail.querySelector("summary");
+                  if (otherSummary) {
+                    otherSummary.setAttribute("aria-expanded", "false");
+                  }
                 }
               });
 
