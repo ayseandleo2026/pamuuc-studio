@@ -9,7 +9,7 @@
   const studioApi = window.PamuucStudio || {};
   const currentLanguage = studioApi.currentLanguage || body.dataset.language || document.documentElement.lang || "en";
   const trackEvent = typeof studioApi.trackEvent === "function" ? studioApi.trackEvent : () => {};
-  const STORAGE_COOKIE = "pamuuc_cookie_consent";
+  const STORAGE_ANALYTICS = "pamuuc_analytics";
   const FORM_ENDPOINT_HOST = "formspree.io";
 
   const getStorageItem = (key) => {
@@ -172,7 +172,7 @@
     submissionData.set("Privacy consent", "Accepted");
     submissionData.set("Language", currentLanguage);
     submissionData.set("Source page", getSafeSourcePage());
-    submissionData.set("Cookie consent", getStorageItem(STORAGE_COOKIE) || "unset");
+    submissionData.set("Analytics consent", getStorageItem(STORAGE_ANALYTICS) || "unset");
     submissionData.set("_subject", "New Pamuuc Studio project request");
     submissionData.set("_replyto", String(sourceData.get("email") || "").trim());
 

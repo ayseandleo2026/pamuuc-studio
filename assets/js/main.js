@@ -5,8 +5,8 @@ import { installWebVitalsReporter } from "./web-vitals.js";
 
   const GA_ID = "G-HS8HYY7LV1";
   const STORAGE_LANGUAGE = "pamuuc_lang";
-  const STORAGE_COOKIE = "pamuuc_cookie_consent";
-  const STORAGE_COOKIE_TIMESTAMP = "pamuuc_cookie_consent_timestamp";
+  const STORAGE_ANALYTICS = "pamuuc_analytics";
+  const STORAGE_ANALYTICS_TIMESTAMP = "pamuuc_analytics_timestamp";
   const COOKIE_CONSENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
   const COOKIE_BANNER_VISIBLE_CLASS = "cookie-banner-visible";
 
@@ -403,34 +403,39 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     document.head.appendChild(script);
   };
 
-  const cookieBanner = document.querySelector("#cookie-banner");
-  const cookieAccept = document.querySelector("#cookie-accept");
-  const cookieReject = document.querySelector("#cookie-reject");
-  const cookieCustomize = document.querySelector("#cookie-customize");
-  const cookiePreferences = document.querySelector("#cookie-preferences");
-  const cookieAnalytics = document.querySelector("#cookie-analytics");
-  const cookieSave = document.querySelector("#cookie-save");
+  const cookieBanner = document.querySelector("#cookie-banner, [data-cookie-banner]");
+  const cookieAccept = cookieBanner?.querySelector(
+    "#cookie-accept, [data-cookie-choice='accept'], [data-cookie-choice='accepted']"
+  );
+  const cookieReject = cookieBanner?.querySelector(
+    "#cookie-reject, [data-cookie-choice='reject'], [data-cookie-choice='rejected']"
+  );
+  const cookieCustomize = cookieBanner?.querySelector("#cookie-customize, [data-cookie-customize]");
+  const cookiePreferences = cookieBanner?.querySelector("#cookie-preferences, [data-cookie-preferences]");
+  const cookieAnalytics = cookieBanner?.querySelector("#cookie-analytics, [data-cookie-analytics]");
+  const cookieSave = cookieBanner?.querySelector("#cookie-save, [data-cookie-save]");
 
-  const getStoredCookieConsent = () => {
-    const storedValue = getStorageItem(STORAGE_COOKIE);
-    const storedTimestampRaw = getStorageItem(STORAGE_COOKIE_TIMESTAMP);
+  const getStoredAnalyticsConsent = () => {
+    let storedValue = getStorageItem(STORAGE_ANALYTICS);
+    let storedTimestampRaw = getStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
+
     const storedTimestamp = Number.parseInt(storedTimestampRaw || "", 10);
 
     if (storedValue !== "accepted" && storedValue !== "rejected") {
-      removeStorageItem(STORAGE_COOKIE);
-      removeStorageItem(STORAGE_COOKIE_TIMESTAMP);
+      removeStorageItem(STORAGE_ANALYTICS);
+      removeStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
       return null;
     }
 
-    if (!Number.isFinite(storedTimestamp)) {
-      removeStorageItem(STORAGE_COOKIE);
-      removeStorageItem(STORAGE_COOKIE_TIMESTAMP);
+    if (storedTimestampRaw && !Number.isFinite(storedTimestamp)) {
+      removeStorageItem(STORAGE_ANALYTICS);
+      removeStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
       return null;
     }
 
-    if (Date.now() - storedTimestamp >= COOKIE_CONSENT_TTL_MS) {
-      removeStorageItem(STORAGE_COOKIE);
-      removeStorageItem(STORAGE_COOKIE_TIMESTAMP);
+    if (Number.isFinite(storedTimestamp) && Date.now() - storedTimestamp >= COOKIE_CONSENT_TTL_MS) {
+      removeStorageItem(STORAGE_ANALYTICS);
+      removeStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
       return null;
     }
 
@@ -472,6 +477,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   const hideCookieBanner = () => {
     if (cookieBanner) {
       cookieBanner.classList.remove("is-visible");
+      cookieBanner.hidden = true;
     }
     body?.classList.remove(COOKIE_BANNER_VISIBLE_CLASS);
   };
@@ -482,6 +488,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     }
 
     cookieBanner.classList.add("is-visible");
+    cookieBanner.hidden = false;
     body?.classList.add(COOKIE_BANNER_VISIBLE_CLASS);
   };
 
@@ -496,7 +503,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
 
   const setCookieConsent = (value, source = "button") => {
     const normalizedValue = value === "accepted" ? "accepted" : "rejected";
-    const current = getStoredCookieConsent();
+    const current = getStoredAnalyticsConsent();
     if (current === normalizedValue) {
       hideCookieBanner();
       applyGaConsent(normalizedValue);
@@ -509,8 +516,8 @@ import { installWebVitalsReporter } from "./web-vitals.js";
       return;
     }
 
-    setStorageItem(STORAGE_COOKIE, normalizedValue);
-    setStorageItem(STORAGE_COOKIE_TIMESTAMP, String(Date.now()));
+    setStorageItem(STORAGE_ANALYTICS, normalizedValue);
+    setStorageItem(STORAGE_ANALYTICS_TIMESTAMP, String(Date.now()));
     hideCookieBanner();
 
     analyticsAllowed = normalizedValue === "accepted";
@@ -525,11 +532,6 @@ import { installWebVitalsReporter } from "./web-vitals.js";
       trackEvent("cookie_accept", { item_name: source });
     } else {
       pendingVitalMetrics.clear();
-      if (gaLoaded && typeof window.gtag === "function") {
-        window.gtag("event", "cookie_reject", {
-          non_interaction: true
-        });
-      }
       pendingEvents.length = 0;
     }
   };
@@ -576,7 +578,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     scrollTrackingBound = true;
   };
 
-  const storedCookieConsent = getStoredCookieConsent();
+  const storedCookieConsent = getStoredAnalyticsConsent();
   analyticsAllowed = storedCookieConsent === "accepted";
   gaConsentState = analyticsAllowed ? "accepted" : "rejected";
   if (cookieAnalytics) {
@@ -588,29 +590,29 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     flushPendingVitalMetrics();
   }
 
+  if (cookieAccept) {
+    cookieAccept.addEventListener("click", () => setCookieConsent("accepted", "accept_button"));
+  }
+
+  if (cookieReject) {
+    cookieReject.addEventListener("click", () => setCookieConsent("rejected", "reject_button"));
+  }
+
+  if (cookieCustomize) {
+    cookieCustomize.addEventListener("click", () => {
+      setCookiePreferencesOpen(cookiePreferences ? cookiePreferences.hidden : false);
+    });
+  }
+
+  if (cookieSave) {
+    cookieSave.addEventListener("click", () => {
+      const value = cookieAnalytics && cookieAnalytics.checked ? "accepted" : "rejected";
+      setCookieConsent(value, "preferences_panel");
+    });
+  }
+
   if (!storedCookieConsent && cookieBanner) {
     showCookieBanner();
-
-    if (cookieAccept) {
-      cookieAccept.addEventListener("click", () => setCookieConsent("accepted", "accept_button"));
-    }
-
-    if (cookieReject) {
-      cookieReject.addEventListener("click", () => setCookieConsent("rejected", "reject_button"));
-    }
-
-    if (cookieCustomize) {
-      cookieCustomize.addEventListener("click", () => {
-        setCookiePreferencesOpen(cookiePreferences ? cookiePreferences.hidden : false);
-      });
-    }
-
-    if (cookieSave) {
-      cookieSave.addEventListener("click", () => {
-        const value = cookieAnalytics && cookieAnalytics.checked ? "accepted" : "rejected";
-        setCookieConsent(value, "preferences_panel");
-      });
-    }
   }
 
   const storedLanguage = getStorageItem(STORAGE_LANGUAGE);
