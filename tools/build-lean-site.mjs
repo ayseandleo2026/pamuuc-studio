@@ -1406,9 +1406,10 @@ function writeStaticAssets() {
   writeAsset("assets/css/site.css", siteCss);
   writeAsset("assets/js/site.js", siteJs);
   copyAsset("assets/images/logo.png", "assets/images/logo.png");
-  copyAsset("assets/images/team-leonardo.svg", "assets/images/team-leonardo.svg");
-  copyAsset("assets/images/team-federica.svg", "assets/images/team-federica.svg");
-  copyAsset("assets/images/team-andreas.svg", "assets/images/team-andreas.svg");
+  for (const f of ["team-leonardo.svg", "team-federica.svg", "team-andreas.svg"]) {
+    const src = path.join(ROOT, "assets/images", f);
+    if (fs.existsSync(src)) copyAsset(`assets/images/${f}`, `assets/images/${f}`);
+  }
   copyAsset("assets/images/social-home-preview.jpg", "assets/images/social-home-preview.jpg");
   copyAsset("assets/images/blog/custom-hospitality-uniforms.jpg", "assets/images/hero.jpg");
   for (const topic of Object.values(blogTopics)) {

@@ -1,0 +1,37 @@
+:root {
+  --site-max-width: 112rem;
+  --site-gutter: clamp(1rem, 2.4vw, 2.8rem);
+  --focus-ring: 0 0 0 0.18rem rgba(127, 29, 22, 0.18);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+svg,
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
