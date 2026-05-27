@@ -35,7 +35,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Gilmer", sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
@@ -2216,10 +2216,6 @@ body.cookie-banner-visible {
   transform: none;
 }
 
-.gsap-pending .reveal {
-  opacity: 1;
-  transform: none;
-}
 
 .js-motion-ready .reveal {
   opacity: 0;
@@ -2232,22 +2228,7 @@ body.cookie-banner-visible {
   transform: translateY(0);
 }
 
-@media (min-width: 781px) and (prefers-reduced-motion: no-preference) {
-  .gsap-pending .promo-banner,
-  .gsap-pending .site-header,
-  .gsap-pending .hero-copy .eyebrow,
-  .gsap-pending .hero-copy h1,
-  .gsap-pending .hero-copy .hero-lead,
-  .gsap-pending .hero-pill-row .pill,
-  .gsap-pending .hero-actions .button,
-  .gsap-pending .hero-visual .visual-card-main,
-  .gsap-pending .hero-visual .floating-proof,
-  .gsap-pending .logo-band-points span,
-  .gsap-pending .reveal {
-    opacity: 0;
-    transform: translateY(1.1rem);
-  }
-}
+
 
 .mobile-tab-shell {
   display: block;

@@ -315,7 +315,7 @@ function patchBlogAlternates() {
 function injectFontsCss(html) {
   if (html.includes("/assets/fonts/fonts.css")) return html;
 
-  const fontLink = '<link href="/assets/fonts/fonts.css" rel="stylesheet"/>\n';
+  const fontLink = `${asyncStylesheetLink("/assets/fonts/fonts.css")}\n`;
   const stylesheetPattern =
     /(<link\b(?=[^>]*\brel=["'](?:preload|stylesheet)["'])(?=[^>]*\bhref=["'][^"']*(?:styles\.css|assets\/css\/shared\.css))[^>]*>)/i;
 
@@ -329,7 +329,8 @@ function injectFontsCss(html) {
 function removeGoogleFonts(html) {
   return html
     .replace(/<noscript>\s*<link\b(?=[^>]*\bhref=["']https:\/\/fonts\.googleapis\.com)[\s\S]*?<\/noscript>\s*/gi, "")
-    .replace(/<link\b(?=[^>]*\bhref=["']https:\/\/fonts\.(?:googleapis|gstatic)\.com)[^>]*>\s*/gi, "");
+    .replace(/<link\b(?=[^>]*\bhref=["']https:\/\/fonts\.(?:googleapis|gstatic)\.com)[^>]*>\s*/gi, "")
+    .replace(/<noscript>\s*<\/noscript>\s*/gi, "");
 }
 
 function patchHeroCriticalCss(html) {
@@ -347,10 +348,77 @@ function patchHeroCriticalCss(html) {
     .replaceAll(oldMobileHeroCriticalCss, newMobileHeroCriticalCss);
 }
 
+function asyncStylesheetLink(href) {
+  return `<link as="style" href="${href}" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/>
+<noscript><link href="${href}" rel="stylesheet"/></noscript>`;
+}
+
+function patchDeferredStylesheet(html, href) {
+  if (html.includes(`<link as="style" href="${href}"`)) {
+    return html;
+  }
+
+  return html.replace(`<link href="${href}" rel="stylesheet"/>`, asyncStylesheetLink(href));
+}
+
+function isHomeHtml(relativePath) {
+  return relativePath === "index.html" || localizedLanguages.some((lang) => relativePath === `${lang}/index.html`);
+}
+
+function patchHeroImagePreload(html, relativePath) {
+  if (!isHomeHtml(relativePath) || html.includes('href="/assets/images/hero-mobile.svg" media="(max-width: 767px)"')) {
+    return html;
+  }
+
+  const heroPreloads =
+    '<link as="image" fetchpriority="high" href="/assets/images/hero-mobile.svg" media="(max-width: 767px)" rel="preload" type="image/svg+xml"/>\n' +
+    '<link as="image" fetchpriority="high" href="/assets/images/hero-desktop.svg" media="(min-width: 768px)" rel="preload" type="image/svg+xml"/>\n';
+
+  return html.replace(
+    /(<link href="\/favicon\.png" rel="icon" type="image\/png"\/>\n)/,
+    `$1${heroPreloads}`,
+  );
+}
+
+function patchHomePerformanceAssets(html, relativePath) {
+  if (!isHomeHtml(relativePath)) return html;
+
+  const cleaned = html
+    .replace(/<script>document\.documentElement\.classList\.add\('gsap-pending'\);<\/script>\s*/g, "")
+    .replace(
+      /<script\b(?=[^>]*\bsrc=["']https:\/\/cdn\.jsdelivr\.net\/npm\/gsap@[^"']+\/dist\/gsap\.min\.js["'])[^>]*><\/script>\s*/gi,
+      "",
+    )
+    .replace(
+      /<script\b(?=[^>]*\bsrc=["']https:\/\/cdn\.jsdelivr\.net\/npm\/gsap@[^"']+\/dist\/ScrollTrigger\.min\.js["'])[^>]*><\/script>\s*/gi,
+      "",
+    )
+    .replace(/<script\b(?=[^>]*\bsrc=["']\/assets\/js\/gsap-home\.js["'])[^>]*><\/script>\s*/gi, "");
+
+  return ["/assets/css/shared.css", "/assets/css/pages/home.css"].reduce(
+    (patched, href) => patchDeferredStylesheet(patched, href),
+    cleaned,
+  );
+}
+
+function patchFavicon(html) {
+  const faviconLink = '<link href="/favicon.png" rel="icon" type="image/png"/>\n';
+  const patched = html.replace(
+    /<link\b(?=[^>]*\brel=["'](?:shortcut\s+)?icon["'])[^>]*>\s*/gi,
+    faviconLink,
+  );
+
+  if (patched.includes('href="/favicon.png"')) {
+    return patched;
+  }
+
+  return patched.replace("</head>", `${faviconLink}</head>`);
+}
+
 function patchHeadAssets(html) {
   return patchHeroCriticalCss(injectFontsCss(
-    removeGoogleFonts(html)
-      .replace(/<link\b(?=[^>]*\brel=["'](?:shortcut\s+)?icon["'])[^>]*>\s*/gi, '<link href="/favicon.png" rel="icon" type="image/png"/>\n')
+    patchFavicon(removeGoogleFonts(html))
+      .replace(/<link\b(?=[^>]*\brel=["']modulepreload["'])(?=[^>]*\bhref=["']\/assets\/js\/main\.js["'])[^>]*>\s*/gi, "")
       .replaceAll(" https://fonts.googleapis.com", "")
       .replaceAll(" https://fonts.gstatic.com", "")
       .replaceAll("Poppins", "Gilmer"),
@@ -430,6 +498,7 @@ function patchGeneratedHtml() {
       .replaceAll("https://www.pamuuc-studio.com", BASE_URL)
       .replaceAll('href="/legal/"', 'href="/legal-notice/"');
     html = patchHeadAssets(html);
+    html = patchHeroImagePreload(html, relative);
 
     if (inLegalPage) {
       html = patchLegalEntitySummary(html);
@@ -451,6 +520,8 @@ function patchGeneratedHtml() {
       html = patchJsonLdRouteStrings(html, language);
     }
 
+    html = patchHomePerformanceAssets(html, relative);
+
     if (html !== original) {
       fs.writeFileSync(file, html);
     }
@@ -459,12 +530,25 @@ function patchGeneratedHtml() {
   patchBlogAlternates();
 }
 
+function removeUnusedGeneratedAssets() {
+  fs.rmSync(path.join(DIST, "assets", "js", "gsap-home.js"), { force: true });
+}
+
+function stripGeneratedMotionCss(css) {
+  return css
+    .replace(/\n\.gsap-pending \.reveal \{\n  opacity: 1;\n  transform: none;\n\}\n/g, "\n")
+    .replace(
+      /\n@media \(min-width: 781px\) and \(prefers-reduced-motion: no-preference\) \{\n  \.gsap-pending \.promo-banner,[\s\S]*?\n  \}\n\}/g,
+      "\n",
+    );
+}
+
 function patchCssAssets() {
   const cssFiles = walkFiles(DIST, (file) => file.endsWith(".css"));
 
   for (const file of cssFiles) {
     const css = fs.readFileSync(file, "utf8");
-    const patched = css.replaceAll("Poppins", "Gilmer");
+    const patched = stripGeneratedMotionCss(css.replaceAll("Poppins", "Gilmer"));
     if (patched !== css) {
       fs.writeFileSync(file, patched);
     }
@@ -486,6 +570,7 @@ async function build() {
   writeSitemap();
   patchGeneratedHtml();
   patchCssAssets();
+  removeUnusedGeneratedAssets();
 }
 
 function resolveSitePath(fromFile, rawTarget) {
@@ -563,12 +648,20 @@ function validate() {
   const deployedTextFiles = walkFiles(DIST, (file) => /\.(?:html|css|js|xml|txt)$/i.test(file));
   for (const file of deployedTextFiles) {
     const contents = fs.readFileSync(file, "utf8");
+    const relative = toPosix(path.relative(DIST, file));
     if (/fonts\.(?:googleapis|gstatic)\.com/i.test(contents)) {
-      failures.push(`Google Fonts dependency remains in ${toPosix(path.relative(DIST, file))}`);
+      failures.push(`Google Fonts dependency remains in ${relative}`);
     }
     if (/PAMUUC ORGANIC CLOTHING S\.L\.|B0541782/.test(contents)) {
-      failures.push(`Old legal identity remains in ${toPosix(path.relative(DIST, file))}`);
+      failures.push(`Old legal identity remains in ${relative}`);
     }
+    if (/gsap(?:\.min|@|-pending)|ScrollTrigger/i.test(contents)) {
+      failures.push(`Generated output still contains GSAP motion assets: ${relative}`);
+    }
+  }
+
+  if (fs.existsSync(path.join(DIST, "assets", "js", "gsap-home.js"))) {
+    failures.push("Unused GSAP home script should not be copied into dist.");
   }
 
   for (const route of indexableRoutes) {

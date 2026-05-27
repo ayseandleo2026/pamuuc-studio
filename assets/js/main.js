@@ -1,5 +1,3 @@
-import { installWebVitalsReporter } from "./web-vitals.js";
-
 (() => {
   "use strict";
 
@@ -196,6 +194,17 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   let gaConsentState = "rejected";
   const pendingEvents = [];
   const pendingVitalMetrics = new Map();
+  let webVitalsReporterInstalled = false;
+
+  const scheduleNonCriticalTask = (callback, timeout = 1800) => {
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(callback, { timeout });
+      return;
+    }
+
+    window.setTimeout(callback, timeout);
+  };
+
   const getStorageItem = (key) => {
     try {
       return window.localStorage.getItem(key);
@@ -307,7 +316,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     pendingVitalMetrics.clear();
   };
 
-  installWebVitalsReporter((metric) => {
+  const reportWebVitalMetric = (metric) => {
     const payload = buildVitalPayload(metric);
     const metricKey = `${metric.name}:${metric.id}`;
 
@@ -317,7 +326,24 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     }
 
     trackEvent(metric.name, payload);
-  });
+  };
+
+  const installDeferredWebVitalsReporter = () => {
+    if (webVitalsReporterInstalled) {
+      return;
+    }
+
+    webVitalsReporterInstalled = true;
+    scheduleNonCriticalTask(() => {
+      import("./web-vitals.js")
+        .then(({ installWebVitalsReporter }) => {
+          installWebVitalsReporter(reportWebVitalMetric);
+        })
+        .catch((error) => {
+          console.error("Failed to load web vitals reporter", error);
+        });
+    }, 2500);
+  };
 
   // Expose a minimal public API for page-specific modules.
   window.PamuucStudio = Object.assign(window.PamuucStudio || {}, {
@@ -510,6 +536,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
       if (normalizedValue === "accepted") {
         analyticsAllowed = true;
         loadGa(normalizedValue);
+        installDeferredWebVitalsReporter();
         bindScrollTracking();
         flushPendingVitalMetrics();
       }
@@ -524,6 +551,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
     applyGaConsent(normalizedValue);
     if (analyticsAllowed) {
       loadGa(normalizedValue);
+      installDeferredWebVitalsReporter();
       bindScrollTracking();
       flushPendingVitalMetrics();
     }
@@ -586,6 +614,7 @@ import { installWebVitalsReporter } from "./web-vitals.js";
   }
   if (analyticsAllowed) {
     loadGa(gaConsentState);
+    installDeferredWebVitalsReporter();
     bindScrollTracking();
     flushPendingVitalMetrics();
   }
