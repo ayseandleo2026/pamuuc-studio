@@ -83,6 +83,9 @@ const legalRouteBases = [
   "/legal-notice/",
 ];
 
+const LEGAL_ENTITY_SUMMARY =
+  "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com";
+
 const languages = ["en", "fr", "it", "es", "de"];
 const localizedLanguages = ["fr", "it", "es", "de"];
 
@@ -329,14 +332,29 @@ function removeGoogleFonts(html) {
     .replace(/<link\b(?=[^>]*\bhref=["']https:\/\/fonts\.(?:googleapis|gstatic)\.com)[^>]*>\s*/gi, "");
 }
 
+function patchHeroCriticalCss(html) {
+  const oldHeroCriticalCss =
+    ".hero-pill-row{margin-top:1.45rem;display:flex;gap:.46rem;flex-wrap:nowrap;overflow:auto;scrollbar-width:none}.hero-pill-row::-webkit-scrollbar{display:none}.hero-pill-row .pill{display:inline-flex;align-items:center;min-height:2rem;padding:.3rem .68rem;border-radius:999px;font-size:.76rem;font-weight:600;white-space:nowrap;background:var(--surface-dark);color:#fff;border:1px solid rgba(0,43,42,.34)}";
+  const newHeroCriticalCss =
+    ".hero-pill-row{margin-top:1.45rem;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.62rem;max-width:min(100%,44rem);overflow:visible}.hero-pill-row .pill{display:inline-flex;align-items:center;justify-content:center;width:100%;min-height:2.55rem;padding:.48rem .9rem;border-radius:999px;font-size:.76rem;font-weight:600;line-height:1.16;text-align:center;white-space:normal;overflow-wrap:anywhere;hyphens:auto;background:var(--surface-dark);color:#fff;border:1px solid rgba(0,43,42,.34)}";
+  const oldMobileHeroCriticalCss =
+    ".hero-pill-row{flex-wrap:wrap;overflow:visible}.hero-visual .floating-proof{display:none}";
+  const newMobileHeroCriticalCss =
+    ".hero-pill-row{grid-template-columns:1fr;max-width:100%;gap:.5rem}.hero-visual .floating-proof{display:none}";
+
+  return html
+    .replaceAll(oldHeroCriticalCss, newHeroCriticalCss)
+    .replaceAll(oldMobileHeroCriticalCss, newMobileHeroCriticalCss);
+}
+
 function patchHeadAssets(html) {
-  return injectFontsCss(
+  return patchHeroCriticalCss(injectFontsCss(
     removeGoogleFonts(html)
       .replace(/<link\b(?=[^>]*\brel=["'](?:shortcut\s+)?icon["'])[^>]*>\s*/gi, '<link href="/favicon.png" rel="icon" type="image/png"/>\n')
       .replaceAll(" https://fonts.googleapis.com", "")
       .replaceAll(" https://fonts.gstatic.com", "")
       .replaceAll("Poppins", "Gilmer"),
-  );
+  ));
 }
 
 function localizedRouteForEnglishRoute(englishRoute, language) {
@@ -384,6 +402,15 @@ function patchJsonLdRouteStrings(html, language) {
   );
 }
 
+function patchLegalEntitySummary(html) {
+  if (html.includes('class="legal-entity-line"')) return html;
+
+  return html.replace(
+    /(<article class="legal-card"><h1>[^<]+<\/h1><p>[^<]+<\/p>)/,
+    `$1<p class="legal-entity-line"><strong>Legal entity:</strong> ${LEGAL_ENTITY_SUMMARY}</p>`,
+  );
+}
+
 function patchGeneratedHtml() {
   const htmlFiles = walkFiles(DIST, (file) => file.endsWith(".html"));
 
@@ -405,6 +432,8 @@ function patchGeneratedHtml() {
     html = patchHeadAssets(html);
 
     if (inLegalPage) {
+      html = patchLegalEntitySummary(html);
+
       const homeHref = prefix ? `${prefix}/` : "/";
       html = html.replaceAll('href="./"', `href="${homeHref}"`);
       html = html.replaceAll('href="en/blog/"', `href="${prefix ? `${prefix}/blog/` : "/en/blog/"}"`);
@@ -537,6 +566,9 @@ function validate() {
     if (/fonts\.(?:googleapis|gstatic)\.com/i.test(contents)) {
       failures.push(`Google Fonts dependency remains in ${toPosix(path.relative(DIST, file))}`);
     }
+    if (/PAMUUC ORGANIC CLOTHING S\.L\.|B0541782/.test(contents)) {
+      failures.push(`Old legal identity remains in ${toPosix(path.relative(DIST, file))}`);
+    }
   }
 
   for (const route of indexableRoutes) {
@@ -586,6 +618,9 @@ function validate() {
       if (!robotsMeta || !/noindex/i.test(robotsMeta)) {
         failures.push(`Policy/legal page must be noindex: ${route}`);
       }
+      if (!fs.readFileSync(file, "utf8").includes(LEGAL_ENTITY_SUMMARY)) {
+        failures.push(`Policy/legal page missing legal entity summary: ${route}`);
+      }
     }
   }
 
@@ -606,7 +641,7 @@ function validate() {
     throw new Error(`Build validation failed:\n${failures.join("\n")}`);
   }
 
-  console.log(`Built preserved Pamuuc Studio site in dist/`);
+  console.log(`Built lean Pamuuc Studio site in dist/`);
   console.log(`Indexable URLs: ${indexableRoutes.length}`);
   console.log(`Noindex policy/legal pages: ${legalRouteBases.length * (localizedLanguages.length + 1)}`);
   console.log(`Self-hosted fonts: ${fontAssets.filter((asset) => !asset.duplicateFaceOnly).length}`);

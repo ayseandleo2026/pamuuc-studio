@@ -13,6 +13,16 @@ body[data-page-type="legal"] .legal-card li {
   overflow-wrap: anywhere;
 }
 
+body[data-page-type="legal"] .legal-entity-line {
+  margin-block: 0.7rem 1.25rem;
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--accent);
+  background: rgba(127, 29, 22, 0.06);
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
 body[data-page-type="legal"] .site-nav-list {
   flex-wrap: wrap;
 }

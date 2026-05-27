@@ -471,17 +471,25 @@ body[data-language="it"] {
 
 .hero-pill-row {
   margin-top: 1.45rem;
-  flex-wrap: wrap;
-  gap: 0.46rem;
-  overflow-x: visible;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.62rem;
+  max-width: min(100%, 44rem);
+  overflow: visible;
 }
 
 .hero-pill-row .pill {
-  min-height: 2rem;
-  padding: 0.3rem 0.68rem;
+  width: 100%;
+  min-height: 2.55rem;
+  justify-content: center;
+  padding: 0.48rem 0.9rem;
   font-size: 0.76rem;
   font-weight: 600;
-  white-space: nowrap;
+  line-height: 1.16;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
   background: var(--surface-dark);
   color: #fff;
   border-color: rgba(0, 43, 42, 0.34);
@@ -491,7 +499,6 @@ body[data-language="fr"] .hero-pill-row .pill,
 body[data-language="es"] .hero-pill-row .pill,
 body[data-language="it"] .hero-pill-row .pill,
 body[data-language="de"] .hero-pill-row .pill {
-  white-space: normal;
   line-height: 1.2;
 }
 
@@ -1501,7 +1508,7 @@ body[data-language="de"] .hero-pill-row .pill {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 0.58rem;
-  align-items: center;
+  align-items: start;
   font-size: 0.9rem;
   line-height: 1.35;
   font-weight: 500;
@@ -1511,17 +1518,29 @@ body[data-language="de"] .hero-pill-row .pill {
 .checkbox-label input {
   width: 1rem;
   height: 1rem;
-  margin-top: 0;
+  margin-top: 0.1rem;
   min-height: 1rem;
 }
 
-.checkbox-label span {
+.checkbox-label > span {
   display: block;
 }
 
 .checkbox-label a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 43, 42, 0.35);
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.checkbox-label a:hover,
+.checkbox-label a:focus-visible {
+  color: var(--accent);
+  border-color: currentColor;
+}
+
+.checkbox-label .required-mark {
+  margin-left: 0.12rem;
 }
 
 .contact-card label {
@@ -2303,12 +2322,10 @@ body.cookie-banner-visible {
   }
 
   .hero-pill-row {
-    flex-wrap: wrap;
-    overflow-x: visible;
+    max-width: min(100%, 40rem);
   }
 
   .hero-pill-row .pill {
-    white-space: normal;
     line-height: 1.2;
   }
 }@media (max-width: 1024px) {
@@ -2685,8 +2702,9 @@ body.cookie-banner-visible {
   }
 
   .hero-pill-row {
-    flex-wrap: wrap;
-    overflow-x: visible;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 0.5rem;
   }
 
   #parameters .single-value strong {
