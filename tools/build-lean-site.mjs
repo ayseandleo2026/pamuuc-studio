@@ -8,6 +8,13 @@ const BASE_URL = "https://pamuuc-studio.com";
 const LASTMOD = "2026-05-27";
 const FORM_ENDPOINT = "https://formspree.io/f/mlgpvble";
 const FAVICON_URL = "https://cdn.shopify.com/s/files/1/0577/3688/8485/files/Icon_Logo_Red.png?v=1772224283";
+const GA4_ID = "G-HS8HYY7LV1";
+
+const TEAM_PHOTOS = {
+  "Leonardo Gobbato": "team-leonardo",
+  "Federica Vianson Cocco": "team-federica",
+  "Andreas Gonzalez": "team-andreas",
+};
 
 const languageOrder = ["en", "fr", "it", "es", "de"];
 
@@ -30,65 +37,66 @@ const languages = {
       pamuuc: "PAMUUC.COM"
     },
     cookie: {
-      text: "We use essential cookies for language and consent preferences.",
-      accept: "OK"
+      text: "We use analytics cookies to understand how visitors use this site. You can accept or decline.",
+      accept: "Accept",
+      reject: "Decline"
     },
     home: {
       title: "Pamuuc Studio | Custom uniform systems for hospitality, healthcare, wellness, and service teams",
       description: "Pamuuc Studio designs durable bespoke uniform systems for hospitality, healthcare, wellness, and service teams, with Barcelona-led development and reliable repeat orders.",
-      eyebrow: "Design and production studio for custom uniforms",
+      eyebrow: "Barcelona — design and production studio",
       h1: "Custom uniform systems for hospitality, healthcare, wellness and service teams",
-      statement: "Custom uniform systems for teams whose clothing has to work beautifully every day.",
-      lead: "We design, develop, and coordinate durable bespoke uniforms around your space, roles, washing routine, and long-term reorder needs.",
+      statement: "For teams where what people wear is part of how the work is judged.",
+      lead: "We design, develop, and coordinate complete uniform systems around the physical reality of your space — built to last, built to wash, and built to reorder without renegotiation.",
       primaryCta: "Request a first meeting",
       secondaryCta: "Read the studio cases",
       proof: ["Barcelona-led development", "Built for frequent washing", "Role-based wardrobe systems", "Reliable repeat orders"],
-      introTitle: "Uniforms treated as part of the service experience",
-      introText: "The best professional wardrobe does more than dress a team. It supports movement, clarifies roles, reflects the space, and stays consistent as the operation grows.",
-      offerTitle: "What we build",
-      offerLead: "A focused studio service for fully custom uniforms and long-term team wardrobe systems.",
+      introTitle: "Clothing that holds up to real work",
+      introText: "The best uniform system is nearly invisible to the guest — present without drawing attention to itself. It holds its shape through daily washing, reads clearly across roles, and stays consistent as the team grows and the space evolves.",
+      offerTitle: "What we do",
+      offerLead: "A focused studio. We design garments, develop them for production, and manage the continuity of reorders.",
       offers: [
-        ["Custom uniform design", "Garments developed around your brand identity, team structure, movement, and daily use."],
-        ["Technical product development", "Materials, fit, construction, branding, and finishes selected for real operating conditions."],
-        ["Production continuity", "Validated patterns and specifications archived so future reorders stay consistent."]
+        ["Custom uniform design", "Garments designed around the physical demands of the role — fit, movement, comfort in temperature, and visual clarity across positions."],
+        ["Technical product development", "Every technical decision — fabric weight, construction method, branding, care requirement — is made for the actual conditions of the work."],
+        ["Production continuity", "Validated patterns and full specifications stay on file. When you need to reorder, the result matches the original."]
       ],
       sectorsTitle: "Who it is for",
-      sectorsLead: "Designed for operational environments where clothing affects trust, rhythm, comfort, and guest perception.",
+      sectorsLead: "We work with operations where the quality of the uniform is part of the quality of the experience — hotels, clinics, wellness studios, food and beverage, and broader service teams.",
       sectors: ["Hospitality", "Food and beverage", "Wellness", "Healthcare and clinics", "Guest services", "Service teams"],
       processTitle: "A clear path from idea to delivery",
-      processLead: "Every project is structured to reduce uncertainty before production starts.",
+      processLead: "No surprises before production. Every stage is defined before the next begins.",
       steps: [
-        ["01", "Discover", "We read the space, roles, operational flows, and visual direction."],
-        ["02", "Develop", "We define garments, materials, fit, finishes, prototypes, and sampling."],
-        ["03", "Produce", "Approved pieces move into coordinated production and final delivery."],
-        ["04", "Continue", "Patterns and specifications are archived for reliable future reorders."]
+        ["01", "Discover", "We understand the space, the roles, the daily physical reality, and the visual direction you want to hold."],
+        ["02", "Develop", "We define the garments — silhouette, fabric, construction, branding details — and develop samples for approval."],
+        ["03", "Produce", "Approved garments move into production. We coordinate the full process and manage delivery."],
+        ["04", "Continue", "Every specification stays on file. Future reorders arrive consistent with the original."]
       ],
-      productionTitle: "Production reality, clearly stated",
-      productionLead: "We scope each project around quantity, complexity, timing, and budget before development begins.",
+      productionTitle: "Honest about the numbers",
+      productionLead: "We size and scope every project before development begins. No surprises on timeline or investment.",
       facts: [
         ["From 5 pieces per style", "Small runs can be assessed when construction allows it."],
         ["4-6 weeks", "Typical development window for bespoke garments."],
         ["3-5 weeks", "Typical production window after approval."],
         ["Proposal-based pricing", "No rigid catalogue pricing; each project is estimated around actual needs."]
       ],
-      editorialTitle: "Selected reading and cases",
-      editorialLead: "Deeper notes on hospitality, clinical, and wellness uniform systems.",
-      teamTitle: "A small team with direct responsibility",
-      teamLead: "Your project stays close to the people making design, product, and coordination decisions.",
+      editorialTitle: "Cases and notes",
+      editorialLead: "Case notes from hospitality, healthcare, and wellness projects.",
+      teamTitle: "Who you will work with",
+      teamLead: "Every project is handled by the same small group of people. No account managers, no handoffs.",
       team: [
-        ["Leonardo Gobbato", "Founder and Head of Product Operations", "Defines silhouettes, fit logic, technical decisions, and repeatable production details."],
-        ["Federica Vianson Cocco", "Co-founder and Head of Business Development", "Guides client relationships, project clarity, and coordination from first contact to delivery."],
-        ["Andreas Gonzalez", "Co-founder and CEO", "Brings hospitality operations experience into practical design decisions for everyday service work."]
+        ["Leonardo Gobbato", "Founder and Head of Product Operations", "Leads product development: silhouette decisions, fabric selection, construction logic, and production specifications."],
+        ["Federica Vianson Cocco", "Co-founder and Head of Business Development", "Manages client relationships and project flow from first conversation to final delivery."],
+        ["Andreas Gonzalez", "Co-founder and CEO", "Brings operational hospitality experience to every design decision — what a uniform actually needs to do in service."]
       ],
       faqTitle: "Before we begin",
       faq: [
-        ["Do you work from a catalogue?", "No. We can use proven bases when they help timing or budget, but every project is shaped around your team and space."],
+        ["Do you work from a catalogue?", "No. We can use proven bases when they help timing or budget, but every project is shaped around your team, space, and operational reality."],
         ["Can we start with one role or garment?", "Yes. Many projects begin with one department or garment type and expand once the direction is validated."],
-        ["Do you handle repeat orders?", "Yes. Approved patterns, fabrics, finishes, and specifications are archived for continuity."],
-        ["Do you work outside Barcelona?", "Yes. Development is led from Barcelona, with meetings in person or by video depending on the project."]
+        ["Do you handle repeat orders?", "Yes. Approved patterns, fabrics, finishes, and specifications are archived. When you come back, the result matches."],
+        ["Do you work outside Barcelona?", "Yes. Development is led from Barcelona, with meetings in person or by video depending on the project and location."]
       ],
-      contactTitle: "Share your project with us",
-      contactLead: "Tell us about your team, environment, and timing. We will define the most effective path together.",
+      contactTitle: "Tell us about your project",
+      contactLead: "Describe your team, environment, and timing. We will reply within one working day with our initial read.",
       emailCta: "Prefer email",
       form: {
         hint: "Completing the form takes around 2 minutes. We usually reply within 1 working day.",
@@ -124,7 +132,7 @@ const languages = {
     nav: { offer: "Offre", sectors: "Secteurs", process: "Processus", proof: "Cas", blog: "Blog", contact: "Contact" },
     skip: "Aller au contenu",
     footer: { line: "Systèmes d'uniformes sur mesure développés à Barcelone.", studio: "Studio", legal: "Légal", pamuuc: "PAMUUC.COM" },
-    cookie: { text: "Nous utilisons des cookies essentiels pour la langue et les préférences de consentement.", accept: "OK" },
+    cookie: { text: "Nous utilisons des cookies analytiques pour comprendre comment les visiteurs utilisent ce site. Vous pouvez accepter ou refuser.", accept: "Accepter", reject: "Refuser" },
     home: {
       title: "Pamuuc Studio | Uniformes sur mesure pour hôtellerie, santé, bien-être et équipes de service",
       description: "Pamuuc Studio conçoit des systèmes d'uniformes sur mesure durables pour l'hôtellerie, la santé, le bien-être et les équipes de service.",
@@ -187,7 +195,7 @@ const languages = {
     nav: { offer: "Offerta", sectors: "Settori", process: "Processo", proof: "Casi", blog: "Blog", contact: "Contatto" },
     skip: "Vai al contenuto",
     footer: { line: "Sistemi di uniformi su misura sviluppati a Barcellona.", studio: "Studio", legal: "Legale", pamuuc: "PAMUUC.COM" },
-    cookie: { text: "Usiamo cookie essenziali per lingua e preferenze di consenso.", accept: "OK" },
+    cookie: { text: "Usiamo cookie analitici per capire come i visitatori usano questo sito. Puoi accettare o rifiutare.", accept: "Accetta", reject: "Rifiuta" },
     home: {
       title: "Pamuuc Studio | Uniformi su misura per hospitality, sanità, wellness e team di servizio",
       description: "Pamuuc Studio progetta sistemi di uniformi su misura durevoli per hospitality, sanità, wellness e team di servizio.",
@@ -241,7 +249,7 @@ const languages = {
     nav: { offer: "Oferta", sectors: "Sectores", process: "Proceso", proof: "Casos", blog: "Blog", contact: "Contacto" },
     skip: "Saltar al contenido",
     footer: { line: "Sistemas de uniformes a medida desarrollados en Barcelona.", studio: "Studio", legal: "Legal", pamuuc: "PAMUUC.COM" },
-    cookie: { text: "Usamos cookies esenciales para idioma y preferencias de consentimiento.", accept: "OK" },
+    cookie: { text: "Usamos cookies analíticas para entender cómo los visitantes usan este sitio. Puedes aceptar o rechazar.", accept: "Aceptar", reject: "Rechazar" },
     home: {
       title: "Pamuuc Studio | Uniformes a medida para hostelería, salud, bienestar y equipos de servicio",
       description: "Pamuuc Studio diseña sistemas de uniformes a medida duraderos para hostelería, salud, bienestar y equipos de servicio.",
@@ -295,7 +303,7 @@ const languages = {
     nav: { offer: "Angebot", sectors: "Bereiche", process: "Prozess", proof: "Fälle", blog: "Blog", contact: "Kontakt" },
     skip: "Zum Inhalt springen",
     footer: { line: "Maßgeschneiderte Uniformsysteme, entwickelt in Barcelona.", studio: "Studio", legal: "Rechtliches", pamuuc: "PAMUUC.COM" },
-    cookie: { text: "Wir verwenden essentielle Cookies für Sprache und Einwilligungspräferenzen.", accept: "OK" },
+    cookie: { text: "Wir verwenden Analyse-Cookies, um zu verstehen, wie Besucher diese Website nutzen. Sie können akzeptieren oder ablehnen.", accept: "Akzeptieren", reject: "Ablehnen" },
     home: {
       title: "Pamuuc Studio | Maßgeschneiderte Uniformen für Hospitality, Gesundheit, Wellness und Serviceteams",
       description: "Pamuuc Studio entwickelt langlebige maßgeschneiderte Uniformsysteme für Hospitality, Gesundheit, Wellness und Serviceteams.",
@@ -624,7 +632,7 @@ ${imageAlt ? `<meta property="og:image:alt" content="${escapeHtml(imageAlt)}">` 
 ${imageAlt ? `<meta name="twitter:image:alt" content="${escapeHtml(imageAlt)}">` : ""}
 <meta name="theme-color" content="#fbf7ef">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://formspree.io; form-action https://formspree.io; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com; form-action https://formspree.io; upgrade-insecure-requests">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/favicon.png">
 <link rel="preload" href="/assets/fonts/Gilmer-Regular.woff" as="font" type="font/woff" crossorigin>
@@ -679,7 +687,10 @@ ${main}
 </footer>
 <aside class="cookie-banner" data-cookie-banner hidden>
   <p>${escapeHtml(l.cookie.text)}</p>
-  <button class="button button-secondary" type="button" data-cookie-accept>${escapeHtml(l.cookie.accept)}</button>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-accept" type="button" data-cookie-accept>${escapeHtml(l.cookie.accept)}</button>
+    <button class="cookie-btn cookie-btn-reject" type="button" data-cookie-reject>${escapeHtml(l.cookie.reject)}</button>
+  </div>
 </aside>
 </body>
 </html>`;
@@ -787,7 +798,7 @@ function renderHome(lang) {
       <p>${escapeHtml(h.teamLead)}</p>
     </div>
     <div class="team-list">
-      ${h.team.map(([name, role, text]) => `<article class="team-row reveal"><h3>${escapeHtml(name)}</h3><p class="role">${escapeHtml(role)}</p><p>${escapeHtml(text)}</p></article>`).join("")}
+      ${h.team.map(([name, role, text]) => { const photo = TEAM_PHOTOS[name]; return `<article class="team-card reveal">${photo ? `<img class="team-photo" src="/assets/images/${photo}.svg" alt="${escapeHtml(name)}" width="200" height="200" loading="lazy">` : ""}<div class="team-body"><h3>${escapeHtml(name)}</h3><p class="role">${escapeHtml(role)}</p><p>${escapeHtml(text)}</p></div></article>`; }).join("")}
     </div>
   </div>
 </section>
@@ -818,7 +829,7 @@ function renderHome(lang) {
       <label>${escapeHtml(h.form.company)}<input name="company" autocomplete="organization" required maxlength="120"></label>
       <label>${escapeHtml(h.form.team)}<select name="team-size" required>${optionTags(ui.teamOptions, ui.select)}</select></label>
       <label>${escapeHtml(h.form.type)}<select name="project-type" required>${optionTags(ui.projectOptions, ui.select)}</select></label>
-      <label>${escapeHtml(h.form.timeline)}<select name="timeline" required>${optionTags(ui.timelineOptions, ui.select)}</select></label>
+      <label class="full">${escapeHtml(h.form.timeline)}<select name="timeline" required>${optionTags(ui.timelineOptions, ui.select)}</select></label>
       <label class="full">${escapeHtml(h.form.brief)}<textarea name="brief" rows="5" maxlength="2000"></textarea></label>
       <label class="honeypot">Website<input name="website" tabindex="-1" autocomplete="off"></label>
       <label class="checkbox full"><input type="checkbox" name="consent" required><span>${escapeHtml(h.form.consent)} <a href="${legalPath(lang)}#privacy">${escapeHtml(ui.legalInfo)}</a></span></label>
@@ -1082,13 +1093,12 @@ const siteCss = `@font-face {
 :root {
   --bg: #fbf7ef;
   --paper: #fffdf8;
-  --ink: #102126;
-  --muted: #596a70;
-  --line: rgba(16, 33, 38, 0.13);
+  --ink: #1a1714;
+  --muted: #6b6560;
+  --line: rgba(26, 23, 20, 0.12);
   --green: #002b2a;
   --green-soft: #e4eeeb;
   --red: #7f1d16;
-  --blue: #dbe7ef;
   --max: 1180px;
   --gutter: 24px;
   --radius: 8px;
@@ -1106,9 +1116,9 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
 p, h1, h2, h3 { margin: 0; }
 h1, h2, h3 { line-height: 1.05; letter-spacing: 0; }
-h1 { font-size: 4.45rem; }
-h2 { font-size: 2.45rem; }
-h3 { font-size: 1.15rem; }
+h1 { font-size: 5rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 1.18rem; }
 p { color: var(--muted); }
 .container { width: min(var(--max), calc(100% - (var(--gutter) * 2))); margin: 0 auto; }
 .skip-link { position: fixed; left: 12px; top: 12px; transform: translateY(-150%); background: var(--green); color: white; padding: 10px 14px; z-index: 100; border-radius: var(--radius); }
@@ -1131,23 +1141,23 @@ p { color: var(--muted); }
 .lang-link.is-active { background: var(--green); color: #fff; }
 .menu-toggle { display: none; width: 44px; height: 44px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--paper); }
 .menu-toggle span:not(.sr-only) { display: block; width: 18px; height: 2px; margin: 4px auto; background: var(--green); }
-.hero { position: relative; min-height: calc(88svh - 76px); overflow: hidden; background: var(--green); display: grid; align-items: end; }
+.hero { position: relative; min-height: calc(94svh - 76px); overflow: hidden; background: var(--green); display: grid; align-items: end; }
 .hero-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.72; }
-.hero-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 43, 42, 0.92), rgba(0, 43, 42, 0.56) 44%, rgba(0, 43, 42, 0.16)); }
-.hero-inner { position: relative; padding: 92px 0 58px; max-width: 780px; margin-left: max(var(--gutter), calc((100vw - var(--max)) / 2)); }
-.eyebrow { color: var(--red); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0; margin-bottom: 14px; }
-.hero .eyebrow { color: #f0c2b8; }
-.hero h1 { color: #fff; margin-bottom: 14px; }
-.hero-statement { color: #fff; font-size: 1.55rem; max-width: 740px; line-height: 1.25; }
-.hero-lead { color: rgba(255,255,255,0.82); max-width: 620px; margin-top: 18px; font-size: 1.05rem; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+.hero-scrim { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 43, 42, 0.93), rgba(0, 43, 42, 0.58) 44%, rgba(0, 43, 42, 0.16)); }
+.hero-inner { position: relative; padding: 110px 0 70px; max-width: 860px; margin-left: max(var(--gutter), calc((100vw - var(--max)) / 2)); }
+.eyebrow { color: var(--red); font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 16px; }
+.hero .eyebrow { color: rgba(240, 194, 184, 0.9); }
+.hero h1 { color: #fff; margin-bottom: 18px; }
+.hero-statement { color: rgba(255,255,255,0.92); font-size: 1.65rem; max-width: 760px; line-height: 1.22; }
+.hero-lead { color: rgba(255,255,255,0.68); max-width: 640px; margin-top: 22px; font-size: 1.08rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .button-primary { background: var(--red); color: #fff; border-color: var(--red); }
 .button-secondary { background: transparent; color: var(--ink); border-color: var(--line); }
-.button-light { color: #fff; border-color: rgba(255,255,255,0.4); background: rgba(255,255,255,0.08); }
+.button-light { color: #fff; border-color: rgba(255,255,255,0.35); background: rgba(255,255,255,0.07); }
 .proof-strip { background: var(--green); color: #fff; }
-.proof-strip-inner { display: grid; grid-template-columns: repeat(4, 1fr); border-left: 1px solid rgba(255,255,255,0.18); }
-.proof-strip span { padding: 18px 20px; border-right: 1px solid rgba(255,255,255,0.18); color: rgba(255,255,255,0.86); font-weight: 700; font-size: 0.92rem; }
-.section { padding: 86px 0; }
+.proof-strip-inner { display: grid; grid-template-columns: repeat(4, 1fr); border-left: 1px solid rgba(255,255,255,0.16); }
+.proof-strip span { padding: 20px 22px; border-right: 1px solid rgba(255,255,255,0.16); color: rgba(255,255,255,0.86); font-weight: 700; font-size: 0.92rem; }
+.section { padding: 104px 0; }
 .section-tint { background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .two-column { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 64px; align-items: start; }
 .section-heading h2, .section-heading h1 { margin-bottom: 18px; }
@@ -1163,7 +1173,7 @@ p { color: var(--muted); }
 }
 .quiet-card h3, .timeline-step h3, .team-row h3, .fact strong { margin-bottom: 10px; display: block; }
 .sector-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 34px; }
-.sector-grid span { border: 1px solid var(--line); border-radius: 999px; padding: 14px 18px; background: var(--green-soft); font-weight: 800; }
+.sector-grid span { border: 1px solid var(--line); border-radius: 999px; padding: 14px 18px; background: var(--green-soft); font-weight: 700; }
 .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 42px; }
 .timeline-step span { color: var(--red); font-weight: 900; display: block; margin-bottom: 36px; }
 .production-section { background: var(--green); color: #fff; }
@@ -1178,17 +1188,22 @@ p { color: var(--muted); }
 .editorial-card a, .blog-card a { display: grid; height: 100%; }
 .editorial-card img, .blog-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .editorial-card span, .editorial-card h3, .editorial-card p, .blog-card div { margin: 0 22px; }
-.editorial-card span { color: var(--red); font-size: 0.78rem; text-transform: uppercase; font-weight: 900; margin-top: 22px; }
+.editorial-card span { color: var(--red); font-size: 0.78rem; text-transform: uppercase; font-weight: 800; margin-top: 22px; }
 .editorial-card h3 { margin-top: 10px; }
 .editorial-card p { margin-top: 12px; margin-bottom: 24px; }
 .blog-card div { margin-top: 22px; margin-bottom: 24px; }
 .blog-card h2 { font-size: 1.22rem; margin: 8px 0 10px; }
-.team-list, .faq-list { display: grid; gap: 12px; }
-.role { color: var(--red); font-weight: 800; font-size: 0.9rem; margin: 4px 0 10px; }
+.team-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.faq-list { display: grid; gap: 12px; }
+.team-card { border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: var(--paper); }
+.team-photo { width: 100%; aspect-ratio: 1; object-fit: cover; background: var(--green-soft); }
+.team-body { padding: 22px 24px 26px; }
+.team-body h3 { margin-bottom: 6px; font-size: 1.05rem; }
+.role { color: var(--red); font-weight: 800; font-size: 0.85rem; margin: 0 0 12px; }
 details { padding: 0; }
 summary { cursor: pointer; padding: 20px 22px; font-weight: 800; }
 details p { padding: 0 22px 22px; }
-.contact-section { background: var(--blue); }
+.contact-section { background: var(--green-soft); border-top: 1px solid var(--line); }
 .contact-layout { display: grid; grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr); gap: 42px; align-items: start; }
 .contact-copy { position: sticky; top: 110px; }
 .contact-copy h2 { margin-bottom: 18px; }
@@ -1208,8 +1223,12 @@ textarea { resize: vertical; }
 .footer-brand img { width: 170px; margin-bottom: 14px; }
 .footer-links { display: grid; gap: 8px; color: var(--muted); font-weight: 700; }
 .copyright { width: min(var(--max), calc(100% - (var(--gutter) * 2))); margin: 30px auto 0; font-size: 0.85rem; }
-.cookie-banner { position: fixed; left: 18px; right: 18px; bottom: 18px; z-index: 70; width: min(620px, calc(100% - 36px)); background: var(--green); color: #fff; border-radius: var(--radius); padding: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.25); }
-.cookie-banner p { color: rgba(255,255,255,0.84); margin-bottom: 12px; }
+.cookie-banner { position: fixed; left: 18px; right: 18px; bottom: 18px; z-index: 70; width: min(560px, calc(100% - 36px)); background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; box-shadow: 0 8px 48px rgba(26,23,20,0.14); }
+.cookie-banner p { color: var(--muted); margin-bottom: 16px; font-size: 0.92rem; }
+.cookie-actions { display: flex; gap: 10px; }
+.cookie-btn { flex: 1; min-height: 42px; border-radius: 999px; font: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; border: 1px solid var(--line); }
+.cookie-btn-accept { background: var(--green); color: #fff; border-color: var(--green); }
+.cookie-btn-reject { background: transparent; color: var(--muted); }
 .blog-index, .article-page, .legal-page { padding-top: 56px; }
 .blog-shell, .article-shell, .legal-shell { max-width: 980px; }
 .breadcrumb { display: flex; gap: 8px; color: var(--muted); font-weight: 700; margin-bottom: 44px; }
@@ -1222,7 +1241,7 @@ textarea { resize: vertical; }
 .blog-content h2 { font-size: 1.7rem; margin-top: 28px; }
 .blog-content p, .blog-content li { font-size: 1.05rem; }
 .article-cta { max-width: 760px; margin: 54px auto 24px; background: var(--green); color: #fff; }
-.article-cta p { color: rgba(255,255,255,0.78); margin: 12px 0 22px; }
+.article-cta p { color: rgba(255,255,255,0.72); margin: 12px 0 22px; }
 .related { max-width: 760px; margin: 0 auto; display: grid; gap: 10px; }
 .related-link { border-bottom: 1px solid var(--line); padding: 14px 0; font-weight: 800; }
 .legal-nav { display: flex; flex-wrap: wrap; gap: 10px; margin: 28px 0 38px; }
@@ -1238,8 +1257,8 @@ textarea { resize: vertical; }
   .reveal { opacity: 1; transform: none; transition: none; }
 }
 @media (max-width: 1020px) {
-  h1 { font-size: 3.3rem; }
-  h2 { font-size: 2.05rem; }
+  h1 { font-size: 3.7rem; }
+  h2 { font-size: 2.2rem; }
   .menu-toggle { display: block; margin-left: auto; }
   .site-nav { display: none; position: absolute; left: 0; right: 0; top: 76px; padding: 18px var(--gutter); background: var(--paper); border-bottom: 1px solid var(--line); }
   .site-nav.is-open { display: grid; }
@@ -1247,21 +1266,22 @@ textarea { resize: vertical; }
   .two-column, .contact-layout { grid-template-columns: 1fr; gap: 32px; }
   .offer-grid, .editorial-grid, .blog-grid { grid-template-columns: 1fr 1fr; }
   .timeline, .proof-strip-inner { grid-template-columns: 1fr 1fr; }
+  .team-list { grid-template-columns: 1fr 1fr; }
   .contact-copy { position: static; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 680px) {
   :root { --gutter: 18px; }
-  h1 { font-size: 2.55rem; }
-  h2 { font-size: 1.78rem; }
+  h1 { font-size: 2.75rem; }
+  h2 { font-size: 1.9rem; }
   .brand img { width: 154px; }
-  .hero { min-height: 82svh; }
-  .hero-scrim { background: linear-gradient(0deg, rgba(0, 43, 42, 0.94), rgba(0, 43, 42, 0.38)); }
+  .hero { min-height: 86svh; }
+  .hero-scrim { background: linear-gradient(0deg, rgba(0, 43, 42, 0.97), rgba(0, 43, 42, 0.48)); }
   .hero-inner { padding: 72px 0 42px; margin-left: var(--gutter); width: calc(100% - (var(--gutter) * 2)); }
   .hero-statement { font-size: 1.22rem; }
   .hero-actions, .hero-actions .button { width: 100%; }
-  .proof-strip-inner, .offer-grid, .sector-grid, .timeline, .facts-grid, .editorial-grid, .blog-grid, .contact-form, .footer-inner { grid-template-columns: 1fr; }
-  .section { padding: 62px 0; }
+  .proof-strip-inner, .offer-grid, .sector-grid, .timeline, .facts-grid, .editorial-grid, .blog-grid, .contact-form, .footer-inner, .team-list { grid-template-columns: 1fr; }
+  .section { padding: 72px 0; }
   .contact-form { padding: 20px; }
   .article-header h1 { font-size: 2.18rem; }
   .footer-inner .language-switcher { justify-self: start; }
@@ -1293,11 +1313,33 @@ const siteJs = `(() => {
     revealItems.forEach((item) => observer.observe(item));
   }
 
+  function loadGA4() {
+    if (document.querySelector('script[data-ga4]')) return;
+    const s = document.createElement("script");
+    s.dataset.ga4 = "1";
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=${GA4_ID}";
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { window.dataLayer.push(arguments); }
+    window.gtag = gtag;
+    gtag("js", new Date());
+    gtag("config", "${GA4_ID}", { anonymize_ip: true });
+  }
+
+  const consent = localStorage.getItem("pamuuc_analytics");
+  if (consent === "accepted") loadGA4();
+
   const banner = document.querySelector("[data-cookie-banner]");
-  if (banner && localStorage.getItem("pamuuc_cookie_notice") !== "accepted") {
+  if (banner && !consent) {
     banner.hidden = false;
     banner.querySelector("[data-cookie-accept]")?.addEventListener("click", () => {
-      localStorage.setItem("pamuuc_cookie_notice", "accepted");
+      localStorage.setItem("pamuuc_analytics", "accepted");
+      banner.hidden = true;
+      loadGA4();
+    });
+    banner.querySelector("[data-cookie-reject]")?.addEventListener("click", () => {
+      localStorage.setItem("pamuuc_analytics", "rejected");
       banner.hidden = true;
     });
   }
@@ -1364,6 +1406,9 @@ function writeStaticAssets() {
   writeAsset("assets/css/site.css", siteCss);
   writeAsset("assets/js/site.js", siteJs);
   copyAsset("assets/images/logo.png", "assets/images/logo.png");
+  copyAsset("assets/images/team-leonardo.svg", "assets/images/team-leonardo.svg");
+  copyAsset("assets/images/team-federica.svg", "assets/images/team-federica.svg");
+  copyAsset("assets/images/team-andreas.svg", "assets/images/team-andreas.svg");
   copyAsset("assets/images/social-home-preview.jpg", "assets/images/social-home-preview.jpg");
   copyAsset("assets/images/blog/custom-hospitality-uniforms.jpg", "assets/images/hero.jpg");
   for (const topic of Object.values(blogTopics)) {
