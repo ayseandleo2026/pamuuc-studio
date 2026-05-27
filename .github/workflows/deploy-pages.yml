@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Build lean static site
-        run: node tools/build-lean-site.mjs
+        run: node tools/build-preserved-site.mjs
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
