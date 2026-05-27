@@ -1298,19 +1298,21 @@ const siteJs = `(() => {
     });
   }
 
-  const revealItems = document.querySelectorAll(".reveal");
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
-    revealItems.forEach((item) => item.classList.add("is-visible"));
-  } else {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
-    revealItems.forEach((item) => observer.observe(item));
+  if (!document.documentElement.classList.contains("gsap-pending")) {
+    const revealItems = document.querySelectorAll(".reveal");
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || !("IntersectionObserver" in window)) {
+      revealItems.forEach((item) => item.classList.add("is-visible"));
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -10% 0px", threshold: 0.08 });
+      revealItems.forEach((item) => observer.observe(item));
+    }
   }
 
   function loadGA4() {
@@ -1330,18 +1332,33 @@ const siteJs = `(() => {
   const consent = localStorage.getItem("pamuuc_analytics");
   if (consent === "accepted") loadGA4();
 
-  const banner = document.querySelector("[data-cookie-banner]");
-  if (banner && !consent) {
-    banner.hidden = false;
-    banner.querySelector("[data-cookie-accept]")?.addEventListener("click", () => {
-      localStorage.setItem("pamuuc_analytics", "accepted");
+  const banner = document.getElementById("cookie-banner") || document.querySelector("[data-cookie-banner]");
+  if (banner) {
+    if (consent) {
       banner.hidden = true;
-      loadGA4();
-    });
-    banner.querySelector("[data-cookie-reject]")?.addEventListener("click", () => {
-      localStorage.setItem("pamuuc_analytics", "rejected");
-      banner.hidden = true;
-    });
+    } else {
+      banner.hidden = false;
+      banner.querySelector("#cookie-accept, [data-cookie-accept]")?.addEventListener("click", () => {
+        localStorage.setItem("pamuuc_analytics", "accepted");
+        banner.hidden = true;
+        loadGA4();
+      });
+      banner.querySelector("#cookie-reject, [data-cookie-reject]")?.addEventListener("click", () => {
+        localStorage.setItem("pamuuc_analytics", "rejected");
+        banner.hidden = true;
+      });
+      const prefs = banner.querySelector("#cookie-preferences");
+      banner.querySelector("#cookie-customize")?.addEventListener("click", () => {
+        if (prefs) prefs.hidden = !prefs.hidden;
+      });
+      const analyticsBox = banner.querySelector("#cookie-analytics");
+      banner.querySelector("#cookie-save")?.addEventListener("click", () => {
+        const ok = analyticsBox?.checked || false;
+        localStorage.setItem("pamuuc_analytics", ok ? "accepted" : "rejected");
+        if (ok) loadGA4();
+        banner.hidden = true;
+      });
+    }
   }
 
   document.querySelectorAll("[data-contact-form]").forEach((form) => {
@@ -1405,6 +1422,46 @@ const siteJs = `(() => {
 function writeStaticAssets() {
   writeAsset("assets/css/site.css", siteCss);
   writeAsset("assets/js/site.js", siteJs);
+  writeAsset("script.js", siteJs);
+
+  // Gilmer font-face declarations for pages that reference /assets/fonts/fonts.css
+  const fontsCss = GILMER_FONTS.map((f) =>
+    `@font-face {\n  font-family: "Gilmer";\n  src: url("/assets/fonts/${f.file}") format("woff");\n  font-weight: ${f.weight};\n  font-style: normal;\n  font-display: swap;\n}`
+  ).join("\n");
+  writeAsset("assets/fonts/fonts.css", fontsCss);
+
+  // External CSS/JS assets referenced by the rich source home pages
+  for (const f of [
+    "assets/css/shared.css",
+    "assets/css/pages/home.css",
+    "assets/js/gsap-home.js",
+    "assets/js/alpine-home.js",
+    "assets/js/main.js",
+  ]) {
+    if (fs.existsSync(path.join(ROOT, f))) copyAsset(f, f);
+  }
+
+  // All images referenced by the home page (SVGs + project images)
+  for (const f of [
+    "assets/images/hero-desktop.svg",
+    "assets/images/hero-mobile.svg",
+    "assets/images/approach-desktop.svg",
+    "assets/images/approach-mobile.svg",
+    "assets/images/system-desktop.svg",
+    "assets/images/system-mobile.svg",
+    "assets/images/continuity-desktop.svg",
+    "assets/images/continuity-mobile.svg",
+    "assets/images/materials-detail.svg",
+    "assets/images/project-hospitality-editorial.svg",
+    "assets/images/project-multi-role-service-team.svg",
+    "assets/images/project-clinic-editorial.svg",
+    "assets/images/icon-local-development.svg",
+    "assets/images/icon-operational-design.svg",
+    "assets/images/icon-continuity.svg",
+  ]) {
+    if (fs.existsSync(path.join(ROOT, f))) copyAsset(f, f);
+  }
+
   copyAsset("assets/images/logo.png", "assets/images/logo.png");
   for (const f of ["team-leonardo.svg", "team-federica.svg", "team-andreas.svg"]) {
     const src = path.join(ROOT, "assets/images", f);
@@ -1475,6 +1532,59 @@ function validateDist(indexableRoutes) {
   }
 }
 
+function processSourceHome(lang) {
+  const sourcePath = lang === "en" ? path.join(ROOT, "index.html") : path.join(ROOT, lang, "index.html");
+  if (!fs.existsSync(sourcePath)) return null;
+  let html = fs.readFileSync(sourcePath, "utf8");
+  if (!html.includes('x-data=')) return null; // not the rich Alpine.js page
+
+  // Remove Google Fonts preconnect / preload / noscript
+  html = html.replace(/[ \t]*<link[^>]*fonts\.(googleapis|gstatic)\.com[^>]*>\n?/gi, "");
+  html = html.replace(/[ \t]*<noscript>\s*<link[^>]*googleapis[^>]*>\s*<\/noscript>\n?/gi, "");
+  // Remove /styles.css preload/noscript (legacy artefact)
+  html = html.replace(/[ \t]*<link[^>]*href="\/styles\.css"[^>]*>\n?/gi, "");
+  html = html.replace(/[ \t]*<noscript>\s*<link[^>]*\/styles\.css[^>]*>\s*<\/noscript>\n?/gi, "");
+  // Replace Poppins with Gilmer in the inline <style> block
+  html = html.replace(/"Poppins"/g, '"Gilmer"');
+  // Inject fonts.css just before </head>
+  html = html.replace("</head>", '<link href="/assets/fonts/fonts.css" rel="stylesheet"/>\n</head>');
+  // Fix favicon
+  html = html.replace(/<link[^>]+rel="icon"[^>]*>/i, '<link href="/favicon.png" rel="icon" type="image/png"/>');
+  // Update CSP (no Google Fonts; allow GA4 + CDN scripts for GSAP/Alpine)
+  html = html.replace(
+    /<meta[^>]+http-equiv="Content-Security-Policy"[^>]*>/i,
+    `<meta content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net https://analytics.google.com; form-action https://formspree.io; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>`
+  );
+  // Fix canonical URL — format must match validator expectation: rel before href, no closing slash
+  const canonicalTag = `<link rel="canonical" href="${absolute(homePath(lang))}">`;
+  html = html.replace(/<link[^>]+rel="canonical"[^>]*\/?>/i, canonicalTag);
+  // Replace all hreflang tags with fresh set
+  html = html.replace(/<link[^>]+hreflang="[^"]*"[^>]*\/?>/gi, "");
+  const hreflangHtml = Object.entries(homeAlternates())
+    .map(([l, p]) => `<link href="${absolute(p)}" hreflang="${l}" rel="alternate"/>`)
+    .join("");
+  html = html.replace(canonicalTag, canonicalTag + hreflangHtml);
+  // Redirect individual legal page links to the legal hub
+  const legal = legalPath(lang);
+  const legalSlugs2 = [
+    ["privacy-policy", "privacy"],
+    ["cookie-policy", "cookies"],
+    ["terms-and-conditions", "terms"],
+    ["legal-notice", "legal-notice"],
+  ];
+  for (const [slug, anchor] of legalSlugs2) {
+    html = html.replace(new RegExp(`href="/${slug}/"`, "g"), `href="${legal}#${anchor}"`);
+    if (lang !== "en") {
+      html = html.replace(new RegExp(`href="/${lang}/${slug}/"`, "g"), `href="${legal}#${anchor}"`);
+    }
+  }
+  // Set correct data-language on <body>
+  html = html.replace(/(<body[^>]+data-language=")[^"]*(")/i, `$1${lang}$2`);
+  // Prevent cookie banner flash — hide initially (script.js will show it if needed)
+  html = html.replace(/(<aside[^>]+id="cookie-banner"[^>]*)>/i, "$1 hidden>");
+  return html;
+}
+
 async function main() {
   cleanDist();
 
@@ -1488,7 +1598,8 @@ async function main() {
   const indexableRoutes = [];
 
   for (const lang of languageOrder) {
-    writeFile(homePath(lang), renderHome(lang));
+    const rich = processSourceHome(lang);
+    writeFile(homePath(lang), rich ?? renderHome(lang));
     indexableRoutes.push(homePath(lang));
   }
 
