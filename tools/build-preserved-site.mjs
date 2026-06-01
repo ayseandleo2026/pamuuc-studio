@@ -433,8 +433,66 @@ function localizedRouteForEnglishRoute(englishRoute, language) {
   return cluster?.routes[language] ?? englishRoute;
 }
 
+function readAttribute(tag, attributeName) {
+  const match = tag.match(new RegExp(`\\b${attributeName}=["']([^"']*)["']`, "i"));
+  return match ? decodeHtmlText(match[1]) : "";
+}
+
+function decodeHtmlText(value) {
+  const namedEntities = {
+    amp: "&",
+    apos: "'",
+    gt: ">",
+    lt: "<",
+    nbsp: " ",
+    quot: '"',
+  };
+
+  return value
+    .replace(/&#(\d+);/g, (_, code) => String.fromCodePoint(Number(code)))
+    .replace(/&#x([\da-f]+);/gi, (_, code) => String.fromCodePoint(Number.parseInt(code, 16)))
+    .replace(/&([a-z]+);/gi, (match, entity) => namedEntities[entity] ?? match)
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function stripHtmlTags(value) {
+  return decodeHtmlText(value.replace(/<[^>]*>/g, " "));
+}
+
+function firstElementText(html, tagName) {
+  const match = html.match(new RegExp(`<${tagName}\\b[^>]*>([\\s\\S]*?)<\\/${tagName}>`, "i"));
+  return match ? stripHtmlTags(match[1]) : "";
+}
+
+function metaContent(html, name) {
+  const tag = html.match(
+    new RegExp(`<meta\\b(?=[^>]*\\bname=["']${name}["'])(?=[^>]*\\bcontent=)[^>]*>`, "i"),
+  )?.[0];
+
+  return tag ? readAttribute(tag, "content") : "";
+}
+
+function schemaPageName(html) {
+  const title = firstElementText(html, "title").replace(/\s+\|\s+.*$/, "");
+  return firstElementText(html, "h1") || title;
+}
+
+function schemaTypesFor(data) {
+  return Array.isArray(data["@type"]) ? data["@type"] : [data["@type"]];
+}
+
+function readJsonLdObjects(html) {
+  return [...html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/g)].map(
+    (match) => JSON.parse(match[1]),
+  );
+}
+
 function patchJsonLdRouteStrings(html, language) {
   if (!language || language === "en") return html;
+
+  const pageName = schemaPageName(html);
+  const pageDescription = metaContent(html, "description");
 
   return html.replace(
     /<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/g,
@@ -464,7 +522,33 @@ function patchJsonLdRouteStrings(html, language) {
         return value;
       };
 
-      const patched = JSON.stringify(replaceValue(data), null, 2).replaceAll("<", "\\u003c");
+      const patchedData = replaceValue(data);
+      const schemaTypes = schemaTypesFor(patchedData);
+
+      if (schemaTypes.includes("Blog") || schemaTypes.includes("BlogPosting")) {
+        patchedData.inLanguage = language;
+      }
+
+      if (schemaTypes.includes("Blog") && pageName) {
+        patchedData.name = pageName;
+      }
+
+      if (schemaTypes.includes("BlogPosting") && pageName) {
+        patchedData.headline = pageName;
+      }
+
+      if ((schemaTypes.includes("Blog") || schemaTypes.includes("BlogPosting")) && pageDescription) {
+        patchedData.description = pageDescription;
+      }
+
+      if (schemaTypes.includes("BreadcrumbList") && pageName) {
+        const items = patchedData.itemListElement;
+        if (Array.isArray(items) && items.length) {
+          items[items.length - 1].name = pageName;
+        }
+      }
+
+      const patched = JSON.stringify(patchedData, null, 2).replaceAll("<", "\\u003c");
       return `<script type="application/ld+json">\n${patched}\n</script>`;
     },
   );
@@ -724,6 +808,43 @@ function validate() {
         if (!html.includes(`hreflang="${lang}"`)) {
           failures.push(`Blog route missing hreflang ${lang}: ${route}`);
         }
+      }
+    }
+  }
+
+  for (const language of localizedLanguages) {
+    for (const route of blogClusters.map((cluster) => cluster.routes[language])) {
+      const html = fs.readFileSync(routeToFile(route), "utf8");
+      const pageName = schemaPageName(html);
+      let jsonLdObjects;
+
+      try {
+        jsonLdObjects = readJsonLdObjects(html);
+      } catch (error) {
+        failures.push(`Invalid JSON-LD on localized blog route ${route}: ${error.message}`);
+        continue;
+      }
+
+      const primarySchema = jsonLdObjects.find((entry) => {
+        const types = schemaTypesFor(entry);
+        return types.includes("Blog") || types.includes("BlogPosting");
+      });
+
+      if (!primarySchema) {
+        failures.push(`Localized blog route missing Blog/BlogPosting JSON-LD: ${route}`);
+        continue;
+      }
+
+      if (primarySchema.inLanguage !== language) {
+        failures.push(`Localized blog route JSON-LD language mismatch: ${route}`);
+      }
+
+      if (schemaTypesFor(primarySchema).includes("BlogPosting") && primarySchema.headline !== pageName) {
+        failures.push(`Localized blog route JSON-LD headline mismatch: ${route}`);
+      }
+
+      if (schemaTypesFor(primarySchema).includes("Blog") && primarySchema.name !== pageName) {
+        failures.push(`Localized blog route JSON-LD name mismatch: ${route}`);
       }
     }
   }
