@@ -366,13 +366,13 @@ function isHomeHtml(relativePath) {
 }
 
 function patchHeroImagePreload(html, relativePath) {
-  if (!isHomeHtml(relativePath) || html.includes('href="/assets/images/hero-mobile.svg" media="(max-width: 767px)"')) {
+  if (!isHomeHtml(relativePath) || html.includes('href="/assets/images/hero-mobile.webp" media="(max-width: 767px)"')) {
     return html;
   }
 
   const heroPreloads =
-    '<link as="image" fetchpriority="high" href="/assets/images/hero-mobile.svg" media="(max-width: 767px)" rel="preload" type="image/svg+xml"/>\n' +
-    '<link as="image" fetchpriority="high" href="/assets/images/hero-desktop.svg" media="(min-width: 768px)" rel="preload" type="image/svg+xml"/>\n';
+    '<link as="image" fetchpriority="high" href="/assets/images/hero-mobile.webp" media="(max-width: 767px)" rel="preload" type="image/webp"/>\n' +
+    '<link as="image" fetchpriority="high" href="/assets/images/hero-desktop.webp" media="(min-width: 768px)" rel="preload" type="image/webp"/>\n';
 
   return html.replace(
     /(<link href="\/favicon\.png" rel="icon" type="image\/png"\/>\n)/,
