@@ -707,6 +707,14 @@ function validateInternalLinks() {
 function validate() {
   const failures = [];
 
+  // copyPath skips silently when a source is absent, so a declared asset that
+  // never got committed disappears from the deploy without any error.
+  for (const declared of [...rootFiles, ...rootDirectories]) {
+    if (!fs.existsSync(path.join(DIST, declared))) {
+      failures.push(`Declared root asset missing from dist: ${declared}`);
+    }
+  }
+
   if (fs.existsSync(path.join(DIST, "en", "index.html"))) {
     failures.push("dist/en/index.html should not exist; / is the English canonical homepage.");
   }

@@ -1,0 +1,3 @@
+Contact: mailto:leo.gobbato@pamuuc.com
+Expires: 2027-04-24T00:00:00.000Z
+Preferred-Languages: en, fr, it, es, de
