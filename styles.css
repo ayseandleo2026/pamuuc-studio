@@ -782,9 +782,13 @@ body[data-language="de"] .hero-pill-row .pill {
 
 .phase-grid,
 .project-grid,
-.trust-grid,
-.team-grid-three {
+.trust-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.team-grid-single {
+  grid-template-columns: minmax(0, min(24rem, 100%));
+  justify-content: center;
 }
 
 .parameter-grid-four {
@@ -2381,7 +2385,6 @@ body.cookie-banner-visible {
   .parameter-grid-three,
   .phase-grid,
   .project-grid,
-  .team-grid-three,
   .trust-grid,
   .stat-band {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2704,7 +2707,7 @@ body.cookie-banner-visible {
   .parameter-grid-three,
   .phase-grid,
   .project-grid,
-  .team-grid-three,
+  .team-grid-single,
   .trust-grid,
   .stat-band,
   .comparison-row {
