@@ -1,0 +1,40 @@
+.button,
+.nav-cta,
+.filter-pill,
+.sector-pill,
+.pill,
+.lang-link,
+.blog-card-content h2,
+.blog-card-content p,
+.blog-article h1,
+.blog-article h2,
+.blog-article p,
+.legal-card h1,
+.legal-card h2,
+.legal-card p,
+.legal-card li,
+.contact-card label,
+.contact-card input,
+.contact-card select,
+.contact-card textarea {
+  overflow-wrap: anywhere;
+}
+
+.blog-card-media,
+.blog-cover,
+.visual-card-main,
+.project-visual,
+.merch-card-media-inner,
+.merch-detail-media-stage {
+  overflow: hidden;
+}
+
+.blog-card-link,
+.quote-item-grid,
+.service-card,
+.method-card,
+.team-card,
+.contact-card,
+.legal-card {
+  min-width: 0;
+}

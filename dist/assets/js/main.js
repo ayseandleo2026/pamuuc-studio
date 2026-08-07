@@ -1,0 +1,804 @@
+(() => {
+  "use strict";
+
+  const GA_ID = "G-HS8HYY7LV1";
+  const STORAGE_LANGUAGE = "pamuuc_lang";
+  const STORAGE_ANALYTICS = "pamuuc_analytics";
+  const STORAGE_ANALYTICS_TIMESTAMP = "pamuuc_analytics_timestamp";
+  const COOKIE_CONSENT_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+  const COOKIE_BANNER_VISIBLE_CLASS = "cookie-banner-visible";
+
+  const supportedLanguages = ["en", "fr", "it", "es", "de"];
+
+  // Support both custom-domain root deploys and GitHub Pages project subpaths.
+  const rawPathParts = window.location.pathname.split("/").filter(Boolean);
+  const isGithubProjectHost = /\.github\.io$/i.test(window.location.hostname);
+  let basePath = "";
+  let contentPathParts = rawPathParts;
+
+  if (isGithubProjectHost && rawPathParts.length > 0) {
+    const firstPart = rawPathParts[0];
+    const isLanguageFolder = supportedLanguages.includes(firstPart);
+    const isFileName = firstPart.includes(".");
+
+    if (!isLanguageFolder && !isFileName) {
+      basePath = `/${firstPart}`;
+      contentPathParts = rawPathParts.slice(1);
+    }
+  }
+
+  const getPathWithBase = (path) => {
+    if (!path || !path.startsWith("/")) {
+      return path;
+    }
+
+    return `${basePath}${path}`;
+  };
+
+  const languageFromPath = supportedLanguages.includes(contentPathParts[0]) ? contentPathParts[0] : null;
+  const currentLanguage = languageFromPath || document.body.dataset.language || document.documentElement.lang || "en";
+  const getLanguageHomePath = (language) => (!language || language === "en" ? "/" : `/${language}/`);
+  const getLegalPath = (language, slug) => (!language || language === "en" ? `/${slug}/` : `/${language}/${slug}/`);
+  const legalTermsPath = getLegalPath(currentLanguage, "terms-and-conditions");
+
+  const uiCopyMap = {
+    en: {
+      sendingButton: "Sending...",
+      sendingStatus: "Sending your request...",
+      successStatus: "Success: your request was sent. We usually reply within 1 business day.",
+      errorStatus: "We could not send your request right now. Please try again or use Prefer email instead.",
+      submitButton: "Send project request"
+    },
+    fr: {
+      sendingButton: "Envoi...",
+      sendingStatus: "Envoi de votre demande...",
+      successStatus: "Succès : votre demande a été envoyée. Nous répondons généralement sous 1 jour ouvré.",
+      errorStatus: "Nous ne pouvons pas envoyer votre demande pour le moment. Réessayez ou utilisez l'option e-mail.",
+      submitButton: "Envoyer la demande projet"
+    },
+    it: {
+      sendingButton: "Invio...",
+      sendingStatus: "Invio della richiesta...",
+      successStatus: "Richiesta inviata con successo. Di solito rispondiamo entro 1 giorno lavorativo.",
+      errorStatus: "Non riusciamo a inviare la richiesta ora. Riprova o usa l'opzione e-mail.",
+      submitButton: "Invia richiesta progetto"
+    },
+    es: {
+      sendingButton: "Enviando...",
+      sendingStatus: "Enviando tu solicitud...",
+      successStatus: "Solicitud enviada correctamente. Normalmente respondemos en 1 día laborable.",
+      errorStatus: "No hemos podido enviar la solicitud ahora. Inténtalo de nuevo o usa la opción por e-mail.",
+      submitButton: "Enviar solicitud de proyecto"
+    },
+    de: {
+      sendingButton: "Wird gesendet...",
+      sendingStatus: "Ihre Anfrage wird gesendet...",
+      successStatus: "Ihre Anfrage wurde gesendet. Wir antworten in der Regel innerhalb eines Werktags.",
+      errorStatus: "Anfrage konnte nicht gesendet werden. Bitte erneut versuchen oder per E-Mail schreiben.",
+      submitButton: "Projektanfrage senden"
+    }
+  };
+  const uiCopy = uiCopyMap[currentLanguage] || uiCopyMap.en;
+  const cookieTermsLinkCopyMap = {
+    en: "Read terms and conditions.",
+    fr: "Lire les conditions générales.",
+    it: "Leggi termini e condizioni.",
+    es: "Leer términos y condiciones.",
+    de: "AGB lesen."
+  };
+
+  const body = document.body;
+  const isHomePage = body?.dataset.pageType === "home";
+  const promoBannerCopyMap = {
+    en: {
+      parts: ["Fully custom uniforms", "Barcelona-led development", "Clear project request"],
+      cta: "Request a first meeting"
+    },
+    fr: {
+      parts: ["Uniformes entièrement sur mesure", "Développement piloté depuis Barcelone", "Demande projet claire"],
+      cta: "Demander un premier rendez-vous"
+    },
+    it: {
+      parts: ["Uniformi completamente su misura", "Sviluppo guidato da Barcellona", "Richiesta progetto chiara"],
+      cta: "Richiedi un primo incontro"
+    },
+    es: {
+      parts: ["Uniformes totalmente a medida", "Desarrollo coordinado desde Barcelona", "Solicitud de proyecto clara"],
+      cta: "Solicitar una primera reunión"
+    },
+    de: {
+      parts: ["Vollständig maßgefertigte Uniformen", "Entwicklung aus Barcelona", "Klare Projektanfrage"],
+      cta: "Erstgespräch anfragen"
+    }
+  };
+
+  const injectPromoBanner = () => {
+    const header = document.querySelector(".site-header");
+    if (!header || header.querySelector(".promo-banner")) {
+      return;
+    }
+
+    const copy = promoBannerCopyMap[currentLanguage] || promoBannerCopyMap.en;
+    const homePath = getLanguageHomePath(currentLanguage);
+    const ctaHref = isHomePage ? "#contact" : getPathWithBase(`${homePath}#contact`);
+    const ctaLabel = copy.cta;
+
+    const banner = document.createElement("div");
+    banner.className = "promo-banner";
+
+    const container = document.createElement("div");
+    container.className = "container promo-banner-inner";
+
+    const copyRow = document.createElement("div");
+    copyRow.className = "promo-banner-copy";
+
+    copy.parts.forEach((part, index) => {
+      const item = document.createElement(index === 0 ? "strong" : "span");
+      item.textContent = part;
+      copyRow.appendChild(item);
+
+      if (index < copy.parts.length - 1) {
+        const separator = document.createElement("span");
+        separator.className = "promo-banner-separator";
+        separator.textContent = "|";
+        copyRow.appendChild(separator);
+      }
+    });
+
+    const link = document.createElement("a");
+    link.className = "promo-banner-link";
+    link.href = ctaHref;
+    link.textContent = ctaLabel;
+
+    container.append(copyRow, link);
+    banner.appendChild(container);
+    header.prepend(banner);
+  };
+
+  injectPromoBanner();
+
+  const normalizeRootAbsoluteLinks = () => {
+    if (!basePath) {
+      return;
+    }
+
+    document.querySelectorAll("a[href^='/']").forEach((link) => {
+      const href = link.getAttribute("href");
+      if (!href || href.startsWith("//")) {
+        return;
+      }
+
+      if (href === basePath || href.startsWith(`${basePath}/`)) {
+        return;
+      }
+
+      link.setAttribute("href", getPathWithBase(href));
+    });
+  };
+
+  normalizeRootAbsoluteLinks();
+
+  const initSharedMobileNav = () => {
+    const nav = document.querySelector("#site-nav");
+    const toggle = document.querySelector(".menu-toggle[aria-controls='site-nav']");
+    if (!body || !nav || !toggle) {
+      return;
+    }
+
+    const alpineControlled =
+      body.hasAttribute("x-data") ||
+      toggle.hasAttribute("@click") ||
+      nav.hasAttribute(":class") ||
+      nav.hasAttribute("x-show");
+
+    if (alpineControlled) {
+      return;
+    }
+
+    const label = toggle.querySelector(".sr-only");
+    const setOpen = (open) => {
+      nav.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open.toString());
+      body.classList.toggle("menu-open", open);
+      if (label) {
+        label.textContent = open ? "Close menu" : "Open menu";
+      }
+    };
+
+    body.classList.add("nav-ready");
+    setOpen(false);
+
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setOpen(!nav.classList.contains("is-open"));
+    });
+
+    nav.addEventListener("click", (event) => {
+      if (event.target.closest("a[href]")) {
+        setOpen(false);
+      }
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!nav.classList.contains("is-open")) {
+        return;
+      }
+
+      if (nav.contains(event.target) || toggle.contains(event.target)) {
+        return;
+      }
+
+      setOpen(false);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && nav.classList.contains("is-open")) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    const desktopQuery = window.matchMedia("(min-width: 1101px)");
+    const closeOnDesktop = () => {
+      if (desktopQuery.matches) {
+        setOpen(false);
+      }
+    };
+
+    if (typeof desktopQuery.addEventListener === "function") {
+      desktopQuery.addEventListener("change", closeOnDesktop);
+    } else if (typeof desktopQuery.addListener === "function") {
+      desktopQuery.addListener(closeOnDesktop);
+    }
+  };
+
+  initSharedMobileNav();
+
+  const isLocalHost =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1" ||
+    window.location.hostname.endsWith(".local");
+
+  if (window.location.protocol === "http:" && !isLocalHost) {
+    window.location.replace(`https://${window.location.host}${window.location.pathname}${window.location.search}${window.location.hash}`);
+    return;
+  }
+
+  let gaLoaded = false;
+  let gaLoading = false;
+  let analyticsAllowed = false;
+  let gaConsentState = "rejected";
+  const pendingEvents = [];
+  const pendingVitalMetrics = new Map();
+  let webVitalsReporterInstalled = false;
+
+  const scheduleNonCriticalTask = (callback, timeout = 1800) => {
+    if (typeof window.requestIdleCallback === "function") {
+      window.requestIdleCallback(callback, { timeout });
+      return;
+    }
+
+    window.setTimeout(callback, timeout);
+  };
+
+  const getStorageItem = (key) => {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (_error) {
+      return null;
+    }
+  };
+
+  const setStorageItem = (key, value) => {
+    try {
+      window.localStorage.setItem(key, value);
+      return true;
+    } catch (_error) {
+      return false;
+    }
+  };
+
+  const removeStorageItem = (key) => {
+    try {
+      window.localStorage.removeItem(key);
+    } catch (_error) {
+      // Ignore storage errors in restricted environments.
+    }
+  };
+
+  const getGaConsentPayload = (value) => {
+    const analyticsState = value === "accepted" ? "granted" : "denied";
+    return {
+      analytics_storage: analyticsState,
+      ad_storage: "denied",
+      ad_user_data: "denied",
+      ad_personalization: "denied",
+      functionality_storage: "granted",
+      security_storage: "granted"
+    };
+  };
+
+  const applyGaConsent = (value, mode = "update") => {
+    gaConsentState = value === "accepted" ? "accepted" : "rejected";
+
+    if (!gaLoaded || typeof window.gtag !== "function") {
+      return;
+    }
+
+    window.gtag("consent", mode, getGaConsentPayload(gaConsentState));
+  };
+
+  const trackEvent = (name, params = {}) => {
+    if (!analyticsAllowed) {
+      return;
+    }
+
+    const payload = {
+      language: currentLanguage,
+      ...params
+    };
+
+    if (!gaLoaded || typeof window.gtag !== "function") {
+      pendingEvents.push([name, payload]);
+      return;
+    }
+
+    window.gtag("event", name, payload);
+  };
+
+  const getVitalDebugTarget = (metric) => {
+    const target =
+      metric.attribution?.interactionTarget ||
+      metric.attribution?.largestShiftTarget ||
+      metric.attribution?.target ||
+      metric.attribution?.element ||
+      "";
+
+    if (!target) {
+      return undefined;
+    }
+
+    return String(target).replace(/\s+/g, " ").trim().slice(0, 120);
+  };
+
+  const buildVitalPayload = (metric) => {
+    const payload = {
+      value: Number(metric.delta.toFixed(metric.name === "CLS" ? 4 : 0)),
+      metric_id: metric.id,
+      metric_value: Number(metric.value.toFixed(metric.name === "CLS" ? 4 : 0)),
+      metric_delta: Number(metric.delta.toFixed(metric.name === "CLS" ? 4 : 0)),
+      metric_rating: metric.rating,
+      metric_navigation_type: metric.navigationType,
+      page_path: window.location.pathname,
+      page_type: body?.dataset.pageType || "page"
+    };
+
+    const debugTarget = getVitalDebugTarget(metric);
+    if (debugTarget) {
+      payload.debug_target = debugTarget;
+    }
+
+    return payload;
+  };
+
+  const flushPendingVitalMetrics = () => {
+    if (!analyticsAllowed || pendingVitalMetrics.size === 0) {
+      return;
+    }
+
+    pendingVitalMetrics.forEach(({ name, payload }) => {
+      trackEvent(name, payload);
+    });
+    pendingVitalMetrics.clear();
+  };
+
+  const reportWebVitalMetric = (metric) => {
+    const payload = buildVitalPayload(metric);
+    const metricKey = `${metric.name}:${metric.id}`;
+
+    if (!analyticsAllowed) {
+      pendingVitalMetrics.set(metricKey, { name: metric.name, payload });
+      return;
+    }
+
+    trackEvent(metric.name, payload);
+  };
+
+  const installDeferredWebVitalsReporter = () => {
+    if (webVitalsReporterInstalled) {
+      return;
+    }
+
+    webVitalsReporterInstalled = true;
+    scheduleNonCriticalTask(() => {
+      import("./web-vitals.js")
+        .then(({ installWebVitalsReporter }) => {
+          installWebVitalsReporter(reportWebVitalMetric);
+        })
+        .catch((error) => {
+          console.error("Failed to load web vitals reporter", error);
+        });
+    }, 2500);
+  };
+
+  // Expose a minimal public API for page-specific modules.
+  window.PamuucStudio = Object.assign(window.PamuucStudio || {}, {
+    currentLanguage,
+    getPathWithBase,
+    isRootPage: contentPathParts.length === 0 || (contentPathParts.length === 1 && contentPathParts[0] === "index.html"),
+    supportedLanguages: [...supportedLanguages],
+    trackEvent
+  });
+
+  const loadGa = (initialConsent = gaConsentState) => {
+    if (gaLoaded || gaLoading) {
+      return;
+    }
+    gaLoading = true;
+
+    const onGaReady = () => {
+      window.dataLayer = window.dataLayer || [];
+      if (typeof window.gtag !== "function") {
+        window.gtag = function gtag() {
+          window.dataLayer.push(arguments);
+        };
+      }
+
+      const hasConfigCall = window.dataLayer.some((entry) => {
+        return Array.isArray(entry) && entry[0] === "config" && entry[1] === GA_ID;
+      });
+      const hasConsentDefaultCall = window.dataLayer.some((entry) => {
+        return Array.isArray(entry) && entry[0] === "consent" && entry[1] === "default";
+      });
+
+      if (!hasConsentDefaultCall) {
+        window.gtag("consent", "default", getGaConsentPayload(initialConsent));
+      }
+
+      if (!hasConfigCall) {
+        window.gtag("js", new Date());
+        window.gtag("config", GA_ID, {
+          anonymize_ip: true,
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false
+        });
+      }
+
+      gaLoaded = true;
+      gaLoading = false;
+      applyGaConsent(gaConsentState);
+      while (pendingEvents.length) {
+        const [eventName, payload] = pendingEvents.shift();
+        window.gtag("event", eventName, payload);
+      }
+      flushPendingVitalMetrics();
+    };
+
+    const existingGaScript = document.querySelector(`script[src*="googletagmanager.com/gtag/js?id=${GA_ID}"]`);
+    if (existingGaScript) {
+      if (typeof window.gtag === "function") {
+        onGaReady();
+      } else {
+        existingGaScript.addEventListener("load", onGaReady, { once: true });
+        existingGaScript.addEventListener(
+          "error",
+          () => {
+            gaLoading = false;
+          },
+          { once: true }
+        );
+      }
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    script.addEventListener("load", onGaReady, { once: true });
+    script.addEventListener(
+      "error",
+      () => {
+        gaLoading = false;
+      },
+      { once: true }
+    );
+    document.head.appendChild(script);
+  };
+
+  const cookieBanner = document.querySelector("#cookie-banner, [data-cookie-banner]");
+  const cookieAccept = cookieBanner?.querySelector(
+    "#cookie-accept, [data-cookie-choice='accept'], [data-cookie-choice='accepted']"
+  );
+  const cookieReject = cookieBanner?.querySelector(
+    "#cookie-reject, [data-cookie-choice='reject'], [data-cookie-choice='rejected']"
+  );
+  const cookieCustomize = cookieBanner?.querySelector("#cookie-customize, [data-cookie-customize]");
+  const cookiePreferences = cookieBanner?.querySelector("#cookie-preferences, [data-cookie-preferences]");
+  const cookieAnalytics = cookieBanner?.querySelector("#cookie-analytics, [data-cookie-analytics]");
+  const cookieSave = cookieBanner?.querySelector("#cookie-save, [data-cookie-save]");
+  let cookieBannerResizeObserver = null;
+
+  const syncCookieBannerOffset = () => {
+    if (!cookieBanner || !body?.classList.contains(COOKIE_BANNER_VISIBLE_CLASS)) {
+      document.documentElement.style.removeProperty("--cookie-banner-height");
+      return;
+    }
+
+    window.requestAnimationFrame(() => {
+      const height = Math.ceil(cookieBanner.getBoundingClientRect().height);
+      document.documentElement.style.setProperty("--cookie-banner-height", `${height}px`);
+    });
+  };
+
+  const observeCookieBannerSize = () => {
+    if (!cookieBanner || cookieBannerResizeObserver || typeof ResizeObserver !== "function") {
+      return;
+    }
+
+    cookieBannerResizeObserver = new ResizeObserver(syncCookieBannerOffset);
+    cookieBannerResizeObserver.observe(cookieBanner);
+  };
+
+  const stopCookieBannerSizeObserver = () => {
+    if (cookieBannerResizeObserver) {
+      cookieBannerResizeObserver.disconnect();
+      cookieBannerResizeObserver = null;
+    }
+  };
+
+  const getStoredAnalyticsConsent = () => {
+    let storedValue = getStorageItem(STORAGE_ANALYTICS);
+    let storedTimestampRaw = getStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
+
+    const storedTimestamp = Number.parseInt(storedTimestampRaw || "", 10);
+
+    if (storedValue !== "accepted" && storedValue !== "rejected") {
+      removeStorageItem(STORAGE_ANALYTICS);
+      removeStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
+      return null;
+    }
+
+    if (storedTimestampRaw && !Number.isFinite(storedTimestamp)) {
+      removeStorageItem(STORAGE_ANALYTICS);
+      removeStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
+      return null;
+    }
+
+    if (Number.isFinite(storedTimestamp) && Date.now() - storedTimestamp >= COOKIE_CONSENT_TTL_MS) {
+      removeStorageItem(STORAGE_ANALYTICS);
+      removeStorageItem(STORAGE_ANALYTICS_TIMESTAMP);
+      return null;
+    }
+
+    return storedValue;
+  };
+
+  const decorateCookieBanner = () => {
+    if (!cookieBanner) {
+      return;
+    }
+
+    const copy = cookieTermsLinkCopyMap[currentLanguage] || cookieTermsLinkCopyMap.en;
+    const cookieText = cookieBanner.querySelector("p");
+    if (cookieText && !cookieText.querySelector(".cookie-terms-link")) {
+      const termsLink = document.createElement("a");
+      termsLink.href = getPathWithBase(legalTermsPath);
+      termsLink.className = "cookie-terms-link";
+      termsLink.textContent = copy;
+      cookieText.append(document.createTextNode(" "), termsLink);
+    }
+
+    const cookieActions = cookieAccept?.parentElement;
+    if (cookieActions && !cookieActions.classList.contains("cookie-actions")) {
+      cookieActions.classList.add("cookie-actions");
+    }
+
+    if (cookieAccept) {
+      cookieAccept.classList.add("button", "button-primary", "cookie-accept-cta");
+    }
+
+    if (cookieReject) {
+      cookieReject.classList.add("button", "button-secondary", "cookie-reject-button");
+    }
+
+    if (cookieCustomize) {
+      cookieCustomize.classList.add("button", "button-secondary", "cookie-customize-button");
+    }
+
+    if (cookieSave) {
+      cookieSave.classList.add("button", "button-primary", "cookie-save-button");
+    }
+
+    if (cookieCustomize && cookiePreferences) {
+      cookieCustomize.setAttribute("aria-controls", "cookie-preferences");
+      cookieCustomize.setAttribute("aria-expanded", (!cookiePreferences.hidden).toString());
+    }
+  };
+
+  decorateCookieBanner();
+
+  if (cookieBanner) {
+    window.addEventListener("resize", syncCookieBannerOffset, { passive: true });
+  }
+
+  const hideCookieBanner = () => {
+    if (cookieBanner) {
+      cookieBanner.classList.remove("is-visible");
+      cookieBanner.hidden = true;
+    }
+    body?.classList.remove(COOKIE_BANNER_VISIBLE_CLASS);
+    stopCookieBannerSizeObserver();
+    document.documentElement.style.removeProperty("--cookie-banner-height");
+  };
+
+  const showCookieBanner = () => {
+    if (!cookieBanner) {
+      return;
+    }
+
+    cookieBanner.classList.add("is-visible");
+    cookieBanner.hidden = false;
+    body?.classList.add(COOKIE_BANNER_VISIBLE_CLASS);
+    syncCookieBannerOffset();
+    observeCookieBannerSize();
+  };
+
+  const setCookiePreferencesOpen = (open) => {
+    if (!cookiePreferences || !cookieCustomize) {
+      return;
+    }
+
+    cookiePreferences.hidden = !open;
+    cookieCustomize.setAttribute("aria-expanded", open.toString());
+    syncCookieBannerOffset();
+  };
+
+  const setCookieConsent = (value, source = "button") => {
+    const normalizedValue = value === "accepted" ? "accepted" : "rejected";
+    const current = getStoredAnalyticsConsent();
+    if (current === normalizedValue) {
+      hideCookieBanner();
+      applyGaConsent(normalizedValue);
+      if (normalizedValue === "accepted") {
+        analyticsAllowed = true;
+        loadGa(normalizedValue);
+        installDeferredWebVitalsReporter();
+        bindScrollTracking();
+        flushPendingVitalMetrics();
+      }
+      return;
+    }
+
+    setStorageItem(STORAGE_ANALYTICS, normalizedValue);
+    setStorageItem(STORAGE_ANALYTICS_TIMESTAMP, String(Date.now()));
+    hideCookieBanner();
+
+    analyticsAllowed = normalizedValue === "accepted";
+    applyGaConsent(normalizedValue);
+    if (analyticsAllowed) {
+      loadGa(normalizedValue);
+      installDeferredWebVitalsReporter();
+      bindScrollTracking();
+      flushPendingVitalMetrics();
+    }
+
+    if (normalizedValue === "accepted") {
+      trackEvent("cookie_accept", { item_name: source });
+    } else {
+      pendingVitalMetrics.clear();
+      pendingEvents.length = 0;
+    }
+  };
+
+  const scrollThresholds = [25, 50, 75, 100];
+  const trackedScrollThresholds = new Set();
+  let scrollTrackingTicking = false;
+  let scrollTrackingBound = false;
+
+  const handleScrollTracking = () => {
+    scrollTrackingTicking = false;
+    const doc = document.documentElement;
+    const scrollable = doc.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) {
+      return;
+    }
+
+    const percent = Math.min(100, Math.round((window.scrollY / scrollable) * 100));
+    scrollThresholds.forEach((threshold) => {
+      if (percent >= threshold && !trackedScrollThresholds.has(threshold)) {
+        trackedScrollThresholds.add(threshold);
+        trackEvent("scroll_depth", { item_name: `${threshold}%` });
+      }
+    });
+  };
+
+  const bindScrollTracking = () => {
+    if (scrollTrackingBound) {
+      return;
+    }
+
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!analyticsAllowed || scrollTrackingTicking) {
+          return;
+        }
+        scrollTrackingTicking = true;
+        window.requestAnimationFrame(handleScrollTracking);
+      },
+      { passive: true }
+    );
+
+    scrollTrackingBound = true;
+  };
+
+  const storedCookieConsent = getStoredAnalyticsConsent();
+  analyticsAllowed = storedCookieConsent === "accepted";
+  gaConsentState = analyticsAllowed ? "accepted" : "rejected";
+  if (cookieAnalytics) {
+    cookieAnalytics.checked = analyticsAllowed;
+  }
+  if (analyticsAllowed) {
+    loadGa(gaConsentState);
+    installDeferredWebVitalsReporter();
+    bindScrollTracking();
+    flushPendingVitalMetrics();
+  }
+
+  if (cookieAccept) {
+    cookieAccept.addEventListener("click", () => setCookieConsent("accepted", "accept_button"));
+  }
+
+  if (cookieReject) {
+    cookieReject.addEventListener("click", () => setCookieConsent("rejected", "reject_button"));
+  }
+
+  if (cookieCustomize) {
+    cookieCustomize.addEventListener("click", () => {
+      setCookiePreferencesOpen(cookiePreferences ? cookiePreferences.hidden : false);
+    });
+  }
+
+  if (cookieSave) {
+    cookieSave.addEventListener("click", () => {
+      const value = cookieAnalytics && cookieAnalytics.checked ? "accepted" : "rejected";
+      setCookieConsent(value, "preferences_panel");
+    });
+  }
+
+  if (!storedCookieConsent && cookieBanner) {
+    showCookieBanner();
+  }
+
+  const storedLanguage = getStorageItem(STORAGE_LANGUAGE);
+  const isRootPage = contentPathParts.length === 0 || (contentPathParts.length === 1 && contentPathParts[0] === "index.html");
+
+  if (!storedLanguage && !isRootPage && currentLanguage) {
+    setStorageItem(STORAGE_LANGUAGE, currentLanguage);
+  }
+
+  document.querySelectorAll("[data-lang-switch]").forEach((link) => {
+    link.addEventListener("click", () => {
+      const selected = link.getAttribute("data-lang-switch");
+      if (!selected) {
+        return;
+      }
+
+      setStorageItem(STORAGE_LANGUAGE, selected);
+      trackEvent("language_switch", { item_name: selected });
+    });
+  });
+
+  const pageScriptMap = {
+    home: "./pages/home.js",
+    blog: "./pages/blog.js",
+    "blog-post": "./pages/blog.js"
+  };
+
+  const pageScript = pageScriptMap[body?.dataset.pageType || ""];
+  if (pageScript) {
+    import(pageScript).catch((error) => {
+      console.error(`Failed to load page script: ${pageScript}`, error);
+    });
+  }
+})();

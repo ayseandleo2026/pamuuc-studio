@@ -1,0 +1,40 @@
+.container,
+.blog-shell,
+.legal-main .container,
+.merch-form-layout,
+.method-layout,
+.category-layout,
+.faq-layout,
+.team-layout,
+.contact-layout {
+  min-width: 0;
+}
+
+main,
+section,
+article,
+nav,
+header,
+footer,
+div {
+  overflow-wrap: normal;
+}
+
+.site-nav-list,
+.footer-links-columns,
+.footer-links,
+.language-switcher,
+.header-inner,
+.hero-grid,
+.service-split,
+.blog-list,
+.blog-shell,
+.blog-article,
+.legal-card,
+.contact-card,
+.mini-card,
+.method-card,
+.project-card,
+.team-card {
+  min-width: 0;
+}

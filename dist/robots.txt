@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pamuuc-studio.com/sitemap.xml
