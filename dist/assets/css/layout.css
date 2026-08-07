@@ -34,7 +34,6 @@ div {
 .contact-card,
 .mini-card,
 .method-card,
-.project-card,
-.team-card {
+.project-card {
   min-width: 0;
 }

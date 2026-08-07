@@ -16,7 +16,6 @@
       parameters: "Production parameters",
       continuity: "Continuity model",
       projects: "Selected projects",
-      team: "Team",
       faq: "FAQ",
       contact: "Start the conversation"
     },
@@ -31,7 +30,6 @@
       parameters: "Parámetros de producción",
       continuity: "Modelo de continuidad",
       projects: "Proyectos seleccionados",
-      team: "Equipo",
       faq: "FAQ",
       contact: "Empecemos la conversación"
     },
@@ -46,7 +44,6 @@
       parameters: "Paramètres de production",
       continuity: "Modèle de continuité",
       projects: "Projets sélectionnés",
-      team: "Équipe",
       faq: "FAQ",
       contact: "Lancer la discussion"
     },
@@ -61,7 +58,6 @@
       parameters: "Parametri di produzione",
       continuity: "Modello di continuità",
       projects: "Progetti selezionati",
-      team: "Squadra",
       faq: "FAQ",
       contact: "Inizia la conversazione"
     }

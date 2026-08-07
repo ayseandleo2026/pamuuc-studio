@@ -633,7 +633,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .phase-card,
 .parameter-card,
 .project-card,
-.team-card,
 .contact-card,
 .material-card,
 .logo-band-inner,
@@ -761,7 +760,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .phase-grid,
 .parameter-grid,
 .project-grid,
-.team-grid,
 .trust-grid {
   display: grid;
   gap: clamp(0.85rem, 1.8vw, 1.4rem);
@@ -786,11 +784,6 @@ body[data-language="de"] .hero-pill-row .pill {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.team-grid-single {
-  grid-template-columns: minmax(0, min(24rem, 100%));
-  justify-content: center;
-}
-
 .parameter-grid-four {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
@@ -813,7 +806,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .method-card,
 .phase-card,
 .parameter-card,
-.team-card,
 .material-card,
 .contact-card,
 .project-card,
@@ -826,7 +818,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .method-card,
 .phase-card,
 .parameter-card,
-.team-card,
 .material-card,
 .contact-card,
 .category-visual {
@@ -837,8 +828,7 @@ body[data-language="de"] .hero-pill-row .pill {
 .mini-card,
 .method-card,
 .phase-card,
-.parameter-card,
-.team-card {
+.parameter-card {
   min-height: 100%;
 }
 
@@ -848,7 +838,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .phase-card h3,
 .parameter-card h3,
 .project-card h3,
-.team-card h3,
 .contact-card h3,
 .faq-item summary,
 .blog-related-card h3,
@@ -889,7 +878,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .phase-card h3,
 .parameter-card h3,
 .project-card h3,
-.team-card h3,
 .material-card h3 {
   margin-top: 0.55rem;
   margin-bottom: 0.5rem;
@@ -961,7 +949,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .method-card p,
 .phase-card li,
 .parameter-card p,
-.team-card p,
 .project-card p,
 .material-card p,
 .accordion-body,
@@ -1457,28 +1444,6 @@ body[data-language="de"] .hero-pill-row .pill {
 .project-tag {
   display: inline-block;
   margin-bottom: 0.1rem;
-}
-
-.team-card {
-  text-align: left;
-  background: rgba(255, 255, 255, 0.82);
-  border-color: var(--line);
-}
-
-.team-card img {
-  width: clamp(5.2rem, 8vw, 7.5rem);
-  height: auto;
-  margin-bottom: 0.78rem;
-}
-
-.team-role {
-  color: var(--accent) !important;
-  font-weight: 600;
-  margin-bottom: 0.45rem;
-}
-
-.team-card p {
-  color: #2f3b40;
 }
 
 .cta-panel {
@@ -2707,7 +2672,6 @@ body.cookie-banner-visible {
   .parameter-grid-three,
   .phase-grid,
   .project-grid,
-  .team-grid-single,
   .trust-grid,
   .stat-band,
   .comparison-row {
