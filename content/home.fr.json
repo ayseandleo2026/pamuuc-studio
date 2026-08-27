@@ -399,7 +399,7 @@
         "tag": "GARDE-ROBE HÔTELLERIE",
         "h3": "Personnel de boutique-hôtel",
         "p": "Des pièces en contact direct avec les clients, développées en harmonie avec l’architecture, l’identité visuelle et les exigences des longues journées.",
-        "img": "../assets/images/project-hospitality-editorial.jpg",
+        "img": "/assets/images/project-hospitality-editorial.jpg",
         "alt": "Project visual for hospitality environment",
         "href": "/fr/blog/uniformes-hotellerie-personnalises/"
       },
@@ -407,7 +407,7 @@
         "tag": "CONTINUITÉ OPÉRATIONNELLE",
         "h3": "Équipe de service multirôle",
         "p": "Des silhouettes définies, archivées une seule fois puis réactivées avec précision à mesure que l’équipe grandit.",
-        "img": "../assets/images/project-multi-role-service-team.jpg",
+        "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Project visual for continuity and reorders",
         "href": "/fr/blog/uniformes-studios-bien-etre/"
       },
@@ -415,7 +415,7 @@
         "tag": "DIRECTION UNIFORME",
         "h3": "Projet clinique et bien-être",
         "p": "Des lignes essentielles et une construction pensée pour le confort, afin de transmettre confiance, clarté et aisance naturelle au quotidien.",
-        "img": "../assets/images/project-clinic-editorial.jpg",
+        "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Project visual for medical and service uniforms",
         "href": "/fr/blog/uniformes-clinique-dentaire-sur-mesure-barcelone/"
       }

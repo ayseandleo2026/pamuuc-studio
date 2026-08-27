@@ -1009,6 +1009,7 @@ function audit(url, html, cluster, loc) {
   }
   if (cluster?.noindex && !/name="robots" content="noindex/.test(html)) errors.push(at('must be noindex'));
   for (const img of html.match(/<img [^>]*>/g) || []) {
+    if (/src="(?!\/|data:|https?:)/.test(img)) errors.push(at('<img src> is relative — paths must start with /'));
     if (!/\salt=/.test(img)) errors.push(at('<img> without alt'));
     if (!/width=/.test(img) || !/height=/.test(img)) errors.push(at('<img> without width/height (layout shift)'));
   }

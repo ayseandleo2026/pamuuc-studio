@@ -399,7 +399,7 @@
         "tag": "VESTUARIO DE HOSTELERÍA",
         "h3": "Personal de hotel boutique",
         "p": "Prendas en contacto directo con el huésped, desarrolladas en armonía con la arquitectura, la identidad visual y las exigencias de los turnos largos.",
-        "img": "../assets/images/project-hospitality-editorial.jpg",
+        "img": "/assets/images/project-hospitality-editorial.jpg",
         "alt": "Project visual for hospitality environment",
         "href": "/es/blog/uniformes-hosteleria-personalizados/"
       },
@@ -407,7 +407,7 @@
         "tag": "CONTINUIDAD OPERATIVA",
         "h3": "Equipo de servicio multirrol",
         "p": "Siluetas definidas, archivadas una sola vez y reactivadas con precisión a medida que el equipo crece.",
-        "img": "../assets/images/project-multi-role-service-team.jpg",
+        "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Project visual for continuity and reorders",
         "href": "/es/blog/uniformes-estudios-bienestar/"
       },
@@ -415,7 +415,7 @@
         "tag": "DIRECCIÓN DE UNIFORMIDAD",
         "h3": "Proyecto de clínica y bienestar",
         "p": "Líneas esenciales y una construcción orientada a la comodidad, diseñadas para transmitir confianza, claridad y naturalidad en el uso diario.",
-        "img": "../assets/images/project-clinic-editorial.jpg",
+        "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Project visual for medical and service uniforms",
         "href": "/es/blog/uniformes-clinica-dental-personalizados-barcelona/"
       }
