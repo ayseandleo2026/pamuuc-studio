@@ -1,8 +1,10 @@
 {
   "locale": "en",
   "meta": {
-    "title": "Custom Uniforms for Hospitality & Care | Pamuuc Studios",
-    "description": "Bespoke uniforms for hospitality, healthcare and service teams, developed and produced in Barcelona. From 10 pieces per style, around 8 weeks."
+    "title": "Custom Uniform Design Studio in Barcelona | Pamuuc Studios",
+    "description": "Custom uniform design and production for hotels, restaurants, wellness spaces and clinics. Produced in Barcelona, with orders from 10 pieces per style.",
+    "ogTitle": "Custom Uniform Design Studio in Barcelona | Pamuuc Studios",
+    "ogDescription": "Made-to-order uniform systems for hotels, restaurants, wellness spaces, clinics and guest-facing teams—from design and fittings to production and reorders."
   },
   "nav": [
     {
@@ -14,131 +16,138 @@
       "href": "/#process"
     },
     {
-      "label": "Projects",
+      "label": "Work",
       "href": "/#projects"
     },
     {
-      "label": "Blog",
+      "label": "Journal",
       "href": "/en/blog/"
     },
     {
-      "label": "Book an appointment",
+      "label": "Discuss your project",
       "href": "/#contact"
     }
   ],
   "hero": {
-    "eyebrow": "DESIGN AND PRODUCTION STUDIO FOR CUSTOM UNIFORMS",
-    "h1": "Durable custom uniforms for demanding hospitality, healthcare, and service teams",
-    "lead": "Built for frequent washing, long shifts, and operational continuity, with the atmosphere of your space carried into every garment.",
+    "eyebrow": "CUSTOM UNIFORM DESIGN AND PRODUCTION · BARCELONA",
+    "h1": "Custom uniforms for hotels, restaurants, wellness spaces and private clinics",
+    "lead": "We design and produce made-to-order uniform systems around your brand, team roles and daily work—from the first brief and fittings to production and future reorders.",
     "pills": [
-      "Custom uniforms",
-      "Elegant functionality",
-      "Direct and strategic control over local production",
-      "Reliable and timely replenishment"
+      "Designed for your brand",
+      "Developed by role",
+      "Produced in Barcelona",
+      "Prepared for reorders"
     ],
-    "primary": "Request a first meeting",
-    "secondary": "View recent projects",
+    "primary": "Discuss your uniform project",
+    "secondary": "View selected work",
+    "imageAlt": "Custom uniform design and garment development by Pamuuc Studios in Barcelona",
     "proofs": [
       {
-        "label": "Initial phase",
-        "text": "Development and first production created for a specific space"
+        "label": "First project",
+        "text": "Design, samples, fittings and production developed for your space and team."
       },
       {
-        "label": "Operational continuity",
-        "text": "A validated wardrobe, always available for reliable repeat orders based on your needs"
+        "label": "Future orders",
+        "text": "Approved patterns and specifications kept ready for consistent reorders."
       }
     ]
   },
   "services": {
-    "kicker": "SERVICES",
-    "h2": "A clear studio offer focused on bespoke uniforms",
-    "intro": "The studio focuses on the design and production of fully custom uniforms for hospitality, healthcare, and service teams.",
+    "kicker": "WHAT WE DO",
+    "h2": "A complete custom-uniform service, not a catalogue",
+    "intro": "Pamuuc Studios designs, develops and produces custom uniforms for hospitality, wellness, healthcare and guest-facing teams. Every project is built around the business, the people wearing the garments and the work they do.",
     "card": {
-      "topline": "STUDIO SERVICE",
-      "h3": "Custom uniforms",
-      "p": "Developed on a project basis to respond precisely to operational roles, movement requirements, long-term durability, and alignment with brand identity.",
+      "topline": "DESIGN, DEVELOPMENT AND PRODUCTION",
+      "h3": "Custom uniform systems",
+      "p": "One coordinated professional wardrobe, designed around your space, brand, roles, movement, care requirements and future team growth.",
       "features": [
-        "Definition of garments based on function, context of use, and performance",
-        "Selection and coordination of materials, construction details, branding, and production chain",
-        "Design built for continuity, with efficient repeat orders and gradual team growth"
+        "Garments planned around each role and working environment",
+        "Fabrics, fit, construction, colours and branding developed together",
+        "Patterns and specifications prepared for consistent repeat orders"
       ]
     }
   },
   "band": {
-    "text": "Where clothing becomes part of the experience",
+    "text": "Uniforms that work for the brand, the team and the shift",
     "points": [
-      "In harmony with the identity and aesthetics of the space",
-      "Defined around everyday operational flows",
+      "Reflect your space and identity",
+      "Support real movement and daily tasks",
       "Produced locally in Barcelona",
-      "Designed for heavy use and frequent washing",
-      "Developed as a coherent and integrated wardrobe system",
-      "Built to ensure continuity over time"
+      "Made for repeated wear and washing",
+      "Connect different roles in one wardrobe",
+      "Remain consistent across reorders"
     ]
   },
   "sectors": {
-    "kicker": "WHO IT IS FOR",
-    "h2": "Designed for six operational contexts",
-    "intro": "Select a sector to explore representative garments, application contexts, and the role clothing plays in the everyday experience",
+    "kicker": "WHO WE WORK WITH",
+    "h2": "Designed for the teams your customers see—and the roles that support them",
+    "intro": "Open a sector to see the typical roles, garment categories and practical priorities we design around.",
     "items": [
       {
-        "name": "Hospitality",
-        "modal": "modal-sector-hotels"
+        "name": "Hotels and hospitality",
+        "modal": "modal-sector-hotels",
+        "desc": "One coordinated wardrobe across reception, concierge, food and beverage, housekeeping, spa and management."
       },
       {
-        "name": "Food and beverage",
-        "modal": "modal-sector-restaurants"
+        "name": "Restaurants and food service",
+        "modal": "modal-sector-restaurants",
+        "desc": "Uniforms for front of house, bar, kitchen and management in fast-moving service environments."
       },
       {
-        "name": "Wellness",
-        "modal": "modal-sector-wellness"
+        "name": "Spa and wellness",
+        "modal": "modal-sector-wellness",
+        "desc": "Calm, functional uniforms for reception, treatment and support roles."
       },
       {
-        "name": "Healthcare",
-        "modal": "modal-sector-medical"
+        "name": "Dental and private clinics",
+        "modal": "modal-sector-medical",
+        "desc": "A professional alternative to generic clinical clothing for patient-facing and treatment teams."
       },
       {
-        "name": "Service staff",
-        "modal": "modal-sector-service"
+        "name": "Operational service teams",
+        "modal": "modal-sector-service",
+        "desc": "Hard-wearing garments for maintenance, logistics, support and other practical roles."
       },
       {
-        "name": "Guest services",
-        "modal": "modal-sector-guest"
+        "name": "Guest-facing teams",
+        "modal": "modal-sector-guest",
+        "desc": "Custom uniforms for the people who welcome, guide and represent the business."
       }
     ]
   },
   "approach": {
     "kicker": "HOW WE DESIGN",
-    "intro": "A design approach that begins with the space and becomes uniforms made for the team and the overall experience.",
+    "intro": "We start with your space, then design for the people doing the work",
     "cards": [
       {
         "n": "01",
         "h3": "Space",
-        "p": "Architecture, materials, light, and atmosphere define the direction; a warm interior can lead to softer textures, muted tones, and calmer silhouettes."
+        "p": "Architecture, materials, colour, light and atmosphere set the visual direction."
       },
       {
         "n": "02",
         "h3": "Roles",
-        "p": "Each function is mapped against movement, pace, and tools; reception, service, and clinical roles need different fits, pockets, and visual presence."
+        "p": "We map movement, service pace, tools, visibility and care requirements for each role."
       },
       {
         "n": "03",
         "h3": "Garments",
-        "p": "Fit, silhouette, and product categories are aligned into one wardrobe system, from shirts and aprons to overshirts, trousers, and outer layers."
+        "p": "Fits, silhouettes, layers and garment categories are brought together as one wardrobe."
       },
       {
         "n": "04",
         "h3": "Operations",
-        "p": "Construction is chosen for the real routine: frequent washing, long shifts, easy replacement, and consistent repeat orders over time."
+        "p": "Construction, washing, replacement needs and repeat orders are planned from the beginning."
       }
     ]
   },
   "categories": {
     "kicker": "WHAT WE CAN DEVELOP",
-    "h2": "A defined production system built for the complexity of real working environments",
-    "intro": "Scalable for organisations with multiple roles and designed to maintain consistency, functionality, and efficiency at every stage of production.",
+    "h2": "One wardrobe system, from core garments to the smallest details",
+    "intro": "We can build a complete multi-role wardrobe or begin with one department, role or garment category. Every decision is coordinated before production.",
     "groups": [
       {
-        "label": "GARMENT CATEGORIES",
+        "label": "Garment categories",
         "items": [
           "Shirts",
           "Trousers",
@@ -154,7 +163,7 @@
         ]
       },
       {
-        "label": "BRANDING AND IDENTITY",
+        "label": "Branding and identity",
         "items": [
           "Embroidery",
           "Tone-on-tone embroidery",
@@ -167,13 +176,13 @@
         ]
       },
       {
-        "label": "TECHNICAL CONSTRUCTION",
+        "label": "Construction and performance",
         "items": [
-          "Garments designed for frequent washing",
+          "Fabrics selected for the intended wash route",
           "Stretch constructions",
           "Reinforced seams",
-          "Breathable fabrics",
-          "Easy-care fabrics",
+          "Breathable fabric options",
+          "Easy-care fabric options",
           "Functional pockets",
           "Integrated closures",
           "Durable finishes"
@@ -183,39 +192,39 @@
   },
   "process": {
     "kicker": "PROCESS",
-    "h2": "A three-phase path, from design direction to final delivery",
-    "intro": "Each phase is structured to define objectives, guide the work, and produce tangible results, contributing to the overall success of the project.",
+    "h2": "Three phases from project brief to delivery",
+    "intro": "Each phase ends with clear decisions and approvals before the project moves forward.",
     "phases": [
       {
-        "tag": "- PHASE 01",
+        "tag": "PHASE 01",
         "h3": "Discovery",
-        "desc": "We define the project clearly before beginning development",
+        "desc": "We define what the team needs before product development starts.",
         "items": [
-          "Analysis of operational dynamics",
-          "Mapping roles and functional needs",
-          "Definition of the initial product direction"
+          "Team and operational review",
+          "Role mapping",
+          "Initial wardrobe direction"
         ],
         "modal": "modal-phase-1"
       },
       {
-        "tag": "- PHASE 02",
+        "tag": "PHASE 02",
         "h3": "Development",
-        "desc": "We test, refine, and prepare the product for production",
+        "desc": "We turn the approved direction into garments and test the important decisions.",
         "items": [
-          "Material and fabric validation",
-          "Prototype development, sampling, and fittings",
-          "Review and optimisation cycles"
+          "Fabric and material validation",
+          "Prototypes, samples and fittings",
+          "Review and refinement"
         ],
         "modal": "modal-phase-2"
       },
       {
-        "tag": "- PHASE 03",
+        "tag": "PHASE 03",
         "h3": "Production",
-        "desc": "From final approval to manufacturing and delivery",
+        "desc": "After approval, we manufacture, prepare and deliver the final garments.",
         "items": [
           "Pre-production approval",
           "Local production",
-          "Delivery and replenishment setup"
+          "Delivery and reorder setup"
         ],
         "modal": "modal-phase-3"
       }
@@ -232,238 +241,255 @@
       },
       {
         "v": "Around 8 weeks",
-        "l": "Average timeline for a fully bespoke project"
+        "l": "Indicative timeline for many fully custom projects"
       },
       {
-        "v": "Shorter timelines",
-        "l": "When pre-developed design bases already exist or specific needs apply"
+        "v": "Shorter timelines may be possible",
+        "l": "When an approved pre-developed base suits the brief"
       }
-    ]
+    ],
+    "note": "The confirmed schedule depends on the number of styles, fabric availability, fittings, revision rounds, construction, quantities and approval timing."
   },
   "personalised": {
     "kicker": "CUSTOMISATION",
-    "h2": "Clear options, concrete design decisions",
-    "intro": "The following sections show how we manage customisation in a structured way, from fabric selection to the definition of technical and production details.",
+    "h2": "Every option is tied to use, care and identity",
+    "intro": "We recommend fabrics, colours, finishes and branding methods according to the role, maintenance needs, visual direction, quantity and budget.",
     "accordions": [
       {
         "q": "Fabrics",
-        "p": "Fabric selection is defined according to shift duration, climate conditions, level of movement, and maintenance requirements.",
+        "p": "Fabric selection begins with the shift: climate, movement, contact, appearance and the intended wash route.",
         "items": [
-          "Examples: cotton blends, linen blends, easy-care technical fabrics",
-          "Main criteria: comfort, durability, visual quality, and stability over time and through washing"
+          "Examples: cotton blends, linen blends and easy-care technical fabrics, depending on the role and confirmed requirements.",
+          "Selection criteria: comfort, durability, appearance, care and stability through repeated use and washing."
         ]
       },
       {
         "q": "Colours",
-        "p": "The colour direction begins with the space and the brand identity, then is validated under real operational conditions.",
+        "p": "The colour direction comes from the space and brand, then is checked across garments, roles, lighting and available fabrics.",
         "items": [
-          "Examples: The colour range varies depending on the selected fabric, with the possibility of dedicated colour developments for larger-scale projects",
-          "Main criteria: consistency across roles and performance under different lighting conditions"
+          "Options: existing fabric colour cards can support faster development. Dedicated colours may be possible when the fabric and quantity allow.",
+          "Selection criteria: consistency across roles, suitable contrast and appearance under the lighting of the space."
         ]
       },
       {
         "q": "Accessories and finishes",
-        "p": "Finishes define the identity of the garment while maintaining strong performance in daily use.",
+        "p": "Buttons, zips, labels, stitching and closures add identity but must remain practical to use, care for and replace.",
         "items": [
-          "Examples: custom buttons, zips, labels, contrast topstitching",
-          "Main criteria: durability, ease of replacement, and visual consistency"
+          "Examples: custom buttons, zips, woven labels, name labels and contrast stitching.",
+          "Selection criteria: durability, ease of use, replacement practicality and visual consistency."
         ]
       },
       {
         "q": "Branding methods",
-        "p": "Branding is developed according to the garment, frequency of use, and required level of visibility.",
+        "p": "Branding is selected according to the garment, visibility required, intended use and care process.",
         "items": [
-          "Examples: embroidery, tone-on-tone embroidery, woven labels, screen printing",
-          "Main criteria: durability, legibility, and carefully judged placement"
+          "Examples: embroidery, tone-on-tone embroidery, woven labels and screen printing.",
+          "Selection criteria: legibility, durability, scale and placement."
         ]
       }
     ],
     "cards": [
       {
-        "h3": "Close to the project",
-        "p": "Local sampling and fittings allow for faster, more precise, and better-informed technical decisions."
+        "h3": "Local sampling and fittings",
+        "p": "Development close to the studio supports faster feedback, clearer technical decisions and direct communication."
       },
       {
-        "h3": "Designed for real work",
-        "p": "Every garment is developed with movement, shift duration, and daily operational rhythm in mind."
+        "h3": "Designed for daily work",
+        "p": "Movement, shift length, tasks, care and the working environment inform every garment."
       },
       {
-        "h3": "Prepared for continuity",
-        "p": "Patterns, finishes, and specifications are archived to ensure consistent repeat orders over time, supporting team evolution."
+        "h3": "Specifications kept for continuity",
+        "p": "Approved patterns, finishes and specifications are organised so future orders can follow the same system."
       }
     ]
   },
   "parameters": {
-    "kicker": "PRODUCTION PARAMETERS",
-    "h2": "Essential commercial information, at a glance",
-    "intro": "Open each section to explore quantities and variables linked to lead times.",
+    "kicker": "PROJECT PRACTICALITIES",
+    "h2": "Quantities, pricing and timing—before you commit",
+    "intro": "These figures help you judge whether the service fits your project. Final quantities, price and timing are confirmed after the brief is reviewed.",
     "groups": [
       {
         "h3": "Recommended minimum quantities",
         "notes": [
           {
             "head": "From 10 pieces per style",
-            "body": "We can produce from 10 pieces per style, with pricing adapted to the quantity and construction."
+            "body": "Selected styles can be produced from 10 pieces, with pricing adapted to the construction and quantity."
           },
           {
-            "head": "10–15 pieces",
-            "body": "Woven garments per style. This allows us to also serve small teams with bespoke uniforms."
+            "head": "10–15 pieces per style",
+            "body": "Typical starting point for custom woven garments, distributed across the required sizes."
           },
           {
-            "head": "100–150 pieces",
-            "body": "Knitwear per style. Due to the manufacturing process, knitwear requires higher quantities."
+            "head": "100–150 pieces per style",
+            "body": "Typical starting point for custom knitwear because the manufacturing process requires a higher quantity."
           }
         ],
         "items": [],
         "modal": "parameter-quantities"
       },
       {
-        "h3": "A bespoke investment",
+        "h3": "A project-based quotation",
         "notes": [
           {
             "head": "",
-            "body": "Every project has its own characteristics, and pricing is defined accordingly. We do not work with rigid price lists. Each proposal is developed around your brand’s actual needs, finding the right balance between aesthetics, functionality, and budget."
+            "body": "We do not use a rigid price list. Your proposal is built around the garments, quantities, materials, construction, custom details, development work and target date."
           }
         ],
+        "itemsLabel": "Key pricing variables",
         "items": [
-          "Materials and finishes are selected to match both the intended use and the desired level of quality",
-          "The level of customization is adapted to your brand identity and operational needs",
-          "Quantities and garment complexity are optimized to ensure a coherent and efficient investment"
+          "Materials and finishes",
+          "Number and complexity of styles",
+          "Quantity per style",
+          "Pattern and sample development",
+          "Size range and fitting requirements",
+          "Branding and custom details",
+          "Production schedule"
         ],
         "modal": "parameter-pricing"
       },
       {
-        "h3": "Timing factors",
+        "h3": "What affects the timeline",
         "notes": [
           {
             "head": "",
-            "body": "The elements that influence development and production timelines:"
+            "body": "The schedule depends on the development work and the production conditions required by the project."
           }
         ],
+        "itemsLabel": "Main timing factors",
         "items": [
-          "Pattern development and definition",
-          "Fittings, checks, and review cycles",
-          "Technical constructions or bespoke solutions",
-          "Level of finishing complexity"
+          "Pattern development",
+          "Number of prototypes and fittings",
+          "Review and approval speed",
+          "Special constructions or custom solutions",
+          "Fabric sourcing",
+          "Finishing complexity",
+          "Quantity and production schedule"
         ],
         "modal": "parameter-timing"
       }
     ]
   },
   "continuity": {
-    "kicker": "CONTINUITY MODEL",
-    "h2": "From initial development to seamless repeat orders over time",
-    "intro": "The first production defines the identity of your professional wardrobe. Once validated, it becomes the basis for faster, more consistent, and perfectly aligned repeat orders in the future.",
+    "kicker": "REPEAT ORDERS",
+    "h2": "Develop once. Reorder from an approved system.",
+    "intro": "The first production establishes the wardrobe. Approved patterns, construction, colours, finishes and branding specifications are then organised so replacements, new starters and team growth do not require the project to begin again.",
     "rows": [
       [
         "Criteria",
-        "Initial development → Continuity",
-        ""
+        "Initial project",
+        "Future reorders"
       ],
       [
         "Scope",
-        "Tailored to your space, roles, and operational needs.",
-        "Consolidated as a repeatable wardrobe system for the whole team."
+        "Designed around your space, roles and operational needs.",
+        "Used as one repeatable wardrobe system for the team."
       ],
       [
         "Development",
-        "Patterns and construction are conceived, refined, and validated.",
-        "Approved bases are reactivated without needing to start from scratch."
+        "Patterns, fit, construction and finishes are developed and approved.",
+        "Approved bases are reactivated without repeating the full development process."
       ],
       [
-        "Repeat orders",
-        "The first production is tested, optimised, and approved.",
-        "Over time, consistency remains unchanged, even as the team evolves."
+        "Ordering",
+        "The first production is checked, refined and signed off.",
+        "Future quantities are produced from the approved specification, subject to material availability and confirmed production conditions."
       ]
     ],
     "loop": [
-      "Approve once",
+      "Approve the wardrobe",
       "→",
-      "Archive the patterns",
+      "Archive the patterns and specifications",
       "→",
-      "Reorder with complete continuity"
+      "Reorder consistently"
     ]
   },
   "projects": {
-    "kicker": "SELECTED PROJECTS",
-    "h2": "Concrete proof, beyond words",
-    "intro": "A selection of projects showing how design choices translate into daily operations, team wellbeing, and long-term continuity.",
+    "kicker": "SELECTED WORK AND GUIDANCE",
+    "h2": "See how the system works in real environments",
+    "intro": "Explore two project case studies and one practical guide covering hospitality, wellness and private healthcare.",
     "items": [
       {
-        "tag": "HOSPITALITY WARDROBE",
-        "h3": "Boutique hotel staff",
-        "p": "Garments in direct contact with guests, developed in harmony with architecture, visual identity, and the demands of long shifts.",
-        "img": "assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment",
-        "href": "/en/blog/custom-hospitality-uniforms/"
+        "tag": "HOTEL CASE STUDY",
+        "h3": "Custom hotel uniforms for METT Barcelona",
+        "p": "A complete, role-based wardrobe developed from the hotel’s interior concept for reception, food and beverage, management and spa teams, then designed, prototyped and produced in Barcelona.",
+        "img": "/assets/images/project-hospitality-editorial.jpg",
+        "alt": "Hotel front-of-house uniforms developed by Pamuuc Studios for METT Barcelona",
+        "href": "/en/blog/custom-hospitality-uniforms/",
+        "linkLabel": "Read the hotel case study"
       },
       {
-        "tag": "OPERATIONAL CONTINUITY",
-        "h3": "Multi-role service team",
-        "p": "Defined silhouettes, archived once and reactivated precisely as the team grows.",
-        "img": "assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders",
-        "href": "/en/blog/wellness-studio-uniform-system/"
+        "tag": "WELLNESS GUIDE",
+        "h3": "Designing a multi-role wellness wardrobe",
+        "p": "A practical guide to connecting reception, treatment and support roles through shared colours, materials, garment details and a clear continuity plan.",
+        "img": "/assets/images/project-multi-role-service-team.jpg",
+        "alt": "Wellness team wardrobe connecting reception and treatment roles",
+        "href": "/en/blog/wellness-studio-uniform-system/",
+        "linkLabel": "Read the wellness guide"
       },
       {
-        "tag": "UNIFORM DIRECTION",
-        "h3": "Clinic and wellness project",
-        "p": "Essential lines and comfort-oriented construction, designed to communicate trust, clarity, and natural ease in daily use.",
-        "img": "assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms",
-        "href": "/en/blog/custom-dental-clinic-uniforms-barcelona/"
+        "tag": "CLINIC CASE STUDY",
+        "h3": "Custom uniforms for a Barcelona dental clinic",
+        "p": "A professional wardrobe designed to move beyond generic clinical clothing and connect the clinic’s space, brand, front-of-house presentation and daily care requirements.",
+        "img": "/assets/images/project-clinic-editorial.jpg",
+        "alt": "Custom clinical uniforms in a Barcelona dental practice",
+        "href": "/en/blog/custom-dental-clinic-uniforms-barcelona/",
+        "linkLabel": "Read the clinic case study"
       }
     ]
   },
   "faq": {
-    "kicker": "FAQ",
-    "h2": "Clear answers, before we even begin",
-    "intro": "Essential answers to the most frequent questions from hospitality, healthcare, and service teams.",
+    "kicker": "FREQUENTLY ASKED QUESTIONS",
+    "h2": "Answers to the questions buyers ask first",
+    "intro": "The practical points to understand before a first project meeting.",
     "items": [
       {
         "q": "Do you work from a catalogue?",
-        "a": "No. Every project is shaped around your operational context, brand identity, and team structure. We can integrate existing bases when they offer a real advantage in terms of timing and cost, while still ensuring a final outcome that is custom, coherent, and distinctive."
+        "a": "No. Each project is developed around the business, space, team and roles. When an existing design base offers a genuine advantage in timing or cost, we can use it as a starting point while adapting the final wardrobe to the brief."
       },
       {
         "q": "Do you handle repeat orders after the first production?",
-        "a": "Yes. Patterns, fabrics, finishes, and customisation systems are archived to ensure continuity over time. This reduces redevelopment phases, ensures consistency for new team members, and simplifies future repeat orders."
+        "a": "Yes. Approved patterns, fabrics, finishes, branding and specifications are organised for future use. This gives replacements, new starters and team growth a consistent starting point without repeating the full development process."
       },
       {
-        "q": "Do we need to start with a full wardrobe?",
-        "a": "No. It is also possible to start with a single garment category or one specific role, and then expand the project over time. We define the most effective starting point together based on priorities, budget, and operational impact."
+        "q": "Do we need to begin with a complete wardrobe?",
+        "a": "No. You can begin with one role, department or garment category and expand later. We define the most useful starting point according to customer visibility, operational need, quantity, budget and timeline."
       },
       {
-        "q": "Do you develop colours and custom details?",
-        "a": "Yes. We can work with existing colour cards to optimise lead times, or develop dedicated shades and finishes when volumes allow. Customisation techniques are selected according to durability, legibility, and garment type."
+        "q": "Can you develop custom colours and details?",
+        "a": "Yes. We can work with available fabric colour cards or assess dedicated colours when the material and quantity allow. Branding and custom details are selected according to the garment, intended visibility, durability and care requirements."
       }
     ]
   },
   "contact": {
-    "kicker": "SHAPE YOUR PROJECT WITH US",
-    "h2": "Share your project with us. We will define the most effective path together.",
+    "kicker": "START YOUR PROJECT",
+    "h2": "Tell us about your team, roles and target date",
     "paras": [
-      "We assess feasibility, identify the most suitable starting point, and define a clear scope for development that is coherent, solid, and built to last.",
-      "We invite you to complete the form. You will be contacted shortly to arrange a dedicated meeting, in your space in Barcelona or in your city in Spain or abroad, or an initial introductory video call designed to understand your context, operational needs, and project identity in depth."
+      "Share what you know so far. We will review the scope, feasibility and most practical starting point before recommending a direction.",
+      "The first meeting can take place at your space in Barcelona, elsewhere in Spain or abroad, or by video. The aim is to understand the environment, team structure, operational needs and what the uniforms need to achieve."
     ],
+    "emailLabel": "Prefer email",
     "form": {
       "labels": {
         "name": "Full name",
         "email": "Business email",
-        "phone": "Phone number",
         "company": "Company name",
+        "phone": "Phone number",
         "team-size": "Team size",
         "project-type": "Project type",
         "timeline": "Target timeline",
         "meeting-datetime": "Preferred date and time for the first meeting",
-        "brief": "Project description",
-        "website": "Website"
+        "brief": "Project description"
       },
       "placeholders": {
         "name": "Your name",
         "email": "you@company.com",
-        "phone": "+34 ...",
-        "company": "Company name",
-        "brief": "Team, environment, roles, and what the garments need to achieve"
+        "company": "Company or venue name",
+        "phone": "+34 …",
+        "brief": "Tell us about the space, team, roles, garments, approximate quantities, target date and what the uniforms need to achieve."
+      },
+      "helps": {
+        "phone": "Optional",
+        "meeting-datetime": "Optional. We will confirm availability before scheduling."
       },
       "options": {
         "team-size": [
@@ -478,18 +504,18 @@
             "disabled": false
           },
           {
-            "v": "10 - 25",
-            "t": "10 - 25",
+            "v": "10–25",
+            "t": "10–25",
             "disabled": false
           },
           {
-            "v": "26 - 50",
-            "t": "26 - 50",
+            "v": "26–50",
+            "t": "26–50",
             "disabled": false
           },
           {
-            "v": "51 - 120",
-            "t": "51 - 120",
+            "v": "51–120",
+            "t": "51–120",
             "disabled": false
           },
           {
@@ -505,28 +531,28 @@
             "disabled": true
           },
           {
-            "v": "Fully custom uniform systems",
-            "t": "Fully custom uniform systems",
+            "v": "A complete custom uniform system",
+            "t": "A complete custom uniform system",
             "disabled": false
           },
           {
-            "v": "A single role",
-            "t": "A single role",
+            "v": "One role",
+            "t": "One role",
             "disabled": false
           },
           {
-            "v": "A single garment",
-            "t": "A single garment",
+            "v": "One garment category",
+            "t": "One garment category",
             "disabled": false
           },
           {
-            "v": "A specific department",
-            "t": "A specific department",
+            "v": "One department",
+            "t": "One department",
             "disabled": false
           },
           {
-            "v": "Merchandising",
-            "t": "Merchandising",
+            "v": "Merchandising or branded apparel",
+            "t": "Merchandising or branded apparel",
             "disabled": false
           },
           {
@@ -568,14 +594,14 @@
           }
         ]
       },
-      "consent": "I accept the {privacy:privacy policy} and the {terms:terms}.",
-      "hint": "Completing the form takes around 2 minutes. We usually reply within 1 working day.",
-      "submit": "Submit"
+      "consent": "I accept the {privacy:privacy policy} and {terms:terms}.",
+      "hint": "The form takes around two minutes. We usually reply within one working day.",
+      "submit": "Send project request"
     }
   },
   "footer": {
-    "about": "Custom uniform systems developed in Barcelona.",
-    "legal": "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com",
+    "about": "Custom uniform systems designed, developed and produced in Barcelona.",
+    "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
         "title": "Studio",
@@ -629,59 +655,55 @@
     "service-custom": [
       {
         "t": "h",
-        "v": "FULLY CUSTOM UNIFORMS FOR YOUR TEAM"
+        "v": "Fully custom uniforms for your team"
+      },
+      {
+        "t": "h",
+        "v": "One coordinated wardrobe, developed around your space, roles and operations"
       },
       {
         "t": "p",
-        "v": "Professional wardrobes designed around your space, your team, and your operations"
+        "v": "We do not begin by asking you to choose garments from a standard catalogue. We begin with your business: the space, the service, the team structure and what each role needs from the clothing."
       },
       {
         "t": "p",
-        "v": "Every project starts from a blank page."
+        "v": "The result is a connected wardrobe rather than a group of unrelated pieces. Different roles can have different garments while sharing the same visual language across colour, fit, material and detail."
+      },
+      {
+        "t": "h",
+        "v": "Designed from your environment"
       },
       {
         "t": "p",
-        "v": "We do not adapt existing products. We develop garments designed specifically for your space, your team structure, and the daily reality of your service."
+        "v": "Architecture, materials, light and brand identity guide the visual direction of the wardrobe."
+      },
+      {
+        "t": "h",
+        "v": "Developed by role"
       },
       {
         "t": "p",
-        "v": "Uniforms are conceived as a coherent wardrobe system, not as isolated pieces."
+        "v": "Reception, service, management, clinical and operational roles are considered separately so movement, responsibilities, tools and visibility inform the garment."
+      },
+      {
+        "t": "h",
+        "v": "Fitted to the team"
       },
       {
         "t": "p",
-        "v": "Each garment works in relation to the others, ensuring visual harmony and operational functionality across the team."
+        "v": "Proportions, lengths, fit and functional details are tested through samples and fittings before production approval."
+      },
+      {
+        "t": "h",
+        "v": "Prepared for continuity"
       },
       {
         "t": "p",
-        "v": "What defines a fully bespoke project"
+        "v": "Approved patterns and specifications are retained so replacements, new starters and future orders can follow the same system."
       },
       {
-        "t": "p",
-        "v": "Design that starts from the space"
-      },
-      {
-        "t": "p",
-        "v": "Architecture, materials, light, and brand atmosphere guide the visual direction of the wardrobe."
-      },
-      {
-        "t": "p",
-        "v": "Role-based development"
-      },
-      {
-        "t": "p",
-        "v": "Each function is analysed in detail, reception, service, management, operations, to create garments aligned with movement, responsibilities, and work rhythm."
-      },
-      {
-        "t": "p",
-        "v": "Dedicated silhouettes"
-      },
-      {
-        "t": "p",
-        "v": "Fit, proportions, and lengths are defined to feel natural in the environment and ensure comfort during long shifts."
-      },
-      {
-        "t": "p",
-        "v": "What we develop"
+        "t": "h",
+        "v": "Garments we can develop"
       },
       {
         "t": "ul",
@@ -691,26 +713,26 @@
           "Dresses",
           "Aprons and operational garments",
           "Knitwear and outerwear",
-          "Accessories"
+          "Coordinated accessories"
         ]
       }
     ],
     "sector-hotels": [
       {
         "t": "h",
-        "v": "HOSPITALITY"
+        "v": "Custom hotel uniforms"
+      },
+      {
+        "t": "h",
+        "v": "One visual system for a property with many different roles"
       },
       {
         "t": "p",
-        "v": "Uniform systems for complex teams and layered environments"
+        "v": "Hotels bring together guest-facing, service and operational departments with very different working needs. We create role-specific garments that still feel like one hotel wardrobe."
       },
       {
-        "t": "p",
-        "v": "Hospitality settings bring together different departments, each with distinct functions and guest-facing contexts. Uniforms need to reflect the identity of the property while ensuring practicality, continuity, and operational reliability."
-      },
-      {
-        "t": "p",
-        "v": "Main roles"
+        "t": "h",
+        "v": "Typical roles"
       },
       {
         "t": "ul",
@@ -719,54 +741,70 @@
           "Concierge and guest services",
           "Restaurant and bar",
           "Management",
-          "Housekeeping"
+          "Housekeeping",
+          "Spa and wellness"
         ]
       },
       {
-        "t": "p",
-        "v": "Garment types:"
+        "t": "h",
+        "v": "Typical garments"
       },
       {
         "t": "ul",
         "v": [
-          "Shirts",
+          "Shirts and overshirts",
           "Trousers and skirts",
           "Dresses",
-          "Blazers",
+          "Blazers and jackets",
           "Aprons",
-          "Knitwear"
+          "Knitwear and outer layers"
         ]
       },
       {
-        "t": "p",
+        "t": "h",
         "v": "Design priorities"
       },
       {
         "t": "ul",
         "v": [
-          "Visual consistency across departments",
-          "Comfort during long shifts",
-          "Durability in daily use",
-          "Alignment with architecture and brand identity"
+          "A clear identity across departments",
+          "Comfort and movement during long shifts",
+          "Materials and construction suited to daily use",
+          "Alignment with the architecture and brand",
+          "A practical system for new starters and reorders"
         ]
       }
     ],
     "sector-restaurants": [
       {
         "t": "h",
-        "v": "FOOD AND BEVERAGE"
+        "v": "Custom restaurant uniforms"
+      },
+      {
+        "t": "h",
+        "v": "Designed around service pace, movement, care and the identity of the venue"
       },
       {
         "t": "p",
-        "v": "Uniforms designed for dynamic environments"
+        "v": "Restaurant teams work through heat, movement, spills and long periods of service. The uniform needs to support that pace while keeping front-of-house and operational roles connected to the concept."
       },
       {
-        "t": "p",
-        "v": "Food and beverage teams work in high-intensity settings. Garments must support the rhythm of service while balancing durability, comfort, and visual presence."
+        "t": "h",
+        "v": "Typical roles"
       },
       {
-        "t": "p",
-        "v": "Garment types"
+        "t": "ul",
+        "v": [
+          "Hosts and reception",
+          "Front of house",
+          "Bar teams",
+          "Kitchen and support",
+          "Management"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Typical garments"
       },
       {
         "t": "ul",
@@ -774,122 +812,150 @@
           "Shirts and overshirts",
           "Aprons",
           "Trousers",
-          "Polos",
+          "Polos and T-shirts",
           "Light jackets"
         ]
       },
       {
-        "t": "p",
-        "v": "Key elements:"
+        "t": "h",
+        "v": "Design priorities"
       },
       {
         "t": "ul",
         "v": [
           "Freedom of movement",
-          "Breathable fabrics",
-          "Stain resistance",
-          "Reinforced construction"
+          "Breathable and easy-care fabric options",
+          "Functional pockets and closures",
+          "Reinforced construction where required",
+          "A visual direction that fits the restaurant experience"
         ]
       }
     ],
     "sector-wellness": [
       {
         "t": "h",
-        "v": "WELLNESS"
+        "v": "Spa and wellness uniforms"
+      },
+      {
+        "t": "h",
+        "v": "Comfort, movement and calm presentation across the client journey"
       },
       {
         "t": "p",
-        "v": "Garments designed for comfort-focused environments"
+        "v": "In wellness environments, the team is part of the atmosphere. We connect the clothing to the space while planning for close client contact, movement, long shifts and regular care."
       },
       {
-        "t": "p",
-        "v": "In wellness settings, uniforms help create an atmosphere of calm and trust. The design prioritises softness, simplicity, and visual coherence with the identity of the space."
-      },
-      {
-        "t": "p",
-        "v": "Garment types"
+        "t": "h",
+        "v": "Typical roles"
       },
       {
         "t": "ul",
         "v": [
-          "Tunics",
-          "Soft tops",
-          "Trousers",
-          "Dresses"
+          "Reception",
+          "Therapists and treatment teams",
+          "Spa hosts",
+          "Support roles",
+          "Management"
         ]
       },
       {
-        "t": "p",
-        "v": "Material priorities"
+        "t": "h",
+        "v": "Typical garments"
       },
       {
         "t": "ul",
         "v": [
-          "Breathability",
-          "Comfort",
-          "Softness to the touch"
+          "Tunics and soft tops",
+          "Trousers",
+          "Dresses",
+          "Overshirts and light layers"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Design priorities"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Comfort and unrestricted movement",
+          "Breathable, pleasant-to-wear materials",
+          "Calm colours and measured details",
+          "Clear links between reception and treatment roles",
+          "Consistency as the team changes or grows"
         ]
       }
     ],
     "sector-medical": [
       {
         "t": "h",
-        "v": "HEALTHCARE AND CLINICS"
+        "v": "Custom uniforms for dental and private clinics"
+      },
+      {
+        "t": "h",
+        "v": "Clinical function with a more considered, brand-aligned team presentation"
       },
       {
         "t": "p",
-        "v": "Professional uniforms for healthcare environments"
+        "v": "Private clinics need clothing that supports long working hours, movement and frequent care while presenting a clean, reassuring and distinctive image to patients."
       },
       {
-        "t": "p",
-        "v": "These garments support long working hours while maintaining an orderly, clean, and reassuring image. The approach prioritises functionality without giving up a refined aesthetic."
+        "t": "h",
+        "v": "Typical roles"
       },
       {
-        "t": "p",
-        "v": "Garment types"
+        "t": "ul",
+        "v": [
+          "Reception and patient coordination",
+          "Clinical teams",
+          "Treatment support",
+          "Practice management"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Typical garments"
       },
       {
         "t": "ul",
         "v": [
           "Medical tops",
-          "Operational sets",
+          "Coordinated work sets",
           "Trousers",
-          "Overshirts"
+          "Overshirts and reception layers"
         ]
       },
       {
-        "t": "p",
-        "v": "Design and technical priorities"
+        "t": "h",
+        "v": "Design priorities"
       },
       {
         "t": "ul",
         "v": [
-          "Breathable fabrics",
-          "Easy washing and maintenance",
-          "Durability",
-          "Comfort",
-          "High-resistance fabrics",
-          "Functional pockets",
-          "Simplified maintenance"
+          "Breathable and easy-care fabric options",
+          "Movement and all-day comfort",
+          "Functional pockets and closures",
+          "A clean appearance under clinical lighting",
+          "Visual continuity between reception and treatment areas"
         ]
       }
     ],
     "sector-service": [
       {
         "t": "h",
-        "v": "SERVICE TEAMS"
+        "v": "Uniforms for operational service teams"
+      },
+      {
+        "t": "h",
+        "v": "Practical workwear that still belongs to the brand"
       },
       {
         "t": "p",
-        "v": "Hard-wearing garments for operational roles"
+        "v": "Maintenance, logistics and support teams need clothing that prioritises movement, storage, durability and easy care without looking disconnected from the rest of the organisation."
       },
       {
-        "t": "p",
-        "v": "Staff working in maintenance, logistics, and support need uniforms that are solid, functional, and consistent with the brand identity."
-      },
-      {
-        "t": "p",
-        "v": "Garment types"
+        "t": "h",
+        "v": "Typical garments"
       },
       {
         "t": "ul",
@@ -897,261 +963,249 @@
           "Work shirts",
           "Technical trousers",
           "Overshirts",
-          "Light jackets"
+          "Light jackets",
+          "Outer layers"
         ]
       },
       {
-        "t": "p",
-        "v": "Technical priorities"
+        "t": "h",
+        "v": "Design priorities"
       },
       {
         "t": "ul",
         "v": [
-          "Reinforced construction",
-          "High-resistance fabrics",
+          "Reinforced construction where needed",
           "Functional pockets",
-          "Simplified maintenance"
+          "Easy-care materials",
+          "Clear role identification",
+          "Visual consistency with customer-facing teams"
         ]
       }
     ],
     "sector-guest": [
       {
         "t": "h",
-        "v": "GUEST SERVICES"
+        "v": "Uniforms for guest-facing roles"
+      },
+      {
+        "t": "h",
+        "v": "A clear expression of the brand, designed for daily interaction"
       },
       {
         "t": "p",
-        "v": "Garments for public-facing roles"
+        "v": "For private clubs, premium retail, galleries, cultural spaces and other service businesses, the team is one of the first visible expressions of the organisation."
       },
       {
-        "t": "p",
-        "v": "The team is the first tangible expression of the brand. Uniforms need to communicate professionalism and elegance while ensuring comfort in daily interaction."
+        "t": "h",
+        "v": "Typical roles"
       },
       {
-        "t": "p",
-        "v": "Garment types"
+        "t": "ul",
+        "v": [
+          "Welcome and reception",
+          "Guest relations",
+          "Client service",
+          "Floor teams",
+          "Management"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Typical garments"
       },
       {
         "t": "ul",
         "v": [
           "Shirts",
-          "Trousers",
+          "Trousers and skirts",
           "Dresses",
-          "Blazers"
+          "Blazers and jackets",
+          "Coordinated accessories"
         ]
       },
       {
-        "t": "p",
+        "t": "h",
         "v": "Design priorities"
       },
       {
         "t": "ul",
         "v": [
-          "Clear and recognisable visual identity",
-          "Comfort during long shifts",
-          "Essential elegance"
+          "A recognisable and appropriate visual identity",
+          "Comfort during long periods of interaction",
+          "Role clarity without unnecessary formality",
+          "Consistency across locations and future orders"
         ]
       }
     ],
     "phase-1": [
       {
         "t": "h",
-        "v": "PHASE 01 — ANALYSIS"
+        "v": "Phase 01 — Discovery"
+      },
+      {
+        "t": "h",
+        "v": "Define the brief before development starts"
       },
       {
         "t": "p",
-        "v": "Understanding the context, defining the direction"
+        "v": "We begin with the people, space, roles, quantities, timing and business requirements. This gives the project one agreed direction before time is spent on samples or production decisions."
+      },
+      {
+        "t": "h",
+        "v": "We review"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Daily operations and service flow",
+          "Team structure, roles and headcount",
+          "Space, materials and brand identity",
+          "Garment priorities and functional needs",
+          "Target timeline and budget parameters"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Outcome"
       },
       {
         "t": "p",
-        "v": "Every project begins with an in-depth analysis of the context in which the uniforms will be used."
-      },
-      {
-        "t": "p",
-        "v": "Space, operational flows, team structure, and brand identity guide the first decisions and define a clear direction for the entire wardrobe."
-      },
-      {
-        "t": "p",
-        "v": "Main activities"
-      },
-      {
-        "t": "p",
-        "v": "Operations analysis"
-      },
-      {
-        "t": "p",
-        "v": "Role mapping"
-      },
-      {
-        "t": "p",
-        "v": "Reading the space and visual identity"
-      },
-      {
-        "t": "p",
-        "v": "Definition of the design direction"
-      },
-      {
-        "t": "p",
-        "v": "The goal is to build a strong, shared foundation before development begins."
+        "v": "An agreed project scope, role map and initial wardrobe direction."
       }
     ],
     "phase-2": [
       {
         "t": "h",
-        "v": "PHASE 02 — DEVELOPMENT"
+        "v": "Phase 02 — Development"
+      },
+      {
+        "t": "h",
+        "v": "Turn the direction into garments the team can evaluate"
       },
       {
         "t": "p",
-        "v": "From direction to garments"
+        "v": "We develop the fabrics, patterns, fit, construction and details, then test them through prototypes and fitting sessions before approving production."
       },
       {
-        "t": "p",
-        "v": "The development phase translates the design direction into actual garments."
-      },
-      {
-        "t": "p",
-        "v": "Fabrics, patterns, and construction are defined and tested through prototypes and fitting sessions to ensure comfort, functionality, and visual consistency."
-      },
-      {
-        "t": "p",
+        "t": "h",
         "v": "Main activities"
       },
       {
-        "t": "p",
-        "v": "Selection and validation of materials"
+        "t": "ul",
+        "v": [
+          "Material selection and validation",
+          "Pattern development",
+          "Prototype creation",
+          "Fittings with representative team members",
+          "Fit, function and detail corrections"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Outcome"
       },
       {
         "t": "p",
-        "v": "Pattern development"
-      },
-      {
-        "t": "p",
-        "v": "Prototype creation"
-      },
-      {
-        "t": "p",
-        "v": "Fittings and optimisation"
-      },
-      {
-        "t": "p",
-        "v": "Every decision is tested under real conditions of use to ensure long-term reliability."
+        "v": "Approved garments, materials and technical decisions ready for production."
       }
     ],
     "phase-3": [
       {
         "t": "h",
-        "v": "PHASE 03 — PRODUCTION"
+        "v": "Phase 03 — Production"
+      },
+      {
+        "t": "h",
+        "v": "Move from final approval to delivery with direct control"
       },
       {
         "t": "p",
-        "v": "Continuity, precision, control"
+        "v": "Once the garments, materials, sizes and finishes are approved, the project moves into production. Local production keeps technical communication and quality control close to the studio."
       },
       {
-        "t": "p",
-        "v": "Once approved, the garments move into production with finalised patterns, materials, and finishes."
-      },
-      {
-        "t": "p",
-        "v": "Local production allows direct quality control and greater reliability on delivery timelines."
-      },
-      {
-        "t": "p",
+        "t": "h",
         "v": "Main activities"
       },
       {
-        "t": "p",
-        "v": "Pre-production approval"
+        "t": "ul",
+        "v": [
+          "Final pre-production approval",
+          "Size and quantity confirmation",
+          "Production coordination",
+          "Quality checks",
+          "Preparation and delivery",
+          "Reorder information organised for future use"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Outcome"
       },
       {
         "t": "p",
-        "v": "Size development"
-      },
-      {
-        "t": "p",
-        "v": "Production"
-      },
-      {
-        "t": "p",
-        "v": "Preparation and delivery"
+        "v": "Delivered garments and an approved production system that can support future orders."
       }
     ],
     "parameter-quantities": [
       {
         "t": "h",
-        "v": "MINIMUM QUANTITIES"
+        "v": "Minimum quantities"
       },
       {
-        "t": "p",
-        "v": "A balance between quality and production sustainability. Minimum quantities vary according to garment construction and selected materials."
+        "t": "h",
+        "v": "The starting quantity depends on how the garment is made"
       },
       {
-        "t": "p",
+        "t": "h",
         "v": "General guidance"
       },
       {
-        "t": "p",
-        "v": "Woven garments: starting from around 10–15 pieces per style, distributed across sizes and variants"
+        "t": "ul",
+        "v": [
+          "Woven garments generally begin around 10–15 pieces per style, distributed across sizes and approved variants.",
+          "Custom knitwear generally begins around 100–150 pieces per style.",
+          "A lower quantity may be considered for a suitable construction, with pricing and production efficiency assessed case by case."
+        ]
       },
       {
         "t": "p",
-        "v": "Knitwear: generally between 100 and 150 pieces per style"
-      },
-      {
-        "t": "p",
-        "v": "Lower quantities can be considered, with possible variations linked to production efficiency."
+        "v": "We confirm the minimum after reviewing the garment type, fabric, colour, construction and level of customisation."
       }
     ],
     "parameter-pricing": [
       {
         "t": "h",
-        "v": "TAILORED TO YOUR BUDGET"
+        "v": "How pricing is set"
       },
       {
         "t": "p",
-        "v": "We believe every company should be able to rely on professional uniforms without compromising its budget. That is why we adapt to your economic needs, offering flexible, customised solutions that guarantee quality, style, and consistency with your brand identity. We work alongside you to find the right balance between investment and result, creating uniforms that strengthen your brand."
+        "v": "Two garments that look similar can require very different development, materials and production work. We therefore price the confirmed project scope rather than applying one standard garment rate."
+      },
+      {
+        "t": "p",
+        "v": "The proposal explains what is included, the assumptions used and the decisions that have the greatest effect on cost. This allows us to balance appearance, function, durability and budget without hiding the scope behind a generic price."
       }
     ],
     "parameter-timing": [
       {
         "t": "h",
-        "v": "TIME FACTORS"
+        "v": "Project timing"
       },
       {
         "t": "p",
-        "v": "Project timelines depend on the complexity of development and the production schedule."
+        "v": "Typical development: 4–6 weeks"
       },
       {
         "t": "p",
-        "v": "Typical timelines"
+        "v": "Typical production: 3–5 weeks"
       },
       {
         "t": "p",
-        "v": "Development: 4–6 weeks"
+        "v": "Indicative full project: around 8 weeks for many fully custom projects"
       },
       {
         "t": "p",
-        "v": "Production: 3–5 weeks"
-      },
-      {
-        "t": "p",
-        "v": "Fully bespoke projects generally require around 8 weeks from initial idea to delivery."
-      },
-      {
-        "t": "p",
-        "v": "Factors that influence timing"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Pattern development",
-          "Fittings and revisions",
-          "Special constructions",
-          "Fabric sourcing"
-        ]
-      },
-      {
-        "t": "p",
-        "v": "Good planning allows for smoother development and reliable delivery timelines."
+        "v": "The confirmed schedule is issued after the garment scope, materials, sample rounds, quantities and target date are understood. Planning approvals early gives the project the clearest route to delivery."
       }
     ]
   }

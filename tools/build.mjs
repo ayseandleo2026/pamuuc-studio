@@ -149,7 +149,7 @@ const readTime = (post, loc) => `${Math.max(2, Math.round(wordCount(post) / 200)
 /* ── layout ──────────────────────────────────────────────────────────────── */
 const CRITICAL = read('src/css/critical.css').replace(/\/\*[\s\S]*?\*\//g, '').trim();
 
-function head({ loc, url, title, description, cluster, image, type = 'website', extraLD = [], preloadImage, article }) {
+function head({ loc, url, title, description, ogTitle, ogDescription, cluster, image, type = 'website', extraLD = [], preloadImage, article }) {
   const alternates = cluster
     ? LOCALES.filter((l) => cluster.urls[l]).map((l) => `<link rel="alternate" hreflang="${l}" href="${abs(cluster.urls[l])}">`).join('\n')
       + `\n<link rel="alternate" hreflang="x-default" href="${abs(cluster.urls[DEFAULT])}">`
@@ -173,8 +173,8 @@ ${alternates}
 <meta property="og:locale" content="${site.locales[loc].ogLocale}">
 ${LOCALES.filter((l) => l !== loc).map((l) => `<meta property="og:locale:alternate" content="${site.locales[l].ogLocale}">`).join('\n')}
 <meta property="og:url" content="${abs(url)}">
-<meta property="og:title" content="${attr(title)}">
-<meta property="og:description" content="${attr(description)}">
+<meta property="og:title" content="${attr(ogTitle || title)}">
+<meta property="og:description" content="${attr(ogDescription || description)}">
 <meta property="og:image" content="${abs(og)}">
 <meta name="twitter:card" content="summary_large_image">
 ${article ? `<meta property="article:published_time" content="${article.published}T09:00:00+01:00">
@@ -260,6 +260,7 @@ function footer(loc) {
   const cols = [
     { title: h.footer.cols[0]?.title || 'Studio', links: [
       ...h.nav.slice(0, -2).map((n) => ({ label: n.label, href: n.href })),
+      { label: str.sitemap || 'Sitemap', href: '/sitemap.xml' },
       { label: 'PAMUUC.COM', href: site.brand.external },
     ]},
     { title: str.journal, links: [
@@ -450,11 +451,6 @@ function renderHome(loc) {
 <link rel="preload" as="image" fetchpriority="high" href="/assets/images/hero-desktop.webp" media="(min-width: 861px)" type="image/webp">`;
 
   const sectorKeys = ['sector-hotels', 'sector-restaurants', 'sector-wellness', 'sector-medical', 'sector-service', 'sector-guest'];
-  const sectorLead = (key) => {
-    const b = h.detail[key] || [];
-    const p = b.find((x) => x.t === 'p');
-    return p ? p.v : '';
-  };
 
   const field = (id, name, type, required, extra = '') => {
     const label = h.contact.form.labels[id] || id;
@@ -462,8 +458,9 @@ function renderHome(loc) {
     const control = type === 'textarea'
       ? `<textarea id="${id}" name="${name}" rows="4" maxlength="2000"${ph ? ` placeholder="${attr(ph)}"` : ''}></textarea>`
       : `<input id="${id}" name="${name}" type="${type}"${required ? ' required aria-required="true"' : ''}${ph ? ` placeholder="${attr(ph)}"` : ''}${extra}>`;
+    const help = h.contact.form.helps?.[id];
     return `<div class="field${type === 'textarea' ? ' field--full' : ''}">
-<label for="${id}">${esc(label)}${required ? ' <i aria-hidden="true">*</i>' : ''}</label>${control}</div>`;
+<label for="${id}">${esc(label)}${required ? ' <i aria-hidden="true">*</i>' : ''}</label>${control}${help ? `<p class="field__help">${esc(help)}</p>` : ''}</div>`;
   };
   const select = (id) => {
     const opts = h.contact.form.options[id] || [];
@@ -476,7 +473,8 @@ ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? 
     .replace(/\{privacy:([^}]+)\}/, (m, t) => `<a href="${legalURL(loc)}#privacy">${t}</a>`)
     .replace(/\{terms:([^}]+)\}/, (m, t) => `<a href="${legalURL(loc)}#terms">${t}</a>`);
 
-  return head({ loc, url, title: h.meta.title, description: h.meta.description, cluster,
+  return head({ loc, url, title: h.meta.title, description: h.meta.description,
+                ogTitle: h.meta.ogTitle, ogDescription: h.meta.ogDescription, cluster,
                 extraLD: [graph, faqLD], preloadImage: preload })
 + header(loc, cluster) + `
 <main id="main">
@@ -498,7 +496,7 @@ ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? 
 <picture>
 <source media="(max-width:860px)" srcset="/assets/images/hero-mobile.webp" type="image/webp">
 <source srcset="/assets/images/hero-desktop.webp" type="image/webp">
-<img src="/assets/images/hero-desktop.jpg" width="1120" height="887" fetchpriority="high" decoding="async" alt="${attr(h.hero.h1)}">
+<img src="/assets/images/hero-desktop.jpg" width="1120" height="887" fetchpriority="high" decoding="async" alt="${attr(h.hero.imageAlt || h.hero.h1)}">
 </picture>
 </figure>
 <div class="proofs">
@@ -537,16 +535,16 @@ ${disclosure(loc, h.detail['service-custom'], h.services.card.h3)}
 <ul class="sectors">
 ${h.sectors.items.map((s, i) => {
   const key = sectorKeys[i];
-  const detail = (h.detail[key] || []).slice(1);
+  const detail = h.detail[key] || [];
   return `<li class="sector">
 <details>
 <summary>
 <span class="sector__idx">${String(i + 1).padStart(2, '0')}</span>
 <h3 class="sector__name">${esc(s.name)}</h3>
-<p class="sector__desc">${esc(sectorLead(key))}</p>
+<p class="sector__desc">${esc(s.desc || '')}</p>
 <span class="sector__chev" aria-hidden="true"></span>
 </summary>
-<div class="sector__detail detail">${renderBlocks(detail.slice(1))}</div>
+<div class="sector__detail detail">${renderBlocks(trimEcho(detail, s.name))}</div>
 </details>
 </li>`;
 }).join('\n')}
@@ -593,6 +591,7 @@ ${disclosure(loc, h.detail['phase-' + (i + 1)], p.h3)}
 <dl class="stats">
 ${h.process.stats.map((s) => `<div><dd>${esc(s.v)}</dd><dt>${esc(s.l)}</dt></div>`).join('\n')}
 </dl>
+${h.process.note ? `<p class="muted small section__sub">${esc(h.process.note)}</p>` : ''}
 </div></section>
 
 <section class="section section--alt" id="personalised"><div class="wrap">
@@ -619,6 +618,7 @@ ${h.personalised.cards.map((c) => `<div class="card"><h3 class="h3">${esc(c.h3)}
 ${h.parameters.groups.map((g) => `<article class="param">
 <h3 class="h3">${esc(g.h3)}</h3>
 ${g.notes.filter((n) => n.head || n.body).map((n) => `<div class="param__note">${n.head ? `<strong>${esc(n.head)}</strong>` : ''}<span>${esc(n.body)}</span></div>`).join('\n')}
+${g.itemsLabel ? `<p class="param__label">${esc(g.itemsLabel)}</p>` : ''}
 ${g.items.length ? `<ul class="ticks">${g.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : ''}
 ${disclosure(loc, h.detail[g.modal], g.h3)}
 </article>`).join('\n')}
@@ -655,7 +655,8 @@ ${h.projects.items.map((p) => {
   const inner = `<img src="${attr(p.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(p.alt || p.h3)}">
 <p class="eyebrow eyebrow--muted">${esc(p.tag)}</p>
 <h3 class="h3">${esc(p.h3)}</h3>
-<p class="muted">${esc(p.p)}</p>`;
+<p class="muted">${esc(p.p)}</p>
+${p.linkLabel ? `<p class="project__link">${esc(p.linkLabel)}</p>` : ''}`;
   return p.href
     ? `<a class="project" href="${attr(p.href)}">${inner}</a>`
     : `<article class="project">${inner}</article>`;
@@ -679,7 +680,7 @@ ${h.faq.items.map((q, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q.
 <p class="eyebrow">${esc(h.contact.kicker)}</p>
 <h2 class="h2">${esc(h.contact.h2)}</h2>
 ${h.contact.paras.map((p) => `<p class="muted">${esc(p)}</p>`).join('\n')}
-<p class="muted"><a href="mailto:${attr(site.brand.email)}">${esc(site.brand.email)}</a></p>
+<p class="muted">${h.contact.emailLabel ? `${esc(h.contact.emailLabel)}: ` : ''}<a href="mailto:${attr(site.brand.email)}">${esc(site.brand.email)}</a></p>
 </div>
 <form class="form" data-form action="${attr(site.form.endpoint)}" method="post"
       data-sending="${attr(str.formSending)}" data-ok="${attr(str.formOk)}" data-error="${attr(str.formError)}">

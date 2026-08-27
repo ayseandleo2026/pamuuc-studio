@@ -82,27 +82,33 @@
     "items": [
       {
         "name": "Hotellerie",
-        "modal": "modal-sector-hotels"
+        "modal": "modal-sector-hotels",
+        "desc": "Sistemi di uniformi per team complessi e ambienti articolati"
       },
       {
         "name": "Ristorazione",
-        "modal": "modal-sector-restaurants"
+        "modal": "modal-sector-restaurants",
+        "desc": "Uniformi pensate per ambienti dinamici"
       },
       {
         "name": "Benessere",
-        "modal": "modal-sector-wellness"
+        "modal": "modal-sector-wellness",
+        "desc": "Capi progettati per ambienti dedicati alla comodità"
       },
       {
         "name": "Ambito sanitario",
-        "modal": "modal-sector-medical"
+        "modal": "modal-sector-medical",
+        "desc": "Uniformi professionali per ambienti sanitari"
       },
       {
         "name": "Personale di servizio",
-        "modal": "modal-sector-service"
+        "modal": "modal-sector-service",
+        "desc": "Capi resistenti per ruoli operativi"
       },
       {
         "name": "Servizi dedicati agli ospiti",
-        "modal": "modal-sector-guest"
+        "modal": "modal-sector-guest",
+        "desc": "Capi per ruoli a diretto contatto con il pubblico"
       }
     ]
   },
@@ -697,14 +703,6 @@
     ],
     "sector-hotels": [
       {
-        "t": "h",
-        "v": "HOTELLERIE"
-      },
-      {
-        "t": "p",
-        "v": "Sistemi di uniformi per team complessi e ambienti articolati"
-      },
-      {
         "t": "p",
         "v": "Le strutture di hotellerie riuniscono reparti diversi, ciascuno con funzioni e contesti distinti a contatto con l’ospite. Le uniformi devono riflettere l’identità della struttura, garantendo al tempo stesso praticità, continuità e affidabilità operativa."
       },
@@ -753,14 +751,6 @@
     ],
     "sector-restaurants": [
       {
-        "t": "h",
-        "v": "RISTORAZIONE"
-      },
-      {
-        "t": "p",
-        "v": "Uniformi pensate per ambienti dinamici"
-      },
-      {
         "t": "p",
         "v": "I team di ristorazione operano in contesti ad alta intensità. I capi devono sostenere il ritmo del servizio, bilanciando resistenza, comfort e presenza visiva."
       },
@@ -794,14 +784,6 @@
     ],
     "sector-wellness": [
       {
-        "t": "h",
-        "v": "BENESSERE"
-      },
-      {
-        "t": "p",
-        "v": "Capi progettati per ambienti dedicati alla comodità"
-      },
-      {
         "t": "p",
         "v": "Nei contesti benessere, le uniformi contribuiscono a creare un’atmosfera di calma e fiducia. Il design privilegia morbidezza, essenzialità e coerenza visiva con l’identità dello spazio."
       },
@@ -832,14 +814,6 @@
       }
     ],
     "sector-medical": [
-      {
-        "t": "h",
-        "v": "MEDICALE E CLINICHE"
-      },
-      {
-        "t": "p",
-        "v": "Uniformi professionali per ambienti sanitari"
-      },
       {
         "t": "p",
         "v": "I capi accompagnano lunghe ore di attività, mantenendo un’immagine ordinata, pulita e rassicurante. L’approccio privilegia la funzionalità senza rinunciare a un’estetica curata."
@@ -876,14 +850,6 @@
     ],
     "sector-service": [
       {
-        "t": "h",
-        "v": "TEAM DI SERVIZIO"
-      },
-      {
-        "t": "p",
-        "v": "Capi resistenti per ruoli operativi"
-      },
-      {
         "t": "p",
         "v": "Il personale impegnate in manutenzione, logistica e supporto richiedono uniformi solide, funzionali e coerenti con l’identità del marchio."
       },
@@ -915,14 +881,6 @@
       }
     ],
     "sector-guest": [
-      {
-        "t": "h",
-        "v": "SERVIZI OSPITI"
-      },
-      {
-        "t": "p",
-        "v": "Capi per ruoli a diretto contatto con il pubblico"
-      },
       {
         "t": "p",
         "v": "Il personale è la prima espressione concreta del marchio. Le uniformi devono trasmettere professionalità ed eleganza, garantendo al contempo comfort nell’interazione quotidiana."

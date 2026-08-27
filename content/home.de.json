@@ -82,27 +82,33 @@
     "items": [
       {
         "name": "Hotellerie",
-        "modal": "modal-sector-hotels"
+        "modal": "modal-sector-hotels",
+        "desc": "Uniformsysteme für komplexe Teams und vielschichtige Umgebungen"
       },
       {
         "name": "Gastronomie",
-        "modal": "modal-sector-restaurants"
+        "modal": "modal-sector-restaurants",
+        "desc": "Uniformen für dynamische Umgebungen"
       },
       {
         "name": "Wellness",
-        "modal": "modal-sector-wellness"
+        "modal": "modal-sector-wellness",
+        "desc": "Kleidungsstücke für komfortorientierte Umgebungen"
       },
       {
         "name": "Gesundheitswesen",
-        "modal": "modal-sector-medical"
+        "modal": "modal-sector-medical",
+        "desc": "Professionelle Uniformen für Gesundheitsumgebungen"
       },
       {
         "name": "Serviceteams",
-        "modal": "modal-sector-service"
+        "modal": "modal-sector-service",
+        "desc": "Strapazierfähige Kleidungsstücke für operative Rollen"
       },
       {
         "name": "Gästebetreuung",
-        "modal": "modal-sector-guest"
+        "modal": "modal-sector-guest",
+        "desc": "Kleidungsstücke für Rollen mit direktem Publikumsbezug"
       }
     ]
   },
@@ -697,14 +703,6 @@
     ],
     "sector-hotels": [
       {
-        "t": "h",
-        "v": "HOTELLERIE"
-      },
-      {
-        "t": "p",
-        "v": "Uniformsysteme für komplexe Teams und vielschichtige Umgebungen"
-      },
-      {
         "t": "p",
         "v": "Im Hospitality-Bereich kommen unterschiedliche Abteilungen zusammen, jede mit eigenen Funktionen und gästebezogenen Kontexten. Uniformen müssen die Identität des Hauses widerspiegeln und zugleich Praktikabilität, Kontinuität und operative Zuverlässigkeit sicherstellen."
       },
@@ -753,14 +751,6 @@
     ],
     "sector-restaurants": [
       {
-        "t": "h",
-        "v": "GASTRONOMIE"
-      },
-      {
-        "t": "p",
-        "v": "Uniformen für dynamische Umgebungen"
-      },
-      {
         "t": "p",
         "v": "Teams in Gastronomie und Food & Beverage arbeiten in hochintensiven Situationen. Die Kleidungsstücke müssen den Servicerhythmus unterstützen und zugleich Haltbarkeit, Komfort und visuelle Präsenz ausbalancieren."
       },
@@ -794,14 +784,6 @@
     ],
     "sector-wellness": [
       {
-        "t": "h",
-        "v": "WELLNESS"
-      },
-      {
-        "t": "p",
-        "v": "Kleidungsstücke für komfortorientierte Umgebungen"
-      },
-      {
         "t": "p",
         "v": "In Wellness-Bereichen tragen Uniformen dazu bei, eine Atmosphäre von Ruhe und Vertrauen zu schaffen. Das Design setzt auf Weichheit, Schlichtheit und visuelle Kohärenz mit der Identität des Raums."
       },
@@ -832,14 +814,6 @@
       }
     ],
     "sector-medical": [
-      {
-        "t": "h",
-        "v": "GESUNDHEITSWESEN UND KLINIKEN"
-      },
-      {
-        "t": "p",
-        "v": "Professionelle Uniformen für Gesundheitsumgebungen"
-      },
       {
         "t": "p",
         "v": "Diese Kleidungsstücke begleiten lange Arbeitstage und bewahren dabei ein geordnetes, sauberes und beruhigendes Erscheinungsbild. Der Ansatz priorisiert Funktionalität, ohne auf eine gepflegte Ästhetik zu verzichten."
@@ -876,14 +850,6 @@
     ],
     "sector-service": [
       {
-        "t": "h",
-        "v": "SERVICETEAMS"
-      },
-      {
-        "t": "p",
-        "v": "Strapazierfähige Kleidungsstücke für operative Rollen"
-      },
-      {
         "t": "p",
         "v": "Mitarbeitende in Instandhaltung, Logistik und Support benötigen Uniformen, die robust, funktional und mit der Markenidentität stimmig sind."
       },
@@ -915,14 +881,6 @@
       }
     ],
     "sector-guest": [
-      {
-        "t": "h",
-        "v": "GÄSTEBETREUUNG"
-      },
-      {
-        "t": "p",
-        "v": "Kleidungsstücke für Rollen mit direktem Publikumsbezug"
-      },
       {
         "t": "p",
         "v": "Das Team ist der erste greifbare Ausdruck der Marke. Uniformen müssen Professionalität und Eleganz vermitteln und zugleich Komfort in der täglichen Interaktion gewährleisten."

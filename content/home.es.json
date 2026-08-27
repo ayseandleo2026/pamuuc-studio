@@ -82,27 +82,33 @@
     "items": [
       {
         "name": "Hostelería",
-        "modal": "modal-sector-hotels"
+        "modal": "modal-sector-hotels",
+        "desc": "Sistemas de uniformes para equipos complejos y entornos con múltiples capas"
       },
       {
         "name": "Restauración",
-        "modal": "modal-sector-restaurants"
+        "modal": "modal-sector-restaurants",
+        "desc": "Uniformes diseñados para entornos dinámicos"
       },
       {
         "name": "Bienestar",
-        "modal": "modal-sector-wellness"
+        "modal": "modal-sector-wellness",
+        "desc": "Prendas diseñadas para entornos centrados en la comodidad"
       },
       {
         "name": "Sector sanitario",
-        "modal": "modal-sector-medical"
+        "modal": "modal-sector-medical",
+        "desc": "Uniformes profesionales para entornos sanitarios"
       },
       {
         "name": "Personal de servicio",
-        "modal": "modal-sector-service"
+        "modal": "modal-sector-service",
+        "desc": "Prendas resistentes para roles operativos"
       },
       {
         "name": "Atención al huésped",
-        "modal": "modal-sector-guest"
+        "modal": "modal-sector-guest",
+        "desc": "Prendas para roles de cara al público"
       }
     ]
   },
@@ -697,14 +703,6 @@
     ],
     "sector-hotels": [
       {
-        "t": "h",
-        "v": "HOSTELERÍA"
-      },
-      {
-        "t": "p",
-        "v": "Sistemas de uniformes para equipos complejos y entornos con múltiples capas"
-      },
-      {
         "t": "p",
         "v": "Los entornos de hostelería reúnen distintos departamentos, cada uno con funciones y contextos de contacto con el huésped diferentes. Los uniformes deben reflejar la identidad del establecimiento y, al mismo tiempo, garantizar practicidad, continuidad y fiabilidad operativa."
       },
@@ -753,14 +751,6 @@
     ],
     "sector-restaurants": [
       {
-        "t": "h",
-        "v": "RESTAURACIÓN"
-      },
-      {
-        "t": "p",
-        "v": "Uniformes diseñados para entornos dinámicos"
-      },
-      {
         "t": "p",
         "v": "Los equipos de restauración trabajan en contextos de alta intensidad. Las prendas deben acompañar el ritmo del servicio equilibrando durabilidad, comodidad y presencia visual."
       },
@@ -794,14 +784,6 @@
     ],
     "sector-wellness": [
       {
-        "t": "h",
-        "v": "BIENESTAR"
-      },
-      {
-        "t": "p",
-        "v": "Prendas diseñadas para entornos centrados en la comodidad"
-      },
-      {
         "t": "p",
         "v": "En los espacios de bienestar, los uniformes ayudan a crear una atmósfera de calma y confianza. El diseño prioriza la suavidad, la sencillez y la coherencia visual con la identidad del espacio."
       },
@@ -832,14 +814,6 @@
       }
     ],
     "sector-medical": [
-      {
-        "t": "h",
-        "v": "SECTOR SANITARIO Y CLÍNICAS"
-      },
-      {
-        "t": "p",
-        "v": "Uniformes profesionales para entornos sanitarios"
-      },
       {
         "t": "p",
         "v": "Estas prendas acompañan largas jornadas de trabajo manteniendo una imagen ordenada, limpia y tranquilizadora. El enfoque prioriza la funcionalidad sin renunciar a una estética cuidada."
@@ -876,14 +850,6 @@
     ],
     "sector-service": [
       {
-        "t": "h",
-        "v": "EQUIPOS DE SERVICIO"
-      },
-      {
-        "t": "p",
-        "v": "Prendas resistentes para roles operativos"
-      },
-      {
         "t": "p",
         "v": "El personal que trabaja en mantenimiento, logística y apoyo necesita uniformes sólidos, funcionales y coherentes con la identidad de marca."
       },
@@ -915,14 +881,6 @@
       }
     ],
     "sector-guest": [
-      {
-        "t": "h",
-        "v": "ATENCIÓN AL HUÉSPED"
-      },
-      {
-        "t": "p",
-        "v": "Prendas para roles de cara al público"
-      },
       {
         "t": "p",
         "v": "El equipo es la primera expresión tangible de la marca. Los uniformes deben transmitir profesionalidad y elegancia garantizando al mismo tiempo comodidad en la interacción diaria."

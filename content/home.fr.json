@@ -82,27 +82,33 @@
     "items": [
       {
         "name": "Hôtellerie",
-        "modal": "modal-sector-hotels"
+        "modal": "modal-sector-hotels",
+        "desc": "Des systèmes d’uniformes pour des équipes complexes et des environnements à plusieurs niveaux"
       },
       {
         "name": "Restauration",
-        "modal": "modal-sector-restaurants"
+        "modal": "modal-sector-restaurants",
+        "desc": "Des uniformes conçus pour des environnements dynamiques"
       },
       {
         "name": "Bien-être",
-        "modal": "modal-sector-wellness"
+        "modal": "modal-sector-wellness",
+        "desc": "Des pièces conçues pour des environnements centrés sur le confort"
       },
       {
         "name": "Santé",
-        "modal": "modal-sector-medical"
+        "modal": "modal-sector-medical",
+        "desc": "Des uniformes professionnels pour les environnements de santé"
       },
       {
         "name": "Personnel de service",
-        "modal": "modal-sector-service"
+        "modal": "modal-sector-service",
+        "desc": "Des pièces résistantes pour les rôles opérationnels"
       },
       {
         "name": "Services aux clients",
-        "modal": "modal-sector-guest"
+        "modal": "modal-sector-guest",
+        "desc": "Des pièces pour les rôles en contact direct avec le public"
       }
     ]
   },
@@ -697,14 +703,6 @@
     ],
     "sector-hotels": [
       {
-        "t": "h",
-        "v": "HÔTELLERIE"
-      },
-      {
-        "t": "p",
-        "v": "Des systèmes d’uniformes pour des équipes complexes et des environnements à plusieurs niveaux"
-      },
-      {
         "t": "p",
         "v": "Les environnements hôteliers réunissent différents départements, chacun avec des fonctions distinctes et des contextes au contact du client. Les uniformes doivent refléter l’identité du lieu tout en garantissant praticité, continuité et fiabilité opérationnelle."
       },
@@ -753,14 +751,6 @@
     ],
     "sector-restaurants": [
       {
-        "t": "h",
-        "v": "RESTAURATION"
-      },
-      {
-        "t": "p",
-        "v": "Des uniformes conçus pour des environnements dynamiques"
-      },
-      {
         "t": "p",
         "v": "Les équipes de restauration évoluent dans des contextes à haute intensité. Les vêtements doivent accompagner le rythme du service tout en conciliant durabilité, confort et présence visuelle."
       },
@@ -794,14 +784,6 @@
     ],
     "sector-wellness": [
       {
-        "t": "h",
-        "v": "BIEN-ÊTRE"
-      },
-      {
-        "t": "p",
-        "v": "Des pièces conçues pour des environnements centrés sur le confort"
-      },
-      {
         "t": "p",
         "v": "Dans les espaces bien-être, les uniformes contribuent à créer une atmosphère de calme et de confiance. Le design privilégie la douceur, la simplicité et la cohérence visuelle avec l’identité du lieu."
       },
@@ -832,14 +814,6 @@
       }
     ],
     "sector-medical": [
-      {
-        "t": "h",
-        "v": "SANTÉ ET CLINIQUES"
-      },
-      {
-        "t": "p",
-        "v": "Des uniformes professionnels pour les environnements de santé"
-      },
       {
         "t": "p",
         "v": "Ces vêtements accompagnent de longues heures de travail tout en conservant une image ordonnée, propre et rassurante. L’approche privilégie la fonctionnalité sans renoncer à une esthétique soignée."
@@ -876,14 +850,6 @@
     ],
     "sector-service": [
       {
-        "t": "h",
-        "v": "ÉQUIPES DE SERVICE"
-      },
-      {
-        "t": "p",
-        "v": "Des pièces résistantes pour les rôles opérationnels"
-      },
-      {
         "t": "p",
         "v": "Les équipes de maintenance, de logistique et de support ont besoin d’uniformes solides, fonctionnels et cohérents avec l’identité de marque."
       },
@@ -915,14 +881,6 @@
       }
     ],
     "sector-guest": [
-      {
-        "t": "h",
-        "v": "SERVICES AUX CLIENTS"
-      },
-      {
-        "t": "p",
-        "v": "Des pièces pour les rôles en contact direct avec le public"
-      },
       {
         "t": "p",
         "v": "L’équipe est la première expression tangible de la marque. Les uniformes doivent transmettre professionnalisme et élégance tout en garantissant le confort dans l’interaction quotidienne."

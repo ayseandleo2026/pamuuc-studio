@@ -107,14 +107,15 @@
       "menu": "Menu",
       "close": "Close",
       "formSending": "Sending…",
-      "formOk": "Thank you. Your request has been sent — we usually reply within one working day.",
-      "formError": "Something went wrong. Please write to info@pamuuc.com instead.",
-      "cookieText": "We use essential cookies for language and consent. Analytics load only if you accept.",
+      "formOk": "Thank you. Your request has been sent. We usually reply within one working day.",
+      "formError": "Something went wrong. Please try again or write to info@pamuuc.com.",
+      "cookieText": "We use essential cookies for language and consent. Analytics load only if you accept them.",
       "cookieAccept": "Accept analytics",
-      "cookieReject": "Reject optional",
+      "cookieReject": "Reject optional cookies",
       "readArticle": "Read the article",
       "relatedTitle": "Related reading",
-      "required": "required"
+      "required": "required",
+      "sitemap": "Sitemap"
     },
     "es": {
       "takeaways": "Puntos clave",
@@ -145,7 +146,8 @@
       "cookieReject": "Rechazar opcionales",
       "readArticle": "Leer el artículo",
       "relatedTitle": "Lecturas relacionadas",
-      "required": "obligatorio"
+      "required": "obligatorio",
+      "sitemap": "Sitemap"
     },
     "fr": {
       "takeaways": "À retenir",
@@ -176,7 +178,8 @@
       "cookieReject": "Refuser les optionnels",
       "readArticle": "Lire l’article",
       "relatedTitle": "Lectures associées",
-      "required": "obligatoire"
+      "required": "obligatoire",
+      "sitemap": "Sitemap"
     },
     "it": {
       "takeaways": "In sintesi",
@@ -207,7 +210,8 @@
       "cookieReject": "Rifiuta gli opzionali",
       "readArticle": "Leggi l’articolo",
       "relatedTitle": "Letture correlate",
-      "required": "obbligatorio"
+      "required": "obbligatorio",
+      "sitemap": "Sitemap"
     },
     "de": {
       "takeaways": "Das Wichtigste",
@@ -238,7 +242,8 @@
       "cookieReject": "Optionale ablehnen",
       "readArticle": "Artikel lesen",
       "relatedTitle": "Weiterführende Lektüre",
-      "required": "Pflichtfeld"
+      "required": "Pflichtfeld",
+      "sitemap": "Sitemap"
     }
   },
   "legacyRedirects": {
