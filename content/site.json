@@ -57,6 +57,13 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
+    "hoteldesign": {
+      "en": "how-to-design-hotel-uniforms",
+      "es": "como-disenar-uniformes-de-hotel",
+      "fr": "comment-concevoir-uniformes-hotellerie",
+      "it": "come-progettare-divise-per-hotel",
+      "de": "hoteluniformen-richtig-planen"
+    },
     "hospitality": {
       "en": "custom-hospitality-uniforms",
       "es": "uniformes-hosteleria-personalizados",
@@ -80,6 +87,7 @@
     }
   },
   "postOrder": [
+    "hoteldesign",
     "hospitality",
     "dental",
     "wellness"
