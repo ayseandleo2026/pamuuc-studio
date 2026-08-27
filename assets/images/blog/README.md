@@ -1,8 +1,33 @@
 # Blog images
 
-Last reviewed: `2026-03-27`
+Last reviewed: `2026-08-27`
 
 Store blog cover images in this folder.
+
+## Responsive derivatives
+
+Each master has generated siblings at 480w, 800w and 1200w in both formats:
+
+```
+custom-hospitality-uniforms.jpg        <- master, 1600w
+custom-hospitality-uniforms.webp       <- master, 1600w
+custom-hospitality-uniforms-480.jpg    <- generated
+custom-hospitality-uniforms-480.webp   <- generated
+...
+```
+
+The masters keep their bare filename because that is the URL `og:image` and the
+JSON-LD `image` field point at, and they are the 1600w entry in every `srcset`.
+
+After adding or replacing a master, regenerate the derivatives and commit them
+with it:
+
+```
+npm install sharp && node tools/generate-blog-images.mjs
+```
+
+`sharp` is deliberately not a dependency of the site build, which runs on plain
+Node with no install step. It is only needed to run this one tool.
 
 ## Naming convention
 
