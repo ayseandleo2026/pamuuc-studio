@@ -390,25 +390,28 @@
     "intro": "A selection of projects showing how design choices translate into daily operations, team wellbeing, and long-term continuity.",
     "items": [
       {
-        "tag": "Garments in direct contact with guests, developed in harmony with architecture, visual identity, and the demands of long shifts.",
+        "tag": "HOSPITALITY WARDROBE",
         "h3": "Boutique hotel staff",
         "p": "Garments in direct contact with guests, developed in harmony with architecture, visual identity, and the demands of long shifts.",
         "img": "assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment"
+        "alt": "Project visual for hospitality environment",
+        "href": "/en/blog/custom-hospitality-uniforms/"
       },
       {
-        "tag": "Defined silhouettes, archived once and reactivated precisely as the team grows.",
+        "tag": "OPERATIONAL CONTINUITY",
         "h3": "Multi-role service team",
         "p": "Defined silhouettes, archived once and reactivated precisely as the team grows.",
         "img": "assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders"
+        "alt": "Project visual for continuity and reorders",
+        "href": "/en/blog/wellness-studio-uniform-system/"
       },
       {
-        "tag": "Essential lines and comfort-oriented construction, designed to communicate trust, clarity, and natural ease in daily use.",
+        "tag": "UNIFORM DIRECTION",
         "h3": "Clinic and wellness project",
         "p": "Essential lines and comfort-oriented construction, designed to communicate trust, clarity, and natural ease in daily use.",
         "img": "assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms"
+        "alt": "Project visual for medical and service uniforms",
+        "href": "/en/blog/custom-dental-clinic-uniforms-barcelona/"
       }
     ]
   },

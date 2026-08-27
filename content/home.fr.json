@@ -390,25 +390,28 @@
     "intro": "Une sélection de projets qui montre comment les choix de design se traduisent dans les opérations du quotidien, le bien-être de l’équipe et la continuité dans le temps.",
     "items": [
       {
-        "tag": "Des pièces en contact direct avec les clients, développées en harmonie avec l’architecture, l’identité visuelle et les exigences des longues journées.",
+        "tag": "GARDE-ROBE HÔTELLERIE",
         "h3": "Personnel de boutique-hôtel",
         "p": "Des pièces en contact direct avec les clients, développées en harmonie avec l’architecture, l’identité visuelle et les exigences des longues journées.",
         "img": "../assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment"
+        "alt": "Project visual for hospitality environment",
+        "href": "/fr/blog/uniformes-hotellerie-personnalises/"
       },
       {
-        "tag": "Des silhouettes définies, archivées une seule fois puis réactivées avec précision à mesure que l’équipe grandit.",
+        "tag": "CONTINUITÉ OPÉRATIONNELLE",
         "h3": "Équipe de service multirôle",
         "p": "Des silhouettes définies, archivées une seule fois puis réactivées avec précision à mesure que l’équipe grandit.",
         "img": "../assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders"
+        "alt": "Project visual for continuity and reorders",
+        "href": "/fr/blog/uniformes-studios-bien-etre/"
       },
       {
-        "tag": "Des lignes essentielles et une construction pensée pour le confort, afin de transmettre confiance, clarté et aisance naturelle au quotidien.",
+        "tag": "DIRECTION UNIFORME",
         "h3": "Projet clinique et bien-être",
         "p": "Des lignes essentielles et une construction pensée pour le confort, afin de transmettre confiance, clarté et aisance naturelle au quotidien.",
         "img": "../assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms"
+        "alt": "Project visual for medical and service uniforms",
+        "href": "/fr/blog/uniformes-clinique-dentaire-sur-mesure-barcelone/"
       }
     ]
   },

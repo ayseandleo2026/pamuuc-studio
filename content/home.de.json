@@ -390,25 +390,28 @@
     "intro": "Eine Auswahl an Projekten, die zeigt, wie Gestaltungsentscheidungen in tägliche Abläufe, Teamwohlbefinden und langfristige Kontinuität übersetzt werden.",
     "items": [
       {
-        "tag": "Kleidungsstücke mit direktem Gästekontakt, entwickelt im Einklang mit Architektur, visueller Identität und den Anforderungen langer Schichten.",
+        "tag": "HOTELLERIE-GARDEROBE",
         "h3": "Team eines Boutique-Hotels",
         "p": "Kleidungsstücke mit direktem Gästekontakt, entwickelt im Einklang mit Architektur, visueller Identität und den Anforderungen langer Schichten.",
         "img": "../assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment"
+        "alt": "Project visual for hospitality environment",
+        "href": "/de/blog/uniformen-hotellerie/"
       },
       {
-        "tag": "Definierte Silhouetten, einmal archiviert und präzise reaktiviert, wenn das Team wächst.",
+        "tag": "OPERATIVE KONTINUITÄT",
         "h3": "Multifunktionales Serviceteam",
         "p": "Definierte Silhouetten, einmal archiviert und präzise reaktiviert, wenn das Team wächst.",
         "img": "../assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders"
+        "alt": "Project visual for continuity and reorders",
+        "href": "/de/blog/uniformen-wellness-studios/"
       },
       {
-        "tag": "Reduzierte Linien und komfortorientierte Konstruktion, entwickelt, um Vertrauen, Klarheit und natürliche Selbstverständlichkeit im täglichen Einsatz zu vermitteln.",
+        "tag": "UNIFORMRICHTUNG",
         "h3": "Projekt für Klinik und Wellness",
         "p": "Reduzierte Linien und komfortorientierte Konstruktion, entwickelt, um Vertrauen, Klarheit und natürliche Selbstverständlichkeit im täglichen Einsatz zu vermitteln.",
         "img": "../assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms"
+        "alt": "Project visual for medical and service uniforms",
+        "href": "/de/blog/uniformen-zahnarztpraxen-barcelona/"
       }
     ]
   },

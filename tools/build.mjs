@@ -442,7 +442,7 @@ ${h.hero.proofs.map((p) => `<div class="proof"><strong>${esc(p.label)}</strong><
 <h2 class="h2">${esc(h.services.h2)}</h2>
 <p class="lead">${esc(h.services.intro)}</p>
 </div>
-<div class="card">
+<div class="card card--wide">
 <p class="eyebrow eyebrow--muted">${esc(h.services.card.topline)}</p>
 <h3 class="h3">${esc(h.services.card.h3)}</h3>
 <p class="muted">${esc(h.services.card.p)}</p>
@@ -460,13 +460,17 @@ ${disclosure(loc, h.detail['service-custom'])}
 <ul class="sectors">
 ${h.sectors.items.map((s, i) => {
   const key = sectorKeys[i];
+  const detail = (h.detail[key] || []).slice(1);
   return `<li class="sector">
-<div class="sector__row">
+<details>
+<summary>
 <span class="sector__idx">${String(i + 1).padStart(2, '0')}</span>
 <h3 class="sector__name">${esc(s.name)}</h3>
 <p class="sector__desc">${esc(sectorLead(key))}</p>
-</div>
-${disclosure(loc, (h.detail[key] || []).slice(1))}
+<span class="sector__chev" aria-hidden="true"></span>
+</summary>
+<div class="sector__detail">${renderBlocks(detail.slice(1))}</div>
+</details>
 </li>`;
 }).join('\n')}
 </ul>
@@ -475,7 +479,7 @@ ${disclosure(loc, (h.detail[key] || []).slice(1))}
 <section class="section" id="approach"><div class="wrap">
 <div class="section__head">
 <p class="eyebrow">${esc(h.approach.kicker)}</p>
-<p class="lead">${esc(h.approach.intro)}</p>
+<h2 class="h2">${esc(h.approach.intro)}</h2>
 </div>
 <div class="grid grid--4">
 ${h.approach.cards.map((c) => `<article class="card"><p class="card__num">${esc(c.n)}</p><h3 class="h3">${esc(c.h3)}</h3><p class="muted">${esc(c.p)}</p></article>`).join('\n')}
@@ -488,8 +492,8 @@ ${h.approach.cards.map((c) => `<article class="card"><p class="card__num">${esc(
 <h2 class="h2">${esc(h.categories.h2)}</h2>
 <p class="lead">${esc(h.categories.intro)}</p>
 </div>
-<div class="grid grid--3">
-${h.categories.groups.map((g) => `<div class="card"><h3 class="h3">${esc(g.label)}</h3><ul class="chips">${g.items.map((i) => `<li class="chip">${esc(i)}</li>`).join('')}</ul></div>`).join('\n')}
+<div class="scope">
+${h.categories.groups.map((g) => `<div><h3>${esc(g.label)}</h3><ul class="chips">${g.items.map((i) => `<li class="chip">${esc(i)}</li>`).join('')}</ul></div>`).join('\n')}
 </div>
 </div></section>
 
@@ -501,14 +505,14 @@ ${h.categories.groups.map((g) => `<div class="card"><h3 class="h3">${esc(g.label
 </div>
 <div class="grid grid--3">
 ${h.process.phases.map((p, i) => `<article class="card">
-<p class="eyebrow eyebrow--muted">${esc(p.tag)}</p>
+<p class="eyebrow eyebrow--muted">${esc(p.tag.replace(/^[-–—]\s*/, ''))}</p>
 <h3 class="h3">${esc(p.h3)}</h3>
 <p class="muted">${esc(p.desc)}</p>
 <ul>${p.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
 ${disclosure(loc, h.detail['phase-' + (i + 1)])}
 </article>`).join('\n')}
 </div>
-<h3 class="eyebrow eyebrow--muted" style="margin-top:2rem">${esc(h.process.statsLabel)}</h3>
+<h3 class="eyebrow eyebrow--muted section__sub">${esc(h.process.statsLabel)}</h3>
 <dl class="stats">
 ${h.process.stats.map((s) => `<div><dd>${esc(s.v)}</dd><dt>${esc(s.l)}</dt></div>`).join('\n')}
 </dl>
@@ -523,7 +527,7 @@ ${h.process.stats.map((s) => `<div><dd>${esc(s.v)}</dd><dt>${esc(s.l)}</dt></div
 <div class="acc">
 ${h.personalised.accordions.map((a) => `<details><summary>${esc(a.q)}</summary><div class="acc__body"><p>${esc(a.p)}</p><ul>${a.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div></details>`).join('\n')}
 </div>
-<div class="grid grid--3" style="margin-top:2rem">
+<div class="grid grid--3 section__sub">
 ${h.personalised.cards.map((c) => `<div class="card"><h3 class="h3">${esc(c.h3)}</h3><p class="muted">${esc(c.p)}</p></div>`).join('\n')}
 </div>
 </div></section>
@@ -551,7 +555,11 @@ ${disclosure(loc, h.detail[g.modal])}
 <p class="lead">${esc(h.continuity.intro)}</p>
 </div>
 <div class="tablewrap"><table class="compare">
-<thead><tr>${h.continuity.rows[0].map((c, i) => `<th${i === 0 ? ' scope="col"' : ' scope="col"'}>${esc(c)}</th>`).join('')}</tr></thead>
+<thead><tr>${(() => {
+  const head = h.continuity.rows[0];
+  const cells = head[2] ? head : [head[0], ...head[1].split('→').map((x) => x.trim())];
+  return cells.map((c) => `<th scope="col">${esc(c)}</th>`).join('');
+})()}</tr></thead>
 <tbody>
 ${h.continuity.rows.slice(1).map((r) => `<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('\n')}
 </tbody>
@@ -566,12 +574,15 @@ ${h.continuity.loop.length ? `<p class="loop">${h.continuity.loop.map((s) => (s 
 <p class="lead">${esc(h.projects.intro)}</p>
 </div>
 <div class="grid grid--3">
-${h.projects.items.map((p) => `<article class="project">
-<img src="${attr(p.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(p.alt || p.h3)}">
+${h.projects.items.map((p) => {
+  const inner = `<img src="${attr(p.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(p.alt || p.h3)}">
 <p class="eyebrow eyebrow--muted">${esc(p.tag)}</p>
 <h3 class="h3">${esc(p.h3)}</h3>
-<p class="muted">${esc(p.p)}</p>
-</article>`).join('\n')}
+<p class="muted">${esc(p.p)}</p>`;
+  return p.href
+    ? `<a class="project" href="${attr(p.href)}">${inner}</a>`
+    : `<article class="project">${inner}</article>`;
+}).join('\n')}
 </div>
 </div></section>
 
@@ -587,7 +598,7 @@ ${h.faq.items.map((q, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q.
 </div></section>
 
 <section class="section" id="contact"><div class="wrap contact">
-<div class="section__head">
+<div class="contact__copy">
 <p class="eyebrow">${esc(h.contact.kicker)}</p>
 <h2 class="h2">${esc(h.contact.h2)}</h2>
 ${h.contact.paras.map((p) => `<p class="muted">${esc(p)}</p>`).join('\n')}
@@ -644,12 +655,14 @@ function renderBlogIndex(loc) {
 </nav>
 <main id="main">
 <section class="section section--tight"><div class="wrap">
+<div class="page-head">
 <p class="eyebrow">${esc(ui.blogKicker)}</p>
-<h1 class="h1" style="margin:.6rem 0 1rem">${esc(ui.blogH1)}</h1>
+<h1 class="h1">${esc(ui.blogH1)}</h1>
 <p class="lead">${esc(ui.blogLead)}</p>
+</div>
 </div></section>
 
-<section class="section" style="padding-top:0"><div class="wrap">
+<section class="section section--flush"><div class="wrap">
 <ul class="post-list">
 ${posts.map((p) => `<li><article class="post-row">
 <a href="${postURL(p.key, loc)}" tabindex="-1" aria-hidden="true">${coverImg(p.cover, '', { sizes: '(max-width: 700px) 92vw, 14rem' })}</a>
@@ -662,7 +675,7 @@ ${posts.map((p) => `<li><article class="post-row">
 </ul>
 </div></section>
 
-<section class="section" style="padding-top:0"><div class="wrap">
+<section class="section section--flush"><div class="wrap">
 <div class="cta">
 <p class="eyebrow">${esc(ui.articleServiceKicker || S(loc).journal)}</p>
 <h2 class="h2">${esc(HOME[loc].contact.h2)}</h2>
@@ -724,7 +737,7 @@ function renderPost(key, loc) {
 </nav>
 <main id="main">
 <article>
-<header class="wrap" style="padding-block:1rem 2rem;display:grid;gap:1rem">
+<header class="wrap article-head">
 <p class="eyebrow">${esc(p.kicker)}</p>
 <h1 class="post-title">${esc(p.headline)}</h1>
 <p class="post-meta">
@@ -743,7 +756,7 @@ ${p.coverCaption ? `<figcaption>${esc(p.coverCaption)}</figcaption>` : ''}
 </figure>
 </div>
 
-<div class="wrap article" style="margin-top:clamp(2rem,4vw,3rem)">
+<div class="wrap article section__sub">
 <div class="article__body">
 ${p.takeaways?.length ? `<div class="takeaways"><h2>${esc(str.takeaways)}</h2><ul>${p.takeaways.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
 ${body}
@@ -762,7 +775,7 @@ ${headings.map((hh) => `<a href="#${attr(hh.id)}">${hh.v.replace(/<[^>]+>/g, '')
 </div>
 
 <section class="section"><div class="wrap">
-<h2 class="eyebrow" style="margin-bottom:1.25rem">${esc(str.relatedTitle)}</h2>
+<h2 class="eyebrow section__sub related-title">${esc(str.relatedTitle)}</h2>
 <div class="grid grid--2">
 ${related.map((r) => `<a class="card" href="${postURL(r.key, loc)}">
 <p class="eyebrow eyebrow--muted">${esc(r.kicker)}</p>
@@ -772,7 +785,7 @@ ${related.map((r) => `<a class="card" href="${postURL(r.key, loc)}">
 </div>
 </div></section>
 
-<section class="section" style="padding-top:0"><div class="wrap">
+<section class="section section--flush"><div class="wrap">
 <div class="cta">
 <p class="eyebrow">${esc(ui.articleServiceKicker || '')}</p>
 <h2 class="h2">${esc(HOME[loc].contact.h2)}</h2>
@@ -799,10 +812,12 @@ ${s.blocks.map((b) => (b.t === 'h' ? `<h3>${esc(b.v)}</h3>` : b.t === 'ul' ? `<u
 </nav>
 <main id="main">
 <section class="section section--tight"><div class="wrap">
+<div class="page-head">
 <h1 class="h1">${esc(str.legal)}</h1>
-<p class="lead" style="margin-top:1rem">${esc(str.legalIntro)}</p>
+<p class="lead">${esc(str.legalIntro)}</p>
+</div>
 </div></section>
-<section class="section" style="padding-top:0"><div class="wrap legal">
+<section class="section section--flush"><div class="wrap legal">
 <nav class="legal__nav" aria-label="${attr(str.legal)}">
 ${l.sections.map((s) => `<a href="#${attr(s.id)}">${esc(s.title)}</a>`).join('\n')}
 </nav>

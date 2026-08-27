@@ -390,25 +390,28 @@
     "intro": "Una selezione di progetti che dimostra come le scelte di design si traducano in operatività quotidiana, benessere del team e continuità nel tempo.",
     "items": [
       {
-        "tag": "Capi a diretto contatto con l’ospite, sviluppati in armonia con l’architettura, l’identità visiva e le esigenze di turni prolungati.",
+        "tag": "GUARDAROBA HOTELLERIE",
         "h3": "Personale di boutique hotel",
         "p": "Capi a diretto contatto con l’ospite, sviluppati in armonia con l’architettura, l’identità visiva e le esigenze di turni prolungati.",
         "img": "../assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment"
+        "alt": "Project visual for hospitality environment",
+        "href": "/it/blog/divise-hospitalita-personalizzate/"
       },
       {
-        "tag": "Silhouette definite, archiviate una sola volta e riattivate con precisione man mano che il team cresce.",
+        "tag": "CONTINUITÀ OPERATIVA",
         "h3": "Team di servizio multiruolo",
         "p": "Silhouette definite, archiviate una sola volta e riattivate con precisione man mano che il team cresce.",
         "img": "../assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders"
+        "alt": "Project visual for continuity and reorders",
+        "href": "/it/blog/divise-studi-benessere/"
       },
       {
-        "tag": "Linee essenziali e costruzione orientata alla comodità, per trasmettere fiducia, chiarezza e naturalezza nell’uso quotidiano.",
+        "tag": "DIREZIONE UNIFORME",
         "h3": "Progetto clinica e benessere",
         "p": "Linee essenziali e costruzione orientata alla comodità, per trasmettere fiducia, chiarezza e naturalezza nell’uso quotidiano.",
         "img": "../assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms"
+        "alt": "Project visual for medical and service uniforms",
+        "href": "/it/blog/divise-clinica-dentale-personalizzate-barcellona/"
       }
     ]
   },

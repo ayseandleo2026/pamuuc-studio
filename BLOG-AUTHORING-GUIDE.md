@@ -75,8 +75,25 @@ Two files, same base name, in `src/images/blog/`:
 
 - `<name>` follows the same character rules as a slug and is shared by all five
   languages — one cover per article, not one per language.
-- Real photography of real work. Never a stock photo of a stranger's kitchen, never
-  an AI-generated image, never a logo on a coloured background.
+- Use either original PAMUUC photography or an original AI-generated editorial
+  image grounded in real visual references. Never use a stock photo of a
+  stranger's workplace, a copied composition, or a logo on a coloured background.
+- An AI-generated cover is publishable only when all of the following are true:
+  - research starts from multiple real references for the sector, garments,
+    materials, working context, architecture and light; prefer PAMUUC-owned
+    references whenever they exist
+  - every reference URL or local asset path and its specific purpose is recorded
+    in the publishing report; a reference is evidence and visual grounding, not a
+    template to reproduce
+  - the prompt does not request the style of a named artist or photographer and
+    does not ask to recreate a single source image, recognisable person, artwork,
+    logo, trade dress or client identity
+  - the result is materially original in composition, pose, wardrobe details,
+    setting, crop and lighting; it must look like a PAMUUC editorial image rather
+    than a variation of any one reference
+  - the final candidate is compared with every reference and rejected if it is a
+    near-copy, could be mistaken for a real client project, or contains a visible
+    third-party brand, invented logo or unapproved likeness
 - Both files must exist or the build fails.
 
 ---
@@ -235,6 +252,8 @@ The GitHub Action runs the audit again and deploys only if it passes.
 
 - [ ] `postSlugs.<key>` has all five locales; `postOrder` has the key, newest first
 - [ ] `src/images/blog/<cover>.webp` and `.jpg`, both 1040 × 500
+- [ ] if the cover is AI-generated: real references documented and originality
+      review passed with no copied composition, likeness, logo or client identity
 - [ ] five files `content/posts/<key>.<locale>.md`
 - [ ] every front matter field present and inside its limit
 - [ ] `takeaways`: 3–5 real findings
