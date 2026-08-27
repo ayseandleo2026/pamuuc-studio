@@ -1,0 +1,1155 @@
+{
+  "locale": "fr",
+  "meta": {
+    "title": "Uniformes sur mesure hôtellerie | Pamuuc Studios",
+    "description": "Uniformes sur mesure pour l’hôtellerie, la santé et les équipes de service, développés et produits à Barcelone. Dès 10 pièces par modèle, environ 8 semaines."
+  },
+  "nav": [
+    {
+      "label": "Secteurs",
+      "href": "/fr/#sectors"
+    },
+    {
+      "label": "Processus",
+      "href": "/fr/#process"
+    },
+    {
+      "label": "Projets",
+      "href": "/fr/#projects"
+    },
+    {
+      "label": "Blog",
+      "href": "/fr/blog/"
+    },
+    {
+      "label": "Réserver un rendez-vous",
+      "href": "/fr/#contact"
+    }
+  ],
+  "hero": {
+    "eyebrow": "STUDIO DE DESIGN ET DE PRODUCTION D’UNIFORMES SUR MESURE",
+    "h1": "Uniformes sur mesure durables pour équipes exigeantes d’hôtellerie, de santé et de service",
+    "lead": "Pensés pour les lavages fréquents, les longues journées et la continuité opérationnelle, avec l’atmosphère du lieu portée dans chaque pièce.",
+    "pills": [
+      "Uniformes sur mesure",
+      "Fonctionnalité élégante",
+      "Contrôle direct et stratégique de la production locale",
+      "Réassort fiable et ponctuel"
+    ],
+    "primary": "Demander un premier rendez-vous",
+    "secondary": "Voir les projets récents",
+    "proofs": [
+      {
+        "label": "Phase initiale",
+        "text": "Développement et première production conçus pour un espace spécifique"
+      },
+      {
+        "label": "Continuité opérationnelle",
+        "text": "Une garde-robe validée, toujours disponible pour des réassorts fiables selon vos besoins"
+      }
+    ]
+  },
+  "services": {
+    "kicker": "SERVICES",
+    "h2": "Une offre studio claire, centrée sur les uniformes sur mesure",
+    "intro": "Le studio se concentre sur le design et la production d’uniformes entièrement personnalisés pour l’hôtellerie, la santé et les équipes de service.",
+    "card": {
+      "topline": "SERVICE DU STUDIO",
+      "h3": "Uniformes sur mesure",
+      "p": "Développés projet par projet pour répondre avec précision aux rôles opérationnels, aux besoins de mouvement, à la durabilité dans le temps et à l’alignement avec l’identité de marque.",
+      "features": [
+        "Définition des pièces selon leur fonction, leur contexte d’usage et leurs performances",
+        "Sélection et coordination des matières, des détails de construction, des éléments d’identité et de la chaîne de production",
+        "Un design pensé pour la continuité, avec des réassorts efficaces et une évolution progressive de l’équipe"
+      ]
+    }
+  },
+  "band": {
+    "text": "Là où le vêtement fait partie de l’expérience",
+    "points": [
+      "En harmonie avec l’identité et l’esthétique du lieu",
+      "Défini à partir des flux opérationnels du quotidien",
+      "Produit localement à Barcelone",
+      "Pensé pour un usage intensif et des lavages fréquents",
+      "Développé comme un système de garde-robe cohérent et intégré",
+      "Conçu pour assurer une continuité dans le temps"
+    ]
+  },
+  "sectors": {
+    "kicker": "POUR QUI",
+    "h2": "Conçu pour six contextes opérationnels",
+    "intro": "Sélectionnez un secteur pour découvrir des pièces représentatives, leurs contextes d’application et le rôle que joue le vêtement dans l’expérience quotidienne",
+    "items": [
+      {
+        "name": "Hôtellerie",
+        "modal": "modal-sector-hotels"
+      },
+      {
+        "name": "Restauration",
+        "modal": "modal-sector-restaurants"
+      },
+      {
+        "name": "Bien-être",
+        "modal": "modal-sector-wellness"
+      },
+      {
+        "name": "Santé",
+        "modal": "modal-sector-medical"
+      },
+      {
+        "name": "Personnel de service",
+        "modal": "modal-sector-service"
+      },
+      {
+        "name": "Services aux clients",
+        "modal": "modal-sector-guest"
+      }
+    ]
+  },
+  "approach": {
+    "kicker": "NOTRE APPROCHE DU DESIGN",
+    "intro": "Une approche qui part du lieu et se traduit en uniformes pensés pour l’équipe et pour l’expérience dans son ensemble.",
+    "cards": [
+      {
+        "n": "01",
+        "h3": "L’espace",
+        "p": "L’architecture, les matières, la lumière et l’atmosphère définissent la direction; un intérieur chaleureux peut guider vers des textures plus douces, des tons calmes et des silhouettes apaisées."
+      },
+      {
+        "n": "02",
+        "h3": "Les rôles",
+        "p": "Chaque fonction est analysée selon le mouvement, le rythme et les outils; l’accueil, le service et les rôles cliniques appellent des coupes, poches et présences visuelles différentes."
+      },
+      {
+        "n": "03",
+        "h3": "Les pièces",
+        "p": "Coupe, silhouette et catégories de produits sont organisées comme un système de vestiaire, des chemises et tabliers aux surchemises, pantalons et couches extérieures."
+      },
+      {
+        "n": "04",
+        "h3": "Les opérations",
+        "p": "La construction répond à la routine réelle: lavages fréquents, longues journées, réassort simple et continuité cohérente dans le temps."
+      }
+    ]
+  },
+  "categories": {
+    "kicker": "CE QUE NOUS POUVONS DÉVELOPPER",
+    "h2": "Un système de production structuré, pensé pour la complexité des environnements de travail réels",
+    "intro": "Évolutif pour les organisations avec plusieurs rôles, il est conçu pour préserver la cohérence, la fonctionnalité et l’efficacité à chaque étape de la production.",
+    "groups": [
+      {
+        "label": "CATÉGORIES DE PIÈCES",
+        "items": [
+          "Chemises",
+          "Pantalons",
+          "Jupes",
+          "Robes",
+          "Tabliers professionnels",
+          "Maille",
+          "Polos et T-shirts",
+          "Blazers",
+          "Vestes",
+          "Vêtements d’extérieur",
+          "Accessoires coordonnés"
+        ]
+      },
+      {
+        "label": "BRANDING ET IDENTITÉ",
+        "items": [
+          "Broderie",
+          "Broderie ton sur ton",
+          "Étiquettes tissées",
+          "Étiquettes imprimées",
+          "Étiquettes nominatives",
+          "Finitions personnalisées",
+          "Boutons personnalisés",
+          "Sérigraphie"
+        ]
+      },
+      {
+        "label": "CONSTRUCTION TECHNIQUE",
+        "items": [
+          "Pièces conçues pour des lavages fréquents",
+          "Constructions stretch",
+          "Coutures renforcées",
+          "Tissus respirants",
+          "Tissus faciles d’entretien",
+          "Poches fonctionnelles",
+          "Fermetures intégrées",
+          "Finitions durables"
+        ]
+      }
+    ]
+  },
+  "process": {
+    "kicker": "PROCESSUS",
+    "h2": "Un parcours en trois phases, de la direction créative à la livraison finale",
+    "intro": "Chaque phase est structurée pour définir les objectifs, guider le travail et produire des résultats concrets, au service de la réussite globale du projet.",
+    "phases": [
+      {
+        "tag": "- PHASE 01",
+        "h3": "Découverte",
+        "desc": "Nous définissons clairement le projet avant de lancer le développement",
+        "items": [
+          "Analyse des dynamiques opérationnelles",
+          "Cartographie des rôles et des besoins fonctionnels",
+          "Définition de la direction produit initiale"
+        ],
+        "modal": "modal-phase-1"
+      },
+      {
+        "tag": "- PHASE 02",
+        "h3": "Développement",
+        "desc": "Nous testons, affinons et préparons le produit pour la production",
+        "items": [
+          "Validation des matières et des tissus",
+          "Développement des prototypes, échantillonnage et essayages",
+          "Cycles de révision et d’optimisation"
+        ],
+        "modal": "modal-phase-2"
+      },
+      {
+        "tag": "- PHASE 03",
+        "h3": "Production",
+        "desc": "De l’approbation finale à la fabrication et à la livraison",
+        "items": [
+          "Validation préproduction",
+          "Production locale",
+          "Livraison et mise en place des réassorts"
+        ],
+        "modal": "modal-phase-3"
+      }
+    ],
+    "statsLabel": "Délais indicatifs",
+    "stats": [
+      {
+        "v": "4 à 6 semaines",
+        "l": "Fenêtre de développement type"
+      },
+      {
+        "v": "3 à 5 semaines",
+        "l": "Fenêtre de production type"
+      },
+      {
+        "v": "Environ 8 semaines",
+        "l": "Délai moyen pour un projet entièrement sur mesure"
+      },
+      {
+        "v": "Délais plus courts",
+        "l": "Lorsque des bases de design déjà développées existent ou que certains besoins spécifiques le permettent"
+      }
+    ]
+  },
+  "personalised": {
+    "kicker": "PERSONNALISATION",
+    "h2": "Des options claires, des décisions de design concrètes",
+    "intro": "Les sections suivantes montrent comment nous abordons la personnalisation de manière structurée, depuis le choix des tissus jusqu’à la définition des détails techniques et de production.",
+    "accordions": [
+      {
+        "q": "Tissus",
+        "p": "Le choix des tissus est défini selon la durée des services, les conditions climatiques, le niveau de mouvement et les exigences d’entretien.",
+        "items": [
+          "Exemples : mélanges de coton, mélanges de lin, tissus techniques faciles d’entretien",
+          "Critères principaux : confort, durabilité, rendu visuel et stabilité dans le temps et au lavage"
+        ]
+      },
+      {
+        "q": "Couleurs",
+        "p": "La direction colorielle part du lieu et de l’identité de marque, puis est validée dans des conditions opérationnelles réelles.",
+        "items": [
+          "Exemples : la gamme de couleurs varie selon le tissu sélectionné, avec la possibilité de développements coloriels dédiés pour des projets de plus grande envergure",
+          "Critères principaux : cohérence entre les rôles et rendu dans différentes conditions de lumière"
+        ]
+      },
+      {
+        "q": "Accessoires et finitions",
+        "p": "Les finitions définissent l’identité du vêtement tout en conservant de hautes performances dans l’usage quotidien.",
+        "items": [
+          "Exemples : boutons personnalisés, zips, étiquettes, surpiqûres contrastées",
+          "Critères principaux : durabilité, facilité de remplacement et cohérence visuelle"
+        ]
+      },
+      {
+        "q": "Méthodes de personnalisation de l’identité",
+        "p": "L’expression de l’identité est développée en fonction du vêtement, de sa fréquence d’usage et du niveau de visibilité recherché.",
+        "items": [
+          "Exemples : broderie, broderie ton sur ton, étiquettes tissées, sérigraphie",
+          "Critères principaux : durabilité, lisibilité et placement précisément étudié"
+        ]
+      }
+    ],
+    "cards": [
+      {
+        "h3": "Au plus près du projet",
+        "p": "L’échantillonnage et les essayages réalisés localement permettent des décisions techniques plus rapides, plus précises et plus éclairées."
+      },
+      {
+        "h3": "Pensé pour le travail réel",
+        "p": "Chaque pièce est développée en tenant compte du mouvement, de la durée des services et du rythme opérationnel quotidien."
+      },
+      {
+        "h3": "Préparé pour la continuité",
+        "p": "Les patronages, finitions et spécifications sont archivés pour assurer des réassorts cohérents dans le temps et accompagner l’évolution de l’équipe."
+      }
+    ]
+  },
+  "parameters": {
+    "kicker": "PARAMÈTRES DE PRODUCTION",
+    "h2": "Les informations commerciales essentielles, en un coup d’œil",
+    "intro": "Ouvrez chaque section pour découvrir les quantités et les variables liées aux délais.",
+    "groups": [
+      {
+        "h3": "Quantités minimales recommandées",
+        "notes": [
+          {
+            "head": "À partir de 10 pièces par modèle",
+            "body": "Nous pouvons produire à partir de 10 pièces par modèle, avec un prix adapté à la quantité et à la construction de la pièce."
+          },
+          {
+            "head": "10–15 pièces",
+            "body": "Pièces tissées par style. Cela nous permet également d’accompagner de petites équipes avec des uniformes sur mesure."
+          },
+          {
+            "head": "100–150 pièces",
+            "body": "Maille par style. En raison du processus de fabrication, la maille nécessite des quantités plus élevées."
+          }
+        ],
+        "items": [],
+        "modal": "parameter-quantities"
+      },
+      {
+        "h3": "Un investissement sur mesure",
+        "notes": [
+          {
+            "head": "",
+            "body": "Chaque projet a ses propres caractéristiques, et le prix est défini en conséquence. Nous ne travaillons pas avec des grilles tarifaires rigides. Chaque proposition est construite autour des besoins réels de votre marque, en trouvant le bon équilibre entre esthétique, fonctionnalité et budget."
+          }
+        ],
+        "items": [
+          "Les matières et finitions sont sélectionnées pour correspondre à la fois à l’usage prévu et au niveau de qualité souhaité",
+          "Le niveau de personnalisation est adapté à votre identité de marque et à vos besoins opérationnels",
+          "Les quantités et la complexité des pièces sont optimisées afin de garantir un investissement cohérent et efficace"
+        ],
+        "modal": "parameter-pricing"
+      },
+      {
+        "h3": "Facteurs de délai",
+        "notes": [
+          {
+            "head": "",
+            "body": "Les éléments qui influencent les délais de développement et de production :"
+          }
+        ],
+        "items": [
+          "Développement et définition des patronages",
+          "Essayages, contrôles et cycles de révision",
+          "Constructions techniques ou solutions sur mesure",
+          "Niveau de complexité des finitions"
+        ],
+        "modal": "parameter-timing"
+      }
+    ]
+  },
+  "continuity": {
+    "kicker": "MODÈLE DE CONTINUITÉ",
+    "h2": "Du développement initial aux réassorts fluides dans le temps",
+    "intro": "La première production définit l’identité de votre garde-robe professionnelle. Une fois validée, elle devient la base de futurs réassorts plus rapides, plus cohérents et parfaitement alignés.",
+    "rows": [
+      [
+        "Critères",
+        "Développement initial → Continuité",
+        ""
+      ],
+      [
+        "Périmètre",
+        "Conçu sur mesure selon votre espace, vos rôles et vos besoins opérationnels.",
+        "Consolidé comme un système de garde-robe reproductible pour l’ensemble de l’équipe."
+      ],
+      [
+        "Développement",
+        "Les patronages et la construction sont conçus, affinés et validés.",
+        "Les bases approuvées sont réactivées sans avoir à repartir de zéro."
+      ],
+      [
+        "Réassorts",
+        "La première production est testée, optimisée et validée.",
+        "Avec le temps, la cohérence reste intacte, même lorsque l’équipe évolue."
+      ]
+    ],
+    "loop": [
+      "Valider une fois",
+      "→",
+      "Archiver les patronages",
+      "→",
+      "Commander à nouveau avec une continuité totale"
+    ]
+  },
+  "projects": {
+    "kicker": "PROJETS SÉLECTIONNÉS",
+    "h2": "Des preuves concrètes, au-delà des mots",
+    "intro": "Une sélection de projets qui montre comment les choix de design se traduisent dans les opérations du quotidien, le bien-être de l’équipe et la continuité dans le temps.",
+    "items": [
+      {
+        "tag": "Des pièces en contact direct avec les clients, développées en harmonie avec l’architecture, l’identité visuelle et les exigences des longues journées.",
+        "h3": "Personnel de boutique-hôtel",
+        "p": "Des pièces en contact direct avec les clients, développées en harmonie avec l’architecture, l’identité visuelle et les exigences des longues journées.",
+        "img": "../assets/images/project-hospitality-editorial.jpg",
+        "alt": "Project visual for hospitality environment"
+      },
+      {
+        "tag": "Des silhouettes définies, archivées une seule fois puis réactivées avec précision à mesure que l’équipe grandit.",
+        "h3": "Équipe de service multirôle",
+        "p": "Des silhouettes définies, archivées une seule fois puis réactivées avec précision à mesure que l’équipe grandit.",
+        "img": "../assets/images/project-multi-role-service-team.jpg",
+        "alt": "Project visual for continuity and reorders"
+      },
+      {
+        "tag": "Des lignes essentielles et une construction pensée pour le confort, afin de transmettre confiance, clarté et aisance naturelle au quotidien.",
+        "h3": "Projet clinique et bien-être",
+        "p": "Des lignes essentielles et une construction pensée pour le confort, afin de transmettre confiance, clarté et aisance naturelle au quotidien.",
+        "img": "../assets/images/project-clinic-editorial.jpg",
+        "alt": "Project visual for medical and service uniforms"
+      }
+    ]
+  },
+  "faq": {
+    "kicker": "FAQ",
+    "h2": "Des réponses claires, avant même de commencer",
+    "intro": "Les réponses essentielles aux questions les plus fréquentes des équipes de l’hôtellerie, de la santé et des services.",
+    "items": [
+      {
+        "q": "Travaillez-vous à partir d’un catalogue ?",
+        "a": "Non. Chaque projet est construit autour de votre contexte opérationnel, de votre identité de marque et de la structure de votre équipe. Nous pouvons intégrer des bases existantes lorsqu’elles apportent un réel avantage en termes de délai et de coût, tout en garantissant un résultat final sur mesure, cohérent et distinctif."
+      },
+      {
+        "q": "Gérez-vous les réassorts après la première production ?",
+        "a": "Oui. Les patronages, tissus, finitions et systèmes de personnalisation sont archivés pour assurer une continuité dans le temps. Cela réduit les phases de redéveloppement, garantit la cohérence pour les nouveaux membres de l’équipe et simplifie les futurs réassorts."
+      },
+      {
+        "q": "Faut-il commencer avec une garde-robe complète ?",
+        "a": "Non. Il est aussi possible de commencer par une seule catégorie de pièces ou par un rôle spécifique, puis de faire évoluer le projet dans le temps. Nous définissons ensemble le point de départ le plus pertinent selon les priorités, le budget et l’impact opérationnel."
+      },
+      {
+        "q": "Développez-vous les couleurs et les détails personnalisés ?",
+        "a": "Oui. Nous pouvons travailler à partir de cartes couleurs existantes pour optimiser les délais, ou développer des teintes et des finitions dédiées lorsque les volumes le permettent. Les techniques de personnalisation sont choisies en fonction de la durabilité, de la lisibilité et du type de vêtement."
+      }
+    ]
+  },
+  "contact": {
+    "kicker": "DONNONS FORME À VOTRE PROJET",
+    "h2": "Partagez-nous votre projet. Nous définirons ensemble le chemin le plus pertinent.",
+    "paras": [
+      "Nous évaluons la faisabilité, identifions le meilleur point de départ et définissons un périmètre clair pour un développement cohérent, solide et durable.",
+      "Nous vous invitons à remplir le formulaire. Vous serez recontacté rapidement pour organiser un rendez-vous dédié, dans votre espace à Barcelone ou dans votre ville en Espagne ou à l’étranger, ou un premier échange en visioconférence conçu pour comprendre en profondeur votre contexte, vos besoins opérationnels et l’identité de votre projet."
+    ],
+    "form": {
+      "labels": {
+        "name": "Nom complet * obligatoire",
+        "email": "E-mail professionnel * obligatoire",
+        "phone": "Numéro de téléphone",
+        "company": "Nom de l’entreprise * obligatoire",
+        "team-size": "Taille de l’équipe * obligatoire",
+        "project-type": "Type de projet * obligatoire",
+        "timeline": "Délai visé * obligatoire",
+        "meeting-datetime": "Date et heure souhaitées pour la première réunion",
+        "brief": "Description du projet",
+        "website": "Site web"
+      },
+      "placeholders": {
+        "name": "Nom complet",
+        "email": "nom@entreprise.com",
+        "phone": "+34 ...",
+        "company": "Nom de l’entreprise",
+        "brief": "Équipe, environnement, rôles et objectifs des pièces"
+      },
+      "options": {
+        "team-size": [
+          {
+            "v": "",
+            "t": "Sélectionnez une tranche",
+            "disabled": true
+          },
+          {
+            "v": "Moins de 10",
+            "t": "Moins de 10",
+            "disabled": false
+          },
+          {
+            "v": "10 - 25",
+            "t": "10 - 25",
+            "disabled": false
+          },
+          {
+            "v": "26 - 50",
+            "t": "26 - 50",
+            "disabled": false
+          },
+          {
+            "v": "51 - 120",
+            "t": "51 - 120",
+            "disabled": false
+          },
+          {
+            "v": "120+",
+            "t": "120+",
+            "disabled": false
+          }
+        ],
+        "project-type": [
+          {
+            "v": "",
+            "t": "Sélectionnez le type de projet",
+            "disabled": true
+          },
+          {
+            "v": "Systèmes d’uniformes entièrement sur mesure",
+            "t": "Systèmes d’uniformes entièrement sur mesure",
+            "disabled": false
+          },
+          {
+            "v": "Un seul rôle",
+            "t": "Un seul rôle",
+            "disabled": false
+          },
+          {
+            "v": "Une seule pièce",
+            "t": "Une seule pièce",
+            "disabled": false
+          },
+          {
+            "v": "Un département spécifique",
+            "t": "Un département spécifique",
+            "disabled": false
+          },
+          {
+            "v": "Merchandising",
+            "t": "Merchandising",
+            "disabled": false
+          },
+          {
+            "v": "Autre",
+            "t": "Autre",
+            "disabled": false
+          }
+        ],
+        "timeline": [
+          {
+            "v": "",
+            "t": "Sélectionnez un délai",
+            "disabled": true
+          },
+          {
+            "v": "Dès que possible",
+            "t": "Dès que possible",
+            "disabled": false
+          },
+          {
+            "v": "Sous 1 à 2 mois",
+            "t": "Sous 1 à 2 mois",
+            "disabled": false
+          },
+          {
+            "v": "Sous 3 à 4 mois",
+            "t": "Sous 3 à 4 mois",
+            "disabled": false
+          },
+          {
+            "v": "Prévu plus tard cette année",
+            "t": "Prévu plus tard cette année",
+            "disabled": false
+          },
+          {
+            "v": "Date précise",
+            "t": "Date précise",
+            "disabled": false
+          }
+        ]
+      },
+      "consent": "J’accepte la {privacy:politique de confidentialité} et les {terms:conditions}.",
+      "hint": "Le formulaire prend environ 2 minutes à remplir. Nous répondons généralement sous 1 jour ouvré.",
+      "submit": "Envoyer"
+    }
+  },
+  "footer": {
+    "about": "Systèmes d’uniformes sur mesure développés à Barcelone.",
+    "legal": "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com",
+    "cols": [
+      {
+        "title": "Studio",
+        "links": [
+          {
+            "label": "Plan du site",
+            "href": "/sitemap.xml"
+          },
+          {
+            "label": "PAMUUC.COM",
+            "href": "https://pamuuc.com"
+          },
+          {
+            "label": "Services",
+            "href": "/fr/#services"
+          },
+          {
+            "label": "Projets",
+            "href": "/fr/#projects"
+          },
+          {
+            "label": "Blog",
+            "href": "/fr/blog/"
+          }
+        ]
+      },
+      {
+        "title": "Politiques",
+        "links": [
+          {
+            "label": "Politique de confidentialité",
+            "href": "/fr/privacy-policy/"
+          },
+          {
+            "label": "Politique de cookies",
+            "href": "/fr/cookie-policy/"
+          },
+          {
+            "label": "Termes et conditions",
+            "href": "/fr/terms-and-conditions/"
+          },
+          {
+            "label": "Mentions légales",
+            "href": "/fr/legal-notice/"
+          }
+        ]
+      }
+    ]
+  },
+  "detail": {
+    "service-custom": [
+      {
+        "t": "h",
+        "v": "UNIFORMES ENTIÈREMENT SUR MESURE POUR VOTRE ÉQUIPE"
+      },
+      {
+        "t": "p",
+        "v": "Des garde-robes professionnelles pensées autour de votre espace, de votre équipe et de vos opérations"
+      },
+      {
+        "t": "p",
+        "v": "Chaque projet part d’une page blanche."
+      },
+      {
+        "t": "p",
+        "v": "Nous n’adaptons pas des produits existants. Nous développons des pièces conçues spécifiquement pour votre espace, la structure de votre équipe et la réalité quotidienne de votre service."
+      },
+      {
+        "t": "p",
+        "v": "Les uniformes sont pensés comme un système de garde-robe cohérent, et non comme des pièces isolées."
+      },
+      {
+        "t": "p",
+        "v": "Chaque vêtement fonctionne en relation avec les autres, afin d’assurer une harmonie visuelle et une vraie fonctionnalité opérationnelle à l’échelle de l’équipe."
+      },
+      {
+        "t": "p",
+        "v": "Ce qui définit un projet entièrement sur mesure"
+      },
+      {
+        "t": "p",
+        "v": "Un design qui part du lieu"
+      },
+      {
+        "t": "p",
+        "v": "L’architecture, les matières, la lumière et l’atmosphère de marque guident la direction visuelle de la garde-robe."
+      },
+      {
+        "t": "p",
+        "v": "Développement par rôle"
+      },
+      {
+        "t": "p",
+        "v": "Chaque fonction est analysée dans le détail, accueil, service, direction, opérations, afin de créer des pièces alignées avec les mouvements, les responsabilités et le rythme de travail."
+      },
+      {
+        "t": "p",
+        "v": "Silhouettes dédiées"
+      },
+      {
+        "t": "p",
+        "v": "La coupe, les proportions et les longueurs sont définies pour paraître naturelles dans l’environnement et assurer le confort pendant de longues journées."
+      },
+      {
+        "t": "p",
+        "v": "Ce que nous développons"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Chemises et surchemises",
+          "Pantalons et jupes",
+          "Robes",
+          "Tabliers et pièces opérationnelles",
+          "Maille et vêtements d’extérieur",
+          "Accessoires"
+        ]
+      }
+    ],
+    "sector-hotels": [
+      {
+        "t": "h",
+        "v": "HÔTELLERIE"
+      },
+      {
+        "t": "p",
+        "v": "Des systèmes d’uniformes pour des équipes complexes et des environnements à plusieurs niveaux"
+      },
+      {
+        "t": "p",
+        "v": "Les environnements hôteliers réunissent différents départements, chacun avec des fonctions distinctes et des contextes au contact du client. Les uniformes doivent refléter l’identité du lieu tout en garantissant praticité, continuité et fiabilité opérationnelle."
+      },
+      {
+        "t": "p",
+        "v": "Rôles principaux"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Réception et accueil",
+          "Conciergerie et services aux clients",
+          "Restaurant et bar",
+          "Direction",
+          "Étages"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Types de pièces :"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Chemises",
+          "Pantalons et jupes",
+          "Robes",
+          "Blazers",
+          "Tabliers",
+          "Maille"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Priorités de design"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Cohérence visuelle entre les départements",
+          "Confort pendant de longues journées",
+          "Durabilité dans l’usage quotidien",
+          "Alignement avec l’architecture et l’identité de marque"
+        ]
+      }
+    ],
+    "sector-restaurants": [
+      {
+        "t": "h",
+        "v": "RESTAURATION"
+      },
+      {
+        "t": "p",
+        "v": "Des uniformes conçus pour des environnements dynamiques"
+      },
+      {
+        "t": "p",
+        "v": "Les équipes de restauration évoluent dans des contextes à haute intensité. Les vêtements doivent accompagner le rythme du service tout en conciliant durabilité, confort et présence visuelle."
+      },
+      {
+        "t": "p",
+        "v": "Types de pièces"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Chemises et surchemises",
+          "Tabliers",
+          "Pantalons",
+          "Polos",
+          "Vestes légères"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Éléments clés :"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Liberté de mouvement",
+          "Tissus respirants",
+          "Résistance aux taches",
+          "Construction renforcée"
+        ]
+      }
+    ],
+    "sector-wellness": [
+      {
+        "t": "h",
+        "v": "BIEN-ÊTRE"
+      },
+      {
+        "t": "p",
+        "v": "Des pièces conçues pour des environnements centrés sur le confort"
+      },
+      {
+        "t": "p",
+        "v": "Dans les espaces bien-être, les uniformes contribuent à créer une atmosphère de calme et de confiance. Le design privilégie la douceur, la simplicité et la cohérence visuelle avec l’identité du lieu."
+      },
+      {
+        "t": "p",
+        "v": "Types de pièces"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Tuniques",
+          "Tops souples",
+          "Pantalons",
+          "Robes"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Priorités matières"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Respirabilité",
+          "Confort",
+          "Douceur au toucher"
+        ]
+      }
+    ],
+    "sector-medical": [
+      {
+        "t": "h",
+        "v": "SANTÉ ET CLINIQUES"
+      },
+      {
+        "t": "p",
+        "v": "Des uniformes professionnels pour les environnements de santé"
+      },
+      {
+        "t": "p",
+        "v": "Ces vêtements accompagnent de longues heures de travail tout en conservant une image ordonnée, propre et rassurante. L’approche privilégie la fonctionnalité sans renoncer à une esthétique soignée."
+      },
+      {
+        "t": "p",
+        "v": "Types de pièces"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Tops médicaux",
+          "Ensembles opérationnels",
+          "Pantalons",
+          "Surchemises"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Priorités design et techniques"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Tissus respirants",
+          "Lavage et entretien faciles",
+          "Durabilité",
+          "Confort",
+          "Tissus haute résistance",
+          "Poches fonctionnelles",
+          "Entretien simplifié"
+        ]
+      }
+    ],
+    "sector-service": [
+      {
+        "t": "h",
+        "v": "ÉQUIPES DE SERVICE"
+      },
+      {
+        "t": "p",
+        "v": "Des pièces résistantes pour les rôles opérationnels"
+      },
+      {
+        "t": "p",
+        "v": "Les équipes de maintenance, de logistique et de support ont besoin d’uniformes solides, fonctionnels et cohérents avec l’identité de marque."
+      },
+      {
+        "t": "p",
+        "v": "Types de pièces"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Chemises de travail",
+          "Pantalons techniques",
+          "Surchemises",
+          "Vestes légères"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Priorités techniques"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Construction renforcée",
+          "Tissus haute résistance",
+          "Poches fonctionnelles",
+          "Entretien simplifié"
+        ]
+      }
+    ],
+    "sector-guest": [
+      {
+        "t": "h",
+        "v": "SERVICES AUX CLIENTS"
+      },
+      {
+        "t": "p",
+        "v": "Des pièces pour les rôles en contact direct avec le public"
+      },
+      {
+        "t": "p",
+        "v": "L’équipe est la première expression tangible de la marque. Les uniformes doivent transmettre professionnalisme et élégance tout en garantissant le confort dans l’interaction quotidienne."
+      },
+      {
+        "t": "p",
+        "v": "Types de pièces"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Chemises",
+          "Pantalons",
+          "Robes",
+          "Blazers"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Priorités de design"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Une identité visuelle claire et reconnaissable",
+          "Confort pendant de longues journées",
+          "Une élégance essentielle"
+        ]
+      }
+    ],
+    "phase-1": [
+      {
+        "t": "h",
+        "v": "PHASE 01 | Analyse"
+      },
+      {
+        "t": "p",
+        "v": "Comprendre le contexte, définir la direction"
+      },
+      {
+        "t": "p",
+        "v": "Chaque projet commence par une analyse approfondie du contexte dans lequel les uniformes seront portés."
+      },
+      {
+        "t": "p",
+        "v": "Le lieu, les flux opérationnels, la structure de l’équipe et l’identité de marque guident les premières décisions et définissent une direction claire pour l’ensemble de la garde-robe."
+      },
+      {
+        "t": "p",
+        "v": "Activités principales"
+      },
+      {
+        "t": "p",
+        "v": "Analyse des opérations"
+      },
+      {
+        "t": "p",
+        "v": "Cartographie des rôles"
+      },
+      {
+        "t": "p",
+        "v": "Lecture du lieu et de l’identité visuelle"
+      },
+      {
+        "t": "p",
+        "v": "Définition de la direction créative"
+      },
+      {
+        "t": "p",
+        "v": "L’objectif est de construire une base solide et partagée avant de lancer le développement."
+      }
+    ],
+    "phase-2": [
+      {
+        "t": "h",
+        "v": "PHASE 02 | Développement"
+      },
+      {
+        "t": "p",
+        "v": "De la direction aux pièces"
+      },
+      {
+        "t": "p",
+        "v": "La phase de développement traduit la direction créative en vêtements concrets."
+      },
+      {
+        "t": "p",
+        "v": "Les tissus, les patronages et la construction sont définis et testés au travers de prototypes et de séances d’essayage afin d’assurer confort, fonctionnalité et cohérence visuelle."
+      },
+      {
+        "t": "p",
+        "v": "Activités principales"
+      },
+      {
+        "t": "p",
+        "v": "Sélection et validation des matières"
+      },
+      {
+        "t": "p",
+        "v": "Développement des patronages"
+      },
+      {
+        "t": "p",
+        "v": "Création des prototypes"
+      },
+      {
+        "t": "p",
+        "v": "Essayages et optimisation"
+      },
+      {
+        "t": "p",
+        "v": "Chaque décision est testée dans des conditions réelles d’usage pour garantir une fiabilité durable."
+      }
+    ],
+    "phase-3": [
+      {
+        "t": "h",
+        "v": "PHASE 03 | Production"
+      },
+      {
+        "t": "p",
+        "v": "Continuité, précision, maîtrise"
+      },
+      {
+        "t": "p",
+        "v": "Une fois approuvées, les pièces passent en production avec des patronages, matières et finitions finalisés."
+      },
+      {
+        "t": "p",
+        "v": "La production locale permet un contrôle qualité direct et une plus grande fiabilité sur les délais de livraison."
+      },
+      {
+        "t": "p",
+        "v": "Activités principales"
+      },
+      {
+        "t": "p",
+        "v": "Validation préproduction"
+      },
+      {
+        "t": "p",
+        "v": "Développement des tailles"
+      },
+      {
+        "t": "p",
+        "v": "Production"
+      },
+      {
+        "t": "p",
+        "v": "Préparation et livraison"
+      }
+    ],
+    "parameter-quantities": [
+      {
+        "t": "h",
+        "v": "QUANTITÉS MINIMALES"
+      },
+      {
+        "t": "p",
+        "v": "Un équilibre entre qualité et durabilité de production. Les quantités minimales varient selon la construction du vêtement et les matières sélectionnées."
+      },
+      {
+        "t": "p",
+        "v": "Indications générales"
+      },
+      {
+        "t": "p",
+        "v": "Pièces tissées : à partir d’environ 10–15 pièces par style, réparties entre les tailles et les variantes"
+      },
+      {
+        "t": "p",
+        "v": "Maille : généralement entre 100 et 150 pièces par style"
+      },
+      {
+        "t": "p",
+        "v": "Des quantités inférieures peuvent être envisagées, avec d’éventuelles variations liées à l’efficacité de production."
+      }
+    ],
+    "parameter-pricing": [
+      {
+        "t": "h",
+        "v": "ADAPTÉ À VOTRE BUDGET"
+      },
+      {
+        "t": "p",
+        "v": "Nous pensons que chaque entreprise doit pouvoir s’appuyer sur des uniformes professionnels sans compromettre son budget. C’est pourquoi nous nous adaptons à vos contraintes économiques, en proposant des solutions souples et personnalisées qui garantissent qualité, style et cohérence avec votre identité de marque. Nous travaillons à vos côtés pour trouver le bon équilibre entre investissement et résultat, en créant des uniformes qui renforcent votre marque."
+      }
+    ],
+    "parameter-timing": [
+      {
+        "t": "h",
+        "v": "FACTEURS DE TEMPS"
+      },
+      {
+        "t": "p",
+        "v": "Les délais du projet dépendent de la complexité du développement et du planning de production."
+      },
+      {
+        "t": "p",
+        "v": "Délais types"
+      },
+      {
+        "t": "p",
+        "v": "Développement : 4 à 6 semaines"
+      },
+      {
+        "t": "p",
+        "v": "Production : 3 à 5 semaines"
+      },
+      {
+        "t": "p",
+        "v": "Les projets entièrement sur mesure demandent généralement environ 8 semaines entre l’idée initiale et la livraison."
+      },
+      {
+        "t": "p",
+        "v": "Facteurs qui influencent les délais"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Développement des patronages",
+          "Essayages et révisions",
+          "Constructions spéciales",
+          "Approvisionnement des tissus"
+        ]
+      },
+      {
+        "t": "p",
+        "v": "Une bonne planification permet un développement plus fluide et des délais de livraison fiables."
+      }
+    ]
+  }
+}

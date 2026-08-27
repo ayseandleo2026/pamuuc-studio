@@ -1,0 +1,663 @@
+{
+  "locale": "de",
+  "sections": [
+    {
+      "id": "privacy",
+      "title": "Datenschutzerklärung",
+      "blocks": [
+        {
+          "t": "p",
+          "v": "Legal entity: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com"
+        },
+        {
+          "t": "h",
+          "v": "1. VERANTWORTLICHER"
+        },
+        {
+          "t": "p",
+          "v": "Name des Unternehmens: Pamuk Studio S.L"
+        },
+        {
+          "t": "h",
+          "v": "NIF/CIF: ESB27664994"
+        },
+        {
+          "t": "h",
+          "v": "E-Mail: info@pamuuc.com"
+        },
+        {
+          "t": "h",
+          "v": "Website: pamuuc-studio.com"
+        },
+        {
+          "t": "p",
+          "v": "Eingetragener Sitz: [vollständigen eingetragenen Sitz einfügen]"
+        },
+        {
+          "t": "p",
+          "v": "Angaben zum Handelsregister: [Provinz, Band, Buch, Abschnitt, Seite und Blattnummer einfügen, soweit anwendbar]"
+        },
+        {
+          "t": "p",
+          "v": "Für die Zwecke des anwendbaren Datenschutzrechts, einschließlich der Verordnung (EU) 2016/679 (DSGVO) und des spanischen Organgesetzes 3/2018 über den Schutz personenbezogener Daten und die Gewährleistung digitaler Rechte, handelt Pamuk Studio S.L als Verantwortlicher für die personenbezogenen Daten, die über diese Website verarbeitet werden."
+        },
+        {
+          "t": "h",
+          "v": "2. VON UNS VERARBEITETE DATEN"
+        },
+        {
+          "t": "p",
+          "v": "Wenn Sie diese Website nutzen, können wir die folgenden Kategorien personenbezogener Daten verarbeiten."
+        },
+        {
+          "t": "p",
+          "v": "Direkt bereitgestellte Daten:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Name",
+            "E-Mail-Adresse",
+            "Telefonnummer",
+            "Firmenname",
+            "Teamgröße",
+            "Projektbeschreibung",
+            "Alle Informationen, die Sie in Ihrer Nachricht angeben"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "Technische Daten und Nutzungsdaten"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Browsertyp",
+            "Gerätetyp",
+            "Besuchte Seiten",
+            "Interaktionsereignisse auf der Website",
+            "Sprachpräferenz",
+            "Einwilligungspräferenzen",
+            "Eingeschränkte Analysedaten, sofern eine Einwilligung erteilt wurde"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "3. ZWECKE DER VERARBEITUNG"
+        },
+        {
+          "t": "p",
+          "v": "Wir verarbeiten personenbezogene Daten zu folgenden Zwecken:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Zur Beantwortung von Anfragen, die über das Kontaktformular eingereicht werden",
+            "Zur Prüfung potenzieller Kooperations- oder Projektanfragen",
+            "Zur Aufrechterhaltung der Kommunikation mit potenziellen Kundinnen und Kunden",
+            "Zur Verbesserung der Nutzbarkeit und Leistung der Website",
+            "Zur Aufrechterhaltung der Sicherheit der Website und zur Verhinderung von Missbrauch",
+            "Zum Verständnis der Interaktion der Besucherinnen und Besucher mit der Website, sofern eine Einwilligung zu Analysezwecken vorliegt"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "4. RECHTSGRUNDLAGE DER VERARBEITUNG"
+        },
+        {
+          "t": "p",
+          "v": "Die Verarbeitung personenbezogener Daten stützt sich auf folgende Rechtsgrundlagen:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Die betroffene Person hat Informationen oder Kontakt zu Dienstleistungen angefragt, was vorvertraglichen Maßnahmen entspricht.",
+            "Berechtigtes Interesse an der Verwaltung von Anfragen und geschäftlicher Kommunikation.",
+            "Einwilligung, soweit erforderlich, insbesondere für Analyse-Cookies und ähnliche Technologien."
+          ]
+        },
+        {
+          "t": "h",
+          "v": "5. VERARBEITUNG ÜBER DAS KONTAKTFORMULAR"
+        },
+        {
+          "t": "p",
+          "v": "Wenn Sie das Kontaktformular absenden, werden die bereitgestellten Informationen an Formspree übermittelt, das die Anfrage verarbeitet und an unser E-Mail-Postfach weiterleitet."
+        },
+        {
+          "t": "p",
+          "v": "Diese Informationen werden ausschließlich genutzt, um über die Website eingereichte Anfragen zu prüfen und zu beantworten."
+        },
+        {
+          "t": "p",
+          "v": "Nur autorisierte Mitglieder des Teams von Pamuk Studio S.L haben Zugriff auf diese Informationen."
+        },
+        {
+          "t": "p",
+          "v": "Wir verkaufen oder vermieten personenbezogene Daten nicht an Dritte."
+        },
+        {
+          "t": "h",
+          "v": "6. SPEICHERDAUER"
+        },
+        {
+          "t": "p",
+          "v": "Personenbezogene Daten werden nur so lange aufbewahrt, wie es für die Zwecke erforderlich ist, für die sie erhoben wurden."
+        },
+        {
+          "t": "p",
+          "v": "Als allgemeine Orientierung:"
+        },
+        {
+          "t": "p",
+          "v": "Kontaktanfragen können bis zu 24 Monate nach der letzten wesentlichen Interaktion aufbewahrt werden, sofern nicht eine Geschäftsbeziehung beginnt oder gesetzliche Verpflichtungen eine längere Aufbewahrung verlangen."
+        },
+        {
+          "t": "p",
+          "v": "Die Speicherdauer von Analysedaten richtet sich nach der Konfiguration der verwendeten Analyseplattform."
+        },
+        {
+          "t": "p",
+          "v": "Sobald die Daten nicht mehr erforderlich sind, werden sie gelöscht oder anonymisiert."
+        },
+        {
+          "t": "h",
+          "v": "7. EMPFÄNGER UND DIENSTLEISTER"
+        },
+        {
+          "t": "p",
+          "v": "Personenbezogene Daten können von Dienstleistern verarbeitet werden, die für den Betrieb der Website erforderlich sind, darunter Hosting-Anbieter und technische Dienstleister."
+        },
+        {
+          "t": "p",
+          "v": "Google-Dienste wie Google Analytics sowie Dienstleister wie Formspree können begrenzte technische und personenbezogene Informationen verarbeiten, die für den Betrieb der Website oder die Bearbeitung von Anfragen erforderlich sind."
+        },
+        {
+          "t": "h",
+          "v": "8. INTERNATIONALE DATENÜBERMITTLUNGEN"
+        },
+        {
+          "t": "p",
+          "v": "Einige der von der Website eingesetzten Dienstleister können Daten außerhalb des Europäischen Wirtschaftsraums verarbeiten. In solchen Fällen werden angemessene Garantien im Einklang mit dem geltenden Datenschutzrecht angewendet."
+        },
+        {
+          "t": "h",
+          "v": "9. COOKIES UND ÄHNLICHE TECHNOLOGIEN"
+        },
+        {
+          "t": "p",
+          "v": "Diese Website verwendet Cookies und ähnliche Technologien, um die Funktionalität der Website zu verbessern, Sprachpräferenzen zu speichern und die Nutzung der Website zu messen, sofern eine Einwilligung zu Analysezwecken erteilt wurde."
+        },
+        {
+          "t": "p",
+          "v": "Weitere Informationen finden Sie in der Cookie-Richtlinie."
+        },
+        {
+          "t": "h",
+          "v": "10. IHRE RECHTE"
+        },
+        {
+          "t": "p",
+          "v": "Nach dem anwendbaren Datenschutzrecht können Sie folgende Rechte ausüben:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Recht auf Auskunft",
+            "Recht auf Berichtigung",
+            "Recht auf Löschung",
+            "Recht auf Einschränkung der Verarbeitung",
+            "Recht auf Widerspruch gegen die Verarbeitung",
+            "Recht auf Datenübertragbarkeit, soweit anwendbar",
+            "Recht auf jederzeitigen Widerruf der Einwilligung"
+          ]
+        },
+        {
+          "t": "p",
+          "v": "So üben Sie Ihre Rechte aus"
+        },
+        {
+          "t": "p",
+          "v": "Sie können Ihre Rechte ausüben, indem Sie info@pamuuc.com kontaktieren."
+        },
+        {
+          "t": "p",
+          "v": "Wenn Sie der Ansicht sind, dass Ihre Rechte verletzt wurden, können Sie eine Beschwerde bei der spanischen Datenschutzbehörde einreichen."
+        },
+        {
+          "t": "h",
+          "v": "11. SICHERHEIT"
+        },
+        {
+          "t": "p",
+          "v": "Pamuk Studio S.L wendet angemessene technische und organisatorische Maßnahmen an, um die über diese Website verarbeiteten personenbezogenen Daten zu schützen."
+        },
+        {
+          "t": "p",
+          "v": "Allerdings kann keine Methode der Internetübertragung oder der Speicherung vollständige Sicherheit garantieren."
+        },
+        {
+          "t": "h",
+          "v": "12. DATEN VON MINDERJÄHRIGEN"
+        },
+        {
+          "t": "p",
+          "v": "Diese Website und ihre Dienstleistungen richten sich an Fachpersonen und Organisationen. Wir erheben wissentlich keine personenbezogenen Daten von Minderjährigen."
+        },
+        {
+          "t": "h",
+          "v": "13. ÄNDERUNGEN DIESER RICHTLINIE"
+        },
+        {
+          "t": "p",
+          "v": "Diese Datenschutzerklärung kann von Zeit zu Zeit aktualisiert werden, um rechtliche, operative oder technische Änderungen zu berücksichtigen. Die jeweils aktuellste Version ist immer auf dieser Seite verfügbar."
+        },
+        {
+          "t": "h",
+          "v": "14. KONTAKT"
+        },
+        {
+          "t": "p",
+          "v": "Bei Fragen zu dieser Datenschutzerklärung oder zur Verarbeitung personenbezogener Daten können Sie Kontakt aufnehmen mit: info@pamuuc.com"
+        }
+      ]
+    },
+    {
+      "id": "cookies",
+      "title": "Cookie-Richtlinie",
+      "blocks": [
+        {
+          "t": "p",
+          "v": "Legal entity: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com"
+        },
+        {
+          "t": "h",
+          "v": "1. WAS COOKIES SIND"
+        },
+        {
+          "t": "p",
+          "v": "Cookies sind kleine Textdateien oder ähnliche Technologien, die beim Besuch einer Website auf dem Gerät der Nutzerin oder des Nutzers gespeichert werden. Sie ermöglichen es der Website, bestimmte Informationen über den Besuch zu speichern, etwa Sprachpräferenzen oder Interaktionsentscheidungen."
+        },
+        {
+          "t": "h",
+          "v": "2. VERWENDETE COOKIE-ARTEN"
+        },
+        {
+          "t": "p",
+          "v": "Diese Website verwendet die folgenden Kategorien von Cookies oder ähnlichen Technologien."
+        },
+        {
+          "t": "h",
+          "v": "Essenzielle Cookies"
+        },
+        {
+          "t": "p",
+          "v": "Diese Cookies sind für das ordnungsgemäße Funktionieren der Website erforderlich und bedürfen keiner Einwilligung."
+        },
+        {
+          "t": "p",
+          "v": "Sie können verwendet werden, um:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "die Sprachauswahl zu speichern",
+            "Cookie-Einwilligungseinstellungen zu speichern",
+            "die Grundfunktionalität der Website aufrechtzuerhalten"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "Analyse-Cookies"
+        },
+        {
+          "t": "p",
+          "v": "Mit Ihrer Einwilligung können Analyse-Cookies verwendet werden, um zu messen, wie Besucherinnen und Besucher mit der Website interagieren."
+        },
+        {
+          "t": "p",
+          "v": "Diese Cookies helfen uns zu verstehen:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Seitenaufrufe",
+            "Surfverhalten",
+            "Interaktion mit Inhalten"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "Analyseanbieter"
+        },
+        {
+          "t": "p",
+          "v": "Die auf dieser Website eingesetzten Analysetechnologien werden über Google Analytics bereitgestellt."
+        },
+        {
+          "t": "h",
+          "v": "Marketing-Cookies"
+        },
+        {
+          "t": "p",
+          "v": "Auf dieser Website nicht verwendet; Werbespeicherung bleibt deaktiviert."
+        },
+        {
+          "t": "h",
+          "v": "3. COOKIE-EINWILLIGUNG"
+        },
+        {
+          "t": "p",
+          "v": "Beim ersten Besuch können Sie im Cookie-Banner Analyse-Cookies akzeptieren, optionale Cookies ablehnen oder die Cookie-Einstellungen öffnen, um jede Kategorie zu prüfen. Notwendige Cookies sind immer aktiv, da sie für Sprache, Einwilligung und grundlegende Website-Funktionen erforderlich sind. Marketing-Cookies werden auf dieser Website nicht verwendet."
+        },
+        {
+          "t": "p",
+          "v": "Analyse-Cookies werden erst aktiviert, wenn Sie Ihre Einwilligung erteilen."
+        },
+        {
+          "t": "p",
+          "v": "Ihre Auswahl wird lokal in Ihrem Browser gespeichert."
+        },
+        {
+          "t": "h",
+          "v": "4. COOKIES VON DRITTEN"
+        },
+        {
+          "t": "p",
+          "v": "Wenn Analyse-Cookies akzeptiert werden, kann Google Analytics Cookies oder ähnliche Technologien auf Ihrem Gerät platzieren, um Informationen darüber zu erfassen, wie die Website genutzt wird."
+        },
+        {
+          "t": "h",
+          "v": "5. COOKIE-VERWALTUNG"
+        },
+        {
+          "t": "p",
+          "v": "Sie können Cookies über die Einstellungen Ihres Browsers steuern oder löschen."
+        },
+        {
+          "t": "p",
+          "v": "Die meisten Browser erlauben es Ihnen:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "Cookies zu löschen",
+            "Cookies zu blockieren",
+            "das Cookie-Verhalten pro Website zu steuern",
+            "gespeicherte Website-Daten zu löschen"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "Auswirkungen des Blockierens von Cookies"
+        },
+        {
+          "t": "p",
+          "v": "Das Blockieren bestimmter Cookies kann einige Funktionen der Website beeinträchtigen, etwa das Speichern von Sprach- oder Einwilligungseinstellungen."
+        },
+        {
+          "t": "h",
+          "v": "6. ÄNDERUNGEN DIESER RICHTLINIE"
+        },
+        {
+          "t": "p",
+          "v": "Diese Cookie-Richtlinie kann von Zeit zu Zeit aktualisiert werden, um rechtliche Anforderungen, technologische Änderungen oder Änderungen an der Website abzubilden."
+        }
+      ]
+    },
+    {
+      "id": "terms",
+      "title": "Nutzungsbedingungen",
+      "blocks": [
+        {
+          "t": "p",
+          "v": "Legal entity: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com"
+        },
+        {
+          "t": "h",
+          "v": "1. ZWECK DER WEBSITE"
+        },
+        {
+          "t": "p",
+          "v": "Diese Nutzungsbedingungen regeln den Zugang zu und die Nutzung der Website pamuuc-studio.com, die von Pamuk Studio S.L betrieben wird."
+        },
+        {
+          "t": "p",
+          "v": "Die Website informiert über die Dienstleistungen des Unternehmens, einschließlich Design und Koordination der Produktion individueller Uniformen, Workwear und verwandter Projekte."
+        },
+        {
+          "t": "h",
+          "v": "2. UNVERBINDLICHES ANGEBOT"
+        },
+        {
+          "t": "p",
+          "v": "Die auf dieser Website bereitgestellten Informationen dienen ausschließlich Informationszwecken und stellen kein verbindliches kommerzielles Angebot dar."
+        },
+        {
+          "t": "p",
+          "v": "Jede Zusammenarbeit oder jedes Produktionsprojekt wird individuell geprüft und durch direkte Kommunikation mit Pamuk Studio S.L bestätigt."
+        },
+        {
+          "t": "h",
+          "v": "3. NUTZUNG DER WEBSITE"
+        },
+        {
+          "t": "p",
+          "v": "Nutzerinnen und Nutzer verpflichten sich, die Website rechtmäßig und nach Treu und Glauben zu nutzen."
+        },
+        {
+          "t": "p",
+          "v": "Nutzerinnen und Nutzer dürfen nicht:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "versuchen, den Betrieb der Website zu stören",
+            "versuchen, unbefugt auf Systeme oder Daten zuzugreifen",
+            "schädlichen Code oder schädliche Technologien einzuführen",
+            "die Website für rechtswidrige oder betrügerische Zwecke zu nutzen"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "4. GEISTIGES EIGENTUM"
+        },
+        {
+          "t": "p",
+          "v": "Alle Inhalte dieser Website, einschließlich Texte, Bilder, Grafiken, Logos, Gestaltungselemente, Struktur und Code, sind Eigentum von Pamuk Studio S.L oder werden mit ordnungsgemäßer Genehmigung verwendet."
+        },
+        {
+          "t": "p",
+          "v": "Die Inhalte dürfen ohne vorherige schriftliche Genehmigung nicht vervielfältigt, verbreitet, verändert oder öffentlich wiedergegeben werden, sofern dies nicht gesetzlich zulässig ist."
+        },
+        {
+          "t": "h",
+          "v": "5. EXTERNE LINKS"
+        },
+        {
+          "t": "p",
+          "v": "Die Website kann Links zu Websites Dritter enthalten."
+        },
+        {
+          "t": "p",
+          "v": "Pamuk Studio S.L ist nicht verantwortlich für Inhalte, Richtlinien oder Praktiken externer Websites, die sich nicht unter seiner Kontrolle befinden."
+        },
+        {
+          "t": "h",
+          "v": "6. HAFTUNG"
+        },
+        {
+          "t": "p",
+          "v": "Pamuk Studio S.L bemüht sich in angemessener Weise darum, dass die Informationen auf dieser Website korrekt und aktuell sind."
+        },
+        {
+          "t": "p",
+          "v": "Die Website wird jedoch ausschließlich zu Informationszwecken bereitgestellt, und das Unternehmen übernimmt keine Gewähr dafür, dass sämtliche Inhalte jederzeit vollständig oder fehlerfrei sind."
+        },
+        {
+          "t": "p",
+          "v": "Soweit gesetzlich zulässig, haftet das Unternehmen nicht für Schäden, die aus der Nutzung der Website oder der Unmöglichkeit des Zugriffs auf die Website entstehen."
+        },
+        {
+          "t": "h",
+          "v": "7. DATENSCHUTZ UND COOKIES"
+        },
+        {
+          "t": "p",
+          "v": "Die Nutzung der Website kann die Verarbeitung personenbezogener Daten und den Einsatz von Cookies oder ähnlichen Technologien umfassen."
+        },
+        {
+          "t": "p",
+          "v": "Nutzerinnen und Nutzer sollten für weitere Informationen die Datenschutzerklärung und die Cookie-Richtlinie konsultieren."
+        },
+        {
+          "t": "h",
+          "v": "8. ÄNDERUNGEN"
+        },
+        {
+          "t": "p",
+          "v": "Pamuk Studio S.L behält sich das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern."
+        },
+        {
+          "t": "p",
+          "v": "Aktualisierte Fassungen werden auf dieser Seite veröffentlicht."
+        },
+        {
+          "t": "h",
+          "v": "9. ANWENDBARES RECHT"
+        },
+        {
+          "t": "p",
+          "v": "Diese Nutzungsbedingungen unterliegen spanischem Recht."
+        },
+        {
+          "t": "p",
+          "v": "Jegliche Streitigkeiten im Zusammenhang mit der Nutzung der Website unterliegen der durch das anwendbare Recht bestimmten Gerichtsbarkeit."
+        },
+        {
+          "t": "h",
+          "v": "10. KONTAKT"
+        },
+        {
+          "t": "p",
+          "v": "Bei Fragen zu diesen Nutzungsbedingungen können Sie Kontakt aufnehmen mit: info@pamuuc.com"
+        }
+      ]
+    },
+    {
+      "id": "notice",
+      "title": "Impressum",
+      "blocks": [
+        {
+          "t": "p",
+          "v": "Legal entity: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com"
+        },
+        {
+          "t": "h",
+          "v": "1. INHABER DER WEBSITE"
+        },
+        {
+          "t": "p",
+          "v": "Gemäß dem Gesetz 34/2002 über Dienste der Informationsgesellschaft und den elektronischen Geschäftsverkehr (LSSI-CE) werden den Nutzerinnen und Nutzern dieser Website die folgenden Identifikationsangaben bereitgestellt."
+        },
+        {
+          "t": "p",
+          "v": "Name des Unternehmens: Pamuk Studio S.L"
+        },
+        {
+          "t": "h",
+          "v": "NIF/CIF: ESB27664994"
+        },
+        {
+          "t": "h",
+          "v": "E-Mail: info@pamuuc.com"
+        },
+        {
+          "t": "h",
+          "v": "Website: pamuuc-studio.com"
+        },
+        {
+          "t": "p",
+          "v": "Eingetragener Sitz: [vollständigen eingetragenen Sitz einfügen]"
+        },
+        {
+          "t": "p",
+          "v": "Angaben zum Handelsregister: [Provinz, Band, Buch, Abschnitt, Seite und Blattnummer einfügen, soweit anwendbar]"
+        },
+        {
+          "t": "h",
+          "v": "2. ZWECK DER WEBSITE"
+        },
+        {
+          "t": "p",
+          "v": "Zweck dieser Website ist die Bereitstellung von Informationen über die von Pamuk Studio S.L angebotenen Dienstleistungen, einschließlich Design und Koordination der Produktion maßgeschneiderter Uniformen und Workwear-Projekte."
+        },
+        {
+          "t": "h",
+          "v": "3. NUTZUNGSBEDINGUNGEN"
+        },
+        {
+          "t": "p",
+          "v": "Der Zugriff auf diese Website setzt die Annahme der in diesem Impressum und in den anderen auf der Website veröffentlichten Richtlinien beschriebenen Bedingungen voraus."
+        },
+        {
+          "t": "p",
+          "v": "Nutzerinnen und Nutzer verpflichten sich, die Website rechtmäßig und verantwortungsvoll zu nutzen."
+        },
+        {
+          "t": "h",
+          "v": "4. GEISTIGES EIGENTUM"
+        },
+        {
+          "t": "p",
+          "v": "Alle Elemente dieser Website, einschließlich Texte, Bilder, Design, Logos, Grafiken und Struktur, sind durch geistige Eigentumsrechte geschützt, die Pamuk Studio S.L oder Dritten zustehen, die ihre Nutzung genehmigt haben."
+        },
+        {
+          "t": "p",
+          "v": "Die Vervielfältigung, Verbreitung, Umgestaltung oder öffentliche Wiedergabe von Inhalten dieser Website ohne vorherige Genehmigung ist untersagt."
+        },
+        {
+          "t": "h",
+          "v": "5. HAFTUNG"
+        },
+        {
+          "t": "p",
+          "v": "Pamuk Studio S.L haftet nicht für Schäden, die entstehen aus:"
+        },
+        {
+          "t": "ul",
+          "v": [
+            "vorübergehender Nichtverfügbarkeit der Website",
+            "technischen Fehlern außerhalb des zumutbaren Einflussbereichs",
+            "unsachgemäßer Nutzung der Website durch Nutzerinnen und Nutzer",
+            "Inhalten Dritter, die über Links auf der Website zugänglich sind"
+          ]
+        },
+        {
+          "t": "h",
+          "v": "6. EXTERNE LINKS"
+        },
+        {
+          "t": "p",
+          "v": "Soweit diese Website Links zu Websites Dritter enthält, dienen diese Links ausschließlich Informationszwecken."
+        },
+        {
+          "t": "p",
+          "v": "Pamuk Studio S.L ist nicht verantwortlich für Inhalte oder Praktiken externer Websites."
+        },
+        {
+          "t": "h",
+          "v": "7. ANWENDBARES RECHT"
+        },
+        {
+          "t": "p",
+          "v": "Dieses Impressum unterliegt spanischem Recht."
+        },
+        {
+          "t": "p",
+          "v": "Jegliche Streitigkeiten im Zusammenhang mit der Website werden der durch das anwendbare spanische Recht bestimmten Gerichtsbarkeit unterworfen."
+        }
+      ]
+    }
+  ]
+}
