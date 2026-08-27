@@ -143,10 +143,6 @@ body[data-page-type="blog-post"] .blog-related-card:focus-within {
   box-shadow: 0 14px 28px rgba(0, 43, 42, 0.08);
 }
 
-body[data-page-type="blog-post"] .blog-related-card-empty {
-  display: none;
-}
-
 body[data-page-type="blog-post"] .blog-service-links {
   margin-top: 0.25rem;
   padding: clamp(1.25rem, 2vw, 1.75rem);

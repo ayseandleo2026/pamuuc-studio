@@ -230,9 +230,26 @@ function writeRobots() {
   );
 }
 
+// Articles carry their own modified date, so a blanket LASTMOD would report every
+// post as freshly updated on each deploy. Prefer the date the page itself declares.
+function lastmodForRoute(route) {
+  const file = routeToFile(route);
+  if (!fs.existsSync(file)) return LASTMOD;
+
+  const html = fs.readFileSync(file, "utf8");
+  const modified = html.match(
+    /<meta\b(?=[^>]*\bproperty=["']article:modified_time["'])[^>]*\bcontent=["'](\d{4}-\d{2}-\d{2})/,
+  );
+
+  return modified?.[1] ?? LASTMOD;
+}
+
 function writeSitemap() {
   const urls = indexableRoutes
-    .map((route) => `  <url><loc>${BASE_URL}${route}</loc><lastmod>${LASTMOD}</lastmod></url>`)
+    .map(
+      (route) =>
+        `  <url><loc>${BASE_URL}${route}</loc><lastmod>${lastmodForRoute(route)}</lastmod></url>`,
+    )
     .join("\n");
 
   fs.writeFileSync(
