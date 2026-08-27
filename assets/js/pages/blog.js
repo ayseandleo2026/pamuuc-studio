@@ -11,7 +11,8 @@
     en: { card: "Cover image coming soon", article: "Article image coming soon" },
     fr: { card: "Image de couverture à venir", article: "Image d’article à venir" },
     it: { card: "Immagine di copertina in arrivo", article: "Immagine articolo in arrivo" },
-    es: { card: "Imagen de portada próximamente", article: "Imagen del artículo próximamente" }
+    es: { card: "Imagen de portada próximamente", article: "Imagen del artículo próximamente" },
+    de: { card: "Titelbild folgt in Kürze", article: "Artikelbild folgt in Kürze" }
   };
   const language = body.dataset.language || document.documentElement.lang || "en";
   const copy = placeholderCopy[language] || placeholderCopy.en;
