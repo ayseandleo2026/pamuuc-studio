@@ -295,16 +295,93 @@ ${cols.map((c) => `<div><h2>${esc(c.title)}</h2><ul>${c.links.map((l) => `<li><a
 </html>`;
 }
 
-/* ── blocks renderer (shared by disclosures and legal) ───────────────────── */
+/* ── detail bodies ───────────────────────────────────────────────────────
+   The source content is a flat run of <p> elements: labels, key/value lines
+   and prose all look the same. These rules recover the structure from shape
+   alone, so they hold in all five languages:
+     · a short line with no sentence punctuation, or one followed by a list,
+       is a label
+     · "Something: short value" is a key/value row, and consecutive rows are
+       grouped into one definition list
+     · everything else is prose                                              */
+const NORM = (s = '') => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]/g, '');
+const KV = /^([^:]{2,42}):\s*(.{1,90})$/;
+const SENTENCE = /[.!?]/;
+const isShort = (v) => v.length <= 56 && !SENTENCE.test(v);
+/* Source labels arrive in mixed case: some SHOUTED, some sentence case.
+   Normalise the shouted ones so a panel reads as one voice. */
+const delabel = (v) => {
+  const t = v.replace(/\s*:\s*$/, '').trim();
+  if (t.length > 3 && t === t.toUpperCase() && /\p{Lu}{3}/u.test(t)) {
+    const lower = t.toLocaleLowerCase();
+    return lower.charAt(0).toLocaleUpperCase() + lower.slice(1);
+  }
+  return t;
+};
+
+function structure(blocks) {
+  const items = blocks.map((b) => {
+    if (b.t === 'h') return { k: 'label', v: b.v };
+    if (b.t === 'ul') return { k: 'ul', v: b.v };
+    const kv = b.v.match(KV);
+    if (kv && !SENTENCE.test(kv[2])) return { k: 'kv', v: [kv[1].trim(), kv[2].trim()] };
+    return { k: isShort(b.v) ? 'short' : 'p', v: b.v };
+  });
+
+  const out = [];
+  for (let i = 0; i < items.length; i++) {
+    const it = items[i];
+    if (it.k === 'kv') {
+      const rows = [];
+      while (i < items.length && items[i].k === 'kv') rows.push(items[i++].v);
+      i--;
+      out.push({ t: 'kv', rows });
+    } else if (it.k === 'short') {
+      let j = i;
+      while (j + 1 < items.length && items[j + 1].k === 'short') j++;
+      const run = items.slice(i, j + 1);
+      /* A label followed by two or more short lines is a list that lost its
+         markup in the source; one or two short lines are headings. */
+      if (run.length >= 3) {
+        out.push({ t: 'label', v: delabel(run[0].v) });
+        out.push({ t: 'ul', v: run.slice(1).map((r) => r.v) });
+      } else {
+        run.forEach((r) => out.push({ t: 'label', v: delabel(r.v) }));
+      }
+      i = j;
+    } else if (it.k === 'label') {
+      out.push({ t: 'label', v: delabel(it.v) });
+    } else {
+      out.push({ t: it.k, v: it.v });
+    }
+  }
+  return out;
+}
+
 function renderBlocks(blocks) {
-  return blocks.map((b) => {
-    if (b.t === 'h') return `<h4>${esc(b.v)}</h4>`;
-    if (b.t === 'ul') return `<ul>${b.v.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
+  return structure(blocks).map((b) => {
+    if (b.t === 'label') return `<h4>${esc(b.v)}</h4>`;
+    if (b.t === 'kv') {
+      const wide = b.rows.some(([, v]) => v.length > 40);
+      return `<dl class="kv${wide ? ' kv--wide' : ''}">${b.rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
+    }
+    if (b.t === 'ul') return `<ul${b.v.length >= 4 ? ' class="cols"' : ''}>${b.v.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>`;
     return `<p>${esc(b.v)}</p>`;
   }).join('\n');
 }
-const disclosure = (loc, blocks) => !blocks?.length ? '' :
-  `<details class="more"><summary>${esc(S(loc).detail)}</summary><div class="more__body">${renderBlocks(blocks)}</div></details>`;
+
+/** Drops a leading heading that only repeats the card it sits under. */
+function trimEcho(blocks, heading) {
+  if (!blocks?.length || blocks[0].t !== 'h' || !heading) return blocks;
+  const a = NORM(blocks[0].v), b = NORM(heading);
+  return a && b && (a.includes(b) || b.includes(a)) ? blocks.slice(1) : blocks;
+}
+
+const disclosure = (loc, blocks, heading) => {
+  const body = trimEcho(blocks, heading);
+  return !body?.length ? '' :
+    `<details class="more"><summary>${esc(S(loc).detail)}</summary><div class="more__body detail">${renderBlocks(body)}</div></details>`;
+};
 
 
 /* ── cover images ────────────────────────────────────────────────────────
@@ -447,7 +524,7 @@ ${h.hero.proofs.map((p) => `<div class="proof"><strong>${esc(p.label)}</strong><
 <h3 class="h3">${esc(h.services.card.h3)}</h3>
 <p class="muted">${esc(h.services.card.p)}</p>
 <ul>${h.services.card.features.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
-${disclosure(loc, h.detail['service-custom'])}
+${disclosure(loc, h.detail['service-custom'], h.services.card.h3)}
 </div>
 </div></section>
 
@@ -469,7 +546,7 @@ ${h.sectors.items.map((s, i) => {
 <p class="sector__desc">${esc(sectorLead(key))}</p>
 <span class="sector__chev" aria-hidden="true"></span>
 </summary>
-<div class="sector__detail">${renderBlocks(detail.slice(1))}</div>
+<div class="sector__detail detail">${renderBlocks(detail.slice(1))}</div>
 </details>
 </li>`;
 }).join('\n')}
@@ -509,7 +586,7 @@ ${h.process.phases.map((p, i) => `<article class="card">
 <h3 class="h3">${esc(p.h3)}</h3>
 <p class="muted">${esc(p.desc)}</p>
 <ul>${p.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-${disclosure(loc, h.detail['phase-' + (i + 1)])}
+${disclosure(loc, h.detail['phase-' + (i + 1)], p.h3)}
 </article>`).join('\n')}
 </div>
 <h3 class="eyebrow eyebrow--muted section__sub">${esc(h.process.statsLabel)}</h3>
@@ -543,7 +620,7 @@ ${h.parameters.groups.map((g) => `<article class="param">
 <h3 class="h3">${esc(g.h3)}</h3>
 ${g.notes.filter((n) => n.head || n.body).map((n) => `<div class="param__note">${n.head ? `<strong>${esc(n.head)}</strong>` : ''}<span>${esc(n.body)}</span></div>`).join('\n')}
 ${g.items.length ? `<ul class="ticks">${g.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : ''}
-${disclosure(loc, h.detail[g.modal])}
+${disclosure(loc, h.detail[g.modal], g.h3)}
 </article>`).join('\n')}
 </div>
 </div></section>
