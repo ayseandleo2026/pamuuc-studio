@@ -57,6 +57,13 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
+    "hotelideas": {
+      "en": "hotel-uniform-design-ideas",
+      "es": "ideas-diseno-uniformes-hotel",
+      "fr": "idees-design-uniformes-hotel",
+      "it": "idee-design-divise-hotel",
+      "de": "hoteluniformen-design-ideen"
+    },
     "hoteldesign": {
       "en": "how-to-design-hotel-uniforms",
       "es": "como-disenar-uniformes-de-hotel",
@@ -87,6 +94,7 @@
     }
   },
   "postOrder": [
+    "hotelideas",
     "hoteldesign",
     "hospitality",
     "dental",
