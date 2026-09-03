@@ -57,6 +57,13 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
+    "hotelfabrics": {
+      "en": "hotel-uniform-fabric-guide",
+      "es": "guia-tejidos-uniformes-hotel",
+      "fr": "guide-tissus-uniformes-hotel",
+      "it": "guida-tessuti-divise-hotel",
+      "de": "hoteluniformen-stoffe-ratgeber"
+    },
     "hotelideas": {
       "en": "hotel-uniform-design-ideas",
       "es": "ideas-diseno-uniformes-hotel",
@@ -94,6 +101,7 @@
     }
   },
   "postOrder": [
+    "hotelfabrics",
     "hotelideas",
     "hoteldesign",
     "hospitality",
