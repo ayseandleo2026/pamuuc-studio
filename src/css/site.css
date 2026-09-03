@@ -558,30 +558,50 @@ a.project:hover .project__link::after{transform:translateX(3px)}
   .lang__menu a{min-height:2.75rem;display:flex;align-items:center}
 }
 
-/* ── mobile section accordion ────────────────────────────────────────────
-   Collapsed in CSS under the mobile query only, so the state is right at
-   first paint and there is no layout shift. Desktop never hides anything:
-   the control is display:none and the body has no rule against it. The
-   body stays in the HTML at both widths — this hides nothing from a
-   crawler that a reader is not also shown. */
+/* ── section tabs ────────────────────────────────────────────────────────
+   Mobile: each section is a bordered tab. The kicker and heading are the
+   tab face; the lead and the whole body fold inside. Desktop: the tab is
+   inert and the grid restores the two-column head used site-wide.
+   Collapsed in CSS only, so the state is right at first paint, there is no
+   layout shift, and it works with JavaScript off. Nothing leaves the HTML
+   at either width. */
 .sec-acc__cb{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
-.sec-acc__btn{display:none}
+.sec-acc__chev{display:none}
+
+/* desktop: rebuild the two-column head, tab chrome off */
+@media (min-width:901px){
+  .sec-acc{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);
+    column-gap:clamp(1.5rem,4vw,4rem)}
+  .sec-acc__tab{grid-column:1;grid-row:1;display:block}
+  .sec-acc__lead{grid-column:2;grid-row:1;align-self:end;max-width:none;padding-top:.55rem;
+    font-size:clamp(1rem,.96rem + .18vw,1.12rem)}
+  .sec-acc__body{grid-column:1/-1;grid-row:2;margin-top:clamp(1.75rem,3.5vw,2.75rem)}
+  .sec-acc__title{max-width:none}
+}
 
 @media (max-width:900px){
+  /* the tab edge is the control boundary, so it needs 3:1 against the fill
+     in both schemes — var(--line-strong) only reached 1.95:1 in dark */
+  .sec-acc{border:1px solid color-mix(in srgb,var(--deep) 56%,transparent);
+    border-radius:var(--radius);background:var(--surface);overflow:hidden}
+  .sec-acc__tab{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;
+    gap:.35rem .9rem;cursor:pointer;padding:clamp(1rem,3.5vw,1.3rem) clamp(1rem,4vw,1.25rem)}
+  .sec-acc__kicker{grid-column:1;margin:0}
+  .sec-acc__title{grid-column:1;margin:0;max-width:none;
+    font-size:clamp(1.25rem,1.1rem + 1.1vw,1.6rem);line-height:1.18}
+  .sec-acc__chev{display:block;grid-column:2;grid-row:1/span 2;width:.62rem;height:.62rem;
+    border-right:1.5px solid var(--muted);border-bottom:1.5px solid var(--muted);
+    transform:rotate(45deg);margin-top:-.3rem;transition:transform .18s ease}
+  .sec-acc__cb:checked ~ .sec-acc__tab .sec-acc__chev{transform:rotate(-135deg);margin-top:.24rem}
+  .sec-acc__cb:focus-visible ~ .sec-acc__tab{outline:2px solid var(--accent);outline-offset:-2px}
+  .sec-acc__tab:hover .sec-acc__title{color:var(--accent)}
+  .sec-acc__cb:not(:checked) ~ .sec-acc__lead,
   .sec-acc__cb:not(:checked) ~ .sec-acc__body{display:none}
-  .sec-acc__btn{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
-    margin-top:1.1rem;min-height:2.75rem;padding:.6rem 1.15rem;border:1px solid var(--line-strong);
-    border-radius:999px;background:var(--surface);color:var(--ink);font-size:var(--step--1)}
-  .sec-acc__btn::after{content:"";width:.5rem;height:.5rem;border-right:1px solid currentColor;
-    border-bottom:1px solid currentColor;transform:rotate(45deg);margin-top:-.25rem}
-  .sec-acc__cb:checked ~ .sec-acc__btn::after{transform:rotate(-135deg);margin-top:.2rem}
-  .sec-acc__btn:hover{border-color:var(--accent);color:var(--accent)}
-  .sec-acc__btn .is-less{display:none}
-  .sec-acc__cb:checked ~ .sec-acc__btn .is-more{display:none}
-  .sec-acc__cb:checked ~ .sec-acc__btn .is-less{display:inline}
-  .sec-acc__cb:focus-visible ~ .sec-acc__btn{outline:2px solid var(--accent);outline-offset:2px}
-  .sec-acc__body{margin-top:1.4rem}
-  /* a collapsed section is a heading and a button; it does not need the
-     full section rhythm around it */
-  .section:has(.sec-acc__cb:not(:checked)){padding-block:clamp(2rem,5vw,2.75rem)}
+  .sec-acc__lead{margin:0;padding:0 clamp(1rem,4vw,1.25rem)}
+  .sec-acc__body{padding:0 clamp(1rem,4vw,1.25rem) clamp(1.3rem,4vw,1.6rem);
+    margin-top:clamp(1rem,3vw,1.3rem)}
+  .sec-acc__cb:checked ~ .sec-acc__tab{border-bottom:1px solid var(--line)}
+  /* the tab carries its own frame; the section only needs rhythm between tabs */
+  .section:has(.sec-acc){padding-block:clamp(.6rem,2.5vw,1rem)}
+  .section--alt:has(.sec-acc){background:none}
 }
