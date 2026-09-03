@@ -22,7 +22,7 @@
   "about": ["Uniformes d’hôtel", "Tissus professionnels", "Spécification textile"]
 }
 ---
-Un bon guide des tissus pour uniformes d’hôtel part du service, du climat et du circuit d’entretien, pas d’une fibre favorite. Le résultat attendu n’est pas un tissu universel, mais une sélection par métier que le fournisseur, la blanchisserie et l’équipe de l’hôtel peuvent examiner à partir du même cahier des charges.
+Un bon guide des tissus pour uniformes d’hôtel part du service, du climat et du circuit d’entretien, pas d’une fibre de prédilection. Le résultat attendu n’est pas un tissu universel, mais une sélection par métier que le fournisseur, la blanchisserie et l’équipe de l’hôtel peuvent examiner à partir du même cahier des charges.
 
 ## Commencez par la blanchisserie : entretien domestique, commercial ou industriel ?
 
@@ -64,7 +64,7 @@ La composition en fibres reste importante, mais elle ne répond pas seule à ces
 
 ## Demandez des preuves sur la couleur, les dimensions, l’abrasion et les coutures
 
-Ne laissez pas une valeur d’essai séduisante représenter tout le vêtement. Chaque question appelle une preuve distincte. L’[ISO 105-C06](https://www.iso.org/standard/51276.html) traite de la solidité des coloris selon des méthodes définies de lavage domestique et commercial, tandis que l’[ISO 5077](https://www.iso.org/standard/41877.html) porte sur la variation des dimensions après des méthodes spécifiées de lavage et de séchage.
+Ne laissez pas une seule valeur d’essai représenter tout le vêtement. Chaque question appelle une preuve distincte. L’[ISO 105-C06](https://www.iso.org/standard/51276.html) traite de la solidité des coloris selon des méthodes définies de lavage domestique et commercial, tandis que l’[ISO 5077](https://www.iso.org/standard/41877.html) porte sur la variation des dimensions après des méthodes spécifiées de lavage et de séchage.
 
 L’abrasion et la tenue des coutures constituent encore deux sujets différents. L’[ISO 12947-2](https://www.iso.org/standard/61058.html) définit une méthode Martindale permettant de déterminer la rupture d’une éprouvette pour les tissus concernés. L’[ISO 13935-1](https://www.iso.org/standard/60678.html) mesure la force maximale avant rupture d’une couture droite par la méthode sur bande. Aucun de ces résultats ne prédit, à lui seul, la durée de service d’un uniforme d’hôtel fini.
 
@@ -76,12 +76,12 @@ Faites suivre la même séquence à une veste d’accueil, une chemise de servic
 
 La veste d’accueil peut placer structure, reprise et finition en tête du cahier des charges tout en exigeant une aisance suffisante au comptoir. La chemise de restaurant peut accorder davantage de poids à la circulation de l’air, aux gestes rapides, aux taches et au délai de remise en service. Le pantalon d’étage peut privilégier l’aisance en flexion, la tension aux poches, les frottements, l’opacité et la compatibilité avec le programme réel de lavage.
 
-L’exercice doit faire apparaître des priorités différentes, pas des fibres gagnantes décidées à l’avance. Si un candidat figure dans les trois sélections, demandez-lui de répondre séparément à chaque métier. Standardiser un tissu peut simplifier le vestiaire, mais la commodité ne constitue pas une preuve d’adéquation.
+L’exercice doit faire apparaître des priorités différentes, pas désigner à l’avance une fibre gagnante. Si un candidat figure dans les trois sélections, il doit répondre séparément aux exigences de chaque métier. Standardiser un tissu peut simplifier le vestiaire, mais la commodité ne constitue pas une preuve d’adéquation.
 
-## Émettez le cahier des charges textile pour validation commune
+## Soumettez le cahier des charges textile à une validation commune
 
-Rassemblez la décision dans un document lisible par les opérations, la blanchisserie, le designer et le fournisseur. Pour chaque vêtement, consignez métier, environnement, mouvements, rythme de port, exposition aux salissures, entretien, allure attendue, toucher, poids, armure, élasticité, reprise, séchage, opacité et preuves encore nécessaires.
+Rassemblez la décision dans un document lisible par les équipes opérationnelles, la blanchisserie, l’équipe de création et le fournisseur. Pour chaque vêtement, consignez métier, environnement, mouvements, rythme de port, exposition aux salissures, entretien, allure attendue, toucher, poids, armure, élasticité, reprise, séchage, opacité et preuves encore nécessaires.
 
-Attribuez chaque validation. Les opérations décrivent le service ; la blanchisserie confirme le processus ; le fournisseur identifie l’étoffe proposée et les rapports associés ; l’équipe de design relie ces faits au patronage, à la construction et à la cohérence du vestiaire. Les inconnues doivent rester visibles jusqu’à ce qu’un échantillon ou un essai les résolve.
+Attribuez chaque validation. Les équipes opérationnelles décrivent le service ; la blanchisserie confirme le processus ; le fournisseur identifie l’étoffe proposée et les rapports associés ; l’équipe de création relie ces faits au patronage, à la construction et à la cohérence du vestiaire. Les inconnues doivent rester visibles jusqu’à ce qu’un échantillon ou un essai les résolve.
 
 Utilisez le guide [comment concevoir des uniformes d’hôtel](/fr/blog/comment-concevoir-uniformes-hotellerie/) pour relier le cahier des charges textile au parcours client et au système de métiers. Consultez ensuite le [processus de design de Pamuuc](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) afin de transformer l’exercice des trois vêtements en une sélection par métier prête pour les échantillons et la validation commune.

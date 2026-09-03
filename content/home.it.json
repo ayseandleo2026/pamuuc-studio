@@ -1,8 +1,10 @@
 {
   "locale": "it",
   "meta": {
-    "title": "Divise su misura per l’ospitalità | Pamuuc Studios",
-    "description": "Divise su misura per ospitalità, sanità e team di servizio, sviluppate e prodotte a Barcellona. Da 10 pezzi per modello, circa 8 settimane."
+    "title": "Studio di divise su misura a Barcellona | Pamuuc Studios",
+    "description": "Progettazione e produzione di divise su misura per hotel, ristoranti, spazi benessere e cliniche. Prodotte a Barcellona, da 10 pezzi per modello.",
+    "ogTitle": "Studio di divise su misura a Barcellona | Pamuuc Studios",
+    "ogDescription": "Sistemi di divise su misura per hotel, ristoranti, spazi benessere, cliniche e attività a contatto con il pubblico: dalla progettazione e dalle prove alla produzione e ai riordini."
   },
   "nav": [
     {
@@ -22,129 +24,164 @@
       "href": "/it/blog/"
     },
     {
-      "label": "Prenota un appuntamento",
+      "label": "Parlaci del tuo progetto",
       "href": "/it/#contact"
     }
   ],
   "hero": {
-    "eyebrow": "STUDIO DI DESIGN E PRODUZIONE DI UNIFORMI PERSONALIZZATE",
-    "h1": "Uniformi su misura resistenti per team esigenti di hotellerie, sanità e servizio",
-    "lead": "Pensate per lavaggi frequenti, turni lunghi e continuità operativa, portando l’atmosfera dello spazio in ogni capo.",
+    "eyebrow": "PROGETTAZIONE E PRODUZIONE DI DIVISE SU MISURA · BARCELLONA",
+    "h1": "Divise su misura per hotel, ristoranti, spazi benessere e cliniche private",
+    "lead": "Progettiamo e produciamo sistemi di divise su misura intorno al tuo marchio, ai ruoli del personale e al lavoro quotidiano: dal primo briefing e dalle prove alla produzione e ai riordini futuri.",
     "pills": [
-      "Uniformi personalizzate",
-      "Funzionalita elegante",
-      "Controllo diretto e strategico della produzione locale",
-      "Riassortimenti puntuali e garantiti"
+      "Progettate per il tuo marchio",
+      "Sviluppate per ruolo",
+      "Prodotte a Barcellona",
+      "Pronte per i riordini"
     ],
-    "primary": "Richiedi un primo incontro",
-    "secondary": "Vedi progetti recenti",
+    "primary": "Parlaci del tuo progetto di divise",
+    "secondary": "Scopri i progetti selezionati",
+    "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati Pamuuc Studios a Barcellona",
     "proofs": [
       {
-        "label": "Fase iniziale",
-        "text": "Sviluppo e prima produzione progettati per uno spazio specifico"
+        "label": "Primo progetto",
+        "text": "Progettazione, campioni, prove e produzione sviluppati per il tuo spazio e il tuo personale."
       },
       {
-        "label": "Continuità operativa",
-        "text": "Un guardaroba validato, sempre disponibile per riordini puntuali in base alle esigenze"
+        "label": "Ordini futuri",
+        "text": "Cartamodelli e specifiche approvati, pronti per riordini coerenti."
       }
     ]
   },
   "services": {
-    "kicker": "SERVIZI",
-    "h2": "Un’offerta studio chiara centrata sulle uniformi su misura",
-    "intro": "Lo studio è focalizzato sul design e sulla produzione di uniformi completamente su misura per ospitalità, settore sanitario e team di servizio.",
+    "kicker": "COSA FACCIAMO",
+    "h2": "Un servizio completo di divise su misura, non un catalogo",
+    "intro": "Pamuuc Studios progetta, sviluppa e produce divise su misura per ospitalità, benessere, sanità e attività a contatto con il pubblico. Ogni progetto nasce dall’organizzazione, dalle persone che indosseranno i capi e dal lavoro che svolgono.",
     "card": {
-      "topline": "SERVIZIO STUDIO",
-      "h3": "Uniformi personalizzate",
-      "p": "Sviluppate su base progettuale per rispondere con precisione a ruoli operativi, esigenze di movimento, resistenza nel tempo e allineamento con l’identità del brand.",
+      "topline": "PROGETTAZIONE, SVILUPPO E PRODUZIONE",
+      "h3": "Sistemi di divise su misura",
+      "p": "Un guardaroba professionale coordinato, progettato intorno al tuo spazio, al marchio, ai ruoli, al movimento, alle esigenze di manutenzione e alla crescita futura del personale.",
       "features": [
-        "Definizione dei capi in base a funzione, contesto d’uso e performance",
-        "Selezione e coordinamento di materiali, dettagli costruttivi, branding e filiera produttiva",
-        "Progettazione orientata alla continuità, con riordini efficienti e crescita progressiva del personale"
+        "Capi pianificati per ogni ruolo e ambiente di lavoro",
+        "Tessuti, vestibilità, costruzione, colori e identità sviluppati insieme",
+        "Cartamodelli e specifiche preparati per riordini coerenti"
       ]
     }
   },
   "band": {
-    "text": "Dove l’abbigliamento diventa esperienza",
+    "text": "Divise che funzionano per il marchio, il personale e il turno",
     "points": [
-      "In armonia con l’identità e l’estetica dello spazio",
-      "Definito in funzione dei flussi operativi quotidiani",
-      "Prodotto localmente a Barcellona",
-      "Progettato per un utilizzo intensivo e lavaggi frequenti",
-      "Sviluppato come sistema guardaroba coerente e integrato",
-      "Pensato per garantire continuità nel tempo"
-    ]
+      "Riflettono lo spazio e l’identità",
+      "Assecondano movimenti e attività reali",
+      "Prodotte localmente a Barcellona",
+      "Pensate per l’uso e i lavaggi ripetuti",
+      "Collegano ruoli diversi in un unico guardaroba",
+      "Restano coerenti a ogni riordino"
+    ],
+    "kicker": "Lavori consegnati",
+    "stats": [
+      {
+        "v": "1000+",
+        "l": "capi per diverse strutture a 5 stelle"
+      },
+      {
+        "v": "20+",
+        "l": "ruoli in un unico sistema di guardaroba"
+      },
+      {
+        "v": "12 mesi",
+        "l": "di servizio quotidiano e lavaggio industriale"
+      },
+      {
+        "v": "100%",
+        "l": "disegnati e prodotti a Barcellona"
+      }
+    ],
+    "img": "/assets/images/home/band-workshop.jpg",
+    "alt": "L’atelier Pamuuc Studios a Barcellona: appendiabiti, pressa e tavolo da taglio"
   },
   "sectors": {
-    "kicker": "A CHI SI RIVOLGE",
-    "h2": "Pensato per sei contesti operativi",
-    "intro": "Seleziona un settore per esplorare capi rappresentativi, contesti applicativi e il ruolo dell’abbigliamento nell’esperienza quotidiana",
+    "kicker": "CON CHI LAVORIAMO",
+    "h2": "Sei ambienti per cui progettiamo",
+    "intro": "Ogni scheda presenta i ruoli, i capi e le priorità di quell’ambiente.",
     "items": [
       {
-        "name": "Hotellerie",
+        "name": "Hotel e ospitalità",
         "modal": "modal-sector-hotels",
-        "desc": "Sistemi di uniformi per team complessi e ambienti articolati"
+        "desc": "Un guardaroba coordinato per accoglienza, concierge, ristorazione, reparto piani, spa e direzione.",
+        "img": "/assets/images/home/sector-01-hotels.jpg",
+        "alt": "Corridoio d’albergo, una mano sulla porta di una camera"
       },
       {
         "name": "Ristorazione",
         "modal": "modal-sector-restaurants",
-        "desc": "Uniformi pensate per ambienti dinamici"
+        "desc": "Divise per sala, bar, cucina e direzione in ambienti di servizio dinamici.",
+        "img": "/assets/images/home/sector-02-restaurants.jpg",
+        "alt": "Servizio al tavolo, un piatto rifinito a mano"
       },
       {
-        "name": "Benessere",
+        "name": "Spa e benessere",
         "modal": "modal-sector-wellness",
-        "desc": "Capi progettati per ambienti dedicati alla comodità"
+        "desc": "Divise sobrie e funzionali per accoglienza, trattamenti e ruoli di supporto.",
+        "img": "/assets/images/home/sector-03-wellness.jpg",
+        "alt": "Interno per trattamenti in toni neutri e caldi"
       },
       {
-        "name": "Ambito sanitario",
+        "name": "Studi dentistici e cliniche private",
         "modal": "modal-sector-medical",
-        "desc": "Uniformi professionali per ambienti sanitari"
+        "desc": "Un’alternativa professionale all’abbigliamento clinico generico per i team di accoglienza e trattamento.",
+        "img": "/assets/images/home/sector-04-clinics.jpg",
+        "alt": "Sala trattamenti di una clinica privata"
       },
       {
-        "name": "Personale di servizio",
+        "name": "Squadre operative",
         "modal": "modal-sector-service",
-        "desc": "Capi resistenti per ruoli operativi"
+        "desc": "Capi resistenti per manutenzione, logistica, supporto e altri ruoli pratici.",
+        "img": "/assets/images/home/sector-05-service.jpg",
+        "alt": "Grembiule per le aree operative e abbigliamento tecnico da lavoro"
       },
       {
-        "name": "Servizi dedicati agli ospiti",
+        "name": "Ruoli a contatto con il pubblico",
         "modal": "modal-sector-guest",
-        "desc": "Capi per ruoli a diretto contatto con il pubblico"
+        "desc": "Divise su misura per chi accoglie, orienta e rappresenta l’attività.",
+        "img": "/assets/images/home/sector-06-guest.jpg",
+        "alt": "Banco di accoglienza dell’hotel con il personale"
       }
-    ]
+    ],
+    "handoff": "Non sai quale ambiente ti rappresenta? Parlaci del tuo personale"
   },
   "approach": {
     "kicker": "COME PROGETTIAMO",
-    "intro": "Un approccio progettuale che nasce dallo spazio e si traduce in uniformi pensate per il personale e per l’esperienza.",
+    "intro": "Partiamo dal tuo spazio, poi progettiamo per le persone che vi lavorano",
     "cards": [
       {
         "n": "01",
         "h3": "Spazio",
-        "p": "Architettura, materiali, luce e atmosfera definiscono la direzione; un interno caldo può tradursi in texture più morbide, toni misurati e silhouette più essenziali."
+        "p": "Architettura, materiali, colore, luce e atmosfera definiscono la direzione visiva."
       },
       {
         "n": "02",
         "h3": "Ruoli",
-        "p": "Ogni funzione viene letta attraverso movimento, ritmo e strumenti; reception, sala e ruoli clinici richiedono vestibilità, tasche e presenza visiva differenti."
+        "p": "Analizziamo movimento, ritmo del servizio, strumenti, visibilità ed esigenze di cura per ogni ruolo."
       },
       {
         "n": "03",
         "h3": "Capi",
-        "p": "Vestibilità, silhouette e categorie vengono organizzate come un sistema di guardaroba, da camicie e grembiuli a sovracamicie, pantaloni e capispalla."
+        "p": "Vestibilità, silhouette, sovrapposizioni e categorie di capi confluiscono in un unico guardaroba."
       },
       {
         "n": "04",
         "h3": "Operatività",
-        "p": "La costruzione risponde alla routine reale: lavaggi frequenti, turni lunghi, riordino semplice e continuità coerente nel tempo."
+        "p": "Costruzione, lavaggio, sostituzioni e riordini vengono pianificati fin dall’inizio."
       }
     ]
   },
   "categories": {
     "kicker": "COSA POSSIAMO SVILUPPARE",
-    "h2": "Un sistema produttivo definito, pensato per la complessità dei contesti reali",
-    "intro": "Scalabile per realtà con più ruoli e progettato per mantenere coerenza, funzionalità ed efficienza in ogni fase della produzione.",
+    "h2": "Un unico guardaroba, dai capi essenziali al minimo dettaglio",
+    "intro": "Possiamo creare un guardaroba completo per più ruoli o iniziare da un reparto, un ruolo o una categoria di capi. Ogni decisione viene coordinata prima della produzione.",
     "groups": [
       {
-        "label": "CATEGORIE DI CAPI",
+        "label": "Categorie di capi",
         "items": [
           "Camicie",
           "Pantaloni",
@@ -153,14 +190,14 @@
           "Grembiuli professionali",
           "Maglieria",
           "Polo e T-shirt",
-          "Blazers",
+          "Blazer",
           "Giacche",
           "Capi spalla",
           "Accessori coordinati"
         ]
       },
       {
-        "label": "BRANDING E IDENTITÀ",
+        "label": "Marchio e identità",
         "items": [
           "Ricamo",
           "Ricamo tono su tono",
@@ -168,14 +205,14 @@
           "Etichette stampate",
           "Etichette nominali",
           "Finiture personalizzate",
-          "Bottoni brandizzati",
+          "Bottoni personalizzati",
           "Serigrafia"
         ]
       },
       {
-        "label": "COSTRUZIONE TECNICA",
+        "label": "Costruzione e prestazioni",
         "items": [
-          "Capi progettati per il lavaggio frequente",
+          "Tessuti selezionati per il ciclo di lavaggio previsto",
           "Costruzioni elasticizzate",
           "Cuciture rinforzate",
           "Tessuti traspiranti",
@@ -189,120 +226,128 @@
   },
   "process": {
     "kicker": "PROCESSO",
-    "h2": "Un percorso in tre fasi, dalla direzione progettuale alla consegna finale",
-    "intro": "Ogni fase è strutturata per definire obiettivi, guidare le attività e generare risultati concreti, contribuendo al successo complessivo del progetto.",
+    "h2": "Tre fasi dal brief alla consegna",
+    "intro": "Ogni fase si chiude con una decisione e un’approvazione prima che inizi la successiva.",
     "phases": [
       {
-        "tag": "- FASE 01",
+        "tag": "FASE 01",
         "h3": "Scoperta",
-        "desc": "Definiamo con precisione il progetto prima di avviare lo sviluppo",
+        "desc": "Definiamo ciò di cui il team ha bisogno prima di iniziare lo sviluppo dei capi.",
         "items": [
-          "Analisi delle dinamiche operative",
-          "Mappatura dei ruoli e delle esigenze funzionali",
-          "Definizione della direzione iniziale del prodotto"
+          "Analisi del team e delle attività",
+          "Mappatura dei ruoli",
+          "Direzione iniziale del guardaroba"
         ],
-        "modal": "modal-phase-1"
+        "modal": "modal-phase-1",
+        "img": "/assets/images/home/process-01-sketches.jpg",
+        "alt": "Schizzi di design con campioni di tessuto sul tavolo da modellista"
       },
       {
-        "tag": "- FASE 02",
+        "tag": "FASE 02",
         "h3": "Sviluppo",
-        "desc": "Testiamo, perfezioniamo e prepariamo il prodotto per la produzione",
+        "desc": "Trasformiamo la direzione approvata in capi e mettiamo alla prova le decisioni più importanti.",
         "items": [
-          "Validazione dei materiali e dei tessuti",
-          "Sviluppo prototipi, campionatura e fitting",
-          "Cicli di revisione e ottimizzazione"
+          "Validazione di tessuti e materiali",
+          "Prototipi, campioni e prove",
+          "Revisione e perfezionamento"
         ],
-        "modal": "modal-phase-2"
+        "modal": "modal-phase-2",
+        "img": "/assets/images/home/process-02-fitting.jpg",
+        "alt": "Una giacca imbastita sul manichino durante la prova"
       },
       {
-        "tag": "- FASE 03",
+        "tag": "FASE 03",
         "h3": "Produzione",
-        "desc": "Dall’approvazione finale alla realizzazione e consegna",
+        "desc": "Dopo l’approvazione produciamo, prepariamo e consegniamo i capi definitivi.",
         "items": [
           "Approvazione pre-produzione",
           "Produzione locale",
           "Consegna e impostazione dei riassortimenti"
         ],
-        "modal": "modal-phase-3"
+        "modal": "modal-phase-3",
+        "img": "/assets/images/home/process-03-production.jpg",
+        "alt": "Il reparto produzione durante una serie"
       }
     ],
     "statsLabel": "Tempistiche indicative",
     "stats": [
       {
         "v": "4–6 settimane",
-        "l": "Finestra tipica di sviluppo"
+        "l": "Tempistica tipica di sviluppo"
       },
       {
         "v": "3–5 settimane",
-        "l": "Finestra tipica di produzione"
+        "l": "Tempistica tipica di produzione"
       },
       {
         "v": "Circa 8 settimane",
-        "l": "Tempistica media per un progetto completamente su misura"
+        "l": "Tempistica indicativa per molti progetti completamente su misura"
       },
       {
-        "v": "Tempistiche ridotte",
-        "l": "In presenza di basi progettuali già consolidate o esigenze specifiche"
+        "v": "Sono possibili tempistiche più brevi",
+        "l": "Quando una base già sviluppata e approvata è adatta al brief"
       }
-    ]
+    ],
+    "note": "Il calendario definitivo dipende dal numero di modelli, dalla disponibilità dei tessuti, dalle prove, dai cicli di revisione, dalla costruzione, dalle quantità e dai tempi di approvazione.",
+    "handoff": "Metti una data sul tuo progetto"
   },
   "personalised": {
-    "kicker": "LA PERSONALIZZAZIONE",
-    "h2": "Opzioni chiare, decisioni progettuali concrete",
-    "intro": "Le sezioni seguenti illustrano come gestiamo la personalizzazione in modo strutturato, dalla selezione dei materiali fino alla definizione dei dettagli tecnici e produttivi.",
+    "kicker": "PERSONALIZZAZIONE",
+    "h2": "Ogni opzione risponde all’uso, alla cura e all’identità",
+    "intro": "Consigliamo tessuti, colori, finiture e metodi di personalizzazione in base al ruolo, alle esigenze di manutenzione, alla direzione visiva, alla quantità e al budget.",
     "accordions": [
       {
         "q": "Tessuti",
-        "p": "La selezione dei tessuti viene definita in base alla durata dei turni, alle condizioni climatiche, al livello di movimento e alle esigenze di manutenzione.",
+        "p": "La scelta del tessuto parte dal turno: clima, movimento, contatto, aspetto e ciclo di lavaggio previsto.",
         "items": [
-          "Esempi: mischie di cotone, mischie di lino, tessuti tecnici a facile manutenzione",
-          "Criteri principali: Comodità, durabilità, resa estetica e stabilità nel tempo e ai lavaggi"
+          "Esempi: misti cotone, misti lino e tessuti tecnici facili da trattare, in base al ruolo e ai requisiti confermati.",
+          "Criteri di selezione: comfort, durata, aspetto, manutenzione e stabilità dopo uso e lavaggi ripetuti."
         ]
       },
       {
         "q": "Colori",
-        "p": "La direzione cromatica nasce dallo spazio e dall’identità del marchio, per poi essere validata in condizioni operative reali.",
+        "p": "La direzione cromatica nasce dallo spazio e dal marchio, poi viene verificata sui capi, tra i ruoli, con l’illuminazione e sui tessuti disponibili.",
         "items": [
-          "Esempi: La gamma colori varia in base al tessuto scelto, con possibilità di sviluppi cromatici dedicati per progetti di maggiore scala",
-          "Criteri principali: coerenza tra ruoli e resa in diverse condizioni di illuminazione"
+          "Opzioni: le cartelle colore disponibili possono accelerare lo sviluppo. Si possono valutare colori dedicati quando tessuto e quantità lo consentono.",
+          "Criteri di selezione: coerenza tra i ruoli, contrasto adeguato e resa sotto l’illuminazione dello spazio."
         ]
       },
       {
         "q": "Accessori e finiture",
-        "p": "Le finiture definiscono l’identità del capo, mantenendo al contempo elevate prestazioni nell’uso quotidiano.",
+        "p": "Bottoni, zip, etichette, impunture e chiusure aggiungono identità, ma devono restare pratici da usare, trattare e sostituire.",
         "items": [
-          "Esempi: bottoni personalizzati, zip, etichette, impunture a contrasto",
-          "Criteri principali: durabilità, facilità di sostituzione e coerenza visiva"
+          "Esempi: bottoni personalizzati, zip, etichette tessute, etichette nominative e impunture a contrasto.",
+          "Criteri di selezione: durata, facilità d’uso, praticità di sostituzione e coerenza visiva."
         ]
       },
       {
-        "q": "Metodi di branding",
-        "p": "Il branding viene sviluppato in funzione del capo, della frequenza di utilizzo e del livello di visibilità richiesto.",
+        "q": "Metodi di personalizzazione",
+        "p": "La personalizzazione viene scelta in base al capo, alla visibilità richiesta, all’uso previsto e al processo di manutenzione.",
         "items": [
-          "Esempi: ricamo, ricamo tono su tono, etichette tessute, stampa serigrafica",
-          "Criteri principali: durata, leggibilità e posizionamento calibrato"
+          "Esempi: ricamo, ricamo tono su tono, etichette tessute e serigrafia.",
+          "Criteri di selezione: leggibilità, durata, scala e posizione."
         ]
       }
     ],
     "cards": [
       {
-        "h3": "Vicino al progetto",
-        "p": "Campionature e fitting realizzati localmente consentono decisioni tecniche più rapide, precise e consapevoli."
+        "h3": "Campioni e prove locali",
+        "p": "Lo sviluppo vicino allo studio permette riscontri più rapidi, decisioni tecniche più chiare e una comunicazione diretta."
       },
       {
         "h3": "Pensato per il lavoro reale",
-        "p": "Ogni capo è sviluppato considerando movimento, durata dei turni e ritmo operativo quotidiano."
+        "p": "Movimento, durata del turno, mansioni, manutenzione e ambiente di lavoro guidano ogni capo."
       },
       {
-        "h3": "Preparato per la continuità",
-        "p": "Cartamodelli, finiture e specifiche vengono archiviati per garantire riordini coerenti nel tempo, accompagnando l’evoluzione del personale."
+        "h3": "Specifiche archiviate per la continuità",
+        "p": "Cartamodelli, finiture e specifiche approvati vengono organizzati affinché gli ordini futuri seguano lo stesso sistema."
       }
     ]
   },
   "parameters": {
-    "kicker": "PARAMETRI DI PRODUZIONE",
-    "h2": "Le informazioni commerciali essenziali, a colpo d’occhio",
-    "intro": "Apri ogni sezione per approfondire quantità e variabili legate alle tempistiche.",
+    "kicker": "ASPETTI PRATICI DEL PROGETTO",
+    "h2": "Tre modi per iniziare, con i numeri in chiaro",
+    "intro": "Non serve commissionare un guardaroba completo. Il prezzo si quota per progetto — non lavoriamo con un listino rigido — e il calendario segue il numero di modelli, le prove e il tessuto.",
     "groups": [
       {
         "h3": "Quantità minime consigliate",
@@ -312,123 +357,136 @@
             "body": "Possiamo produrre da 10 pezzi per modello, adattando il prezzo alla quantità e alla costruzione del capo."
           },
           {
-            "head": "10–15 pezzi",
-            "body": "Capi in tessuto per modello. Questo ci permette di servire anche piccoli team con uniformi su misura."
+            "head": "10–15 pezzi per modello",
+            "body": "Punto di partenza tipico per i capi su misura in tessuto, distribuiti tra le taglie necessarie."
           },
           {
-            "head": "100–150 pezzi",
-            "body": "Maglieria per modello. A causa del processo produttivo, la maglieria richiede quantità più elevate."
+            "head": "100–150 pezzi per modello",
+            "body": "Punto di partenza tipico per la maglieria su misura, perché il processo produttivo richiede una quantità maggiore."
           }
         ],
         "items": [],
         "modal": "parameter-quantities"
       },
       {
-        "h3": "Un investimento su misura",
+        "h3": "Un preventivo per progetto",
         "notes": [
           {
             "head": "",
-            "body": "Ogni progetto presenta caratteristiche diverse, e il costo viene definito di conseguenza. Non lavoriamo con listini rigidi, ma sviluppiamo ogni proposta in base alle reali esigenze del tuo brand, trovando il giusto equilibrio tra estetica, funzionalità e budget."
+            "body": "Non lavoriamo con un listino rigido. La proposta viene costruita intorno a capi, quantità, materiali, costruzione, dettagli personalizzati, lavoro di sviluppo e data obiettivo."
           }
         ],
+        "itemsLabel": "Principali variabili di prezzo",
         "items": [
-          "Materiali e finiture sono selezionati per rispondere sia all’uso previsto sia al livello di qualità desiderato",
-          "Il livello di personalizzazione viene adattato alla tua identità di brand e alle esigenze operative",
-          "Quantità e complessità dei capi sono ottimizzate per garantire un investimento coerente ed efficiente"
+          "Materiali e finiture",
+          "Numero e complessità dei modelli",
+          "Quantità per modello",
+          "Sviluppo di cartamodelli e campioni",
+          "Gamma taglie e requisiti delle prove",
+          "Identità di marca e dettagli personalizzati",
+          "Calendario di produzione"
         ],
         "modal": "parameter-pricing"
       },
       {
-        "h3": "Fattori di tempistica",
+        "h3": "Cosa incide sulle tempistiche",
         "notes": [
           {
             "head": "",
-            "body": "Gli elementi che influenzano le tempistiche di sviluppo e produzione:"
+            "body": "Le tempistiche dipendono dal lavoro di sviluppo e dalle condizioni di produzione richieste dal progetto."
           }
         ],
+        "itemsLabel": "Principali fattori di tempistica",
         "items": [
-          "Sviluppo e definizione dei cartamodelli",
-          "Fitting, verifiche e cicli di revisione",
+          "Sviluppo dei cartamodelli",
+          "Numero di prototipi e prove",
+          "Velocità di revisione e approvazione",
           "Costruzioni tecniche o soluzioni su misura",
-          "Livello di complessità delle finiture"
+          "Approvvigionamento dei tessuti",
+          "Complessità delle finiture",
+          "Quantità e calendario di produzione"
         ],
         "modal": "parameter-timing"
       }
     ]
   },
   "continuity": {
-    "kicker": "MODELLO DI CONTINUITÀ",
-    "h2": "Dallo sviluppo iniziale a riordini impeccabili nel tempo",
-    "intro": "La prima realizzazione definisce l’identità del tuo guardaroba professionale. Una volta validata, diventa la base per riordini futuri più rapidi, coerenti e perfettamente allineati.",
+    "kicker": "RIORDINI",
+    "h2": "Sviluppa una volta. Riordina da un sistema approvato.",
+    "intro": "La prima produzione definisce il guardaroba. Cartamodelli, costruzione, colori, finiture e specifiche di marca approvati vengono poi organizzati affinché sostituzioni, nuovi ingressi e crescita del team non richiedano di ricominciare il progetto.",
     "rows": [
       [
         "Criterio",
-        "Sviluppo iniziale → Continuità",
-        ""
+        "Progetto iniziale",
+        "Riordini futuri"
       ],
       [
         "Ambito",
         "Progettato su misura in funzione del tuo spazio, dei ruoli e delle esigenze operative.",
-        "Consolidato come sistema di guardaroba replicabile per l’intero team."
+        "Utilizzato come sistema di guardaroba replicabile per l’intero team."
       ],
       [
         "Sviluppo",
-        "Cartamodelli e costruzione vengono ideati, perfezionati e validati.",
-        "Le basi approvate vengono riattivate senza necessità di ripartire da zero."
+        "Cartamodelli, vestibilità, costruzione e finiture vengono sviluppati e approvati.",
+        "Le basi approvate vengono riattivate senza ripetere l’intero sviluppo."
       ],
       [
-        "Riordini",
-        "La prima produzione viene testata, ottimizzata e approvata.",
-        "Nel tempo, la coerenza resta invariata, anche con l’evoluzione del team."
+        "Ordine",
+        "La prima produzione viene controllata, perfezionata e approvata.",
+        "Le nuove quantità vengono prodotte dalla specifica approvata, in base alla disponibilità dei materiali e alle condizioni di produzione confermate."
       ]
     ],
     "loop": [
-      "Approva una volta",
+      "Approva il guardaroba",
       "→",
-      "Archivia i cartamodelli",
+      "Archivia cartamodelli e specifiche",
       "→",
-      "Riordina con continuità assoluta"
+      "Riordina con coerenza"
     ]
   },
   "projects": {
-    "kicker": "PROGETTI SELEZIONATI",
-    "h2": "Evidenze concrete, oltre le parole",
-    "intro": "Una selezione di progetti che dimostra come le scelte di design si traducano in operatività quotidiana, benessere del team e continuità nel tempo.",
+    "kicker": "PROGETTI E GUIDE SELEZIONATI",
+    "h2": "Tre programmi, negli ambienti per cui sono nati",
+    "intro": "L’apertura di un hotel, uno spazio benessere e una clinica privata: lo stesso metodo, tre contesti molto diversi.",
     "items": [
       {
-        "tag": "GUARDAROBA HOTELLERIE",
-        "h3": "Personale di boutique hotel",
-        "p": "Capi a diretto contatto con l’ospite, sviluppati in armonia con l’architettura, l’identità visiva e le esigenze di turni prolungati.",
+        "tag": "CASO STUDIO — HOTEL",
+        "h3": "Divise su misura per METT Barcelona",
+        "p": "Un guardaroba completo per ruolo, sviluppato dal progetto d’interni dell’hotel per accoglienza, ristorazione, direzione e spa, poi progettato, prototipato e prodotto a Barcellona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment",
-        "href": "/it/blog/divise-hospitalita-personalizzate/"
+        "alt": "Divise per l’accoglienza sviluppate da Pamuuc Studios per METT Barcelona",
+        "href": "/it/blog/divise-hospitalita-personalizzate/",
+        "linkLabel": "Leggi il caso studio dell’hotel"
       },
       {
-        "tag": "CONTINUITÀ OPERATIVA",
-        "h3": "Team di servizio multiruolo",
-        "p": "Silhouette definite, archiviate una sola volta e riattivate con precisione man mano che il team cresce.",
+        "tag": "GUIDA AL BENESSERE",
+        "h3": "Progettare un guardaroba benessere per più ruoli",
+        "p": "Una guida pratica per collegare accoglienza, trattamenti e ruoli di supporto attraverso colori, materiali e dettagli condivisi, con un piano di continuità chiaro.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders",
-        "href": "/it/blog/divise-studi-benessere/"
+        "alt": "Guardaroba per uno spazio benessere che collega accoglienza e trattamenti",
+        "href": "/it/blog/divise-studi-benessere/",
+        "linkLabel": "Leggi la guida al benessere"
       },
       {
-        "tag": "DIREZIONE UNIFORME",
-        "h3": "Progetto clinica e benessere",
-        "p": "Linee essenziali e costruzione orientata alla comodità, per trasmettere fiducia, chiarezza e naturalezza nell’uso quotidiano.",
+        "tag": "CASO STUDIO — CLINICA",
+        "h3": "Divise su misura per uno studio dentistico di Barcellona",
+        "p": "Un guardaroba professionale che supera l’abbigliamento clinico generico e collega spazio, marchio, immagine dell’accoglienza ed esigenze di manutenzione quotidiana.",
         "img": "/assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms",
-        "href": "/it/blog/divise-clinica-dentale-personalizzate-barcellona/"
+        "alt": "Divise cliniche su misura in uno studio dentistico di Barcellona",
+        "href": "/it/blog/divise-clinica-dentale-personalizzate-barcellona/",
+        "linkLabel": "Leggi il caso studio della clinica"
       }
-    ]
+    ],
+    "handoff": "Avvia un programma come questi"
   },
   "faq": {
-    "kicker": "FAQ",
-    "h2": "Risposte chiare, prima ancora di iniziare",
-    "intro": "Approfondimenti essenziali alle domande più frequenti di team di hotellerie, ambito medicale e servizi.",
+    "kicker": "DOMANDE FREQUENTI",
+    "h2": "Le risposte alle prime domande di chi acquista",
+    "intro": "I punti pratici da chiarire prima di un primo incontro.",
     "items": [
       {
         "q": "Lavorate a partire da un catalogo?",
-        "a": "No. Ogni progetto prende forma a partire dal vostro contesto operativo, dall’identità del brand e dalla struttura del personale. Possiamo integrare basi esistenti quando rappresentano un reale vantaggio in termini di tempi e costi, mantenendo però uno sviluppo finale sempre personalizzato, coerente e distintivo."
+        "a": "No. Ogni progetto viene sviluppato intorno all’attività, allo spazio, al team e ai ruoli. Quando una base progettuale esistente offre un reale vantaggio in termini di tempi o costi, possiamo usarla come punto di partenza adattando il guardaroba finale al brief."
       },
       {
         "q": "Gestite i riordini dopo la prima produzione?",
@@ -440,36 +498,77 @@
       },
       {
         "q": "Sviluppate colori e dettagli di personalizzazione?",
-        "a": "Sì. Possiamo lavorare su cartelle colore esistenti per ottimizzare i tempi oppure sviluppare tonalità e finiture dedicate quando i volumi lo permettono. Le tecniche di personalizzazione vengono selezionate in funzione di durata, leggibilità e tipologia di capo."
+        "a": "Sì. Possiamo lavorare con le cartelle colore disponibili o valutare colori dedicati quando il materiale e la quantità lo consentono. Identità e dettagli personalizzati vengono scelti in base al capo, alla visibilità richiesta, alla durata e alle esigenze di manutenzione."
+      },
+      {
+        "q": "Qual è la quantità minima d’ordine?",
+        "a": "Alcuni modelli possono essere prodotti a partire da 10 pezzi per modello. I capi su misura in tessuto partono in genere da 10–15 pezzi per modello, distribuiti tra le taglie e le varianti approvate; la maglieria su misura parte in genere da 100–150 pezzi, perché il processo produttivo richiede una quantità maggiore. Confermiamo il minimo dopo aver valutato il tipo di capo, il tessuto, il colore, la costruzione e il livello di personalizzazione."
+      },
+      {
+        "q": "Quanto costa un progetto di divise su misura?",
+        "a": "Non usiamo un listino rigido. La proposta si costruisce sul perimetro confermato: capi, quantità, materiali, costruzione e livello di personalizzazione. Due capi simili all’apparenza possono richiedere sviluppo, materiali e lavorazioni molto diversi: quotiamo quindi il progetto invece di applicare una tariffa unica per capo."
+      },
+      {
+        "q": "Quanto tempo passa dal brief alla consegna?",
+        "a": "Lo sviluppo dura di solito quattro-sei settimane e la produzione altre tre-cinque, il che colloca molti progetti interamente su misura intorno alle otto settimane complessive. Tempi più brevi sono possibili a seconda del numero di modelli, delle prove e del tessuto. Il calendario si conferma dopo la revisione del brief."
+      },
+      {
+        "q": "Dove vengono disegnati e prodotti i capi?",
+        "a": "A Barcellona. Progettazione, sviluppo, campionatura, prove e produzione si svolgono attraverso una filiera locale, che mantiene brevi i cicli di prototipazione e offre un controllo diretto sulla produzione."
+      },
+      {
+        "q": "Vediamo dei prototipi prima dell’avvio della produzione?",
+        "a": "Sì. Prototipi, campioni e prove precedono qualsiasi impegno di produzione: vestibilità, tessuto, costruzione e personalizzazione si approvano su capi reali, non su disegni."
+      },
+      {
+        "q": "Come gestite le taglie di un intero team?",
+        "a": "Le quantità vengono distribuite tra le taglie necessarie durante la conferma di taglie e quantità, mentre le prove servono a definire la scala taglie prima della produzione. I nuovi ingressi possono poi fare riferimento ai cartamodelli e alle specifiche archiviate."
+      },
+      {
+        "q": "I tessuti reggono il lavaggio industriale?",
+        "a": "Tessuto e costruzione vengono scelti per il ciclo di manutenzione reale dei capi, compreso il lavaggio industriale dove previsto. Le divise consegnate per l’apertura di un hotel a cinque stelle hanno già affrontato dodici mesi di servizio quotidiano e lavaggio industriale."
+      },
+      {
+        "q": "Con quali settori lavorate?",
+        "a": "Hotel e ospitalità, ristorazione, spa e benessere, studi dentistici e cliniche private, squadre operative e di servizio, e ruoli a contatto con il pubblico. Il metodo è lo stesso ovunque; capi, tessuti e priorità no."
+      },
+      {
+        "q": "Le divise possono seguire il nostro progetto d’interni o la nostra identità di marca?",
+        "a": "Sì. Un guardaroba può nascere direttamente da un progetto d’interni, come per l’apertura di un hotel a cinque stelle a Barcellona. I colori possono venire dalle cartelle colore disponibili oppure essere sviluppati su misura quando materiale e quantità lo consentono."
       }
-    ]
+    ],
+    "handoff": "Hai ancora una domanda? Scrivila nel modulo"
   },
   "contact": {
-    "kicker": "DAI FORMA AL TUO PROGETTO CON NOI",
-    "h2": "Condividi con noi il tuo progetto. Definiamo insieme il percorso più efficace.",
+    "kicker": "Inizia il tuo progetto",
+    "h2": "Parlaci del team, dei ruoli e della data obiettivo",
     "paras": [
-      "Valutiamo la fattibilità, identifichiamo il punto di partenza più adatto e definiamo un perimetro chiaro per uno sviluppo coerente, solido e duraturo.",
-      "Vi invitiamo a compilare il modulo. Sarete ricontattati a breve per organizzare un incontro dedicato — nel vostro spazio a Barcellona o nella vostra città in Spagna o all'estero — oppure una prima videochiamata conoscitiva, pensata per comprendere a fondo il vostro contesto, le esigenze operative e l’identità del vostro progetto."
+      "Condividi ciò che sai finora. Valuteremo l’ambito, la fattibilità e il punto di partenza più pratico prima di consigliare una direzione.",
+      "Il primo incontro può svolgersi nel tuo spazio a Barcellona, altrove in Spagna o all’estero, oppure in videochiamata. L’obiettivo è comprendere l’ambiente, la struttura del team, le esigenze operative e ciò che le divise devono ottenere."
     ],
+    "emailLabel": "Preferisci scriverci?",
     "form": {
       "labels": {
-        "name": "Nome e cognome * obbligatorio",
-        "email": "E-mail aziendale * obbligatorio",
+        "name": "Nome e cognome",
+        "email": "E-mail aziendale",
         "phone": "Numero di telefono",
-        "company": "Nome dell'Azienda * obbligatorio",
-        "team-size": "Dimensione team * obbligatorio",
-        "project-type": "Tipo di progetto * obbligatorio",
-        "timeline": "Tempistica obiettivo * obbligatorio",
+        "company": "Nome dell’azienda",
+        "team-size": "Dimensione del team",
+        "project-type": "Tipo di progetto",
+        "timeline": "Data obiettivo",
         "meeting-datetime": "Data e ora preferite per la prima riunione",
-        "brief": "Descrizione progetto",
-        "website": "Sito web"
+        "brief": "Descrizione del progetto"
       },
       "placeholders": {
         "name": "Nome e cognome",
         "email": "nome@azienda.com",
         "phone": "+34 ...",
         "company": "Nome dell’azienda",
-        "brief": "Team, ambiente, ruoli e obiettivi dei capi"
+        "brief": "Parlaci dello spazio, del team, dei ruoli, dei capi, delle quantità indicative, della data obiettivo e di ciò che le divise devono ottenere."
+      },
+      "helps": {
+        "phone": "Facoltativo",
+        "meeting-datetime": "Facoltativo. Confermeremo la disponibilità prima di fissare l’incontro."
       },
       "options": {
         "team-size": [
@@ -484,18 +583,18 @@
             "disabled": false
           },
           {
-            "v": "10 - 25",
-            "t": "10 - 25",
+            "v": "10–25",
+            "t": "10–25",
             "disabled": false
           },
           {
-            "v": "26 - 50",
-            "t": "26 - 50",
+            "v": "26–50",
+            "t": "26–50",
             "disabled": false
           },
           {
-            "v": "51 - 120",
-            "t": "51 - 120",
+            "v": "51–120",
+            "t": "51–120",
             "disabled": false
           },
           {
@@ -511,8 +610,8 @@
             "disabled": true
           },
           {
-            "v": "Sistemi di uniformi completamente personalizzate",
-            "t": "Sistemi di uniformi completamente personalizzate",
+            "v": "Un sistema completo di divise su misura",
+            "t": "Un sistema completo di divise su misura",
             "disabled": false
           },
           {
@@ -521,18 +620,18 @@
             "disabled": false
           },
           {
-            "v": "Un solo capo",
-            "t": "Un solo capo",
+            "v": "Una categoria di capi",
+            "t": "Una categoria di capi",
             "disabled": false
           },
           {
-            "v": "Un dipartimento specifico",
-            "t": "Un dipartimento specifico",
+            "v": "Un reparto",
+            "t": "Un reparto",
             "disabled": false
           },
           {
-            "v": "Merchandising",
-            "t": "Merchandising",
+            "v": "Merchandising o abbigliamento brandizzato",
+            "t": "Merchandising o abbigliamento brandizzato",
             "disabled": false
           },
           {
@@ -553,13 +652,13 @@
             "disabled": false
           },
           {
-            "v": "Entro 1-2 mesi",
-            "t": "Entro 1-2 mesi",
+            "v": "Entro 1–2 mesi",
+            "t": "Entro 1–2 mesi",
             "disabled": false
           },
           {
-            "v": "Entro 3-4 mesi",
-            "t": "Entro 3-4 mesi",
+            "v": "Entro 3–4 mesi",
+            "t": "Entro 3–4 mesi",
             "disabled": false
           },
           {
@@ -575,12 +674,12 @@
         ]
       },
       "consent": "Accetto l’{privacy:informativa privacy} e i {terms:termini}.",
-      "hint": "La compilazione richiede circa 2 minuti. Di solito rispondiamo entro 1 giorno lavorativo.",
-      "submit": "Invia"
+      "hint": "Il modulo richiede circa due minuti. Di solito rispondiamo entro un giorno lavorativo.",
+      "submit": "Invia la richiesta di progetto"
     }
   },
   "footer": {
-    "about": "Sistemi di uniformi personalizzate sviluppate a Barcellona.",
+    "about": "Sistemi di divise su misura sviluppati a Barcellona.",
     "legal": "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com",
     "cols": [
       {
@@ -635,482 +734,593 @@
     "service-custom": [
       {
         "t": "h",
-        "v": "UNIFORMI COMPLETAMENTE PERSONALIZZATE PER VOI"
+        "v": "Divise completamente su misura per il tuo team"
+      },
+      {
+        "t": "h",
+        "v": "Un guardaroba coordinato, sviluppato intorno al tuo spazio, ai ruoli e alle attività"
       },
       {
         "t": "p",
-        "v": "Guardaroba professionali progettati intorno al vostro spazio, al vostro team e alle vostre operazioni"
+        "v": "Non iniziamo chiedendoti di scegliere dei capi da un catalogo standard. Partiamo dalla tua attività: lo spazio, il servizio, la struttura del team e ciò che ogni ruolo richiede dall’abbigliamento."
       },
       {
         "t": "p",
-        "v": "Ogni progetto nasce da una pagina bianca."
+        "v": "Il risultato è un guardaroba connesso, non un insieme di capi scollegati. I diversi ruoli possono indossare capi differenti condividendo lo stesso linguaggio visivo di colore, vestibilità, materiale e dettaglio."
+      },
+      {
+        "t": "h",
+        "v": "Progettato dal tuo ambiente"
       },
       {
         "t": "p",
-        "v": "Non adattiamo prodotti esistenti: sviluppiamo capi pensati specificamente per il vostro spazio, la struttura del vostro personale e la realtà quotidiana del servizio."
+        "v": "Architettura, materiali, luce e identità di marca guidano la direzione visiva del guardaroba."
+      },
+      {
+        "t": "h",
+        "v": "Sviluppato per ruolo"
       },
       {
         "t": "p",
-        "v": "Le uniformi vengono concepite come un sistema di guardaroba coerente, non come elementi isolati."
+        "v": "Accoglienza, servizio, direzione, ruoli clinici e operativi vengono analizzati separatamente, così movimento, responsabilità, strumenti e visibilità orientano ogni capo."
+      },
+      {
+        "t": "h",
+        "v": "Provato sul team"
       },
       {
         "t": "p",
-        "v": "Ogni capo dialoga con gli altri, garantendo armonia visiva e funzionalità operativa all’interno del team."
+        "v": "Proporzioni, lunghezze, vestibilità e dettagli funzionali vengono verificati attraverso campioni e prove prima di approvare la produzione."
+      },
+      {
+        "t": "h",
+        "v": "Preparato per la continuità"
       },
       {
         "t": "p",
-        "v": "Cosa definisce un progetto completamente su misura"
+        "v": "Cartamodelli e specifiche approvati vengono conservati affinché sostituzioni, nuovi ingressi e ordini futuri seguano lo stesso sistema."
       },
       {
-        "t": "p",
-        "v": "Progettazione a partire dallo spazio"
-      },
-      {
-        "t": "p",
-        "v": "Architettura, materiali, luce e atmosfera del brand guidano la direzione visiva del guardaroba."
-      },
-      {
-        "t": "p",
-        "v": "Sviluppo per ruolo"
-      },
-      {
-        "t": "p",
-        "v": "Ogni funzione viene analizzata nel dettaglio — reception, servizio, management, operazioni — per creare capi allineati a movimenti, responsabilità e ritmo di lavoro."
-      },
-      {
-        "t": "p",
-        "v": "Silhouette dedicate"
-      },
-      {
-        "t": "p",
-        "v": "Vestibilità, proporzioni e lunghezze vengono definite per risultare naturali nell’ambiente e garantire comfort durante turni prolungati."
-      },
-      {
-        "t": "p",
-        "v": "Cosa sviluppiamo"
+        "t": "h",
+        "v": "Capi che possiamo sviluppare"
       },
       {
         "t": "ul",
         "v": [
-          "Camicie e overshirt",
+          "Camicie e sovracamicie",
           "Pantaloni e gonne",
           "Abiti",
           "Grembiuli e capi operativi",
           "Maglieria e capispalla",
-          "Accessori"
+          "Accessori coordinati"
         ]
       }
     ],
     "sector-hotels": [
       {
-        "t": "p",
-        "v": "Le strutture di hotellerie riuniscono reparti diversi, ciascuno con funzioni e contesti distinti a contatto con l’ospite. Le uniformi devono riflettere l’identità della struttura, garantendo al tempo stesso praticità, continuità e affidabilità operativa."
+        "t": "h",
+        "v": "Divise su misura per hotel"
+      },
+      {
+        "t": "h",
+        "v": "Un unico linguaggio visivo per una struttura con molti ruoli diversi"
       },
       {
         "t": "p",
-        "v": "Ruoli principali"
+        "v": "Un hotel riunisce reparti di accoglienza, servizio e operativi con esigenze di lavoro molto diverse. Creiamo capi specifici per ogni ruolo che, insieme, formano un unico guardaroba alberghiero."
+      },
+      {
+        "t": "h",
+        "v": "Ruoli abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Reception e accoglienza",
-          "Concierge e servizi ospiti",
+          "Accoglienza e ricevimento",
+          "Concierge e servizi agli ospiti",
           "Ristorante e bar",
           "Direzione",
-          "Servizio piani"
+          "Reparto piani",
+          "Spa e benessere"
         ]
       },
       {
-        "t": "p",
-        "v": "Tipologie di capi:"
+        "t": "h",
+        "v": "Capi abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Camicie",
+          "Camicie e sovracamicie",
           "Pantaloni e gonne",
           "Abiti",
-          "Blazers",
+          "Blazer e giacche",
           "Grembiuli",
-          "Maglieria"
+          "Maglieria e strati esterni"
         ]
       },
       {
-        "t": "p",
-        "v": "Priorità progettuali"
+        "t": "h",
+        "v": "Priorità di progetto"
       },
       {
         "t": "ul",
         "v": [
-          "Coerenza visiva tra i reparti",
-          "comodità durante turni prolungati",
-          "Durabilità nell’uso quotidiano",
-          "Allineamento con architettura e identità del marchio"
+          "Un’identità chiara tra i reparti",
+          "Comfort e libertà di movimento durante i turni lunghi",
+          "Materiali e costruzione adatti all’uso quotidiano",
+          "Coerenza con l’architettura e il marchio",
+          "Un sistema pratico per nuovi ingressi e riordini"
         ]
       }
     ],
     "sector-restaurants": [
       {
-        "t": "p",
-        "v": "I team di ristorazione operano in contesti ad alta intensità. I capi devono sostenere il ritmo del servizio, bilanciando resistenza, comfort e presenza visiva."
+        "t": "h",
+        "v": "Divise su misura per ristoranti"
+      },
+      {
+        "t": "h",
+        "v": "Progettate intorno al ritmo del servizio, al movimento, alla cura e all’identità del locale"
       },
       {
         "t": "p",
-        "v": "Tipologie di capi"
+        "v": "I team della ristorazione lavorano tra calore, movimento, macchie e lunghi periodi di servizio. La divisa deve accompagnare questo ritmo e, allo stesso tempo, collegare i ruoli di sala e operativi all’identità del locale."
+      },
+      {
+        "t": "h",
+        "v": "Ruoli abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Camicie e overshirt",
+          "Accoglienza e ricevimento",
+          "Sala",
+          "Personale del bar",
+          "Cucina e supporto",
+          "Direzione"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Capi abituali"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Camicie e sovracamicie",
           "Grembiuli",
           "Pantaloni",
-          "Polo",
+          "Polo e T-shirt",
           "Giacche leggere"
         ]
       },
       {
-        "t": "p",
-        "v": "Elementi chiave:"
+        "t": "h",
+        "v": "Priorità di progetto"
       },
       {
         "t": "ul",
         "v": [
           "Libertà di movimento",
-          "Tessuti traspiranti",
-          "Resistenza alle macchie",
-          "Costruzione rinforzata"
+          "Tessuti traspiranti e facili da trattare",
+          "Tasche e chiusure funzionali",
+          "Costruzione rinforzata dove necessario",
+          "Una direzione visiva coerente con l’esperienza del ristorante"
         ]
       }
     ],
     "sector-wellness": [
       {
-        "t": "p",
-        "v": "Nei contesti benessere, le uniformi contribuiscono a creare un’atmosfera di calma e fiducia. Il design privilegia morbidezza, essenzialità e coerenza visiva con l’identità dello spazio."
+        "t": "h",
+        "v": "Divise per spa e benessere"
+      },
+      {
+        "t": "h",
+        "v": "Comfort, movimento e una presenza calma lungo tutto il percorso del cliente"
       },
       {
         "t": "p",
-        "v": "Tipologie di capi"
+        "v": "Negli spazi benessere, il personale fa parte dell’atmosfera. Colleghiamo l’abbigliamento allo spazio tenendo conto del contatto ravvicinato con il cliente, del movimento, dei turni lunghi e della manutenzione regolare."
+      },
+      {
+        "t": "h",
+        "v": "Ruoli abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Tuniche",
-          "Top morbidi",
-          "Pantaloni",
-          "Abiti"
+          "Accoglienza",
+          "Terapisti e personale dei trattamenti",
+          "Accoglienza spa",
+          "Ruoli di supporto",
+          "Direzione"
         ]
       },
       {
-        "t": "p",
-        "v": "Priorità dei materiali"
+        "t": "h",
+        "v": "Capi abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Traspirabilità",
-          "Comodità",
-          "Morbidezza al tatto"
+          "Tuniche e top morbidi",
+          "Pantaloni",
+          "Abiti",
+          "Sovracamicie e strati leggeri"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Priorità di progetto"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Comfort e libertà di movimento",
+          "Materiali traspiranti e piacevoli da indossare",
+          "Colori calmi e dettagli misurati",
+          "Legami chiari tra accoglienza e ruoli di trattamento",
+          "Coerenza quando il personale cambia o cresce"
         ]
       }
     ],
     "sector-medical": [
       {
-        "t": "p",
-        "v": "I capi accompagnano lunghe ore di attività, mantenendo un’immagine ordinata, pulita e rassicurante. L’approccio privilegia la funzionalità senza rinunciare a un’estetica curata."
+        "t": "h",
+        "v": "Divise su misura per studi dentistici e cliniche private"
+      },
+      {
+        "t": "h",
+        "v": "Funzione clinica con un’immagine del personale più curata e allineata al marchio"
       },
       {
         "t": "p",
-        "v": "Tipologie di capi"
+        "v": "Le cliniche private richiedono capi adatti a lunghe giornate, movimento e lavaggi frequenti, capaci allo stesso tempo di trasmettere ai pazienti un’immagine pulita, rassicurante e riconoscibile."
+      },
+      {
+        "t": "h",
+        "v": "Ruoli abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Top medicali",
-          "Completi operativi",
-          "Pantaloni",
-          "Overshirt"
+          "Accoglienza e coordinamento dei pazienti",
+          "Personale clinico",
+          "Supporto ai trattamenti",
+          "Direzione dello studio"
         ]
       },
       {
-        "t": "p",
-        "v": "Priorità progettuali e tecniche"
+        "t": "h",
+        "v": "Capi abituali"
       },
       {
         "t": "ul",
         "v": [
-          "Tessuti traspiranti",
-          "Facilità di lavaggio e manutenzione",
-          "Durabilità",
-          "Comodità",
-          "Tessuti ad alta resistenza",
-          "Tasche funzionali",
-          "Manutenzione semplificata"
+          "Top sanitari",
+          "Completi da lavoro coordinati",
+          "Pantaloni",
+          "Sovracamicie e strati per l’accoglienza"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Priorità di progetto"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Tessuti traspiranti e facili da trattare",
+          "Movimento e comfort per tutta la giornata",
+          "Tasche e chiusure funzionali",
+          "Un aspetto pulito sotto l’illuminazione clinica",
+          "Continuità visiva tra accoglienza e aree di trattamento"
         ]
       }
     ],
     "sector-service": [
       {
-        "t": "p",
-        "v": "Il personale impegnate in manutenzione, logistica e supporto richiedono uniformi solide, funzionali e coerenti con l’identità del marchio."
+        "t": "h",
+        "v": "Divise per squadre operative"
+      },
+      {
+        "t": "h",
+        "v": "Abbigliamento da lavoro pratico che resta parte del marchio"
       },
       {
         "t": "p",
-        "v": "Tipologie di capi"
+        "v": "Le squadre di manutenzione, logistica e supporto richiedono capi che privilegino movimento, capacità di contenere strumenti, durata e facilità di manutenzione senza sembrare separati dal resto dell’organizzazione."
+      },
+      {
+        "t": "h",
+        "v": "Capi abituali"
       },
       {
         "t": "ul",
         "v": [
           "Camicie da lavoro",
           "Pantaloni tecnici",
-          "Overshirt",
-          "Giacche leggere"
+          "Sovracamicie",
+          "Giacche leggere",
+          "Strati esterni"
         ]
       },
       {
-        "t": "p",
-        "v": "Priorità tecniche"
+        "t": "h",
+        "v": "Priorità di progetto"
       },
       {
         "t": "ul",
         "v": [
-          "Costruzione rinforzata",
-          "Tessuti ad alta resistenza",
+          "Costruzione rinforzata dove necessario",
           "Tasche funzionali",
-          "Manutenzione semplificata"
+          "Materiali facili da trattare",
+          "Chiara identificazione dei ruoli",
+          "Coerenza visiva con il personale a contatto con il pubblico"
         ]
       }
     ],
     "sector-guest": [
       {
-        "t": "p",
-        "v": "Il personale è la prima espressione concreta del marchio. Le uniformi devono trasmettere professionalità ed eleganza, garantendo al contempo comfort nell’interazione quotidiana."
+        "t": "h",
+        "v": "Divise per ruoli a contatto con il pubblico"
+      },
+      {
+        "t": "h",
+        "v": "Un’espressione chiara del marchio, progettata per l’interazione quotidiana"
       },
       {
         "t": "p",
-        "v": "Tipologie di capi"
+        "v": "Nei club privati, nei negozi di fascia alta, nelle gallerie, negli spazi culturali e in altre attività di servizio, il personale è una delle prime espressioni visibili dell’organizzazione."
+      },
+      {
+        "t": "h",
+        "v": "Ruoli abituali"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Accoglienza e ricevimento",
+          "Relazioni con gli ospiti",
+          "Servizio clienti",
+          "Personale di sala",
+          "Direzione"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Capi abituali"
       },
       {
         "t": "ul",
         "v": [
           "Camicie",
-          "Pantaloni",
+          "Pantaloni e gonne",
           "Abiti",
-          "Blazers"
+          "Blazer e giacche",
+          "Accessori coordinati"
         ]
       },
       {
-        "t": "p",
-        "v": "Priorità progettuali"
+        "t": "h",
+        "v": "Priorità di progetto"
       },
       {
         "t": "ul",
         "v": [
-          "Identità visiva chiara e riconoscibile",
-          "comodità durante turni prolungati",
-          "Eleganza essenziale"
+          "Un’identità visiva riconoscibile e adeguata",
+          "Comfort durante lunghi periodi di interazione",
+          "Ruoli chiari senza formalità superflua",
+          "Coerenza tra sedi e ordini futuri"
         ]
       }
     ],
     "phase-1": [
       {
         "t": "h",
-        "v": "FASE 01 — ANALISI"
+        "v": "Fase 01 — Scoperta"
+      },
+      {
+        "t": "h",
+        "v": "Definire il brief prima di avviare lo sviluppo"
       },
       {
         "t": "p",
-        "v": "Comprendere il contesto, definire la direzione"
+        "v": "Partiamo dalle persone, dallo spazio, dai ruoli, dalle quantità, dalle tempistiche e dalle esigenze dell’attività. Il progetto assume così una direzione condivisa prima di dedicare tempo ai campioni o alle decisioni produttive."
+      },
+      {
+        "t": "h",
+        "v": "Che cosa analizziamo"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Attività quotidiane e flusso del servizio",
+          "Struttura del team, ruoli e numero di persone",
+          "Spazio, materiali e identità di marca",
+          "Priorità dei capi ed esigenze funzionali",
+          "Tempistica obiettivo e parametri di budget"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Risultato"
       },
       {
         "t": "p",
-        "v": "Ogni progetto inizia con una fase di analisi approfondita del contesto in cui le uniformi verranno utilizzate."
-      },
-      {
-        "t": "p",
-        "v": "Spazio, flussi operativi, struttura del team e identità del marchio guidano le prime scelte e definiscono una direzione chiara per l’intero guardaroba."
-      },
-      {
-        "t": "p",
-        "v": "Attività principali"
-      },
-      {
-        "t": "p",
-        "v": "Analisi delle operazioni"
-      },
-      {
-        "t": "p",
-        "v": "Mappatura dei ruoli"
-      },
-      {
-        "t": "p",
-        "v": "Lettura dello spazio e dell’identità visiva"
-      },
-      {
-        "t": "p",
-        "v": "Definizione della direzione progettuale"
-      },
-      {
-        "t": "p",
-        "v": "L’obiettivo è costruire una base solida e condivisa prima di avviare lo sviluppo."
+        "v": "Un ambito di progetto concordato, una mappa dei ruoli e una direzione iniziale del guardaroba."
       }
     ],
     "phase-2": [
       {
         "t": "h",
-        "v": "FASE 02 — SVILUPPO"
+        "v": "Fase 02 — Sviluppo"
+      },
+      {
+        "t": "h",
+        "v": "Trasformare la direzione in capi che il team possa valutare"
       },
       {
         "t": "p",
-        "v": "Dalla direzione ai capi"
+        "v": "Sviluppiamo tessuti, cartamodelli, vestibilità, costruzione e dettagli, poi li testiamo attraverso prototipi e sessioni di prova prima di approvare la produzione."
       },
       {
-        "t": "p",
-        "v": "La fase di sviluppo traduce la direzione progettuale in capi concreti."
-      },
-      {
-        "t": "p",
-        "v": "Tessuti, modelli e costruzione vengono definiti e verificati attraverso prototipi e sessioni di prova, per garantire comfort, funzionalità e coerenza visiva."
-      },
-      {
-        "t": "p",
+        "t": "h",
         "v": "Attività principali"
       },
       {
-        "t": "p",
-        "v": "Selezione e validazione dei materiali"
+        "t": "ul",
+        "v": [
+          "Selezione e validazione dei materiali",
+          "Sviluppo dei cartamodelli",
+          "Creazione dei prototipi",
+          "Prove con membri rappresentativi del team",
+          "Correzioni di vestibilità, funzione e dettaglio"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Risultato"
       },
       {
         "t": "p",
-        "v": "Sviluppo dei modelli"
-      },
-      {
-        "t": "p",
-        "v": "Realizzazione dei prototipi"
-      },
-      {
-        "t": "p",
-        "v": "Prove e ottimizzazioni"
-      },
-      {
-        "t": "p",
-        "v": "Ogni decisione è verificata nelle reali condizioni d’uso, per assicurare affidabilità nel tempo."
+        "v": "Capi, materiali e decisioni tecniche approvati e pronti per la produzione."
       }
     ],
     "phase-3": [
       {
         "t": "h",
-        "v": "FASE 03 — PRODUZIONE"
+        "v": "Fase 03 — Produzione"
+      },
+      {
+        "t": "h",
+        "v": "Passare dall’approvazione finale alla consegna con un controllo diretto"
       },
       {
         "t": "p",
-        "v": "Continuità, precisione, controllo"
+        "v": "Una volta approvati capi, materiali, taglie e finiture, il progetto entra in produzione. La produzione locale mantiene la comunicazione tecnica e il controllo qualità vicini allo studio."
       },
       {
-        "t": "p",
-        "v": "Una volta approvati, i capi entrano in produzione con modelli, materiali e finiture definitivi."
-      },
-      {
-        "t": "p",
-        "v": "La produzione locale consente un controllo diretto sulla qualità e una maggiore affidabilità nei tempi di consegna."
-      },
-      {
-        "t": "p",
+        "t": "h",
         "v": "Attività principali"
       },
       {
-        "t": "p",
-        "v": "Approvazione pre-produzione"
+        "t": "ul",
+        "v": [
+          "Approvazione finale prima della produzione",
+          "Conferma di taglie e quantità",
+          "Coordinamento della produzione",
+          "Controlli qualità",
+          "Preparazione e consegna",
+          "Organizzazione delle informazioni per i riordini futuri"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Risultato"
       },
       {
         "t": "p",
-        "v": "Sviluppo delle taglie"
-      },
-      {
-        "t": "p",
-        "v": "Produzione"
-      },
-      {
-        "t": "p",
-        "v": "Preparazione e consegna"
+        "v": "Capi consegnati e un sistema produttivo approvato in grado di sostenere gli ordini futuri."
       }
     ],
     "parameter-quantities": [
       {
         "t": "h",
-        "v": "QUANTITÀ MINIME"
+        "v": "Quantità minime"
       },
       {
-        "t": "p",
-        "v": "Un equilibrio tra qualità e sostenibilità produttiva. Le quantità minime variano in base alla costruzione del capo e ai materiali selezionati."
+        "t": "h",
+        "v": "La quantità iniziale dipende da come viene realizzato il capo"
       },
       {
-        "t": "p",
+        "t": "h",
         "v": "Indicazioni generali"
       },
       {
-        "t": "p",
-        "v": "Capi in tessuto: a partire da circa 10–15 pezzi per modello, distribuiti tra taglie e varianti"
+        "t": "ul",
+        "v": [
+          "I capi in tessuto partono in genere da 10–15 pezzi per modello, distribuiti tra le taglie e le varianti approvate.",
+          "La maglieria su misura parte in genere da 100–150 pezzi per modello.",
+          "Si può valutare una quantità inferiore quando la costruzione lo consente, analizzando prezzo ed efficienza produttiva caso per caso."
+        ]
       },
       {
         "t": "p",
-        "v": "Maglieria: generalmente tra 100 e 150 pezzi per modello"
-      },
-      {
-        "t": "p",
-        "v": "Quantità inferiori possono essere valutate, con possibili variazioni legate all’efficienza produttiva."
+        "v": "Confermiamo il minimo dopo aver valutato il tipo di capo, il tessuto, il colore, la costruzione e il livello di personalizzazione."
       }
     ],
     "parameter-pricing": [
       {
         "t": "h",
-        "v": "SUL MISURA DEL TUO BUDGET"
+        "v": "Come viene definito il prezzo"
       },
       {
         "t": "p",
-        "v": "Crediamo che ogni azienda debba poter contare su uniformi professionali senza compromettere il proprio budget. Per questo ci adattiamo alle tue esigenze economiche, offrendo soluzioni flessibili e personalizzate che garantiscono qualità, stile e coerenza con la tua identità aziendale. Lavoriamo al tuo fianco per trovare il giusto equilibrio tra investimento e risultato, creando uniformi che valorizzano il tuo marchio"
+        "v": "Due capi simili all’apparenza possono richiedere sviluppo, materiali e lavorazioni molto diversi. Per questo quotiamo l’ambito confermato del progetto invece di applicare una tariffa standard per capo."
+      },
+      {
+        "t": "p",
+        "v": "La proposta chiarisce che cosa è incluso, le ipotesi utilizzate e le decisioni che incidono maggiormente sul costo. Possiamo così bilanciare aspetto, funzione, durata e budget senza nascondere l’ambito dietro un prezzo generico."
       }
     ],
     "parameter-timing": [
       {
         "t": "h",
-        "v": "FATTORI DI TEMPO"
+        "v": "Tempistiche del progetto"
       },
       {
         "t": "p",
-        "v": "Le tempistiche del progetto dipendono dalla complessità dello sviluppo e dalla pianificazione della produzione."
+        "v": "Sviluppo tipico: 4–6 settimane"
       },
       {
         "t": "p",
-        "v": "Tempistiche tipiche"
+        "v": "Produzione tipica: 3–5 settimane"
       },
       {
         "t": "p",
-        "v": "Sviluppo: 4–6 settimane"
+        "v": "Progetto completo indicativo: circa 8 settimane per molti progetti completamente su misura"
       },
       {
         "t": "p",
-        "v": "Produzione: 3–5 settimane"
-      },
-      {
-        "t": "p",
-        "v": "I progetti completamente su misura richiedono generalmente circa 8 settimane dall’idea alla consegna."
-      },
-      {
-        "t": "p",
-        "v": "Fattori che influenzano i tempi"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Sviluppo dei modelli",
-          "Fitting e revisioni",
-          "Costruzioni speciali",
-          "Approvvigionamento dei tessuti"
-        ]
-      },
-      {
-        "t": "p",
-        "v": "Una buona pianificazione consente uno sviluppo più fluido e tempi di consegna affidabili."
+        "v": "Il calendario definitivo viene stabilito dopo aver definito l’ambito dei capi, i materiali, i cicli di campionatura, le quantità e la data obiettivo. Pianificare in anticipo le approvazioni offre al progetto il percorso più chiaro verso la consegna."
       }
     ]
+  },
+  "wardrobe": {
+    "kicker": "Che cosa ottieni",
+    "h2": "Un guardaroba sviluppato per ruolo e archiviato per i riordini",
+    "intro": "Nessun catalogo e nessun capo di stock adattato. Ogni capo viene definito a partire dal lavoro del ruolo e poi archiviato, così l’ordine successivo corrisponde al primo.",
+    "pillars": [
+      {
+        "h": "Pensato intorno al ruolo",
+        "p": "Ogni capo risponde al lavoro: come si muove il corpo, che cosa porta, com’è la sala alle sette del mattino e a mezzanotte."
+      },
+      {
+        "h": "Sviluppato come un sistema",
+        "p": "Tessuto, vestibilità, costruzione, colore e identità vengono decisi insieme, una volta sola, affinché accoglienza, sala e aree operative si leggano come un’unica squadra."
+      },
+      {
+        "h": "Archiviato per i riordini",
+        "p": "Cartamodelli e specifiche restano archiviati. Il secondo ordine corrisponde al primo anche due anni dopo, senza rifare lo sviluppo."
+      }
+    ],
+    "garmentsLead": "Che cosa comprende",
+    "garments": [
+      "Camicie",
+      "Pantaloni",
+      "Gonne",
+      "Abiti",
+      "Grembiuli",
+      "Maglieria",
+      "Blazer",
+      "Capispalla",
+      "Accessori"
+    ],
+    "ctaText": "Raccontaci i ruoli e ti proporremo il guardaroba.",
+    "ctaLabel": "Inizia il brief",
+    "img": "/assets/images/home/wardrobe-rail.jpg",
+    "alt": "Un insieme coordinato di divise appeso a uno stender"
   }
 }

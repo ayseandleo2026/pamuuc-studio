@@ -139,7 +139,9 @@
       "readArticle": "Read the article",
       "relatedTitle": "Related reading",
       "required": "required",
-      "sitemap": "Sitemap"
+      "sitemap": "Sitemap",
+      "faqMore": "Show all questions",
+      "faqLess": "Show fewer questions"
     },
     "es": {
       "takeaways": "Puntos clave",
@@ -164,14 +166,16 @@
       "close": "Cerrar",
       "formSending": "Enviando…",
       "formOk": "Gracias. Hemos recibido tu solicitud: solemos responder en un día laborable.",
-      "formError": "Algo ha fallado. Escríbenos a info@pamuuc.com.",
+      "formError": "Algo ha fallado. Inténtalo de nuevo o escríbenos a info@pamuuc.com.",
       "cookieText": "Usamos cookies esenciales para el idioma y el consentimiento. La analítica solo se carga si la aceptas.",
       "cookieAccept": "Aceptar analítica",
       "cookieReject": "Rechazar opcionales",
       "readArticle": "Leer el artículo",
       "relatedTitle": "Lecturas relacionadas",
       "required": "obligatorio",
-      "sitemap": "Sitemap"
+      "sitemap": "Mapa del sitio",
+      "faqMore": "Ver todas las preguntas",
+      "faqLess": "Ver menos preguntas"
     },
     "fr": {
       "takeaways": "À retenir",
@@ -196,14 +200,16 @@
       "close": "Fermer",
       "formSending": "Envoi…",
       "formOk": "Merci. Votre demande a bien été envoyée — nous répondons généralement sous un jour ouvré.",
-      "formError": "Une erreur est survenue. Écrivez-nous à info@pamuuc.com.",
+      "formError": "Une erreur est survenue. Réessayez ou écrivez-nous à info@pamuuc.com.",
       "cookieText": "Nous utilisons des cookies essentiels pour la langue et le consentement. Les statistiques ne se chargent qu’avec votre accord.",
       "cookieAccept": "Accepter les statistiques",
-      "cookieReject": "Refuser les optionnels",
+      "cookieReject": "Refuser les cookies facultatifs",
       "readArticle": "Lire l’article",
       "relatedTitle": "Lectures associées",
       "required": "obligatoire",
-      "sitemap": "Sitemap"
+      "sitemap": "Plan du site",
+      "faqMore": "Voir toutes les questions",
+      "faqLess": "Voir moins de questions"
     },
     "it": {
       "takeaways": "In sintesi",
@@ -228,14 +234,16 @@
       "close": "Chiudi",
       "formSending": "Invio…",
       "formOk": "Grazie. La richiesta è stata inviata: di solito rispondiamo entro un giorno lavorativo.",
-      "formError": "Qualcosa è andato storto. Scrivici a info@pamuuc.com.",
-      "cookieText": "Usiamo cookie essenziali per lingua e consenso. Le statistiche si caricano solo se le accetti.",
-      "cookieAccept": "Accetta le statistiche",
-      "cookieReject": "Rifiuta gli opzionali",
+      "formError": "Qualcosa è andato storto. Riprova o scrivici a info@pamuuc.com.",
+      "cookieText": "Usiamo cookie essenziali per lingua e consenso. Gli strumenti di analisi si caricano solo se li accetti.",
+      "cookieAccept": "Accetta gli strumenti di analisi",
+      "cookieReject": "Rifiuta i cookie facoltativi",
       "readArticle": "Leggi l’articolo",
       "relatedTitle": "Letture correlate",
       "required": "obbligatorio",
-      "sitemap": "Sitemap"
+      "sitemap": "Mappa del sito",
+      "faqMore": "Mostra tutte le domande",
+      "faqLess": "Mostra meno domande"
     },
     "de": {
       "takeaways": "Das Wichtigste",
@@ -260,14 +268,16 @@
       "close": "Schließen",
       "formSending": "Senden…",
       "formOk": "Danke. Ihre Anfrage ist eingegangen — wir antworten in der Regel innerhalb eines Werktags.",
-      "formError": "Etwas ist schiefgelaufen. Schreiben Sie uns an info@pamuuc.com.",
+      "formError": "Etwas ist schiefgelaufen. Versuchen Sie es erneut oder schreiben Sie uns an info@pamuuc.com.",
       "cookieText": "Wir verwenden essenzielle Cookies für Sprache und Einwilligung. Analytics wird nur nach Zustimmung geladen.",
       "cookieAccept": "Analytics akzeptieren",
-      "cookieReject": "Optionale ablehnen",
+      "cookieReject": "Optionale Cookies ablehnen",
       "readArticle": "Artikel lesen",
       "relatedTitle": "Weiterführende Lektüre",
       "required": "Pflichtfeld",
-      "sitemap": "Sitemap"
+      "sitemap": "Sitemap",
+      "faqMore": "Alle Fragen anzeigen",
+      "faqLess": "Weniger Fragen anzeigen"
     }
   },
   "legacyRedirects": {

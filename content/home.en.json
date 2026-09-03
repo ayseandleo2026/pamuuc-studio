@@ -76,44 +76,78 @@
       "Made for repeated wear and washing",
       "Connect different roles in one wardrobe",
       "Remain consistent across reorders"
-    ]
+    ],
+    "kicker": "Delivered work",
+    "stats": [
+      {
+        "v": "1000+",
+        "l": "garments for multiple 5-star establishments"
+      },
+      {
+        "v": "20+",
+        "l": "roles in a single wardrobe system"
+      },
+      {
+        "v": "12 months",
+        "l": "daily service and industrial laundry"
+      },
+      {
+        "v": "100%",
+        "l": "designed and produced in Barcelona"
+      }
+    ],
+    "img": "/assets/images/home/band-workshop.jpg",
+    "alt": "The Pamuuc Studios atelier in Barcelona: garment rail, press and cutting table"
   },
   "sectors": {
     "kicker": "WHO WE WORK WITH",
-    "h2": "Designed for the teams your customers see—and the roles that support them",
-    "intro": "Open a sector to see the typical roles, garment categories and practical priorities we design around.",
+    "h2": "Six environments we develop for",
+    "intro": "Each card opens the roles, garments and priorities behind it.",
     "items": [
       {
         "name": "Hotels and hospitality",
         "modal": "modal-sector-hotels",
-        "desc": "One coordinated wardrobe across reception, concierge, food and beverage, housekeeping, spa and management."
+        "desc": "One coordinated wardrobe across reception, concierge, food and beverage, housekeeping, spa and management.",
+        "img": "/assets/images/home/sector-01-hotels.jpg",
+        "alt": "Hotel corridor, a hand on a guest-room door"
       },
       {
         "name": "Restaurants and food service",
         "modal": "modal-sector-restaurants",
-        "desc": "Uniforms for front of house, bar, kitchen and management in fast-moving service environments."
+        "desc": "Uniforms for front of house, bar, kitchen and management in fast-moving service environments.",
+        "img": "/assets/images/home/sector-02-restaurants.jpg",
+        "alt": "Table service, a plate finished by hand"
       },
       {
         "name": "Spa and wellness",
         "modal": "modal-sector-wellness",
-        "desc": "Calm, functional uniforms for reception, treatment and support roles."
+        "desc": "Calm, functional uniforms for reception, treatment and support roles.",
+        "img": "/assets/images/home/sector-03-wellness.jpg",
+        "alt": "Calm treatment interior in warm neutral tones"
       },
       {
         "name": "Dental and private clinics",
         "modal": "modal-sector-medical",
-        "desc": "A professional alternative to generic clinical clothing for patient-facing and treatment teams."
+        "desc": "A professional alternative to generic clinical clothing for patient-facing and treatment teams.",
+        "img": "/assets/images/home/sector-04-clinics.jpg",
+        "alt": "Treatment room in a private clinic"
       },
       {
         "name": "Operational service teams",
         "modal": "modal-sector-service",
-        "desc": "Hard-wearing garments for maintenance, logistics, support and other practical roles."
+        "desc": "Hard-wearing garments for maintenance, logistics, support and other practical roles.",
+        "img": "/assets/images/home/sector-05-service.jpg",
+        "alt": "Back-of-house apron and technical workwear"
       },
       {
         "name": "Guest-facing teams",
         "modal": "modal-sector-guest",
-        "desc": "Custom uniforms for the people who welcome, guide and represent the business."
+        "desc": "Custom uniforms for the people who welcome, guide and represent the business.",
+        "img": "/assets/images/home/sector-06-guest.jpg",
+        "alt": "Hotel welcome desk with front-of-house team"
       }
-    ]
+    ],
+    "handoff": "Not sure which one fits? Describe your team"
   },
   "approach": {
     "kicker": "HOW WE DESIGN",
@@ -192,8 +226,8 @@
   },
   "process": {
     "kicker": "PROCESS",
-    "h2": "Three phases from project brief to delivery",
-    "intro": "Each phase ends with clear decisions and approvals before the project moves forward.",
+    "h2": "Three phases from brief to delivery",
+    "intro": "Each phase ends with a decision and an approval before the next begins.",
     "phases": [
       {
         "tag": "PHASE 01",
@@ -204,7 +238,9 @@
           "Role mapping",
           "Initial wardrobe direction"
         ],
-        "modal": "modal-phase-1"
+        "modal": "modal-phase-1",
+        "img": "/assets/images/home/process-01-sketches.jpg",
+        "alt": "Design sketches with fabric swatches on a pattern table"
       },
       {
         "tag": "PHASE 02",
@@ -215,7 +251,9 @@
           "Prototypes, samples and fittings",
           "Review and refinement"
         ],
-        "modal": "modal-phase-2"
+        "modal": "modal-phase-2",
+        "img": "/assets/images/home/process-02-fitting.jpg",
+        "alt": "A jacket basted on the stand during fitting"
       },
       {
         "tag": "PHASE 03",
@@ -226,7 +264,9 @@
           "Local production",
           "Delivery and reorder setup"
         ],
-        "modal": "modal-phase-3"
+        "modal": "modal-phase-3",
+        "img": "/assets/images/home/process-03-production.jpg",
+        "alt": "The production floor during a run"
       }
     ],
     "statsLabel": "Indicative timelines",
@@ -248,7 +288,8 @@
         "l": "When an approved pre-developed base suits the brief"
       }
     ],
-    "note": "The confirmed schedule depends on the number of styles, fabric availability, fittings, revision rounds, construction, quantities and approval timing."
+    "note": "The confirmed schedule depends on the number of styles, fabric availability, fittings, revision rounds, construction, quantities and approval timing.",
+    "handoff": "Put a date on your own project"
   },
   "personalised": {
     "kicker": "CUSTOMISATION",
@@ -305,8 +346,8 @@
   },
   "parameters": {
     "kicker": "PROJECT PRACTICALITIES",
-    "h2": "Quantities, pricing and timing—before you commit",
-    "intro": "These figures help you judge whether the service fits your project. Final quantities, price and timing are confirmed after the brief is reviewed.",
+    "h2": "Three ways in, with the numbers attached",
+    "intro": "You do not have to commission a full wardrobe. Pricing is quoted per project — we do not work from a rigid price list — and the schedule follows the number of styles, the fittings and the fabric.",
     "groups": [
       {
         "h3": "Recommended minimum quantities",
@@ -405,8 +446,8 @@
   },
   "projects": {
     "kicker": "SELECTED WORK AND GUIDANCE",
-    "h2": "See how the system works in real environments",
-    "intro": "Explore two project case studies and one practical guide covering hospitality, wellness and private healthcare.",
+    "h2": "Three programmes, in the environments they were made for",
+    "intro": "A hotel opening, a wellness team and a private clinic — the same method, three very different rooms.",
     "items": [
       {
         "tag": "HOTEL CASE STUDY",
@@ -435,12 +476,13 @@
         "href": "/en/blog/custom-dental-clinic-uniforms-barcelona/",
         "linkLabel": "Read the clinic case study"
       }
-    ]
+    ],
+    "handoff": "Start a programme like these"
   },
   "faq": {
     "kicker": "FREQUENTLY ASKED QUESTIONS",
     "h2": "Answers to the questions buyers ask first",
-    "intro": "The practical points to understand before a first project meeting.",
+    "intro": "The practical points worth settling before a first meeting.",
     "items": [
       {
         "q": "Do you work from a catalogue?",
@@ -457,11 +499,48 @@
       {
         "q": "Can you develop custom colours and details?",
         "a": "Yes. We can work with available fabric colour cards or assess dedicated colours when the material and quantity allow. Branding and custom details are selected according to the garment, intended visibility, durability and care requirements."
+      },
+      {
+        "q": "What is the minimum order quantity?",
+        "a": "Selected styles can be produced from 10 pieces per style. Custom woven garments generally begin around 10–15 pieces per style, distributed across sizes and approved variants, and custom knitwear generally begins around 100–150 pieces because the manufacturing process requires a higher quantity. We confirm the minimum after reviewing the garment type, fabric, colour, construction and level of customisation."
+      },
+      {
+        "q": "How much does a custom uniform project cost?",
+        "a": "We do not use a rigid price list. The proposal is built around the confirmed scope: garments, quantities, materials, construction and the level of customisation. Two garments that look similar can require very different development, materials and production work, so we price the project rather than applying one standard garment rate."
+      },
+      {
+        "q": "How long does a project take from brief to delivery?",
+        "a": "Development is typically four to six weeks and production a further three to five weeks, which puts many fully custom projects at around eight weeks in total. Shorter timelines may be possible depending on the number of styles, the fittings and the fabric. Timing is confirmed once the brief has been reviewed."
+      },
+      {
+        "q": "Where are the garments designed and produced?",
+        "a": "In Barcelona. Design, development, sampling, fittings and production all run through a local supply chain, which keeps prototype rounds short and gives direct control over the production run."
+      },
+      {
+        "q": "Do we see prototypes before production starts?",
+        "a": "Yes. Prototypes, samples and fittings come before any production commitment, so fit, fabric, construction and branding are agreed on real garments rather than on drawings."
+      },
+      {
+        "q": "How do you handle sizing across a whole team?",
+        "a": "Quantities are distributed across the required sizes at the size and quantity confirmation stage, and fittings are used to set the size run before production begins. New starters are then covered by the archived patterns and specifications."
+      },
+      {
+        "q": "Will the fabrics hold up to industrial laundry?",
+        "a": "Fabric and construction are selected for the care regime the garments will actually meet, including industrial laundry where that applies. The uniforms delivered for a five-star hotel opening have been through twelve months of daily service and industrial laundering."
+      },
+      {
+        "q": "Which sectors do you work with?",
+        "a": "Hotels and hospitality, restaurants and food service, spa and wellness, dental and private clinics, operational and service teams, and guest-facing roles. The method is the same across all of them; the garments, fabrics and priorities are not."
+      },
+      {
+        "q": "Can the uniforms follow our interior design or brand identity?",
+        "a": "Yes. A wardrobe can be developed directly from an interior concept, as it was for a five-star hotel opening in Barcelona. Colours can come from available fabric colour cards, or be developed as dedicated colours when the material and quantity allow."
       }
-    ]
+    ],
+    "handoff": "Still have a question? Ask it on the form"
   },
   "contact": {
-    "kicker": "START YOUR PROJECT",
+    "kicker": "Start your project",
     "h2": "Tell us about your team, roles and target date",
     "paras": [
       "Share what you know so far. We will review the scope, feasibility and most practical starting point before recommending a direction.",
@@ -1208,5 +1287,40 @@
         "v": "The confirmed schedule is issued after the garment scope, materials, sample rounds, quantities and target date are understood. Planning approvals early gives the project the clearest route to delivery."
       }
     ]
+  },
+  "wardrobe": {
+    "kicker": "What you get",
+    "h2": "One wardrobe, developed by role, kept for reorders",
+    "intro": "No catalogue and no adapted stock. Garments are defined by the work each role does, then archived so the next order matches the first.",
+    "pillars": [
+      {
+        "h": "Planned around the role",
+        "p": "Every garment answers to the work: how the body moves, what it carries, what the room is like at 7am and at midnight."
+      },
+      {
+        "h": "Developed as one system",
+        "p": "Fabric, fit, construction, colour and branding are decided together, once — so reception, floor and back of house read as one team."
+      },
+      {
+        "h": "Archived for reorders",
+        "p": "Patterns and specifications are kept on file. Order two matches order one, two years later, with no re-development."
+      }
+    ],
+    "garmentsLead": "What that covers",
+    "garments": [
+      "Shirts",
+      "Trousers",
+      "Skirts",
+      "Dresses",
+      "Aprons",
+      "Knitwear",
+      "Blazers",
+      "Outerwear",
+      "Accessories"
+    ],
+    "ctaText": "Tell us the roles and we will come back with the wardrobe.",
+    "ctaLabel": "Start the brief",
+    "img": "/assets/images/home/wardrobe-rail.jpg",
+    "alt": "A coordinated uniform set hanging on a rail"
   }
 }

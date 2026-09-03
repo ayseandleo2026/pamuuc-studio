@@ -2,7 +2,7 @@
   "key": "hospitality",
   "locale": "es",
   "slug": "uniformes-hosteleria-personalizados",
-  "title": "Uniformes a medida para hostelería",
+  "title": "Uniformes de hostelería: diseño y durabilidad",
   "headline": "Uniformes a medida para hostelería: diseño y durabilidad de la ropa de trabajo hotelera",
   "description": "Descubre cómo en METT Barcelona diseñamos uniformes a medida en sintonía con el concepto del hotel, utilizando tejidos duraderos para uniformes hoteleros funcionales.",
   "kicker": "Caso de hostelería",
@@ -10,7 +10,7 @@
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "METT Barcelona luxury hotel exterior",
+  "coverAlt": "Exterior del hotel de lujo METT Barcelona",
   "coverCaption": ""
 }
 ---
@@ -52,7 +52,7 @@ Esta decisión también apoya objetivos medioambientales: menor impacto logísti
 
 El uso de materiales diseñados para soportar lavados frecuentes también reduce el desperdicio porque prolonga la vida útil de las prendas. El proyecto reúne así fabricación local y sostenibilidad aplicadas a necesidades operativas concretas.
 
-## Mantenimiento, rendimiento y feedback del personal
+## Mantenimiento, rendimiento y valoración del personal
 
 Después de un año de uso diario, evaluamos los uniformes a fondo. La mayoría de las prendas se mantuvieron en excelentes condiciones, con buena conservación del color y de la forma.
 

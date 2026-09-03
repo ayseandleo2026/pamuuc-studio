@@ -10,13 +10,13 @@
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "custom-dental-clinic-uniforms-barcelona",
-  "coverAlt": "Dental clinic team in coordinated custom uniforms inside a refined Barcelona practice",
+  "coverAlt": "Equipo de una clínica dental con uniformes a medida coordinados en una cuidada consulta de Barcelona",
   "coverCaption": ""
 }
 ---
 Cuando una clínica dental premium evoluciona su imagen, el cambio no se detiene en el logotipo, la web y el interiorismo. El vestuario del equipo también forma parte de esa transformación. En entornos de alta exigencia, cada detalle visible afecta a la confianza y a la calidad percibida.
 
-Este proyecto en Passeig de Gracia partía de un objetivo claro: ir más allá de los códigos visuales de la clínica clásica y crear un entorno más contemporáneo, más cuidado y más coherente con la marca.
+Este proyecto en Passeig de Gràcia partía de un objetivo claro: ir más allá de los códigos visuales de la clínica clásica y crear un entorno más contemporáneo, más cuidado y más coherente con la marca.
 
 ## Por qué las clínicas premium replantean sus uniformes
 

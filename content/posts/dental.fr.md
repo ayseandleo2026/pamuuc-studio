@@ -10,7 +10,7 @@
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "custom-dental-clinic-uniforms-barcelona",
-  "coverAlt": "Dental clinic team in coordinated custom uniforms inside a refined Barcelona practice",
+  "coverAlt": "Équipe d’une clinique dentaire en uniformes sur mesure coordonnés dans un cabinet raffiné à Barcelone",
   "coverCaption": ""
 }
 ---
@@ -32,7 +32,7 @@ L’objectif était de préserver l’autorité clinique tout en adoucissant les
 
 ## Traduire la marque en vêtements concrets
 
-Avec une petite équipe, il a été possible de travailler avec précision sur les rôles, les préférences et la coupe. Il ne s’agissait pas d’un programme uniforme de masse, mais d’un système cohérent pour différentes fonctions.
+Avec une petite équipe, il a été possible de travailler avec précision sur les rôles, les préférences et la coupe. Il ne s’agissait pas d’une production standardisée à grande échelle, mais d’un système cohérent pour différentes fonctions.
 
 L’équilibre recherché était clair : professionnel mais pas rigide, net mais pas froid, contemporain mais pas guidé par les tendances. Les détails de construction ont été développés dans cette direction.
 
@@ -52,6 +52,6 @@ Une fois la direction définie, le projet est passé à l’échantillonnage et 
 
 ## Conclusion
 
-Ce cas montre qu’une garde-robe d’équipe peut soutenir concrètement l’évolution d’une marque, même dans la santé. Le résultat n’est pas de la mode appliquée à une clinique, mais un système de vêtements cohérent entre présentation, confort opérationnel, performance textile et identité spatiale.
+Ce cas montre qu’une garde-robe d’équipe peut soutenir concrètement l’évolution d’une marque, même dans la santé. Le résultat n’est pas de la mode appliquée à une clinique, mais un système de vêtements cohérent qui associe présentation, confort au travail, résistance des textiles et identité du lieu.
 
-Pour les activités de service qui cherchent une plus grande cohérence perceptive, il s’agit d’une intervention concrète à fort impact. Voir aussi les cas bien-être et hôtellerie premium.
+Pour les activités de service qui recherchent une image plus cohérente, il s’agit d’une intervention concrète à fort impact. Découvrez aussi nos projets pour le bien-être et l’hôtellerie haut de gamme.

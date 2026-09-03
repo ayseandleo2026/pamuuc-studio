@@ -10,7 +10,7 @@
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "wellness-studio-uniform-system",
-  "coverAlt": "Team wardrobe system for wellness studios",
+  "coverAlt": "Vestuario coordinado para el equipo de un estudio de bienestar",
   "coverCaption": ""
 }
 ---
@@ -18,7 +18,7 @@ En los estudios de bienestar, la experiencia del cliente empieza antes del trata
 
 Por esa razón, los uniformes deben abordarse como un sistema integrado. En lugar de elegir piezas separadas de catálogo, es más eficaz alinear el vestuario con la arquitectura, el flujo del servicio y las necesidades operativas diarias.
 
-El papel de los uniformes en los espacios de bienestar
+## El papel de los uniformes en los espacios de bienestar
 
 Estos entornos se sitúan entre la hostelería, el cuidado y la estética. Los clientes buscan precisión e higiene, pero también calma y coherencia visual. Los uniformes deben comunicar competencia y comodidad al mismo tiempo.
 

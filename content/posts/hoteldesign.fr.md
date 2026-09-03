@@ -4,7 +4,7 @@
   "slug": "comment-concevoir-uniformes-hotellerie",
   "title": "Comment concevoir des uniformes d’hôtel",
   "headline": "Comment concevoir les uniformes d’un hôtel à partir du parcours client",
-  "description": "Une méthode concrète pour transformer le concept d’un hôtel, ses métiers et ses contraintes opérationnelles en cahier des charges cohérent.",
+  "description": "Une méthode concrète pour transformer le concept d’un hôtel, ses métiers et ses contraintes opérationnelles en un cahier des charges cohérent.",
   "kicker": "Planification hôtelière",
   "published": "2026-08-27",
   "modified": "2026-08-27",
@@ -26,7 +26,7 @@ Pour concevoir les uniformes d’un hôtel, commencez par le parcours client, pa
 
 ## Le bel échantillon qui échoue à l’accueil
 
-Imaginez une veste de réception convaincante sur cintre. Derrière le comptoir, sa manche accroche lorsque la personne saisit une carte, sa poche ne contient pas les outils du service et son tissu devient trop chaud quand le hall se remplit. L’échantillon est séduisant, mais il n’a pas encore répondu au travail.
+Imaginez une veste de réception convaincante sur cintre. Derrière le comptoir, sa manche accroche lorsque la personne saisit une carte, sa poche ne contient pas les outils du service et son tissu devient trop chaud quand le hall se remplit. L’échantillon est séduisant, mais il ne répond pas encore aux exigences du métier.
 
 C’est la faiblesse d’un cahier des charges centré sur le produit : il demande quels vêtements plaisent à l’hôtel avant de définir ce que la tenue doit accomplir. Un document utile commence par la séquence de service. Il suit l’arrivée du client, la personne qui l’accueille, la suite de l’interaction et les équipes qui deviennent visibles au fil du parcours.
 
@@ -36,7 +36,7 @@ Commencez par parcourir lentement l’établissement. Observez l’architecture,
 
 Il ne s’agit pas de copier l’intérieur sur les vêtements. Un mur en pierre ne doit pas nécessairement devenir une veste de la même couleur, pas plus qu’un motif décoratif ne doit devenir une broderie. Traduisez plutôt l’environnement en principes de design : discret ou expressif, souple ou structuré, tonal ou contrasté, décontracté ou formel.
 
-Décrivez le caractère du service dans un langage simple, utilisable par toutes les équipes. Lorsque le design, les opérations et la direction partagent les mêmes mots, les premières décisions s’expliquent mieux et les révisions suivantes se jugent plus clairement.
+Décrivez le caractère du service dans un langage simple, utilisable par toutes les équipes. Lorsque la création, les équipes opérationnelles et la direction partagent les mêmes mots, les premières décisions s’expliquent mieux et les révisions suivantes se jugent plus clairement.
 
 ## Suivez le travail, pas l’intitulé du poste
 
@@ -44,7 +44,7 @@ Un intitulé de poste est trop général pour définir un vêtement. Deux équip
 
 Échangez avec les personnes qui porteront la tenue. [L’étude de Tu et de ses collègues](https://doi.org/10.1080/10941665.2011.610149) a examiné les liens entre le style des uniformes, l’image de l’hôtel, la perception des employés par eux-mêmes et celle des clients. [L’étude de Nelson et Bowen dans des resorts](https://doi.org/10.1177/001088040004100221) a relié certains attributs de l’uniforme aux attitudes du personnel et recommandé de l’associer au choix.
 
-Ces travaux ne prouvent pas qu’un design particulier provoque un résultat commercial. Ils confortent néanmoins un principe pratique : le cahier des charges doit considérer à la fois la personne qui porte le vêtement et le client qui la rencontre. Un essayage révèle les proportions ; seule l’observation du travail montre si la tenue appartient réellement au service.
+Ces travaux ne prouvent pas qu’un design particulier produit un résultat commercial. Ils confortent néanmoins un principe pratique : le cahier des charges doit considérer à la fois la personne qui porte le vêtement et le client qui la rencontre. Un essayage révèle les proportions ; seule l’observation du travail montre si la tenue est réellement adaptée au service.
 
 ## Écrivez une grammaire vestimentaire commune
 
@@ -54,9 +54,9 @@ Les différences entre les métiers doivent être intentionnelles. L’accueil p
 
 Cette démarche évite également l’effet déguisement. Un concept solide ne repose ni sur un thème littéral ni sur une décoration excessive. Il donne à l’équipe une présence claire, liée au lieu et crédible dans le travail quotidien.
 
-## Faites passer le concept par les opérations
+## Confrontez le concept aux réalités opérationnelles
 
-Avant de valider une direction, emmenez-la au-delà de la planche de présentation. Demandez comment chaque vêtement sera nettoyé, attribué, stocké et remplacé. Vérifiez que les couches fonctionnent ensemble, que les poches accueillent les vrais outils, que les fermetures se manipulent facilement et que les tissus proposés correspondent au circuit d’entretien.
+Avant de valider une direction, testez-la au-delà de la planche de présentation. Demandez comment chaque vêtement sera nettoyé, attribué, stocké et remplacé. Vérifiez que les couches fonctionnent ensemble, que les poches accueillent les outils réellement utilisés, que les fermetures se manipulent facilement et que les tissus proposés correspondent au circuit d’entretien.
 
 Pensez ensuite aux personnes qui rejoignent ou quittent l’équipe. Un système vestimentaire demande une approche claire des tailles, une méthode d’essayage convenue et des spécifications assez précises pour reproduire plus tard un vêtement validé. Le réassort doit être intégré au projet, pas traité comme une urgence après le lancement.
 
@@ -77,6 +77,6 @@ Ajoutez des preuves lorsqu’elles sont utiles : photographies des espaces, réf
 
 ## Passez du cahier des charges au développement
 
-Un bon cahier des charges ne dessine pas d’avance la réponse du fournisseur. Il crée les conditions nécessaires à des propositions, prototypes et essayages argumentés. Les matières, les patrons et les détails peuvent alors être évalués à partir d’une définition commune du lieu, du travail et du système opérationnel.
+Un bon cahier des charges ne préjuge pas de la réponse du fournisseur. Il crée les conditions nécessaires à des propositions, prototypes et essayages argumentés. Les matières, les patrons et les détails peuvent alors être évalués à partir d’une compréhension commune du lieu, du travail et de l’organisation opérationnelle.
 
-Utilisez les questions ci-dessus comme document de découverte. Consultez ensuite le [processus de design et de développement de Pamuuc](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) pour en faire un périmètre de départ clair. Le but n’est pas d’ajouter des vêtements, mais de créer un vestiaire cohérent où chaque pièce a une raison d’exister.
+Utilisez les questions ci-dessus comme document d’exploration. Consultez ensuite le [processus de design et de développement de Pamuuc](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) pour en faire un périmètre de départ clair. Le but n’est pas d’ajouter des vêtements, mais de créer un vestiaire cohérent où chaque pièce a une raison d’exister.

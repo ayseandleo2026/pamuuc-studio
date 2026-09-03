@@ -10,7 +10,7 @@
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "wellness-studio-uniform-system",
-  "coverAlt": "Team wardrobe system for wellness studios",
+  "coverAlt": "Abgestimmte Teamgarderobe für ein Wellnessstudio",
   "coverCaption": ""
 }
 ---
@@ -38,7 +38,7 @@ Die Stoffwahl ist entscheidend: atmungsaktive Fasern für Komfort, technische Mi
 
 ## Visuelle Konsistenz über verschiedene Rollen hinweg
 
-Ein kohärentes System bedeutet nicht, jede Person in exakt dasselbe Kleidungsstück zu stecken. Empfang, Therapeutinnen und Therapeuten sowie Management können eigene Varianten haben, solange sie in Farbe, Material und Schnitt eine gemeinsame visuelle Sprache teilen.
+Ein kohärentes System bedeutet nicht, jede Person in exakt dasselbe Kleidungsstück zu stecken. Empfang, Therapeutinnen und Therapeuten sowie Leitung können eigene Varianten haben, solange sie in Farbe, Material und Schnitt eine gemeinsame visuelle Sprache teilen.
 
 Einige wiederkehrende Codes, Kragenform, Ärmelabschlüsse oder Taschenlogik, reichen aus, um unterschiedliche Kleidungsstücke innerhalb einer klar lesbaren Teamidentität miteinander zu verbinden.
 
@@ -46,7 +46,7 @@ Einige wiederkehrende Codes, Kragenform, Ärmelabschlüsse oder Taschenlogik, re
 
 Ein wirksames System beinhaltet von Anfang an Regeln für Kontinuität: Größenarchiv, freigegebene Basisschnitte, Austauschzyklen und einen Nachbestellprozess. So wird visuelles Abdriften verhindert, wenn das Team wächst oder sich verändert.
 
-In diesem Bereich ist Kontinuität nicht nur eine Produktionsfrage. Sie schützt das Bild und die wahrgenommene Servicequalität. Eine parallele Logik sehen Sie auch in unserem Premium-Hotel-Case.
+In diesem Bereich ist Kontinuität nicht nur eine Produktionsfrage. Sie schützt das Erscheinungsbild und die wahrgenommene Servicequalität. Dieselbe Logik zeigt sich auch in unserem Projekt für ein Premiumhotel.
 
 ## Fazit
 

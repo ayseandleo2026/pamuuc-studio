@@ -1,8 +1,10 @@
 {
   "locale": "de",
   "meta": {
-    "title": "Uniformen für Hotellerie & Pflege | Pamuuc Studios",
-    "description": "Maßgeschneiderte Uniformen für Hotellerie, Gesundheitswesen und Serviceteams, entwickelt und produziert in Barcelona. Ab 10 Teilen pro Modell, rund 8 Wochen."
+    "title": "Studio für Maßuniformen in Barcelona | Pamuuc Studios",
+    "description": "Design und Produktion maßgeschneiderter Uniformen für Hotels, Restaurants, Wellnessbereiche und Kliniken. Produziert in Barcelona, ab 10 Teilen pro Modell.",
+    "ogTitle": "Studio für maßgeschneiderte Uniformen in Barcelona | Pamuuc Studios",
+    "ogDescription": "Maßgeschneiderte Uniformsysteme für Hotels, Restaurants, Wellnessbereiche, Kliniken und Teams mit Kundenkontakt: von Design und Anproben bis zu Produktion und Nachbestellungen."
   },
   "nav": [
     {
@@ -22,129 +24,164 @@
       "href": "/de/blog/"
     },
     {
-      "label": "Termin buchen",
+      "label": "Projekt besprechen",
       "href": "/de/#contact"
     }
   ],
   "hero": {
-    "eyebrow": "DESIGN- UND PRODUKTIONSSTUDIO FÜR MASSGEFERTIGTE UNIFORMEN",
-    "h1": "Strapazierfähige maßgeschneiderte Uniformen für anspruchsvolle Hospitality-, Gesundheits- und Serviceteams",
-    "lead": "Entwickelt für häufiges Waschen, lange Schichten und operative Kontinuität, mit der Atmosphäre Ihres Raums in jedem Kleidungsstück.",
+    "eyebrow": "DESIGN UND PRODUKTION MASSGESCHNEIDERTER UNIFORMEN · BARCELONA",
+    "h1": "Maßgeschneiderte Uniformen für Hotels, Restaurants, Wellnessbereiche und Privatkliniken",
+    "lead": "Wir entwerfen und produzieren maßgeschneiderte Uniformsysteme für Ihre Marke, die Rollen im Team und den Arbeitsalltag: vom ersten Briefing und den Anproben bis zur Produktion und zu künftigen Nachbestellungen.",
     "pills": [
-      "Maßgefertigte Uniformen",
-      "Elegante Funktionalität",
-      "Direkte und strategische Kontrolle über die lokale Produktion",
-      "Zuverlässige und termingerechte Nachbestellung"
+      "Für Ihre Marke entworfen",
+      "Nach Rollen entwickelt",
+      "In Barcelona produziert",
+      "Für Nachbestellungen vorbereitet"
     ],
-    "primary": "Erstgespräch anfragen",
-    "secondary": "Aktuelle Projekte ansehen",
+    "primary": "Uniformprojekt besprechen",
+    "secondary": "Ausgewählte Projekte ansehen",
+    "imageAlt": "Design maßgeschneiderter Uniformen und Bekleidungsentwicklung durch Pamuuc Studios in Barcelona",
     "proofs": [
       {
-        "label": "Startphase",
-        "text": "Entwicklung und erste Produktion für einen konkreten Raum"
+        "label": "Erstes Projekt",
+        "text": "Design, Muster, Anproben und Produktion für Ihren Raum und Ihr Team entwickelt."
       },
       {
-        "label": "Operative Kontinuität",
-        "text": "Eine validierte Garderobe, jederzeit verfügbar für zuverlässige Nachbestellungen nach Ihrem Bedarf"
+        "label": "Künftige Bestellungen",
+        "text": "Freigegebene Schnitte und Spezifikationen für konsistente Nachbestellungen archiviert."
       }
     ]
   },
   "services": {
-    "kicker": "LEISTUNGEN",
-    "h2": "Ein klares Studioangebot mit Fokus auf maßgeschneiderte Uniformen",
-    "intro": "Das Studio konzentriert sich auf die Gestaltung und Produktion vollständig individueller Uniformen für Hotellerie, Gesundheitswesen und Serviceteams.",
+    "kicker": "WAS WIR TUN",
+    "h2": "Ein vollständiger Service für maßgeschneiderte Uniformen, kein Katalog",
+    "intro": "Pamuuc Studios entwirft, entwickelt und produziert maßgeschneiderte Uniformen für Hotellerie, Wellness, Gesundheitswesen und Teams mit Kundenkontakt. Jedes Projekt orientiert sich am Unternehmen, an den Menschen, die die Kleidung tragen, und an ihrer täglichen Arbeit.",
     "card": {
-      "topline": "STUDIOLEISTUNG",
-      "h3": "Maßgefertigte Uniformen",
-      "p": "Projektbasiert entwickelt, um präzise auf operative Rollen, Bewegungsanforderungen, langfristige Haltbarkeit und die Übereinstimmung mit der Markenidentität zu reagieren.",
+      "topline": "DESIGN, ENTWICKLUNG UND PRODUKTION",
+      "h3": "Maßgeschneiderte Uniformsysteme",
+      "p": "Eine abgestimmte professionelle Garderobe, entwickelt für Ihren Raum, Ihre Marke, die Rollen, die Bewegung, die Pflegeanforderungen und das künftige Wachstum des Teams.",
       "features": [
-        "Definition der Kleidungsstücke nach Funktion, Einsatzkontext und Leistung",
-        "Auswahl und Abstimmung von Materialien, Konstruktionsdetails, Branding und Produktionskette",
-        "Auf Kontinuität ausgelegtes Design mit effizienten Nachbestellungen und schrittweisem Teamwachstum"
+        "Kleidungsstücke für jede Rolle und Arbeitsumgebung geplant",
+        "Stoffe, Passform, Konstruktion, Farben und Markenauftritt gemeinsam entwickelt",
+        "Schnitte und Spezifikationen für konsistente Nachbestellungen vorbereitet"
       ]
     }
   },
   "band": {
-    "text": "Wo Kleidung Teil des Erlebnisses wird",
+    "text": "Uniformen, die für Marke, Team und Schicht funktionieren",
     "points": [
-      "Im Einklang mit Identität und Ästhetik des Raums",
-      "Ausgerichtet auf alltägliche operative Abläufe",
+      "Spiegeln Ihren Raum und Ihre Identität wider",
+      "Unterstützen echte Bewegung und tägliche Aufgaben",
       "Lokal in Barcelona produziert",
-      "Für intensive Nutzung und häufiges Waschen entwickelt",
-      "Als kohärentes und integriertes Garderobensystem aufgebaut",
-      "Für langfristige Kontinuität konzipiert"
-    ]
+      "Für wiederholtes Tragen und Waschen entwickelt",
+      "Verbinden unterschiedliche Rollen in einer Garderobe",
+      "Bleiben bei Nachbestellungen konsistent"
+    ],
+    "kicker": "Gelieferte Arbeiten",
+    "stats": [
+      {
+        "v": "1000+",
+        "l": "Kleidungsstücke für mehrere Fünf-Sterne-Häuser"
+      },
+      {
+        "v": "20+",
+        "l": "Rollen in einem einzigen Garderobensystem"
+      },
+      {
+        "v": "12 Monate",
+        "l": "täglicher Dienst und industrielle Wäsche"
+      },
+      {
+        "v": "100%",
+        "l": "in Barcelona entworfen und produziert"
+      }
+    ],
+    "img": "/assets/images/home/band-workshop.jpg",
+    "alt": "Das Pamuuc-Studios-Atelier in Barcelona: Kleiderstange, Presse und Zuschneidetisch"
   },
   "sectors": {
-    "kicker": "FÜR WEN ES GEDACHT IST",
-    "h2": "Für sechs operative Kontexte entwickelt",
-    "intro": "Wählen Sie einen Bereich, um repräsentative Kleidungsstücke, Einsatzkontexte und die Rolle von Kleidung im täglichen Erlebnis zu entdecken",
+    "kicker": "MIT WEM WIR ARBEITEN",
+    "h2": "Sechs Arbeitsumgebungen, für die wir entwickeln",
+    "intro": "Jede Karte zeigt die Rollen, Kleidungsstücke und Prioritäten der jeweiligen Umgebung.",
     "items": [
       {
         "name": "Hotellerie",
         "modal": "modal-sector-hotels",
-        "desc": "Uniformsysteme für komplexe Teams und vielschichtige Umgebungen"
+        "desc": "Eine abgestimmte Garderobe für Empfang, Concierge, Gastronomie, Etagenservice, Spa und Leitung.",
+        "img": "/assets/images/home/sector-01-hotels.jpg",
+        "alt": "Hotelflur, eine Hand an der Zimmertür"
       },
       {
         "name": "Gastronomie",
         "modal": "modal-sector-restaurants",
-        "desc": "Uniformen für dynamische Umgebungen"
+        "desc": "Uniformen für Service, Bar, Küche und Leitung in dynamischen Arbeitsumgebungen.",
+        "img": "/assets/images/home/sector-02-restaurants.jpg",
+        "alt": "Service am Tisch, ein von Hand vollendeter Teller"
       },
       {
         "name": "Wellness",
         "modal": "modal-sector-wellness",
-        "desc": "Kleidungsstücke für komfortorientierte Umgebungen"
+        "desc": "Ruhige, funktionale Uniformen für Empfang, Behandlungen und unterstützende Rollen.",
+        "img": "/assets/images/home/sector-03-wellness.jpg",
+        "alt": "Ruhiger Behandlungsraum in warmen Naturtönen"
       },
       {
-        "name": "Gesundheitswesen",
+        "name": "Zahnarztpraxen und Privatkliniken",
         "modal": "modal-sector-medical",
-        "desc": "Professionelle Uniformen für Gesundheitsumgebungen"
+        "desc": "Eine professionelle Alternative zu generischer Klinikbekleidung für Empfangs- und Behandlungsteams.",
+        "img": "/assets/images/home/sector-04-clinics.jpg",
+        "alt": "Behandlungsraum einer Privatklinik"
       },
       {
-        "name": "Serviceteams",
+        "name": "Operative Serviceteams",
         "modal": "modal-sector-service",
-        "desc": "Strapazierfähige Kleidungsstücke für operative Rollen"
+        "desc": "Strapazierfähige Kleidung für Wartung, Logistik, Unterstützung und andere praktische Aufgaben.",
+        "img": "/assets/images/home/sector-05-service.jpg",
+        "alt": "Schürze für interne Arbeitsbereiche und technische Arbeitskleidung"
       },
       {
-        "name": "Gästebetreuung",
+        "name": "Teams mit Kundenkontakt",
         "modal": "modal-sector-guest",
-        "desc": "Kleidungsstücke für Rollen mit direktem Publikumsbezug"
+        "desc": "Maßgeschneiderte Uniformen für Menschen, die empfangen, begleiten und das Unternehmen repräsentieren.",
+        "img": "/assets/images/home/sector-06-guest.jpg",
+        "alt": "Hotelempfang mit dem Empfangsteam"
       }
-    ]
+    ],
+    "handoff": "Unsicher, welcher Bereich passt? Erzählen Sie uns von Ihrem Team"
   },
   "approach": {
     "kicker": "WIE WIR GESTALTEN",
-    "intro": "Ein Gestaltungsansatz, der beim Raum beginnt und zu Uniformen wird, die für das Team und das gesamte Erlebnis gemacht sind.",
+    "intro": "Wir beginnen bei Ihrem Raum und gestalten für die Menschen, die dort arbeiten",
     "cards": [
       {
         "n": "01",
         "h3": "Raum",
-        "p": "Architektur, Materialien, Licht und Atmosphäre bestimmen die Richtung; ein warmer Innenraum kann weichere Texturen, ruhige Töne und zurückhaltende Silhouetten nahelegen."
+        "p": "Architektur, Materialien, Farbe, Licht und Atmosphäre bestimmen die visuelle Richtung."
       },
       {
         "n": "02",
         "h3": "Rollen",
-        "p": "Jede Funktion wird nach Bewegung, Tempo und Werkzeugen betrachtet; Empfang, Service und klinische Rollen brauchen unterschiedliche Passformen, Taschen und visuelle Präsenz."
+        "p": "Wir erfassen Bewegung, Servicetempo, Werkzeuge, Sichtbarkeit und Pflegeanforderungen für jede Rolle."
       },
       {
         "n": "03",
         "h3": "Kleidungsstücke",
-        "p": "Passform, Silhouette und Produktkategorien werden als ein Garderobensystem organisiert, von Hemden und Schürzen bis zu Overshirts, Hosen und Außenschichten."
+        "p": "Passformen, Silhouetten, Schichten und Bekleidungskategorien werden zu einer Garderobe zusammengeführt."
       },
       {
         "n": "04",
         "h3": "Betrieb",
-        "p": "Die Konstruktion folgt der realen Routine: häufiges Waschen, lange Schichten, einfache Nachbestellung und konsistente Kontinuität über die Zeit."
+        "p": "Konstruktion, Waschen, Ersatzbedarf und Nachbestellungen werden von Anfang an eingeplant."
       }
     ]
   },
   "categories": {
     "kicker": "WAS WIR ENTWICKELN KÖNNEN",
-    "h2": "Ein definiertes Produktionssystem, entwickelt für die Komplexität realer Arbeitsumgebungen",
-    "intro": "Skalierbar für Organisationen mit mehreren Rollen und darauf ausgelegt, in jeder Produktionsphase Konsistenz, Funktionalität und Effizienz zu sichern.",
+    "h2": "Ein Garderobensystem, vom zentralen Kleidungsstück bis ins kleinste Detail",
+    "intro": "Wir können eine vollständige Garderobe für mehrere Rollen entwickeln oder mit einer Abteilung, einer Rolle oder einer Bekleidungskategorie beginnen. Alle Entscheidungen werden vor der Produktion abgestimmt.",
     "groups": [
       {
-        "label": "PRODUKTKATEGORIEN",
+        "label": "Bekleidungskategorien",
         "items": [
           "Hemden",
           "Hosen",
@@ -155,12 +192,12 @@
           "Polos und T-Shirts",
           "Blazer",
           "Jacken",
-          "Outerwear",
+          "Oberbekleidung",
           "Abgestimmte Accessoires"
         ]
       },
       {
-        "label": "BRANDING UND IDENTITÄT",
+        "label": "Marke und Identität",
         "items": [
           "Stickerei",
           "Ton-in-Ton-Stickerei",
@@ -168,14 +205,14 @@
           "Bedruckte Etiketten",
           "Namensetiketten",
           "Individuelle Veredelungen",
-          "Gebrandete Knöpfe",
+          "Knöpfe im Markendesign",
           "Siebdruck"
         ]
       },
       {
-        "label": "TECHNISCHE KONSTRUKTION",
+        "label": "Konstruktion und Leistung",
         "items": [
-          "Für häufiges Waschen entwickelte Kleidungsstücke",
+          "Stoffe passend zum vorgesehenen Waschverfahren",
           "Elastische Konstruktionen",
           "Verstärkte Nähte",
           "Atmungsaktive Stoffe",
@@ -189,120 +226,128 @@
   },
   "process": {
     "kicker": "PROZESS",
-    "h2": "Ein Weg in drei Phasen, von der gestalterischen Richtung bis zur finalen Lieferung",
-    "intro": "Jede Phase ist so strukturiert, dass sie Ziele definiert, die Arbeit steuert und greifbare Ergebnisse hervorbringt, die zum Gesamterfolg des Projekts beitragen.",
+    "h2": "Drei Phasen vom Briefing bis zur Lieferung",
+    "intro": "Jede Phase endet mit einer Entscheidung und einer Freigabe, bevor die nächste beginnt.",
     "phases": [
       {
-        "tag": "- PHASE 01",
-        "h3": "Discovery",
-        "desc": "Wir definieren das Projekt klar, bevor die Entwicklung beginnt",
+        "tag": "PHASE 01",
+        "h3": "Analyse",
+        "desc": "Wir definieren, was das Team braucht, bevor die Bekleidungsentwicklung beginnt.",
         "items": [
-          "Analyse der operativen Abläufe",
-          "Erfassung der Rollen und funktionalen Anforderungen",
-          "Definition der ersten Produktrichtung"
+          "Analyse von Team und Abläufen",
+          "Erfassung der Rollen",
+          "Erste Richtung für die Garderobe"
         ],
-        "modal": "modal-phase-1"
+        "modal": "modal-phase-1",
+        "img": "/assets/images/home/process-01-sketches.jpg",
+        "alt": "Entwurfsskizzen mit Stoffmustern auf dem Schnitttisch"
       },
       {
-        "tag": "- PHASE 02",
+        "tag": "PHASE 02",
         "h3": "Entwicklung",
-        "desc": "Wir testen, verfeinern und bereiten das Produkt auf die Produktion vor",
+        "desc": "Wir übersetzen die freigegebene Richtung in Kleidungsstücke und prüfen die entscheidenden Details.",
         "items": [
-          "Validierung von Materialien und Stoffen",
-          "Prototypenentwicklung, Musterung und Anproben",
-          "Überarbeitungs- und Optimierungszyklen"
+          "Prüfung von Stoffen und Materialien",
+          "Prototypen, Muster und Anproben",
+          "Überarbeitung und Verfeinerung"
         ],
-        "modal": "modal-phase-2"
+        "modal": "modal-phase-2",
+        "img": "/assets/images/home/process-02-fitting.jpg",
+        "alt": "Eine auf der Büste geheftete Jacke bei der Anprobe"
       },
       {
-        "tag": "- PHASE 03",
+        "tag": "PHASE 03",
         "h3": "Produktion",
-        "desc": "Von der finalen Freigabe bis zu Herstellung und Lieferung",
+        "desc": "Nach der Freigabe fertigen, bereiten und liefern wir die finalen Kleidungsstücke.",
         "items": [
           "Freigabe vor Produktionsbeginn",
           "Lokale Produktion",
           "Lieferung und Einrichtung der Nachbestelllogik"
         ],
-        "modal": "modal-phase-3"
+        "modal": "modal-phase-3",
+        "img": "/assets/images/home/process-03-production.jpg",
+        "alt": "Die Produktionsfläche während einer Serie"
       }
     ],
     "statsLabel": "Ungefähre Zeitrahmen",
     "stats": [
       {
         "v": "4–6 Wochen",
-        "l": "Typisches Entwicklungsfenster"
+        "l": "Typischer Entwicklungszeitraum"
       },
       {
         "v": "3–5 Wochen",
-        "l": "Typisches Produktionsfenster"
+        "l": "Typischer Produktionszeitraum"
       },
       {
         "v": "Etwa 8 Wochen",
-        "l": "Durchschnittlicher Zeitrahmen für ein vollständig maßgeschneidertes Projekt"
+        "l": "Richtwert für viele vollständig maßgeschneiderte Projekte"
       },
       {
-        "v": "Kürzere Zeitrahmen",
-        "l": "Wenn bereits vorentwickelte Designgrundlagen bestehen oder besondere Anforderungen gelten"
+        "v": "Kürzere Zeiträume sind teilweise möglich",
+        "l": "Wenn eine bereits entwickelte und freigegebene Grundlage zum Briefing passt"
       }
-    ]
+    ],
+    "note": "Der bestätigte Zeitplan hängt von der Anzahl der Modelle, der Stoffverfügbarkeit, den Anproben, den Überarbeitungsrunden, der Konstruktion, den Mengen und den Freigabezeiten ab.",
+    "handoff": "Setzen Sie ein Datum auf Ihr Projekt"
   },
   "personalised": {
     "kicker": "INDIVIDUALISIERUNG",
-    "h2": "Klare Optionen, konkrete Gestaltungsentscheidungen",
-    "intro": "Die folgenden Abschnitte zeigen, wie wir Individualisierung strukturiert steuern, von der Stoffauswahl bis zur Definition technischer und produktionsbezogener Details.",
+    "h2": "Jede Option folgt Nutzung, Pflege und Identität",
+    "intro": "Wir empfehlen Stoffe, Farben, Verarbeitungen und Methoden der Individualisierung passend zur Rolle, zu den Pflegeanforderungen, zur visuellen Richtung, zur Menge und zum Budget.",
     "accordions": [
       {
         "q": "Stoffe",
-        "p": "Die Stoffauswahl richtet sich nach Schichtdauer, klimatischen Bedingungen, Bewegungsintensität und Pflegeanforderungen.",
+        "p": "Die Stoffauswahl beginnt bei der Schicht: Klima, Bewegung, Kontakt, Erscheinungsbild und vorgesehenes Waschverfahren.",
         "items": [
-          "Beispiele: Baumwollmischungen, Leinenmischungen, pflegeleichte technische Stoffe",
-          "Wichtigste Kriterien: Komfort, Haltbarkeit, visuelle Qualität und Stabilität über die Zeit und nach dem Waschen"
+          "Beispiele: Baumwollmischungen, Leinenmischungen und pflegeleichte technische Stoffe, abhängig von Rolle und bestätigten Anforderungen.",
+          "Auswahlkriterien: Komfort, Haltbarkeit, Erscheinungsbild, Pflege und Stabilität bei wiederholtem Tragen und Waschen."
         ]
       },
       {
         "q": "Farben",
-        "p": "Die Farbrichtung beginnt beim Raum und bei der Markenidentität und wird anschließend unter realen Einsatzbedingungen validiert.",
+        "p": "Die Farbrichtung entsteht aus Raum und Marke und wird anschließend über Kleidungsstücke, Rollen, Licht und verfügbare Stoffe hinweg geprüft.",
         "items": [
-          "Beispiele: Das Farbspektrum variiert je nach gewähltem Stoff, mit der Möglichkeit eigens entwickelter Farblösungen für größere Projekte",
-          "Wichtigste Kriterien: Konsistenz über verschiedene Rollen hinweg und Wirkung unter unterschiedlichen Lichtverhältnissen"
+          "Optionen: Verfügbare Stofffarbkarten können die Entwicklung beschleunigen. Eigene Farben sind möglich, wenn Stoff und Menge es zulassen.",
+          "Auswahlkriterien: Konsistenz zwischen den Rollen, geeigneter Kontrast und Wirkung unter der Beleuchtung des Raums."
         ]
       },
       {
         "q": "Accessoires und Veredelungen",
-        "p": "Veredelungen prägen die Identität des Kleidungsstücks und sichern gleichzeitig eine starke Leistung im täglichen Einsatz.",
+        "p": "Knöpfe, Reißverschlüsse, Etiketten, Nähte und Verschlüsse schaffen Identität, müssen aber praktisch in Nutzung, Pflege und Ersatz bleiben.",
         "items": [
-          "Beispiele: individuelle Knöpfe, Reißverschlüsse, Etiketten, kontrastierende Steppnähte",
-          "Wichtigste Kriterien: Haltbarkeit, Austauschbarkeit und visuelle Konsistenz"
+          "Beispiele: individuelle Knöpfe, Reißverschlüsse, gewebte Etiketten, Namensetiketten und kontrastierende Nähte.",
+          "Auswahlkriterien: Haltbarkeit, Bedienbarkeit, einfacher Ersatz und visuelle Konsistenz."
         ]
       },
       {
-        "q": "Branding-Methoden",
-        "p": "Branding wird je nach Kleidungsstück, Nutzungshäufigkeit und gewünschter Sichtbarkeit entwickelt.",
+        "q": "Methoden der Markenkennzeichnung",
+        "p": "Die Markenkennzeichnung wird passend zum Kleidungsstück, zur nötigen Sichtbarkeit, zur vorgesehenen Nutzung und zum Pflegeverfahren ausgewählt.",
         "items": [
-          "Beispiele: Stickerei, Ton-in-Ton-Stickerei, gewebte Etiketten, Siebdruck",
-          "Wichtigste Kriterien: Haltbarkeit, Lesbarkeit und sorgfältig abgestimmte Platzierung"
+          "Beispiele: Stickerei, Ton-in-Ton-Stickerei, gewebte Etiketten und Siebdruck.",
+          "Auswahlkriterien: Lesbarkeit, Haltbarkeit, Maßstab und Platzierung."
         ]
       }
     ],
     "cards": [
       {
-        "h3": "Nah am Projekt",
-        "p": "Lokale Musterungen und Anproben ermöglichen schnellere, präzisere und fundiertere technische Entscheidungen."
+        "h3": "Lokale Muster und Anproben",
+        "p": "Die Entwicklung in Studionähe ermöglicht schnellere Rückmeldungen, klarere technische Entscheidungen und direkte Kommunikation."
       },
       {
         "h3": "Für die reale Arbeit entwickelt",
-        "p": "Jedes Kleidungsstück wird mit Blick auf Bewegung, Schichtdauer und den täglichen operativen Rhythmus entwickelt."
+        "p": "Bewegung, Schichtdauer, Aufgaben, Pflege und Arbeitsumgebung fließen in jedes Kleidungsstück ein."
       },
       {
-        "h3": "Für Kontinuität vorbereitet",
-        "p": "Schnitte, Veredelungen und Spezifikationen werden archiviert, um konsistente Nachbestellungen über die Zeit zu sichern und die Entwicklung des Teams zu begleiten."
+        "h3": "Spezifikationen für Kontinuität archiviert",
+        "p": "Freigegebene Schnitte, Verarbeitungen und Spezifikationen werden so organisiert, dass künftige Bestellungen demselben System folgen."
       }
     ]
   },
   "parameters": {
-    "kicker": "PRODUKTIONSPARAMETER",
-    "h2": "Wesentliche kommerzielle Informationen auf einen Blick",
-    "intro": "Öffnen Sie jeden Abschnitt, um Mengen und Variablen im Zusammenhang mit Vorlaufzeiten zu erkunden.",
+    "kicker": "PRAKTISCHE PROJEKTDATEN",
+    "h2": "Drei Einstiegsmöglichkeiten mit den wichtigsten Zahlen",
+    "intro": "Sie müssen keine komplette Garderobe beauftragen. Der Preis wird pro Projekt kalkuliert — wir arbeiten nicht mit einer starren Preisliste — und der Zeitplan richtet sich nach der Anzahl der Modelle, den Anproben und dem Stoff.",
     "groups": [
       {
         "h3": "Empfohlene Mindestmengen",
@@ -312,123 +357,136 @@
             "body": "Wir können ab 10 Teilen pro Modell produzieren, wobei Preis und Konstruktion auf die Menge abgestimmt werden."
           },
           {
-            "head": "10–15 Teile",
-            "body": "Webware-Kleidungsstücke pro Modell. So können wir auch kleine Teams mit maßgeschneiderten Uniformen bedienen."
+            "head": "10–15 Teile pro Modell",
+            "body": "Typischer Einstieg für maßgeschneiderte Webware, verteilt auf die benötigten Größen."
           },
           {
-            "head": "100–150 Teile",
-            "body": "Strickware pro Modell. Aufgrund des Herstellungsprozesses erfordert Strickware höhere Mengen."
+            "head": "100–150 Teile pro Modell",
+            "body": "Typischer Einstieg für maßgeschneiderte Strickware, da der Herstellungsprozess eine höhere Menge erfordert."
           }
         ],
         "items": [],
         "modal": "parameter-quantities"
       },
       {
-        "h3": "Eine maßgeschneiderte Investition",
+        "h3": "Ein projektbezogenes Angebot",
         "notes": [
           {
             "head": "",
-            "body": "Jedes Projekt hat eigene Merkmale, und die Preisgestaltung wird entsprechend definiert. Wir arbeiten nicht mit starren Preislisten. Jeder Vorschlag wird rund um die tatsächlichen Anforderungen Ihrer Marke entwickelt, um die richtige Balance zwischen Ästhetik, Funktionalität und Budget zu finden."
+            "body": "Wir arbeiten nicht mit einer starren Preisliste. Ihr Angebot basiert auf den Kleidungsstücken, Mengen, Materialien, der Konstruktion, individuellen Details, dem Entwicklungsaufwand und dem Zieltermin."
           }
         ],
+        "itemsLabel": "Wichtige Preisfaktoren",
         "items": [
-          "Materialien und Verarbeitungen werden so ausgewählt, dass sie sowohl zum vorgesehenen Einsatz als auch zum gewünschten Qualitätsniveau passen",
-          "Der Grad der Individualisierung wird an Ihre Markenidentität und operativen Anforderungen angepasst",
-          "Mengen und Komplexität der Kleidungsstücke werden optimiert, um eine stimmige und effiziente Investition sicherzustellen"
+          "Materialien und Verarbeitungen",
+          "Anzahl und Komplexität der Modelle",
+          "Menge pro Modell",
+          "Schnitt- und Musterentwicklung",
+          "Größenspektrum und Anforderungen an Anproben",
+          "Markenauftritt und individuelle Details",
+          "Produktionszeitplan"
         ],
         "modal": "parameter-pricing"
       },
       {
-        "h3": "Zeitfaktoren",
+        "h3": "Was den Zeitplan beeinflusst",
         "notes": [
           {
             "head": "",
-            "body": "Die Elemente, die Entwicklungs- und Produktionszeiten beeinflussen:"
+            "body": "Der Zeitplan hängt vom Entwicklungsaufwand und den Produktionsbedingungen des Projekts ab."
           }
         ],
+        "itemsLabel": "Wichtige Zeitfaktoren",
         "items": [
-          "Entwicklung und Definition der Schnitte",
-          "Anproben, Prüfungen und Überarbeitungszyklen",
+          "Schnittentwicklung",
+          "Anzahl der Prototypen und Anproben",
+          "Tempo von Prüfung und Freigabe",
           "Technische Konstruktionen oder maßgeschneiderte Lösungen",
-          "Komplexitätsgrad der Veredelung"
+          "Stoffbeschaffung",
+          "Komplexität der Verarbeitung",
+          "Menge und Produktionszeitplan"
         ],
         "modal": "parameter-timing"
       }
     ]
   },
   "continuity": {
-    "kicker": "KONTINUITÄTSMODELL",
-    "h2": "Von der ersten Entwicklung bis zu reibungslosen Nachbestellungen über die Zeit",
-    "intro": "Die erste Produktion definiert die Identität Ihrer professionellen Garderobe. Nach der Validierung wird sie zur Grundlage für schnellere, konsistentere und perfekt abgestimmte Nachbestellungen in der Zukunft.",
+    "kicker": "NACHBESTELLUNGEN",
+    "h2": "Einmal entwickeln. Aus einem freigegebenen System nachbestellen.",
+    "intro": "Die erste Produktion legt die Garderobe fest. Freigegebene Schnitte, Konstruktion, Farben, Verarbeitungen und Markenspezifikationen werden anschließend so organisiert, dass Ersatz, neue Mitarbeitende und Teamwachstum keinen Neustart des Projekts erfordern.",
     "rows": [
       [
         "Kriterien",
-        "Erstentwicklung → Kontinuität",
-        ""
+        "Erstprojekt",
+        "Künftige Nachbestellungen"
       ],
       [
         "Umfang",
         "Auf Ihren Raum, Ihre Rollen und Ihre operativen Anforderungen zugeschnitten.",
-        "Als wiederholbares Garderobensystem für das gesamte Team konsolidiert."
+        "Als wiederholbares Garderobensystem für das Team genutzt."
       ],
       [
         "Entwicklung",
-        "Schnitte und Konstruktion werden konzipiert, verfeinert und validiert.",
-        "Freigegebene Grundlagen werden reaktiviert, ohne von vorne beginnen zu müssen."
+        "Schnitte, Passform, Konstruktion und Verarbeitungen werden entwickelt und freigegeben.",
+        "Freigegebene Grundlagen werden reaktiviert, ohne den vollständigen Entwicklungsprozess zu wiederholen."
       ],
       [
-        "Nachbestellungen",
-        "Die erste Produktion wird getestet, optimiert und freigegeben.",
-        "Mit der Zeit bleibt die Konsistenz unverändert, auch wenn sich das Team weiterentwickelt."
+        "Bestellung",
+        "Die erste Produktion wird geprüft, verfeinert und freigegeben.",
+        "Künftige Mengen werden nach der freigegebenen Spezifikation produziert, vorbehaltlich der Materialverfügbarkeit und bestätigter Produktionsbedingungen."
       ]
     ],
     "loop": [
-      "Einmal freigeben",
+      "Garderobe freigeben",
       "→",
-      "Schnitte archivieren",
+      "Schnitte und Spezifikationen archivieren",
       "→",
-      "Mit vollständiger Kontinuität nachbestellen"
+      "Konsistent nachbestellen"
     ]
   },
   "projects": {
-    "kicker": "AUSGEWÄHLTE PROJEKTE",
-    "h2": "Konkreter Nachweis, jenseits von Worten",
-    "intro": "Eine Auswahl an Projekten, die zeigt, wie Gestaltungsentscheidungen in tägliche Abläufe, Teamwohlbefinden und langfristige Kontinuität übersetzt werden.",
+    "kicker": "AUSGEWÄHLTE PROJEKTE UND LEITFÄDEN",
+    "h2": "Drei Programme, in den Räumen, für die sie entstanden",
+    "intro": "Eine Hoteleröffnung, ein Wellness-Team und eine Privatklinik: dieselbe Methode, drei sehr verschiedene Räume.",
     "items": [
       {
-        "tag": "HOTELLERIE-GARDEROBE",
-        "h3": "Team eines Boutique-Hotels",
-        "p": "Kleidungsstücke mit direktem Gästekontakt, entwickelt im Einklang mit Architektur, visueller Identität und den Anforderungen langer Schichten.",
+        "tag": "HOTEL-FALLSTUDIE",
+        "h3": "Maßgeschneiderte Hoteluniformen für METT Barcelona",
+        "p": "Eine vollständige, rollenbezogene Garderobe, die aus dem Innenraumkonzept des Hotels für Empfang, Gastronomie, Leitung und Spa entwickelt und anschließend in Barcelona entworfen, prototypisiert und produziert wurde.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Project visual for hospitality environment",
-        "href": "/de/blog/uniformen-hotellerie/"
+        "alt": "Von Pamuuc Studios für METT Barcelona entwickelte Uniformen für den Gästebereich",
+        "href": "/de/blog/uniformen-hotellerie/",
+        "linkLabel": "Hotel-Fallstudie lesen"
       },
       {
-        "tag": "OPERATIVE KONTINUITÄT",
-        "h3": "Multifunktionales Serviceteam",
-        "p": "Definierte Silhouetten, einmal archiviert und präzise reaktiviert, wenn das Team wächst.",
+        "tag": "WELLNESS-LEITFADEN",
+        "h3": "Eine Wellness-Garderobe für mehrere Rollen entwickeln",
+        "p": "Ein praktischer Leitfaden, der Empfang, Behandlung und unterstützende Rollen durch gemeinsame Farben, Materialien und Bekleidungsdetails sowie einen klaren Kontinuitätsplan verbindet.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
-        "alt": "Project visual for continuity and reorders",
-        "href": "/de/blog/uniformen-wellness-studios/"
+        "alt": "Wellness-Teamgarderobe, die Empfang und Behandlungsrollen verbindet",
+        "href": "/de/blog/uniformen-wellness-studios/",
+        "linkLabel": "Wellness-Leitfaden lesen"
       },
       {
-        "tag": "UNIFORMRICHTUNG",
-        "h3": "Projekt für Klinik und Wellness",
-        "p": "Reduzierte Linien und komfortorientierte Konstruktion, entwickelt, um Vertrauen, Klarheit und natürliche Selbstverständlichkeit im täglichen Einsatz zu vermitteln.",
+        "tag": "KLINIK-FALLSTUDIE",
+        "h3": "Maßgeschneiderte Uniformen für eine Zahnarztpraxis in Barcelona",
+        "p": "Eine professionelle Garderobe jenseits generischer Klinikbekleidung, die Raum, Marke, den Auftritt am Empfang und die täglichen Pflegeanforderungen miteinander verbindet.",
         "img": "/assets/images/project-clinic-editorial.jpg",
-        "alt": "Project visual for medical and service uniforms",
-        "href": "/de/blog/uniformen-zahnarztpraxen-barcelona/"
+        "alt": "Maßgeschneiderte Klinikuniformen in einer Zahnarztpraxis in Barcelona",
+        "href": "/de/blog/uniformen-zahnarztpraxen-barcelona/",
+        "linkLabel": "Klinik-Fallstudie lesen"
       }
-    ]
+    ],
+    "handoff": "Ein Programm wie diese starten"
   },
   "faq": {
-    "kicker": "FAQ",
-    "h2": "Klare Antworten, noch bevor wir beginnen",
-    "intro": "Wesentliche Antworten auf die häufigsten Fragen von Teams aus Hotellerie, Gesundheitswesen und Service.",
+    "kicker": "HÄUFIGE FRAGEN",
+    "h2": "Antworten auf die ersten Fragen von Einkäufern",
+    "intro": "Die praktischen Punkte, die vor einem ersten Termin geklärt sein sollten.",
     "items": [
       {
         "q": "Arbeiten Sie mit einem Katalog?",
-        "a": "Nein. Jedes Projekt wird rund um Ihren operativen Kontext, Ihre Markenidentität und Ihre Teamstruktur entwickelt. Bestehende Grundlagen können wir integrieren, wenn sie in Bezug auf Zeit und Kosten einen echten Vorteil bringen, und dennoch ein individuelles, stimmiges und unverwechselbares Ergebnis sicherstellen."
+        "a": "Nein. Jedes Projekt wird für das Unternehmen, den Raum, das Team und die Rollen entwickelt. Wenn eine bestehende Designgrundlage einen echten Zeit- oder Kostenvorteil bietet, können wir sie als Ausgangspunkt nutzen und die finale Garderobe an das Briefing anpassen."
       },
       {
         "q": "Übernehmen Sie Nachbestellungen nach der ersten Produktion?",
@@ -440,36 +498,77 @@
       },
       {
         "q": "Entwickeln Sie Farben und individuelle Details?",
-        "a": "Ja. Wir können mit bestehenden Farbkarten arbeiten, um Vorlaufzeiten zu optimieren, oder eigene Farbtöne und Veredelungen entwickeln, wenn die Mengen es zulassen. Individualisierungstechniken werden nach Haltbarkeit, Lesbarkeit und Art des Kleidungsstücks ausgewählt."
+        "a": "Ja. Wir können mit verfügbaren Farbkarten arbeiten oder eigene Farben prüfen, wenn Material und Menge es zulassen. Markenkennzeichnung und individuelle Details werden passend zum Kleidungsstück, zur nötigen Sichtbarkeit, zur Haltbarkeit und zu den Pflegeanforderungen ausgewählt."
+      },
+      {
+        "q": "Wie hoch ist die Mindestbestellmenge?",
+        "a": "Ausgewählte Modelle lassen sich ab 10 Stück pro Modell produzieren. Maßgeschneiderte Webware beginnt in der Regel bei 10–15 Stück pro Modell, verteilt auf die benötigten Größen und freigegebenen Varianten; maßgeschneiderte Strickware beginnt meist bei 100–150 Stück, da ihr Herstellungsprozess eine höhere Menge verlangt. Die Mindestmenge bestätigen wir nach Prüfung von Kleidungsstück, Stoff, Farbe, Konstruktion und Individualisierungsgrad."
+      },
+      {
+        "q": "Was kostet ein maßgeschneidertes Uniformprojekt?",
+        "a": "Wir arbeiten nicht mit einer starren Preisliste. Das Angebot entsteht aus dem bestätigten Umfang: Kleidungsstücke, Mengen, Materialien, Konstruktion und Individualisierungsgrad. Zwei ähnlich aussehende Teile können sehr unterschiedliche Entwicklung, Materialien und Fertigung erfordern – wir kalkulieren daher das Projekt statt eines Einheitspreises pro Teil."
+      },
+      {
+        "q": "Wie lange dauert ein Projekt vom Briefing bis zur Lieferung?",
+        "a": "Die Entwicklung dauert typischerweise vier bis sechs Wochen, die Produktion weitere drei bis fünf, womit viele vollständig maßgefertigte Projekte bei rund acht Wochen liegen. Kürzere Zeiträume sind je nach Anzahl der Modelle, Anproben und Stoffe möglich. Der Terminplan wird nach Prüfung des Briefings bestätigt."
+      },
+      {
+        "q": "Wo werden die Kleidungsstücke entworfen und produziert?",
+        "a": "In Barcelona. Design, Entwicklung, Muster, Anproben und Produktion laufen über eine lokale Lieferkette. Das hält die Prototypenrunden kurz und ermöglicht direkte Kontrolle über die Produktion."
+      },
+      {
+        "q": "Sehen wir Prototypen, bevor die Produktion startet?",
+        "a": "Ja. Prototypen, Muster und Anproben kommen vor jeder Produktionszusage. Passform, Stoff, Konstruktion und Markenkennzeichnung werden an echten Kleidungsstücken freigegeben, nicht an Zeichnungen."
+      },
+      {
+        "q": "Wie lösen Sie die Größen für ein ganzes Team?",
+        "a": "Bei der Größen- und Mengenbestätigung werden die Mengen auf die benötigten Größen verteilt; durch Anproben legen wir vor Produktionsbeginn die Größenstaffel fest. Für neue Mitarbeitende stehen anschließend die archivierten Schnitte und Spezifikationen bereit."
+      },
+      {
+        "q": "Halten die Stoffe industrieller Wäsche stand?",
+        "a": "Stoff und Konstruktion werden nach dem tatsächlichen Pflegeverfahren der Kleidungsstücke ausgewählt, einschließlich Industriewäsche, wo sie vorgesehen ist. Die für die Eröffnung eines Fünf-Sterne-Hauses gelieferten Uniformen haben bereits zwölf Monate täglichen Einsatz und Industriewäsche durchlaufen."
+      },
+      {
+        "q": "Mit welchen Branchen arbeiten Sie?",
+        "a": "Hotellerie und Gastgewerbe, Gastronomie, Spa und Wellness, Zahnarztpraxen und Privatkliniken, operative Teams und Serviceteams sowie gästenahe Rollen. Die Methode ist überall dieselbe; Kleidungsstücke, Stoffe und Prioritäten sind es nicht."
+      },
+      {
+        "q": "Können die Uniformen unserer Innenarchitektur oder Markenidentität folgen?",
+        "a": "Ja. Eine Garderobe kann direkt aus einem Raumkonzept entwickelt werden, wie bei der Eröffnung eines Fünf-Sterne-Hauses in Barcelona. Farben können aus verfügbaren Stofffarbkarten stammen oder eigens entwickelt werden, wenn Material und Menge es zulassen."
       }
-    ]
+    ],
+    "handoff": "Noch eine Frage? Stellen Sie sie über das Formular"
   },
   "contact": {
-    "kicker": "GEBEN WIR IHREM PROJEKT FORM",
-    "h2": "Teilen Sie Ihr Projekt mit uns. Gemeinsam definieren wir den wirkungsvollsten Weg.",
+    "kicker": "Starten Sie Ihr Projekt",
+    "h2": "Erzählen Sie uns von Ihrem Team, den Rollen und dem Zieltermin",
     "paras": [
-      "Wir prüfen die Machbarkeit, identifizieren den geeignetsten Ausgangspunkt und definieren einen klaren Entwicklungsrahmen, der stimmig, belastbar und auf Dauer angelegt ist.",
-      "Wir laden Sie ein, das Formular auszufüllen. Sie werden in Kürze kontaktiert, um ein persönliches Gespräch zu vereinbaren, bei Ihnen vor Ort in Barcelona oder in Ihrer Stadt in Spanien oder im Ausland, oder ein erstes Video-Gespräch, das darauf ausgelegt ist, Ihren Kontext, Ihre operativen Anforderungen und die Identität Ihres Projekts gründlich zu verstehen."
+      "Teilen Sie uns mit, was bereits feststeht. Wir prüfen Umfang, Machbarkeit und den praktikabelsten Ausgangspunkt, bevor wir eine Richtung empfehlen.",
+      "Das erste Gespräch kann bei Ihnen vor Ort in Barcelona, an einem anderen Ort in Spanien oder im Ausland oder per Video stattfinden. Ziel ist es, die Umgebung, die Teamstruktur, die operativen Anforderungen und die Aufgaben der Uniformen zu verstehen."
     ],
+    "emailLabel": "Lieber per E-Mail?",
     "form": {
       "labels": {
-        "name": "Vollständiger Name * erforderlich",
-        "email": "Geschäftliche E-Mail * erforderlich",
+        "name": "Vollständiger Name",
+        "email": "Geschäftliche E-Mail-Adresse",
         "phone": "Telefonnummer",
-        "company": "Firmenname * erforderlich",
-        "team-size": "Teamgröße * erforderlich",
-        "project-type": "Projektart * erforderlich",
-        "timeline": "Zielzeitrahmen * erforderlich",
+        "company": "Unternehmensname",
+        "team-size": "Teamgröße",
+        "project-type": "Projektart",
+        "timeline": "Zieltermin",
         "meeting-datetime": "Bevorzugtes Datum und Uhrzeit für das erste Gespräch",
-        "brief": "Projektbeschreibung",
-        "website": "Website"
+        "brief": "Projektbeschreibung"
       },
       "placeholders": {
         "name": "Vollständiger Name",
         "email": "name@unternehmen.com",
         "phone": "+34 ...",
         "company": "Firmenname",
-        "brief": "Team, Umfeld, Rollen und Ziel der Kleidungsstücke"
+        "brief": "Beschreiben Sie Raum, Team, Rollen, Kleidungsstücke, ungefähre Mengen, Zieltermin und die Aufgaben, die die Uniformen erfüllen sollen."
+      },
+      "helps": {
+        "phone": "Optional",
+        "meeting-datetime": "Optional. Wir bestätigen die Verfügbarkeit, bevor wir den Termin festlegen."
       },
       "options": {
         "team-size": [
@@ -484,18 +583,18 @@
             "disabled": false
           },
           {
-            "v": "10 - 25",
-            "t": "10 - 25",
+            "v": "10–25",
+            "t": "10–25",
             "disabled": false
           },
           {
-            "v": "26 - 50",
-            "t": "26 - 50",
+            "v": "26–50",
+            "t": "26–50",
             "disabled": false
           },
           {
-            "v": "51 - 120",
-            "t": "51 - 120",
+            "v": "51–120",
+            "t": "51–120",
             "disabled": false
           },
           {
@@ -511,8 +610,8 @@
             "disabled": true
           },
           {
-            "v": "Vollständig individuelle Uniformsysteme",
-            "t": "Vollständig individuelle Uniformsysteme",
+            "v": "Ein vollständiges maßgeschneidertes Uniformsystem",
+            "t": "Ein vollständiges maßgeschneidertes Uniformsystem",
             "disabled": false
           },
           {
@@ -521,18 +620,18 @@
             "disabled": false
           },
           {
-            "v": "Ein einzelnes Kleidungsstück",
-            "t": "Ein einzelnes Kleidungsstück",
+            "v": "Eine Bekleidungskategorie",
+            "t": "Eine Bekleidungskategorie",
             "disabled": false
           },
           {
-            "v": "Eine bestimmte Abteilung",
-            "t": "Eine bestimmte Abteilung",
+            "v": "Eine Abteilung",
+            "t": "Eine Abteilung",
             "disabled": false
           },
           {
-            "v": "Merchandising",
-            "t": "Merchandising",
+            "v": "Merchandising oder Markenbekleidung",
+            "t": "Merchandising oder Markenbekleidung",
             "disabled": false
           },
           {
@@ -575,8 +674,8 @@
         ]
       },
       "consent": "Ich akzeptiere die {privacy:Datenschutzerklärung} und die {terms:Bedingungen}.",
-      "hint": "Das Ausfüllen des Formulars dauert etwa 2 Minuten. In der Regel antworten wir innerhalb eines Arbeitstags.",
-      "submit": "Absenden"
+      "hint": "Das Formular dauert etwa zwei Minuten. In der Regel antworten wir innerhalb eines Werktags.",
+      "submit": "Projektanfrage senden"
     }
   },
   "footer": {
@@ -635,59 +734,55 @@
     "service-custom": [
       {
         "t": "h",
-        "v": "VOLLSTÄNDIG INDIVIDUELLE UNIFORMEN FÜR IHR TEAM"
+        "v": "Vollständig maßgeschneiderte Uniformen für Ihr Team"
+      },
+      {
+        "t": "h",
+        "v": "Eine abgestimmte Garderobe, entwickelt für Ihren Raum, Ihre Rollen und Ihre Abläufe"
       },
       {
         "t": "p",
-        "v": "Professionelle Garderoben, entwickelt rund um Ihren Raum, Ihr Team und Ihre Abläufe"
+        "v": "Wir beginnen nicht damit, Sie Kleidungsstücke aus einem Standardkatalog auswählen zu lassen. Wir beginnen mit Ihrem Unternehmen: dem Raum, dem Service, der Teamstruktur und den Anforderungen, die jede Rolle an die Kleidung stellt."
       },
       {
         "t": "p",
-        "v": "Jedes Projekt beginnt mit einem leeren Blatt."
+        "v": "Das Ergebnis ist eine zusammenhängende Garderobe statt einer Gruppe einzelner Teile. Verschiedene Rollen können unterschiedliche Kleidungsstücke tragen und dennoch dieselbe visuelle Sprache bei Farbe, Passform, Material und Detail teilen."
+      },
+      {
+        "t": "h",
+        "v": "Aus Ihrer Umgebung heraus gestaltet"
       },
       {
         "t": "p",
-        "v": "Wir passen keine bestehenden Produkte an. Wir entwickeln Kleidungsstücke, die speziell für Ihren Raum, Ihre Teamstruktur und die tägliche Realität Ihres Service entworfen werden."
+        "v": "Architektur, Materialien, Licht und Markenidentität bestimmen die visuelle Richtung der Garderobe."
+      },
+      {
+        "t": "h",
+        "v": "Nach Rollen entwickelt"
       },
       {
         "t": "p",
-        "v": "Uniformen werden als kohärentes Garderobensystem gedacht, nicht als isolierte Einzelteile."
+        "v": "Empfang, Service, Leitung sowie klinische und operative Rollen werden getrennt betrachtet, damit Bewegung, Verantwortung, Werkzeuge und Sichtbarkeit jedes Kleidungsstück prägen."
+      },
+      {
+        "t": "h",
+        "v": "Am Team erprobt"
       },
       {
         "t": "p",
-        "v": "Jedes Kleidungsstück funktioniert im Zusammenspiel mit den anderen und sorgt teamübergreifend für visuelle Harmonie und operative Funktionalität."
+        "v": "Proportionen, Längen, Passform und funktionale Details werden anhand von Mustern und Anproben geprüft, bevor die Produktion freigegeben wird."
+      },
+      {
+        "t": "h",
+        "v": "Für Kontinuität vorbereitet"
       },
       {
         "t": "p",
-        "v": "Was ein vollständig maßgeschneidertes Projekt ausmacht"
+        "v": "Freigegebene Schnitte und Spezifikationen werden aufbewahrt, damit Ersatz, neue Mitarbeitende und künftige Bestellungen demselben System folgen."
       },
       {
-        "t": "p",
-        "v": "Ein Design, das beim Raum beginnt"
-      },
-      {
-        "t": "p",
-        "v": "Architektur, Materialien, Licht und Markenatmosphäre bestimmen die visuelle Richtung der Garderobe."
-      },
-      {
-        "t": "p",
-        "v": "Rollenbasierte Entwicklung"
-      },
-      {
-        "t": "p",
-        "v": "Jede Funktion wird detailliert analysiert, Empfang, Service, Management, Betrieb, um Kleidungsstücke zu schaffen, die auf Bewegung, Verantwortung und Arbeitsrhythmus abgestimmt sind."
-      },
-      {
-        "t": "p",
-        "v": "Eigene Silhouetten"
-      },
-      {
-        "t": "p",
-        "v": "Passform, Proportionen und Längen werden so definiert, dass sie sich im Umfeld natürlich anfühlen und während langer Schichten Komfort sichern."
-      },
-      {
-        "t": "p",
-        "v": "Was wir entwickeln"
+        "t": "h",
+        "v": "Kleidungsstücke, die wir entwickeln können"
       },
       {
         "t": "ul",
@@ -695,20 +790,28 @@
           "Hemden und Overshirts",
           "Hosen und Röcke",
           "Kleider",
-          "Schürzen und operative Kleidungsstücke",
-          "Strickwaren und Outerwear",
-          "Accessoires"
+          "Schürzen und operative Bekleidung",
+          "Strick- und Oberbekleidung",
+          "Abgestimmte Accessoires"
         ]
       }
     ],
     "sector-hotels": [
       {
-        "t": "p",
-        "v": "Im Hospitality-Bereich kommen unterschiedliche Abteilungen zusammen, jede mit eigenen Funktionen und gästebezogenen Kontexten. Uniformen müssen die Identität des Hauses widerspiegeln und zugleich Praktikabilität, Kontinuität und operative Zuverlässigkeit sicherstellen."
+        "t": "h",
+        "v": "Maßgeschneiderte Hoteluniformen"
+      },
+      {
+        "t": "h",
+        "v": "Eine visuelle Sprache für ein Haus mit vielen unterschiedlichen Rollen"
       },
       {
         "t": "p",
-        "v": "Wichtige Rollen"
+        "v": "Ein Hotel vereint Abteilungen mit Gäste-, Service- und operativen Aufgaben und sehr unterschiedlichen Arbeitsanforderungen. Wir entwickeln rollenspezifische Kleidungsstücke, die dennoch eine gemeinsame Hotelgarderobe bilden."
+      },
+      {
+        "t": "h",
+        "v": "Typische Rollen"
       },
       {
         "t": "ul",
@@ -716,47 +819,71 @@
           "Empfang und Begrüßung",
           "Concierge und Gästeservice",
           "Restaurant und Bar",
-          "Management",
-          "Housekeeping"
+          "Leitung",
+          "Etagenservice",
+          "Spa und Wellness"
         ]
       },
       {
-        "t": "p",
-        "v": "Kleidungsarten:"
+        "t": "h",
+        "v": "Typische Kleidungsstücke"
       },
       {
         "t": "ul",
         "v": [
-          "Hemden",
+          "Hemden und Overshirts",
           "Hosen und Röcke",
           "Kleider",
-          "Blazer",
+          "Blazer und Jacken",
           "Schürzen",
-          "Strickwaren"
+          "Strick und äußere Bekleidungsschichten"
         ]
       },
       {
-        "t": "p",
-        "v": "Gestalterische Prioritäten"
+        "t": "h",
+        "v": "Gestaltungsprioritäten"
       },
       {
         "t": "ul",
         "v": [
-          "Visuelle Konsistenz über alle Abteilungen hinweg",
-          "Komfort bei langen Schichten",
-          "Haltbarkeit im täglichen Einsatz",
-          "Übereinstimmung mit Architektur und Markenidentität"
+          "Eine klare Identität über alle Abteilungen hinweg",
+          "Komfort und Bewegungsfreiheit während langer Schichten",
+          "Materialien und Konstruktion passend zum täglichen Einsatz",
+          "Abstimmung auf Architektur und Marke",
+          "Ein praktisches System für neue Mitarbeitende und Nachbestellungen"
         ]
       }
     ],
     "sector-restaurants": [
       {
-        "t": "p",
-        "v": "Teams in Gastronomie und Food & Beverage arbeiten in hochintensiven Situationen. Die Kleidungsstücke müssen den Servicerhythmus unterstützen und zugleich Haltbarkeit, Komfort und visuelle Präsenz ausbalancieren."
+        "t": "h",
+        "v": "Maßgeschneiderte Restaurantuniformen"
+      },
+      {
+        "t": "h",
+        "v": "Entwickelt für Servicetempo, Bewegung, Pflege und die Identität des Hauses"
       },
       {
         "t": "p",
-        "v": "Kleidungsarten"
+        "v": "Restaurantteams arbeiten bei Hitze und viel Bewegung, mit Fleckenrisiko und über lange Servicezeiten. Die Uniform muss dieses Tempo unterstützen und zugleich Service- und operative Rollen mit dem Konzept des Hauses verbinden."
+      },
+      {
+        "t": "h",
+        "v": "Typische Rollen"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Begrüßung und Empfang",
+          "Service",
+          "Barteams",
+          "Küche und Unterstützung",
+          "Leitung"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Typische Kleidungsstücke"
       },
       {
         "t": "ul",
@@ -764,98 +891,150 @@
           "Hemden und Overshirts",
           "Schürzen",
           "Hosen",
-          "Polos",
+          "Polos und T-Shirts",
           "Leichte Jacken"
         ]
       },
       {
-        "t": "p",
-        "v": "Wichtige Elemente:"
+        "t": "h",
+        "v": "Gestaltungsprioritäten"
       },
       {
         "t": "ul",
         "v": [
           "Bewegungsfreiheit",
-          "Atmungsaktive Stoffe",
-          "Fleckenbeständigkeit",
-          "Verstärkte Konstruktion"
+          "Atmungsaktive und pflegeleichte Stoffe",
+          "Funktionale Taschen und Verschlüsse",
+          "Verstärkte Konstruktion, wo erforderlich",
+          "Eine visuelle Richtung, die zum Restauranterlebnis passt"
         ]
       }
     ],
     "sector-wellness": [
       {
-        "t": "p",
-        "v": "In Wellness-Bereichen tragen Uniformen dazu bei, eine Atmosphäre von Ruhe und Vertrauen zu schaffen. Das Design setzt auf Weichheit, Schlichtheit und visuelle Kohärenz mit der Identität des Raums."
+        "t": "h",
+        "v": "Uniformen für Spa und Wellness"
+      },
+      {
+        "t": "h",
+        "v": "Komfort, Bewegung und ein ruhiger Auftritt entlang der gesamten Kundenreise"
       },
       {
         "t": "p",
-        "v": "Kleidungsarten"
+        "v": "In Wellnessumgebungen ist das Team Teil der Atmosphäre. Wir verbinden die Kleidung mit dem Raum und berücksichtigen dabei engen Kundenkontakt, Bewegung, lange Schichten und regelmäßige Pflege."
+      },
+      {
+        "t": "h",
+        "v": "Typische Rollen"
       },
       {
         "t": "ul",
         "v": [
-          "Tuniken",
-          "Weiche Oberteile",
-          "Hosen",
-          "Kleider"
+          "Empfang",
+          "Therapeutinnen, Therapeuten und Behandlungsteams",
+          "Spa-Betreuung",
+          "Unterstützende Rollen",
+          "Leitung"
         ]
       },
       {
-        "t": "p",
-        "v": "Materialprioritäten"
+        "t": "h",
+        "v": "Typische Kleidungsstücke"
       },
       {
         "t": "ul",
         "v": [
-          "Atmungsaktivität",
-          "Komfort",
-          "Weiche Haptik"
+          "Tuniken und weiche Oberteile",
+          "Hosen",
+          "Kleider",
+          "Overshirts und leichte Schichten"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Gestaltungsprioritäten"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Komfort und uneingeschränkte Bewegung",
+          "Atmungsaktive, angenehm zu tragende Materialien",
+          "Ruhige Farben und zurückhaltende Details",
+          "Klare Verbindung zwischen Empfangs- und Behandlungsrollen",
+          "Konsistenz, wenn sich das Team verändert oder wächst"
         ]
       }
     ],
     "sector-medical": [
       {
-        "t": "p",
-        "v": "Diese Kleidungsstücke begleiten lange Arbeitstage und bewahren dabei ein geordnetes, sauberes und beruhigendes Erscheinungsbild. Der Ansatz priorisiert Funktionalität, ohne auf eine gepflegte Ästhetik zu verzichten."
+        "t": "h",
+        "v": "Maßgeschneiderte Uniformen für Zahnarztpraxen und Privatkliniken"
+      },
+      {
+        "t": "h",
+        "v": "Klinische Funktion mit einem durchdachteren, markengerechten Teamauftritt"
       },
       {
         "t": "p",
-        "v": "Kleidungsarten"
+        "v": "Privatkliniken benötigen Kleidung für lange Arbeitstage, Bewegung und häufige Pflege, die Patientinnen und Patienten zugleich ein sauberes, beruhigendes und unverwechselbares Bild vermittelt."
+      },
+      {
+        "t": "h",
+        "v": "Typische Rollen"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Empfang und Patientenkoordination",
+          "Klinische Teams",
+          "Behandlungsassistenz",
+          "Praxismanagement"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Typische Kleidungsstücke"
       },
       {
         "t": "ul",
         "v": [
           "Medizinische Oberteile",
-          "Operative Sets",
+          "Abgestimmte Arbeitssets",
           "Hosen",
-          "Overshirts"
+          "Overshirts und Empfangsjacken"
         ]
       },
       {
-        "t": "p",
-        "v": "Gestalterische und technische Prioritäten"
+        "t": "h",
+        "v": "Gestaltungsprioritäten"
       },
       {
         "t": "ul",
         "v": [
-          "Atmungsaktive Stoffe",
-          "Leichtes Waschen und einfache Pflege",
-          "Haltbarkeit",
-          "Komfort",
-          "Besonders widerstandsfähige Stoffe",
-          "Funktionale Taschen",
-          "Vereinfachte Pflege"
+          "Atmungsaktive und pflegeleichte Stoffe",
+          "Bewegungsfreiheit und ganztägiger Komfort",
+          "Funktionale Taschen und Verschlüsse",
+          "Ein sauberes Erscheinungsbild unter klinischer Beleuchtung",
+          "Visuelle Kontinuität zwischen Empfangs- und Behandlungsbereichen"
         ]
       }
     ],
     "sector-service": [
       {
-        "t": "p",
-        "v": "Mitarbeitende in Instandhaltung, Logistik und Support benötigen Uniformen, die robust, funktional und mit der Markenidentität stimmig sind."
+        "t": "h",
+        "v": "Uniformen für operative Serviceteams"
+      },
+      {
+        "t": "h",
+        "v": "Praktische Arbeitskleidung, die weiterhin zur Marke gehört"
       },
       {
         "t": "p",
-        "v": "Kleidungsarten"
+        "v": "Teams in Wartung, Logistik und Unterstützung brauchen Kleidung, bei der Bewegung, Stauraum, Haltbarkeit und einfache Pflege im Vordergrund stehen, ohne vom Erscheinungsbild der übrigen Organisation abzuweichen."
+      },
+      {
+        "t": "h",
+        "v": "Typische Kleidungsstücke"
       },
       {
         "t": "ul",
@@ -863,254 +1042,285 @@
           "Arbeitshemden",
           "Technische Hosen",
           "Overshirts",
-          "Leichte Jacken"
+          "Leichte Jacken",
+          "Äußere Bekleidungsschichten"
         ]
       },
       {
-        "t": "p",
-        "v": "Technische Prioritäten"
+        "t": "h",
+        "v": "Gestaltungsprioritäten"
       },
       {
         "t": "ul",
         "v": [
-          "Verstärkte Konstruktion",
-          "Besonders widerstandsfähige Stoffe",
+          "Verstärkte Konstruktion, wo erforderlich",
           "Funktionale Taschen",
-          "Vereinfachte Pflege"
+          "Pflegeleichte Materialien",
+          "Klare Erkennbarkeit der Rollen",
+          "Visuelle Konsistenz mit Teams im Kundenkontakt"
         ]
       }
     ],
     "sector-guest": [
       {
-        "t": "p",
-        "v": "Das Team ist der erste greifbare Ausdruck der Marke. Uniformen müssen Professionalität und Eleganz vermitteln und zugleich Komfort in der täglichen Interaktion gewährleisten."
+        "t": "h",
+        "v": "Uniformen für Rollen mit Kundenkontakt"
+      },
+      {
+        "t": "h",
+        "v": "Ein klarer Ausdruck der Marke, gestaltet für die tägliche Interaktion"
       },
       {
         "t": "p",
-        "v": "Kleidungsarten"
+        "v": "In Privatclubs, im gehobenen Einzelhandel, in Galerien, Kulturstätten und anderen Dienstleistungsunternehmen ist das Team einer der ersten sichtbaren Ausdrücke der Organisation."
+      },
+      {
+        "t": "h",
+        "v": "Typische Rollen"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Begrüßung und Empfang",
+          "Gästebetreuung",
+          "Kundenservice",
+          "Teams im Publikumsbereich",
+          "Leitung"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Typische Kleidungsstücke"
       },
       {
         "t": "ul",
         "v": [
           "Hemden",
-          "Hosen",
+          "Hosen und Röcke",
           "Kleider",
-          "Blazer"
+          "Blazer und Jacken",
+          "Abgestimmte Accessoires"
         ]
       },
       {
-        "t": "p",
-        "v": "Gestalterische Prioritäten"
+        "t": "h",
+        "v": "Gestaltungsprioritäten"
       },
       {
         "t": "ul",
         "v": [
-          "Klare und wiedererkennbare visuelle Identität",
-          "Komfort bei langen Schichten",
-          "Schlichte Eleganz"
+          "Eine wiedererkennbare und angemessene visuelle Identität",
+          "Komfort bei langen Interaktionszeiten",
+          "Klare Rollen ohne unnötige Förmlichkeit",
+          "Konsistenz über Standorte und künftige Bestellungen hinweg"
         ]
       }
     ],
     "phase-1": [
       {
         "t": "h",
-        "v": "PHASE 01 — ANALYSE"
+        "v": "Phase 01 — Analyse"
+      },
+      {
+        "t": "h",
+        "v": "Das Briefing vor Beginn der Entwicklung definieren"
       },
       {
         "t": "p",
-        "v": "Den Kontext verstehen, die Richtung definieren"
+        "v": "Wir beginnen mit den Menschen, dem Raum, den Rollen, Mengen, Terminen und geschäftlichen Anforderungen. So erhält das Projekt eine gemeinsam vereinbarte Richtung, bevor Zeit in Muster oder Produktionsentscheidungen fließt."
+      },
+      {
+        "t": "h",
+        "v": "Was wir prüfen"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Tägliche Abläufe und Servicefluss",
+          "Teamstruktur, Rollen und Personalstärke",
+          "Raum, Materialien und Markenidentität",
+          "Prioritäten bei den Kleidungsstücken und funktionale Anforderungen",
+          "Zieltermin und Budgetrahmen"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Ergebnis"
       },
       {
         "t": "p",
-        "v": "Jedes Projekt beginnt mit einer vertieften Analyse des Kontexts, in dem die Uniformen eingesetzt werden."
-      },
-      {
-        "t": "p",
-        "v": "Raum, operative Abläufe, Teamstruktur und Markenidentität steuern die ersten Entscheidungen und definieren eine klare Richtung für die gesamte Garderobe."
-      },
-      {
-        "t": "p",
-        "v": "Wichtige Tätigkeiten"
-      },
-      {
-        "t": "p",
-        "v": "Analyse der Abläufe"
-      },
-      {
-        "t": "p",
-        "v": "Rollenmapping"
-      },
-      {
-        "t": "p",
-        "v": "Lesen von Raum und visueller Identität"
-      },
-      {
-        "t": "p",
-        "v": "Definition der Gestaltungsrichtung"
-      },
-      {
-        "t": "p",
-        "v": "Ziel ist es, eine starke, gemeinsame Grundlage zu schaffen, bevor die Entwicklung beginnt."
+        "v": "Ein vereinbarter Projektumfang, eine Rollenübersicht und eine erste Richtung für die Garderobe."
       }
     ],
     "phase-2": [
       {
         "t": "h",
-        "v": "PHASE 02 — ENTWICKLUNG"
+        "v": "Phase 02 — Entwicklung"
+      },
+      {
+        "t": "h",
+        "v": "Die Richtung in Kleidungsstücke übersetzen, die das Team bewerten kann"
       },
       {
         "t": "p",
-        "v": "Von der Richtung zum Kleidungsstück"
+        "v": "Wir entwickeln Stoffe, Schnitte, Passform, Konstruktion und Details und testen sie anschließend anhand von Prototypen und Anproben, bevor die Produktion freigegeben wird."
+      },
+      {
+        "t": "h",
+        "v": "Wichtigste Aktivitäten"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Materialauswahl und -prüfung",
+          "Schnittentwicklung",
+          "Erstellung von Prototypen",
+          "Anproben mit repräsentativen Teammitgliedern",
+          "Korrekturen an Passform, Funktion und Details"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Ergebnis"
       },
       {
         "t": "p",
-        "v": "Die Entwicklungsphase übersetzt die Gestaltungsrichtung in konkrete Kleidungsstücke."
-      },
-      {
-        "t": "p",
-        "v": "Stoffe, Schnitte und Konstruktion werden über Prototypen und Anproben definiert und getestet, um Komfort, Funktionalität und visuelle Konsistenz zu sichern."
-      },
-      {
-        "t": "p",
-        "v": "Wichtige Tätigkeiten"
-      },
-      {
-        "t": "p",
-        "v": "Auswahl und Validierung der Materialien"
-      },
-      {
-        "t": "p",
-        "v": "Schnittentwicklung"
-      },
-      {
-        "t": "p",
-        "v": "Erstellung von Prototypen"
-      },
-      {
-        "t": "p",
-        "v": "Anproben und Optimierung"
-      },
-      {
-        "t": "p",
-        "v": "Jede Entscheidung wird unter realen Nutzungsbedingungen geprüft, um langfristige Zuverlässigkeit zu gewährleisten."
+        "v": "Freigegebene Kleidungsstücke, Materialien und technische Entscheidungen, bereit für die Produktion."
       }
     ],
     "phase-3": [
       {
         "t": "h",
-        "v": "PHASE 03 — PRODUKTION"
+        "v": "Phase 03 — Produktion"
+      },
+      {
+        "t": "h",
+        "v": "Mit direkter Kontrolle von der finalen Freigabe zur Lieferung"
       },
       {
         "t": "p",
-        "v": "Kontinuität, Präzision, Kontrolle"
+        "v": "Sobald Kleidungsstücke, Materialien, Größen und Verarbeitungen freigegeben sind, geht das Projekt in Produktion. Die lokale Fertigung hält technische Kommunikation und Qualitätskontrolle nah am Studio."
+      },
+      {
+        "t": "h",
+        "v": "Wichtigste Aktivitäten"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Finale Freigabe vor Produktionsbeginn",
+          "Bestätigung von Größen und Mengen",
+          "Produktionskoordination",
+          "Qualitätskontrollen",
+          "Vorbereitung und Lieferung",
+          "Organisation der Informationen für künftige Nachbestellungen"
+        ]
+      },
+      {
+        "t": "h",
+        "v": "Ergebnis"
       },
       {
         "t": "p",
-        "v": "Nach der Freigabe gehen die Kleidungsstücke mit finalisierten Schnitten, Materialien und Veredelungen in die Produktion."
-      },
-      {
-        "t": "p",
-        "v": "Die lokale Produktion ermöglicht direkte Qualitätskontrolle und größere Verlässlichkeit bei den Lieferzeiten."
-      },
-      {
-        "t": "p",
-        "v": "Wichtige Tätigkeiten"
-      },
-      {
-        "t": "p",
-        "v": "Freigabe vor Produktionsbeginn"
-      },
-      {
-        "t": "p",
-        "v": "Größenentwicklung"
-      },
-      {
-        "t": "p",
-        "v": "Produktion"
-      },
-      {
-        "t": "p",
-        "v": "Vorbereitung und Lieferung"
+        "v": "Gelieferte Kleidungsstücke und ein freigegebenes Produktionssystem, das künftige Bestellungen unterstützt."
       }
     ],
     "parameter-quantities": [
       {
         "t": "h",
-        "v": "MINDESTMENGEN"
+        "v": "Mindestmengen"
+      },
+      {
+        "t": "h",
+        "v": "Die Einstiegsmenge hängt davon ab, wie das Kleidungsstück gefertigt wird"
+      },
+      {
+        "t": "h",
+        "v": "Allgemeine Richtwerte"
+      },
+      {
+        "t": "ul",
+        "v": [
+          "Webware beginnt in der Regel bei etwa 10–15 Teilen pro Modell, verteilt auf Größen und freigegebene Varianten.",
+          "Maßgeschneiderte Strickware beginnt in der Regel bei etwa 100–150 Teilen pro Modell.",
+          "Bei geeigneter Konstruktion kann eine geringere Menge geprüft werden; Preis und Produktionseffizienz werden dabei im Einzelfall bewertet."
+        ]
       },
       {
         "t": "p",
-        "v": "Ein Gleichgewicht zwischen Qualität und nachhaltiger Produktion. Mindestmengen variieren je nach Konstruktion des Kleidungsstücks und ausgewählten Materialien."
-      },
-      {
-        "t": "p",
-        "v": "Allgemeine Orientierung"
-      },
-      {
-        "t": "p",
-        "v": "Gewebte Kleidungsstücke: ab etwa 10–15 Teilen pro Modell, verteilt auf Größen und Varianten"
-      },
-      {
-        "t": "p",
-        "v": "Strickware: in der Regel zwischen 100 und 150 Teilen pro Modell"
-      },
-      {
-        "t": "p",
-        "v": "Geringere Mengen können geprüft werden, mit möglichen Abweichungen in Bezug auf die Produktionseffizienz."
+        "v": "Wir bestätigen die Mindestmenge nach Prüfung von Kleidungsstückart, Stoff, Farbe, Konstruktion und Individualisierungsgrad."
       }
     ],
     "parameter-pricing": [
       {
         "t": "h",
-        "v": "AUF IHR BUDGET ABGESTIMMT"
+        "v": "So wird der Preis festgelegt"
       },
       {
         "t": "p",
-        "v": "Wir sind überzeugt, dass jedes Unternehmen sich auf professionelle Uniformen verlassen können sollte, ohne das Budget zu sprengen. Deshalb richten wir uns nach Ihren wirtschaftlichen Anforderungen und bieten flexible, individuell entwickelte Lösungen, die Qualität, Stil und Übereinstimmung mit Ihrer Markenidentität sicherstellen. Wir arbeiten an Ihrer Seite, um die richtige Balance zwischen Investition und Ergebnis zu finden und Uniformen zu schaffen, die Ihre Marke stärken."
+        "v": "Zwei ähnlich aussehende Kleidungsstücke können sehr unterschiedlichen Entwicklungsaufwand, unterschiedliche Materialien und Produktionsschritte erfordern. Deshalb kalkulieren wir den bestätigten Projektumfang statt eines Standardpreises pro Kleidungsstück."
+      },
+      {
+        "t": "p",
+        "v": "Das Angebot erläutert den enthaltenen Umfang, die zugrunde gelegten Annahmen und die Entscheidungen mit dem größten Einfluss auf die Kosten. So lassen sich Erscheinungsbild, Funktion, Haltbarkeit und Budget ausbalancieren, ohne den Umfang hinter einem Pauschalpreis zu verbergen."
       }
     ],
     "parameter-timing": [
       {
         "t": "h",
-        "v": "ZEITFAKTOREN"
+        "v": "Projektzeitplan"
       },
       {
         "t": "p",
-        "v": "Projektzeitrahmen hängen von der Komplexität der Entwicklung und der Produktionsplanung ab."
+        "v": "Typische Entwicklung: 4–6 Wochen"
       },
       {
         "t": "p",
-        "v": "Typische Zeitrahmen"
+        "v": "Typische Produktion: 3–5 Wochen"
       },
       {
         "t": "p",
-        "v": "Entwicklung: 4–6 Wochen"
+        "v": "Richtwert für das Gesamtprojekt: etwa 8 Wochen für viele vollständig maßgeschneiderte Projekte"
       },
       {
         "t": "p",
-        "v": "Produktion: 3–5 Wochen"
-      },
-      {
-        "t": "p",
-        "v": "Vollständig maßgeschneiderte Projekte benötigen in der Regel etwa 8 Wochen von der ersten Idee bis zur Lieferung."
-      },
-      {
-        "t": "p",
-        "v": "Faktoren, die den Zeitrahmen beeinflussen"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Schnittentwicklung",
-          "Anproben und Überarbeitungen",
-          "Besondere Konstruktionen",
-          "Stoffbeschaffung"
-        ]
-      },
-      {
-        "t": "p",
-        "v": "Eine gute Planung ermöglicht einen reibungsloseren Entwicklungsprozess und verlässliche Lieferzeiten."
+        "v": "Der bestätigte Zeitplan wird festgelegt, sobald Bekleidungsumfang, Materialien, Musterrunden, Mengen und Zieltermin bekannt sind. Früh geplante Freigaben schaffen den klarsten Weg bis zur Lieferung."
       }
     ]
+  },
+  "wardrobe": {
+    "kicker": "Was Sie erhalten",
+    "h2": "Eine nach Rollen entwickelte und für Nachbestellungen archivierte Garderobe",
+    "intro": "Kein Katalog und keine angepasste Lagerware. Jedes Kleidungsstück wird aus den Anforderungen der jeweiligen Rolle entwickelt und anschließend archiviert, damit die nächste Bestellung der ersten entspricht.",
+    "pillars": [
+      {
+        "h": "Für die Rolle geplant",
+        "p": "Jedes Kleidungsstück richtet sich nach der Arbeit: wie sich der Körper bewegt, was er mitführt und wie der Raum um sieben Uhr morgens und um Mitternacht funktioniert."
+      },
+      {
+        "h": "Als ein System entwickelt",
+        "p": "Stoff, Passform, Konstruktion, Farbe und Markenauftritt werden einmal gemeinsam festgelegt, damit Empfang, Gästebereich und interne Arbeitsbereiche als ein Team erkennbar sind."
+      },
+      {
+        "h": "Für Nachbestellungen archiviert",
+        "p": "Schnitte und Spezifikationen bleiben archiviert. Die zweite Bestellung entspricht auch zwei Jahre später der ersten, ohne erneute Entwicklung."
+      }
+    ],
+    "garmentsLead": "Was das umfasst",
+    "garments": [
+      "Hemden",
+      "Hosen",
+      "Röcke",
+      "Kleider",
+      "Schürzen",
+      "Strick",
+      "Blazer",
+      "Mäntel",
+      "Accessoires"
+    ],
+    "ctaText": "Nennen Sie uns die Rollen und wir entwickeln daraus die Garderobe.",
+    "ctaLabel": "Briefing starten",
+    "img": "/assets/images/home/wardrobe-rail.jpg",
+    "alt": "Ein abgestimmtes Uniformset an einer Kleiderstange"
   }
 }

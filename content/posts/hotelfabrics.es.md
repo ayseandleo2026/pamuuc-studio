@@ -4,7 +4,7 @@
   "slug": "guia-tejidos-uniformes-hotel",
   "title": "Guía de tejidos para uniformes de hotel",
   "headline": "Guía de tejidos para uniformes de hotel: elige desde el turno",
-  "description": "Una guía por puestos para convertir lavado, clima, movimiento e imagen en un briefing textil que el proveedor pueda responder con pruebas.",
+  "description": "Una guía por puestos para convertir lavado, clima, movimiento e imagen en un briefing textil respaldado por pruebas del proveedor.",
   "kicker": "Materiales para hotel",
   "published": "2026-09-03",
   "modified": "2026-09-03",
@@ -22,7 +22,7 @@
   "about": ["Uniformes de hotel", "Tejidos para uniformes", "Especificación textil"]
 }
 ---
-Una guía útil de tejidos para uniformes de hotel empieza por el turno, el clima y el proceso de cuidado, no por una fibra favorita. El resultado correcto no es un tejido universal, sino una selección por puesto que proveedor, lavandería y equipo del hotel puedan revisar con el mismo briefing.
+Una guía útil de tejidos para uniformes de hotel empieza por el turno, el clima y el proceso de cuidado, no por una fibra predilecta. El resultado correcto no es un tejido universal, sino una selección por puesto que proveedor, lavandería y equipo del hotel puedan revisar con el mismo briefing.
 
 ## Empieza en la lavandería: ¿cuidado doméstico, comercial o industrial?
 
@@ -78,7 +78,7 @@ La chaqueta de recepción puede dar prioridad a estructura, recuperación y acab
 
 El ejercicio debe producir prioridades distintas, no ganadores de fibra decididos de antemano. Si un candidato aparece en las tres selecciones, exige que responda a cada puesto por separado. Unificar un tejido puede simplificar el vestuario, pero la comodidad de compra no demuestra su adecuación al trabajo.
 
-## Emite el briefing textil para una aprobación conjunta
+## Somete el briefing textil a una aprobación conjunta
 
 Reúne la decisión en un documento que puedan leer operaciones, la lavandería, diseño y proveedor. Para cada prenda, registra puesto, entorno, movimiento, patrón de uso, exposición a manchas, proceso de cuidado, imagen requerida, tacto, peso, ligamento, elasticidad, recuperación, secado, opacidad y pruebas todavía necesarias.
 

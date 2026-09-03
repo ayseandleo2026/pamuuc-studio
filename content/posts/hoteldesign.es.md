@@ -44,7 +44,7 @@ El nombre del puesto es demasiado amplio para definir una prenda. Dos equipos de
 
 Habla con quienes van a llevar el vestuario. [El estudio de Tu y su equipo](https://doi.org/10.1080/10941665.2011.610149) analizó las relaciones entre el estilo del uniforme, la imagen del hotel, la percepción de los empleados sobre sí mismos y la percepción de los clientes. [El estudio de Nelson y Bowen en resorts](https://doi.org/10.1177/001088040004100221) relacionó atributos del uniforme con actitudes de los empleados y defendió su participación en la elección.
 
-Estos estudios no demuestran que un diseño concreto provoque un resultado empresarial. Sí respaldan una idea práctica: el briefing debe incluir tanto a la persona que lleva la prenda como al huésped que la encuentra. Una prueba de talla revela proporciones; solo la observación del trabajo muestra si la prenda pertenece al turno.
+Estos estudios no demuestran que un diseño concreto produzca un resultado empresarial. Sí respaldan una idea práctica: el briefing debe incluir tanto a la persona que lleva la prenda como al huésped que interactúa con ella. Una prueba de talla revela proporciones; solo la observación del trabajo muestra si la prenda funciona realmente durante el turno.
 
 ## Define una gramática común de vestuario
 
@@ -73,10 +73,10 @@ El documento final debe hacer visibles las decisiones y señalar con claridad lo
 - Entrega de prendas, altas, reposición y requisitos para nuevos pedidos
 - Responsables de decisión, momentos de aprobación, prioridades y aspectos por validar
 
-Añade pruebas cuando ayuden: fotografías de los espacios, referencias de materiales, observaciones de cada puesto, problemas del vestuario actual e información de cuidado aportada por operaciones. El briefing es útil cuando otra persona entiende por qué existe un requisito, no solo qué se ha pedido.
+Añade pruebas cuando ayuden: fotografías de los espacios, referencias de materiales, observaciones de cada puesto, problemas del vestuario actual e información de mantenimiento aportada por el equipo operativo. El briefing es útil cuando otra persona entiende por qué existe un requisito, no solo qué se ha pedido.
 
 ## Pasa del briefing al desarrollo
 
-Un buen briefing no diseña de antemano la respuesta del proveedor. Crea las condiciones para recibir propuestas, prototipos y pruebas de talla fundamentados. Así, los materiales, patrones y detalles pueden valorarse frente a una definición compartida del establecimiento, el trabajo y el sistema operativo.
+Un buen briefing no anticipa la respuesta del proveedor. Crea las condiciones para recibir propuestas, prototipos y pruebas de talla fundamentados. Así, los materiales, patrones y detalles pueden valorarse a partir de una visión compartida del establecimiento, el trabajo y la operativa.
 
 Utiliza las preguntas anteriores como documento de descubrimiento. Después, revisa el [proceso de diseño y desarrollo de Pamuuc](/es/#process) o [solicita una primera reunión](/es/#contact) para convertirlo en un alcance inicial claro. El objetivo no es tener más prendas, sino un vestuario coherente en el que cada prenda tenga un motivo para existir.

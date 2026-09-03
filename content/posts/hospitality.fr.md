@@ -10,13 +10,13 @@
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "METT Barcelona luxury hotel exterior",
+  "coverAlt": "Extérieur de l’hôtel de luxe METT Barcelona",
   "coverCaption": ""
 }
 ---
 Dans le cadre d’un projet mené chez METT Barcelona, nouvel hôtel de luxe 5 étoiles, notre studio a créé un système complet d’uniformes pour l’ensemble de l’équipe. Nous sommes partis des rendus architecturaux et du concept de design intérieur des espaces bar, restaurant et spa. Les uniformes ont été développés pour s’intégrer en harmonie avec les palettes de couleurs et les matières de l’hôtel.
 
-Le responsable Food & Beverage avait besoin de tenues distinctes pour plus de 20 membres de l’équipe, ainsi que pour la direction, selon leurs différents rôles. Nous avons donc conçu des pièces sur mesure pour les équipes en contact client, les équipes en coulisses et la direction. Les tissus ont été choisis pour leurs performances, principalement du coton biologique associé à des fibres techniques pour garantir confort, facilité d’entretien et longévité.
+Le responsable de la restauration avait besoin de tenues distinctes pour plus de 20 membres de l’équipe, ainsi que pour la direction, selon leurs différents rôles. Nous avons donc conçu des pièces sur mesure pour les équipes en contact avec la clientèle, les équipes en coulisses et la direction. Les tissus ont été choisis pour leurs performances, principalement du coton biologique associé à des fibres techniques afin d’assurer confort, facilité d’entretien et longévité.
 
 Toutes les pièces ont été conçues, prototypées et produites à Barcelone, soit 315 articles au total, avec une chaîne d’approvisionnement et une fabrication locales. Après une année d’usage quotidien, les uniformes sont toujours en excellent état et le personnel n’a signalé aucun problème.
 
@@ -26,7 +26,7 @@ Nous avons traité chaque pièce comme une extension de la marque et de l’arch
 
 Les choix de design sont nés des intérieurs du METT. L’équipe du spa porte des tons verts doux issus de la décoration, tandis que le bar et le restaurant utilisent des neutres chauds et des bleus profonds qui répondent aux finitions intérieures.
 
-Nous avons travaillé avec l’équipe intérieure pour traduire certains détails matériels dans la garde-robe. Les éléments en cuivre présents dans l’espace bar, par exemple, sont devenus des détails de finition sur certaines vestes. Des tissus premium et des teintures résistantes permettent de préserver l’apparence d’origine même en usage intensif.
+Nous avons travaillé avec l’équipe d’architecture intérieure pour traduire certains détails de matière dans le vestiaire. Les éléments en cuivre présents dans l’espace bar, par exemple, sont devenus des finitions sur certaines vestes. Des tissus haut de gamme et des teintures résistantes permettent de préserver l’apparence d’origine, même en usage intensif.
 
 ## Choisir des tissus durables et confortables
 
@@ -46,7 +46,7 @@ Pour la direction, nous avons développé des ensembles sur mesure en lin ou en 
 
 ## Production locale et durabilité
 
-Chaque étape du projet s’est déroulée à Barcelone, y compris la sélection des tissus. Garder le design et la production localement a amélioré la communication, le contrôle qualité et les délais de livraison.
+Chaque étape du projet s’est déroulée à Barcelone, y compris la sélection des tissus. Maintenir la conception et la production localement a facilité la communication, le contrôle qualité et la maîtrise des délais.
 
 Ce choix soutient aussi des objectifs environnementaux : un impact logistique réduit et une meilleure traçabilité. Lorsque cela était possible, nous avons privilégié des fibres naturelles et renouvelables, en particulier le lin et le coton biologique.
 
@@ -64,4 +64,4 @@ Dans l’hôtellerie, l’absence de plaintes sur la coupe et la fonctionnalité
 
 Le programme METT Barcelona montre que les uniformes hôteliers donnent le meilleur d’eux-mêmes lorsqu’ils sont pensés comme un système intégré et non comme des pièces isolées. En alignant le design avec l’identité de l’hôtel, en choisissant des tissus adaptés à un usage intensif, en différenciant les solutions par rôle et en simplifiant l’entretien, l’uniforme soutient à la fois les opérations et la perception de marque.
 
-Pour les équipes de l’hôtellerie, le point clé est d’investir dès le départ dans la qualité des matières et une logique de design guidée par la fonction. Les bénéfices apparaissent dans le temps : plus de durabilité, davantage de confiance de la part du personnel et une meilleure expérience client. Vous pouvez aussi découvrir notre processus et nos projets sélectionnés.
+Pour les équipes de l’hôtellerie, l’essentiel est d’investir dès le départ dans la qualité des matières et une conception guidée par l’usage. Les bénéfices se révèlent avec le temps : une meilleure durabilité, davantage de confiance au sein de l’équipe et une expérience client plus aboutie. Découvrez aussi notre processus et notre sélection de projets.

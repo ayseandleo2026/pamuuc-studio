@@ -5,18 +5,18 @@
   "title": "Hotel-Uniformen: Design und Haltbarkeit",
   "headline": "Individuelle Uniformen für die Hotellerie: Design und Haltbarkeit in der Hotelbekleidung",
   "description": "315 maßgeschneiderte Teile für ein 5-Sterne-Haus in Barcelona: Design aus dem Interieurkonzept, Stoffe für industrielle Wäsche.",
-  "kicker": "Hotellerie-Case",
+  "kicker": "Hotellerie-Projekt",
   "published": "2026-03-10",
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "METT Barcelona luxury hotel exterior",
+  "coverAlt": "Außenansicht des Luxushotels METT Barcelona",
   "coverCaption": ""
 }
 ---
-In einem Projekt im METT Barcelona, einem neuen 5-Sterne-Luxushotel, hat unser Studio ein vollständiges Uniformsystem für das gesamte Team entwickelt. Ausgangspunkt waren die Architektur-Renderings und das Interior-Design-Konzept der Bar-, Restaurant- und Spa-Bereiche. Die Uniformen wurden so entwickelt, dass sie sich harmonisch in die Farbpaletten und Materialien des Hotels einfügen.
+Für METT Barcelona, ein neues 5-Sterne-Luxushotel, hat unser Studio ein vollständiges Uniformsystem für das gesamte Team entwickelt. Ausgangspunkt waren die Architekturvisualisierungen und das Innenraumkonzept der Bar-, Restaurant- und Spa-Bereiche. Die Uniformen wurden so entwickelt, dass sie sich harmonisch in die Farbpaletten und Materialien des Hotels einfügen.
 
-Der Food-&-Beverage-Manager benötigte unterschiedliche Outfits für mehr als 20 Teammitglieder sowie für das Management, abgestimmt auf ihre jeweiligen Rollen. Daher entwickelten wir maßgeschneiderte Kleidungsstücke für Front-of-House, Back-of-House und Management. Die Stoffe wurden nach Leistung ausgewählt, hauptsächlich Bio-Baumwolle in Kombination mit technischen Fasern, um Komfort, Pflegeleichtigkeit und Langlebigkeit sicherzustellen.
+Der Leiter des Gastronomiebereichs benötigte unterschiedliche Bekleidungslösungen für mehr als 20 Teammitglieder sowie für die Leitung, abgestimmt auf die jeweiligen Rollen. Daher entwickelten wir maßgeschneiderte Kleidungsstücke für den Gästekontakt, die internen Bereiche und die Leitung. Die Stoffe wurden nach ihren Eigenschaften ausgewählt, hauptsächlich Bio-Baumwolle in Kombination mit technischen Fasern, um Komfort, Pflegeleichtigkeit und Langlebigkeit sicherzustellen.
 
 Alle Kleidungsstücke wurden in Barcelona entworfen, prototypisch entwickelt und produziert, insgesamt 315 Teile, mit lokaler Lieferkette und lokaler Fertigung. Nach einem Jahr täglicher Nutzung befinden sich die Uniformen weiterhin in ausgezeichnetem Zustand und das Personal hat keinerlei Probleme gemeldet.
 
@@ -26,7 +26,7 @@ Wir haben jedes Kleidungsstück als Erweiterung der Marke und Architektur des Ho
 
 Die Gestaltungsentscheidungen entstanden aus den Innenräumen des METT. Das Spa-Team trägt sanfte Grüntöne, die sich aus dem Dekor ableiten, während Bar und Restaurant mit warmen Neutraltönen und tiefen Blaunuancen arbeiten, die zu den Innenausstattungen passen.
 
-Gemeinsam mit dem Interior-Team haben wir einige Materialdetails in die Garderobe übersetzt. Kupferelemente aus dem Barbereich wurden zum Beispiel zu Veredelungsdetails an bestimmten Jacken. Hochwertige Stoffe und beständige Färbungen helfen dabei, das ursprüngliche Erscheinungsbild auch bei intensiver Nutzung zu erhalten.
+Gemeinsam mit dem Innenarchitekturteam haben wir einige Materialdetails in die Garderobe übersetzt. Kupferelemente aus dem Barbereich wurden zum Beispiel zu besonderen Verarbeitungsdetails an ausgewählten Jacken. Hochwertige Stoffe und beständige Färbungen helfen dabei, das ursprüngliche Erscheinungsbild auch bei intensiver Nutzung zu erhalten.
 
 ## Strapazierfähige und komfortable Stoffe auswählen
 
@@ -38,11 +38,11 @@ Außerdem haben wir funktionale Veredelungen eingesetzt: wasserabweisende und fl
 
 ## Uniformen nach Rollen differenziert
 
-Eine zentrale Entscheidung war der Aufbau einer eigenen Garderobe für jede Rollenkategorie. Funktionen im Front-of-House, Empfang, Service, Concierge, erhielten gepflegtere Kleidungsstücke, die Professionalität ausdrücken sollten, ohne die Bewegungsfreiheit während langer Schichten einzuschränken.
+Eine zentrale Entscheidung war der Aufbau einer eigenen Garderobe für jede Rollenkategorie. Teams mit direktem Gästekontakt, am Empfang, im Service und im Concierge-Bereich, erhielten gepflegtere Kleidungsstücke, die Professionalität ausdrücken sollten, ohne die Bewegungsfreiheit während langer Schichten einzuschränken.
 
-Servicekräfte und Bartender trugen Hemden, Westen und Jacken aus weichen Stretchstoffen. Funktionen im Back-of-House, Küche, Küchenunterstützung und Housekeeping, erhielten robustere und funktionalere Kleidungsstücke mit Schnitten, die für intensive operative Tätigkeiten geeignet sind.
+Servicekräfte und Barpersonal trugen Hemden, Westen und Jacken aus weichen Stretchstoffen. Die internen Bereiche, Küche, Küchenunterstützung und Etagenservice, erhielten robustere und funktionalere Kleidungsstücke mit Schnitten für intensive Arbeitsabläufe.
 
-Für das Management entwickelten wir maßgeschneiderte Sets aus Leinen oder Baumwolle in neutralen Tönen, passend zur Premium-Positionierung des Hotels. Diese visuelle Differenzierung über Farbe, Stoff und Schnitt macht Rollen sowohl intern als auch aus Sicht der Gäste besser lesbar.
+Für die Leitung entwickelten wir maßgeschneiderte Ensembles aus Leinen oder Baumwolle in neutralen Tönen, passend zur Premium-Positionierung des Hotels. Diese visuelle Differenzierung über Farbe, Stoff und Schnitt macht Rollen sowohl intern als auch aus Sicht der Gäste besser lesbar.
 
 ## Lokale Produktion und Nachhaltigkeit
 
@@ -52,7 +52,7 @@ Diese Entscheidung unterstützt auch Umweltziele: geringere logistische Auswirku
 
 Der Einsatz von Materialien, die für häufiges Waschen ausgelegt sind, reduziert zudem Abfall, weil er die Nutzungsdauer der Kleidungsstücke verlängert. Das Projekt verbindet damit lokale Fertigung und Nachhaltigkeit mit konkreten operativen Anforderungen.
 
-## Pflege, Leistung und Feedback des Personals
+## Pflege, Leistung und Rückmeldungen des Personals
 
 Nach einem Jahr täglicher Nutzung haben wir die Uniformen eingehend bewertet. Die meisten Kleidungsstücke blieben in ausgezeichnetem Zustand und behielten Farbe und Form sehr gut.
 

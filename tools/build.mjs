@@ -62,6 +62,12 @@ const UI = Object.fromEntries(LOCALES.map((l) => [l, json(`content/ui.${l}.json`
 const LEGAL = Object.fromEntries(LOCALES.map((l) => [l, json(`content/legal.${l}.json`)]));
 const S = (loc) => site.strings[loc];
 
+const FAQ_VISIBLE = 5;
+const faqItem = (items, first) => items
+  .map((q, i) => `<details${first && i === 0 ? ' open' : ''}><summary>${esc(q.q)}</summary><div class="acc__body"><p>${esc(q.a)}</p></div></details>`)
+  .join('\n');
+
+
 /** Posts: `{ json front matter }\n---\n<markdown body>` */
 function loadPost(key, loc) {
   const raw = read(`content/posts/${key}.${loc}.md`);
@@ -507,23 +513,10 @@ ${h.hero.proofs.map((p) => `<div class="proof"><strong>${esc(p.label)}</strong><
 </section>
 
 <section class="band"><div class="wrap">
-<p class="band__text">${esc(h.band.text)}</p>
-<ul class="band__points">${h.band.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>
-</div></section>
-
-<section class="section" id="services"><div class="wrap">
-<div class="section__head">
-<p class="eyebrow">${esc(h.services.kicker)}</p>
-<h2 class="h2">${esc(h.services.h2)}</h2>
-<p class="lead">${esc(h.services.intro)}</p>
-</div>
-<div class="card card--wide">
-<p class="eyebrow eyebrow--muted">${esc(h.services.card.topline)}</p>
-<h3 class="h3">${esc(h.services.card.h3)}</h3>
-<p class="muted">${esc(h.services.card.p)}</p>
-<ul>${h.services.card.features.map((f) => `<li>${esc(f)}</li>`).join('')}</ul>
-${disclosure(loc, h.detail['service-custom'], h.services.card.h3)}
-</div>
+<p class="eyebrow">${esc(h.band.kicker)}</p>
+<dl class="stats stats--band">
+${h.band.stats.map((x) => `<div><dd>${esc(x.v)}</dd><dt>${esc(x.l)}</dt></div>`).join('\n')}
+</dl>
 </div></section>
 
 <section class="section section--alt" id="sectors"><div class="wrap">
@@ -532,83 +525,46 @@ ${disclosure(loc, h.detail['service-custom'], h.services.card.h3)}
 <h2 class="h2">${esc(h.sectors.h2)}</h2>
 <p class="lead">${esc(h.sectors.intro)}</p>
 </div>
-<ul class="sectors">
-${h.sectors.items.map((s, i) => {
-  const key = sectorKeys[i];
-  const detail = h.detail[key] || [];
-  return `<li class="sector">
-<details>
-<summary>
-<span class="sector__idx">${String(i + 1).padStart(2, '0')}</span>
-<h3 class="sector__name">${esc(s.name)}</h3>
-<p class="sector__desc">${esc(s.desc || '')}</p>
-<span class="sector__chev" aria-hidden="true"></span>
-</summary>
-<div class="sector__detail detail">${renderBlocks(trimEcho(detail, s.name))}</div>
-</details>
+<ul class="sector-grid">
+${h.sectors.items.map((x, i) => {
+  const detail = h.detail[sectorKeys[i]] || [];
+  return `<li class="sector-card">
+<img class="sector-card__img" src="${attr(x.img)}" width="800" height="450" loading="lazy" decoding="async" alt="${attr(x.alt || x.name)}">
+<p class="sector-card__idx">${String(i + 1).padStart(2, '0')}</p>
+<h3 class="sector-card__name">${esc(x.name)}</h3>
+<p class="sector-card__desc">${esc(x.desc || '')}</p>
+${disclosure(loc, trimEcho(detail, x.name), x.name)}
 </li>`;
 }).join('\n')}
 </ul>
+<p class="handoff"><a href="#contact">${esc(h.sectors.handoff)}</a></p>
 </div></section>
 
-<section class="section" id="approach"><div class="wrap">
+<section class="section" id="services"><div class="wrap">
 <div class="section__head">
-<p class="eyebrow">${esc(h.approach.kicker)}</p>
-<h2 class="h2">${esc(h.approach.intro)}</h2>
+<p class="eyebrow">${esc(h.wardrobe.kicker)}</p>
+<h2 class="h2">${esc(h.wardrobe.h2)}</h2>
+<p class="lead">${esc(h.wardrobe.intro)}</p>
 </div>
-<div class="grid grid--4">
-${h.approach.cards.map((c) => `<article class="card"><p class="card__num">${esc(c.n)}</p><h3 class="h3">${esc(c.h3)}</h3><p class="muted">${esc(c.p)}</p></article>`).join('\n')}
+<div class="getgrid">
+<img class="getgrid__img" src="${attr(h.wardrobe.img)}" width="800" height="1066" loading="lazy" decoding="async" alt="${attr(h.wardrobe.alt)}">
+<ol class="pillars">
+${h.wardrobe.pillars.map((x, i) => `<li class="pillar"><span class="pillar__n">${String(i + 1).padStart(2, '0')}</span><div>
+<h3 class="pillar__h">${esc(x.h)}</h3>
+<p class="pillar__p">${esc(x.p)}</p>
+</div></li>`).join('\n')}
+</ol>
 </div>
-</div></section>
-
-<section class="section section--alt" id="categories"><div class="wrap">
-<div class="section__head">
-<p class="eyebrow">${esc(h.categories.kicker)}</p>
-<h2 class="h2">${esc(h.categories.h2)}</h2>
-<p class="lead">${esc(h.categories.intro)}</p>
-</div>
-<div class="scope">
-${h.categories.groups.map((g) => `<div><h3>${esc(g.label)}</h3><ul class="chips">${g.items.map((i) => `<li class="chip">${esc(i)}</li>`).join('')}</ul></div>`).join('\n')}
-</div>
-</div></section>
-
-<section class="section" id="process"><div class="wrap">
-<div class="section__head">
-<p class="eyebrow">${esc(h.process.kicker)}</p>
-<h2 class="h2">${esc(h.process.h2)}</h2>
-<p class="lead">${esc(h.process.intro)}</p>
-</div>
-<div class="grid grid--3">
-${h.process.phases.map((p, i) => `<article class="card">
-<p class="eyebrow eyebrow--muted">${esc(p.tag.replace(/^[-–—]\s*/, ''))}</p>
-<h3 class="h3">${esc(p.h3)}</h3>
-<p class="muted">${esc(p.desc)}</p>
-<ul>${p.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>
-${disclosure(loc, h.detail['phase-' + (i + 1)], p.h3)}
-</article>`).join('\n')}
-</div>
-<h3 class="eyebrow eyebrow--muted section__sub">${esc(h.process.statsLabel)}</h3>
-<dl class="stats">
-${h.process.stats.map((s) => `<div><dd>${esc(s.v)}</dd><dt>${esc(s.l)}</dt></div>`).join('\n')}
-</dl>
-${h.process.note ? `<p class="muted small section__sub">${esc(h.process.note)}</p>` : ''}
-</div></section>
-
-<section class="section section--alt" id="personalised"><div class="wrap">
-<div class="section__head">
-<p class="eyebrow">${esc(h.personalised.kicker)}</p>
-<h2 class="h2">${esc(h.personalised.h2)}</h2>
-<p class="lead">${esc(h.personalised.intro)}</p>
-</div>
-<div class="acc">
-${h.personalised.accordions.map((a) => `<details><summary>${esc(a.q)}</summary><div class="acc__body"><p>${esc(a.p)}</p><ul>${a.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul></div></details>`).join('\n')}
-</div>
-<div class="grid grid--3 section__sub">
-${h.personalised.cards.map((c) => `<div class="card"><h3 class="h3">${esc(c.h3)}</h3><p class="muted">${esc(c.p)}</p></div>`).join('\n')}
+<p class="garments__lead">${esc(h.wardrobe.garmentsLead)}</p>
+<ul class="garments">${h.wardrobe.garments.map((g) => `<li class="garment">${esc(g)}</li>`).join('')}</ul>
+${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
+<div class="ctabar">
+<p class="ctabar__t">${esc(h.wardrobe.ctaText)}</p>
+<a class="ctabar__a" href="#contact">${esc(h.wardrobe.ctaLabel)} <span aria-hidden="true">&#8594;</span></a>
 </div>
 </div></section>
 
-<section class="section" id="parameters"><div class="wrap">
+<section class="section section--alt" id="parameters"><div class="wrap">
 <div class="section__head">
 <p class="eyebrow">${esc(h.parameters.kicker)}</p>
 <h2 class="h2">${esc(h.parameters.h2)}</h2>
@@ -625,25 +581,6 @@ ${disclosure(loc, h.detail[g.modal], g.h3)}
 </div>
 </div></section>
 
-<section class="section section--dark" id="continuity"><div class="wrap">
-<div class="section__head">
-<p class="eyebrow">${esc(h.continuity.kicker)}</p>
-<h2 class="h2">${esc(h.continuity.h2)}</h2>
-<p class="lead">${esc(h.continuity.intro)}</p>
-</div>
-<div class="tablewrap"><table class="compare">
-<thead><tr>${(() => {
-  const head = h.continuity.rows[0];
-  const cells = head[2] ? head : [head[0], ...head[1].split('→').map((x) => x.trim())];
-  return cells.map((c) => `<th scope="col">${esc(c)}</th>`).join('');
-})()}</tr></thead>
-<tbody>
-${h.continuity.rows.slice(1).map((r) => `<tr><th scope="row">${esc(r[0])}</th>${r.slice(1).map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`).join('\n')}
-</tbody>
-</table></div>
-${h.continuity.loop.length ? `<p class="loop">${h.continuity.loop.map((s) => (s === '→' ? '<i>→</i>' : `<span>${esc(s)}</span>`)).join('')}</p>` : ''}
-</div></section>
-
 <section class="section" id="projects"><div class="wrap">
 <div class="section__head">
 <p class="eyebrow">${esc(h.projects.kicker)}</p>
@@ -651,17 +588,46 @@ ${h.continuity.loop.length ? `<p class="loop">${h.continuity.loop.map((s) => (s 
 <p class="lead">${esc(h.projects.intro)}</p>
 </div>
 <div class="grid grid--3">
-${h.projects.items.map((p) => {
-  const inner = `<img src="${attr(p.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(p.alt || p.h3)}">
-<p class="eyebrow eyebrow--muted">${esc(p.tag)}</p>
-<h3 class="h3">${esc(p.h3)}</h3>
-<p class="muted">${esc(p.p)}</p>
-${p.linkLabel ? `<p class="project__link">${esc(p.linkLabel)}</p>` : ''}`;
-  return p.href
-    ? `<a class="project" href="${attr(p.href)}">${inner}</a>`
+${h.projects.items.map((x) => {
+  const inner = `<img src="${attr(x.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(x.alt || x.h3)}">
+<p class="eyebrow eyebrow--muted">${esc(x.tag)}</p>
+<h3 class="h3">${esc(x.h3)}</h3>
+<p class="muted">${esc(x.p)}</p>
+${x.linkLabel ? `<p class="project__link">${esc(x.linkLabel)}</p>` : ''}`;
+  return x.href
+    ? `<a class="project" href="${attr(x.href)}">${inner}</a>`
     : `<article class="project">${inner}</article>`;
 }).join('\n')}
 </div>
+<p class="handoff"><a href="#contact">${esc(h.projects.handoff)}</a></p>
+</div></section>
+
+<section class="band-full">
+<img src="${attr(h.band.img)}" width="1000" height="500" loading="lazy" decoding="async" alt="${attr(h.band.alt)}">
+</section>
+
+<section class="section" id="process"><div class="wrap">
+<div class="section__head">
+<p class="eyebrow">${esc(h.process.kicker)}</p>
+<h2 class="h2">${esc(h.process.h2)}</h2>
+<p class="lead">${esc(h.process.intro)}</p>
+</div>
+<div class="grid grid--3">
+${h.process.phases.map((x, i) => `<article class="card">
+<img class="card__img" src="${attr(x.img)}" width="800" height="450" loading="lazy" decoding="async" alt="${attr(x.alt || x.h3)}">
+<p class="eyebrow eyebrow--muted">${esc(x.tag)}</p>
+<h3 class="h3">${esc(x.h3)}</h3>
+<p class="muted">${esc(x.desc)}</p>
+${x.items && x.items.length ? `<ul class="ticks">${x.items.map((i2) => `<li>${esc(i2)}</li>`).join('')}</ul>` : ''}
+${disclosure(loc, h.detail['phase-' + (i + 1)], x.h3)}
+</article>`).join('\n')}
+</div>
+<h3 class="eyebrow eyebrow--muted section__sub">${esc(h.process.statsLabel)}</h3>
+<dl class="stats">
+${h.process.stats.map((x) => `<div><dd>${esc(x.v)}</dd><dt>${esc(x.l)}</dt></div>`).join('\n')}
+</dl>
+${h.process.note ? `<p class="muted small section__sub">${esc(h.process.note)}</p>` : ''}
+<p class="handoff"><a href="#contact">${esc(h.process.handoff)}</a></p>
 </div></section>
 
 <section class="section section--alt" id="faq"><div class="wrap">
@@ -671,8 +637,14 @@ ${p.linkLabel ? `<p class="project__link">${esc(p.linkLabel)}</p>` : ''}`;
 <p class="lead">${esc(h.faq.intro)}</p>
 </div>
 <div class="acc">
-${h.faq.items.map((q, i) => `<details${i === 0 ? ' open' : ''}><summary>${esc(q.q)}</summary><div class="acc__body"><p>${esc(q.a)}</p></div></details>`).join('\n')}
+${faqItem(h.faq.items.slice(0, FAQ_VISIBLE), true)}
 </div>
+${h.faq.items.length > FAQ_VISIBLE ? `<details class="acc__more"><summary><span class="is-more">${esc(str.faqMore)}</span><span class="is-less">${esc(str.faqLess)}</span></summary>
+<div class="acc">
+${faqItem(h.faq.items.slice(FAQ_VISIBLE), false)}
+</div>
+</details>` : ''}
+<p class="handoff"><a href="#contact">${esc(h.faq.handoff)}</a></p>
 </div></section>
 
 <section class="section" id="contact"><div class="wrap contact">
@@ -746,7 +718,7 @@ ${posts.map((p) => `<li><article class="post-row">
 <a href="${postURL(p.key, loc)}" tabindex="-1" aria-hidden="true">${coverImg(p.cover, '', { sizes: '(max-width: 700px) 92vw, 14rem' })}</a>
 <div class="post-row__body">
 <p class="post-meta"><span class="tag">${esc(p.kicker)}</span><time datetime="${attr(p.published)}">${esc(humanDate(p.published, loc))}</time><span>${esc(readTime(p, loc))}</span></p>
-<a href="${postURL(p.key, loc)}"><h3>${esc(p.headline)}</h3></a>
+<a href="${postURL(p.key, loc)}"><h2 class="post-row__h">${esc(p.headline)}</h2></a>
 <p class="muted">${esc(p.description)}</p>
 </div>
 </article></li>`).join('\n')}
@@ -944,6 +916,7 @@ function lastmodFor(cluster) {
   const all = site.postOrder.flatMap((k) => Object.values(POSTS[k]).map((p) => p.modified));
   return all.sort().pop();
 }
+let PAGE_IMAGES = new Map();
 function sitemap() {
   const rows = clusters.filter((c) => !c.noindex).flatMap((c) =>
     Object.entries(c.urls).map(([loc, url]) => `  <url>
@@ -952,9 +925,10 @@ function sitemap() {
     <priority>${c.priority}</priority>
 ${LOCALES.map((l) => `    <xhtml:link rel="alternate" hreflang="${l}" href="${abs(c.urls[l])}"/>`).join('\n')}
     <xhtml:link rel="alternate" hreflang="x-default" href="${abs(c.urls[DEFAULT])}"/>
+${(PAGE_IMAGES.get(url) || []).map((src) => `    <image:image><image:loc>${abs(src)}</image:loc></image:image>`).join('\n')}
   </url>`));
   return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${rows.join('\n')}
 </urlset>
 `;
@@ -1052,6 +1026,8 @@ if (!CHECK && errors.length === 0) {
   for (const p of pages) writeFile(p.url.replace(/^\//, '') + 'index.html', p.html);
   writeFile('404.html', render404());
   for (const [from, to] of Object.entries(site.legacyRedirects)) writeFile(from.replace(/^\//, '') + 'index.html', redirectStub(to));
+  PAGE_IMAGES = new Map(pages.map((p) => [p.url,
+    [...new Set([...p.html.matchAll(/<img\b[^>]*?\bsrc="([^"]+)"/g)].map((m) => m[1]))].filter((src) => src.startsWith('/'))]));
   writeFile('sitemap.xml', sitemap());
   writeFile('robots.txt', robots());
   for (const loc of LOCALES) writeFile(loc === DEFAULT ? 'feed.xml' : `${loc}/feed.xml`, feed(loc));

@@ -34,7 +34,7 @@ L’[étude de Tu et de ses collègues](https://doi.org/10.1080/10941665.2011.61
 
 ## Précision discrète : tonale, nette et maîtrisée
 
-La précision discrète repose sur une palette resserrée, des lignes claires et des détails qui se découvrent de près. Imaginez un bleu marine profond, un gris minéral, un taupe doux ou un noir chaud ; un pantalon droit ; une veste sans col ou une surchemise épurée ; un seul système de fermeture ou une finition particulière. Les matières mates et les contrastes mesurés gardent l’ensemble posé sans le rendre trop corporate.
+La précision discrète repose sur une palette resserrée, des lignes claires et des détails qui se découvrent de près. Imaginez un bleu marine profond, un gris minéral, un taupe doux ou un noir chaud ; un pantalon droit ; une veste sans col ou une surchemise épurée ; un seul système de fermeture ou une finition particulière. Les matières mates et les contrastes mesurés gardent l’ensemble posé sans lui donner une allure trop institutionnelle.
 
 Cette direction convient à un hôtel urbain ou à un établissement dont le service se veut discret et exact. Elle peut relier la réception, la conciergerie et la restauration par les proportions et la couleur, tout en adaptant les poches, les couches et la structure à chaque métier.
 
@@ -46,7 +46,7 @@ La chaleur résidentielle reprend l’aisance d’un intérieur bien composé, p
 
 Cette direction fonctionne dans un boutique-hôtel, un établissement de long séjour ou un resort intime où le service doit paraître personnel et naturel. Les silhouettes restent accueillantes tandis que la structure clarifie les rôles : une couche plus construite à la réception, une chemise plus libre au restaurant et un vêtement plus fonctionnel pour l’entretien, dans la même famille de couleurs.
 
-Le risque tient à la complexité de l’entretien. La douceur d’une planche peut devenir froissement, usure de surface ou apparence irrégulière d’un service à l’autre. Vérifiez la réaction de chaque texture au véritable circuit de nettoyage et ne supposez jamais qu’une matière tactile est opérationnelle parce qu’elle semble naturelle. La chaleur peut venir autant des proportions et de la couleur que de matières délicates.
+Le risque tient à la complexité de l’entretien. La douceur d’une planche peut devenir froissement, usure de surface ou apparence irrégulière d’un service à l’autre. Vérifiez la réaction de chaque texture au véritable circuit de nettoyage et ne supposez jamais qu’une matière agréable au toucher convient au travail parce qu’elle semble naturelle. La chaleur peut venir autant des proportions et de la couleur que de matières délicates.
 
 ## Esprit côtier et couches alpines : le climat devient la règle
 
@@ -54,15 +54,15 @@ L’esprit côtier commence par l’air, le mouvement et la lumière vive. Des v
 
 Les couches alpines répondent au problème inverse : variations de température, passages entre intérieur et extérieur, nécessité d’ajouter ou de retirer une couche sans perdre l’identité du vestiaire. Une chemise de base, une maille fine intermédiaire et un vêtement extérieur épuré peuvent partager les mêmes couleurs et le même langage de fermeture. Les tons terre, le vert profond, le charbon et le bordeaux assourdi suggèrent le refuge sans copier une tenue traditionnelle.
 
-Ces deux directions peuvent échouer en devenant des costumes. L’esprit côtier risque de ressembler à une tenue de vacances sans rôles lisibles ; les références alpines, à un thème décoratif. Faites du climat la règle de design et de la culture locale un indice subtil, jamais une collection de symboles. Chaque couche doit répondre à un besoin précis de température, de mouvement ou de service.
+Ces deux directions peuvent échouer en devenant des costumes. L’esprit côtier risque de ressembler à une tenue de vacances sans rôles lisibles ; les références alpines, à un thème décoratif. Faites du climat un principe de conception et de la culture locale un indice subtil, jamais une collection de symboles. Chaque couche doit répondre à un besoin précis de température, de mouvement ou de service.
 
 ## Cérémonie contemporaine : une hiérarchie sans raideur
 
-La cérémonie contemporaine donne à l’arrivée et au service formel un sentiment d’occasion visible. Une ligne plus longue, une encolure encadrée, un drapé croisé maîtrisé, un gilet sculpté ou un placement discret mais singulier des boutons peuvent marquer le moment. Des couleurs riches et retenues, comme l’encre, l’aubergine, le bronze ou le vert forêt, fonctionnent mieux sur une silhouette simple.
+La cérémonie contemporaine donne à l’arrivée et au service formel une solennité perceptible. Une ligne plus longue, une encolure encadrée, un drapé croisé maîtrisé, un gilet sculpté ou un placement discret mais singulier des boutons peuvent marquer le moment. Des couleurs riches et retenues, comme l’encre, l’aubergine, le bronze ou le vert forêt, fonctionnent mieux sur une silhouette simple.
 
 Cette direction peut convenir à une entrée majestueuse, au service du soir ou à un établissement construit autour de rituels précis. Tous les métiers n’ont pas besoin du même degré de formalité. Un élément cérémoniel peut appartenir à la réception ou aux équipes de porte, tandis que des couleurs et proportions apparentées relient les départements plus informels.
 
-Le risque est la restriction. Une ligne spectaculaire peut gêner dans les escaliers, avec les bagages, pendant le service au plateau, en position assise ou dans un changement de direction rapide. Elle peut aussi transformer la hiérarchie des rôles en distance visuelle. Demandez ce que le détail aide à communiquer, puis retirez-le si sa seule fonction est le spectacle. La cérémonie fonctionne lorsque la personne qui la porte peut encore agir naturellement.
+Le risque est l’entrave au mouvement. Une ligne spectaculaire peut gêner dans les escaliers, avec les bagages, pendant le service au plateau, en position assise ou lors d’un changement de direction rapide. Elle peut aussi transformer la hiérarchie des rôles en distance visuelle. Demandez ce que le détail permet de communiquer, puis retirez-le si sa seule fonction est le spectacle. La cérémonie fonctionne lorsque la personne qui porte la tenue peut encore agir naturellement.
 
 ## Confrontez chaque idée à trois scènes réelles
 
@@ -80,4 +80,4 @@ Réduisez la planche à deux territoires cohérents et décrivez-les avec le mê
 
 Ne fusionnez pas toutes les références séduisantes dans une réponse surchargée. Deux directions distinctes offrent assez de contraste pour prendre une vraie décision tout en laissant de la place aux prototypes et aux retours des équipes. Si aucune ne résiste aux trois scènes, revenez au caractère du service au lieu de chercher davantage d’images.
 
-Apportez le dossier d’aménagement intérieur et la liste des métiers de l’hôtel à une revue de concept. Pamuuc peut confronter les deux directions aux vêtements, aux opérations et à la continuité avant le début du développement. Consultez le [processus de design](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) lorsque la sélection est prête.
+Apportez le dossier d’aménagement intérieur et la liste des métiers de l’hôtel à une revue de conception. Pamuuc peut confronter les deux directions aux vêtements, aux réalités opérationnelles et aux besoins de continuité avant le début du développement. Consultez le [processus de design](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) lorsque la sélection est prête.
