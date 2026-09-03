@@ -1,3 +1,6 @@
 dist/
 node_modules/
 .DS_Store
+
+# full-resolution originals: kept locally, never published
+src/images/incoming/

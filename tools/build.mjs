@@ -12,7 +12,7 @@
  * No dependencies. Node 20+.
  */
 import { readFileSync, writeFileSync, mkdirSync, rmSync, cpSync, existsSync, readdirSync, statSync } from 'node:fs';
-import { join, dirname, relative } from 'node:path';
+import { join, sep, dirname, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -1091,7 +1091,10 @@ if (!CHECK && errors.length === 0) {
   cpSync(join(ROOT, 'src/js/site.js'), join(OUT, 'assets/js/site.js'));
   cpSync(join(ROOT, 'src/fonts'), join(OUT, 'assets/fonts'), { recursive: true });
   cpSync(join(ROOT, 'src/brand'), join(OUT, 'assets/brand'), { recursive: true });
-  cpSync(join(ROOT, 'src/images'), join(OUT, 'assets/images'), { recursive: true });
+  /* src/images/incoming holds full-resolution originals for future crops.
+     They are referenced by nothing, so they must not be published. */
+  cpSync(join(ROOT, 'src/images'), join(OUT, 'assets/images'), { recursive: true,
+    filter: (src) => !src.includes(`${sep}images${sep}incoming`) });
   cpSync(join(ROOT, 'src/static'), OUT, { recursive: true });
 }
 
