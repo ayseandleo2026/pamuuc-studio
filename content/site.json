@@ -9,7 +9,14 @@
     "email": "info@pamuuc.com",
     "city": "Barcelona",
     "country": "ES",
-    "external": "https://pamuuc.com"
+    "external": "https://pamuuc.com",
+    "sameAs": [
+      "https://www.linkedin.com/company/pamuucstudio"
+    ],
+    "alternateNames": [
+      "PAMUUC | STUDIOS",
+      "PAMUUC STUDIO"
+    ]
   },
   "analytics": {
     "ga4": "G-HS8HYY7LV1"

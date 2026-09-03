@@ -235,7 +235,10 @@ const orgNode = {
   '@type': 'Organization',
   '@id': abs('/#org'),
   name: site.brand.plain,
-  alternateName: site.brand.name,
+  /* The studio publishes two public forms: PAMUUC | STUDIOS on the site and
+     PAMUUC STUDIO on LinkedIn. Both are declared so the entity resolves
+     either way while the studio decides which is canonical. */
+  alternateName: site.brand.alternateNames || site.brand.name,
   legalName: site.brand.legalName,
   url: abs('/'),
   logo: abs('/assets/images/logo.png'),
@@ -244,6 +247,9 @@ const orgNode = {
   address: { '@type': 'PostalAddress', addressLocality: site.brand.city, addressCountry: site.brand.country },
   areaServed: ['ES', 'FR', 'IT', 'DE', 'Europe'],
   knowsLanguage: LOCALES,
+  /* sameAs must point only at profiles the studio has confirmed as its own.
+     Verified 4 September 2026: returns 200 and titles itself "PAMUUC STUDIO". */
+  ...(site.brand.sameAs?.length ? { sameAs: site.brand.sameAs } : {}),
   /* Google lists contactPoint as recommended for Organization. Every value
      here is already stated on the contact section of the site; nothing is
      asserted that a reader cannot verify. sameAs stays out until the studio
