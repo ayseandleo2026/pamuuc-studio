@@ -1,4 +1,4 @@
-# Blog authoring guide — PAMUUC | STUDIOS
+# Blog authoring guide — PAMUUC | STUDIO
 
 **Audience: an AI model, or a person, adding an article to pamuuc-studio.com.**
 
@@ -152,7 +152,7 @@ More body text with an [internal link](/en/blog/custom-hospitality-uniforms/).
 | `key` | yes | matches the file name and `postSlugs` |
 | `locale` | yes | matches the file name |
 | `slug` | yes | identical to `postSlugs.<key>.<locale>` |
-| `title` | yes | **≤ 45 characters.** This is the `<title>`; the build appends ` \| Pamuuc Studios`. Keyword first, no clickbait |
+| `title` | yes | **≤ 45 characters.** This is the `<title>`; the build appends ` \| Pamuuc Studio`. Keyword first, no clickbait |
 | `headline` | yes | **≤ 95 characters.** The on-page `<h1>`. Fuller than `title`, still one line of thought |
 | `description` | yes | **70–170 characters.** The meta description and the card text. One sentence, states what the reader gets. No "Learn more about…" |
 | `kicker` | yes | ≤ 34 characters. The category shown above the title, e.g. `Materials`, `Hospitality case` |
@@ -212,7 +212,7 @@ same section count, same claims, same numbers.
   it started in English.
 - The slug, `title`, `headline`, `description` and `kicker` are all localized —
   they are not the English strings with accents added.
-- Do not translate: the brand (`PAMUUC | STUDIOS`, written `Pamuuc Studios` in
+- Do not translate: the brand (`PAMUUC | STUDIO`, written `Pamuuc Studio` in
   prose), the legal entity `Pamuk Studio S.L`, place names, `info@pamuuc.com`.
 - Minimum order quantity is **10 pieces per style** in every language. Woven
   garments are efficient from 10–15 pieces per style; knitwear needs 100–150.

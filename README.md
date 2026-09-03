@@ -1,4 +1,4 @@
-# PAMUUC | STUDIOS — pamuuc-studio.com
+# PAMUUC | STUDIO — pamuuc-studio.com
 
 Static site for a Barcelona uniform design and production studio, in five
 languages. No framework, no build dependencies, no third-party request before
@@ -87,7 +87,7 @@ were kept exactly as they were, so nothing that was already indexed had to move.
 ## Conventions
 
 - British English in the English copy; the studio's own wording in the other four.
-- The brand is **PAMUUC | STUDIOS** set in Gilmer Heavy. In prose it is written
-  "Pamuuc Studios". The legal entity, "Pamuk Studio S.L", never changes.
+- The brand is **PAMUUC | STUDIO** set in Gilmer Heavy. In prose it is written
+  "Pamuuc Studio". The legal entity, "Pamuk Studio S.L", never changes.
 - Minimum order quantity is **10 pieces per style**. If that changes it changes in
   `content/home.<loc>.json` for all five languages at once.

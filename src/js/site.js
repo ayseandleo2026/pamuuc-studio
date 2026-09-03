@@ -1,4 +1,4 @@
-/* PAMUUC | STUDIOS — site.js
+/* PAMUUC | STUDIO — site.js
    Every behaviour on the site, in one deferred file. No framework, no CDN.
    Nothing here blocks render; nothing third-party loads before consent. */
 (() => {

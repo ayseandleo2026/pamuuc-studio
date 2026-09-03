@@ -1,9 +1,9 @@
 {
   "locale": "de",
   "meta": {
-    "title": "Studio für Maßuniformen in Barcelona | Pamuuc Studios",
+    "title": "Studio für Maßuniformen in Barcelona | Pamuuc Studio",
     "description": "Design und Produktion maßgeschneiderter Uniformen für Hotels, Restaurants, Wellnessbereiche und Kliniken. Produziert in Barcelona, ab 10 Teilen pro Modell.",
-    "ogTitle": "Studio für maßgeschneiderte Uniformen in Barcelona | Pamuuc Studios",
+    "ogTitle": "Studio für maßgeschneiderte Uniformen in Barcelona | Pamuuc Studio",
     "ogDescription": "Maßgeschneiderte Uniformsysteme für Hotels, Restaurants, Wellnessbereiche, Kliniken und Teams mit Kundenkontakt: von Design und Anproben bis zu Produktion und Nachbestellungen."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Uniformprojekt besprechen",
     "secondary": "Ausgewählte Projekte ansehen",
-    "imageAlt": "Design maßgeschneiderter Uniformen und Bekleidungsentwicklung durch Pamuuc Studios in Barcelona",
+    "imageAlt": "Design maßgeschneiderter Uniformen und Bekleidungsentwicklung durch Pamuuc Studio in Barcelona",
     "proofs": [
       {
         "label": "Erstes Projekt",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "WAS WIR TUN",
     "h2": "Ein vollständiger Service für maßgeschneiderte Uniformen, kein Katalog",
-    "intro": "Pamuuc Studios entwirft, entwickelt und produziert maßgeschneiderte Uniformen für Hotellerie, Wellness, Gesundheitswesen und Teams mit Kundenkontakt. Jedes Projekt orientiert sich am Unternehmen, an den Menschen, die die Kleidung tragen, und an ihrer täglichen Arbeit.",
+    "intro": "Pamuuc Studio entwirft, entwickelt und produziert maßgeschneiderte Uniformen für Hotellerie, Wellness, Gesundheitswesen und Teams mit Kundenkontakt. Jedes Projekt orientiert sich am Unternehmen, an den Menschen, die die Kleidung tragen, und an ihrer täglichen Arbeit.",
     "card": {
       "topline": "DESIGN, ENTWICKLUNG UND PRODUKTION",
       "h3": "Maßgeschneiderte Uniformsysteme",
@@ -454,7 +454,7 @@
         "h3": "Maßgeschneiderte Hoteluniformen für METT Barcelona",
         "p": "Eine vollständige, rollenbezogene Garderobe, die aus dem Innenraumkonzept des Hotels für Empfang, Gastronomie, Leitung und Spa entwickelt und anschließend in Barcelona entworfen, prototypisiert und produziert wurde.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Von Pamuuc Studios für METT Barcelona entwickelte Uniformen für den Gästebereich",
+        "alt": "Von Pamuuc Studio für METT Barcelona entwickelte Uniformen für den Gästebereich",
         "href": "/de/blog/uniformen-hotellerie/",
         "linkLabel": "Hotel-Fallstudie lesen"
       },

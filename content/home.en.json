@@ -1,9 +1,9 @@
 {
   "locale": "en",
   "meta": {
-    "title": "Custom Uniform Design Studio in Barcelona | Pamuuc Studios",
+    "title": "Custom Uniform Design Studio in Barcelona | Pamuuc Studio",
     "description": "Custom uniform design and production for hotels, restaurants, wellness spaces and clinics. Produced in Barcelona, with orders from 10 pieces per style.",
-    "ogTitle": "Custom Uniform Design Studio in Barcelona | Pamuuc Studios",
+    "ogTitle": "Custom Uniform Design Studio in Barcelona | Pamuuc Studio",
     "ogDescription": "Made-to-order uniform systems for hotels, restaurants, wellness spaces, clinics and guest-facing teams—from design and fittings to production and reorders."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Discuss your uniform project",
     "secondary": "View selected work",
-    "imageAlt": "Custom uniform design and garment development by Pamuuc Studios in Barcelona",
+    "imageAlt": "Custom uniform design and garment development by Pamuuc Studio in Barcelona",
     "proofs": [
       {
         "label": "First project",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "WHAT WE DO",
     "h2": "A complete custom-uniform service, not a catalogue",
-    "intro": "Pamuuc Studios designs, develops and produces custom uniforms for hospitality, wellness, healthcare and guest-facing teams. Every project is built around the business, the people wearing the garments and the work they do.",
+    "intro": "Pamuuc Studio designs, develops and produces custom uniforms for hospitality, wellness, healthcare and guest-facing teams. Every project is built around the business, the people wearing the garments and the work they do.",
     "card": {
       "topline": "DESIGN, DEVELOPMENT AND PRODUCTION",
       "h3": "Custom uniform systems",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "The Pamuuc Studios atelier in Barcelona: garment rail, press and cutting table"
+    "alt": "The Pamuuc Studio atelier in Barcelona: garment rail, press and cutting table"
   },
   "sectors": {
     "kicker": "WHO WE WORK WITH",
@@ -454,7 +454,7 @@
         "h3": "Custom hotel uniforms for METT Barcelona",
         "p": "A complete, role-based wardrobe developed from the hotel’s interior concept for reception, food and beverage, management and spa teams, then designed, prototyped and produced in Barcelona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Hotel front-of-house uniforms developed by Pamuuc Studios for METT Barcelona",
+        "alt": "Hotel front-of-house uniforms developed by Pamuuc Studio for METT Barcelona",
         "href": "/en/blog/custom-hospitality-uniforms/",
         "linkLabel": "Read the hotel case study"
       },

@@ -28,7 +28,7 @@ Re-run: `node tools/build.mjs && node tools/seo-audit.py`
 | 9 | Topic hubs, internal links, cannibalisation | Architecture | **Pass** | Zero orphans; every indexable page has real `<a href>` inbound links |
 | 10 | Authorship, expertise, sourcing, transparency | Trust | **Fail** | `Person` markup on 30 pages but no author or About page exists to point at |
 | 11 | On-page relevance and search presentation | Relevance | **Pass** | 40 unique titles and descriptions, one `<h1>` each, no heading jumps |
-| 12 | Business entity consistency and site trust | Trust | **Partial** | Organization now complete: legalName, vatID, address, areaServed, logo, contactPoint, sameAs (LinkedIn, verified). Outstanding: the studio publishes two different public names |
+| 12 | Business entity consistency and site trust | Trust | **Pass** | Organization complete: legalName, vatID, address, areaServed, logo, contactPoint, sameAs. One canonical public name across site, titles, structured data and LinkedIn |
 | 13 | External authority, links, mentions, reviews | Authority | **Blocked** | Off-site. Needs Search Console Links + a client permission process |
 | 14 | Multilingual and regional implementation | Expansion | **Pass** | 5 locales, reciprocal hreflang with x-default, self-referencing canonicals |
 | 15 | Accurate structured data | Enhancement | **Pass** | 155 objects, all valid, all required properties present, all matching visible content |
@@ -79,7 +79,7 @@ noindex, which left those URLs eligible to appear as bare links. The
 | 8 | No case study pages | Client permission to name projects, publish photography, and state outcomes |
 | 10 | No author or About page | Real role, relevant project experience, and a photograph for the named author |
 | 6 | No compliance/sustainability facts | Actual certifications and fabric standards, with evidence. Must not be inferred |
-| 12 | Two public names in use | The site says **PAMUUC \| STUDIOS**, LinkedIn says **PAMUUC STUDIO**. Control 12 requires one canonical public name. The stated brand is PAMUUC \| STUDIOS, so LinkedIn is the one to change. Both are declared as `alternateName` meanwhile |
+| 12 | ~~Two public names in use~~ | **Resolved 4 September 2026.** The site was renamed from PAMUUC \| STUDIOS to **PAMUUC \| STUDIO**, matching the LinkedIn page. 53 occurrences across 14 files, including all 51 page titles |
 | 12 | Only one profile in `sameAs` | Any other official profiles (Instagram, Behance, directories) the studio confirms as its own |
 | 3 | No baseline | Search Console and GA4 access |
 | 16 | GBP eligibility unknown | Whether the Barcelona studio receives clients at a real address |

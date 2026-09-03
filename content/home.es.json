@@ -1,9 +1,9 @@
 {
   "locale": "es",
   "meta": {
-    "title": "Estudio de uniformes a medida en Barcelona | Pamuuc Studios",
+    "title": "Estudio de uniformes a medida en Barcelona | Pamuuc Studio",
     "description": "Diseño y producción de uniformes a medida para hoteles, restaurantes, espacios de bienestar y clínicas. Producidos en Barcelona, desde 10 piezas por modelo.",
-    "ogTitle": "Estudio de uniformes a medida en Barcelona | Pamuuc Studios",
+    "ogTitle": "Estudio de uniformes a medida en Barcelona | Pamuuc Studio",
     "ogDescription": "Sistemas de uniformes por encargo para hoteles, restaurantes, espacios de bienestar, clínicas y equipos de atención al público: del diseño y las pruebas a la producción y las reposiciones."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Cuéntanos tu proyecto de uniformes",
     "secondary": "Ver proyectos seleccionados",
-    "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por Pamuuc Studios en Barcelona",
+    "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por Pamuuc Studio en Barcelona",
     "proofs": [
       {
         "label": "Primer proyecto",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "QUÉ HACEMOS",
     "h2": "Un servicio integral de uniformes a medida, no un catálogo",
-    "intro": "Pamuuc Studios diseña, desarrolla y produce uniformes a medida para hostelería, bienestar, salud y equipos de atención al público. Cada proyecto parte del negocio, de las personas que vestirán las prendas y del trabajo que realizan.",
+    "intro": "Pamuuc Studio diseña, desarrolla y produce uniformes a medida para hostelería, bienestar, salud y equipos de atención al público. Cada proyecto parte del negocio, de las personas que vestirán las prendas y del trabajo que realizan.",
     "card": {
       "topline": "DISEÑO, DESARROLLO Y PRODUCCIÓN",
       "h3": "Sistemas de uniformes a medida",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "El taller de Pamuuc Studios en Barcelona: burro de prendas, plancha y mesa de corte"
+    "alt": "El taller de Pamuuc Studio en Barcelona: burro de prendas, plancha y mesa de corte"
   },
   "sectors": {
     "kicker": "CON QUIÉN TRABAJAMOS",
@@ -454,7 +454,7 @@
         "h3": "Uniformes a medida para METT Barcelona",
         "p": "Un vestuario completo por funciones, desarrollado a partir del concepto interior del hotel para los equipos de recepción, restauración, dirección y spa; diseñado, prototipado y producido en Barcelona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Uniformes de atención al huésped desarrollados por Pamuuc Studios para METT Barcelona",
+        "alt": "Uniformes de atención al huésped desarrollados por Pamuuc Studio para METT Barcelona",
         "href": "/es/blog/uniformes-hosteleria-personalizados/",
         "linkLabel": "Leer el caso del hotel"
       },

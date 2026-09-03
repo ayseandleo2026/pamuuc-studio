@@ -1,9 +1,9 @@
 {
   "locale": "fr",
   "meta": {
-    "title": "Studio d’uniformes sur mesure à Barcelone | Pamuuc Studios",
+    "title": "Studio d’uniformes sur mesure à Barcelone | Pamuuc Studio",
     "description": "Création et production d’uniformes sur mesure pour hôtels, restaurants, espaces de bien-être et cliniques. Produits à Barcelone, dès 10 pièces par modèle.",
-    "ogTitle": "Studio d’uniformes sur mesure à Barcelone | Pamuuc Studios",
+    "ogTitle": "Studio d’uniformes sur mesure à Barcelone | Pamuuc Studio",
     "ogDescription": "Des vestiaires professionnels sur mesure pour hôtels, restaurants, espaces de bien-être, cliniques et équipes d’accueil : de la création et des essayages à la production et aux réassorts."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Parler de votre projet d’uniformes",
     "secondary": "Voir les projets sélectionnés",
-    "imageAlt": "Création d’uniformes sur mesure et développement de vêtements par Pamuuc Studios à Barcelone",
+    "imageAlt": "Création d’uniformes sur mesure et développement de vêtements par Pamuuc Studio à Barcelone",
     "proofs": [
       {
         "label": "Premier projet",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "CE QUE NOUS FAISONS",
     "h2": "Un service complet d’uniformes sur mesure, pas un catalogue",
-    "intro": "Pamuuc Studios conçoit, développe et produit des uniformes sur mesure pour l’hôtellerie, le bien-être, la santé et les équipes en contact avec le public. Chaque projet part de l’entreprise, des personnes qui porteront les vêtements et du travail qu’elles accomplissent.",
+    "intro": "Pamuuc Studio conçoit, développe et produit des uniformes sur mesure pour l’hôtellerie, le bien-être, la santé et les équipes en contact avec le public. Chaque projet part de l’entreprise, des personnes qui porteront les vêtements et du travail qu’elles accomplissent.",
     "card": {
       "topline": "CRÉATION, DÉVELOPPEMENT ET PRODUCTION",
       "h3": "Vestiaires professionnels sur mesure",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "L’atelier Pamuuc Studios à Barcelone : portant, presse et table de coupe"
+    "alt": "L’atelier Pamuuc Studio à Barcelone : portant, presse et table de coupe"
   },
   "sectors": {
     "kicker": "AVEC QUI NOUS TRAVAILLONS",
@@ -454,7 +454,7 @@
         "h3": "Uniformes sur mesure pour METT Barcelona",
         "p": "Un vestiaire complet par rôle, développé à partir du concept intérieur de l’hôtel pour les équipes d’accueil, de restauration, de direction et de spa, puis conçu, prototypé et produit à Barcelone.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Uniformes d’accueil développés par Pamuuc Studios pour METT Barcelona",
+        "alt": "Uniformes d’accueil développés par Pamuuc Studio pour METT Barcelona",
         "href": "/fr/blog/uniformes-hotellerie-personnalises/",
         "linkLabel": "Lire l’étude de cas de l’hôtel"
       },

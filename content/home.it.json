@@ -1,9 +1,9 @@
 {
   "locale": "it",
   "meta": {
-    "title": "Studio di divise su misura a Barcellona | Pamuuc Studios",
+    "title": "Studio di divise su misura a Barcellona | Pamuuc Studio",
     "description": "Progettazione e produzione di divise su misura per hotel, ristoranti, spazi benessere e cliniche. Prodotte a Barcellona, da 10 pezzi per modello.",
-    "ogTitle": "Studio di divise su misura a Barcellona | Pamuuc Studios",
+    "ogTitle": "Studio di divise su misura a Barcellona | Pamuuc Studio",
     "ogDescription": "Sistemi di divise su misura per hotel, ristoranti, spazi benessere, cliniche e attività a contatto con il pubblico: dalla progettazione e dalle prove alla produzione e ai riordini."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Parlaci del tuo progetto di divise",
     "secondary": "Scopri i progetti selezionati",
-    "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati Pamuuc Studios a Barcellona",
+    "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati Pamuuc Studio a Barcellona",
     "proofs": [
       {
         "label": "Primo progetto",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "COSA FACCIAMO",
     "h2": "Un servizio completo di divise su misura, non un catalogo",
-    "intro": "Pamuuc Studios progetta, sviluppa e produce divise su misura per ospitalità, benessere, sanità e attività a contatto con il pubblico. Ogni progetto nasce dall’organizzazione, dalle persone che indosseranno i capi e dal lavoro che svolgono.",
+    "intro": "Pamuuc Studio progetta, sviluppa e produce divise su misura per ospitalità, benessere, sanità e attività a contatto con il pubblico. Ogni progetto nasce dall’organizzazione, dalle persone che indosseranno i capi e dal lavoro che svolgono.",
     "card": {
       "topline": "PROGETTAZIONE, SVILUPPO E PRODUZIONE",
       "h3": "Sistemi di divise su misura",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "L’atelier Pamuuc Studios a Barcellona: appendiabiti, pressa e tavolo da taglio"
+    "alt": "L’atelier Pamuuc Studio a Barcellona: appendiabiti, pressa e tavolo da taglio"
   },
   "sectors": {
     "kicker": "CON CHI LAVORIAMO",
@@ -454,7 +454,7 @@
         "h3": "Divise su misura per METT Barcelona",
         "p": "Un guardaroba completo per ruolo, sviluppato dal progetto d’interni dell’hotel per accoglienza, ristorazione, direzione e spa, poi progettato, prototipato e prodotto a Barcellona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Divise per l’accoglienza sviluppate da Pamuuc Studios per METT Barcelona",
+        "alt": "Divise per l’accoglienza sviluppate da Pamuuc Studio per METT Barcelona",
         "href": "/it/blog/divise-hospitalita-personalizzate/",
         "linkLabel": "Leggi il caso studio dell’hotel"
       },

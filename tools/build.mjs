@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * PAMUUC | STUDIOS — static site generator
+ * PAMUUC | STUDIO — static site generator
  * ---------------------------------------------------------------------------
  *   node tools/build.mjs           build the site into dist/
  *   node tools/build.mjs --check   audit only, no output written (used in CI)
@@ -235,7 +235,7 @@ const orgNode = {
   '@type': 'Organization',
   '@id': abs('/#org'),
   name: site.brand.plain,
-  /* The studio publishes two public forms: PAMUUC | STUDIOS on the site and
+  /* The studio publishes two public forms: PAMUUC | STUDIO on the site and
      PAMUUC STUDIO on LinkedIn. Both are declared so the entity resolves
      either way while the studio decides which is canonical. */
   alternateName: site.brand.alternateNames || site.brand.name,
@@ -286,7 +286,7 @@ function header(loc, current) {
 <div class="wrap hdr__in">
 <a class="brand" href="${homeURL(loc)}" aria-label="${attr(site.brand.plain)}">
 <span class="brand__mark" aria-hidden="true"></span>
-<span class="brand__word">PAMUUC <i>|</i> STUDIOS</span>
+<span class="brand__word">PAMUUC <i>|</i> STUDIO</span>
 </a>
 <nav class="nav" id="nav" aria-label="${attr(str.menu)}" hidden>
 <ul>${nav.map((n) => `<li><a href="${attr(n.href)}">${esc(n.label)}</a></li>`).join('')}
@@ -323,7 +323,7 @@ function footer(loc) {
 <div class="wrap">
 <div class="ftr__grid">
 <div>
-<a class="brand" href="${homeURL(loc)}"><span class="brand__mark" aria-hidden="true"></span><span class="brand__word">PAMUUC <i>|</i> STUDIOS</span></a>
+<a class="brand" href="${homeURL(loc)}"><span class="brand__mark" aria-hidden="true"></span><span class="brand__word">PAMUUC <i>|</i> STUDIO</span></a>
 <p class="ftr__about">${esc(h.footer.about)}</p>
 </div>
 ${cols.map((c) => `<div><h2>${esc(c.title)}</h2><ul>${c.links.map((l) => `<li><a href="${attr(l.href)}"${l.href.startsWith('http') ? ' rel="noopener"' : ''}>${esc(l.label)}</a></li>`).join('')}</ul></div>`).join('\n')}
