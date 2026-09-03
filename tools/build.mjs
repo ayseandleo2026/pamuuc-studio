@@ -958,9 +958,43 @@ ${posts.map((p) => `    <item>
 </rss>
 `;
 }
-const robots = () => `User-agent: *
+/* Crawler policy. Three separate decisions, stated explicitly rather than
+   left to the wildcard, per audit control 19.
+
+   1. Search and citation  — allowed. These bots feed Google, Bing, ChatGPT
+      search and Claude search, which is where the studio wants to appear.
+   2. User-directed fetch  — allowed. A person has asked an assistant to open
+      a specific page; refusing that is refusing a reader.
+   3. Model training       — allowed, and this is the one real business choice
+      here. To withdraw the site from training corpora, change Allow to
+      Disallow under the model-training group only; search visibility is
+      unaffected because those are different bots.
+
+   The legal pages are deliberately no longer disallowed. They carry
+   <meta name="robots" content="noindex">, and a crawler blocked by robots.txt
+   can never read that tag, which left those URLs eligible to appear as bare
+   links. Allowing the crawl is what actually keeps them out. */
+const robots = () => `# Search and citation crawlers — allowed
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: OAI-SearchBot
+User-agent: Claude-SearchBot
 Allow: /
-${LOCALES.map((l) => `Disallow: ${legalURL(l)}`).join('\n')}
+
+# User-directed retrieval (a reader asked an assistant for this page) — allowed
+User-agent: ChatGPT-User
+User-agent: Claude-User
+Allow: /
+
+# Model training and development — allowed; change to Disallow to withdraw
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+Allow: /
+
+# Everything else
+User-agent: *
+Allow: /
 
 Sitemap: ${abs('/sitemap.xml')}
 `;
