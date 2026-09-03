@@ -244,6 +244,18 @@ const orgNode = {
   address: { '@type': 'PostalAddress', addressLocality: site.brand.city, addressCountry: site.brand.country },
   areaServed: ['ES', 'FR', 'IT', 'DE', 'Europe'],
   knowsLanguage: LOCALES,
+  /* Google lists contactPoint as recommended for Organization. Every value
+     here is already stated on the contact section of the site; nothing is
+     asserted that a reader cannot verify. sameAs stays out until the studio
+     confirms its official profile URLs — an unverified profile link is worse
+     than none. */
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    email: site.brand.email,
+    areaServed: ['ES', 'FR', 'IT', 'DE', 'Europe'],
+    availableLanguage: LOCALES,
+  },
 };
 const personNode = {
   '@type': 'Person',
@@ -671,7 +683,7 @@ ${field('brief', 'brief', 'textarea', false)}
 <p class="hp"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></p>
 <label class="consent"><input type="checkbox" name="consent" required aria-required="true"> <span>${consent}</span></label>
 <p class="form-note">${esc(h.contact.form.hint)}</p>
-<p class="form-status" data-form-status hidden></p>
+<p class="form-status" data-form-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
 <div class="field field--full"><button class="btn btn--primary btn--full" type="submit">${esc(h.contact.form.submit)}</button></div>
 </form>
 </div></section>

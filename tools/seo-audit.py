@@ -137,6 +137,16 @@ for u, h in indexable.items():
         if not i: continue
         if f'for="{i.group(1)}"' not in h and 'aria-label' not in inp and 'type="hidden"' not in inp:
             add(20, 'FAIL', f'{u}: control #{i.group(1)} has no label')
+    # a control wrapped in <label> is implicitly associated and needs no for=
+    for m in re.finditer(r'<(?:input|select|textarea)\b[^>]*>', h):
+        inp = m.group(0)
+        if 'type="hidden"' in inp or re.search(r'\bid="', inp): continue
+        before = h[:m.start()]
+        if before.count('<label') <= before.count('</label>') and 'aria-label' not in inp:
+            add(20, 'WARN', f'{u}: unlabelled control with no id and no wrapping label')
+    st = re.search(r'<[^>]+data-form-status[^>]*>', h)
+    if st and 'aria-live' not in st.group(0) and 'role="status"' not in st.group(0):
+        add(20, 'FAIL', f'{u}: form status region is not announced (no role/aria-live)')
 
 # ── report ───────────────────────────────────────────────────────────────────
 NAMES = {1:'Discovery, crawl, index, policy eligibility',2:'Canonical, redirects, URL consistency, sitemap',

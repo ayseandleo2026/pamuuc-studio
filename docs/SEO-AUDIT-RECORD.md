@@ -28,7 +28,7 @@ Re-run: `node tools/build.mjs && node tools/seo-audit.py`
 | 9 | Topic hubs, internal links, cannibalisation | Architecture | **Pass** | Zero orphans; every indexable page has real `<a href>` inbound links |
 | 10 | Authorship, expertise, sourcing, transparency | Trust | **Fail** | `Person` markup on 30 pages but no author or About page exists to point at |
 | 11 | On-page relevance and search presentation | Relevance | **Pass** | 40 unique titles and descriptions, one `<h1>` each, no heading jumps |
-| 12 | Business entity consistency and site trust | Trust | **Partial** | Organization markup present; `sameAs` profiles and legal entity unverified |
+| 12 | Business entity consistency and site trust | Trust | **Partial** | Organization carries legalName, vatID, address, areaServed, logo and now contactPoint; only `sameAs` is outstanding |
 | 13 | External authority, links, mentions, reviews | Authority | **Blocked** | Off-site. Needs Search Console Links + a client permission process |
 | 14 | Multilingual and regional implementation | Expansion | **Pass** | 5 locales, reciprocal hreflang with x-default, self-referencing canonicals |
 | 15 | Accurate structured data | Enhancement | **Pass** | 155 objects, all valid, all required properties present, all matching visible content |
@@ -49,6 +49,19 @@ Every crawler fell through the wildcard, so search visibility, user-directed
 retrieval and model training were one undifferentiated decision nobody had
 made. Now stated as three explicit groups. All remain allowed; the training
 group is the one real business choice and is a one-word edit.
+
+**Control 20 — the form status region was never announced.** The paragraph
+that reports "sending", success and failure was a bare `<p>`. A screen reader
+or agent submitting the form was told nothing about the outcome, which fails
+the control's requirement to "recover from validation errors, and reach a
+clear confirmation step". It now carries `role="status"`, `aria-live="polite"`
+and `aria-atomic="true"`.
+
+**Control 15 — `Organization.contactPoint` was absent.** Google lists it as
+recommended. Added with contact type, email, area served and available
+languages — every value already stated on the page. `sameAs` deliberately
+stays out until the studio confirms its official profile URLs; an unverified
+profile link is worse than none.
 
 **Control 1 — `noindex` defeated by `Disallow`.** The legal pages carried
 `<meta name="robots" content="noindex">` *and* were disallowed in
