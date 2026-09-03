@@ -141,7 +141,9 @@
       "required": "required",
       "sitemap": "Sitemap",
       "faqMore": "Show all questions",
-      "faqLess": "Show fewer questions"
+      "faqLess": "Show fewer questions",
+      "sectionShow": "Show this section",
+      "sectionHide": "Hide this section"
     },
     "es": {
       "takeaways": "Puntos clave",
@@ -175,7 +177,9 @@
       "required": "obligatorio",
       "sitemap": "Mapa del sitio",
       "faqMore": "Ver todas las preguntas",
-      "faqLess": "Ver menos preguntas"
+      "faqLess": "Ver menos preguntas",
+      "sectionShow": "Ver esta sección",
+      "sectionHide": "Ocultar esta sección"
     },
     "fr": {
       "takeaways": "À retenir",
@@ -209,7 +213,9 @@
       "required": "obligatoire",
       "sitemap": "Plan du site",
       "faqMore": "Voir toutes les questions",
-      "faqLess": "Voir moins de questions"
+      "faqLess": "Voir moins de questions",
+      "sectionShow": "Voir cette section",
+      "sectionHide": "Masquer cette section"
     },
     "it": {
       "takeaways": "In sintesi",
@@ -243,7 +249,9 @@
       "required": "obbligatorio",
       "sitemap": "Mappa del sito",
       "faqMore": "Mostra tutte le domande",
-      "faqLess": "Mostra meno domande"
+      "faqLess": "Mostra meno domande",
+      "sectionShow": "Mostra questa sezione",
+      "sectionHide": "Nascondi questa sezione"
     },
     "de": {
       "takeaways": "Das Wichtigste",
@@ -277,7 +285,9 @@
       "required": "Pflichtfeld",
       "sitemap": "Sitemap",
       "faqMore": "Alle Fragen anzeigen",
-      "faqLess": "Weniger Fragen anzeigen"
+      "faqLess": "Weniger Fragen anzeigen",
+      "sectionShow": "Diesen Abschnitt anzeigen",
+      "sectionHide": "Diesen Abschnitt ausblenden"
     }
   },
   "legacyRedirects": {

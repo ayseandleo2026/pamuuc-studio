@@ -62,6 +62,23 @@ const UI = Object.fromEntries(LOCALES.map((l) => [l, json(`content/ui.${l}.json`
 const LEGAL = Object.fromEntries(LOCALES.map((l) => [l, json(`content/legal.${l}.json`)]));
 const S = (loc) => site.strings[loc];
 
+/* Mobile section accordion.
+   A checkbox, not <details>: a closed <details> does not lay out its
+   non-summary children at all, so forcing one open on desktop paints the
+   body without giving it height and it overlaps the next section. The
+   checkbox collapses in pure CSS under the mobile query only, so the state
+   is correct at first paint, there is no layout shift, and the control
+   still works with JavaScript disabled. The heading stays outside the
+   collapse, so the document outline is identical at every width and
+   nothing ever leaves the HTML. */
+const collapsible = (loc, id, open, body) => {
+  const str = S(loc);
+  return `<input class="sec-acc__cb" type="checkbox" id="acc-${id}"${open ? ' checked' : ''}>`
+    + `<label class="sec-acc__btn" for="acc-${id}"><span class="is-more">${esc(str.sectionShow)}</span>`
+    + `<span class="is-less">${esc(str.sectionHide)}</span></label>`
+    + `<div class="sec-acc__body">\n${body}\n</div>`;
+};
+
 const FAQ_VISIBLE = 5;
 const faqItem = (items, first) => items
   .map((q, i) => `<details${first && i === 0 ? ' open' : ''}><summary>${esc(q.q)}</summary><div class="acc__body"><p>${esc(q.a)}</p></div></details>`)
@@ -525,6 +542,7 @@ ${h.band.stats.map((x) => `<div><dd>${esc(x.v)}</dd><dt>${esc(x.l)}</dt></div>`)
 <h2 class="h2">${esc(h.sectors.h2)}</h2>
 <p class="lead">${esc(h.sectors.intro)}</p>
 </div>
+${collapsible(loc, 'sectors', true, `
 <ul class="sector-grid">
 ${h.sectors.items.map((x, i) => {
   const detail = h.detail[sectorKeys[i]] || [];
@@ -538,6 +556,7 @@ ${disclosure(loc, trimEcho(detail, x.name), x.name)}
 }).join('\n')}
 </ul>
 <p class="handoff"><a href="#contact">${esc(h.sectors.handoff)}</a></p>
+`)}
 </div></section>
 
 <section class="section" id="services"><div class="wrap">
@@ -546,6 +565,7 @@ ${disclosure(loc, trimEcho(detail, x.name), x.name)}
 <h2 class="h2">${esc(h.wardrobe.h2)}</h2>
 <p class="lead">${esc(h.wardrobe.intro)}</p>
 </div>
+${collapsible(loc, 'services', true, `
 <div class="getgrid">
 <img class="getgrid__img" src="${attr(h.wardrobe.img)}" width="800" height="1066" loading="lazy" decoding="async" alt="${attr(h.wardrobe.alt)}">
 <ol class="pillars">
@@ -562,6 +582,7 @@ ${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
 <p class="ctabar__t">${esc(h.wardrobe.ctaText)}</p>
 <a class="ctabar__a" href="#contact">${esc(h.wardrobe.ctaLabel)} <span aria-hidden="true">&#8594;</span></a>
 </div>
+`)}
 </div></section>
 
 <section class="section section--alt" id="parameters"><div class="wrap">
@@ -570,6 +591,7 @@ ${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
 <h2 class="h2">${esc(h.parameters.h2)}</h2>
 <p class="lead">${esc(h.parameters.intro)}</p>
 </div>
+${collapsible(loc, 'parameters', false, `
 <div class="grid grid--3">
 ${h.parameters.groups.map((g) => `<article class="param">
 <h3 class="h3">${esc(g.h3)}</h3>
@@ -579,6 +601,7 @@ ${g.items.length ? `<ul class="ticks">${g.items.map((i) => `<li>${esc(i)}</li>`)
 ${disclosure(loc, h.detail[g.modal], g.h3)}
 </article>`).join('\n')}
 </div>
+`)}
 </div></section>
 
 <section class="section" id="projects"><div class="wrap">
@@ -587,6 +610,7 @@ ${disclosure(loc, h.detail[g.modal], g.h3)}
 <h2 class="h2">${esc(h.projects.h2)}</h2>
 <p class="lead">${esc(h.projects.intro)}</p>
 </div>
+${collapsible(loc, 'projects', false, `
 <div class="grid grid--3">
 ${h.projects.items.map((x) => {
   const inner = `<img src="${attr(x.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(x.alt || x.h3)}">
@@ -600,11 +624,8 @@ ${x.linkLabel ? `<p class="project__link">${esc(x.linkLabel)}</p>` : ''}`;
 }).join('\n')}
 </div>
 <p class="handoff"><a href="#contact">${esc(h.projects.handoff)}</a></p>
+`)}
 </div></section>
-
-<section class="band-full">
-<img src="${attr(h.band.img)}" width="1000" height="500" loading="lazy" decoding="async" alt="${attr(h.band.alt)}">
-</section>
 
 <section class="section" id="process"><div class="wrap">
 <div class="section__head">
@@ -612,6 +633,7 @@ ${x.linkLabel ? `<p class="project__link">${esc(x.linkLabel)}</p>` : ''}`;
 <h2 class="h2">${esc(h.process.h2)}</h2>
 <p class="lead">${esc(h.process.intro)}</p>
 </div>
+${collapsible(loc, 'process', false, `
 <div class="grid grid--3">
 ${h.process.phases.map((x, i) => `<article class="card">
 <img class="card__img" src="${attr(x.img)}" width="800" height="450" loading="lazy" decoding="async" alt="${attr(x.alt || x.h3)}">
@@ -628,6 +650,7 @@ ${h.process.stats.map((x) => `<div><dd>${esc(x.v)}</dd><dt>${esc(x.l)}</dt></div
 </dl>
 ${h.process.note ? `<p class="muted small section__sub">${esc(h.process.note)}</p>` : ''}
 <p class="handoff"><a href="#contact">${esc(h.process.handoff)}</a></p>
+`)}
 </div></section>
 
 <section class="section section--alt" id="faq"><div class="wrap">
@@ -636,6 +659,7 @@ ${h.process.note ? `<p class="muted small section__sub">${esc(h.process.note)}</
 <h2 class="h2">${esc(h.faq.h2)}</h2>
 <p class="lead">${esc(h.faq.intro)}</p>
 </div>
+${collapsible(loc, 'faq', false, `
 <div class="acc">
 ${faqItem(h.faq.items.slice(0, FAQ_VISIBLE), true)}
 </div>
@@ -645,6 +669,7 @@ ${faqItem(h.faq.items.slice(FAQ_VISIBLE), false)}
 </div>
 </details>` : ''}
 <p class="handoff"><a href="#contact">${esc(h.faq.handoff)}</a></p>
+`)}
 </div></section>
 
 <section class="section" id="contact"><div class="wrap contact">

@@ -542,10 +542,6 @@ a.project:hover .project__link::after{transform:translateX(3px)}
 .card__img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;
   border-radius:8px;display:block;margin-bottom:.45rem}
 
-/* ── home: full-bleed atelier band ───────────────────────────────────────── */
-.band-full{margin-block:clamp(2rem,5vw,4rem)}
-.band-full img{width:100%;height:auto;aspect-ratio:2/1;object-fit:cover;display:block}
-
 /* ── home: section handoff link ──────────────────────────────────────────── */
 .handoff{margin:clamp(1.1rem,2.4vw,1.8rem) 0 0}
 .handoff a{color:var(--accent);text-decoration:none;font-size:var(--step-0);
@@ -560,4 +556,32 @@ a.project:hover .project__link::after{transform:translateX(3px)}
   .ftr__legal a{min-width:24px;text-align:center}
   .ftr li{margin-bottom:.35rem}
   .lang__menu a{min-height:2.75rem;display:flex;align-items:center}
+}
+
+/* ── mobile section accordion ────────────────────────────────────────────
+   Collapsed in CSS under the mobile query only, so the state is right at
+   first paint and there is no layout shift. Desktop never hides anything:
+   the control is display:none and the body has no rule against it. The
+   body stays in the HTML at both widths — this hides nothing from a
+   crawler that a reader is not also shown. */
+.sec-acc__cb{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}
+.sec-acc__btn{display:none}
+
+@media (max-width:900px){
+  .sec-acc__cb:not(:checked) ~ .sec-acc__body{display:none}
+  .sec-acc__btn{display:inline-flex;align-items:center;gap:.5rem;cursor:pointer;
+    margin-top:1.1rem;min-height:2.75rem;padding:.6rem 1.15rem;border:1px solid var(--line-strong);
+    border-radius:999px;background:var(--surface);color:var(--ink);font-size:var(--step--1)}
+  .sec-acc__btn::after{content:"";width:.5rem;height:.5rem;border-right:1px solid currentColor;
+    border-bottom:1px solid currentColor;transform:rotate(45deg);margin-top:-.25rem}
+  .sec-acc__cb:checked ~ .sec-acc__btn::after{transform:rotate(-135deg);margin-top:.2rem}
+  .sec-acc__btn:hover{border-color:var(--accent);color:var(--accent)}
+  .sec-acc__btn .is-less{display:none}
+  .sec-acc__cb:checked ~ .sec-acc__btn .is-more{display:none}
+  .sec-acc__cb:checked ~ .sec-acc__btn .is-less{display:inline}
+  .sec-acc__cb:focus-visible ~ .sec-acc__btn{outline:2px solid var(--accent);outline-offset:2px}
+  .sec-acc__body{margin-top:1.4rem}
+  /* a collapsed section is a heading and a button; it does not need the
+     full section rhythm around it */
+  .section:has(.sec-acc__cb:not(:checked)){padding-block:clamp(2rem,5vw,2.75rem)}
 }

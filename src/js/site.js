@@ -26,6 +26,28 @@
     addEventListener('resize', () => setNav(wide() ? true : burger.getAttribute('aria-expanded') === 'true'));
   }
 
+  /* --- Mobile section accordion ----------------------------------------
+     The sections collapse in CSS, so nothing here runs on first paint and
+     the control works without JavaScript. This only opens the section an
+     in-page link points at, so a nav tap does not land on a shut body. */
+  const openAt = (id) => {
+    const cb = id && document.getElementById('acc-' + id);
+    if (cb && !cb.checked) { cb.checked = true; return true; }
+    return false;
+  };
+  const jumpTo = (id) => {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+  addEventListener('hashchange', () => { if (openAt(location.hash.slice(1))) jumpTo(location.hash.slice(1)); });
+  openAt(location.hash.slice(1));
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"], a[href*="/#"]');
+    if (!a) return;
+    const id = a.getAttribute('href').split('#')[1] || '';
+    if (id && openAt(id)) { e.preventDefault(); jumpTo(id); history.pushState(null, '', '#' + id); }
+  });
+
   /* --- Language menu ---------------------------------------------------- */
   const langBtn = document.querySelector('[data-lang-btn]');
   const langMenu = document.getElementById('lang-menu');
