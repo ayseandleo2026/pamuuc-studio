@@ -64,6 +64,13 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
+    "hoteldurability": {
+      "en": "hotel-uniform-durability",
+      "es": "durabilidad-uniformes-hotel",
+      "fr": "durabilite-uniformes-hotel",
+      "it": "durata-divise-hotel",
+      "de": "langlebigkeit-von-hoteluniformen"
+    },
     "bestfabrics": {
       "en": "compare-hotel-uniform-fabric-samples",
       "es": "comparar-muestras-tejidos-uniformes-hotel",
@@ -115,6 +122,7 @@
     }
   },
   "postOrder": [
+    "hoteldurability",
     "bestfabrics",
     "hotelfabrics",
     "hotelideas",
