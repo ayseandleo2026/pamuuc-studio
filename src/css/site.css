@@ -420,8 +420,13 @@ a.project:hover .project__link::after{transform:translateX(3px)}
 @media (max-width:700px){.post-row{grid-template-columns:1fr}}
 
 /* ---- Article ----------------------------------------------------------- */
+/* The article title owns the full 75rem column, so it is not capped at
+   --measure-title: that 32ch cap is 1016px against a 1200px container and
+   forced a second line on titles that fit one, which text-wrap:balance then
+   split into two half-width lines. Every other heading sits in a narrower
+   grid column where the cap never binds. */
 .post-title{font-family:var(--f-display);font-size:clamp(1.9rem,1.35rem + 2.4vw,3.15rem);line-height:1.1;
-  letter-spacing:-.03em;font-weight:300;max-width:var(--measure-title);text-wrap:balance}
+  letter-spacing:-.03em;font-weight:300;max-width:none;text-wrap:balance}
 .article{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,16rem);gap:clamp(2rem,5vw,4rem);align-items:start}
 .article__body{max-width:var(--measure-prose);font-size:1.04rem;line-height:1.75}
 .article__body h2{font-family:var(--f-display);font-size:var(--step-2);font-weight:400;line-height:1.25;
