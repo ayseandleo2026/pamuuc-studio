@@ -64,6 +64,13 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
+    "bestfabrics": {
+      "en": "compare-hotel-uniform-fabric-samples",
+      "es": "comparar-muestras-tejidos-uniformes-hotel",
+      "fr": "comparer-echantillons-tissus-uniformes-hotel",
+      "it": "confrontare-campioni-tessuti-divise-hotel",
+      "de": "stoffmuster-fuer-hoteluniformen-vergleichen"
+    },
     "hotelfabrics": {
       "en": "hotel-uniform-fabric-guide",
       "es": "guia-tejidos-uniformes-hotel",
@@ -108,6 +115,7 @@
     }
   },
   "postOrder": [
+    "bestfabrics",
     "hotelfabrics",
     "hotelideas",
     "hoteldesign",
