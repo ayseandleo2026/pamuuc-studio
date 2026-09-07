@@ -64,13 +64,6 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
-    "bestfabrics": {
-      "en": "best-fabrics-for-hotel-uniforms",
-      "es": "mejores-tejidos-uniformes-hotel",
-      "fr": "meilleurs-tissus-uniformes-hotel",
-      "it": "migliori-tessuti-divise-hotel",
-      "de": "beste-stoffe-fuer-hoteluniformen"
-    },
     "hotelfabrics": {
       "en": "hotel-uniform-fabric-guide",
       "es": "guia-tejidos-uniformes-hotel",
@@ -115,7 +108,6 @@
     }
   },
   "postOrder": [
-    "bestfabrics",
     "hotelfabrics",
     "hotelideas",
     "hoteldesign",
