@@ -573,8 +573,8 @@ function renderHome(loc) {
     const label = h.contact.form.labels[id] || id;
     const ph = h.contact.form.placeholders[id];
     const control = type === 'textarea'
-      ? `<textarea id="${id}" name="${name}" rows="4" maxlength="2000"${ph ? ` placeholder="${attr(ph)}"` : ''}></textarea>`
-      : `<input id="${id}" name="${name}" type="${type}"${required ? ' required aria-required="true"' : ''}${ph ? ` placeholder="${attr(ph)}"` : ''}${extra}>`;
+      ? `<textarea class="inp" id="${id}" name="${name}" rows="4" maxlength="2000"${ph ? ` placeholder="${attr(ph)}"` : ''}></textarea>`
+      : `<input class="inp" id="${id}" name="${name}" type="${type}"${required ? ' required aria-required="true"' : ''}${ph ? ` placeholder="${attr(ph)}"` : ''}${extra}>`;
     const help = h.contact.form.helps?.[id];
     return `<label class="fld${required ? ' fld--req' : ''}${type === 'textarea' ? ' bf-full' : ''}">
 <span class="fld-l">${esc(label)}</span>${control}${help ? `<span class="fld-h">${esc(help)}</span>` : ''}</label>`;
@@ -582,7 +582,7 @@ function renderHome(loc) {
   const select = (id) => {
     const opts = h.contact.form.options[id] || [];
     return `<label class="fld fld--req"><span class="fld-l">${esc(h.contact.form.labels[id] || id)}</span>
-<select id="${id}" name="${id}" required aria-required="true">
+<select class="inp" id="${id}" name="${id}" required aria-required="true">
 ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? ' disabled selected' : ''}>${esc(o.t)}</option>`).join('\n')}
 </select></label>`;
   };
@@ -598,7 +598,7 @@ ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? 
 
 <section class="shero"><div class="wrap"><div class="shero-in">
 <div class="shero-copy">
-<span class="news"><b>${esc(site.brand.city)}</b>${esc(h.hero.eyebrow)}</span>
+<span class="news"><b>${esc(site.brand.city)}</b>${esc(h.hero.eyebrow.replace(/\s*[·,]\s*Barcel\w*\s*$/i, ''))}</span>
 <h1 class="display shero-t">${esc(h.hero.h1)}</h1>
 <p class="lede shero-d">${esc(h.hero.lead)}</p>
 <div class="btn-row shero-btns">

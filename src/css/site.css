@@ -1597,3 +1597,33 @@ main[data-page="custom"] .pt-dot{box-shadow:0 0 0 4px var(--paper),
   0 1px 3px color-mix(in srgb,#011251 30%,transparent)}
 main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in srgb,#011251 22%,transparent),
   0 1px 2px color-mix(in srgb,#011251 18%,transparent)}
+
+/* ---------------------------------------------------------------------------
+   Corrections after the first look at the live page.
+   ------------------------------------------------------------------------ */
+
+/* A chapter head bottom-aligns its two columns, which is right when the
+   sentence beside the line runs to two lines. Across five languages it runs
+   to four, and all the slack piled up above the headline. Align to the top
+   and let the sentence hang instead, with its first line on the headline's. */
+.shd--left{align-items:start}
+.shd--left .shd-d{margin-top:.55em}
+@media (max-width:900px){ .shd--left .shd-d{margin-top:0} }
+
+/* the consent line sits on navy, so its links have to be read on navy */
+.bf .consent{display:flex;gap:var(--sp-3);align-items:flex-start;margin-top:var(--sp-5);
+  font-size:var(--fs-xs);color:var(--on-band-dim);line-height:1.55}
+.bf .consent a{color:var(--on-band);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-color:rgba(244,242,237,.5)}
+.bf .consent a:hover{text-decoration-color:#F4F2ED}
+.bf .consent input[type="checkbox"]{flex:none;width:18px;height:18px;margin-top:1px;
+  accent-color:#F4F2ED;cursor:pointer}
+.bf .form-status{color:var(--on-band);margin-top:var(--sp-4)}
+
+/* "Show all questions" was inheriting a pill from the old sheet and came out
+   as an ellipse. It is a quiet control on a rule, like the mockup's. */
+.faq .acc__more > summary{display:inline-flex;align-items:center;gap:8px;
+  border:1px solid var(--line);border-radius:var(--radius-full);
+  padding:0 var(--sp-5);min-height:38px;margin:var(--sp-5) 0;
+  font-size:var(--fs-xs);color:var(--muted);background:var(--surface);width:auto}
+.faq .acc__more > summary:hover{border-color:var(--line-strong);color:var(--navy)}
