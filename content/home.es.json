@@ -77,23 +77,31 @@
       "Conectan distintos roles en un mismo vestuario",
       "Mantienen la coherencia en cada reposición"
     ],
-    "kicker": "Proyectos realizados",
+    "kicker": "Trabajo entregado",
     "stats": [
       {
-        "v": "1000+",
-        "l": "prendas para varios establecimientos de 5 estrellas"
+        "v": "2.600",
+        "u": "",
+        "l": "Prendas fabricadas en 2026",
+        "n": "Patronadas, cortadas, cosidas y acabadas a menos de treinta kilómetros de Barcelona, en todos los programas entregados este año."
       },
       {
-        "v": "20+",
-        "l": "roles en un mismo sistema de vestuario"
+        "v": "12",
+        "u": "semanas",
+        "l": "Proyecto completo, media",
+        "n": "Desde el briefing que nos envía hasta la primera entrega, a lo largo de las seis etapas. El suyo se presupuesta según sus prendas, cantidades y aprobaciones."
       },
       {
-        "v": "12 meses",
-        "l": "de servicio diario y lavandería industrial"
+        "v": "3",
+        "u": "semanas",
+        "l": "Repetición, en producción",
+        "n": "Producida contra la especificación archivada, de modo que nada se desarrolla dos veces. Disponibilidad y precio se verifican antes de lanzarla."
       },
       {
-        "v": "100%",
-        "l": "diseñados y producidos en Barcelona"
+        "v": "150 €",
+        "u": "",
+        "l": "Por persona, media",
+        "n": "Lo que un equipo suele invertir por cabeza en las prendas de su gama. El desarrollo, el tejido y la cantidad la mueven desde ahí."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",

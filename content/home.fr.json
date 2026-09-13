@@ -68,7 +68,7 @@
     }
   },
   "band": {
-    "text": "Des uniformes au service de la marque, de l’équipe et de chaque journée",
+    "text": "Des uniformes qui fonctionnent pour la marque, l’équipe et le service",
     "points": [
       "Reflètent votre espace et votre identité",
       "Accompagnent les mouvements et les tâches réelles",
@@ -77,23 +77,31 @@
       "Relient les différents rôles dans un même vestiaire",
       "Restent cohérents d’un réassort à l’autre"
     ],
-    "kicker": "Projets réalisés",
+    "kicker": "Travaux livrés",
     "stats": [
       {
-        "v": "1000+",
-        "l": "pièces pour plusieurs établissements 5 étoiles"
+        "v": "2 600",
+        "u": "",
+        "l": "Vêtements réalisés en 2026",
+        "n": "Patronnés, coupés, cousus et finis à moins de trente kilomètres de Barcelone, sur l’ensemble des programmes livrés cette année."
       },
       {
-        "v": "20+",
-        "l": "rôles dans une même garde-robe"
+        "v": "12",
+        "u": "semaines",
+        "l": "Projet complet, moyenne",
+        "n": "Du brief que vous envoyez à la première livraison, sur les six étapes. Le vôtre est chiffré selon vos vêtements, vos quantités et vos approbations."
       },
       {
-        "v": "12 mois",
-        "l": "de service quotidien et de blanchissage industriel"
+        "v": "3",
+        "u": "semaines",
+        "l": "Réassort, en production",
+        "n": "Produit à partir de la spécification archivée : rien n’est développé deux fois. Disponibilité et prix sont revérifiés avant le lancement."
       },
       {
-        "v": "100%",
-        "l": "conçu et produit à Barcelone"
+        "v": "150 €",
+        "u": "",
+        "l": "Par personne, moyenne",
+        "n": "Ce qu’une équipe dépense généralement par tête sur les vêtements de sa gamme. Le développement, le tissu et la quantité la font varier."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",

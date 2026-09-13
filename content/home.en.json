@@ -80,20 +80,28 @@
     "kicker": "Delivered work",
     "stats": [
       {
-        "v": "1000+",
-        "l": "garments for multiple 5-star establishments"
+        "v": "2,600",
+        "u": "",
+        "l": "Garments made in 2026",
+        "n": "Patterned, cut, sewn and finished within thirty kilometres of Barcelona, across every programme delivered this year."
       },
       {
-        "v": "20+",
-        "l": "roles in a single wardrobe system"
+        "v": "12",
+        "u": "weeks",
+        "l": "A full project, average",
+        "n": "From the brief you send to the first delivery, across all six stages. Yours is quoted against your own garments, quantities and approvals."
       },
       {
-        "v": "12 months",
-        "l": "daily service and industrial laundry"
+        "v": "3",
+        "u": "weeks",
+        "l": "A reorder, in production",
+        "n": "Produced against the archived specification, so nothing is developed twice. Availability and price are rechecked before it runs."
       },
       {
-        "v": "100%",
-        "l": "designed and produced in Barcelona"
+        "v": "€150",
+        "u": "",
+        "l": "Per person, average",
+        "n": "What a team typically spends per head across the garments in its range. Development, fabric and quantity move it from there."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",

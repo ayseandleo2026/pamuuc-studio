@@ -68,7 +68,7 @@
     }
   },
   "band": {
-    "text": "Uniformen, die für Marke, Team und Schicht funktionieren",
+    "text": "Uniformen, die für die Marke, das Team und die Schicht funktionieren",
     "points": [
       "Spiegeln Ihren Raum und Ihre Identität wider",
       "Unterstützen echte Bewegung und tägliche Aufgaben",
@@ -77,23 +77,31 @@
       "Verbinden unterschiedliche Rollen in einer Garderobe",
       "Bleiben bei Nachbestellungen konsistent"
     ],
-    "kicker": "Realisierte Projekte",
+    "kicker": "Gelieferte Arbeiten",
     "stats": [
       {
-        "v": "1000+",
-        "l": "Kleidungsstücke für mehrere Fünf-Sterne-Häuser"
+        "v": "2.600",
+        "u": "",
+        "l": "Kleidungsstücke 2026 gefertigt",
+        "n": "Geschnitten, genäht und ausgerüstet im Umkreis von dreißig Kilometern um Barcelona, über alle in diesem Jahr gelieferten Programme."
       },
       {
-        "v": "20+",
-        "l": "Rollen in einem einzigen Garderobensystem"
+        "v": "12",
+        "u": "Wochen",
+        "l": "Vollständiges Projekt, Mittel",
+        "n": "Vom Briefing, das Sie senden, bis zur ersten Lieferung, über alle sechs Stufen. Ihres wird an Ihren Kleidungsstücken, Mengen und Freigaben kalkuliert."
       },
       {
-        "v": "12 Monate",
-        "l": "täglicher Dienst und industrielle Wäsche"
+        "v": "3",
+        "u": "Wochen",
+        "l": "Nachbestellung, in Produktion",
+        "n": "Nach der archivierten Spezifikation gefertigt, damit nichts zweimal entwickelt wird. Verfügbarkeit und Preis werden vorher neu geprüft."
       },
       {
-        "v": "100%",
-        "l": "in Barcelona entworfen und produziert"
+        "v": "150 €",
+        "u": "",
+        "l": "Pro Person, Mittel",
+        "n": "Was ein Team üblicherweise pro Kopf für die Kleidungsstücke seiner Reihe ausgibt. Entwicklung, Stoff und Menge verschieben das."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",

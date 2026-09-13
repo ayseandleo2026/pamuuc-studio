@@ -336,9 +336,10 @@ ${cols.map((c) => `<div><h2>${esc(c.title)}</h2><ul>${c.links.map((l) => `<li><a
 </div>
 </div>
 </footer>
-<div class="consent-bar" data-consent hidden>
-<p>${esc(S(loc).cookieText)}</p>
-<div>
+<div class="consent-bar" data-consent hidden role="region" aria-label="${attr(S(loc).cookieText).slice(0, 60)}">
+<p class="consent-bar__t">${esc(S(loc).cookieText)}</p>
+<p class="consent-bar__l"><a href="${legalURL(loc)}#cookies">${esc(S(loc).legal)}</a></p>
+<div class="consent-bar__a">
 <button class="btn btn--primary btn--sm" data-consent-action="granted">${esc(S(loc).cookieAccept)}</button>
 <button class="btn btn--ghost btn--sm" data-consent-action="denied">${esc(S(loc).cookieReject)}</button>
 </div>
@@ -625,7 +626,11 @@ ${h.hero.proofs.map((p) => `<div><dt>${esc(p.label)}</dt><dd>${esc(p.text)}</dd>
 <section class="pub-sec"><div class="wrap">
 <div class="band">
 <dl class="band-g">
-${h.band.stats.map((x) => `<div class="band-i"><dd class="band-v">${esc(x.v)}</dd><dt class="band-l">${esc(x.l)}</dt></div>`).join('\n')}
+${h.band.stats.map((x) => `<div class="band-c">
+<dd class="band-v">${esc(x.v)}${x.u ? `<span class="band-u">${esc(x.u)}</span>` : ''}</dd>
+<dt class="band-l">${esc(x.l)}</dt>
+<dd class="band-n">${esc(x.n)}</dd>
+</div>`).join('\n')}
 </dl>
 </div>
 </div></section>

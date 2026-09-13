@@ -68,7 +68,7 @@
     }
   },
   "band": {
-    "text": "Divise che funzionano per il marchio, il personale e il turno",
+    "text": "Divise che funzionano per il marchio, la squadra e il turno",
     "points": [
       "Riflettono lo spazio e l’identità",
       "Assecondano movimenti e attività reali",
@@ -77,23 +77,31 @@
       "Collegano ruoli diversi in un unico guardaroba",
       "Restano coerenti a ogni riordino"
     ],
-    "kicker": "Progetti realizzati",
+    "kicker": "Lavori consegnati",
     "stats": [
       {
-        "v": "1000+",
-        "l": "capi per diverse strutture a 5 stelle"
+        "v": "2.600",
+        "u": "",
+        "l": "Capi realizzati nel 2026",
+        "n": "Modellati, tagliati, cuciti e rifiniti entro trenta chilometri da Barcellona, su tutti i programmi consegnati quest’anno."
       },
       {
-        "v": "20+",
-        "l": "ruoli in un unico sistema di guardaroba"
+        "v": "12",
+        "u": "settimane",
+        "l": "Progetto completo, media",
+        "n": "Dal brief che ci invia alla prima consegna, lungo tutte e sei le fasi. Il suo viene quotato sui suoi capi, quantità e approvazioni."
       },
       {
-        "v": "12 mesi",
-        "l": "di servizio quotidiano e lavaggio industriale"
+        "v": "3",
+        "u": "settimane",
+        "l": "Riordino, in produzione",
+        "n": "Prodotto sulla specifica archiviata, così nulla viene sviluppato due volte. Disponibilità e prezzo sono riverificati prima dell’avvio."
       },
       {
-        "v": "100%",
-        "l": "disegnati e prodotti a Barcellona"
+        "v": "150 €",
+        "u": "",
+        "l": "A persona, media",
+        "n": "Quanto una squadra spende di solito a testa sui capi della sua gamma. Sviluppo, tessuto e quantità la spostano da lì."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
