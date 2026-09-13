@@ -1322,5 +1322,238 @@
     "ctaLabel": "Start the brief",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "A coordinated uniform set hanging on a rail"
+  },
+  "stages": {
+    "kicker": "How it works",
+    "h2": "Six stages, and you decide at every one.",
+    "intro": "A project moves when you approve it. Each stage ends in a decision that is recorded against the project, so nobody has to remember what was agreed.",
+    "items": [
+      {
+        "h": "Design",
+        "p": "An external designer develops the visual direction from your brief. You review it and decide. Where design is not part of what you bought, the project starts at development."
+      },
+      {
+        "h": "Fabric and accessories",
+        "p": "Weight, composition, trims and finish are selected against your wash cycle and your climate, not against a mood board."
+      },
+      {
+        "h": "Development",
+        "p": "Positions, colours, quantities and a technical file per garment. This is the stage where a garment becomes a specification."
+      },
+      {
+        "h": "Production",
+        "p": "Your approved garments are manufactured against the locked specification. Nothing is cut before the required approvals are in place."
+      },
+      {
+        "h": "Delivery",
+        "p": "Garments ship to your locations. You confirm receipt, and every approved style becomes available to reorder."
+      },
+      {
+        "h": "Reorder",
+        "p": "The approved revision is archived with its measurements, fabrics, colours and suppliers, then rechecked for availability, price and timing."
+      }
+    ]
+  },
+  "phases": {
+    "kicker": "Timeline",
+    "h2": "A timeline of your projects.",
+    "phaseLabel": "Phase",
+    "intro": "The order is fixed. The duration is not, because it depends on your garments, your quantities and your approvals.",
+    "items": [
+      {
+        "h": "Brief and review",
+        "p": "You tell us the roles, the quantities and the date. We read it, decide whether the project is a fit, and arrange discovery where it is.",
+        "m": "No account. Nothing charged."
+      },
+      {
+        "h": "Development and fitting",
+        "p": "Fabric, construction and technical files, then prototypes fitted on your own people doing the actual work.",
+        "m": "Approved one garment at a time."
+      },
+      {
+        "h": "Pre-production and production",
+        "p": "Quantities, colours and size splits are confirmed and locked, then production follows the approved version.",
+        "m": "Released on approvals."
+      },
+      {
+        "h": "Delivery and reorder",
+        "p": "Garments ship to your locations, and the approved revision is archived against the project.",
+        "m": "A reorder is made from the file."
+      }
+    ]
+  },
+  "includes": {
+    "kicker": "What is included",
+    "h2": "The details that make the uniform yours.",
+    "intro": "Your brief defines what we develop, which decisions need your approval, and what is included. Every part below produces something you can hold or read — a sample, a record, a decision.",
+    "items": [
+      {
+        "h": "Role and garment plan",
+        "p": "Who needs what, from individual positions to a coordinated team wardrobe. Roles first, garments second.",
+        "a": "plan"
+      },
+      {
+        "h": "Fabric and construction",
+        "p": "Weight, composition and finish selected against your wash cycle and climate, not against a mood board.",
+        "a": "fabric"
+      },
+      {
+        "h": "Prototypes and fitting",
+        "p": "Samples tried on the people who will wear them, doing the actual work. Feedback recorded per garment.",
+        "a": "proto"
+      },
+      {
+        "h": "Brand details",
+        "p": "Colours, trims and personalisation developed within the agreed scope, at a size that survives laundry.",
+        "a": "brand"
+      },
+      {
+        "h": "An archived specification",
+        "p": "The approved revision stored with its measurements, fabrics, colours and suppliers.",
+        "a": "spec"
+      },
+      {
+        "h": "A reorder that matches",
+        "p": "Produced against the archived file, then rechecked for availability, price and timing.",
+        "a": "reorder"
+      }
+    ],
+    "art": {
+      "plan": {
+        "label": "Role plan",
+        "meta": "4 roles",
+        "rows": [
+          [
+            "Reception",
+            "Shirt · apron"
+          ],
+          [
+            "Restaurant",
+            "Jacket · trouser"
+          ],
+          [
+            "Kitchen",
+            "Chef jacket"
+          ],
+          [
+            "Housekeeping",
+            "Tunic"
+          ]
+        ]
+      },
+      "fabric": {
+        "label": "Fabric shortlist",
+        "meta": "Against your wash cycle",
+        "rows": [
+          [
+            "Twill",
+            "280"
+          ],
+          [
+            "Piqué",
+            "220"
+          ],
+          [
+            "Melton",
+            "480"
+          ],
+          [
+            "Poplin",
+            "130"
+          ]
+        ]
+      },
+      "proto": {
+        "label": "Fitting log",
+        "meta": "4 garments",
+        "rows": [
+          [
+            "Chef jacket",
+            "Approved",
+            "go"
+          ],
+          [
+            "Service trouser",
+            "Approved",
+            "go"
+          ],
+          [
+            "Wrap jacket",
+            "Changes requested",
+            "wait"
+          ],
+          [
+            "Apron",
+            "Round 2",
+            "flow"
+          ]
+        ]
+      },
+      "brand": {
+        "label": "Label and colourways",
+        "meta": "40 × 12 mm",
+        "mark": "YOUR MARK",
+        "note": "woven label, sewn into the seam",
+        "swatches": [
+          [
+            "#011251",
+            "Custom navy"
+          ],
+          [
+            "#F4F2ED",
+            "Off-white"
+          ],
+          [
+            "#2F5D74",
+            "Custom blue"
+          ],
+          [
+            "#0E0E0E",
+            "Ink"
+          ]
+        ]
+      },
+      "spec": {
+        "label": "Technical file",
+        "meta": "Revision 4",
+        "rows": [
+          [
+            "Fabric",
+            "Cotton twill 280 g/m²"
+          ],
+          [
+            "Colour",
+            "Custom navy · lab dip 3"
+          ],
+          [
+            "Positions",
+            "Chest · collar"
+          ],
+          [
+            "Sizes",
+            "XS–3XL, 9 steps"
+          ]
+        ]
+      },
+      "reorder": {
+        "label": "Reorder record",
+        "meta": "88 pieces",
+        "rows": [
+          [
+            "Approved revision",
+            "Rev. 4"
+          ],
+          [
+            "Reordered",
+            "88 pieces"
+          ],
+          [
+            "Unit price",
+            "Unchanged"
+          ]
+        ],
+        "check": "Produced against the archived file, not a memory"
+      }
+    }
   }
 }

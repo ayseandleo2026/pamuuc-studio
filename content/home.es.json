@@ -1322,5 +1322,238 @@
     "ctaLabel": "Empezar el briefing",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un conjunto coordinado de uniformes colgado en un perchero"
+  },
+  "stages": {
+    "kicker": "Cómo funciona",
+    "h2": "Seis etapas, y usted decide en cada una.",
+    "intro": "Un proyecto avanza cuando usted lo aprueba. Cada etapa termina en una decisión que queda registrada en el proyecto, de modo que nadie tenga que recordar lo acordado.",
+    "items": [
+      {
+        "h": "Diseño",
+        "p": "Un diseñador externo desarrolla la dirección visual a partir de su briefing. Usted la revisa y decide. Si el diseño no forma parte de lo contratado, el proyecto empieza en desarrollo."
+      },
+      {
+        "h": "Tejidos y accesorios",
+        "p": "Gramaje, composición, avíos y acabado se eligen según su ciclo de lavado y su clima, no según un moodboard."
+      },
+      {
+        "h": "Desarrollo",
+        "p": "Posiciones, colores, cantidades y una ficha técnica por prenda. Es la etapa en la que una prenda se convierte en una especificación."
+      },
+      {
+        "h": "Producción",
+        "p": "Sus prendas aprobadas se fabrican contra la especificación bloqueada. No se corta nada antes de contar con las aprobaciones necesarias."
+      },
+      {
+        "h": "Entrega",
+        "p": "Las prendas se envían a sus centros. Usted confirma la recepción y cada modelo aprobado queda disponible para repetir pedido."
+      },
+      {
+        "h": "Repetición",
+        "p": "La revisión aprobada se archiva con sus medidas, tejidos, colores y proveedores, y después se vuelve a verificar disponibilidad, precio y plazos."
+      }
+    ]
+  },
+  "phases": {
+    "kicker": "Calendario",
+    "h2": "El calendario de sus proyectos.",
+    "phaseLabel": "Fase",
+    "intro": "El orden es fijo. La duración no, porque depende de sus prendas, sus cantidades y sus aprobaciones.",
+    "items": [
+      {
+        "h": "Briefing y revisión",
+        "p": "Usted nos indica los puestos, las cantidades y la fecha. Lo leemos, decidimos si el proyecto encaja y, si es así, concertamos la reunión inicial.",
+        "m": "Sin cuenta. Sin cargo."
+      },
+      {
+        "h": "Desarrollo y pruebas",
+        "p": "Tejido, confección y fichas técnicas, y después prototipos probados por su propio equipo haciendo su trabajo real.",
+        "m": "Se aprueba prenda a prenda."
+      },
+      {
+        "h": "Preproducción y producción",
+        "p": "Se confirman y bloquean cantidades, colores y escalado de tallas, y la producción sigue la versión aprobada.",
+        "m": "Se libera con las aprobaciones."
+      },
+      {
+        "h": "Entrega y repetición",
+        "p": "Las prendas se envían a sus centros y la revisión aprobada queda archivada en el proyecto.",
+        "m": "La repetición sale del archivo."
+      }
+    ]
+  },
+  "includes": {
+    "kicker": "Qué incluye",
+    "h2": "Los detalles que hacen suyo el uniforme.",
+    "intro": "Su briefing define qué desarrollamos, qué decisiones requieren su aprobación y qué está incluido. Cada apartado produce algo que se puede tener en la mano o leer: una muestra, un registro, una decisión.",
+    "items": [
+      {
+        "h": "Plan de puestos y prendas",
+        "p": "Quién necesita qué, desde puestos concretos hasta un vestuario coordinado de equipo. Primero los puestos, después las prendas.",
+        "a": "plan"
+      },
+      {
+        "h": "Tejido y confección",
+        "p": "Gramaje, composición y acabado elegidos según su ciclo de lavado y su clima, no según un moodboard.",
+        "a": "fabric"
+      },
+      {
+        "h": "Prototipos y pruebas",
+        "p": "Muestras probadas por quienes las van a llevar, haciendo su trabajo real. El feedback se registra prenda a prenda.",
+        "a": "proto"
+      },
+      {
+        "h": "Detalles de marca",
+        "p": "Colores, avíos y personalización desarrollados dentro del alcance acordado, a un tamaño que resiste el lavado.",
+        "a": "brand"
+      },
+      {
+        "h": "Una especificación archivada",
+        "p": "La revisión aprobada guardada con sus medidas, tejidos, colores y proveedores.",
+        "a": "spec"
+      },
+      {
+        "h": "Una repetición que coincide",
+        "p": "Producida contra el archivo, y después verificada en disponibilidad, precio y plazos.",
+        "a": "reorder"
+      }
+    ],
+    "art": {
+      "plan": {
+        "label": "Plan de puestos",
+        "meta": "4 puestos",
+        "rows": [
+          [
+            "Recepción",
+            "Camisa · delantal"
+          ],
+          [
+            "Restaurante",
+            "Chaqueta · pantalón"
+          ],
+          [
+            "Cocina",
+            "Chaquetilla"
+          ],
+          [
+            "Pisos",
+            "Túnica"
+          ]
+        ]
+      },
+      "fabric": {
+        "label": "Preselección de tejidos",
+        "meta": "Según su ciclo de lavado",
+        "rows": [
+          [
+            "Sarga",
+            "280"
+          ],
+          [
+            "Piqué",
+            "220"
+          ],
+          [
+            "Melton",
+            "480"
+          ],
+          [
+            "Popelín",
+            "130"
+          ]
+        ]
+      },
+      "proto": {
+        "label": "Registro de pruebas",
+        "meta": "4 prendas",
+        "rows": [
+          [
+            "Chaquetilla",
+            "Aprobada",
+            "go"
+          ],
+          [
+            "Pantalón de servicio",
+            "Aprobado",
+            "go"
+          ],
+          [
+            "Chaqueta cruzada",
+            "Cambios solicitados",
+            "wait"
+          ],
+          [
+            "Delantal",
+            "Ronda 2",
+            "flow"
+          ]
+        ]
+      },
+      "brand": {
+        "label": "Etiqueta y colores",
+        "meta": "40 × 12 mm",
+        "mark": "SU MARCA",
+        "note": "etiqueta tejida, cosida en la costura",
+        "swatches": [
+          [
+            "#011251",
+            "Azul marino a medida"
+          ],
+          [
+            "#F4F2ED",
+            "Blanco roto"
+          ],
+          [
+            "#2F5D74",
+            "Azul a medida"
+          ],
+          [
+            "#0E0E0E",
+            "Tinta"
+          ]
+        ]
+      },
+      "spec": {
+        "label": "Ficha técnica",
+        "meta": "Revisión 4",
+        "rows": [
+          [
+            "Tejido",
+            "Sarga de algodón 280 g/m²"
+          ],
+          [
+            "Color",
+            "Azul marino a medida · tintura 3"
+          ],
+          [
+            "Posiciones",
+            "Pecho · cuello"
+          ],
+          [
+            "Tallas",
+            "XS–3XL, 9 pasos"
+          ]
+        ]
+      },
+      "reorder": {
+        "label": "Registro de repetición",
+        "meta": "88 piezas",
+        "rows": [
+          [
+            "Revisión aprobada",
+            "Rev. 4"
+          ],
+          [
+            "Repetido",
+            "88 piezas"
+          ],
+          [
+            "Precio unitario",
+            "Sin cambios"
+          ]
+        ],
+        "check": "Producido contra el archivo, no contra un recuerdo"
+      }
+    }
   }
 }

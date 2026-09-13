@@ -1322,5 +1322,238 @@
     "ctaLabel": "Lancer le brief",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un ensemble coordonné d’uniformes suspendu à un portant"
+  },
+  "stages": {
+    "kicker": "Comment ça marche",
+    "h2": "Six étapes, et vous décidez à chacune.",
+    "intro": "Un projet avance quand vous l’approuvez. Chaque étape se termine par une décision consignée au projet, pour que personne n’ait à se souvenir de ce qui a été convenu.",
+    "items": [
+      {
+        "h": "Design",
+        "p": "Un designer externe développe la direction visuelle à partir de votre brief. Vous l’examinez et décidez. Si le design ne fait pas partie de la commande, le projet démarre au développement."
+      },
+      {
+        "h": "Tissus et accessoires",
+        "p": "Grammage, composition, fournitures et finition sont choisis en fonction de votre cycle de lavage et de votre climat, non d’une planche d’ambiance."
+      },
+      {
+        "h": "Développement",
+        "p": "Postes, couleurs, quantités et un dossier technique par vêtement. C’est l’étape où un vêtement devient une spécification."
+      },
+      {
+        "h": "Production",
+        "p": "Vos vêtements approuvés sont fabriqués selon la spécification verrouillée. Rien n’est coupé avant l’obtention des approbations requises."
+      },
+      {
+        "h": "Livraison",
+        "p": "Les vêtements sont expédiés vers vos sites. Vous confirmez la réception et chaque modèle approuvé devient disponible au réassort."
+      },
+      {
+        "h": "Réassort",
+        "p": "La révision approuvée est archivée avec ses mesures, tissus, couleurs et fournisseurs, puis revérifiée en disponibilité, prix et délais."
+      }
+    ]
+  },
+  "phases": {
+    "kicker": "Calendrier",
+    "h2": "Le calendrier de vos projets.",
+    "phaseLabel": "Phase",
+    "intro": "L’ordre est fixe. La durée ne l’est pas, car elle dépend de vos vêtements, de vos quantités et de vos approbations.",
+    "items": [
+      {
+        "h": "Brief et examen",
+        "p": "Vous nous indiquez les postes, les quantités et la date. Nous le lisons, décidons si le projet correspond et, si oui, organisons la rencontre initiale.",
+        "m": "Sans compte. Sans frais."
+      },
+      {
+        "h": "Développement et essayage",
+        "p": "Tissu, construction et dossiers techniques, puis des prototypes essayés par vos équipes dans leur travail réel.",
+        "m": "Approuvé vêtement par vêtement."
+      },
+      {
+        "h": "Pré-production et production",
+        "p": "Quantités, couleurs et répartition des tailles sont confirmées et verrouillées, puis la production suit la version approuvée.",
+        "m": "Lancé sur approbations."
+      },
+      {
+        "h": "Livraison et réassort",
+        "p": "Les vêtements sont expédiés vers vos sites et la révision approuvée est archivée au projet.",
+        "m": "Le réassort part du dossier."
+      }
+    ]
+  },
+  "includes": {
+    "kicker": "Ce qui est inclus",
+    "h2": "Les détails qui rendent l’uniforme vôtre.",
+    "intro": "Votre brief définit ce que nous développons, quelles décisions requièrent votre approbation et ce qui est inclus. Chaque partie produit quelque chose que l’on peut tenir ou lire : un échantillon, un enregistrement, une décision.",
+    "items": [
+      {
+        "h": "Plan des postes et vêtements",
+        "p": "Qui a besoin de quoi, du poste individuel à un vestiaire d’équipe coordonné. Les postes d’abord, les vêtements ensuite.",
+        "a": "plan"
+      },
+      {
+        "h": "Tissu et construction",
+        "p": "Grammage, composition et finition choisis selon votre cycle de lavage et votre climat, non selon une planche d’ambiance.",
+        "a": "fabric"
+      },
+      {
+        "h": "Prototypes et essayage",
+        "p": "Des échantillons essayés par ceux qui les porteront, dans leur travail réel. Les retours sont consignés vêtement par vêtement.",
+        "a": "proto"
+      },
+      {
+        "h": "Détails de marque",
+        "p": "Couleurs, fournitures et personnalisation développées dans le périmètre convenu, à une taille qui survit au lavage.",
+        "a": "brand"
+      },
+      {
+        "h": "Une spécification archivée",
+        "p": "La révision approuvée conservée avec ses mesures, tissus, couleurs et fournisseurs.",
+        "a": "spec"
+      },
+      {
+        "h": "Un réassort identique",
+        "p": "Produit à partir du dossier archivé, puis revérifié en disponibilité, prix et délais.",
+        "a": "reorder"
+      }
+    ],
+    "art": {
+      "plan": {
+        "label": "Plan des postes",
+        "meta": "4 postes",
+        "rows": [
+          [
+            "Réception",
+            "Chemise · tablier"
+          ],
+          [
+            "Restaurant",
+            "Veste · pantalon"
+          ],
+          [
+            "Cuisine",
+            "Veste de cuisine"
+          ],
+          [
+            "Étages",
+            "Tunique"
+          ]
+        ]
+      },
+      "fabric": {
+        "label": "Présélection de tissus",
+        "meta": "Selon votre cycle de lavage",
+        "rows": [
+          [
+            "Sergé",
+            "280"
+          ],
+          [
+            "Piqué",
+            "220"
+          ],
+          [
+            "Melton",
+            "480"
+          ],
+          [
+            "Popeline",
+            "130"
+          ]
+        ]
+      },
+      "proto": {
+        "label": "Journal d’essayage",
+        "meta": "4 vêtements",
+        "rows": [
+          [
+            "Veste de cuisine",
+            "Approuvée",
+            "go"
+          ],
+          [
+            "Pantalon de service",
+            "Approuvé",
+            "go"
+          ],
+          [
+            "Veste portefeuille",
+            "Modifications demandées",
+            "wait"
+          ],
+          [
+            "Tablier",
+            "Série 2",
+            "flow"
+          ]
+        ]
+      },
+      "brand": {
+        "label": "Étiquette et coloris",
+        "meta": "40 × 12 mm",
+        "mark": "VOTRE MARQUE",
+        "note": "étiquette tissée, cousue dans la couture",
+        "swatches": [
+          [
+            "#011251",
+            "Marine sur mesure"
+          ],
+          [
+            "#F4F2ED",
+            "Blanc cassé"
+          ],
+          [
+            "#2F5D74",
+            "Bleu sur mesure"
+          ],
+          [
+            "#0E0E0E",
+            "Encre"
+          ]
+        ]
+      },
+      "spec": {
+        "label": "Dossier technique",
+        "meta": "Révision 4",
+        "rows": [
+          [
+            "Tissu",
+            "Sergé de coton 280 g/m²"
+          ],
+          [
+            "Couleur",
+            "Marine sur mesure · bain 3"
+          ],
+          [
+            "Positions",
+            "Poitrine · col"
+          ],
+          [
+            "Tailles",
+            "XS–3XL, 9 paliers"
+          ]
+        ]
+      },
+      "reorder": {
+        "label": "Enregistrement de réassort",
+        "meta": "88 pièces",
+        "rows": [
+          [
+            "Révision approuvée",
+            "Rév. 4"
+          ],
+          [
+            "Réassorti",
+            "88 pièces"
+          ],
+          [
+            "Prix unitaire",
+            "Inchangé"
+          ]
+        ],
+        "check": "Produit à partir du dossier archivé, pas d’un souvenir"
+      }
+    }
   }
 }

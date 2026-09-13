@@ -1322,5 +1322,238 @@
     "ctaLabel": "Inizia il brief",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un insieme coordinato di divise appeso a uno stender"
+  },
+  "stages": {
+    "kicker": "Come funziona",
+    "h2": "Sei fasi, e lei decide in ognuna.",
+    "intro": "Un progetto avanza quando lo approva. Ogni fase si chiude con una decisione registrata nel progetto, così nessuno deve ricordare a memoria ciò che è stato concordato.",
+    "items": [
+      {
+        "h": "Design",
+        "p": "Un designer esterno sviluppa la direzione visiva a partire dal suo brief. Lei la esamina e decide. Se il design non rientra in quanto acquistato, il progetto parte dallo sviluppo."
+      },
+      {
+        "h": "Tessuti e accessori",
+        "p": "Peso, composizione, accessori e finissaggio sono scelti in base al suo ciclo di lavaggio e al suo clima, non in base a un moodboard."
+      },
+      {
+        "h": "Sviluppo",
+        "p": "Ruoli, colori, quantità e una scheda tecnica per capo. È la fase in cui un capo diventa una specifica."
+      },
+      {
+        "h": "Produzione",
+        "p": "I capi approvati vengono prodotti secondo la specifica bloccata. Nulla viene tagliato prima delle approvazioni necessarie."
+      },
+      {
+        "h": "Consegna",
+        "p": "I capi vengono spediti alle sue sedi. Lei conferma la ricezione e ogni modello approvato diventa disponibile per il riordino."
+      },
+      {
+        "h": "Riordino",
+        "p": "La revisione approvata viene archiviata con misure, tessuti, colori e fornitori, poi riverificata per disponibilità, prezzo e tempi."
+      }
+    ]
+  },
+  "phases": {
+    "kicker": "Tempistiche",
+    "h2": "Le tempistiche dei suoi progetti.",
+    "phaseLabel": "Fase",
+    "intro": "L’ordine è fisso. La durata no, perché dipende dai suoi capi, dalle sue quantità e dalle sue approvazioni.",
+    "items": [
+      {
+        "h": "Brief e valutazione",
+        "p": "Lei ci indica i ruoli, le quantità e la data. Lo leggiamo, valutiamo se il progetto è adatto e, in caso affermativo, fissiamo il primo incontro.",
+        "m": "Nessun account. Nessun addebito."
+      },
+      {
+        "h": "Sviluppo e prove",
+        "p": "Tessuto, confezione e schede tecniche, poi prototipi provati dal suo personale durante il lavoro reale.",
+        "m": "Si approva un capo alla volta."
+      },
+      {
+        "h": "Pre-produzione e produzione",
+        "p": "Quantità, colori e scalature vengono confermati e bloccati, poi la produzione segue la versione approvata.",
+        "m": "Si avvia con le approvazioni."
+      },
+      {
+        "h": "Consegna e riordino",
+        "p": "I capi vengono spediti alle sue sedi e la revisione approvata resta archiviata nel progetto.",
+        "m": "Il riordino parte dall’archivio."
+      }
+    ]
+  },
+  "includes": {
+    "kicker": "Cosa è incluso",
+    "h2": "I dettagli che rendono la divisa sua.",
+    "intro": "Il suo brief definisce cosa sviluppiamo, quali decisioni richiedono la sua approvazione e cosa è incluso. Ogni parte produce qualcosa che si può tenere in mano o leggere: un campione, un registro, una decisione.",
+    "items": [
+      {
+        "h": "Piano di ruoli e capi",
+        "p": "Chi ha bisogno di cosa, dai singoli ruoli a un guardaroba di squadra coordinato. Prima i ruoli, poi i capi.",
+        "a": "plan"
+      },
+      {
+        "h": "Tessuto e confezione",
+        "p": "Peso, composizione e finissaggio scelti in base al suo ciclo di lavaggio e al suo clima, non a un moodboard.",
+        "a": "fabric"
+      },
+      {
+        "h": "Prototipi e prove",
+        "p": "Campioni provati da chi li indosserà, durante il lavoro reale. I riscontri sono registrati capo per capo.",
+        "a": "proto"
+      },
+      {
+        "h": "Dettagli di marca",
+        "p": "Colori, accessori e personalizzazione sviluppati nel perimetro concordato, in una misura che resiste al lavaggio.",
+        "a": "brand"
+      },
+      {
+        "h": "Una specifica archiviata",
+        "p": "La revisione approvata conservata con misure, tessuti, colori e fornitori.",
+        "a": "spec"
+      },
+      {
+        "h": "Un riordino identico",
+        "p": "Prodotto dall’archivio, poi riverificato per disponibilità, prezzo e tempi.",
+        "a": "reorder"
+      }
+    ],
+    "art": {
+      "plan": {
+        "label": "Piano dei ruoli",
+        "meta": "4 ruoli",
+        "rows": [
+          [
+            "Reception",
+            "Camicia · grembiule"
+          ],
+          [
+            "Ristorante",
+            "Giacca · pantalone"
+          ],
+          [
+            "Cucina",
+            "Giacca da cuoco"
+          ],
+          [
+            "Ai piani",
+            "Casacca"
+          ]
+        ]
+      },
+      "fabric": {
+        "label": "Rosa di tessuti",
+        "meta": "In base al ciclo di lavaggio",
+        "rows": [
+          [
+            "Twill",
+            "280"
+          ],
+          [
+            "Piqué",
+            "220"
+          ],
+          [
+            "Melton",
+            "480"
+          ],
+          [
+            "Popeline",
+            "130"
+          ]
+        ]
+      },
+      "proto": {
+        "label": "Registro prove",
+        "meta": "4 capi",
+        "rows": [
+          [
+            "Giacca da cuoco",
+            "Approvata",
+            "go"
+          ],
+          [
+            "Pantalone da servizio",
+            "Approvato",
+            "go"
+          ],
+          [
+            "Giacca a vestaglia",
+            "Modifiche richieste",
+            "wait"
+          ],
+          [
+            "Grembiule",
+            "Round 2",
+            "flow"
+          ]
+        ]
+      },
+      "brand": {
+        "label": "Etichetta e colori",
+        "meta": "40 × 12 mm",
+        "mark": "IL SUO MARCHIO",
+        "note": "etichetta tessuta, cucita nella cucitura",
+        "swatches": [
+          [
+            "#011251",
+            "Blu su misura"
+          ],
+          [
+            "#F4F2ED",
+            "Bianco sporco"
+          ],
+          [
+            "#2F5D74",
+            "Azzurro su misura"
+          ],
+          [
+            "#0E0E0E",
+            "Inchiostro"
+          ]
+        ]
+      },
+      "spec": {
+        "label": "Scheda tecnica",
+        "meta": "Revisione 4",
+        "rows": [
+          [
+            "Tessuto",
+            "Twill di cotone 280 g/m²"
+          ],
+          [
+            "Colore",
+            "Blu su misura · bagno 3"
+          ],
+          [
+            "Posizioni",
+            "Petto · colletto"
+          ],
+          [
+            "Taglie",
+            "XS–3XL, 9 passi"
+          ]
+        ]
+      },
+      "reorder": {
+        "label": "Registro riordino",
+        "meta": "88 pezzi",
+        "rows": [
+          [
+            "Revisione approvata",
+            "Rev. 4"
+          ],
+          [
+            "Riordinato",
+            "88 pezzi"
+          ],
+          [
+            "Prezzo unitario",
+            "Invariato"
+          ]
+        ],
+        "check": "Prodotto dall’archivio, non da un ricordo"
+      }
+    }
   }
 }

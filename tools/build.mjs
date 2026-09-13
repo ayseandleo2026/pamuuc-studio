@@ -467,6 +467,46 @@ const coverImg = (name, alt, { sizes, lazy = true, priority = false }) => {
     + `${priority ? ' fetchpriority="high"' : ''}${lazy ? ' loading="lazy"' : ''} decoding="async" alt="${attr(alt)}">`;
 };
 
+const HOW_ICON = {
+  design: '<path d="M4 20h16M7 16.5 16.8 6.7a2 2 0 0 0-2.8-2.8L4.2 13.7 3.5 17z"/>',
+  fabric: '<path d="M3 8.5 12 4l9 4.5-9 4.5zM3 12.5 12 17l9-4.5M3 16.5 12 21l9-4.5"/>',
+  develop:'<path d="M3 7h18v10H3zM7 7v4M11 7v6M15 7v4M19 7v6"/>',
+  produce:'<path d="M3 20h18M5 20V10l5 3.3V10l5 3.3V4.5h4V20"/>',
+  deliver:'<path d="M3 8.5 12 4l9 4.5v7L12 20l-9-4.5zM3 8.5 12 13l9-4.5M12 13v7"/>',
+  reorder:'<path d="M20 12a8 8 0 1 1-2.6-5.9M20 3.5V8h-4.5"/>',
+};
+
+const howIcon = (k) => `<span class="how-i" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"
+  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${HOW_ICON[k] || ''}</svg></span>`;
+
+/* The six small artefacts drawn beside the records in "What is included".
+   Each one is the shape of a real document the project leaves behind — a
+   plan, a shortlist, a log, a label, a file, a receipt — so the section
+   shows what you get rather than asserting it. Values are illustrative. */
+const artShell = (a, body, mod = '') => `<div class="art ${mod}">
+<div class="art-h"><span class="art-h-l">${esc(a.label)}</span><span class="art-h-m">${esc(a.meta)}</span></div>
+<div class="art-b">${body}</div></div>`;
+
+const artRows = (a) => artShell(a, a.rows.map((r) =>
+  `<div class="art-r"><span>${esc(r[0])}</span><span class="art-m">${esc(r[1])}</span></div>`).join(''));
+
+const artKeys = (a, extra = '') => artShell(a, a.rows.map((r) =>
+  `<div class="art-r"><span class="art-m">${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('') + extra);
+
+const ART = {
+  plan: (a) => artRows(a),
+  fabric: (a) => artShell(a, a.rows.map((r) => `<div class="art-w">
+<span class="art-w-n">${esc(r[0])}</span>
+<span class="art-w-bar"><i style="width:${Math.round(Number(r[1]) / 480 * 100)}%"></i></span>
+<span class="art-w-v">${esc(r[1])} g/m&sup2;</span></div>`).join(''), 'art--weights'),
+  proto: (a) => artShell(a, a.rows.map((r) =>
+    `<div class="art-r"><span>${esc(r[0])}</span><span class="pill-s pill-s--${esc(r[2])}">${esc(r[1])}</span></div>`).join('')),
+  brand: (a) => artShell(a, `<div class="art-label">${esc(a.mark)}<span>${esc(a.note)}</span></div>
+<div class="art-sw">${a.swatches.map((c) => `<span title="${attr(c[1])}" style="background:${attr(c[0])}"></span>`).join('')}</div>`, 'art--brand'),
+  spec: (a) => artKeys(a),
+  reorder: (a) => artKeys(a, `<div class="art-check">${esc(a.check)}</div>`),
+};
+
 /* ── page: home ───────────────────────────────────────────────────────────
    The Custom Uniforms page, in the structure the mockup set: a chapter label
    with its index chip, a light display line, rounded panels on a quiet
@@ -606,34 +646,35 @@ ${disclosure(loc, trimEcho(h.detail[sectorKeys[i]] || [], x.name), x.name)}
 <p class="handoff"><a href="#brief">${esc(h.sectors.handoff)}</a></p>
 </div></section>
 
-<section class="pub-sec surface-2" id="process"><div class="wrap">
-${chapterHead('02', h.process.kicker, h.process.h2, h.process.intro)}
+<section class="pub-sec surface-2" id="how"><div class="wrap">
+${chapterHead('02', h.stages.kicker, h.stages.h2, h.stages.intro)}
 <div class="how-g">
-${h.process.phases.map((x, i) => `<article class="how">
-<span class="how-n">${String(i + 1).padStart(2, '0')}</span>
-<h3 class="how-t">${esc(x.h3)}</h3>
-<p class="how-d">${esc(x.desc)}</p>
-${x.items && x.items.length ? `<ul class="ticks">${x.items.map((i2) => `<li>${esc(i2)}</li>`).join('')}</ul>` : ''}
-${disclosure(loc, h.detail['phase-' + (i + 1)], x.h3)}
+${h.stages.items.map((x, i) => `<article class="how">
+<div class="how-h">${howIcon(['design','fabric','develop','produce','deliver','reorder'][i])}<span class="how-n">${String(i + 1).padStart(2, '0')}</span></div>
+<h3 class="how-t">${esc(x.h)}</h3>
+<p class="how-p">${esc(x.p)}</p>
 </article>`).join('\n')}
 </div>
-<h3 class="eyebrow eyebrow--muted pt-h">${esc(h.process.statsLabel)}</h3>
-<ol class="pt">
-${h.process.stats.map((x, i) => `<li class="pt-i">
-<div class="pt-rail"><span class="pt-dot"></span></div>
-<div class="pt-b">
-<span class="pt-n">${String(i + 1).padStart(2, '0')}</span>
-<h3 class="pt-t">${esc(x.v)}</h3>
-<p class="pt-p">${esc(x.l)}</p>
-</div>
-</li>`).join('\n')}
-</ol>
-${h.process.note ? `<p class="t-xs muted pt-note">${esc(h.process.note)}</p>` : ''}
 <p class="handoff"><a href="#brief">${esc(h.process.handoff)}</a></p>
 </div></section>
 
+<section class="pub-sec" id="timeline"><div class="wrap">
+${chapterHead('03', h.phases.kicker, h.phases.h2, h.phases.intro)}
+<ol class="pt">
+${h.phases.items.map((x, i) => `<li class="pt-i">
+<div class="pt-rail"><span class="pt-dot"></span></div>
+<div class="pt-b">
+<span class="pt-n">${esc(h.phases.phaseLabel)} ${i + 1}</span>
+<h3 class="pt-t">${esc(x.h)}</h3>
+<p class="pt-p">${esc(x.p)}</p>
+<span class="pt-m">${esc(x.m)}</span>
+</div>
+</li>`).join('\n')}
+</ol>
+</div></section>
+
 <section class="pub-sec" id="work"><div class="wrap">
-${chapterHead('03', h.projects.kicker, h.projects.h2, h.projects.intro)}
+${chapterHead('04', h.projects.kicker, h.projects.h2, h.projects.intro)}
 <div class="split split--wide work-s">
 <div class="split-b">
 <figure class="fig"><div class="media media--4x5">
@@ -661,18 +702,14 @@ ${x.href ? `<a class="btn btn--ghost btn--sm case-cta" href="${attr(x.href)}">${
 </div></section>
 
 <section class="pub-sec surface-2" id="includes"><div class="wrap">
-${chapterHead('04', h.wardrobe.kicker, h.wardrobe.h2, h.wardrobe.intro)}
+${chapterHead('05', h.includes.kicker, h.includes.h2, h.includes.intro)}
 <div class="sol-g">
-${h.wardrobe.pillars.map((x, i) => `<article class="sol">
-<div class="sol-h"><span class="sol-n">${String(i + 1).padStart(2, '0')}</span><h3 class="sol-t">${esc(x.h)}</h3></div>
-<p class="sol-d">${esc(x.p)}</p>
+${h.includes.items.map((x, k) => `<article class="sol">
+<div class="sol-h"><span class="sol-n">${String(k + 1).padStart(2, '0')}</span><h3 class="sol-ht">${esc(x.h)}</h3></div>
+<p class="sol-p">${esc(x.p)}</p>
+${ART[x.a](h.includes.art[x.a])}
 </article>`).join('\n')}
 </div>
-<div class="art">
-<div class="art-h"><span class="art-h-l">${esc(h.wardrobe.garmentsLead)}</span><span class="art-h-m">${h.wardrobe.garments.length}</span></div>
-<div class="art-b"><ul class="garments">${h.wardrobe.garments.map((g) => `<li class="garment">${esc(g)}</li>`).join('')}</ul></div>
-</div>
-${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
 <div class="ctabar">
 <p class="ctabar__t">${esc(h.wardrobe.ctaText)}</p>
 <a class="ctabar__a" href="#brief">${esc(h.wardrobe.ctaLabel)} <span aria-hidden="true">&#8594;</span></a>
@@ -680,7 +717,7 @@ ${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
 </div></section>
 
 <section class="pub-sec" id="faq"><div class="wrap">
-${chapterHead('05', h.faq.kicker, h.faq.h2, h.faq.intro)}
+${chapterHead('06', h.faq.kicker, h.faq.h2, h.faq.intro)}
 <div class="faq-s"><div class="faq">
 ${faqItem(h.faq.items.slice(0, FAQ_VISIBLE), true)}
 ${h.faq.items.length > FAQ_VISIBLE ? `<details class="acc__more"><summary><span class="is-more">${esc(str.faqMore)}</span><span class="is-less">${esc(str.faqLess)}</span></summary>
@@ -692,7 +729,7 @@ ${faqItem(h.faq.items.slice(FAQ_VISIBLE), false)}
 
 <section class="pub-sec" id="brief"><div class="wrap">
 <div class="ask ask--form">
-<span class="tag tag--dark"><i>06</i>${esc(h.contact.kicker)}</span>
+<span class="tag tag--dark"><i>07</i>${esc(h.contact.kicker)}</span>
 <h2 class="display ask-t">${esc(h.contact.h2)}</h2>
 ${h.contact.paras.slice(0, 1).map((p) => `<p class="lede ask-d">${esc(p)}</p>`).join('')}
 ${h.contact.paras.slice(1).map((p) => `<p class="ask-sup bf-meet">${esc(p)}</p>`).join('')}
@@ -750,36 +787,48 @@ function renderBlogIndex(loc) {
   };
   return head({ loc, url, title: `${ui.blogTitle} | ${site.brand.plain}`, description: ui.blogDescription, cluster, extraLD: [graph] })
 + header(loc, cluster) + `
-<nav class="crumbs wrap" aria-label="Breadcrumb">
-<ol><li><a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a></li><li aria-current="page">${esc(ui.crumbBlog || str.journal)}</li></ol>
+<main id="main" data-page="blog">
+<section class="pub-sec pub-sec--top"><div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb">
+<a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a><span class="crumb-sep">/</span><span class="crumb-here">${esc(ui.crumbBlog || str.journal)}</span>
 </nav>
-<main id="main">
-<section class="section section--tight"><div class="wrap">
-<div class="page-head">
-<p class="eyebrow">${esc(ui.blogKicker)}</p>
-<h1 class="h1">${esc(ui.blogH1)}</h1>
-<p class="lead">${esc(ui.blogLead)}</p>
+${chapterHead('\u2014', ui.blogKicker, ui.blogH1, ui.blogLead, { h1: true })}
+
+${posts.length ? `<article class="split split--wide jr-lead">
+<div class="split-b">
+<a class="jr-lead-m" href="${postURL(posts[0].key, loc)}" tabindex="-1" aria-hidden="true">${coverImg(posts[0].cover, posts[0].coverAlt || posts[0].title, { sizes: '(max-width: 900px) 92vw, 46rem' })}</a>
+</div>
+<div class="split-b jr-lead-b">
+<span class="tag tag--sm"><i>01</i>${esc(posts[0].kicker)}</span>
+<h2 class="display jr-lead-t"><a href="${postURL(posts[0].key, loc)}">${esc(posts[0].headline)}</a></h2>
+<p class="lede jr-lead-d">${esc(posts[0].description)}</p>
+<div class="jr-lead-f">
+<time datetime="${attr(posts[0].published)}">${esc(humanDate(posts[0].published, loc))}</time>
+<span>${esc(readTime(posts[0], loc))}</span>
+</div>
+</div>
+</article>` : ''}
+
+<div class="jr-g">
+${posts.slice(1).map((p) => `<article class="jr">
+<a class="jr-m" href="${postURL(p.key, loc)}" tabindex="-1" aria-hidden="true">${coverImg(p.cover, p.coverAlt || p.title, { sizes: '(max-width: 720px) 92vw, 22rem' })}</a>
+<div class="jr-b">
+<span class="jr-k">${esc(p.kicker)}</span>
+<h2 class="jr-t"><a href="${postURL(p.key, loc)}">${esc(p.title)}</a></h2>
+<p class="jr-d">${esc(p.description)}</p>
+<div class="jr-f">
+<time datetime="${attr(p.published)}">${esc(humanDate(p.published, loc))}</time>
+<span>${esc(readTime(p, loc))}</span>
+</div>
+</div>
+</article>`).join('\n')}
 </div>
 </div></section>
 
-<section class="section section--flush"><div class="wrap">
-<ul class="post-list">
-${posts.map((p) => `<li><article class="post-row">
-<a href="${postURL(p.key, loc)}" tabindex="-1" aria-hidden="true">${coverImg(p.cover, '', { sizes: '(max-width: 700px) 92vw, 14rem' })}</a>
-<div class="post-row__body">
-<p class="post-meta"><span class="tag">${esc(p.kicker)}</span><time datetime="${attr(p.published)}">${esc(humanDate(p.published, loc))}</time><span>${esc(readTime(p, loc))}</span></p>
-<a href="${postURL(p.key, loc)}"><h2 class="post-row__h">${esc(p.headline)}</h2></a>
-<p class="muted">${esc(p.description)}</p>
-</div>
-</article></li>`).join('\n')}
-</ul>
-</div></section>
-
-<section class="section section--flush"><div class="wrap">
-<div class="cta">
-<p class="eyebrow">${esc(ui.articleServiceKicker || S(loc).journal)}</p>
-<h2 class="h2">${esc(HOME[loc].contact.h2)}</h2>
-<a class="btn btn--primary" href="${homeURL(loc)}#contact">${esc(HOME[loc].hero.primary)}</a>
+<section class="pub-sec"><div class="wrap">
+<div class="ctabar">
+<p class="ctabar__t">${esc(HOME[loc].contact.h2)}</p>
+<a class="ctabar__a" href="${homeURL(loc)}#brief">${esc(HOME[loc].hero.primary)} <span aria-hidden="true">&#8594;</span></a>
 </div>
 </div></section>
 </main>
@@ -832,64 +881,78 @@ function renderPost(key, loc) {
                 image: `/assets/images/blog/${p.cover}.jpg`, type: 'article', extraLD: [graph],
                 preloadImage: preload, article: p })
 + header(loc, cluster) + `
-<nav class="crumbs wrap" aria-label="Breadcrumb">
-<ol><li><a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a></li><li><a href="${blogURL(loc)}">${esc(ui.crumbBlog || str.journal)}</a></li><li aria-current="page">${esc(p.title)}</li></ol>
+<main id="main" data-page="post">
+<article class="po">
+<section class="pub-sec pub-sec--top"><div class="wrap">
+<nav class="crumb" aria-label="Breadcrumb">
+<a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a><span class="crumb-sep">/</span>
+<a href="${blogURL(loc)}">${esc(ui.crumbBlog || str.journal)}</a><span class="crumb-sep">/</span>
+<span class="crumb-here">${esc(p.title)}</span>
 </nav>
-<main id="main">
-<article>
-<header class="wrap article-head">
-<p class="eyebrow">${esc(p.kicker)}</p>
-<h1 class="post-title">${esc(p.headline)}</h1>
-<p class="post-meta">
-<span class="tag">${esc(p.kicker)}</span>
-<span>${esc(str.published)} <time datetime="${attr(p.published)}">${esc(humanDate(p.published, loc))}</time></span>
-${p.modified !== p.published ? `<span>${esc(str.updated)} <time datetime="${attr(p.modified)}">${esc(humanDate(p.modified, loc))}</time></span>` : ''}
-<span>${esc(readTime(p, loc))}</span>
-<span>${esc(str.by)} ${esc(p.author)}</span>
-</p>
-</header>
 
-<div class="wrap">
-<figure class="cover">
-${coverImg(p.cover, p.coverAlt, { sizes: '(max-width: 1200px) 92vw, 75rem', lazy: false, priority: true })}
-${p.coverCaption ? `<figcaption>${esc(p.coverCaption)}</figcaption>` : ''}
-</figure>
+<div class="po-hd">
+<span class="tag tag--sm"><i>&mdash;</i>${esc(p.kicker)}</span>
+<h1 class="display po-t">${esc(p.headline)}</h1>
+<p class="lede po-d">${esc(p.description)}</p>
+<div class="po-meta">
+<span><b>${esc(str.published)}</b><time datetime="${attr(p.published)}">${esc(humanDate(p.published, loc))}</time></span>
+${p.modified !== p.published ? `<span><b>${esc(str.updated)}</b><time datetime="${attr(p.modified)}">${esc(humanDate(p.modified, loc))}</time></span>` : ''}
+<span><b>${esc(str.toc)}</b>${esc(readTime(p, loc))}</span>
+<span><b>${esc(str.by)}</b>${esc(p.author)}</span>
+</div>
 </div>
 
-<div class="wrap article section__sub">
-<div class="article__body">
-${p.takeaways?.length ? `<div class="takeaways"><h2>${esc(str.takeaways)}</h2><ul>${p.takeaways.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+<figure class="po-m">
+${coverImg(p.cover, p.coverAlt, { sizes: '(max-width: 1200px) 92vw, 75rem', lazy: false, priority: true })}
+${p.coverCaption ? `<figcaption class="po-cap">${esc(p.coverCaption)}</figcaption>` : ''}
+</figure>
+
+${p.takeaways?.length ? `<div class="po-key" id="short-answer">
+<div class="po-key-h"><span class="eyebrow">${esc(str.takeaways)}</span><span class="t-xs faint">${esc(readTime(p, loc))}</span></div>
+<ul class="po-key-l">${p.takeaways.map((t) => `<li>${esc(t)}</li>`).join('')}</ul>
+</div>` : ''}
+
+<div class="po-body">
+<aside class="po-rail" data-toc aria-label="${attr(str.toc)}">
+<div class="eyebrow">${esc(str.toc)}</div>
+<ol class="po-toc">
+${p.takeaways?.length ? `<li><a href="#short-answer">${esc(str.takeaways)}</a></li>` : ''}
+${headings.map((hh) => `<li><a href="#${attr(hh.id)}">${hh.v.replace(/<[^>]+>/g, '')}</a></li>`).join('\n')}
+</ol>
+<div class="po-rail-cta"><a class="btn btn--ghost btn--sm btn--arrow" href="${homeURL(loc)}#brief">${esc(HOME[loc].hero.primary)}<i class="btn-a" aria-hidden="true">&#8594;</i></a></div>
+</aside>
+<div class="po-read">
 ${body}
 <div class="author">
 <div class="author__av" aria-hidden="true">${esc(p.author.split(' ').map((w) => w[0]).join('').slice(0, 2))}</div>
 <div>
 <p><strong>${esc(p.author)}</strong></p>
-<p class="muted small">${esc(site.brand.plain)} — ${esc(site.brand.city)}</p>
+<p class="muted small">${esc(site.brand.plain)} &mdash; ${esc(site.brand.city)}</p>
 </div>
 </div>
 </div>
-${headings.length ? `<aside class="toc" data-toc aria-label="${attr(str.toc)}">
-<strong>${esc(str.toc)}</strong>
-${headings.map((hh) => `<a href="#${attr(hh.id)}">${hh.v.replace(/<[^>]+>/g, '')}</a>`).join('\n')}
-</aside>` : ''}
-</div>
-
-<section class="section"><div class="wrap">
-<h2 class="eyebrow section__sub related-title">${esc(str.relatedTitle)}</h2>
-<div class="grid grid--2">
-${related.map((r) => `<a class="card" href="${postURL(r.key, loc)}">
-<p class="eyebrow eyebrow--muted">${esc(r.kicker)}</p>
-<h3 class="h3">${esc(r.headline)}</h3>
-<p class="muted">${esc(r.description)}</p>
-</a>`).join('\n')}
 </div>
 </div></section>
 
-<section class="section section--flush"><div class="wrap">
-<div class="cta">
-<p class="eyebrow">${esc(ui.articleServiceKicker || '')}</p>
-<h2 class="h2">${esc(HOME[loc].contact.h2)}</h2>
-<a class="btn btn--primary" href="${homeURL(loc)}#contact">${esc(HOME[loc].hero.primary)}</a>
+<section class="pub-sec surface-2"><div class="wrap">
+${chapterHead('\u2014', str.relatedTitle, str.relatedTitle, '')}
+<div class="jr-g">
+${related.map((r) => `<article class="jr">
+<a class="jr-m" href="${postURL(r.key, loc)}" tabindex="-1" aria-hidden="true">${coverImg(r.cover, r.coverAlt || r.title, { sizes: '(max-width: 720px) 92vw, 22rem' })}</a>
+<div class="jr-b">
+<span class="jr-k">${esc(r.kicker)}</span>
+<h3 class="jr-t"><a href="${postURL(r.key, loc)}">${esc(r.title)}</a></h3>
+<p class="jr-d">${esc(r.description)}</p>
+<div class="jr-f"><time datetime="${attr(r.published)}">${esc(humanDate(r.published, loc))}</time><span>${esc(readTime(r, loc))}</span></div>
+</div>
+</article>`).join('\n')}
+</div>
+</div></section>
+
+<section class="pub-sec"><div class="wrap">
+<div class="ctabar">
+<p class="ctabar__t">${esc(HOME[loc].contact.h2)}</p>
+<a class="ctabar__a" href="${homeURL(loc)}#brief">${esc(HOME[loc].hero.primary)} <span aria-hidden="true">&#8594;</span></a>
 </div>
 </div></section>
 </article>

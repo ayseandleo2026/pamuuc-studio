@@ -1322,5 +1322,238 @@
     "ctaLabel": "Briefing starten",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Ein abgestimmtes Uniformset an einer Kleiderstange"
+  },
+  "stages": {
+    "kicker": "So arbeiten wir",
+    "h2": "Sechs Stufen, und Sie entscheiden bei jeder.",
+    "intro": "Ein Projekt bewegt sich, wenn Sie es freigeben. Jede Stufe endet mit einer Entscheidung, die im Projekt festgehalten wird, damit niemand sich merken muss, was vereinbart wurde.",
+    "items": [
+      {
+        "h": "Design",
+        "p": "Ein externer Designer entwickelt die visuelle Richtung aus Ihrem Briefing. Sie prüfen sie und entscheiden. Gehört Design nicht zum Auftrag, beginnt das Projekt bei der Entwicklung."
+      },
+      {
+        "h": "Stoffe und Zutaten",
+        "p": "Gewicht, Zusammensetzung, Zutaten und Ausrüstung werden an Ihrem Waschzyklus und Ihrem Klima ausgewählt, nicht an einem Moodboard."
+      },
+      {
+        "h": "Entwicklung",
+        "p": "Rollen, Farben, Mengen und eine technische Akte je Kleidungsstück. Auf dieser Stufe wird aus einem Kleidungsstück eine Spezifikation."
+      },
+      {
+        "h": "Produktion",
+        "p": "Ihre freigegebenen Kleidungsstücke werden nach der gesperrten Spezifikation gefertigt. Vor den erforderlichen Freigaben wird nichts zugeschnitten."
+      },
+      {
+        "h": "Lieferung",
+        "p": "Die Kleidungsstücke gehen an Ihre Standorte. Sie bestätigen den Empfang, und jedes freigegebene Modell steht zur Nachbestellung bereit."
+      },
+      {
+        "h": "Nachbestellung",
+        "p": "Die freigegebene Revision wird mit Maßen, Stoffen, Farben und Lieferanten archiviert und danach auf Verfügbarkeit, Preis und Termine neu geprüft."
+      }
+    ]
+  },
+  "phases": {
+    "kicker": "Zeitplan",
+    "h2": "Der Zeitplan Ihrer Projekte.",
+    "phaseLabel": "Phase",
+    "intro": "Die Reihenfolge steht fest. Die Dauer nicht, denn sie hängt von Ihren Kleidungsstücken, Ihren Mengen und Ihren Freigaben ab.",
+    "items": [
+      {
+        "h": "Briefing und Prüfung",
+        "p": "Sie nennen uns die Rollen, die Mengen und den Termin. Wir lesen es, entscheiden, ob das Projekt passt, und vereinbaren in diesem Fall das erste Gespräch.",
+        "m": "Kein Konto. Keine Kosten."
+      },
+      {
+        "h": "Entwicklung und Anprobe",
+        "p": "Stoff, Verarbeitung und technische Akten, danach Prototypen, die Ihr Team in der tatsächlichen Arbeit anprobiert.",
+        "m": "Freigabe Stück für Stück."
+      },
+      {
+        "h": "Vorproduktion und Produktion",
+        "p": "Mengen, Farben und Größenverteilung werden bestätigt und gesperrt, dann folgt die Produktion der freigegebenen Version.",
+        "m": "Start mit den Freigaben."
+      },
+      {
+        "h": "Lieferung und Nachbestellung",
+        "p": "Die Kleidungsstücke gehen an Ihre Standorte, und die freigegebene Revision wird im Projekt archiviert.",
+        "m": "Nachbestellung aus der Akte."
+      }
+    ]
+  },
+  "includes": {
+    "kicker": "Was enthalten ist",
+    "h2": "Die Details, die die Uniform zu Ihrer machen.",
+    "intro": "Ihr Briefing legt fest, was wir entwickeln, welche Entscheidungen Ihre Freigabe brauchen und was enthalten ist. Jeder Punkt bringt etwas hervor, das man in der Hand halten oder lesen kann: ein Muster, einen Eintrag, eine Entscheidung.",
+    "items": [
+      {
+        "h": "Rollen- und Kleidungsplan",
+        "p": "Wer was braucht, von der einzelnen Rolle bis zur abgestimmten Teamgarderobe. Zuerst die Rollen, dann die Kleidungsstücke.",
+        "a": "plan"
+      },
+      {
+        "h": "Stoff und Verarbeitung",
+        "p": "Gewicht, Zusammensetzung und Ausrüstung werden an Ihrem Waschzyklus und Ihrem Klima gewählt, nicht an einem Moodboard.",
+        "a": "fabric"
+      },
+      {
+        "h": "Prototypen und Anprobe",
+        "p": "Muster, die von den späteren Trägern in der tatsächlichen Arbeit anprobiert werden. Rückmeldungen werden je Kleidungsstück erfasst.",
+        "a": "proto"
+      },
+      {
+        "h": "Markendetails",
+        "p": "Farben, Zutaten und Personalisierung im vereinbarten Umfang, in einer Größe, die die Wäsche übersteht.",
+        "a": "brand"
+      },
+      {
+        "h": "Eine archivierte Spezifikation",
+        "p": "Die freigegebene Revision, gespeichert mit Maßen, Stoffen, Farben und Lieferanten.",
+        "a": "spec"
+      },
+      {
+        "h": "Eine Nachbestellung, die passt",
+        "p": "Aus der archivierten Akte gefertigt und danach auf Verfügbarkeit, Preis und Termine geprüft.",
+        "a": "reorder"
+      }
+    ],
+    "art": {
+      "plan": {
+        "label": "Rollenplan",
+        "meta": "4 Rollen",
+        "rows": [
+          [
+            "Empfang",
+            "Hemd · Schürze"
+          ],
+          [
+            "Restaurant",
+            "Jacke · Hose"
+          ],
+          [
+            "Küche",
+            "Kochjacke"
+          ],
+          [
+            "Housekeeping",
+            "Kasack"
+          ]
+        ]
+      },
+      "fabric": {
+        "label": "Stoffauswahl",
+        "meta": "An Ihrem Waschzyklus",
+        "rows": [
+          [
+            "Köper",
+            "280"
+          ],
+          [
+            "Piqué",
+            "220"
+          ],
+          [
+            "Melton",
+            "480"
+          ],
+          [
+            "Popeline",
+            "130"
+          ]
+        ]
+      },
+      "proto": {
+        "label": "Anprobeprotokoll",
+        "meta": "4 Kleidungsstücke",
+        "rows": [
+          [
+            "Kochjacke",
+            "Freigegeben",
+            "go"
+          ],
+          [
+            "Servicehose",
+            "Freigegeben",
+            "go"
+          ],
+          [
+            "Wickeljacke",
+            "Änderungen angefragt",
+            "wait"
+          ],
+          [
+            "Schürze",
+            "Runde 2",
+            "flow"
+          ]
+        ]
+      },
+      "brand": {
+        "label": "Etikett und Farbstellungen",
+        "meta": "40 × 12 mm",
+        "mark": "IHRE MARKE",
+        "note": "Webetikett, in die Naht gefasst",
+        "swatches": [
+          [
+            "#011251",
+            "Marine nach Maß"
+          ],
+          [
+            "#F4F2ED",
+            "Gebrochenes Weiß"
+          ],
+          [
+            "#2F5D74",
+            "Blau nach Maß"
+          ],
+          [
+            "#0E0E0E",
+            "Tinte"
+          ]
+        ]
+      },
+      "spec": {
+        "label": "Technische Akte",
+        "meta": "Revision 4",
+        "rows": [
+          [
+            "Stoff",
+            "Baumwollköper 280 g/m²"
+          ],
+          [
+            "Farbe",
+            "Marine nach Maß · Färbeprobe 3"
+          ],
+          [
+            "Positionen",
+            "Brust · Kragen"
+          ],
+          [
+            "Größen",
+            "XS–3XL, 9 Stufen"
+          ]
+        ]
+      },
+      "reorder": {
+        "label": "Nachbestellungseintrag",
+        "meta": "88 Stück",
+        "rows": [
+          [
+            "Freigegebene Revision",
+            "Rev. 4"
+          ],
+          [
+            "Nachbestellt",
+            "88 Stück"
+          ],
+          [
+            "Stückpreis",
+            "Unverändert"
+          ]
+        ],
+        "check": "Aus der archivierten Akte gefertigt, nicht aus der Erinnerung"
+      }
+    }
   }
 }
