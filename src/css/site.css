@@ -1627,3 +1627,36 @@ main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in sr
   padding:0 var(--sp-5);min-height:38px;margin:var(--sp-5) 0;
   font-size:var(--fs-xs);color:var(--muted);background:var(--surface);width:auto}
 .faq .acc__more > summary:hover{border-color:var(--line-strong);color:var(--navy)}
+
+/* ---------------------------------------------------------------------------
+   MEASURE: a title and the sentence under it take the full width of the
+   column they sit in.
+
+   Both sheets capped them a second time inside that column — 22ch on an
+   article headline, 52ch on a chapter lede — which produced a short line of
+   type beside a wide empty space. The layout already decides the measure:
+   the grid column, or the wrap. A cap inside it only breaks the symmetry.
+
+   Body prose inside a disclosure keeps its own measure, because that is the
+   one place where a long line genuinely costs the reader.
+   ------------------------------------------------------------------------ */
+.h1,.h2,.h3,.lead,
+.shd-t,.shd-d,
+.shero-t,.shero-d,
+.ask-t,.ask-d,.bf-meet,
+.jr-lead-t,.jr-lead-d,.jr-t,.jr-d,
+.po-t,.po-d,.po-read,.po-key-l li,
+.page-head,
+.section__head p:not(.lead):not(.eyebrow),
+.section__head:not(:has(.lead)) .h2{max-width:none}
+
+/* a centred head keeps its centring; it simply no longer stops short */
+.shd:not(.shd--left) .shd-d{margin-left:auto;margin-right:auto}
+
+/* the two that carry a compound selector, and so outrank the rule above */
+.shd--left .shd-d,
+.shd--left .shd-t{max-width:none}
+
+/* a lede inside a split column is capped by a two-class selector, which
+   outranks the rule above; the column is already its measure */
+.split-b .lede,.split-b .page-desc,.split-b .sec-desc,.shead > p{max-width:none}
