@@ -88,8 +88,10 @@ ${body}
 </div>`;
 
 const FAQ_VISIBLE = 5;
+/* the question carries its own +/- marker, so the native one is suppressed
+   in the stylesheet and the classes have to match the sheet that does it */
 const faqItem = (items, first) => items
-  .map((q, i) => `<details${first && i === 0 ? ' open' : ''}><summary>${esc(q.q)}</summary><div class="acc__body"><p>${esc(q.a)}</p></div></details>`)
+  .map((q, i) => `<details class="faq-i"${first && i === 0 ? ' open' : ''}><summary class="faq-q">${esc(q.q)}</summary><div class="faq-a"><p class="t-sm">${esc(q.a)}</p></div></details>`)
   .join('\n');
 
 
@@ -465,7 +467,33 @@ const coverImg = (name, alt, { sizes, lazy = true, priority = false }) => {
     + `${priority ? ' fetchpriority="high"' : ''}${lazy ? ' loading="lazy"' : ''} decoding="async" alt="${attr(alt)}">`;
 };
 
-/* ── page: home ──────────────────────────────────────────────────────────── */
+/* ── page: home ───────────────────────────────────────────────────────────
+   The Custom Uniforms page, in the structure the mockup set: a chapter label
+   with its index chip, a light display line, rounded panels on a quiet
+   ground and one navy band per chapter that needs weight.
+
+   Every word on it is content that already exists and is already translated.
+   The chapters map onto the sections the site has always had:
+
+     figures      <- band.stats        industries <- sectors
+     how it works <- process.phases    timeline   <- process.stats
+     recent work  <- projects.items     includes  <- wardrobe
+     questions    <- faq                the brief <- contact
+
+   Nothing is invented here and nothing English-only is introduced, which is
+   why the page ships in five languages on the day it is built. */
+
+/* the chapter head: index chip, label, display line, and the sentence beside
+   it. Left variant puts the line and the sentence on one row. */
+const chapterHead = (ix, label, title, lead, { h1 = false, id = '' } = {}) => `
+<div class="shd shd--left"${id ? ` id="${id}"` : ''}>
+<span class="tag"><i>${esc(ix)}</i>${esc(label)}</span>
+${h1 ? `<h1 class="display shd-t">${esc(title)}</h1>` : `<h2 class="display shd-t">${esc(title)}</h2>`}
+${lead ? `<p class="lede shd-d">${esc(lead)}</p>` : ''}
+</div>`;
+
+const STUDIO_SHOT = ['hospitality', 'food', 'wellness', 'healthcare', 'corporate', 'retail'];
+
 function renderHome(loc) {
   const h = HOME[loc], str = S(loc), cluster = clusters.find((c) => c.id === 'home');
   const url = homeURL(loc);
@@ -496,8 +524,8 @@ function renderHome(loc) {
     ],
   };
 
-  const preload = `<link rel="preload" as="image" fetchpriority="high" href="/assets/images/hero-mobile.webp" media="(max-width: 860px)" type="image/webp">
-<link rel="preload" as="image" fetchpriority="high" href="/assets/images/hero-desktop.webp" media="(min-width: 861px)" type="image/webp">`;
+  const preload = `<link rel="preload" as="image" fetchpriority="high" href="/assets/images/studio/heroMobile.jpg" media="(max-width: 1000px)">
+<link rel="preload" as="image" fetchpriority="high" href="/assets/images/studio/hero.jpg" media="(min-width: 1001px)">`;
 
   const sectorKeys = ['sector-hotels', 'sector-restaurants', 'sector-wellness', 'sector-medical', 'sector-service', 'sector-guest'];
 
@@ -508,15 +536,15 @@ function renderHome(loc) {
       ? `<textarea id="${id}" name="${name}" rows="4" maxlength="2000"${ph ? ` placeholder="${attr(ph)}"` : ''}></textarea>`
       : `<input id="${id}" name="${name}" type="${type}"${required ? ' required aria-required="true"' : ''}${ph ? ` placeholder="${attr(ph)}"` : ''}${extra}>`;
     const help = h.contact.form.helps?.[id];
-    return `<div class="field${type === 'textarea' ? ' field--full' : ''}">
-<label for="${id}">${esc(label)}${required ? ' <i aria-hidden="true">*</i>' : ''}</label>${control}${help ? `<p class="field__help">${esc(help)}</p>` : ''}</div>`;
+    return `<label class="fld${required ? ' fld--req' : ''}${type === 'textarea' ? ' bf-full' : ''}">
+<span class="fld-l">${esc(label)}</span>${control}${help ? `<span class="fld-h">${esc(help)}</span>` : ''}</label>`;
   };
   const select = (id) => {
     const opts = h.contact.form.options[id] || [];
-    return `<div class="field"><label for="${id}">${esc(h.contact.form.labels[id] || id)} <i aria-hidden="true">*</i></label>
+    return `<label class="fld fld--req"><span class="fld-l">${esc(h.contact.form.labels[id] || id)}</span>
 <select id="${id}" name="${id}" required aria-required="true">
 ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? ' disabled selected' : ''}>${esc(o.t)}</option>`).join('\n')}
-</select></div>`;
+</select></label>`;
   };
   const consent = esc(h.contact.form.consent)
     .replace(/\{privacy:([^}]+)\}/, (m, t) => `<a href="${legalURL(loc)}#privacy">${t}</a>`)
@@ -526,157 +554,151 @@ ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? 
                 ogTitle: h.meta.ogTitle, ogDescription: h.meta.ogDescription, cluster,
                 extraLD: [graph, faqLD], preloadImage: preload })
 + header(loc, cluster) + `
-<main id="main">
+<main id="main" data-page="custom">
 
-<section class="hero">
-<div class="wrap hero__grid">
-<div class="hero__copy">
-<p class="eyebrow">${esc(h.hero.eyebrow)}</p>
-<h1 class="h1">${esc(h.hero.h1)}</h1>
-<p class="lead">${esc(h.hero.lead)}</p>
-<ul class="chips">${h.hero.pills.map((p) => `<li class="chip chip--solid">${esc(p)}</li>`).join('')}</ul>
-<div class="hero__actions">
-<a class="btn btn--primary" href="#contact">${esc(h.hero.primary)}</a>
-<a class="btn btn--ghost" href="#projects">${esc(h.hero.secondary)}</a>
+<section class="shero"><div class="wrap"><div class="shero-in">
+<div class="shero-copy">
+<span class="news"><b>${esc(site.brand.city)}</b>${esc(h.hero.eyebrow)}</span>
+<h1 class="display shero-t">${esc(h.hero.h1)}</h1>
+<p class="lede shero-d">${esc(h.hero.lead)}</p>
+<div class="btn-row shero-btns">
+<a class="btn btn--primary btn--lg btn--arrow" href="#brief">${esc(h.hero.primary)}<i class="btn-a" aria-hidden="true">&#8594;</i></a>
+<a class="btn btn--ghost btn--lg btn--arrow" href="#work">${esc(h.hero.secondary)}<i class="btn-a" aria-hidden="true">&#8594;</i></a>
 </div>
+<p class="t-xs shero-sup">${esc(h.contact.form.hint)}</p>
 </div>
-<div>
-<figure class="hero__media">
+<div class="shero-media">
 <picture>
-<source media="(max-width:860px)" srcset="/assets/images/hero-mobile.webp" type="image/webp">
-<source srcset="/assets/images/hero-desktop.webp" type="image/webp">
-<img src="/assets/images/hero-desktop.jpg" width="1120" height="887" fetchpriority="high" decoding="async" alt="${attr(h.hero.imageAlt || h.hero.h1)}">
+<source media="(max-width:1000px)" srcset="/assets/images/studio/heroMobile.jpg">
+<img class="shero-img" src="/assets/images/studio/hero.jpg" width="1336" height="1200" fetchpriority="high" decoding="async" alt="${attr(h.hero.imageAlt || h.hero.h1)}">
 </picture>
-</figure>
-<div class="proofs">
-${h.hero.proofs.map((p) => `<div class="proof"><strong>${esc(p.label)}</strong><span>${esc(p.text)}</span></div>`).join('\n')}
-</div>
-</div>
-</div>
-</section>
-
-<section class="band"><div class="wrap">
-<p class="eyebrow">${esc(h.band.kicker)}</p>
-<dl class="stats stats--band">
-${h.band.stats.map((x) => `<div><dd>${esc(x.v)}</dd><dt>${esc(x.l)}</dt></div>`).join('\n')}
+<div class="shero-card">
+<div class="shero-card-h"><span class="eyebrow">${esc(h.band.kicker)}</span></div>
+<div class="shero-card-t">${esc(h.band.text)}</div>
+<dl class="shero-card-l">
+${h.hero.proofs.map((p) => `<div><dt>${esc(p.label)}</dt><dd>${esc(p.text)}</dd></div>`).join('\n')}
 </dl>
-</div></section>
-
-<section class="section section--alt" id="sectors"><div class="wrap">
-${accordion(loc, 'sectors', true, h.sectors.kicker, h.sectors.h2, h.sectors.intro, `
-<ul class="sector-grid">
-${h.sectors.items.map((x, i) => {
-  const detail = h.detail[sectorKeys[i]] || [];
-  return `<li class="sector-card">
-<img class="sector-card__img" src="${attr(x.img)}" width="800" height="450" loading="lazy" decoding="async" alt="${attr(x.alt || x.name)}">
-<p class="sector-card__idx">${String(i + 1).padStart(2, '0')}</p>
-<h3 class="sector-card__name">${esc(x.name)}</h3>
-<p class="sector-card__desc">${esc(x.desc || '')}</p>
-${disclosure(loc, trimEcho(detail, x.name), x.name)}
-</li>`;
-}).join('\n')}
-</ul>
-<p class="handoff"><a href="#contact">${esc(h.sectors.handoff)}</a></p>
-`)}
-</div></section>
-
-<section class="section" id="services"><div class="wrap">
-${accordion(loc, 'services', true, h.wardrobe.kicker, h.wardrobe.h2, h.wardrobe.intro, `
-<div class="getgrid">
-<img class="getgrid__img" src="${attr(h.wardrobe.img)}" width="800" height="1066" loading="lazy" decoding="async" alt="${attr(h.wardrobe.alt)}">
-<ol class="pillars">
-${h.wardrobe.pillars.map((x, i) => `<li class="pillar"><span class="pillar__n">${String(i + 1).padStart(2, '0')}</span><div>
-<h3 class="pillar__h">${esc(x.h)}</h3>
-<p class="pillar__p">${esc(x.p)}</p>
-</div></li>`).join('\n')}
-</ol>
 </div>
-<p class="garments__lead">${esc(h.wardrobe.garmentsLead)}</p>
-<ul class="garments">${h.wardrobe.garments.map((g) => `<li class="garment">${esc(g)}</li>`).join('')}</ul>
-${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
-<div class="ctabar">
-<p class="ctabar__t">${esc(h.wardrobe.ctaText)}</p>
-<a class="ctabar__a" href="#contact">${esc(h.wardrobe.ctaLabel)} <span aria-hidden="true">&#8594;</span></a>
 </div>
-`)}
+</div></div></section>
+
+<section class="pub-sec"><div class="wrap">
+<div class="band">
+<dl class="band-g">
+${h.band.stats.map((x) => `<div class="band-i"><dd class="band-v">${esc(x.v)}</dd><dt class="band-l">${esc(x.l)}</dt></div>`).join('\n')}
+</dl>
+</div>
 </div></section>
 
-<section class="section section--alt" id="parameters"><div class="wrap">
-${accordion(loc, 'parameters', false, h.parameters.kicker, h.parameters.h2, h.parameters.intro, `
-<div class="grid grid--3">
-${h.parameters.groups.map((g) => `<article class="param">
-<h3 class="h3">${esc(g.h3)}</h3>
-${g.notes.filter((n) => n.head || n.body).map((n) => `<div class="param__note">${n.head ? `<strong>${esc(n.head)}</strong>` : ''}<span>${esc(n.body)}</span></div>`).join('\n')}
-${g.itemsLabel ? `<p class="param__label">${esc(g.itemsLabel)}</p>` : ''}
-${g.items.length ? `<ul class="ticks">${g.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : ''}
-${disclosure(loc, h.detail[g.modal], g.h3)}
+<section class="pub-sec" id="sectors"><div class="wrap">
+${chapterHead('01', h.sectors.kicker, h.sectors.h2, h.sectors.intro)}
+<div class="ind-g">
+${h.sectors.items.map((x, i) => `<article class="ind">
+<div class="ind-m"><img src="/assets/images/studio/${STUDIO_SHOT[i]}.jpg" width="1200" height="900" loading="lazy" decoding="async" alt="${attr(x.alt || x.name)}"></div>
+<div class="ind-b">
+<span class="ind-n">${String(i + 1).padStart(2, '0')}</span>
+<h3 class="ind-t">${esc(x.name)}</h3>
+<p class="ind-d">${esc(x.desc || '')}</p>
+${disclosure(loc, trimEcho(h.detail[sectorKeys[i]] || [], x.name), x.name)}
+</div>
 </article>`).join('\n')}
 </div>
-`)}
+<p class="handoff"><a href="#brief">${esc(h.sectors.handoff)}</a></p>
 </div></section>
 
-<section class="section" id="projects"><div class="wrap">
-${accordion(loc, 'projects', false, h.projects.kicker, h.projects.h2, h.projects.intro, `
-<div class="grid grid--3">
-${h.projects.items.map((x) => {
-  const inner = `<img src="${attr(x.img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(x.alt || x.h3)}">
-<p class="eyebrow eyebrow--muted">${esc(x.tag)}</p>
-<h3 class="h3">${esc(x.h3)}</h3>
-<p class="muted">${esc(x.p)}</p>
-${x.linkLabel ? `<p class="project__link">${esc(x.linkLabel)}</p>` : ''}`;
-  return x.href
-    ? `<a class="project" href="${attr(x.href)}">${inner}</a>`
-    : `<article class="project">${inner}</article>`;
-}).join('\n')}
-</div>
-<p class="handoff"><a href="#contact">${esc(h.projects.handoff)}</a></p>
-`)}
-</div></section>
-
-<section class="section" id="process"><div class="wrap">
-${accordion(loc, 'process', false, h.process.kicker, h.process.h2, h.process.intro, `
-<div class="grid grid--3">
-${h.process.phases.map((x, i) => `<article class="card">
-<img class="card__img" src="${attr(x.img)}" width="800" height="450" loading="lazy" decoding="async" alt="${attr(x.alt || x.h3)}">
-<p class="eyebrow eyebrow--muted">${esc(x.tag)}</p>
-<h3 class="h3">${esc(x.h3)}</h3>
-<p class="muted">${esc(x.desc)}</p>
+<section class="pub-sec surface-2" id="process"><div class="wrap">
+${chapterHead('02', h.process.kicker, h.process.h2, h.process.intro)}
+<div class="how-g">
+${h.process.phases.map((x, i) => `<article class="how">
+<span class="how-n">${String(i + 1).padStart(2, '0')}</span>
+<h3 class="how-t">${esc(x.h3)}</h3>
+<p class="how-d">${esc(x.desc)}</p>
 ${x.items && x.items.length ? `<ul class="ticks">${x.items.map((i2) => `<li>${esc(i2)}</li>`).join('')}</ul>` : ''}
 ${disclosure(loc, h.detail['phase-' + (i + 1)], x.h3)}
 </article>`).join('\n')}
 </div>
-<h3 class="eyebrow eyebrow--muted section__sub">${esc(h.process.statsLabel)}</h3>
-<dl class="stats">
-${h.process.stats.map((x) => `<div><dd>${esc(x.v)}</dd><dt>${esc(x.l)}</dt></div>`).join('\n')}
-</dl>
-${h.process.note ? `<p class="muted small section__sub">${esc(h.process.note)}</p>` : ''}
-<p class="handoff"><a href="#contact">${esc(h.process.handoff)}</a></p>
-`)}
+<h3 class="eyebrow eyebrow--muted pt-h">${esc(h.process.statsLabel)}</h3>
+<ol class="pt">
+${h.process.stats.map((x, i) => `<li class="pt-i">
+<div class="pt-rail"><span class="pt-dot"></span></div>
+<div class="pt-b">
+<span class="pt-n">${String(i + 1).padStart(2, '0')}</span>
+<h3 class="pt-t">${esc(x.v)}</h3>
+<p class="pt-p">${esc(x.l)}</p>
+</div>
+</li>`).join('\n')}
+</ol>
+${h.process.note ? `<p class="t-xs muted pt-note">${esc(h.process.note)}</p>` : ''}
+<p class="handoff"><a href="#brief">${esc(h.process.handoff)}</a></p>
 </div></section>
 
-<section class="section section--alt" id="faq"><div class="wrap">
-${accordion(loc, 'faq', false, h.faq.kicker, h.faq.h2, h.faq.intro, `
-<div class="acc">
+<section class="pub-sec" id="work"><div class="wrap">
+${chapterHead('03', h.projects.kicker, h.projects.h2, h.projects.intro)}
+<div class="split split--wide work-s">
+<div class="split-b">
+<figure class="fig"><div class="media media--4x5">
+<img id="workfig-img" src="${attr(h.projects.items[0].img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(h.projects.items[0].alt || h.projects.items[0].h3)}">
+</div>
+<figcaption class="cap"><b>${esc(h.projects.items[0].tag)}</b><span id="workfig-cap">${esc(h.projects.items[0].linkLabel || '')}</span></figcaption>
+</figure>
+</div>
+<div class="split-b">
+<div class="cases">
+${h.projects.items.map((x, k) => `<details class="case" data-shot="${attr(x.img.replace(/\.jpg$/, '.webp'))}" data-alt="${attr(x.alt || x.h3)}" data-tag="${attr(x.tag)}" data-cap="${attr(x.linkLabel || '')}"${k === 0 ? ' open' : ''}>
+<summary class="case-q">
+<span class="case-n">0${k + 1}</span>
+<span class="case-t"><span class="case-h">${esc(x.h3)}</span><span class="case-m">${esc(x.tag)}</span></span>
+</summary>
+<div class="case-b">
+<p class="case-scope">${esc(x.p)}</p>
+${x.href ? `<a class="btn btn--ghost btn--sm case-cta" href="${attr(x.href)}">${esc(x.linkLabel)}</a>` : ''}
+</div>
+</details>`).join('\n')}
+</div>
+<p class="handoff"><a href="#brief">${esc(h.projects.handoff)}</a></p>
+</div>
+</div>
+</div></section>
+
+<section class="pub-sec surface-2" id="includes"><div class="wrap">
+${chapterHead('04', h.wardrobe.kicker, h.wardrobe.h2, h.wardrobe.intro)}
+<div class="sol-g">
+${h.wardrobe.pillars.map((x, i) => `<article class="sol">
+<div class="sol-h"><span class="sol-n">${String(i + 1).padStart(2, '0')}</span><h3 class="sol-t">${esc(x.h)}</h3></div>
+<p class="sol-d">${esc(x.p)}</p>
+</article>`).join('\n')}
+</div>
+<div class="art">
+<div class="art-h"><span class="art-h-l">${esc(h.wardrobe.garmentsLead)}</span><span class="art-h-m">${h.wardrobe.garments.length}</span></div>
+<div class="art-b"><ul class="garments">${h.wardrobe.garments.map((g) => `<li class="garment">${esc(g)}</li>`).join('')}</ul></div>
+</div>
+${disclosure(loc, h.detail['service-custom'], h.wardrobe.h2)}
+<div class="ctabar">
+<p class="ctabar__t">${esc(h.wardrobe.ctaText)}</p>
+<a class="ctabar__a" href="#brief">${esc(h.wardrobe.ctaLabel)} <span aria-hidden="true">&#8594;</span></a>
+</div>
+</div></section>
+
+<section class="pub-sec" id="faq"><div class="wrap">
+${chapterHead('05', h.faq.kicker, h.faq.h2, h.faq.intro)}
+<div class="faq-s"><div class="faq">
 ${faqItem(h.faq.items.slice(0, FAQ_VISIBLE), true)}
-</div>
 ${h.faq.items.length > FAQ_VISIBLE ? `<details class="acc__more"><summary><span class="is-more">${esc(str.faqMore)}</span><span class="is-less">${esc(str.faqLess)}</span></summary>
-<div class="acc">
 ${faqItem(h.faq.items.slice(FAQ_VISIBLE), false)}
-</div>
 </details>` : ''}
-<p class="handoff"><a href="#contact">${esc(h.faq.handoff)}</a></p>
-`)}
+</div></div>
+<p class="handoff"><a href="#brief">${esc(h.faq.handoff)}</a></p>
 </div></section>
 
-<section class="section" id="contact"><div class="wrap contact">
-<div class="contact__copy">
-<p class="eyebrow">${esc(h.contact.kicker)}</p>
-<h2 class="h2">${esc(h.contact.h2)}</h2>
-${h.contact.paras.map((p) => `<p class="muted">${esc(p)}</p>`).join('\n')}
-<p class="muted">${h.contact.emailLabel ? `${esc(h.contact.emailLabel)}: ` : ''}<a href="mailto:${attr(site.brand.email)}">${esc(site.brand.email)}</a></p>
-</div>
-<form class="form" data-form action="${attr(site.form.endpoint)}" method="post"
+<section class="pub-sec" id="brief"><div class="wrap">
+<div class="ask ask--form">
+<span class="tag tag--dark"><i>06</i>${esc(h.contact.kicker)}</span>
+<h2 class="display ask-t">${esc(h.contact.h2)}</h2>
+${h.contact.paras.slice(0, 1).map((p) => `<p class="lede ask-d">${esc(p)}</p>`).join('')}
+${h.contact.paras.slice(1).map((p) => `<p class="ask-sup bf-meet">${esc(p)}</p>`).join('')}
+<form class="bf" data-form action="${attr(site.form.endpoint)}" method="post"
       data-sending="${attr(str.formSending)}" data-ok="${attr(str.formOk)}" data-error="${attr(str.formError)}">
+<div class="bf-g">
 ${field('name', 'name', 'text', true, ' autocomplete="name" maxlength="100"')}
 ${field('email', 'email', 'email', true, ' autocomplete="email" maxlength="120" inputmode="email" autocapitalize="none"')}
 ${field('company', 'company', 'text', true, ' autocomplete="organization" maxlength="120"')}
@@ -686,12 +708,19 @@ ${select('project-type')}
 ${select('timeline')}
 ${field('meeting-datetime', 'meeting-datetime', 'datetime-local', false)}
 ${field('brief', 'brief', 'textarea', false)}
+</div>
 <p class="hp"><label for="website">Website</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></p>
 <label class="consent"><input type="checkbox" name="consent" required aria-required="true"> <span>${consent}</span></label>
-<p class="form-note">${esc(h.contact.form.hint)}</p>
 <p class="form-status" data-form-status role="status" aria-live="polite" aria-atomic="true" hidden></p>
-<div class="field field--full"><button class="btn btn--primary btn--full" type="submit">${esc(h.contact.form.submit)}</button></div>
+<div class="bf-f">
+<button class="btn btn--onband btn--lg btn--arrow" type="submit">${esc(h.contact.form.submit)}<i class="btn-a" aria-hidden="true">&#8594;</i></button>
+<div class="bf-fi">
+<p class="t-xs">${esc(h.contact.form.hint)}</p>
+<p class="t-xs">${h.contact.emailLabel ? `${esc(h.contact.emailLabel)}: ` : ''}<a class="lnk lnk--onband" href="mailto:${attr(site.brand.email)}">${esc(site.brand.email)}</a></p>
+</div>
+</div>
 </form>
+</div>
 </div></section>
 
 </main>
