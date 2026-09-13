@@ -1660,3 +1660,43 @@ main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in sr
 /* a lede inside a split column is capped by a two-class selector, which
    outranks the rule above; the column is already its measure */
 .split-b .lede,.split-b .page-desc,.split-b .sec-desc,.shead > p{max-width:none}
+
+/* ---------------------------------------------------------------------------
+   VERTICAL RHYTHM
+
+   The mockup spaces several stacks with flex `gap` rather than margins. Those
+   containers came across but their gap did not, and this site's reset zeroes
+   every child margin — so the stacks collapsed onto each other: the hero
+   lede sat directly on the buttons, the industry title on its description,
+   an article paragraph on the heading after it.
+
+   Measured, not guessed: the audit compared the ink edge of each block with
+   the one below it across the homepage, the journal, an article and the
+   legal hub, and these were everything that came back under 12px.
+   ------------------------------------------------------------------------ */
+
+/* hero: the sentence, then the actions, then the note under them */
+.shero-btns{margin-top:var(--sp-7)}
+.shero-sup{margin-top:var(--sp-5)}
+
+/* industry card: index, title, description */
+.ind-b{gap:0}
+.ind-n{margin-bottom:var(--sp-3)}
+.ind-t{margin-bottom:var(--sp-3)}
+.ind-d{margin-bottom:var(--sp-4)}
+
+/* the work accordion's title and the line under it */
+.case-t{gap:6px}
+
+/* an article's body: a heading needs air above it, more than below */
+.po-read h2{margin-top:var(--sp-8)}
+.po-read h3{margin-top:var(--sp-6)}
+.po-read h2:first-child,.po-read h3:first-child{margin-top:0}
+.po-read p + p{margin-top:var(--sp-4)}
+.po-read ul,.po-read ol{margin-top:var(--sp-4)}
+
+/* the two notes beside the submit button */
+.bf-fi{gap:var(--sp-2)}
+
+/* legal hub: a subheading and the text under it */
+.legal h3 + p,.legal h3 + ul,.detail h3 + p,.detail h3 + ul{margin-top:var(--sp-3)}
