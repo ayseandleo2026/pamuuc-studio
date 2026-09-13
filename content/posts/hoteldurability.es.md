@@ -40,7 +40,7 @@ La [guía de tejidos para uniformes de hotel](/es/blog/guia-tejidos-uniformes-ho
 
 El fallo de color puede aparecer como pérdida general de tono, aclarado local, manchado de otra zona o migración entre componentes con contraste. Compara primero la prenda afectada con una prenda de referencia sin usar del mismo lote aprobado, si existe. Después comprueba si el cambio sigue los pliegues expuestos, las zonas de mayor contacto, una fornitura concreta o toda la ruta de lavado.
 
-[ISO 105-C06:2010](https://www.iso.org/standard/51276.html) describe métodos para evaluar la solidez del color frente a procedimientos definidos de lavado doméstico y comercial. No aporta un resultado de aptitud para el tejido que tienes delante. Solicita un informe que cubra el tejido, el color y el acabado ofrecidos, y confirma que el detergente y el procedimiento responden a la pregunta real del hotel.
+[ISO 105-C06:2010](https://www.iso.org/standard/51276.html) describe métodos para evaluar la solidez del color frente a procedimientos definidos de lavado doméstico y comercial. No aporta un resultado de aptitud para el tejido que tiene delante. Solicite un informe que cubra el tejido, el color y el acabado ofrecidos, y confirma que el detergente y el procedimiento responden a la pregunta real del hotel.
 
 Una ruta industrial necesita su propia evaluación. [ISO 15797:2017](https://www.iso.org/standard/65152.html) establece procedimientos de lavado y acabado para evaluar ropa de trabajo destinada a lavandería industrial. La norma también indica que puede ser aconsejable probar la prenda en el equipo y el proceso reales previstos al confirmar la compatibilidad final.
 

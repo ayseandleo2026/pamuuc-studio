@@ -40,7 +40,7 @@ La [guida ai tessuti per divise da hotel](/it/blog/guida-tessuti-divise-hotel/) 
 
 Un difetto di colore può apparire come scolorimento generale, schiarimento locale, macchia su un’altra zona o migrazione tra componenti a contrasto. Confronta prima il capo interessato con un capo di riferimento non usato dello stesso lotto approvato, se disponibile. Verifica poi se il cambiamento segue pieghe esposte, zone di contatto, un accessorio specifico o tutto il percorso di lavaggio.
 
-[ISO 105-C06:2010](https://www.iso.org/standard/51276.html) descrive metodi per valutare la solidità del colore a procedure definite di lavaggio domestico e commerciale. Non fornisce un risultato di idoneità per il tessuto che hai davanti. Chiedi un rapporto relativo al tessuto, al colore e al finissaggio offerti, quindi verifica che il sistema detergente e la procedura rispondano alla domanda reale dell’hotel.
+[ISO 105-C06:2010](https://www.iso.org/standard/51276.html) descrive metodi per valutare la solidità del colore a procedure definite di lavaggio domestico e commerciale. Non fornisce un risultato di idoneità per il tessuto che ha davanti. Chieda un rapporto relativo al tessuto, al colore e al finissaggio offerti, quindi verifica che il sistema detergente e la procedura rispondano alla domanda reale dell’hotel.
 
 Un percorso industriale richiede una valutazione propria. [ISO 15797:2017](https://www.iso.org/standard/65152.html) fornisce procedure di lavaggio e finissaggio per valutare gli indumenti da lavoro destinati alla lavanderia industriale. La norma indica inoltre che una prova sulle attrezzature e nel processo realmente previsti può essere consigliabile per confermare la compatibilità finale.
 

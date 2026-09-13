@@ -30,8 +30,8 @@
   ],
   "hero": {
     "eyebrow": "DESIGN UND PRODUKTION MASSGESCHNEIDERTER UNIFORMEN · BARCELONA",
-    "h1": "Maßgeschneiderte Uniformen für Hotels, Restaurants, Wellnessbereiche und Privatkliniken",
-    "lead": "Wir entwerfen und produzieren maßgeschneiderte Uniformsysteme für Ihre Marke, die Rollen im Team und den Arbeitsalltag: vom ersten Briefing und den Anproben bis zur Produktion und zu künftigen Nachbestellungen.",
+    "h1": "Maßgeschneiderte Uniformen für Hotels, Restaurants, Wellness und Kliniken",
+    "lead": "Wir entwerfen und produzieren Uniformen nach Maß für Ihre Marke, Ihre Rollen und den Arbeitsalltag: vom Briefing über Anproben bis zur Produktion und Nachbestellung.",
     "pills": [
       "Für Ihre Marke entworfen",
       "Nach Rollen entwickelt",
@@ -83,7 +83,7 @@
         "v": "2.600",
         "u": "",
         "l": "Kleidungsstücke 2026 gefertigt",
-        "n": "Geschnitten, genäht und ausgerüstet im Umkreis von dreißig Kilometern um Barcelona, über alle in diesem Jahr gelieferten Programme."
+        "n": "Geschnitten, genäht und ausgerüstet, keine dreißig Kilometer von Barcelona, über alle Programme des Jahres."
       },
       {
         "v": "12",
@@ -94,7 +94,7 @@
       {
         "v": "3",
         "u": "Wochen",
-        "l": "Nachbestellung, in Produktion",
+        "l": "Nachbestellung in Arbeit",
         "n": "Nach der archivierten Spezifikation gefertigt, damit nichts zweimal entwickelt wird. Verfügbarkeit und Preis werden vorher neu geprüft."
       },
       {
@@ -109,7 +109,7 @@
   },
   "sectors": {
     "kicker": "MIT WEM WIR ARBEITEN",
-    "h2": "Sechs Arbeitsumgebungen, für die wir entwickeln",
+    "h2": "Sechs Bereiche, die wir ausstatten",
     "intro": "Jede Karte zeigt die Rollen, Kleidungsstücke und Prioritäten der jeweiligen Umgebung.",
     "items": [
       {
@@ -134,28 +134,28 @@
         "alt": "Ruhiger Behandlungsraum in warmen Naturtönen"
       },
       {
-        "name": "Zahnarztpraxen und Privatkliniken",
+        "name": "Zahnarzt- und Privatkliniken",
         "modal": "modal-sector-medical",
-        "desc": "Eine professionelle Alternative zu generischer Klinikbekleidung für Empfangs- und Behandlungsteams.",
+        "desc": "Eine professionelle Alternative zu generischer Klinikkleidung für Empfang und Behandlung.",
         "img": "/assets/images/home/sector-04-clinics.jpg",
         "alt": "Behandlungsraum einer Privatklinik"
       },
       {
         "name": "Operative Serviceteams",
         "modal": "modal-sector-service",
-        "desc": "Strapazierfähige Kleidung für Wartung, Logistik, Unterstützung und andere praktische Aufgaben.",
+        "desc": "Strapazierfähige Kleidung für Wartung, Logistik, Support und praktische Rollen.",
         "img": "/assets/images/home/sector-05-service.jpg",
         "alt": "Schürze für interne Arbeitsbereiche und technische Arbeitskleidung"
       },
       {
         "name": "Teams mit Kundenkontakt",
         "modal": "modal-sector-guest",
-        "desc": "Maßgeschneiderte Uniformen für Menschen, die empfangen, begleiten und das Unternehmen repräsentieren.",
+        "desc": "Uniformen für alle, die empfangen, begleiten und das Unternehmen vertreten.",
         "img": "/assets/images/home/sector-06-guest.jpg",
         "alt": "Hotelempfang mit dem Empfangsteam"
       }
     ],
-    "handoff": "Unsicher, welcher Bereich passt? Erzählen Sie uns von Ihrem Team"
+    "handoff": "Welcher Bereich passt? Erzählen Sie es uns"
   },
   "approach": {
     "kicker": "WIE WIR GESTALTEN",
@@ -355,7 +355,7 @@
   "parameters": {
     "kicker": "PRAKTISCHE PROJEKTDATEN",
     "h2": "Drei Einstiegsmöglichkeiten mit den wichtigsten Zahlen",
-    "intro": "Sie müssen keine komplette Garderobe beauftragen. Der Preis wird pro Projekt kalkuliert, ohne starre Preisliste. Der Zeitplan richtet sich nach der Anzahl der Modelle, den Anproben und dem Stoff.",
+    "intro": "Sie müssen keine komplette Garderobe beauftragen. Der Preis wird pro Projekt kalkuliert, ohne starre Preisliste. Der Zeitplan folgt den Modellen, Anproben und dem Stoff.",
     "groups": [
       {
         "h3": "Empfohlene Mindestmengen",
@@ -455,11 +455,11 @@
   "projects": {
     "kicker": "AUSGEWÄHLTE PROJEKTE UND LEITFÄDEN",
     "h2": "Drei Programme, in den Räumen, für die sie entstanden",
-    "intro": "Eine Hoteleröffnung, ein Wellness-Team und eine Privatklinik: dieselbe Methode, drei sehr verschiedene Räume.",
+    "intro": "Eine Hoteleröffnung, ein Wellness-Team, eine Privatklinik: eine Methode, drei verschiedene Räume.",
     "items": [
       {
         "tag": "HOTEL-FALLSTUDIE",
-        "h3": "Maßgeschneiderte Hoteluniformen für METT Barcelona",
+        "h3": "Hoteluniformen nach Maß für METT Barcelona",
         "p": "Eine vollständige, rollenbezogene Garderobe, die aus dem Innenraumkonzept des Hotels für Empfang, Gastronomie, Leitung und Spa entwickelt und anschließend in Barcelona entworfen, prototypisiert und produziert wurde.",
         "img": "/assets/images/project-barcelona-heritage.jpg",
         "alt": "Eine modernistische Fassade im Zentrum von Barcelona – die Art von Haus, für die diese Uniformprogramme entstehen",
@@ -468,8 +468,8 @@
       },
       {
         "tag": "WELLNESS-LEITFADEN",
-        "h3": "Eine Wellness-Garderobe für mehrere Rollen entwickeln",
-        "p": "Ein praktischer Leitfaden, der Empfang, Behandlung und unterstützende Rollen durch gemeinsame Farben, Materialien und Bekleidungsdetails sowie einen klaren Kontinuitätsplan verbindet.",
+        "h3": "Eine Wellness-Garderobe für mehrere Rollen",
+        "p": "Ein praktischer Leitfaden, der Empfang, Behandlung und Unterstützung über gemeinsame Farben, Materialien und Details verbindet, mit klarem Kontinuitätsplan.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Wellness-Teamgarderobe, die Empfang und Behandlungsrollen verbindet",
         "href": "/de/blog/uniformen-wellness-studios/",
@@ -477,7 +477,7 @@
       },
       {
         "tag": "KLINIK-FALLSTUDIE",
-        "h3": "Maßgeschneiderte Uniformen für eine Zahnarztpraxis in Barcelona",
+        "h3": "Uniformen für eine Zahnarztpraxis in Barcelona",
         "p": "Eine professionelle Garderobe jenseits generischer Klinikbekleidung, die Raum, Marke, den Auftritt am Empfang und die täglichen Pflegeanforderungen miteinander verbindet.",
         "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Maßgeschneiderte Klinikuniformen in einer Zahnarztpraxis in Barcelona",
@@ -489,8 +489,8 @@
   },
   "faq": {
     "kicker": "HÄUFIGE FRAGEN",
-    "h2": "Antworten auf die ersten Fragen von Einkäufern",
-    "intro": "Die praktischen Punkte, die vor einem ersten Termin geklärt sein sollten.",
+    "h2": "Antworten auf die ersten Fragen",
+    "intro": "Die praktischen Punkte vor einem ersten Termin.",
     "items": [
       {
         "q": "Arbeiten Sie mit einem Katalog?",
@@ -509,7 +509,7 @@
         "a": "Ja. Wir können mit verfügbaren Farbkarten arbeiten oder eigene Farben prüfen, wenn Material und Menge es zulassen. Markenkennzeichnung und individuelle Details werden passend zum Kleidungsstück, zur nötigen Sichtbarkeit, zur Haltbarkeit und zu den Pflegeanforderungen ausgewählt."
       },
       {
-        "q": "Wie hoch ist die Mindestbestellmenge?",
+        "q": "Gibt es eine Mindestbestellmenge?",
         "a": "Ausgewählte Modelle lassen sich ab 10 Stück pro Modell produzieren. Maßgeschneiderte Webware beginnt in der Regel bei 10–15 Stück pro Modell, verteilt auf die benötigten Größen und freigegebenen Varianten; maßgeschneiderte Strickware beginnt meist bei 100–150 Stück, da ihr Herstellungsprozess eine höhere Menge verlangt. Die Mindestmenge bestätigen wir nach Prüfung von Kleidungsstück, Stoff, Farbe, Konstruktion und Individualisierungsgrad."
       },
       {
@@ -526,7 +526,7 @@
       },
       {
         "q": "Sehen wir Prototypen, bevor die Produktion startet?",
-        "a": "Ja. Prototypen, Muster und Anproben kommen vor jeder Produktionszusage. Passform, Stoff, Konstruktion und Markenkennzeichnung werden an echten Kleidungsstücken freigegeben, nicht an Zeichnungen."
+        "a": "Ja. Prototypen, Muster und Anproben kommen vor jeder Produktionszusage. Passform, Stoff, Konstruktion und Kennzeichnung werden an echten Teilen freigegeben, nicht an Skizzen."
       },
       {
         "q": "Wie legen Sie die Größen für ein ganzes Team fest?",
@@ -541,18 +541,18 @@
         "a": "Hotellerie und Gastgewerbe, Gastronomie, Spa und Wellness, Zahnarztpraxen und Privatkliniken, operative Teams und Serviceteams sowie gästenahe Rollen. Die Methode ist überall dieselbe; Kleidungsstücke, Stoffe und Prioritäten sind es nicht."
       },
       {
-        "q": "Können die Uniformen unserer Innenarchitektur oder Markenidentität folgen?",
+        "q": "Können die Uniformen Innenarchitektur oder Marke folgen?",
         "a": "Ja. Eine Garderobe kann direkt aus einem Raumkonzept entwickelt werden, wie bei der Eröffnung eines Fünf-Sterne-Hauses in Barcelona. Farben können aus verfügbaren Stofffarbkarten stammen oder eigens entwickelt werden, wenn Material und Menge es zulassen."
       }
     ],
-    "handoff": "Noch eine Frage? Stellen Sie sie über das Formular"
+    "handoff": "Noch eine Frage? Stellen Sie sie im Formular"
   },
   "contact": {
     "kicker": "Starten Sie Ihr Projekt",
-    "h2": "Erzählen Sie uns von Ihrem Team, den Rollen und dem Zieltermin",
+    "h2": "Erzählen Sie uns von Team, Rollen und Zieltermin",
     "paras": [
       "Teilen Sie uns mit, was bereits feststeht. Wir prüfen Umfang, Machbarkeit und den praktikabelsten Ausgangspunkt, bevor wir eine Richtung empfehlen.",
-      "Das erste Gespräch kann bei Ihnen vor Ort in Barcelona, an einem anderen Ort in Spanien oder im Ausland oder per Video stattfinden. Ziel ist es, die Umgebung, die Teamstruktur, die operativen Anforderungen und die Aufgaben der Uniformen zu verstehen."
+      "Das erste Gespräch kann bei Ihnen vor Ort in Barcelona, anderswo in Spanien oder im Ausland oder per Video stattfinden. Ziel ist es, Umgebung, Teamstruktur, Abläufe und die Aufgabe der Uniformen zu verstehen."
     ],
     "emailLabel": "Lieber per E-Mail?",
     "form": {
@@ -564,7 +564,7 @@
         "team-size": "Teamgröße",
         "project-type": "Projektart",
         "timeline": "Zieltermin",
-        "meeting-datetime": "Bevorzugtes Datum und Uhrzeit für das erste Gespräch",
+        "meeting-datetime": "Wunschtermin für das erste Gespräch",
         "brief": "Projektbeschreibung"
       },
       "placeholders": {
@@ -576,7 +576,7 @@
       },
       "helps": {
         "phone": "Optional",
-        "meeting-datetime": "Optional. Wir bestätigen die Verfügbarkeit, bevor wir den Termin festlegen."
+        "meeting-datetime": "Optional. Wir bestätigen die Verfügbarkeit vorab."
       },
       "options": {
         "team-size": [
@@ -682,12 +682,12 @@
         ]
       },
       "consent": "Ich akzeptiere die {privacy:Datenschutzerklärung} und die {terms:Bedingungen}.",
-      "hint": "Das Ausfüllen dauert etwa zwei Minuten. In der Regel antworten wir innerhalb eines Werktags.",
+      "hint": "Das Formular dauert zwei Minuten. Wir antworten meist am nächsten Werktag.",
       "submit": "Projektanfrage senden"
     }
   },
   "footer": {
-    "about": "Maßgeschneiderte Uniformkonzepte, in Barcelona entworfen, entwickelt und produziert.",
+    "about": "Maßgeschneiderte Uniformen, in Barcelona entworfen und produziert.",
     "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
@@ -811,11 +811,11 @@
       },
       {
         "t": "h",
-        "v": "Eine visuelle Sprache für ein Haus mit vielen unterschiedlichen Rollen"
+        "v": "Eine visuelle Sprache für ein Haus mit vielen Rollen"
       },
       {
         "t": "p",
-        "v": "Ein Hotel vereint Gästebetreuung, Service und interne Betriebsbereiche mit sehr unterschiedlichen Arbeitsanforderungen. Wir entwickeln Kleidungsstücke für die jeweilige Tätigkeit, die dennoch eine gemeinsame Hotelgarderobe bilden."
+        "v": "Ein Hotel vereint Gästebetreuung, Service und Betrieb mit sehr unterschiedlichen Anforderungen. Wir entwickeln Kleidung je Tätigkeit, die dennoch eine gemeinsame Hotelgarderobe bildet."
       },
       {
         "t": "h",
@@ -855,10 +855,10 @@
         "t": "ul",
         "v": [
           "Eine klare Identität über alle Abteilungen hinweg",
-          "Komfort und Bewegungsfreiheit während langer Schichten",
-          "Materialien und Konstruktion passend zum täglichen Einsatz",
+          "Komfort und Bewegung in langen Schichten",
+          "Materialien und Verarbeitung für den Alltag",
           "Abstimmung auf Architektur und Marke",
-          "Ein praktisches System für neue Mitarbeitende und Nachbestellungen"
+          "System für Neuzugänge und Nachbestellungen"
         ]
       }
     ],
@@ -929,7 +929,7 @@
       },
       {
         "t": "p",
-        "v": "In Wellnessumgebungen ist das Team Teil der Atmosphäre. Wir verbinden die Kleidung mit dem Raum und berücksichtigen dabei engen Kundenkontakt, Bewegung, lange Schichten und regelmäßige Pflege."
+        "v": "In Wellnessumgebungen ist das Team Teil der Atmosphäre. Wir verbinden Kleidung und Raum und denken engen Kundenkontakt, Bewegung, lange Schichten und regelmäßige Pflege mit."
       },
       {
         "t": "h",
@@ -939,7 +939,7 @@
         "t": "ul",
         "v": [
           "Empfang",
-          "Therapeutinnen, Therapeuten und Behandlungsteams",
+          "Therapie- und Behandlungsteams",
           "Spa-Betreuung",
           "Unterstützende Rollen",
           "Leitung"
@@ -966,10 +966,10 @@
         "t": "ul",
         "v": [
           "Komfort und uneingeschränkte Bewegung",
-          "Atmungsaktive, angenehm zu tragende Materialien",
+          "Atmungsaktive, angenehme Materialien",
           "Ruhige Farben und zurückhaltende Details",
-          "Klare Verbindung zwischen Empfangs- und Behandlungsrollen",
-          "Konsistenz, wenn sich das Team verändert oder wächst"
+          "Klare Verbindung von Empfang und Behandlung",
+          "Konsistenz, wenn das Team wächst"
         ]
       }
     ],
@@ -1022,7 +1022,7 @@
           "Atmungsaktive und pflegeleichte Stoffe",
           "Bewegungsfreiheit und ganztägiger Komfort",
           "Funktionale Taschen und Verschlüsse",
-          "Ein sauberes Erscheinungsbild unter klinischer Beleuchtung",
+          "Sauberes Erscheinungsbild im Kliniklicht",
           "Visuelle Kontinuität zwischen Empfangs- und Behandlungsbereichen"
         ]
       }
@@ -1034,11 +1034,11 @@
       },
       {
         "t": "h",
-        "v": "Praktische Arbeitskleidung, die weiterhin zur Marke gehört"
+        "v": "Praktische Arbeitskleidung, die zur Marke gehört"
       },
       {
         "t": "p",
-        "v": "Teams in Wartung, Logistik und Unterstützung brauchen Kleidung, bei der Bewegung, Stauraum, Haltbarkeit und einfache Pflege im Vordergrund stehen, ohne vom Erscheinungsbild der übrigen Organisation abzuweichen."
+        "v": "Teams in Wartung, Logistik und Unterstützung brauchen Kleidung, bei der Bewegung, Stauraum, Haltbarkeit und einfache Pflege zählen, ohne vom Bild der Organisation abzuweichen."
       },
       {
         "t": "h",
@@ -1076,11 +1076,11 @@
       },
       {
         "t": "h",
-        "v": "Ein klarer Ausdruck der Marke, gestaltet für die tägliche Interaktion"
+        "v": "Ein klarer Ausdruck der Marke für die tägliche Interaktion"
       },
       {
         "t": "p",
-        "v": "In Privatclubs, im gehobenen Einzelhandel, in Galerien, Kulturstätten und anderen Dienstleistungsunternehmen ist das Team einer der ersten sichtbaren Ausdrücke der Organisation."
+        "v": "In Privatclubs, im gehobenen Einzelhandel, in Galerien und Kulturstätten ist das Team einer der ersten sichtbaren Ausdrücke des Hauses."
       },
       {
         "t": "h",
@@ -1117,10 +1117,10 @@
       {
         "t": "ul",
         "v": [
-          "Eine wiedererkennbare und angemessene visuelle Identität",
+          "Eine wiedererkennbare, passende Bildsprache",
           "Komfort bei langen Interaktionszeiten",
           "Klare Rollen ohne unnötige Förmlichkeit",
-          "Konsistenz über Standorte und künftige Bestellungen hinweg"
+          "Konsistenz über Standorte und Folgeaufträge"
         ]
       }
     ],
@@ -1326,7 +1326,7 @@
       "Jacken und Mäntel",
       "Accessoires"
     ],
-    "ctaText": "Nennen Sie uns die Aufgaben im Team und wir schlagen Ihnen eine passende Garderobe vor.",
+    "ctaText": "Nennen Sie uns die Rollen, wir schlagen die Garderobe vor.",
     "ctaLabel": "Briefing starten",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Ein abgestimmtes Uniformset an einer Kleiderstange"
@@ -1334,7 +1334,7 @@
   "stages": {
     "kicker": "So arbeiten wir",
     "h2": "Sechs Stufen, und Sie entscheiden bei jeder.",
-    "intro": "Ein Projekt bewegt sich, wenn Sie es freigeben. Jede Stufe endet mit einer Entscheidung, die im Projekt festgehalten wird, damit niemand sich merken muss, was vereinbart wurde.",
+    "intro": "Ein Projekt bewegt sich, wenn Sie es freigeben. Jede Stufe endet mit einer Entscheidung, die im Projekt festgehalten wird, damit niemand sie sich merken muss.",
     "items": [
       {
         "h": "Design",
@@ -1342,23 +1342,23 @@
       },
       {
         "h": "Stoffe und Zutaten",
-        "p": "Gewicht, Zusammensetzung, Zutaten und Ausrüstung werden an Ihrem Waschzyklus und Ihrem Klima ausgewählt, nicht an einem Moodboard."
+        "p": "Gewicht, Zusammensetzung, Zutaten und Ausrüstung folgen Ihrem Waschzyklus und Ihrem Klima, nicht einem Moodboard."
       },
       {
         "h": "Entwicklung",
-        "p": "Rollen, Farben, Mengen und eine technische Akte je Kleidungsstück. Auf dieser Stufe wird aus einem Kleidungsstück eine Spezifikation."
+        "p": "Rollen, Farben, Mengen und eine technische Akte je Teil. Auf dieser Stufe wird aus einem Kleidungsstück eine Spezifikation."
       },
       {
         "h": "Produktion",
-        "p": "Ihre freigegebenen Kleidungsstücke werden nach der gesperrten Spezifikation gefertigt. Vor den erforderlichen Freigaben wird nichts zugeschnitten."
+        "p": "Ihre freigegebenen Teile werden nach der gesperrten Spezifikation gefertigt. Vor den nötigen Freigaben wird nichts zugeschnitten."
       },
       {
         "h": "Lieferung",
-        "p": "Die Kleidungsstücke gehen an Ihre Standorte. Sie bestätigen den Empfang, und jedes freigegebene Modell steht zur Nachbestellung bereit."
+        "p": "Die Kleidung geht an Ihre Standorte. Sie bestätigen den Empfang, und jedes freigegebene Modell steht zur Nachbestellung bereit."
       },
       {
         "h": "Nachbestellung",
-        "p": "Die freigegebene Revision wird mit Maßen, Stoffen, Farben und Lieferanten archiviert und danach auf Verfügbarkeit, Preis und Termine neu geprüft."
+        "p": "Die freigegebene Revision wird mit Maßen, Stoffen, Farben und Lieferanten archiviert und auf Verfügbarkeit, Preis und Termine geprüft."
       }
     ]
   },
@@ -1366,11 +1366,11 @@
     "kicker": "Zeitplan",
     "h2": "Der Zeitplan Ihrer Projekte.",
     "phaseLabel": "Phase",
-    "intro": "Die Reihenfolge steht fest. Die Dauer nicht, denn sie hängt von Ihren Kleidungsstücken, Ihren Mengen und Ihren Freigaben ab.",
+    "intro": "Die Reihenfolge steht fest. Die Dauer nicht, denn sie hängt von Ihren Kleidungsstücken, Mengen und Freigaben ab.",
     "items": [
       {
         "h": "Briefing und Prüfung",
-        "p": "Sie nennen uns die Rollen, die Mengen und den Termin. Wir lesen es, entscheiden, ob das Projekt passt, und vereinbaren in diesem Fall das erste Gespräch.",
+        "p": "Sie nennen uns Rollen, Mengen und Termin. Wir lesen es, entscheiden, ob das Projekt passt, und vereinbaren das erste Gespräch.",
         "m": "Kein Konto. Keine Kosten."
       },
       {
@@ -1385,7 +1385,7 @@
       },
       {
         "h": "Lieferung und Nachbestellung",
-        "p": "Die Kleidungsstücke gehen an Ihre Standorte, und die freigegebene Revision wird im Projekt archiviert.",
+        "p": "Die Kleidung geht an Ihre Standorte, die freigegebene Revision wird im Projekt archiviert.",
         "m": "Nachbestellung aus der Akte."
       }
     ]
@@ -1393,35 +1393,35 @@
   "includes": {
     "kicker": "Was enthalten ist",
     "h2": "Die Details, die die Uniform zu Ihrer machen.",
-    "intro": "Ihr Briefing legt fest, was wir entwickeln, welche Entscheidungen Ihre Freigabe brauchen und was enthalten ist. Jeder Punkt bringt etwas hervor, das man in der Hand halten oder lesen kann: ein Muster, einen Eintrag, eine Entscheidung.",
+    "intro": "Ihr Briefing legt fest, was wir entwickeln, was Ihre Freigabe braucht und was enthalten ist. Jeder Punkt bringt etwas hervor, das man halten oder lesen kann: ein Muster, einen Eintrag, eine Entscheidung.",
     "items": [
       {
-        "h": "Rollen- und Kleidungsplan",
+        "h": "Rollen und Kleidung",
         "p": "Wer was braucht, von der einzelnen Rolle bis zur abgestimmten Teamgarderobe. Zuerst die Rollen, dann die Kleidungsstücke.",
         "a": "plan"
       },
       {
         "h": "Stoff und Verarbeitung",
-        "p": "Gewicht, Zusammensetzung und Ausrüstung werden an Ihrem Waschzyklus und Ihrem Klima gewählt, nicht an einem Moodboard.",
+        "p": "Gewicht, Zusammensetzung und Ausrüstung nach Waschzyklus und Klima, nicht nach Moodboard.",
         "a": "fabric"
       },
       {
         "h": "Prototypen und Anprobe",
-        "p": "Muster, die von den späteren Trägern in der tatsächlichen Arbeit anprobiert werden. Rückmeldungen werden je Kleidungsstück erfasst.",
+        "p": "Muster, von den späteren Trägern in der echten Arbeit anprobiert. Rückmeldungen werden je Teil erfasst.",
         "a": "proto"
       },
       {
         "h": "Markendetails",
-        "p": "Farben, Zutaten und Personalisierung im vereinbarten Umfang, in einer Größe, die die Wäsche übersteht.",
+        "p": "Farben, Zutaten und Personalisierung im vereinbarten Umfang, in waschfester Größe.",
         "a": "brand"
       },
       {
-        "h": "Eine archivierte Spezifikation",
+        "h": "Archivierte Spezifikation",
         "p": "Die freigegebene Revision, gespeichert mit Maßen, Stoffen, Farben und Lieferanten.",
         "a": "spec"
       },
       {
-        "h": "Eine Nachbestellung, die passt",
+        "h": "Gleiche Nachbestellung",
         "p": "Aus der archivierten Akte gefertigt und danach auf Verfügbarkeit, Preis und Termine geprüft.",
         "a": "reorder"
       }
@@ -1498,7 +1498,7 @@
         ]
       },
       "brand": {
-        "label": "Etikett und Farbstellungen",
+        "label": "Etikett und Farben",
         "meta": "40 × 12 mm",
         "mark": "IHRE MARKE",
         "note": "Webetikett, in die Naht gefasst",
@@ -1560,7 +1560,7 @@
             "Unverändert"
           ]
         ],
-        "check": "Aus der archivierten Akte gefertigt, nicht aus der Erinnerung"
+        "check": "Aus der Akte gefertigt, nicht aus Erinnerung"
       }
     }
   }

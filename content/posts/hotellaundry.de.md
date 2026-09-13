@@ -2,7 +2,7 @@
   "key": "hotellaundry",
   "locale": "de",
   "slug": "waescheanforderungen-fuer-hoteluniformen",
-  "title": "Wäscheanforderungen für Hoteluniformen",
+  "title": "Hoteluniformen: Wäschevorgaben",
   "headline": "Wäscheanforderungen für Hoteluniformen, vom Sammelbehälter bis zum Bügel",
   "description": "Definieren Sie Sammlung, Sortierung, Waschen, Trocknen, Finishing und Rückgabe, damit Hotel, Wäscherei und Lieferant einen Prozess freigeben.",
   "kicker": "Wäschereiprozess",

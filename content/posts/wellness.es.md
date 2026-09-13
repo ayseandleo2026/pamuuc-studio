@@ -46,7 +46,7 @@ Repetir algunos códigos, la forma del cuello, los acabados de manga o la lógic
 
 Un sistema eficaz incluye reglas de continuidad desde el principio: archivo de tallas, patrones base aprobados, ciclos de sustitución y proceso de reposición. Esto evita la deriva visual a medida que el equipo crece o cambia.
 
-En este sector, la continuidad no es solo una cuestión productiva. Protege la imagen y la calidad percibida del servicio. Puedes ver una lógica paralela en nuestro caso de hotel premium.
+En este sector, la continuidad no es solo una cuestión productiva. Protege la imagen y la calidad percibida del servicio. Puede ver una lógica paralela en nuestro caso de hotel premium.
 
 ## Conclusión
 

@@ -24,27 +24,27 @@
       "href": "/it/blog/"
     },
     {
-      "label": "Parlaci del tuo progetto",
+      "label": "Ci parli del suo progetto",
       "href": "/it/#contact"
     }
   ],
   "hero": {
     "eyebrow": "PROGETTAZIONE E PRODUZIONE DI DIVISE SU MISURA · BARCELLONA",
     "h1": "Divise su misura per hotel, ristoranti, spazi benessere e cliniche private",
-    "lead": "Progettiamo e produciamo sistemi di divise su misura intorno al tuo marchio, ai ruoli del personale e al lavoro quotidiano: dal primo briefing e dalle prove alla produzione e ai riordini futuri.",
+    "lead": "Progettiamo e produciamo sistemi di divise su misura intorno al suo marchio, ai ruoli e al lavoro quotidiano: dal primo briefing e dalle prove alla produzione e ai riordini.",
     "pills": [
-      "Progettate per il tuo marchio",
+      "Progettate per il suo marchio",
       "Sviluppate per ruolo",
       "Prodotte a Barcellona",
       "Pronte per i riordini"
     ],
-    "primary": "Parlaci del tuo progetto di divise",
+    "primary": "Ci parli del suo progetto di divise",
     "secondary": "Scopri i progetti selezionati",
     "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati PAMUUC Studio a Barcellona",
     "proofs": [
       {
         "label": "Primo progetto",
-        "text": "Progettazione, campioni, prove e produzione sviluppati per il tuo spazio e il tuo personale."
+        "text": "Progettazione, prove e produzione per il suo spazio e il suo personale."
       },
       {
         "label": "Ordini futuri",
@@ -59,7 +59,7 @@
     "card": {
       "topline": "PROGETTAZIONE, SVILUPPO E PRODUZIONE",
       "h3": "Sistemi di divise su misura",
-      "p": "Un guardaroba professionale coordinato, progettato intorno al tuo spazio, al marchio, ai ruoli, al movimento, alle esigenze di manutenzione e alla crescita futura del personale.",
+      "p": "Un guardaroba professionale coordinato, progettato intorno al suo spazio, al marchio, ai ruoli, al movimento, alle esigenze di manutenzione e alla crescita futura del personale.",
       "features": [
         "Capi pianificati per ogni ruolo e ambiente di lavoro",
         "Tessuti, vestibilità, costruzione, colori e identità sviluppati insieme",
@@ -136,7 +136,7 @@
       {
         "name": "Studi dentistici e cliniche private",
         "modal": "modal-sector-medical",
-        "desc": "Un’alternativa professionale all’abbigliamento clinico generico per i team di accoglienza e trattamento.",
+        "desc": "Un’alternativa professionale all’abbigliamento clinico generico per accoglienza e trattamento.",
         "img": "/assets/images/home/sector-04-clinics.jpg",
         "alt": "Sala trattamenti di una clinica privata"
       },
@@ -148,18 +148,18 @@
         "alt": "Grembiule per le aree operative e abbigliamento tecnico da lavoro"
       },
       {
-        "name": "Ruoli a contatto con il pubblico",
+        "name": "Ruoli a contatto col pubblico",
         "modal": "modal-sector-guest",
         "desc": "Divise su misura per chi accoglie, orienta e rappresenta l’attività.",
         "img": "/assets/images/home/sector-06-guest.jpg",
         "alt": "Banco di accoglienza dell’hotel con il personale"
       }
     ],
-    "handoff": "Non sai quale ambiente ti rappresenta? Parlaci del tuo personale"
+    "handoff": "Non sa quale la rappresenta? Ci parli del team"
   },
   "approach": {
     "kicker": "COME PROGETTIAMO",
-    "intro": "Partiamo dal tuo spazio, poi progettiamo per le persone che vi lavorano",
+    "intro": "Partiamo dal suo spazio, poi progettiamo per le persone che vi lavorano",
     "cards": [
       {
         "n": "01",
@@ -297,7 +297,7 @@
       }
     ],
     "note": "Il calendario definitivo dipende dal numero di modelli, dalla disponibilità dei tessuti, dalle prove, dai cicli di revisione, dalla costruzione, dalle quantità e dai tempi di approvazione.",
-    "handoff": "Fissa una data per il tuo progetto"
+    "handoff": "Fissi una data per il suo progetto"
   },
   "personalised": {
     "kicker": "PERSONALIZZAZIONE",
@@ -355,7 +355,7 @@
   "parameters": {
     "kicker": "ASPETTI PRATICI DEL PROGETTO",
     "h2": "Tre modi per iniziare, con i numeri in chiaro",
-    "intro": "Non serve commissionare un guardaroba completo. Il preventivo viene definito per ogni progetto, senza un listino rigido. Le tempistiche dipendono dal numero di modelli, dalle prove e dal tessuto.",
+    "intro": "Non serve commissionare un guardaroba completo. Il preventivo è per progetto, senza listino rigido. Le tempistiche dipendono dai modelli, dalle prove e dal tessuto.",
     "groups": [
       {
         "h3": "Quantità minime consigliate",
@@ -430,7 +430,7 @@
       ],
       [
         "Ambito",
-        "Progettato su misura in funzione del tuo spazio, dei ruoli e delle esigenze operative.",
+        "Progettato su misura in funzione del suo spazio, dei ruoli e delle esigenze operative.",
         "Utilizzato come sistema di guardaroba replicabile per l’intero team."
       ],
       [
@@ -455,7 +455,7 @@
   "projects": {
     "kicker": "PROGETTI E GUIDE SELEZIONATI",
     "h2": "Tre programmi, negli ambienti per cui sono nati",
-    "intro": "L’apertura di un hotel, un team di un centro benessere e una clinica privata: lo stesso metodo, tre contesti molto diversi.",
+    "intro": "Un’apertura d’hotel, un team benessere, una clinica privata: un metodo, tre sale molto diverse.",
     "items": [
       {
         "tag": "CASO STUDIO: HOTEL",
@@ -468,7 +468,7 @@
       },
       {
         "tag": "GUIDA AL BENESSERE",
-        "h3": "Progettare un guardaroba benessere per più ruoli",
+        "h3": "Un guardaroba benessere per più ruoli",
         "p": "Una guida pratica per collegare accoglienza, trattamenti e ruoli di supporto attraverso colori, materiali e dettagli condivisi, con un piano di continuità chiaro.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Guardaroba per uno spazio benessere che collega accoglienza e trattamenti",
@@ -477,7 +477,7 @@
       },
       {
         "tag": "CASO STUDIO: CLINICA",
-        "h3": "Divise su misura per uno studio dentistico di Barcellona",
+        "h3": "Divise su misura per uno studio dentistico",
         "p": "Un guardaroba professionale che supera l’abbigliamento clinico generico e collega spazio, marchio, immagine dell’accoglienza ed esigenze di manutenzione quotidiana.",
         "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Divise cliniche su misura in uno studio dentistico di Barcellona",
@@ -489,7 +489,7 @@
   },
   "faq": {
     "kicker": "DOMANDE FREQUENTI",
-    "h2": "Le risposte alle prime domande di chi acquista",
+    "h2": "Le risposte alle prime domande",
     "intro": "I punti pratici da chiarire prima di un primo incontro.",
     "items": [
       {
@@ -502,7 +502,7 @@
       },
       {
         "q": "È necessario partire da un guardaroba completo?",
-        "a": "No. Puoi iniziare da un ruolo, un reparto o una categoria di capi e ampliare il guardaroba in seguito. Definiamo il punto di partenza più utile in base alla visibilità presso i clienti, alle esigenze operative, alla quantità, al budget e alle tempistiche."
+        "a": "No. Può iniziare da un ruolo, un reparto o una categoria di capi e ampliare il guardaroba in seguito. Definiamo il punto di partenza più utile in base alla visibilità presso i clienti, alle esigenze operative, alla quantità, al budget e alle tempistiche."
       },
       {
         "q": "Sviluppate colori e dettagli di personalizzazione?",
@@ -541,18 +541,18 @@
         "a": "Hotel e ospitalità, ristorazione, spa e benessere, studi dentistici e cliniche private, squadre operative e di servizio, e ruoli a contatto con il pubblico. Il metodo è lo stesso ovunque; capi, tessuti e priorità no."
       },
       {
-        "q": "Le divise possono seguire il nostro progetto d’interni o la nostra identità di marca?",
+        "q": "Le divise possono seguire gli interni o il marchio?",
         "a": "Sì. Un guardaroba può nascere direttamente da un progetto d’interni, come per l’apertura di un hotel a cinque stelle a Barcellona. I colori possono venire dalle cartelle colore disponibili oppure essere sviluppati su misura quando materiale e quantità lo consentono."
       }
     ],
-    "handoff": "Hai ancora una domanda? Scrivila nel modulo"
+    "handoff": "Ha ancora una domanda? La scriva nel modulo"
   },
   "contact": {
-    "kicker": "Inizia il tuo progetto",
-    "h2": "Parlaci del team, dei ruoli e della data obiettivo",
+    "kicker": "Inizi il suo progetto",
+    "h2": "Ci parli del team, dei ruoli e della data obiettivo",
     "paras": [
       "Condividi ciò che sai finora. Valuteremo l’ambito, la fattibilità e il punto di partenza più pratico prima di consigliare una direzione.",
-      "Il primo incontro può svolgersi nel tuo spazio a Barcellona, altrove in Spagna o all’estero, oppure in videochiamata. L’obiettivo è comprendere l’ambiente, la struttura del team, le esigenze operative e ciò che le divise devono ottenere."
+      "Il primo incontro può svolgersi nel suo spazio a Barcellona, altrove in Spagna o all’estero, oppure in videochiamata. L’obiettivo è comprendere l’ambiente, la struttura del team, le esigenze operative e ciò che le divise devono ottenere."
     ],
     "emailLabel": "Preferisci scriverci?",
     "form": {
@@ -572,11 +572,11 @@
         "email": "nome@azienda.com",
         "phone": "+34 ...",
         "company": "Azienda o struttura",
-        "brief": "Parlaci dello spazio, del team, dei ruoli, dei capi, delle quantità indicative, della data obiettivo e di ciò che le divise devono ottenere."
+        "brief": "Ci parli dello spazio, del team, dei ruoli, dei capi, delle quantità indicative, della data obiettivo e di ciò che le divise devono ottenere."
       },
       "helps": {
         "phone": "Facoltativo",
-        "meeting-datetime": "Facoltativo. Confermeremo la disponibilità prima di fissare l’incontro."
+        "meeting-datetime": "Facoltativo. Confermeremo la disponibilità."
       },
       "options": {
         "team-size": [
@@ -638,8 +638,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising o capi con il tuo marchio",
-            "t": "Merchandising o capi con il tuo marchio",
+            "v": "Merchandising o capi con il suo marchio",
+            "t": "Merchandising o capi con il suo marchio",
             "disabled": false
           },
           {
@@ -682,7 +682,7 @@
         ]
       },
       "consent": "Accetto l’{privacy:informativa privacy} e i {terms:termini}.",
-      "hint": "Il modulo richiede circa due minuti. Di solito rispondiamo entro un giorno lavorativo.",
+      "hint": "Il modulo richiede due minuti. Di solito rispondiamo entro un giorno.",
       "submit": "Invia la richiesta"
     }
   },
@@ -742,15 +742,15 @@
     "service-custom": [
       {
         "t": "h",
-        "v": "Divise completamente su misura per il tuo team"
+        "v": "Divise completamente su misura per il suo team"
       },
       {
         "t": "h",
-        "v": "Un guardaroba coordinato, sviluppato intorno al tuo spazio, ai ruoli e alle attività"
+        "v": "Un guardaroba coordinato, sviluppato intorno al suo spazio, ai ruoli e alle attività"
       },
       {
         "t": "p",
-        "v": "Non iniziamo chiedendoti di scegliere dei capi da un catalogo standard. Partiamo dalla tua attività: lo spazio, il servizio, la struttura del team e ciò che ogni ruolo richiede dall’abbigliamento."
+        "v": "Non iniziamo chiedendole di scegliere dei capi da un catalogo standard. Partiamo dalla sua attività: lo spazio, il servizio, la struttura del team e ciò che ogni ruolo richiede dall’abbigliamento."
       },
       {
         "t": "p",
@@ -758,7 +758,7 @@
       },
       {
         "t": "h",
-        "v": "Progettato a partire dal tuo ambiente"
+        "v": "Progettato a partire dal suo ambiente"
       },
       {
         "t": "p",
@@ -811,7 +811,7 @@
       },
       {
         "t": "h",
-        "v": "Un unico linguaggio visivo per una struttura con molti ruoli diversi"
+        "v": "Un unico linguaggio visivo per una struttura con molti ruoli"
       },
       {
         "t": "p",
@@ -855,7 +855,7 @@
         "t": "ul",
         "v": [
           "Un’identità chiara tra i reparti",
-          "Comfort e libertà di movimento durante i turni lunghi",
+          "Comfort e libertà di movimento nei turni lunghi",
           "Materiali e costruzione adatti all’uso quotidiano",
           "Coerenza con l’architettura e il marchio",
           "Un sistema pratico per nuovi ingressi e riordini"
@@ -929,7 +929,7 @@
       },
       {
         "t": "p",
-        "v": "Negli spazi benessere, il personale fa parte dell’atmosfera. Colleghiamo l’abbigliamento allo spazio tenendo conto del contatto ravvicinato con il cliente, del movimento, dei turni lunghi e della manutenzione regolare."
+        "v": "Negli spazi benessere il personale fa parte dell’atmosfera. Colleghiamo l’abbigliamento allo spazio, tenendo conto di contatto ravvicinato, movimento, turni lunghi e manutenzione."
       },
       {
         "t": "h",
@@ -968,7 +968,7 @@
           "Comfort e libertà di movimento",
           "Materiali traspiranti e piacevoli da indossare",
           "Colori calmi e dettagli misurati",
-          "Legami chiari tra accoglienza e ruoli di trattamento",
+          "Legami chiari tra accoglienza e trattamenti",
           "Coerenza quando il personale cambia o cresce"
         ]
       }
@@ -1034,11 +1034,11 @@
       },
       {
         "t": "h",
-        "v": "Abbigliamento da lavoro pratico che resta parte del marchio"
+        "v": "Abbigliamento da lavoro pratico, fedele al marchio"
       },
       {
         "t": "p",
-        "v": "Le squadre di manutenzione, logistica e supporto richiedono capi che privilegino movimento, capacità di contenere strumenti, durata e facilità di manutenzione senza sembrare separati dal resto dell’organizzazione."
+        "v": "Le squadre di manutenzione, logistica e supporto richiedono capi che privilegino movimento, spazi per gli strumenti, durata e facilità di cura, senza sembrare separati dal resto."
       },
       {
         "t": "h",
@@ -1065,7 +1065,7 @@
           "Tasche funzionali",
           "Materiali facili da trattare",
           "Chiara identificazione dei ruoli",
-          "Coerenza visiva con il personale a contatto con il pubblico"
+          "Coerenza visiva con i ruoli a contatto"
         ]
       }
     ],
@@ -1076,11 +1076,11 @@
       },
       {
         "t": "h",
-        "v": "Un’espressione chiara del marchio, progettata per l’interazione quotidiana"
+        "v": "Un’espressione chiara del marchio per l’interazione quotidiana"
       },
       {
         "t": "p",
-        "v": "Nei club privati, nei negozi di fascia alta, nelle gallerie, negli spazi culturali e in altre attività di servizio, il personale è una delle prime espressioni visibili dell’organizzazione."
+        "v": "Nei club privati, nei negozi di fascia alta, nelle gallerie, negli spazi culturali e in altri servizi, il personale è una delle prime espressioni visibili."
       },
       {
         "t": "h",
@@ -1326,7 +1326,7 @@
       "Capispalla",
       "Accessori"
     ],
-    "ctaText": "Raccontaci i ruoli e ti proporremo il guardaroba.",
+    "ctaText": "Ci racconti i ruoli e le proporremo il guardaroba.",
     "ctaLabel": "Inizia il brief",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un insieme coordinato di divise appeso a uno stender"
@@ -1334,7 +1334,7 @@
   "stages": {
     "kicker": "Come funziona",
     "h2": "Sei fasi, e lei decide in ognuna.",
-    "intro": "Un progetto avanza quando lo approva. Ogni fase si chiude con una decisione registrata nel progetto, così nessuno deve ricordare a memoria ciò che è stato concordato.",
+    "intro": "Un progetto avanza quando lo approva. Ogni fase si chiude con una decisione registrata nel progetto, così nessuno deve ricordare ciò che è stato concordato.",
     "items": [
       {
         "h": "Design",
@@ -1370,7 +1370,7 @@
     "items": [
       {
         "h": "Brief e valutazione",
-        "p": "Lei ci indica i ruoli, le quantità e la data. Lo leggiamo, valutiamo se il progetto è adatto e, in caso affermativo, fissiamo il primo incontro.",
+        "p": "Lei ci indica i ruoli, le quantità e la data. Lo leggiamo, valutiamo se il progetto è adatto e fissiamo il primo incontro.",
         "m": "Nessun account. Nessun addebito."
       },
       {
@@ -1393,7 +1393,7 @@
   "includes": {
     "kicker": "Cosa è incluso",
     "h2": "I dettagli che rendono la divisa sua.",
-    "intro": "Il suo brief definisce cosa sviluppiamo, quali decisioni richiedono la sua approvazione e cosa è incluso. Ogni parte produce qualcosa che si può tenere in mano o leggere: un campione, un registro, una decisione.",
+    "intro": "Il suo brief definisce cosa sviluppiamo, cosa richiede la sua approvazione e cosa è incluso. Ogni parte produce qualcosa da tenere in mano o da leggere: un campione, un registro, una decisione.",
     "items": [
       {
         "h": "Piano di ruoli e capi",
@@ -1412,7 +1412,7 @@
       },
       {
         "h": "Dettagli di marca",
-        "p": "Colori, accessori e personalizzazione sviluppati nel perimetro concordato, in una misura che resiste al lavaggio.",
+        "p": "Colori, accessori e personalizzazione nel perimetro concordato, in una misura che resiste al lavaggio.",
         "a": "brand"
       },
       {

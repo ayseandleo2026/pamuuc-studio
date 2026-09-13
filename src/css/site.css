@@ -1763,3 +1763,21 @@ main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in sr
    the header past the viewport and put the whole page into a sideways
    scroll. Restated here, after that block, where it holds. */
 @media (max-width:560px){.hdr__cta{display:none}}
+
+/* Spanish, French, Italian and German set longer words than English, so in a
+   narrow column a single compound can push a whole line down and leave the
+   text block a line taller than the same block in English. Hyphenating the
+   running text lets the word break instead — the way these languages are set
+   in print. Headlines are left unhyphenated; a broken display line reads as a
+   mistake. */
+:is(:lang(es),:lang(fr),:lang(it),:lang(de)) :is(p,li,dd,dt,figcaption,blockquote,.t-sm,.t-xs){
+  hyphens:auto;
+  -webkit-hyphens:auto;
+}
+/* Headlines and the leads under them stay unbroken: at that size a hyphen
+   reads as a mistake rather than as typesetting. */
+:is(.display,.h1,.h2,.h3,h1,h2,h3,h4,.shero-t,.shd-t,.case-h,.sol-ht,.ind-t,.ask-t,
+    .band-v,.band-l,.lede,.lead,.shero-d,.shd-d,.po-d,.page-desc,summary){
+  hyphens:manual;
+  -webkit-hyphens:manual;
+}

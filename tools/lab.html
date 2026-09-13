@@ -1,0 +1,97 @@
+<!doctype html><meta charset="utf-8"><title>lab</title>
+<style>html,body{margin:0;background:#222}iframe{border:0;display:block;visibility:hidden;position:absolute;left:0;top:0}</style>
+<div id="host"></div>
+<script>
+const q0 = new URLSearchParams(location.search);
+const LOCS = q0.get('u') ? q0.get('u').split(',') : ['/', '/es/', '/fr/', '/it/', '/de/'];
+const NAME = ['en', 'es', 'fr', 'it', 'de'];
+const q = new URLSearchParams(location.search);
+const W = +(q.get('w') || 1440);
+const PAGE = q.get('p') || '';
+
+function build() {
+  const host = document.getElementById('host');
+  host.innerHTML = '';
+  return Promise.all(LOCS.map((l, k) => new Promise((res) => {
+    const f = document.createElement('iframe');
+    f.width = W; f.height = 30000; f.id = 'f' + k;
+    f.src = l + PAGE;
+    f.onload = () => res(f);
+    host.appendChild(f);
+  })));
+}
+
+function lines(el) {
+  const d = el.ownerDocument;
+  const r = d.createRange();
+  r.selectNodeContents(el);
+  const rects = [...r.getClientRects()].filter((x) => x.width > 0.5 && x.height > 0.5);
+  if (!rects.length) return 1;
+  const tops = new Set(rects.map((x) => Math.round(x.top / 2)));
+  return tops.size;
+}
+
+function scan(doc) {
+  doc.querySelector('.consent-bar')?.remove();
+  const skip = new Set(['SCRIPT', 'STYLE', 'NOSCRIPT', 'SVG', 'PATH', 'BR', 'HEAD', 'META', 'LINK', 'TITLE']);
+  const out = [];
+  const all = doc.querySelectorAll('body *');
+  for (const el of all) {
+    if (skip.has(el.tagName) || el.closest('svg')) continue;
+    const t = el.textContent.replace(/\s+/g, ' ').trim();
+    if (!t) continue;
+    if ([...el.children].some((c) => c.textContent.trim())) continue;
+    const r = el.getBoundingClientRect();
+    if (!r.width || !r.height) continue;
+    if (r.left < -1000) continue;
+    const cs = getComputedStyle(el);
+    out.push({
+      k: el.tagName.toLowerCase() + (el.className ? '.' + String(el.className).trim().split(/\s+/).join('.') : ''),
+      n: lines(el),
+      w: Math.round(r.width), h: Math.round(r.height),
+      fs: Math.round(parseFloat(cs.fontSize) * 10) / 10,
+      ov: el.scrollWidth > el.clientWidth + 1 ? 1 : 0,
+      t: t.length > 64 ? t.slice(0, 64) + '…' : t,
+    });
+  }
+  const secs = [...doc.querySelectorAll('section')].map((s) => Math.round(s.getBoundingClientRect().height));
+  return { out, secs, docH: Math.round(doc.body.scrollHeight), sw: doc.documentElement.scrollWidth, cw: doc.documentElement.clientWidth };
+}
+
+window.run = async function () {
+  const frames = await build();
+  await Promise.all(frames.map((f) => f.contentDocument.fonts.ready));
+  await new Promise((r) => setTimeout(r, 400));
+  const data = frames.map((f) => scan(f.contentDocument));
+  const en = data[0];
+  const report = { w: W, page: PAGE || '/', en: { els: en.out.length, docH: en.docH, secs: en.secs }, locales: {} };
+  const lcs = (A, B) => {
+    const n = A.length, m = B.length;
+    const dp = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
+    for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--)
+      dp[i][j] = A[i].k === B[j].k ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+    const pairs = [];
+    let i = 0, j = 0;
+    while (i < n && j < m) {
+      if (A[i].k === B[j].k) { pairs.push([i, j]); i++; j++; }
+      else if (dp[i + 1][j] >= dp[i][j + 1]) i++; else j++;
+    }
+    return pairs;
+  };
+  for (let i = 1; i < data.length; i++) {
+    const d = data[i];
+    const name = NAME[i];
+    const rows = [];
+    const pairs = lcs(en.out, d.out);
+    for (const [x, y] of pairs) {
+      const a = en.out[x], b = d.out[y];
+      if (b.n > a.n || b.ov) rows.push({ k: b.k, en: a.n, [name]: b.n, ov: b.ov, w: b.w, fs: b.fs, enT: a.t, t: b.t });
+    }
+    report.locales[name] = {
+      matched: pairs.length, els: d.out.length, docH: d.docH, dH: d.docH - en.docH,
+      sw: d.sw, cw: d.cw, n: rows.length, rows: rows.slice(0, 90),
+    };
+  }
+  return report;
+};
+</script>

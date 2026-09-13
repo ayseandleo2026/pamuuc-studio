@@ -64,4 +64,4 @@ En hostelería, la ausencia de quejas sobre ajuste y funcionalidad suele ser la 
 
 El programa METT Barcelona demuestra que los uniformes hoteleros funcionan mejor cuando se tratan como un sistema integrado y no como prendas aisladas. Al alinear el diseño con la identidad del hotel, elegir tejidos adecuados para un uso intensivo, diferenciar soluciones por rol y simplificar el mantenimiento, el uniforme apoya al mismo tiempo la operativa y la percepción de marca.
 
-Para los equipos de hostelería, el punto clave es invertir desde el principio en calidad de materiales y en una lógica de diseño guiada por la función. Los beneficios aparecen con el tiempo: mayor durabilidad, más confianza del personal y una mejor experiencia para el huésped. También puedes explorar nuestro proceso y nuestros proyectos seleccionados.
+Para los equipos de hostelería, el punto clave es invertir desde el principio en calidad de materiales y en una lógica de diseño guiada por la función. Los beneficios aparecen con el tiempo: mayor durabilidad, más confianza del personal y una mejor experiencia para el huésped. También puede explorar nuestro proceso y nuestros proyectos seleccionados.

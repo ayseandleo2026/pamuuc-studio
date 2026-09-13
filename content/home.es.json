@@ -24,27 +24,27 @@
       "href": "/es/blog/"
     },
     {
-      "label": "Cuéntanos tu proyecto",
+      "label": "Cuéntenos su proyecto",
       "href": "/es/#contact"
     }
   ],
   "hero": {
     "eyebrow": "DISEÑO Y PRODUCCIÓN DE UNIFORMES A MEDIDA · BARCELONA",
-    "h1": "Uniformes a medida para hoteles, restaurantes, espacios de bienestar y clínicas privadas",
-    "lead": "Diseñamos y producimos sistemas de uniformes a medida en torno a tu marca, los roles del equipo y el trabajo diario: desde el primer briefing y las pruebas hasta la producción y futuras reposiciones.",
+    "h1": "Uniformes a medida para hoteles, restaurantes, bienestar y clínicas",
+    "lead": "Diseñamos y producimos sistemas de uniformes a medida en torno a su marca, los roles y el trabajo diario: del primer briefing y las pruebas a la producción y las reposiciones.",
     "pills": [
-      "Diseñados para tu marca",
+      "Diseñados para su marca",
       "Desarrollados por rol",
       "Producidos en Barcelona",
       "Preparados para reposiciones"
     ],
-    "primary": "Cuéntanos tu proyecto de uniformes",
+    "primary": "Cuéntenos su proyecto de uniformes",
     "secondary": "Ver proyectos seleccionados",
     "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por PAMUUC Studio en Barcelona",
     "proofs": [
       {
         "label": "Primer proyecto",
-        "text": "Diseño, muestras, pruebas y producción desarrollados para tu espacio y tu equipo."
+        "text": "Diseño, muestras, pruebas y producción desarrollados para su espacio y su equipo."
       },
       {
         "label": "Pedidos futuros",
@@ -59,7 +59,7 @@
     "card": {
       "topline": "DISEÑO, DESARROLLO Y PRODUCCIÓN",
       "h3": "Sistemas de uniformes a medida",
-      "p": "Un vestuario profesional coordinado, diseñado en torno a tu espacio, tu marca, los roles, el movimiento, los requisitos de cuidado y el crecimiento futuro del equipo.",
+      "p": "Un vestuario profesional coordinado, diseñado en torno a su espacio, su marca, los roles, el movimiento, los requisitos de cuidado y el crecimiento futuro del equipo.",
       "features": [
         "Prendas planificadas para cada rol y entorno de trabajo",
         "Tejidos, ajuste, construcción, colores e identidad desarrollados en conjunto",
@@ -70,7 +70,7 @@
   "band": {
     "text": "Uniformes que funcionan para la marca, el equipo y el turno",
     "points": [
-      "Reflejan tu espacio y tu identidad",
+      "Reflejan su espacio y su identidad",
       "Acompañan el movimiento y las tareas reales",
       "Producidos localmente en Barcelona",
       "Pensados para el uso y el lavado repetidos",
@@ -83,7 +83,7 @@
         "v": "2.600",
         "u": "",
         "l": "Prendas fabricadas en 2026",
-        "n": "Patronadas, cortadas, cosidas y acabadas a menos de treinta kilómetros de Barcelona, en todos los programas entregados este año."
+        "n": "Patronadas, cortadas, cosidas y acabadas a menos de treinta kilómetros de Barcelona, este año."
       },
       {
         "v": "12",
@@ -95,7 +95,7 @@
         "v": "3",
         "u": "semanas",
         "l": "Repetición, en producción",
-        "n": "Producida contra la especificación archivada, de modo que nada se desarrolla dos veces. Disponibilidad y precio se verifican antes de lanzarla."
+        "n": "Producida contra la especificación archivada: nada se desarrolla dos veces. Disponibilidad y precio se verifican antes de lanzarla."
       },
       {
         "v": "150 €",
@@ -109,7 +109,7 @@
   },
   "sectors": {
     "kicker": "CON QUIÉN TRABAJAMOS",
-    "h2": "Seis entornos para los que diseñamos",
+    "h2": "Seis entornos que vestimos",
     "intro": "Cada ficha muestra los roles, las prendas y las prioridades de ese entorno.",
     "items": [
       {
@@ -141,25 +141,25 @@
         "alt": "Sala de tratamiento de una clínica privada"
       },
       {
-        "name": "Equipos de servicio operativo",
+        "name": "Equipos operativos",
         "modal": "modal-sector-service",
         "desc": "Prendas resistentes para mantenimiento, logística, apoyo y otras funciones prácticas.",
         "img": "/assets/images/home/sector-05-service.jpg",
         "alt": "Delantal para zonas internas y ropa de trabajo técnica"
       },
       {
-        "name": "Equipos de atención al público",
+        "name": "Equipos de atención",
         "modal": "modal-sector-guest",
         "desc": "Uniformes a medida para quienes reciben, orientan y representan al negocio.",
         "img": "/assets/images/home/sector-06-guest.jpg",
         "alt": "Recepción de hotel con el equipo de atención"
       }
     ],
-    "handoff": "¿No sabes cuál encaja? Háblanos de tu equipo"
+    "handoff": "¿No sabe cuál encaja? Háblenos de su equipo"
   },
   "approach": {
     "kicker": "CÓMO DISEÑAMOS",
-    "intro": "Empezamos por tu espacio y diseñamos para las personas que hacen el trabajo",
+    "intro": "Empezamos por su espacio y diseñamos para las personas que hacen el trabajo",
     "cards": [
       {
         "n": "01",
@@ -297,7 +297,7 @@
       }
     ],
     "note": "El calendario definitivo depende del número de modelos, la disponibilidad de tejidos, las pruebas, las rondas de revisión, la construcción, las cantidades y los tiempos de aprobación.",
-    "handoff": "Pon fecha a tu propio proyecto"
+    "handoff": "Ponga fecha a su propio proyecto"
   },
   "personalised": {
     "kicker": "PERSONALIZACIÓN",
@@ -355,7 +355,7 @@
   "parameters": {
     "kicker": "DATOS PRÁCTICOS DEL PROYECTO",
     "h2": "Tres formas de empezar, con las cifras delante",
-    "intro": "No hace falta encargar un vestuario completo. El presupuesto se define por proyecto, sin una lista de precios rígida. Los plazos dependen del número de modelos, las pruebas y el tejido.",
+    "intro": "No hace falta encargar un vestuario completo. El presupuesto se define por proyecto, sin lista de precios rígida. Los plazos dependen de los modelos, las pruebas y el tejido.",
     "groups": [
       {
         "h3": "Cantidades mínimas recomendadas",
@@ -430,7 +430,7 @@
       ],
       [
         "Alcance",
-        "Diseñado a medida en función de tu espacio, tus roles y tus necesidades operativas.",
+        "Diseñado a medida en función de su espacio, sus roles y sus necesidades operativas.",
         "Se utiliza como un sistema de vestuario reproducible para el equipo."
       ],
       [
@@ -455,7 +455,7 @@
   "projects": {
     "kicker": "PROYECTOS Y GUÍAS SELECCIONADOS",
     "h2": "Tres programas, en los entornos para los que se hicieron",
-    "intro": "La apertura de un hotel, un equipo de bienestar y una clínica privada: el mismo método, tres espacios muy distintos.",
+    "intro": "Una apertura de hotel, un equipo de bienestar y una clínica privada: un método, tres salas distintas.",
     "items": [
       {
         "tag": "CASO DE HOTEL",
@@ -468,7 +468,7 @@
       },
       {
         "tag": "GUÍA DE BIENESTAR",
-        "h3": "Cómo diseñar un vestuario de bienestar para varios roles",
+        "h3": "Un vestuario de bienestar para varios roles",
         "p": "Una guía práctica para conectar recepción, tratamientos y funciones de apoyo mediante colores, materiales y detalles compartidos, con un plan claro de continuidad.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Vestuario de un equipo de bienestar que conecta recepción y tratamientos",
@@ -477,7 +477,7 @@
       },
       {
         "tag": "CASO DE CLÍNICA",
-        "h3": "Uniformes a medida para una clínica dental de Barcelona",
+        "h3": "Uniformes a medida para una clínica dental",
         "p": "Un vestuario profesional que supera la ropa clínica genérica y conecta el espacio, la marca, la imagen de recepción y las exigencias del cuidado diario.",
         "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Uniformes clínicos a medida en una clínica dental de Barcelona",
@@ -485,12 +485,12 @@
         "linkLabel": "Leer el caso de la clínica"
       }
     ],
-    "handoff": "Empezar un programa como estos"
+    "handoff": "Empezar un programa así"
   },
   "faq": {
     "kicker": "PREGUNTAS FRECUENTES",
-    "h2": "Respuestas a las primeras preguntas de quienes compran",
-    "intro": "Los puntos prácticos que conviene cerrar antes de una primera reunión.",
+    "h2": "Respuestas a las primeras preguntas",
+    "intro": "Puntos prácticos a cerrar antes de una primera reunión.",
     "items": [
       {
         "q": "¿Trabajáis a partir de un catálogo?",
@@ -502,7 +502,7 @@
       },
       {
         "q": "¿Es necesario empezar con un vestuario completo?",
-        "a": "No. Puedes empezar por una función, un departamento o una categoría de prendas y ampliar el vestuario más adelante. Definimos el punto de partida más útil según la visibilidad ante el cliente, las necesidades operativas, la cantidad, el presupuesto y el plazo."
+        "a": "No. Puede empezar por una función, un departamento o una categoría de prendas y ampliar el vestuario más adelante. Definimos el punto de partida más útil según la visibilidad ante el cliente, las necesidades operativas, la cantidad, el presupuesto y el plazo."
       },
       {
         "q": "¿Podéis desarrollar colores y detalles personalizados?",
@@ -514,7 +514,7 @@
       },
       {
         "q": "¿Cuánto cuesta un proyecto de uniformes a medida?",
-        "a": "No trabajamos con una lista de precios rígida. La propuesta se construye sobre el alcance confirmado: prendas, cantidades, materiales, construcción y nivel de personalización. Dos prendas que parecen similares pueden requerir un desarrollo, unos materiales y un trabajo de producción muy distintos, por lo que valoramos el proyecto en lugar de aplicar una tarifa única por prenda."
+        "a": "No trabajamos con una lista de precios rígida. La propuesta se construye sobre el alcance confirmado: prendas, cantidades, materiales, construcción y nivel de personalización. Dos prendas parecidas pueden exigir un desarrollo, unos materiales y una producción muy distintos, así que valoramos el proyecto y no una tarifa única por prenda."
       },
       {
         "q": "¿Cuánto tarda un proyecto desde el briefing hasta la entrega?",
@@ -526,7 +526,7 @@
       },
       {
         "q": "¿Veremos prototipos antes de empezar la producción?",
-        "a": "Sí. Los prototipos, las muestras y las pruebas van siempre antes de cualquier compromiso de producción, de modo que el ajuste, el tejido, la construcción y la marca se acuerdan sobre prendas reales y no sobre dibujos."
+        "a": "Sí. Prototipos, muestras y pruebas van antes de cualquier compromiso de producción: ajuste, tejido, construcción y marca se acuerdan sobre prendas reales, no sobre dibujos."
       },
       {
         "q": "¿Cómo se gestionan las tallas de todo un equipo?",
@@ -541,18 +541,18 @@
         "a": "Hoteles y hostelería, restauración, spa y bienestar, clínicas dentales y privadas, equipos operativos y de servicio, y perfiles de atención al cliente. El método es el mismo en todos ellos; las prendas, los tejidos y las prioridades, no."
       },
       {
-        "q": "¿Pueden los uniformes seguir nuestro interiorismo o nuestra identidad de marca?",
+        "q": "¿Pueden los uniformes seguir el interiorismo o la marca?",
         "a": "Sí. Un vestuario puede desarrollarse directamente a partir de un concepto de interiorismo, como se hizo para la apertura de un hotel de cinco estrellas en Barcelona. Los colores pueden salir de las cartas de color disponibles o desarrollarse como colores dedicados cuando el material y la cantidad lo permiten."
       }
     ],
-    "handoff": "¿Aún tienes una pregunta? Déjala en el formulario"
+    "handoff": "¿Alguna pregunta más? Déjela en el formulario"
   },
   "contact": {
-    "kicker": "Empieza tu proyecto",
-    "h2": "Háblanos de tu equipo, sus funciones y la fecha prevista",
+    "kicker": "Empiece su proyecto",
+    "h2": "Háblenos de su equipo, sus funciones y la fecha",
     "paras": [
-      "Cuéntanos lo que sabes hasta ahora. Revisaremos el alcance, la viabilidad y el punto de partida más práctico antes de recomendar una dirección.",
-      "La primera reunión puede celebrarse en tu espacio en Barcelona, en otro lugar de España o del extranjero, o por videollamada. El objetivo es entender el entorno, la estructura del equipo, las necesidades operativas y lo que deben resolver los uniformes."
+      "Cuéntenos lo que sabe hasta ahora. Revisaremos el alcance, la viabilidad y el punto de partida más práctico antes de recomendar una dirección.",
+      "La primera reunión puede celebrarse en su espacio en Barcelona, en otro lugar de España o del extranjero, o por videollamada. El objetivo es entender el entorno, el equipo, la operativa y lo que deben resolver los uniformes."
     ],
     "emailLabel": "¿Prefieres escribirnos?",
     "form": {
@@ -572,11 +572,11 @@
         "email": "nombre@empresa.com",
         "phone": "+34 ...",
         "company": "Empresa o establecimiento",
-        "brief": "Háblanos del espacio, el equipo, las funciones, las prendas, las cantidades aproximadas, la fecha prevista y lo que deben resolver los uniformes."
+        "brief": "Háblenos del espacio, el equipo, las funciones, las prendas, las cantidades aproximadas, la fecha prevista y lo que deben resolver los uniformes."
       },
       "helps": {
         "phone": "Opcional",
-        "meeting-datetime": "Opcional. Confirmaremos la disponibilidad antes de fijar la cita."
+        "meeting-datetime": "Opcional. Confirmaremos la disponibilidad antes."
       },
       "options": {
         "team-size": [
@@ -638,8 +638,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising o prendas con tu marca",
-            "t": "Merchandising o prendas con tu marca",
+            "v": "Merchandising o prendas con su marca",
+            "t": "Merchandising o prendas con su marca",
             "disabled": false
           },
           {
@@ -742,15 +742,15 @@
     "service-custom": [
       {
         "t": "h",
-        "v": "Uniformes totalmente a medida para tu equipo"
+        "v": "Uniformes totalmente a medida para su equipo"
       },
       {
         "t": "h",
-        "v": "Un vestuario coordinado, desarrollado en torno a tu espacio, tus funciones y tu operativa"
+        "v": "Un vestuario coordinado, desarrollado en torno a su espacio, sus funciones y su operativa"
       },
       {
         "t": "p",
-        "v": "No empezamos pidiéndote que elijas prendas de un catálogo estándar. Empezamos por tu negocio: el espacio, el servicio, la estructura del equipo y lo que cada función necesita de la ropa."
+        "v": "No empezamos pidiéndole que elija prendas de un catálogo estándar. Empezamos por su negocio: el espacio, el servicio, la estructura del equipo y lo que cada función necesita de la ropa."
       },
       {
         "t": "p",
@@ -758,7 +758,7 @@
       },
       {
         "t": "h",
-        "v": "Diseñado desde tu entorno"
+        "v": "Diseñado desde su entorno"
       },
       {
         "t": "p",
@@ -811,11 +811,11 @@
       },
       {
         "t": "h",
-        "v": "Un único lenguaje visual para un establecimiento con muchas funciones"
+        "v": "Un único lenguaje visual para un establecimiento con muchos roles"
       },
       {
         "t": "p",
-        "v": "Un hotel reúne departamentos de atención al huésped, servicio y operaciones con necesidades de trabajo muy distintas. Creamos prendas específicas para cada función que, juntas, forman un mismo vestuario de hotel."
+        "v": "Un hotel reúne atención al huésped, servicio y operaciones, con necesidades muy distintas. Creamos prendas propias de cada función que, juntas, forman un mismo vestuario de hotel."
       },
       {
         "t": "h",
@@ -856,9 +856,9 @@
         "v": [
           "Una identidad clara entre departamentos",
           "Comodidad y movimiento durante turnos largos",
-          "Materiales y construcción adecuados para el uso diario",
+          "Materiales y construcción para el uso diario",
           "Coherencia con la arquitectura y la marca",
-          "Un sistema práctico para nuevas incorporaciones y reposiciones"
+          "Un sistema práctico para altas y reposiciones"
         ]
       }
     ],
@@ -929,7 +929,7 @@
       },
       {
         "t": "p",
-        "v": "En los espacios de bienestar, el equipo forma parte de la atmósfera. Conectamos la ropa con el espacio y planificamos el contacto cercano con el cliente, el movimiento, los turnos largos y el cuidado habitual de las prendas."
+        "v": "En los espacios de bienestar, el equipo forma parte de la atmósfera. Conectamos la ropa con el espacio y prevemos el contacto cercano, el movimiento, los turnos y el cuidado."
       },
       {
         "t": "h",
@@ -966,7 +966,7 @@
         "t": "ul",
         "v": [
           "Comodidad y libertad de movimiento",
-          "Materiales transpirables y agradables de llevar",
+          "Materiales transpirables y agradables",
           "Colores serenos y detalles medidos",
           "Conexión clara entre recepción y tratamientos",
           "Coherencia cuando el equipo cambia o crece"
@@ -984,7 +984,7 @@
       },
       {
         "t": "p",
-        "v": "Las clínicas privadas necesitan prendas que acompañen largas jornadas, movimiento y cuidados frecuentes, y que a la vez transmitan a los pacientes una imagen limpia, tranquilizadora y propia."
+        "v": "Las clínicas privadas necesitan prendas que acompañen largas jornadas, movimiento y cuidados frecuentes, y transmitan al paciente una imagen limpia, tranquila y propia."
       },
       {
         "t": "h",
@@ -1030,15 +1030,15 @@
     "sector-service": [
       {
         "t": "h",
-        "v": "Uniformes para equipos de servicio operativo"
+        "v": "Uniformes para equipos operativos"
       },
       {
         "t": "h",
-        "v": "Ropa de trabajo práctica que sigue formando parte de la marca"
+        "v": "Ropa de trabajo práctica, fiel a la marca"
       },
       {
         "t": "p",
-        "v": "Los equipos de mantenimiento, logística y apoyo necesitan prendas que prioricen el movimiento, la capacidad de guardar herramientas, la durabilidad y el fácil cuidado sin parecer ajenas al resto de la organización."
+        "v": "Los equipos de mantenimiento, logística y apoyo necesitan prendas que prioricen el movimiento, el almacenaje, la durabilidad y el fácil cuidado, sin parecer ajenas a la organización."
       },
       {
         "t": "h",
@@ -1065,7 +1065,7 @@
           "Bolsillos funcionales",
           "Materiales de fácil cuidado",
           "Identificación clara de cada función",
-          "Coherencia visual con los equipos de atención al público"
+          "Coherencia visual con el personal de atención"
         ]
       }
     ],
@@ -1076,11 +1076,11 @@
       },
       {
         "t": "h",
-        "v": "Una expresión clara de la marca, diseñada para la interacción diaria"
+        "v": "Una expresión clara de la marca para la interacción diaria"
       },
       {
         "t": "p",
-        "v": "En clubes privados, comercios premium, galerías, espacios culturales y otros negocios de servicios, el equipo es una de las primeras expresiones visibles de la organización."
+        "v": "En clubes privados, comercios premium, galerías, espacios culturales y otros servicios, el equipo es una de las primeras expresiones visibles de la organización."
       },
       {
         "t": "h",
@@ -1118,7 +1118,7 @@
         "t": "ul",
         "v": [
           "Una identidad visual reconocible y adecuada",
-          "Comodidad durante largos periodos de interacción",
+          "Comodidad en interacciones largas",
           "Funciones claras sin formalidad innecesaria",
           "Coherencia entre ubicaciones y pedidos futuros"
         ]
@@ -1326,7 +1326,7 @@
       "Prendas de abrigo",
       "Accesorios"
     ],
-    "ctaText": "Cuéntanos las funciones y te propondremos el vestuario.",
+    "ctaText": "Cuéntenos las funciones y le propondremos el vestuario.",
     "ctaLabel": "Empezar el briefing",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un conjunto coordinado de uniformes colgado en un perchero"
@@ -1334,11 +1334,11 @@
   "stages": {
     "kicker": "Cómo funciona",
     "h2": "Seis etapas, y usted decide en cada una.",
-    "intro": "Un proyecto avanza cuando usted lo aprueba. Cada etapa termina en una decisión que queda registrada en el proyecto, de modo que nadie tenga que recordar lo acordado.",
+    "intro": "Un proyecto avanza cuando usted lo aprueba. Cada etapa termina en una decisión registrada en el proyecto, para que nadie tenga que recordar lo acordado.",
     "items": [
       {
         "h": "Diseño",
-        "p": "Un diseñador externo desarrolla la dirección visual a partir de su briefing. Usted la revisa y decide. Si el diseño no forma parte de lo contratado, el proyecto empieza en desarrollo."
+        "p": "Un diseñador externo desarrolla la dirección visual a partir de su briefing. Usted la revisa y decide. Si el diseño no está contratado, el proyecto empieza en desarrollo."
       },
       {
         "h": "Tejidos y accesorios",
@@ -1346,7 +1346,7 @@
       },
       {
         "h": "Desarrollo",
-        "p": "Posiciones, colores, cantidades y una ficha técnica por prenda. Es la etapa en la que una prenda se convierte en una especificación."
+        "p": "Posiciones, colores, cantidades y una ficha técnica por prenda. Es la etapa en la que una prenda se vuelve especificación."
       },
       {
         "h": "Producción",
@@ -1354,7 +1354,7 @@
       },
       {
         "h": "Entrega",
-        "p": "Las prendas se envían a sus centros. Usted confirma la recepción y cada modelo aprobado queda disponible para repetir pedido."
+        "p": "Las prendas se envían a sus centros. Usted confirma la recepción y cada modelo aprobado queda listo para repetir."
       },
       {
         "h": "Repetición",
@@ -1370,7 +1370,7 @@
     "items": [
       {
         "h": "Briefing y revisión",
-        "p": "Usted nos indica los puestos, las cantidades y la fecha. Lo leemos, decidimos si el proyecto encaja y, si es así, concertamos la reunión inicial.",
+        "p": "Usted nos indica los puestos, las cantidades y la fecha. Lo leemos, decidimos si el proyecto encaja y concertamos la reunión inicial.",
         "m": "Sin cuenta. Sin cargo."
       },
       {
@@ -1396,7 +1396,7 @@
     "intro": "Su briefing define qué desarrollamos, qué decisiones requieren su aprobación y qué está incluido. Cada apartado produce algo que se puede tener en la mano o leer: una muestra, un registro, una decisión.",
     "items": [
       {
-        "h": "Plan de puestos y prendas",
+        "h": "Puestos y prendas",
         "p": "Quién necesita qué, desde puestos concretos hasta un vestuario coordinado de equipo. Primero los puestos, después las prendas.",
         "a": "plan"
       },
@@ -1407,21 +1407,21 @@
       },
       {
         "h": "Prototipos y pruebas",
-        "p": "Muestras probadas por quienes las van a llevar, haciendo su trabajo real. El feedback se registra prenda a prenda.",
+        "p": "Muestras probadas por quienes las van a llevar, en su trabajo real. El feedback se registra prenda a prenda.",
         "a": "proto"
       },
       {
         "h": "Detalles de marca",
-        "p": "Colores, avíos y personalización desarrollados dentro del alcance acordado, a un tamaño que resiste el lavado.",
+        "p": "Colores, avíos y personalización dentro del alcance acordado, a un tamaño que resiste el lavado.",
         "a": "brand"
       },
       {
-        "h": "Una especificación archivada",
+        "h": "Especificación archivada",
         "p": "La revisión aprobada guardada con sus medidas, tejidos, colores y proveedores.",
         "a": "spec"
       },
       {
-        "h": "Una repetición que coincide",
+        "h": "Una repetición idéntica",
         "p": "Producida contra el archivo, y después verificada en disponibilidad, precio y plazos.",
         "a": "reorder"
       }
@@ -1450,8 +1450,8 @@
         ]
       },
       "fabric": {
-        "label": "Preselección de tejidos",
-        "meta": "Según su ciclo de lavado",
+        "label": "Selección de tejidos",
+        "meta": "Según su lavado",
         "rows": [
           [
             "Sarga",
@@ -1544,7 +1544,7 @@
         ]
       },
       "reorder": {
-        "label": "Registro de repetición",
+        "label": "Registro de pedido",
         "meta": "88 piezas",
         "rows": [
           [
