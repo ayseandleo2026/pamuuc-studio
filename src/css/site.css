@@ -1756,3 +1756,10 @@ main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in sr
   .consent-bar{inset:auto var(--sp-4) var(--sp-4) var(--sp-4);width:auto}
   .consent-bar__a .btn{flex:1 1 100%}
 }
+
+/* The header's own mobile rule hides the CTA below 560px, but the mockup's
+   .btn block is declared after it and carries the same specificity, so it
+   won the cascade and the button reappeared on phones — wide enough to push
+   the header past the viewport and put the whole page into a sideways
+   scroll. Restated here, after that block, where it holds. */
+@media (max-width:560px){.hdr__cta{display:none}}

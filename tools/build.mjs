@@ -533,6 +533,13 @@ ${h1 ? `<h1 class="display shd-t">${esc(title)}</h1>` : `<h2 class="display shd-
 ${lead ? `<p class="lede shd-d">${esc(lead)}</p>` : ''}
 </div>`;
 
+/* A photograph is served as WebP where a WebP twin exists in src/images, and
+   as the JPEG itself where it does not. Some frames are supplied as JPEG only. */
+const shot = (p) => {
+  const webp = p.replace(/\.jpg$/, '.webp');
+  return existsSync(join(ROOT, 'src', webp.replace(/^\/assets\//, ''))) ? webp : p;
+};
+
 const STUDIO_SHOT = ['hospitality', 'food', 'wellness', 'healthcare', 'corporate', 'retail'];
 
 function renderHome(loc) {
@@ -683,14 +690,14 @@ ${chapterHead('04', h.projects.kicker, h.projects.h2, h.projects.intro)}
 <div class="split split--wide work-s">
 <div class="split-b">
 <figure class="fig"><div class="media media--4x5">
-<img id="workfig-img" src="${attr(h.projects.items[0].img.replace(/\.jpg$/, '.webp'))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(h.projects.items[0].alt || h.projects.items[0].h3)}">
+<img id="workfig-img" src="${attr(shot(h.projects.items[0].img))}" width="1040" height="500" loading="lazy" decoding="async" alt="${attr(h.projects.items[0].alt || h.projects.items[0].h3)}">
 </div>
 <figcaption class="cap"><b>${esc(h.projects.items[0].tag)}</b><span id="workfig-cap">${esc(h.projects.items[0].linkLabel || '')}</span></figcaption>
 </figure>
 </div>
 <div class="split-b">
 <div class="cases">
-${h.projects.items.map((x, k) => `<details class="case" data-shot="${attr(x.img.replace(/\.jpg$/, '.webp'))}" data-alt="${attr(x.alt || x.h3)}" data-tag="${attr(x.tag)}" data-cap="${attr(x.linkLabel || '')}"${k === 0 ? ' open' : ''}>
+${h.projects.items.map((x, k) => `<details class="case" data-shot="${attr(shot(x.img))}" data-alt="${attr(x.alt || x.h3)}" data-tag="${attr(x.tag)}" data-cap="${attr(x.linkLabel || '')}"${k === 0 ? ' open' : ''}>
 <summary class="case-q">
 <span class="case-n">0${k + 1}</span>
 <span class="case-t"><span class="case-h">${esc(x.h3)}</span><span class="case-m">${esc(x.tag)}</span></span>
