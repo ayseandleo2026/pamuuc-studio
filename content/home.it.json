@@ -1,10 +1,10 @@
 {
   "locale": "it",
   "meta": {
-    "title": "Studio di divise su misura a Barcellona | PAMUUC Studio",
-    "description": "Progettazione e produzione di divise su misura per hotel, ristoranti, spazi benessere e cliniche. Prodotte a Barcellona, da 10 pezzi per modello.",
-    "ogTitle": "Studio di divise su misura a Barcellona | PAMUUC Studio",
-    "ogDescription": "Sistemi di divise su misura per hotel, ristoranti, spazi benessere, cliniche e attività a contatto con il pubblico: dalla progettazione e dalle prove alla produzione e ai riordini."
+    "title": "Divise e abbigliamento da lavoro a Barcellona | PAMUUC",
+    "description": "Divise e abbigliamento da lavoro su misura per hotel, ristoranti, spa e cliniche private. Progettati e prodotti a Barcellona, dai campioni ai riordini.",
+    "ogTitle": "Divise e abbigliamento da lavoro a Barcellona | PAMUUC",
+    "ogDescription": "Divise e abbigliamento da lavoro su misura per hotel, ristoranti, spa e cliniche private. Progettati e prodotti a Barcellona, dai campioni ai riordini."
   },
   "nav": [
     {
@@ -29,36 +29,36 @@
     }
   ],
   "hero": {
-    "eyebrow": "PROGETTAZIONE E PRODUZIONE DI DIVISE SU MISURA · BARCELLONA",
-    "h1": "Divise su misura per hotel, ristoranti, spazi benessere e cliniche private",
-    "lead": "Progettiamo e produciamo sistemi di divise su misura intorno al suo marchio, ai ruoli e al lavoro quotidiano: dal primo briefing e dalle prove alla produzione e ai riordini.",
+    "eyebrow": "PROGETTAZIONE E PRODUZIONE DI DIVISE · BARCELLONA",
+    "h1": "Divise e abbigliamento da lavoro per il team",
+    "lead": "Progettiamo e produciamo divise per hotel, ristoranti, spa e cliniche private. Prodotte a Barcellona, con campioni, prove con il team e riordini.",
     "pills": [
       "Progettate per il suo marchio",
       "Sviluppate per ruolo",
       "Prodotte a Barcellona",
       "Pronte per i riordini"
     ],
-    "primary": "Ci parli del suo progetto di divise",
-    "secondary": "Scopri i progetti selezionati",
+    "primary": "Ci parli del suo progetto",
+    "secondary": "Guardi i nostri progetti",
     "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati PAMUUC Studio a Barcellona",
     "proofs": [
       {
         "label": "Primo progetto",
-        "text": "Progettazione, prove e produzione per il suo spazio e il suo personale."
+        "text": "Progettazione, campioni, prove e produzione per il suo team."
       },
       {
         "label": "Ordini futuri",
-        "text": "Cartamodelli e specifiche approvati, pronti per riordini coerenti."
+        "text": "Conserviamo i suoi modelli approvati per sostituzioni e nuovi ingressi."
       }
     ]
   },
   "services": {
     "kicker": "COSA FACCIAMO",
-    "h2": "Un servizio completo di divise su misura, non un catalogo",
+    "h2": "Progettazione e produzione di divise su misura",
     "intro": "PAMUUC Studio progetta, sviluppa e produce divise su misura per ospitalità, benessere, sanità e attività a contatto con il pubblico. Ogni progetto nasce dall’organizzazione, dalle persone che indosseranno i capi e dal lavoro che svolgono.",
     "card": {
       "topline": "PROGETTAZIONE, SVILUPPO E PRODUZIONE",
-      "h3": "Sistemi di divise su misura",
+      "h3": "Divise e abbigliamento da lavoro",
       "p": "Un guardaroba professionale coordinato, progettato intorno al suo spazio, al marchio, ai ruoli, al movimento, alle esigenze di manutenzione e alla crescita futura del personale.",
       "features": [
         "Capi pianificati per ogni ruolo e ambiente di lavoro",
@@ -68,7 +68,7 @@
     }
   },
   "band": {
-    "text": "Divise che funzionano per il marchio, la squadra e il turno",
+    "text": "Divise che riflettono il suo marchio e funzionano per il team",
     "points": [
       "Riflettono lo spazio e l’identità",
       "Assecondano movimenti e attività reali",
@@ -83,25 +83,25 @@
         "v": "2.600",
         "u": "",
         "l": "Capi realizzati nel 2026",
-        "n": "Modellati, tagliati, cuciti e rifiniti entro trenta chilometri da Barcellona, su tutti i programmi consegnati quest’anno."
+        "n": "Modellati, tagliati, cuciti e rifiniti entro trenta chilometri da Barcellona, per i progetti di quest’anno."
       },
       {
         "v": "12",
         "u": "settimane",
         "l": "Progetto completo, media",
-        "n": "Dal brief che ci invia alla prima consegna, lungo tutte e sei le fasi. Il suo viene quotato sui suoi capi, quantità e approvazioni."
+        "n": "Dal primo brief alla consegna. Definiamo il calendario in base ai capi, alle quantità e alle approvazioni necessarie."
       },
       {
         "v": "3",
         "u": "settimane",
-        "l": "Riordino, in produzione",
-        "n": "Prodotto sulla specifica archiviata, così nulla viene sviluppato due volte. Disponibilità e prezzo sono riverificati prima dell’avvio."
+        "l": "Tempi di riordino",
+        "n": "Prodotto sui dettagli approvati che conserviamo. Disponibilità e prezzo vengono riverificati prima della produzione."
       },
       {
         "v": "150 €",
         "u": "",
-        "l": "A persona, media",
-        "n": "Quanto una squadra spende di solito a testa sui capi della sua gamma. Sviluppo, tessuto e quantità la spostano da lì."
+        "l": "Media a persona",
+        "n": "Spesa abituale a persona per i capi concordati. Sviluppo, tessuto e quantità incidono sul prezzo finale."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
@@ -109,53 +109,53 @@
   },
   "sectors": {
     "kicker": "CON CHI LAVORIAMO",
-    "h2": "Sei ambienti per cui progettiamo",
-    "intro": "Ogni scheda presenta i ruoli, i capi e le priorità di quell’ambiente.",
+    "h2": "Divise per il suo settore",
+    "intro": "Dalla reception dell’hotel alla cucina o alla cabina, ogni ruolo ha esigenze proprie.",
     "items": [
       {
-        "name": "Hotel e ospitalità",
+        "name": "Hotel e accoglienza",
         "modal": "modal-sector-hotels",
-        "desc": "Un guardaroba coordinato per accoglienza, concierge, ristorazione, reparto piani, spa e direzione.",
+        "desc": "Divise per hotel che uniscono reception, ristorante, piani, spa e direzione.",
         "img": "/assets/images/home/sector-01-hotels.jpg",
         "alt": "Corridoio d’albergo, una mano sulla porta di una camera"
       },
       {
-        "name": "Ristorazione",
+        "name": "Ristoranti e bar",
         "modal": "modal-sector-restaurants",
-        "desc": "Divise per sala, bar, cucina e direzione in ambienti di servizio dinamici.",
+        "desc": "Divise per ristoranti e per la cucina, pensate per il servizio intenso, il movimento e i lavaggi frequenti.",
         "img": "/assets/images/home/sector-02-restaurants.jpg",
         "alt": "Servizio al tavolo, un piatto rifinito a mano"
       },
       {
         "name": "Spa e benessere",
         "modal": "modal-sector-wellness",
-        "desc": "Divise sobrie e funzionali per accoglienza, trattamenti e ruoli di supporto.",
+        "desc": "Divise per spa e centri estetici comode, all’altezza della calma del suo spazio.",
         "img": "/assets/images/home/sector-03-wellness.jpg",
         "alt": "Interno per trattamenti in toni neutri e caldi"
       },
       {
         "name": "Studi dentistici e cliniche private",
         "modal": "modal-sector-medical",
-        "desc": "Un’alternativa professionale all’abbigliamento clinico generico per accoglienza e trattamento.",
+        "desc": "Divise su misura per cliniche, per accoglienza e cura, comode e adatte ai lavaggi frequenti.",
         "img": "/assets/images/home/sector-04-clinics.jpg",
         "alt": "Sala trattamenti di una clinica privata"
       },
       {
-        "name": "Squadre operative",
+        "name": "Manutenzione e supporto",
         "modal": "modal-sector-service",
-        "desc": "Capi resistenti per manutenzione, logistica, supporto e altri ruoli pratici.",
+        "desc": "Abbigliamento da lavoro per manutenzione, logistica e supporto, fatto per l’uso quotidiano.",
         "img": "/assets/images/home/sector-05-service.jpg",
-        "alt": "Grembiule per le aree operative e abbigliamento tecnico da lavoro"
+        "alt": "Grembiule operativo e abbigliamento tecnico"
       },
       {
-        "name": "Ruoli a contatto col pubblico",
+        "name": "Retail e accoglienza",
         "modal": "modal-sector-guest",
-        "desc": "Divise su misura per chi accoglie, orienta e rappresenta l’attività.",
+        "desc": "Divise su misura per accogliere i clienti, assisterli e rappresentare la sua attività.",
         "img": "/assets/images/home/sector-06-guest.jpg",
         "alt": "Banco di accoglienza dell’hotel con il personale"
       }
     ],
-    "handoff": "Non sa quale la rappresenta? Ci parli del team"
+    "handoff": "Ci dica di cosa ha bisogno il team"
   },
   "approach": {
     "kicker": "COME PROGETTIAMO",
@@ -185,7 +185,7 @@
   },
   "categories": {
     "kicker": "COSA POSSIAMO SVILUPPARE",
-    "h2": "Un unico guardaroba, dai capi essenziali al minimo dettaglio",
+    "h2": "Divise per ogni ruolo del team",
     "intro": "Possiamo creare un guardaroba completo per più ruoli o iniziare da un reparto, un ruolo o una categoria di capi. Ogni decisione viene coordinata prima della produzione.",
     "groups": [
       {
@@ -297,7 +297,7 @@
       }
     ],
     "note": "Il calendario definitivo dipende dal numero di modelli, dalla disponibilità dei tessuti, dalle prove, dai cicli di revisione, dalla costruzione, dalle quantità e dai tempi di approvazione.",
-    "handoff": "Fissi una data per il suo progetto"
+    "handoff": "Parliamo della sua data di consegna"
   },
   "personalised": {
     "kicker": "PERSONALIZZAZIONE",
@@ -430,7 +430,7 @@
       ],
       [
         "Ambito",
-        "Progettato su misura in funzione del suo spazio, dei ruoli e delle esigenze operative.",
+        "Progettato su misura per spazio, ruoli ed esigenze operative.",
         "Utilizzato come sistema di guardaroba replicabile per l’intero team."
       ],
       [
@@ -454,13 +454,13 @@
   },
   "projects": {
     "kicker": "PROGETTI E GUIDE SELEZIONATI",
-    "h2": "Tre programmi, negli ambienti per cui sono nati",
-    "intro": "Un’apertura d’hotel, un team benessere, una clinica privata: un metodo, tre sale molto diverse.",
+    "h2": "Le divise nella pratica",
+    "intro": "I nostri progetti per hotel e cliniche, più una guida pratica alle divise per i team benessere.",
     "items": [
       {
         "tag": "CASO STUDIO: HOTEL",
         "h3": "Divise su misura per METT Barcelona",
-        "p": "Un guardaroba completo per ruolo, sviluppato dal progetto d’interni dell’hotel per accoglienza, ristorazione, direzione e spa, poi progettato, prototipato e prodotto a Barcellona.",
+        "p": "Un guardaroba d’hotel completo, ispirato agli interni, con divise per reception, ristorante, direzione e spa. Progettato, campionato e prodotto a Barcellona.",
         "img": "/assets/images/project-barcelona-heritage.jpg",
         "alt": "Una facciata modernista nel centro di Barcellona, il tipo di struttura per cui nascono questi programmi di divise",
         "href": "/it/blog/divise-hospitalita-personalizzate/",
@@ -468,8 +468,8 @@
       },
       {
         "tag": "GUIDA AL BENESSERE",
-        "h3": "Un guardaroba benessere per più ruoli",
-        "p": "Una guida pratica per collegare accoglienza, trattamenti e ruoli di supporto attraverso colori, materiali e dettagli condivisi, con un piano di continuità chiaro.",
+        "h3": "Guida alle divise per spa e benessere",
+        "p": "Come unire accoglienza, trattamenti e supporto attraverso colori, tessuti e dettagli dei capi, pensando anche agli ordini futuri.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Guardaroba per uno spazio benessere che collega accoglienza e trattamenti",
         "href": "/it/blog/divise-studi-benessere/",
@@ -478,35 +478,35 @@
       {
         "tag": "CASO STUDIO: CLINICA",
         "h3": "Divise su misura per uno studio dentistico",
-        "p": "Un guardaroba professionale che supera l’abbigliamento clinico generico e collega spazio, marchio, immagine dell’accoglienza ed esigenze di manutenzione quotidiana.",
+        "p": "Divise su misura per uno studio dentistico che riflettono lo spazio e il marchio, con capi pratici per la reception e la cura quotidiana.",
         "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Divise cliniche su misura in uno studio dentistico di Barcellona",
         "href": "/it/blog/divise-clinica-dentale-personalizzate-barcellona/",
         "linkLabel": "Leggi il caso studio della clinica"
       }
     ],
-    "handoff": "Avvia un programma come questi"
+    "handoff": "Parliamo di un progetto"
   },
   "faq": {
     "kicker": "DOMANDE FREQUENTI",
-    "h2": "Le risposte alle prime domande",
-    "intro": "I punti pratici da chiarire prima di un primo incontro.",
+    "h2": "Cosa sapere prima di iniziare",
+    "intro": "Risposte pratiche su ordini, prezzi, tempi e modo di lavorare.",
     "items": [
       {
         "q": "Lavorate a partire da un catalogo?",
-        "a": "No. Ogni progetto viene sviluppato intorno all’attività, allo spazio, al team e ai ruoli. Quando una base progettuale esistente offre un reale vantaggio in termini di tempi o costi, possiamo usarla come punto di partenza adattando il guardaroba finale al brief."
+        "a": "No. Progettiamo le divise partendo dalla sua attività, dal team e dal lavoro quotidiano. Se un modello esistente fa risparmiare tempo o costi, partiamo da lì e lo adattiamo."
       },
       {
-        "q": "Gestite i riordini dopo la prima produzione?",
-        "a": "Sì. Cartamodelli, tessuti, finiture, personalizzazioni e specifiche approvati vengono organizzati per gli ordini futuri. Offrono una base coerente per sostituire i capi, vestire i nuovi membri del personale e accompagnare la crescita del team, senza ripetere l’intero sviluppo."
+        "q": "Possiamo riordinare le stesse divise in futuro?",
+        "a": "Sì. Conserviamo i suoi cartamodelli, tessuti, colori e dettagli approvati. Sostituzioni e divise per i nuovi ingressi partono da quel progetto, e prima di ogni ordine verifichiamo disponibilità, prezzo e tempi."
       },
       {
         "q": "È necessario partire da un guardaroba completo?",
-        "a": "No. Può iniziare da un ruolo, un reparto o una categoria di capi e ampliare il guardaroba in seguito. Definiamo il punto di partenza più utile in base alla visibilità presso i clienti, alle esigenze operative, alla quantità, al budget e alle tempistiche."
+        "a": "No. Può iniziare da un ruolo, un reparto o un tipo di capo e ampliare in seguito. La aiutiamo a scegliere il punto di partenza in base a priorità, quantità e tempi."
       },
       {
         "q": "Sviluppate colori e dettagli di personalizzazione?",
-        "a": "Sì. Possiamo lavorare con le cartelle colore disponibili o valutare colori dedicati quando il materiale e la quantità lo consentono. Identità e dettagli personalizzati vengono scelti in base al capo, alla visibilità richiesta, alla durata e alle esigenze di manutenzione."
+        "a": "Sì. Possiamo scegliere tra i colori di tessuto esistenti o valutare un colore dedicato se tessuto e quantità lo consentono. Etichette, marchio e altri dettagli si scelgono in base al capo, al suo marchio e al modo in cui verrà lavato."
       },
       {
         "q": "Qual è la quantità minima d’ordine?",
@@ -514,7 +514,7 @@
       },
       {
         "q": "Quanto costa un progetto di divise su misura?",
-        "a": "Non usiamo un listino rigido. La proposta si costruisce sul perimetro confermato: capi, quantità, materiali, costruzione e livello di personalizzazione. Due capi simili all’apparenza possono richiedere sviluppo, materiali e lavorazioni molto diversi: quotiamo quindi il progetto invece di applicare una tariffa unica per capo."
+        "a": "Quotiamo ogni progetto singolarmente. Il prezzo dipende da capi, quantità, tessuti, costruzione e dettagli su misura, oltre al lavoro di progettazione e campionatura necessario. La proposta indica il perimetro concordato e cosa comprende."
       },
       {
         "q": "Quanto tempo passa dal brief alla consegna?",
@@ -522,15 +522,15 @@
       },
       {
         "q": "Dove vengono disegnati e prodotti i capi?",
-        "a": "A Barcellona. Progettazione, sviluppo, campionatura, prove e produzione si svolgono attraverso una filiera locale, che mantiene brevi i cicli di prototipazione e offre un controllo diretto sulla produzione."
+        "a": "A Barcellona. Progettazione, sviluppo, campioni, prove e produzione passano dalla nostra filiera locale, così lavoriamo a stretto contatto con chi realizza i suoi capi."
       },
       {
         "q": "Vediamo dei prototipi prima dell’avvio della produzione?",
-        "a": "Sì. Prototipi, campioni e prove precedono qualsiasi impegno di produzione: vestibilità, tessuto, costruzione e personalizzazione si approvano su capi reali, non su disegni."
+        "a": "Sì. Lei esamina i campioni e prova i capi prima di impegnarsi nella produzione. Vestibilità, tessuto, costruzione e dettagli di marca si concordano su capi reali."
       },
       {
         "q": "Come gestite le taglie di un intero team?",
-        "a": "Le quantità vengono distribuite tra le taglie necessarie durante la conferma di taglie e quantità. Le prove servono a definire la gamma di taglie prima della produzione. Per vestire i nuovi membri del personale si utilizzano poi i cartamodelli e le specifiche archiviate."
+        "a": "Usiamo le prove per verificare le taglie di cui il team ha bisogno, poi concordiamo le quantità per ogni taglia prima della produzione. Cartamodelli e dettagli approvati restano disponibili per nuovi ingressi e riordini."
       },
       {
         "q": "I tessuti reggono il lavaggio industriale?",
@@ -538,21 +538,21 @@
       },
       {
         "q": "Con quali settori lavorate?",
-        "a": "Hotel e ospitalità, ristorazione, spa e benessere, studi dentistici e cliniche private, squadre operative e di servizio, e ruoli a contatto con il pubblico. Il metodo è lo stesso ovunque; capi, tessuti e priorità no."
+        "a": "Progettiamo divise per hotel, ristoranti, spa, centri benessere, studi dentistici e cliniche private, squadre di manutenzione, retail e accoglienza. Ogni progetto si adatta al lavoro, alle persone e al contesto."
       },
       {
         "q": "Le divise possono seguire gli interni o il marchio?",
-        "a": "Sì. Un guardaroba può nascere direttamente da un progetto d’interni, come per l’apertura di un hotel a cinque stelle a Barcellona. I colori possono venire dalle cartelle colore disponibili oppure essere sviluppati su misura quando materiale e quantità lo consentono."
+        "a": "Sì. I suoi interni e il suo marchio possono guidare colori, tessuti e dettagli, come per l’apertura di un hotel a cinque stelle a Barcellona. Usiamo i colori di tessuto disponibili o valutiamo colori dedicati quando materiale e quantità lo permettono."
       }
     ],
-    "handoff": "Ha ancora una domanda? La scriva nel modulo"
+    "handoff": "Ha un’altra domanda? Ci scriva qui sotto"
   },
   "contact": {
     "kicker": "Inizi il suo progetto",
-    "h2": "Ci parli del team, dei ruoli e della data obiettivo",
+    "h2": "Pianifichiamo le divise del suo team",
     "paras": [
-      "Condividi ciò che sai finora. Valuteremo l’ambito, la fattibilità e il punto di partenza più pratico prima di consigliare una direzione.",
-      "Il primo incontro può svolgersi nel suo spazio a Barcellona, altrove in Spagna o all’estero, oppure in videochiamata. L’obiettivo è comprendere l’ambiente, la struttura del team, le esigenze operative e ciò che le divise devono ottenere."
+      "Ci parli della sua attività, del team e della data obiettivo. Esamineremo ciò che serve e le proporremo un primo passo.",
+      "Possiamo incontrarci nella sua sede a Barcellona, altrove in Spagna o all’estero, oppure in videochiamata. Il primo confronto ci aiuta a capire il team."
     ],
     "emailLabel": "Preferisci scriverci?",
     "form": {
@@ -564,7 +564,7 @@
         "team-size": "Dimensione del team",
         "project-type": "Tipo di progetto",
         "timeline": "Data obiettivo",
-        "meeting-datetime": "Data e ora preferite per la prima riunione",
+        "meeting-datetime": "Data e ora preferite",
         "brief": "Descrizione del progetto"
       },
       "placeholders": {
@@ -572,7 +572,7 @@
         "email": "nome@azienda.com",
         "phone": "+34 ...",
         "company": "Azienda o struttura",
-        "brief": "Ci parli dello spazio, del team, dei ruoli, dei capi, delle quantità indicative, della data obiettivo e di ciò che le divise devono ottenere."
+        "brief": "Di cosa si occupa il suo team? Ci dica quali capi le servono, all’incirca quanti e la data di consegna preferita."
       },
       "helps": {
         "phone": "Facoltativo",
@@ -618,8 +618,8 @@
             "disabled": true
           },
           {
-            "v": "Un sistema completo di divise su misura",
-            "t": "Un sistema completo di divise su misura",
+            "v": "Divise per tutto il team",
+            "t": "Divise per tutto il team",
             "disabled": false
           },
           {
@@ -638,8 +638,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising o capi con il suo marchio",
-            "t": "Merchandising o capi con il suo marchio",
+            "v": "Merchandise o capi con il suo marchio",
+            "t": "Merchandise o capi con il suo marchio",
             "disabled": false
           },
           {
@@ -682,12 +682,12 @@
         ]
       },
       "consent": "Accetto l’{privacy:informativa privacy} e i {terms:termini}.",
-      "hint": "Il modulo richiede due minuti. Di solito rispondiamo entro un giorno.",
+      "hint": "Il modulo richiede due minuti. Rispondiamo entro un giorno lavorativo.",
       "submit": "Invia la richiesta"
     }
   },
   "footer": {
-    "about": "Divise su misura progettate, sviluppate e prodotte a Barcellona.",
+    "about": "Divise e abbigliamento da lavoro su misura, progettati e prodotti a Barcellona.",
     "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
@@ -811,11 +811,11 @@
       },
       {
         "t": "h",
-        "v": "Un unico linguaggio visivo per una struttura con molti ruoli"
+        "v": "Un’immagine comune a tutti i team dell’hotel"
       },
       {
         "t": "p",
-        "v": "Un hotel riunisce reparti di accoglienza, servizio e operativi con esigenze di lavoro molto diverse. Creiamo capi specifici per ogni ruolo che, insieme, formano un unico guardaroba alberghiero."
+        "v": "Progettiamo divise per ogni team dell’hotel, dalla reception ai piani, dal ristorante alla spa. Ogni ruolo riceve i capi che gli servono, con un’immagine comune in tutta la struttura."
       },
       {
         "t": "h",
@@ -869,11 +869,11 @@
       },
       {
         "t": "h",
-        "v": "Progettate intorno al ritmo del servizio, al movimento, alla cura e all’identità del locale"
+        "v": "Fatte per il servizio intenso e i lavaggi frequenti"
       },
       {
         "t": "p",
-        "v": "I team della ristorazione lavorano tra calore, movimento, macchie e lunghi periodi di servizio. La divisa deve accompagnare questo ritmo e, allo stesso tempo, collegare i ruoli di sala e operativi all’identità del locale."
+        "v": "I team della ristorazione affrontano calore, macchie e turni lunghi. Progettiamo divise che permettono di muoversi con comodità e seguono il carattere del locale, dalla sala alla cucina."
       },
       {
         "t": "h",
@@ -921,11 +921,11 @@
     "sector-wellness": [
       {
         "t": "h",
-        "v": "Divise per spa e benessere"
+        "v": "Divise per spa, centri benessere ed estetica"
       },
       {
         "t": "h",
-        "v": "Comfort, movimento e una presenza calma lungo tutto il percorso del cliente"
+        "v": "Comfort all’altezza della calma del suo spazio"
       },
       {
         "t": "p",
@@ -980,11 +980,11 @@
       },
       {
         "t": "h",
-        "v": "Funzione clinica con un’immagine del personale più curata e allineata al marchio"
+        "v": "Abbigliamento pratico che rassicura"
       },
       {
         "t": "p",
-        "v": "Le cliniche private richiedono capi adatti a lunghe giornate, movimento e lavaggi frequenti, capaci allo stesso tempo di trasmettere ai pazienti un’immagine pulita, rassicurante e riconoscibile."
+        "v": "Le cliniche private richiedono capi adatti a lunghe giornate, movimento e lavaggi frequenti, capaci di trasmettere al paziente un’immagine pulita e rassicurante."
       },
       {
         "t": "h",
@@ -1076,11 +1076,11 @@
       },
       {
         "t": "h",
-        "v": "Un’espressione chiara del marchio per l’interazione quotidiana"
+        "v": "Un’immagine accogliente che riflette la sua attività"
       },
       {
         "t": "p",
-        "v": "Nei club privati, nei negozi di fascia alta, nelle gallerie, negli spazi culturali e in altri servizi, il personale è una delle prime espressioni visibili."
+        "v": "Nei club privati, nei negozi di fascia alta, nelle gallerie, negli spazi culturali e in altri servizi, il personale è una delle prime espressioni visibili dell’attività."
       },
       {
         "t": "h",
@@ -1326,103 +1326,103 @@
       "Capispalla",
       "Accessori"
     ],
-    "ctaText": "Ci racconti i ruoli e le proporremo il guardaroba.",
-    "ctaLabel": "Inizia il brief",
+    "ctaText": "Ci parli del suo team. La aiutiamo a pianificare le divise giuste.",
+    "ctaLabel": "Ci dica cosa le serve",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un insieme coordinato di divise appeso a uno stender"
   },
   "stages": {
     "kicker": "Come funziona",
-    "h2": "Sei fasi, e lei decide in ognuna.",
-    "intro": "Un progetto avanza quando lo approva. Ogni fase si chiude con una decisione registrata nel progetto, così nessuno deve ricordare ciò che è stato concordato.",
+    "h2": "Dalla prima idea al prossimo ordine",
+    "intro": "Sei fasi chiare. Lei esamina e approva le decisioni principali, e noi teniamo traccia di quanto concordato.",
     "items": [
       {
         "h": "Design",
-        "p": "Un designer esterno sviluppa la direzione visiva a partire dal suo brief. Lei la esamina e decide. Se il design non rientra in quanto acquistato, il progetto parte dallo sviluppo."
+        "p": "Un designer esterno crea una proposta a partire dal suo brief, che lei esamina. Se il design non è incluso nel progetto, partiamo dallo sviluppo dei capi."
       },
       {
-        "h": "Tessuti e accessori",
-        "p": "Peso, composizione, accessori e finissaggio sono scelti in base al suo ciclo di lavaggio e al suo clima, non in base a un moodboard."
+        "h": "Tessuti e dettagli",
+        "p": "Scegliamo tessuti, bottoni, accessori e finissaggi adatti alle sue condizioni di lavoro e al modo in cui lava le divise."
       },
       {
         "h": "Sviluppo",
-        "p": "Ruoli, colori, quantità e una scheda tecnica per capo. È la fase in cui un capo diventa una specifica."
+        "p": "Trasformiamo il progetto in un piano chiaro per ogni capo, con dettagli, colori e quantità."
       },
       {
         "h": "Produzione",
-        "p": "I capi approvati vengono prodotti secondo la specifica bloccata. Nulla viene tagliato prima delle approvazioni necessarie."
+        "p": "Produciamo i capi secondo il progetto approvato. Il taglio inizia solo quando i dettagli necessari hanno la sua approvazione."
       },
       {
         "h": "Consegna",
-        "p": "I capi vengono spediti alle sue sedi. Lei conferma la ricezione e ogni modello approvato diventa disponibile per il riordino."
+        "p": "Spediamo i capi alle sue sedi. Lei conferma la ricezione e teniamo i modelli approvati pronti per gli ordini futuri."
       },
       {
-        "h": "Riordino",
-        "p": "La revisione approvata viene archiviata con misure, tessuti, colori e fornitori, poi riverificata per disponibilità, prezzo e tempi."
+        "h": "Riordini",
+        "p": "Usiamo misure, tessuti e colori salvati per il suo ordine successivo. Disponibilità, prezzo e tempi vengono verificati di nuovo prima della produzione."
       }
     ]
   },
   "phases": {
     "kicker": "Tempistiche",
-    "h2": "Le tempistiche dei suoi progetti.",
+    "h2": "Il suo progetto, passo per passo",
     "phaseLabel": "Fase",
-    "intro": "L’ordine è fisso. La durata no, perché dipende dai suoi capi, dalle sue quantità e dalle sue approvazioni.",
+    "intro": "Concordiamo un calendario in base a capi, quantità, prove e approvazioni.",
     "items": [
       {
-        "h": "Brief e valutazione",
-        "p": "Lei ci indica i ruoli, le quantità e la data. Lo leggiamo, valutiamo se il progetto è adatto e fissiamo il primo incontro.",
-        "m": "Nessun account. Nessun addebito."
+        "h": "Il suo brief e il primo incontro",
+        "p": "Ci parli di team, quantità e data. Esaminiamo ciò che serve e fissiamo un primo incontro se possiamo aiutare.",
+        "m": "Nessun account, nessun pagamento."
       },
       {
-        "h": "Sviluppo e prove",
-        "p": "Tessuto, confezione e schede tecniche, poi prototipi provati dal suo personale durante il lavoro reale.",
-        "m": "Si approva un capo alla volta."
+        "h": "Campioni e prove",
+        "p": "Scegliamo i tessuti e realizziamo campioni che il team prova al lavoro, verificando vestibilità, comfort e dettagli.",
+        "m": "Lei approva ogni capo."
       },
       {
-        "h": "Pre-produzione e produzione",
-        "p": "Quantità, colori e scalature vengono confermati e bloccati, poi la produzione segue la versione approvata.",
-        "m": "Si avvia con le approvazioni."
+        "h": "Approvazione finale e produzione",
+        "p": "Lei conferma quantità, colori e taglie. Poi produciamo i capi secondo il progetto concordato.",
+        "m": "La produzione parte dopo l’approvazione."
       },
       {
-        "h": "Consegna e riordino",
-        "p": "I capi vengono spediti alle sue sedi e la revisione approvata resta archiviata nel progetto.",
-        "m": "Il riordino parte dall’archivio."
+        "h": "Consegna e riordini",
+        "p": "Consegniamo le divise e conserviamo i dettagli approvati per sostituzioni e nuovi ingressi.",
+        "m": "I suoi progetti restano archiviati."
       }
     ]
   },
   "includes": {
     "kicker": "Cosa è incluso",
-    "h2": "I dettagli che rendono la divisa sua.",
-    "intro": "Il suo brief definisce cosa sviluppiamo, cosa richiede la sua approvazione e cosa è incluso. Ogni parte produce qualcosa da tenere in mano o da leggere: un campione, un registro, una decisione.",
+    "h2": "I dettagli del suo abbigliamento da lavoro",
+    "intro": "Concordiamo cosa comprende il progetto prima di iniziare. Gli esempi qui sotto mostrano i piani, i campioni e i registri che guidano il lavoro.",
     "items": [
       {
-        "h": "Piano di ruoli e capi",
-        "p": "Chi ha bisogno di cosa, dai singoli ruoli a un guardaroba di squadra coordinato. Prima i ruoli, poi i capi.",
+        "h": "Capi per ogni ruolo",
+        "p": "Pianifichiamo cosa serve a ciascuno, da un ruolo a un guardaroba di squadra coerente.",
         "a": "plan"
       },
       {
-        "h": "Tessuto e confezione",
-        "p": "Peso, composizione e finissaggio scelti in base al suo ciclo di lavaggio e al suo clima, non a un moodboard.",
+        "h": "Tessuti per ogni giorno",
+        "p": "Peso, composizione e finissaggi sono scelti per il suo lavoro e per la sua routine di lavaggio.",
         "a": "fabric"
       },
       {
-        "h": "Prototipi e prove",
-        "p": "Campioni provati da chi li indosserà, durante il lavoro reale. I riscontri sono registrati capo per capo.",
+        "h": "Campioni e prove",
+        "p": "Il suo team prova i campioni al lavoro. Registriamo i riscontri per ogni capo prima dell’approvazione.",
         "a": "proto"
       },
       {
-        "h": "Dettagli di marca",
-        "p": "Colori, accessori e personalizzazione nel perimetro concordato, in una misura che resiste al lavaggio.",
+        "h": "I dettagli del suo marchio",
+        "p": "Colori, etichette e dettagli seguono il progetto concordato e reggono l’uso e il lavaggio quotidiani.",
         "a": "brand"
       },
       {
-        "h": "Una specifica archiviata",
-        "p": "La revisione approvata conservata con misure, tessuti, colori e fornitori.",
+        "h": "Il registro dei suoi capi",
+        "p": "Teniamo insieme misure, tessuti, colori e fornitori approvati in un registro per ogni capo.",
         "a": "spec"
       },
       {
-        "h": "Un riordino identico",
-        "p": "Prodotto dall’archivio, poi riverificato per disponibilità, prezzo e tempi.",
+        "h": "Pronto per il riordino",
+        "p": "Verifichiamo disponibilità del tessuto, prezzo e tempi prima di riprodurre il suo progetto approvato.",
         "a": "reorder"
       }
     ],
@@ -1451,7 +1451,7 @@
       },
       "fabric": {
         "label": "Rosa di tessuti",
-        "meta": "In base al ciclo di lavaggio",
+        "meta": "Per la sua routine di lavaggio",
         "rows": [
           [
             "Twill",
@@ -1501,7 +1501,7 @@
         "label": "Etichetta e colori",
         "meta": "40 × 12 mm",
         "mark": "IL SUO MARCHIO",
-        "note": "etichetta tessuta, cucita nella cucitura",
+        "note": "etichetta tessuta cucita nella cucitura",
         "swatches": [
           [
             "#011251",
@@ -1531,7 +1531,7 @@
           ],
           [
             "Colore",
-            "Blu su misura · bagno 3"
+            "Blu navy dedicato · campione colore 3"
           ],
           [
             "Posizioni",
@@ -1544,7 +1544,7 @@
         ]
       },
       "reorder": {
-        "label": "Registro riordino",
+        "label": "Registro riordini",
         "meta": "88 pezzi",
         "rows": [
           [
@@ -1552,7 +1552,7 @@
             "Rev. 4"
           ],
           [
-            "Riordinato",
+            "Quantità riordinata",
             "88 pezzi"
           ],
           [
@@ -1560,7 +1560,7 @@
             "Invariato"
           ]
         ],
-        "check": "Prodotto dall’archivio, non da un ricordo"
+        "check": "Prodotto dal registro approvato del capo"
       }
     }
   }

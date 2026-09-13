@@ -631,7 +631,10 @@ a.project:hover .project__link::after{transform:translateX(3px)}
   --surface-3:#DFDBD1;
   --ink:#0A1024;
   --muted:#59617A;
-  --faint:#8B92A6;
+  /* The faint grey carries 11px labels — index numbers, kickers, captions.
+     #8B92A6 measured 2.78:1 against the paper, under the 4.5:1 AA needs at
+     that size; this clears it and still reads lighter than --muted. */
+  --faint:#5F6679;
   --line:color-mix(in srgb,#011251 12%,transparent);
   --line-strong:color-mix(in srgb,#011251 24%,transparent);
 
@@ -1616,7 +1619,9 @@ main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in sr
 .bf .consent a{color:var(--on-band);text-decoration:underline;text-underline-offset:3px;
   text-decoration-color:rgba(244,242,237,.5)}
 .bf .consent a:hover{text-decoration-color:#F4F2ED}
-.bf .consent input[type="checkbox"]{flex:none;width:18px;height:18px;margin-top:1px;
+/* 24px is the smallest target WCAG 2.2 accepts, and the consent box is the
+   one control on the page a person must hit to send the form. */
+.bf .consent input[type="checkbox"]{flex:none;width:24px;height:24px;margin-top:0;
   accent-color:#F4F2ED;cursor:pointer}
 .bf .form-status{color:var(--on-band);margin-top:var(--sp-4)}
 
@@ -1775,9 +1780,12 @@ main[data-page="custom"] .art-sw span{box-shadow:inset 0 0 0 1px color-mix(in sr
   -webkit-hyphens:auto;
 }
 /* Headlines and the leads under them stay unbroken: at that size a hyphen
-   reads as a mistake rather than as typesetting. */
-:is(.display,.h1,.h2,.h3,h1,h2,h3,h4,.shero-t,.shd-t,.case-h,.sol-ht,.ind-t,.ask-t,
-    .band-v,.band-l,.lede,.lead,.shero-d,.shd-d,.po-d,.page-desc,summary){
+   reads as a mistake rather than as typesetting. The :lang() prefix is not
+   decoration — without it this sits below the rule above on specificity and
+   a lead set as <p class="lede"> hyphenates anyway. */
+:is(:lang(es),:lang(fr),:lang(it),:lang(de)) :is(.display,.h1,.h2,.h3,h1,h2,h3,h4,
+    .shero-t,.shd-t,.case-h,.sol-ht,.ind-t,.ask-t,.band-v,.band-l,.lede,.lead,
+    .shero-d,.shd-d,.po-d,.page-desc,.jr-lead-d,summary){
   hyphens:manual;
   -webkit-hyphens:manual;
 }

@@ -1,10 +1,10 @@
 {
   "locale": "fr",
   "meta": {
-    "title": "Studio d’uniformes sur mesure à Barcelone | PAMUUC Studio",
-    "description": "Création et production d’uniformes sur mesure pour hôtels, restaurants, espaces de bien-être et cliniques. Produits à Barcelone, dès 10 pièces par modèle.",
-    "ogTitle": "Studio d’uniformes sur mesure à Barcelone | PAMUUC Studio",
-    "ogDescription": "Des vestiaires professionnels sur mesure pour hôtels, restaurants, espaces de bien-être, cliniques et équipes d’accueil : de la création et des essayages à la production et aux réassorts."
+    "title": "Uniformes et vêtements de travail à Barcelone | PAMUUC",
+    "description": "Uniformes et vêtements de travail sur mesure pour hôtels, restaurants, spas et cliniques privées. Conçus et fabriqués à Barcelone, des échantillons aux réassorts.",
+    "ogTitle": "Uniformes et vêtements de travail à Barcelone | PAMUUC",
+    "ogDescription": "Uniformes et vêtements de travail sur mesure pour hôtels, restaurants, spas et cliniques privées. Conçus et fabriqués à Barcelone, des échantillons aux réassorts."
   },
   "nav": [
     {
@@ -24,41 +24,41 @@
       "href": "/fr/blog/"
     },
     {
-      "label": "Parler de votre projet",
+      "label": "Parlons de votre projet",
       "href": "/fr/#contact"
     }
   ],
   "hero": {
-    "eyebrow": "CRÉATION ET PRODUCTION D’UNIFORMES SUR MESURE · BARCELONE",
-    "h1": "Uniformes sur mesure pour hôtels, restaurants, bien-être et cliniques privées",
-    "lead": "Nous concevons et produisons des vestiaires sur mesure autour de votre marque, de vos rôles et du quotidien : du brief aux essayages, à la production et aux réassorts.",
+    "eyebrow": "CONCEPTION ET PRODUCTION D’UNIFORMES · BARCELONE",
+    "h1": "Uniformes et tenues de travail sur mesure",
+    "lead": "Nous concevons et fabriquons des uniformes pour hôtels, restaurants, spas et cliniques privées. Fabriqués à Barcelone, avec échantillons, essayages et réassorts.",
     "pills": [
       "Pensés pour votre marque",
       "Développés par rôle",
       "Produits à Barcelone",
       "Prévus pour les réassorts"
     ],
-    "primary": "Parler de votre projet d’uniformes",
-    "secondary": "Voir les projets sélectionnés",
+    "primary": "Parlez-nous de votre projet",
+    "secondary": "Découvrir nos projets",
     "imageAlt": "Création d’uniformes sur mesure et développement de vêtements par PAMUUC Studio à Barcelone",
     "proofs": [
       {
         "label": "Premier projet",
-        "text": "Création, essayages et production pour votre espace et votre équipe."
+        "text": "Création, échantillons, essayages et production pour votre équipe."
       },
       {
         "label": "Commandes futures",
-        "text": "Patronages et spécifications approuvés, prêts pour des réassorts cohérents."
+        "text": "Nous gardons vos modèles approuvés pour les remplacements et les nouvelles recrues."
       }
     ]
   },
   "services": {
     "kicker": "CE QUE NOUS FAISONS",
-    "h2": "Un service complet d’uniformes sur mesure, pas un catalogue",
+    "h2": "Conception et production d’uniformes sur mesure",
     "intro": "PAMUUC Studio conçoit, développe et produit des uniformes sur mesure pour l’hôtellerie, le bien-être, la santé et les équipes en contact avec le public. Chaque projet part de l’entreprise, des personnes qui porteront les vêtements et du travail qu’elles accomplissent.",
     "card": {
       "topline": "CRÉATION, DÉVELOPPEMENT ET PRODUCTION",
-      "h3": "Vestiaires professionnels sur mesure",
+      "h3": "Uniformes et vêtements de travail",
       "p": "Un vestiaire professionnel coordonné, conçu autour de votre espace, de votre marque, des rôles, du mouvement, des exigences d’entretien et de la croissance future de l’équipe.",
       "features": [
         "Des vêtements pensés pour chaque rôle et environnement de travail",
@@ -68,7 +68,7 @@
     }
   },
   "band": {
-    "text": "Des uniformes qui fonctionnent pour la marque, l’équipe et le service",
+    "text": "Des uniformes qui portent votre marque et servent votre équipe",
     "points": [
       "Reflètent votre espace et votre identité",
       "Accompagnent les mouvements et les tâches réelles",
@@ -83,25 +83,25 @@
         "v": "2 600",
         "u": "",
         "l": "Vêtements réalisés en 2026",
-        "n": "Patronnés, coupés, cousus et finis à trente kilomètres de Barcelone, sur tous les programmes de cette année."
+        "n": "Patronnés, coupés, cousus et finis à moins de trente kilomètres de Barcelone, pour les projets de cette année."
       },
       {
         "v": "12",
         "u": "semaines",
         "l": "Projet complet, moyenne",
-        "n": "Du brief que vous envoyez à la première livraison, sur les six étapes. Le vôtre est chiffré selon vos vêtements, vos quantités et vos approbations."
+        "n": "De votre premier brief à la livraison. Nous fixons le calendrier selon les vêtements, les quantités et les validations nécessaires."
       },
       {
         "v": "3",
         "u": "semaines",
-        "l": "Réassort, en production",
-        "n": "Produit à partir de la spécification archivée : rien n’est développé deux fois. Disponibilité et prix sont revérifiés avant le lancement."
+        "l": "Délai de réassort",
+        "n": "Fabriqué d’après les détails approuvés que nous conservons. Disponibilité et prix sont revérifiés avant la production."
       },
       {
         "v": "150 €",
         "u": "",
-        "l": "Par personne, moyenne",
-        "n": "Ce qu’une équipe dépense par tête sur les vêtements de sa gamme. Le développement, le tissu et la quantité la font varier."
+        "l": "Moyenne par tête",
+        "n": "Dépense habituelle par personne pour les vêtements convenus. Le développement, le tissu et la quantité ajustent le prix final."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
@@ -109,53 +109,53 @@
   },
   "sectors": {
     "kicker": "AVEC QUI NOUS TRAVAILLONS",
-    "h2": "Six univers que nous habillons",
-    "intro": "Chaque fiche présente les rôles, les vêtements et les priorités propres à cet environnement.",
+    "h2": "Des uniformes pour votre secteur",
+    "intro": "De la réception de l’hôtel à la cuisine ou à la cabine de soins, chaque rôle a ses besoins.",
     "items": [
       {
-        "name": "Hôtels et hôtellerie",
+        "name": "Hôtellerie",
         "modal": "modal-sector-hotels",
-        "desc": "Un vestiaire coordonné pour la réception, la conciergerie, la restauration, les étages, le spa et la direction.",
+        "desc": "Des uniformes d’hôtel qui réunissent réception, restaurant, étages, spa et direction.",
         "img": "/assets/images/home/sector-01-hotels.jpg",
         "alt": "Couloir d’hôtel, une main sur la porte d’une chambre"
       },
       {
-        "name": "Restaurants et restauration",
+        "name": "Restaurants et cafés",
         "modal": "modal-sector-restaurants",
-        "desc": "Des uniformes pour la salle, le bar, la cuisine et la direction, adaptés à un rythme de service soutenu.",
+        "desc": "Uniformes de restaurant et tenues de cuisine pour le service intense et les lavages fréquents.",
         "img": "/assets/images/home/sector-02-restaurants.jpg",
         "alt": "Service à table, dressage d’une assiette à la main"
       },
       {
         "name": "Spa et bien-être",
         "modal": "modal-sector-wellness",
-        "desc": "Des uniformes sobres et fonctionnels pour l’accueil, les soins et les fonctions support.",
+        "desc": "Uniformes de spa et d’institut confortables, à la hauteur du calme de votre lieu.",
         "img": "/assets/images/home/sector-03-wellness.jpg",
         "alt": "Salle de soin à l’atmosphère calme, dans des tons neutres et chauds"
       },
       {
         "name": "Cabinets dentaires et cliniques",
         "modal": "modal-sector-medical",
-        "desc": "Une alternative professionnelle aux tenues cliniques génériques pour l’accueil et les soins.",
+        "desc": "Uniformes de clinique sur mesure pour l’accueil et les soins, confortables et lavables souvent.",
         "img": "/assets/images/home/sector-04-clinics.jpg",
         "alt": "Salle de soin d’une clinique privée"
       },
       {
-        "name": "Équipes opérationnelles",
+        "name": "Maintenance et support",
         "modal": "modal-sector-service",
-        "desc": "Vêtements résistants pour la maintenance, la logistique, le support et les rôles pratiques.",
+        "desc": "Vêtements de travail pour la maintenance, la logistique et le support, faits pour bouger au quotidien.",
         "img": "/assets/images/home/sector-05-service.jpg",
         "alt": "Tablier pour les espaces de service et vêtement de travail technique"
       },
       {
-        "name": "Équipes d’accueil",
+        "name": "Retail et accueil",
         "modal": "modal-sector-guest",
-        "desc": "Uniformes sur mesure pour ceux qui accueillent, orientent et représentent l’entreprise.",
+        "desc": "Uniformes sur mesure pour accueillir vos clients, les guider et représenter votre entreprise.",
         "img": "/assets/images/home/sector-06-guest.jpg",
         "alt": "Comptoir d’accueil d’hôtel avec l’équipe"
       }
     ],
-    "handoff": "Vous hésitez ? Parlez-nous de votre équipe"
+    "handoff": "Dites-nous ce dont votre équipe a besoin"
   },
   "approach": {
     "kicker": "NOTRE APPROCHE",
@@ -185,7 +185,7 @@
   },
   "categories": {
     "kicker": "CE QUE NOUS POUVONS DÉVELOPPER",
-    "h2": "Un seul vestiaire, des pièces essentielles au moindre détail",
+    "h2": "Des uniformes pour chaque rôle de l’équipe",
     "intro": "Nous pouvons créer un vestiaire complet pour plusieurs rôles ou commencer par un service, une fonction ou une catégorie de vêtements. Toutes les décisions sont coordonnées avant la production.",
     "groups": [
       {
@@ -297,7 +297,7 @@
       }
     ],
     "note": "Le calendrier définitif dépend du nombre de modèles, de la disponibilité des tissus, des essayages, des cycles de révision, de la construction, des quantités et des délais de validation.",
-    "handoff": "Fixer une date pour votre projet"
+    "handoff": "Parlons de votre date de livraison"
   },
   "personalised": {
     "kicker": "PERSONNALISATION",
@@ -454,13 +454,13 @@
   },
   "projects": {
     "kicker": "PROJETS ET GUIDES SÉLECTIONNÉS",
-    "h2": "Trois programmes, dans les lieux pour lesquels ils ont été faits",
-    "intro": "Une ouverture d’hôtel, une équipe bien-être, une clinique privée : une méthode, trois salles différentes.",
+    "h2": "Les uniformes en pratique",
+    "intro": "Nos projets d’hôtel et de clinique, ainsi qu’un guide pratique des uniformes pour les équipes bien-être.",
     "items": [
       {
         "tag": "ÉTUDE DE CAS : HÔTEL",
         "h3": "Uniformes sur mesure pour METT Barcelona",
-        "p": "Un vestiaire complet par rôle, développé à partir du concept intérieur de l’hôtel pour les équipes d’accueil, de restauration, de direction et de spa, puis conçu, prototypé et produit à Barcelone.",
+        "p": "Un vestiaire d’hôtel complet inspiré des intérieurs, avec des uniformes pour la réception, le restaurant, la direction et le spa. Conçu, échantillonné et fabriqué à Barcelone.",
         "img": "/assets/images/project-barcelona-heritage.jpg",
         "alt": "Une façade moderniste au cœur de Barcelone, le type d’établissement pour lequel ces programmes d’uniformes sont conçus",
         "href": "/fr/blog/uniformes-hotellerie-personnalises/",
@@ -468,8 +468,8 @@
       },
       {
         "tag": "GUIDE BIEN-ÊTRE",
-        "h3": "Un vestiaire bien-être pour plusieurs rôles",
-        "p": "Un guide pratique pour relier l’accueil, les soins et les fonctions support grâce à des couleurs, des matières et des détails communs, avec un plan de continuité clair.",
+        "h3": "Guide des uniformes de spa et bien-être",
+        "p": "Comment relier accueil, soins et support par les couleurs, les tissus et les détails des vêtements, en pensant aux commandes futures.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Vestiaire d’une équipe bien-être reliant l’accueil et les soins",
         "href": "/fr/blog/uniformes-studios-bien-etre/",
@@ -478,35 +478,35 @@
       {
         "tag": "ÉTUDE DE CAS : CLINIQUE",
         "h3": "Uniformes sur mesure pour un cabinet dentaire",
-        "p": "Un vestiaire professionnel conçu pour dépasser les tenues cliniques génériques et relier l’espace, la marque, l’image de l’accueil et les exigences d’entretien quotidien.",
+        "p": "Des uniformes sur mesure pour un cabinet dentaire, fidèles au lieu et à la marque, avec des vêtements pratiques pour l’accueil et les soins.",
         "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Uniformes cliniques sur mesure dans un cabinet dentaire à Barcelone",
         "href": "/fr/blog/uniformes-clinique-dentaire-sur-mesure-barcelone/",
         "linkLabel": "Lire l’étude de cas de la clinique"
       }
     ],
-    "handoff": "Lancer un programme similaire"
+    "handoff": "Parlons d’un projet"
   },
   "faq": {
     "kicker": "QUESTIONS FRÉQUENTES",
-    "h2": "Les réponses aux premières questions",
-    "intro": "Les points pratiques à régler avant un rendez-vous.",
+    "h2": "À savoir avant de commencer",
+    "intro": "Des réponses pratiques sur les commandes, les prix, les délais et notre façon de travailler.",
     "items": [
       {
         "q": "Travaillez-vous sur catalogue ?",
-        "a": "Non. Chaque projet est développé autour de l’entreprise, de l’espace, de l’équipe et de ses rôles. Lorsqu’une base de création existante apporte un réel avantage de délai ou de coût, nous pouvons l’utiliser comme point de départ tout en adaptant le vestiaire final au brief."
+        "a": "Non. Nous concevons les uniformes à partir de votre entreprise, de votre équipe et de son quotidien. Si un modèle existant fait gagner du temps, nous l’adaptons à vos besoins."
       },
       {
-        "q": "Gérez-vous les réassorts après la première production ?",
-        "a": "Oui. Les patronages, tissus, finitions, marquages et spécifications approuvés sont conservés pour les commandes futures. Ils offrent une base cohérente pour remplacer des pièces, équiper les nouvelles recrues et accompagner la croissance de l’équipe, sans reprendre tout le développement."
+        "q": "Pouvons-nous recommander les mêmes uniformes plus tard ?",
+        "a": "Oui. Nous conservons vos patronages, tissus, couleurs et détails approuvés. Les remplacements et les uniformes des nouvelles recrues repartent de ce modèle, et nous vérifions disponibilité, prix et délais avant chaque commande."
       },
       {
         "q": "Faut-il commencer avec une garde-robe complète ?",
-        "a": "Non. Vous pouvez commencer par une fonction, un service ou une catégorie de vêtements, puis élargir le vestiaire. Nous définissons le point de départ le plus pertinent selon la visibilité auprès des clients, les besoins opérationnels, les quantités, le budget et les délais."
+        "a": "Non. Vous pouvez commencer par un rôle, un service ou un type de vêtement et compléter ensuite. Nous vous aidons à choisir un point de départ adapté à vos priorités et délais."
       },
       {
         "q": "Développez-vous les couleurs et les détails personnalisés ?",
-        "a": "Oui. Nous pouvons travailler à partir des gammes de couleurs disponibles ou envisager des coloris dédiés lorsque la matière et la quantité le permettent. Le marquage et les détails personnalisés sont choisis selon le vêtement, la visibilité recherchée, la durabilité et les exigences d’entretien."
+        "a": "Oui. Nous pouvons choisir parmi les coloris de tissu existants ou étudier une couleur dédiée si la matière et la quantité le permettent. Étiquettes, marquage et autres détails sont choisis selon le vêtement, votre marque et son mode de lavage."
       },
       {
         "q": "Quelle est la quantité minimale ?",
@@ -514,7 +514,7 @@
       },
       {
         "q": "Combien coûte un projet d’uniformes sur mesure ?",
-        "a": "Nous n’utilisons pas de grille tarifaire rigide. La proposition se construit sur le périmètre confirmé : vêtements, quantités, matières, construction et niveau de personnalisation. Deux pièces d’apparence proche peuvent demander un développement, des matières et une production très différents ; nous chiffrons donc le projet, pas un tarif unique par pièce."
+        "a": "Nous chiffrons chaque projet individuellement. Le prix dépend des vêtements, des quantités, des tissus, de la construction et des détails sur mesure, ainsi que du travail de création et d’échantillonnage. Votre proposition précise le périmètre convenu et ce qu’il comprend."
       },
       {
         "q": "Combien de temps s’écoule entre le brief et la livraison ?",
@@ -522,15 +522,15 @@
       },
       {
         "q": "Où les vêtements sont-ils conçus et produits ?",
-        "a": "À Barcelone. La conception, le développement, les échantillons, les essayages et la production s’appuient sur une chaîne d’approvisionnement locale, ce qui raccourcit les cycles de prototypage et permet un contrôle direct de la production."
+        "a": "À Barcelone. Création, développement, échantillons, essayages et production passent par notre chaîne locale, au plus près de ceux qui fabriquent vos vêtements."
       },
       {
         "q": "Voyons-nous des prototypes avant le lancement de la production ?",
-        "a": "Oui. Prototypes, échantillons et essayages précèdent tout engagement de production : coupe, tissu, construction et marquage sont validés sur des vêtements réels, pas sur des dessins."
+        "a": "Oui. Vous examinez les échantillons et essayez les vêtements avant tout engagement. La coupe, le tissu, la construction et les détails de marque sont validés sur des vêtements réels."
       },
       {
         "q": "Comment gérez-vous les tailles à l’échelle d’une équipe ?",
-        "a": "Les quantités sont réparties entre les tailles nécessaires lors de la confirmation des tailles et des quantités. Les essayages servent à définir la gamme de tailles avant la production. Les patronages et les spécifications archivés permettent ensuite d’équiper les nouvelles recrues."
+        "a": "Les essayages servent à vérifier les tailles dont votre équipe a besoin, puis nous fixons la quantité par taille avant la production. Les patronages et détails approuvés sont conservés pour les nouvelles recrues et les commandes suivantes."
       },
       {
         "q": "Les tissus résistent-ils au blanchissage industriel ?",
@@ -538,21 +538,21 @@
       },
       {
         "q": "Avec quels secteurs travaillez-vous ?",
-        "a": "Hôtellerie, restauration, spa et bien-être, cabinets dentaires et cliniques privées, équipes opérationnelles et de service, et postes en contact avec la clientèle. La méthode est la même partout ; les vêtements, les tissus et les priorités, non."
+        "a": "Nous créons des uniformes pour les hôtels, les restaurants, les spas, les studios bien-être, les cabinets dentaires et cliniques privées, les équipes de maintenance, le retail et l’accueil. Chaque projet s’adapte au travail, aux personnes et au lieu."
       },
       {
-        "q": "Les uniformes peuvent-ils suivre l’intérieur ou la marque ?",
-        "a": "Oui. Une garde-robe peut être développée directement à partir d’un concept d’intérieur, comme pour l’ouverture d’un hôtel cinq étoiles à Barcelone. Les couleurs peuvent venir des cartes de coloris disponibles ou être développées sur mesure lorsque la matière et la quantité le permettent."
+        "q": "Les uniformes peuvent-ils suivre la décoration ou la marque ?",
+        "a": "Oui. Vos intérieurs et votre marque peuvent guider les couleurs, les tissus et les détails, comme pour l’ouverture d’un hôtel cinq étoiles à Barcelone. Nous utilisons les coloris disponibles ou étudions des couleurs dédiées si la matière et la quantité le permettent."
       }
     ],
-    "handoff": "Encore une question ? Écrivez-nous"
+    "handoff": "Une autre question ? Écrivez-nous ci-dessous"
   },
   "contact": {
     "kicker": "Lancez votre projet",
-    "h2": "Votre équipe, ses rôles et la date visée",
+    "h2": "Planifions les uniformes de votre équipe",
     "paras": [
-      "Partagez ce que vous savez déjà. Nous étudierons le périmètre, la faisabilité et le point de départ le plus pratique avant de vous recommander une direction.",
-      "Le premier rendez-vous peut avoir lieu dans vos locaux à Barcelone, ailleurs en Espagne ou à l’étranger, ou en visioconférence. L’objectif est de comprendre le lieu, l’équipe, les besoins opérationnels et le rôle des uniformes."
+      "Parlez-nous de votre entreprise, de votre équipe et de votre date. Nous examinerons vos besoins et proposerons un premier pas.",
+      "Nous pouvons nous rencontrer dans vos locaux à Barcelone, en Espagne ou à l’étranger, ou en visio. Ce premier échange nous aide à comprendre votre équipe."
     ],
     "emailLabel": "Vous préférez nous écrire ?",
     "form": {
@@ -564,7 +564,7 @@
         "team-size": "Taille de l’équipe",
         "project-type": "Type de projet",
         "timeline": "Échéance visée",
-        "meeting-datetime": "Date et heure souhaitées pour la réunion",
+        "meeting-datetime": "Date et heure souhaitées",
         "brief": "Description du projet"
       },
       "placeholders": {
@@ -572,7 +572,7 @@
         "email": "nom@entreprise.com",
         "phone": "+34 ...",
         "company": "Entreprise ou établissement",
-        "brief": "Parlez-nous de l’espace, de l’équipe, des rôles, des vêtements, des quantités approximatives, de la date visée et de ce que les uniformes doivent accomplir."
+        "brief": "Que fait votre équipe ? Dites-nous quels vêtements il vous faut, en quelles quantités environ, et votre date de livraison souhaitée."
       },
       "helps": {
         "phone": "Facultatif",
@@ -618,8 +618,8 @@
             "disabled": true
           },
           {
-            "v": "Un vestiaire d’uniformes entièrement sur mesure",
-            "t": "Un vestiaire d’uniformes entièrement sur mesure",
+            "v": "Des uniformes pour toute l’équipe",
+            "t": "Des uniformes pour toute l’équipe",
             "disabled": false
           },
           {
@@ -638,8 +638,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising ou vêtements personnalisés",
-            "t": "Merchandising ou vêtements personnalisés",
+            "v": "Merchandising ou vêtements à votre marque",
+            "t": "Merchandising ou vêtements à votre marque",
             "disabled": false
           },
           {
@@ -683,11 +683,11 @@
       },
       "consent": "J’accepte la {privacy:politique de confidentialité} et les {terms:conditions}.",
       "hint": "Le formulaire prend deux minutes. Nous répondons sous un jour ouvré.",
-      "submit": "Envoyer la demande"
+      "submit": "Envoyer ma demande"
     }
   },
   "footer": {
-    "about": "Vestiaires professionnels sur mesure conçus, développés et produits à Barcelone.",
+    "about": "Uniformes et vêtements de travail sur mesure, conçus et fabriqués à Barcelone.",
     "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
@@ -811,11 +811,11 @@
       },
       {
         "t": "h",
-        "v": "Un seul langage visuel pour un établissement aux rôles multiples"
+        "v": "Une image commune à toutes les équipes de l’hôtel"
       },
       {
         "t": "p",
-        "v": "Un hôtel rassemble accueil, restauration et opérations, aux besoins très différents. Nous créons des vêtements propres à chaque rôle qui composent un seul vestiaire hôtelier."
+        "v": "Nous créons des uniformes pour chaque équipe de l’hôtel, de la réception et des étages au restaurant et au spa. Chaque rôle reçoit ses vêtements, avec une image commune."
       },
       {
         "t": "h",
@@ -869,11 +869,11 @@
       },
       {
         "t": "h",
-        "v": "Conçus autour du rythme du service, du mouvement, de l’entretien et de l’identité du lieu"
+        "v": "Pour le service intense et les lavages fréquents"
       },
       {
         "t": "p",
-        "v": "Les équipes de restauration travaillent dans la chaleur, le mouvement, les éclaboussures et de longs services. L’uniforme doit suivre ce rythme en reliant la salle et les opérations au concept du lieu."
+        "v": "Les équipes de restauration affrontent la chaleur, les éclaboussures et les longs services. Nous créons des uniformes qui laissent bouger à l’aise et suivent le caractère du lieu, de la salle à la cuisine."
       },
       {
         "t": "h",
@@ -921,11 +921,11 @@
     "sector-wellness": [
       {
         "t": "h",
-        "v": "Uniformes pour spa et bien-être"
+        "v": "Uniformes de spa et d’institut de beauté"
       },
       {
         "t": "h",
-        "v": "Confort, mouvement et présence apaisée tout au long du parcours client"
+        "v": "Un confort à la hauteur du calme de votre lieu"
       },
       {
         "t": "p",
@@ -980,7 +980,7 @@
       },
       {
         "t": "h",
-        "v": "Une fonction clinique associée à une image d’équipe plus soignée et alignée sur la marque"
+        "v": "Des vêtements pratiques qui rassurent le patient"
       },
       {
         "t": "p",
@@ -1023,7 +1023,7 @@
           "Mouvement et confort tout au long de la journée",
           "Poches et fermetures fonctionnelles",
           "Une apparence nette sous l’éclairage clinique",
-          "Continuité visuelle entre l’accueil et les espaces de soins"
+          "Continuité visuelle entre accueil et soins"
         ]
       }
     ],
@@ -1076,11 +1076,11 @@
       },
       {
         "t": "h",
-        "v": "Une expression claire de la marque, pour l’interaction quotidienne"
+        "v": "Une image accueillante qui reflète votre maison"
       },
       {
         "t": "p",
-        "v": "Dans les clubs privés, les boutiques haut de gamme, les galeries, les lieux culturels et d’autres services, l’équipe est l’une des premières expressions visibles."
+        "v": "Dans les clubs privés, les boutiques haut de gamme, les galeries et les lieux culturels, l’équipe est l’une des premières expressions visibles de la maison."
       },
       {
         "t": "h",
@@ -1326,103 +1326,103 @@
       "Vêtements d’extérieur",
       "Accessoires"
     ],
-    "ctaText": "Présentez-nous les rôles, nous proposerons le vestiaire.",
-    "ctaLabel": "Lancer le brief",
+    "ctaText": "Parlez-nous de votre équipe. Nous vous aidons à planifier les bons uniformes.",
+    "ctaLabel": "Dites-nous ce qu’il vous faut",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Un ensemble coordonné d’uniformes suspendu à un portant"
   },
   "stages": {
     "kicker": "Comment ça marche",
-    "h2": "Six étapes, et vous décidez à chacune.",
-    "intro": "Un projet avance quand vous l’approuvez. Chaque étape se termine par une décision consignée au projet, pour que personne n’ait à se souvenir de ce qui a été convenu.",
+    "h2": "De l’idée à la commande suivante",
+    "intro": "Six étapes claires. Vous examinez et validez les décisions clés, et nous gardons trace de ce qui est convenu.",
     "items": [
       {
-        "h": "Design",
-        "p": "Un designer externe développe la direction visuelle à partir de votre brief. Vous l’examinez et décidez. Si le design n’est pas commandé, le projet démarre au développement."
+        "h": "Création",
+        "p": "Un designer externe crée une proposition à partir de votre brief. Si la création n’est pas comprise, nous commençons par le développement."
       },
       {
-        "h": "Tissus et accessoires",
-        "p": "Grammage, composition, fournitures et finition sont choisis selon votre cycle de lavage et votre climat, non selon une planche d’ambiance."
+        "h": "Tissus et détails",
+        "p": "Nous choisissons tissus, boutons, fournitures et finitions selon vos conditions de travail et la façon dont vous lavez vos uniformes."
       },
       {
         "h": "Développement",
-        "p": "Postes, couleurs, quantités et un dossier technique par vêtement. C’est l’étape où un vêtement devient une spécification."
+        "p": "Nous transformons la création en un plan clair par vêtement : détails, couleurs et quantités."
       },
       {
         "h": "Production",
-        "p": "Vos vêtements approuvés sont fabriqués selon la spécification verrouillée. Rien n’est coupé avant l’obtention des approbations requises."
+        "p": "Nous fabriquons vos vêtements selon le modèle approuvé. La coupe ne commence qu’une fois les détails requis validés par vous."
       },
       {
         "h": "Livraison",
-        "p": "Les vêtements partent vers vos sites. Vous confirmez la réception et chaque modèle approuvé passe au réassort."
+        "p": "Nous expédions les vêtements vers vos sites. Vous confirmez la réception et nous gardons les modèles approuvés prêts pour les commandes suivantes."
       },
       {
-        "h": "Réassort",
-        "p": "La révision approuvée est archivée avec ses mesures, tissus, couleurs et fournisseurs, puis revérifiée en disponibilité, prix et délais."
+        "h": "Réassorts",
+        "p": "Nous reprenons les mesures, tissus et couleurs enregistrés pour votre commande suivante. Disponibilité, prix et délais sont revérifiés avant la production."
       }
     ]
   },
   "phases": {
     "kicker": "Calendrier",
-    "h2": "Le calendrier de vos projets.",
+    "h2": "Votre projet, étape par étape",
     "phaseLabel": "Phase",
-    "intro": "L’ordre est fixe. La durée ne l’est pas, car elle dépend de vos vêtements, de vos quantités et de vos approbations.",
+    "intro": "Nous fixons un calendrier selon vos vêtements, vos quantités, les essayages et les validations.",
     "items": [
       {
-        "h": "Brief et examen",
-        "p": "Vous nous indiquez les postes, les quantités et la date. Nous le lisons, décidons si le projet correspond et organisons la rencontre.",
-        "m": "Sans compte. Sans frais."
+        "h": "Votre brief et le premier rendez-vous",
+        "p": "Parlez-nous de l’équipe, des quantités et de la date. Nous examinons vos besoins et fixons un premier rendez-vous.",
+        "m": "Ni compte ni paiement."
       },
       {
-        "h": "Développement et essayage",
-        "p": "Tissu, construction et dossiers techniques, puis des prototypes essayés par vos équipes dans leur travail réel.",
-        "m": "Approuvé vêtement par vêtement."
+        "h": "Échantillons et essayages",
+        "p": "Nous choisissons les tissus et faisons des échantillons que votre équipe essaie au travail : coupe, confort et détails.",
+        "m": "Vous validez chaque vêtement."
       },
       {
-        "h": "Pré-production et production",
-        "p": "Quantités, couleurs et répartition des tailles sont confirmées et verrouillées, puis la production suit la version approuvée.",
-        "m": "Lancé sur approbations."
+        "h": "Validation finale et production",
+        "p": "Vous confirmez les quantités, les couleurs et les tailles. Nous produisons ensuite les vêtements selon le modèle convenu.",
+        "m": "La production suit la validation."
       },
       {
-        "h": "Livraison et réassort",
-        "p": "Les vêtements partent vers vos sites et la révision approuvée est archivée au projet.",
-        "m": "Le réassort part du dossier."
+        "h": "Livraison et réassorts",
+        "p": "Nous livrons vos uniformes et conservons les détails approuvés pour les remplacements et les nouvelles recrues.",
+        "m": "Vos modèles restent enregistrés."
       }
     ]
   },
   "includes": {
     "kicker": "Ce qui est inclus",
-    "h2": "Les détails qui rendent l’uniforme vôtre.",
-    "intro": "Votre brief définit ce que nous développons, ce qui requiert votre accord et ce qui est inclus. Chaque partie produit quelque chose à tenir ou à lire : un échantillon, un enregistrement, une décision.",
+    "h2": "Les détails de vos vêtements de travail sur mesure",
+    "intro": "Nous convenons du contenu de votre projet avant de commencer. Les exemples ci-dessous montrent les plans, échantillons et dossiers qui guident le travail.",
     "items": [
       {
-        "h": "Rôles et vêtements",
-        "p": "Qui a besoin de quoi, du poste individuel à un vestiaire d’équipe coordonné. Les postes d’abord, les vêtements ensuite.",
+        "h": "Des vêtements par rôle",
+        "p": "Nous planifions ce dont chacun a besoin, d’un rôle à un vestiaire d’équipe cohérent.",
         "a": "plan"
       },
       {
-        "h": "Tissu et construction",
-        "p": "Grammage, composition et finition selon votre cycle de lavage et votre climat, non une planche.",
+        "h": "Des tissus pour le quotidien",
+        "p": "Grammage, composition et finitions sont choisis pour votre travail et votre routine de lavage.",
         "a": "fabric"
       },
       {
-        "h": "Prototypes et essayage",
-        "p": "Des échantillons essayés par ceux qui les porteront, dans leur travail réel. Les retours sont consignés par vêtement.",
+        "h": "Échantillons et essayages",
+        "p": "Votre équipe essaie les échantillons au travail. Nous consignons ses retours par vêtement.",
         "a": "proto"
       },
       {
-        "h": "Détails de marque",
-        "p": "Couleurs, fournitures et personnalisation dans le périmètre convenu, à une taille qui survit au lavage.",
+        "h": "Les détails de votre marque",
+        "p": "Couleurs, étiquettes et détails suivent le modèle convenu et tiennent à l’usage quotidien.",
         "a": "brand"
       },
       {
-        "h": "Une spécification archivée",
-        "p": "La révision approuvée conservée avec ses mesures, tissus, couleurs et fournisseurs.",
+        "h": "Vos dossiers vêtements",
+        "p": "Nous réunissons mesures, tissus, couleurs et fournisseurs approuvés dans un dossier par vêtement.",
         "a": "spec"
       },
       {
-        "h": "Un réassort identique",
-        "p": "Produit à partir du dossier archivé, puis revérifié en disponibilité, prix et délais.",
+        "h": "Prêt pour le réassort",
+        "p": "Nous vérifions la disponibilité du tissu, le prix et les délais avant de refabriquer votre modèle approuvé.",
         "a": "reorder"
       }
     ],
@@ -1451,7 +1451,7 @@
       },
       "fabric": {
         "label": "Sélection de tissus",
-        "meta": "Selon votre lavage",
+        "meta": "Pour votre lavage",
         "rows": [
           [
             "Sergé",
@@ -1501,7 +1501,7 @@
         "label": "Étiquette et coloris",
         "meta": "40 × 12 mm",
         "mark": "VOTRE MARQUE",
-        "note": "étiquette tissée, cousue dans la couture",
+        "note": "étiquette tissée cousue dans la couture",
         "swatches": [
           [
             "#011251",
@@ -1531,7 +1531,7 @@
           ],
           [
             "Couleur",
-            "Marine sur mesure · bain 3"
+            "Marine dédié · échantillon de couleur 3"
           ],
           [
             "Positions",
@@ -1544,7 +1544,7 @@
         ]
       },
       "reorder": {
-        "label": "Suivi de réassort",
+        "label": "Fiche de réassort",
         "meta": "88 pièces",
         "rows": [
           [
@@ -1552,7 +1552,7 @@
             "Rév. 4"
           ],
           [
-            "Réassorti",
+            "Quantité en réassort",
             "88 pièces"
           ],
           [
@@ -1560,7 +1560,7 @@
             "Inchangé"
           ]
         ],
-        "check": "Produit d’après le dossier archivé, pas de mémoire"
+        "check": "Fabriqué d’après votre dossier approuvé"
       }
     }
   }

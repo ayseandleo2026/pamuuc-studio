@@ -1,10 +1,10 @@
 {
   "locale": "en",
   "meta": {
-    "title": "Custom Uniform Design Studio in Barcelona | PAMUUC Studio",
-    "description": "Custom uniform design and production for hotels, restaurants, wellness spaces and clinics. Produced in Barcelona, with orders from 10 pieces per style.",
-    "ogTitle": "Custom Uniform Design Studio in Barcelona | PAMUUC Studio",
-    "ogDescription": "Made-to-order uniform systems for hotels, restaurants, wellness spaces, clinics and guest-facing teams, from design and fittings to production and reorders."
+    "title": "Custom Uniforms & Workwear in Barcelona | PAMUUC Studio",
+    "description": "Custom uniforms and workwear for hotels, restaurants, spas and private clinics. Designed and made in Barcelona, from samples and fittings to reorders.",
+    "ogTitle": "Custom Uniforms & Workwear in Barcelona | PAMUUC Studio",
+    "ogDescription": "Custom uniforms and workwear for hotels, restaurants, spas and private clinics. Designed and made in Barcelona, from samples and fittings to reorders."
   },
   "nav": [
     {
@@ -29,36 +29,36 @@
     }
   ],
   "hero": {
-    "eyebrow": "CUSTOM UNIFORM DESIGN AND PRODUCTION · BARCELONA",
-    "h1": "Custom uniforms for hotels, restaurants, wellness spaces and private clinics",
-    "lead": "We design and produce made-to-order uniform systems around your brand, team roles and daily work, from the first brief and fittings to production and future reorders.",
+    "eyebrow": "UNIFORM DESIGN AND PRODUCTION · BARCELONA",
+    "h1": "Custom uniforms and workwear for your team",
+    "lead": "We design and make uniforms for hotels, restaurants, spas and private clinics. Made in Barcelona, with samples, team fittings and reorders.",
     "pills": [
       "Designed for your brand",
       "Developed by role",
       "Produced in Barcelona",
       "Prepared for reorders"
     ],
-    "primary": "Discuss your uniform project",
-    "secondary": "View selected work",
+    "primary": "Discuss your project",
+    "secondary": "Explore our work",
     "imageAlt": "Custom uniform design and garment development by PAMUUC Studio in Barcelona",
     "proofs": [
       {
         "label": "First project",
-        "text": "Design, samples, fittings and production developed for your space and team."
+        "text": "Design, samples, fittings and production for your team."
       },
       {
         "label": "Future orders",
-        "text": "Approved patterns and specifications kept ready for consistent reorders."
+        "text": "We keep your approved designs on file for replacements and new starters."
       }
     ]
   },
   "services": {
     "kicker": "WHAT WE DO",
-    "h2": "A complete custom-uniform service, not a catalogue",
+    "h2": "Custom uniform design and production",
     "intro": "PAMUUC Studio designs, develops and produces custom uniforms for hospitality, wellness, healthcare and guest-facing teams. Every project is built around the business, the people wearing the garments and the work they do.",
     "card": {
       "topline": "DESIGN, DEVELOPMENT AND PRODUCTION",
-      "h3": "Custom uniform systems",
+      "h3": "Custom uniforms and workwear",
       "p": "One coordinated professional wardrobe, designed around your space, brand, roles, movement, care requirements and future team growth.",
       "features": [
         "Garments planned around each role and working environment",
@@ -68,7 +68,7 @@
     }
   },
   "band": {
-    "text": "Uniforms that work for the brand, the team and the shift",
+    "text": "Uniforms that reflect your brand and work for your team",
     "points": [
       "Reflect your space and identity",
       "Support real movement and daily tasks",
@@ -83,25 +83,25 @@
         "v": "2,600",
         "u": "",
         "l": "Garments made in 2026",
-        "n": "Patterned, cut, sewn and finished within thirty kilometres of Barcelona, across every programme delivered this year."
+        "n": "Patterned, cut, sewn and finished within thirty kilometres of Barcelona, for this year’s projects."
       },
       {
         "v": "12",
         "u": "weeks",
-        "l": "A full project, average",
-        "n": "From the brief you send to the first delivery, across all six stages. Yours is quoted against your own garments, quantities and approvals."
+        "l": "Full project average",
+        "n": "From your first brief to delivery. We confirm your schedule based on the garments, quantities and approvals needed."
       },
       {
         "v": "3",
         "u": "weeks",
-        "l": "A reorder, in production",
-        "n": "Produced against the archived specification, so nothing is developed twice. Availability and price are rechecked before it runs."
+        "l": "Reorder production time",
+        "n": "Made from the approved garment details kept on file. We check availability and price again before production."
       },
       {
         "v": "€150",
         "u": "",
-        "l": "Per person, average",
-        "n": "What a team typically spends per head across the garments in its range. Development, fabric and quantity move it from there."
+        "l": "Average per person",
+        "n": "Typical spend per person for the garments in the agreed range. Development, fabric and quantity affect the final price."
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
@@ -109,53 +109,53 @@
   },
   "sectors": {
     "kicker": "WHO WE WORK WITH",
-    "h2": "Six environments we develop for",
-    "intro": "Each card opens the roles, garments and priorities behind it.",
+    "h2": "Uniforms for your sector",
+    "intro": "From hotel reception to the kitchen or treatment room, each role has its own needs.",
     "items": [
       {
         "name": "Hotels and hospitality",
         "modal": "modal-sector-hotels",
-        "desc": "One coordinated wardrobe across reception, concierge, food and beverage, housekeeping, spa and management.",
+        "desc": "Hotel uniforms that bring reception, restaurant, housekeeping, spa and management teams together.",
         "img": "/assets/images/home/sector-01-hotels.jpg",
         "alt": "Hotel corridor, a hand on a guest-room door"
       },
       {
         "name": "Restaurants and food service",
         "modal": "modal-sector-restaurants",
-        "desc": "Uniforms for front of house, bar, kitchen and management in fast-moving service environments.",
+        "desc": "Restaurant uniforms and chef uniforms designed for busy service, movement and regular washing.",
         "img": "/assets/images/home/sector-02-restaurants.jpg",
         "alt": "Table service, a plate finished by hand"
       },
       {
         "name": "Spa and wellness",
         "modal": "modal-sector-wellness",
-        "desc": "Calm, functional uniforms for reception, treatment and support roles.",
+        "desc": "Spa and beauty uniforms that feel comfortable and suit the calm of your space.",
         "img": "/assets/images/home/sector-03-wellness.jpg",
         "alt": "Calm treatment interior in warm neutral tones"
       },
       {
         "name": "Dental and private clinics",
         "modal": "modal-sector-medical",
-        "desc": "A professional alternative to generic clinical clothing for patient-facing and treatment teams.",
+        "desc": "Custom clinic uniforms for reception and care, made for comfort and regular washing.",
         "img": "/assets/images/home/sector-04-clinics.jpg",
         "alt": "Treatment room in a private clinic"
       },
       {
-        "name": "Operational service teams",
+        "name": "Maintenance and support teams",
         "modal": "modal-sector-service",
-        "desc": "Hard-wearing garments for maintenance, logistics, support and other practical roles.",
+        "desc": "Workwear for maintenance, logistics and support teams, made for movement and daily use.",
         "img": "/assets/images/home/sector-05-service.jpg",
         "alt": "Back-of-house apron and technical workwear"
       },
       {
-        "name": "Guest-facing teams",
+        "name": "Retail and guest services",
         "modal": "modal-sector-guest",
-        "desc": "Custom uniforms for the people who welcome, guide and represent the business.",
+        "desc": "Bespoke uniforms for welcoming guests, helping customers and representing your business.",
         "img": "/assets/images/home/sector-06-guest.jpg",
         "alt": "Hotel welcome desk with front-of-house team"
       }
     ],
-    "handoff": "Not sure which one fits? Describe your team"
+    "handoff": "Tell us what your team needs"
   },
   "approach": {
     "kicker": "HOW WE DESIGN",
@@ -185,7 +185,7 @@
   },
   "categories": {
     "kicker": "WHAT WE CAN DEVELOP",
-    "h2": "One wardrobe system, from core garments to the smallest details",
+    "h2": "Uniforms for every role in your team",
     "intro": "We can build a complete multi-role wardrobe or begin with one department, role or garment category. Every decision is coordinated before production.",
     "groups": [
       {
@@ -297,7 +297,7 @@
       }
     ],
     "note": "The confirmed schedule depends on the number of styles, fabric availability, fittings, revision rounds, construction, quantities and approval timing.",
-    "handoff": "Put a date on your own project"
+    "handoff": "Discuss your delivery date"
   },
   "personalised": {
     "kicker": "CUSTOMISATION",
@@ -454,13 +454,13 @@
   },
   "projects": {
     "kicker": "SELECTED WORK AND GUIDANCE",
-    "h2": "Three programmes, in the environments they were made for",
-    "intro": "A hotel opening, a wellness team and a private clinic: the same method, three very different rooms.",
+    "h2": "Uniforms in practice",
+    "intro": "Explore our hotel and clinic projects, plus a practical guide to uniforms for wellness teams.",
     "items": [
       {
         "tag": "HOTEL CASE STUDY",
         "h3": "Custom hotel uniforms for METT Barcelona",
-        "p": "A complete, role-based wardrobe developed from the hotel’s interior concept for reception, food and beverage, management and spa teams, then designed, prototyped and produced in Barcelona.",
+        "p": "A complete hotel wardrobe inspired by the interiors, with uniforms for reception, restaurant, management and spa teams. Designed, sampled and made in Barcelona.",
         "img": "/assets/images/project-barcelona-heritage.jpg",
         "alt": "A modernista facade in central Barcelona, the kind of property these uniform programmes are made for",
         "href": "/en/blog/custom-hospitality-uniforms/",
@@ -468,8 +468,8 @@
       },
       {
         "tag": "WELLNESS GUIDE",
-        "h3": "Designing a multi-role wellness wardrobe",
-        "p": "A practical guide to connecting reception, treatment and support roles through shared colours, materials, garment details and a clear continuity plan.",
+        "h3": "A guide to spa and wellness uniforms",
+        "p": "How to bring reception, treatment and support teams together through colours, fabrics and garment details, with future orders in mind.",
         "img": "/assets/images/project-multi-role-service-team.jpg",
         "alt": "Wellness team wardrobe connecting reception and treatment roles",
         "href": "/en/blog/wellness-studio-uniform-system/",
@@ -478,35 +478,35 @@
       {
         "tag": "CLINIC CASE STUDY",
         "h3": "Custom uniforms for a Barcelona dental clinic",
-        "p": "A professional wardrobe designed to move beyond generic clinical clothing and connect the clinic’s space, brand, front-of-house presentation and daily care requirements.",
+        "p": "Custom dental clinic uniforms that reflect the space and brand, with practical garments for reception and daily patient care.",
         "img": "/assets/images/project-clinic-editorial.jpg",
         "alt": "Custom clinical uniforms in a Barcelona dental practice",
         "href": "/en/blog/custom-dental-clinic-uniforms-barcelona/",
         "linkLabel": "Read the clinic case study"
       }
     ],
-    "handoff": "Start a programme like these"
+    "handoff": "Discuss a project for your team"
   },
   "faq": {
     "kicker": "FREQUENTLY ASKED QUESTIONS",
-    "h2": "Answers to the questions buyers ask first",
-    "intro": "The practical points worth settling before a first meeting.",
+    "h2": "What to know before you start",
+    "intro": "Practical answers about orders, prices, timing and how we work.",
     "items": [
       {
         "q": "Do you work from a catalogue?",
-        "a": "No. Each project is developed around the business, space, team and roles. When an existing design base offers a genuine advantage in timing or cost, we can use it as a starting point while adapting the final wardrobe to the brief."
+        "a": "No. We design uniforms around your business, team and daily work. If an existing design can save time or cost, we may use it as a starting point and adapt it to your needs."
       },
       {
-        "q": "Do you handle repeat orders after the first production?",
-        "a": "Yes. Approved patterns, fabrics, finishes, branding and specifications are organised for future use. This gives replacements, new starters and team growth a consistent starting point without repeating the full development process."
+        "q": "Can we reorder the same uniforms later?",
+        "a": "Yes. We keep your approved patterns, fabrics, colours and garment details on file. Replacements and uniforms for new team members start from that design, with availability, price and timing checked before each order."
       },
       {
         "q": "Do we need to begin with a complete wardrobe?",
-        "a": "No. You can begin with one role, department or garment category and expand later. We define the most useful starting point according to customer visibility, operational need, quantity, budget and timeline."
+        "a": "No. You can start with one role, department or type of garment and add more later. We help you choose a starting point that suits your priorities, quantities, budget and delivery date."
       },
       {
         "q": "Can you develop custom colours and details?",
-        "a": "Yes. We can work with available fabric colour cards or assess dedicated colours when the material and quantity allow. Branding and custom details are selected according to the garment, intended visibility, durability and care requirements."
+        "a": "Yes. We can choose from existing fabric colours or assess a custom colour if the fabric and quantity allow it. Labels, branding and other details are chosen to suit the garment, your brand and the way it will be washed."
       },
       {
         "q": "What is the minimum order quantity?",
@@ -514,7 +514,7 @@
       },
       {
         "q": "How much does a custom uniform project cost?",
-        "a": "We do not use a rigid price list. The proposal is built around the confirmed scope: garments, quantities, materials, construction and the level of customisation. Two garments that look similar can require very different development, materials and production work, so we price the project rather than applying one standard garment rate."
+        "a": "We quote each project individually. The price depends on the garments, quantities, fabrics, construction and custom details, plus the design and sample work needed. Your proposal sets out the agreed scope and what is included."
       },
       {
         "q": "How long does a project take from brief to delivery?",
@@ -522,15 +522,15 @@
       },
       {
         "q": "Where are the garments designed and produced?",
-        "a": "In Barcelona. Design, development, sampling, fittings and production all run through a local supply chain, which keeps prototype rounds short and gives direct control over the production run."
+        "a": "In Barcelona. Design, development, samples, fittings and production are handled through our local supply chain, so we can work closely with the people making your garments."
       },
       {
         "q": "Do we see prototypes before production starts?",
-        "a": "Yes. Prototypes, samples and fittings come before any production commitment, so fit, fabric, construction and branding are agreed on real garments rather than on drawings."
+        "a": "Yes. You review samples and try the garments before committing to production. We agree the fit, fabric, construction and brand details on real garments."
       },
       {
         "q": "How do you handle sizing across a whole team?",
-        "a": "Quantities are distributed across the required sizes at the size and quantity confirmation stage, and fittings are used to set the size run before production begins. New starters are then covered by the archived patterns and specifications."
+        "a": "We use fittings to check the sizes your team needs, then agree the quantity in each size before production. The approved patterns and garment details are kept for future team members and repeat orders."
       },
       {
         "q": "Will the fabrics hold up to industrial laundry?",
@@ -538,21 +538,21 @@
       },
       {
         "q": "Which sectors do you work with?",
-        "a": "Hotels and hospitality, restaurants and food service, spa and wellness, dental and private clinics, operational and service teams, and guest-facing roles. The method is the same across all of them; the garments, fabrics and priorities are not."
+        "a": "We design uniforms for hotels, restaurants, spas, wellness studios, dental and private clinics, maintenance teams, retail and guest services. Each project is adapted to the work, the people and the setting."
       },
       {
         "q": "Can the uniforms follow our interior design or brand identity?",
-        "a": "Yes. A wardrobe can be developed directly from an interior concept, as it was for a five-star hotel opening in Barcelona. Colours can come from available fabric colour cards, or be developed as dedicated colours when the material and quantity allow."
+        "a": "Yes. Your interiors and brand can guide the colours, fabrics and details, as they did for a five-star hotel opening in Barcelona. We use available fabric colours or assess dedicated colours when material and quantity allow."
       }
     ],
-    "handoff": "Still have a question? Ask it on the form"
+    "handoff": "Have another question? Tell us below"
   },
   "contact": {
     "kicker": "Start your project",
-    "h2": "Tell us about your team, roles and target date",
+    "h2": "Let’s plan your team’s uniforms",
     "paras": [
-      "Share what you know so far. We will review the scope, feasibility and most practical starting point before recommending a direction.",
-      "The first meeting can take place at your space in Barcelona, elsewhere in Spain or abroad, or by video. The aim is to understand the environment, team structure, operational needs and what the uniforms need to achieve."
+      "Tell us about your business, team and target date. We will review what you need and suggest a practical starting point.",
+      "We can meet at your premises in Barcelona, elsewhere in Spain or abroad, or by video. The first conversation helps us understand your team and its daily work."
     ],
     "emailLabel": "Prefer email",
     "form": {
@@ -564,7 +564,7 @@
         "team-size": "Team size",
         "project-type": "Project type",
         "timeline": "Target timeline",
-        "meeting-datetime": "Preferred date and time for the first meeting",
+        "meeting-datetime": "Preferred meeting date and time",
         "brief": "Project description"
       },
       "placeholders": {
@@ -572,7 +572,7 @@
         "email": "you@company.com",
         "company": "Company or venue name",
         "phone": "+34 …",
-        "brief": "Tell us about the space, team, roles, garments, approximate quantities, target date and what the uniforms need to achieve."
+        "brief": "What does your team do? Tell us which garments you need, roughly how many, and your preferred delivery date."
       },
       "helps": {
         "phone": "Optional",
@@ -618,8 +618,8 @@
             "disabled": true
           },
           {
-            "v": "A complete custom uniform system",
-            "t": "A complete custom uniform system",
+            "v": "Uniforms for the whole team",
+            "t": "Uniforms for the whole team",
             "disabled": false
           },
           {
@@ -638,8 +638,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising or branded apparel",
-            "t": "Merchandising or branded apparel",
+            "v": "Merchandise or branded clothing",
+            "t": "Merchandise or branded clothing",
             "disabled": false
           },
           {
@@ -687,7 +687,7 @@
     }
   },
   "footer": {
-    "about": "Custom uniform systems designed, developed and produced in Barcelona.",
+    "about": "Custom uniforms and workwear, designed and made in Barcelona.",
     "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
@@ -811,11 +811,11 @@
       },
       {
         "t": "h",
-        "v": "One visual system for a property with many different roles"
+        "v": "A shared look across every hotel team"
       },
       {
         "t": "p",
-        "v": "Hotels bring together guest-facing, service and operational departments with very different working needs. We create role-specific garments that still feel like one hotel wardrobe."
+        "v": "We design hospitality uniforms for each hotel team, from reception and housekeeping to restaurant and spa. Different roles get the garments they need, with a shared look across the hotel."
       },
       {
         "t": "h",
@@ -869,11 +869,11 @@
       },
       {
         "t": "h",
-        "v": "Designed around service pace, movement, care and the identity of the venue"
+        "v": "Made for busy service and regular washing"
       },
       {
         "t": "p",
-        "v": "Restaurant teams work through heat, movement, spills and long periods of service. The uniform needs to support that pace while keeping front-of-house and operational roles connected to the concept."
+        "v": "Restaurant teams deal with heat, spills and long shifts. We design uniforms that let people move comfortably and suit the character of the venue, from the dining room to the kitchen."
       },
       {
         "t": "h",
@@ -921,11 +921,11 @@
     "sector-wellness": [
       {
         "t": "h",
-        "v": "Spa and wellness uniforms"
+        "v": "Spa uniforms for wellness and beauty teams"
       },
       {
         "t": "h",
-        "v": "Comfort, movement and calm presentation across the client journey"
+        "v": "Comfort that suits the calm of your space"
       },
       {
         "t": "p",
@@ -980,7 +980,7 @@
       },
       {
         "t": "h",
-        "v": "Clinical function with a more considered, brand-aligned team presentation"
+        "v": "Practical clothing that puts patients at ease"
       },
       {
         "t": "p",
@@ -1076,7 +1076,7 @@
       },
       {
         "t": "h",
-        "v": "A clear expression of the brand, designed for daily interaction"
+        "v": "A welcoming look that reflects your business"
       },
       {
         "t": "p",
@@ -1326,103 +1326,103 @@
       "Outerwear",
       "Accessories"
     ],
-    "ctaText": "Tell us the roles and we will come back with the wardrobe.",
-    "ctaLabel": "Start the brief",
+    "ctaText": "Tell us about your team. We will help you plan the right uniforms.",
+    "ctaLabel": "Tell us what you need",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "A coordinated uniform set hanging on a rail"
   },
   "stages": {
     "kicker": "How it works",
-    "h2": "Six stages, and you decide at every one.",
-    "intro": "A project moves when you approve it. Each stage ends in a decision that is recorded against the project, so nobody has to remember what was agreed.",
+    "h2": "From your first idea to the next order",
+    "intro": "Six clear stages. You review and approve the key decisions, and we keep a record of what we agree.",
     "items": [
       {
         "h": "Design",
-        "p": "An external designer develops the visual direction from your brief. You review it and decide. Where design is not part of what you bought, the project starts at development."
+        "p": "An external designer creates a proposal from your brief for you to review. If design is not included in your project, we start with garment development."
       },
       {
-        "h": "Fabric and accessories",
-        "p": "Weight, composition, trims and finish are selected against your wash cycle and your climate, not against a mood board."
+        "h": "Fabrics and details",
+        "p": "We choose fabrics, buttons, trims and finishes to suit your working conditions and the way you wash your uniforms."
       },
       {
         "h": "Development",
-        "p": "Positions, colours, quantities and a technical file per garment. This is the stage where a garment becomes a specification."
+        "p": "We turn the design into a clear plan for each garment, covering its details, colours and quantities."
       },
       {
         "h": "Production",
-        "p": "Your approved garments are manufactured against the locked specification. Nothing is cut before the required approvals are in place."
+        "p": "We make your garments to the approved design. Cutting starts only once the required details have your approval."
       },
       {
         "h": "Delivery",
-        "p": "Garments ship to your locations. You confirm receipt, and every approved style becomes available to reorder."
+        "p": "We send the garments to your locations. You confirm receipt, and we keep the approved styles ready for future orders."
       },
       {
-        "h": "Reorder",
-        "p": "The approved revision is archived with its measurements, fabrics, colours and suppliers, then rechecked for availability, price and timing."
+        "h": "Reorders",
+        "p": "We use the saved measurements, fabrics and colours for your next order. Availability, price and timing are checked again before production."
       }
     ]
   },
   "phases": {
     "kicker": "Timeline",
-    "h2": "A timeline of your projects.",
+    "h2": "Your project, step by step",
     "phaseLabel": "Phase",
-    "intro": "The order is fixed. The duration is not, because it depends on your garments, your quantities and your approvals.",
+    "intro": "We agree a schedule around your garments, quantities, fittings and approvals.",
     "items": [
       {
-        "h": "Brief and review",
-        "p": "You tell us the roles, the quantities and the date. We read it, decide whether the project is a fit, and arrange discovery where it is.",
-        "m": "No account. Nothing charged."
+        "h": "Your brief and first meeting",
+        "p": "Tell us about your team, quantities and target date. We review your needs and arrange a first meeting if we can help.",
+        "m": "No account or payment needed."
       },
       {
-        "h": "Development and fitting",
-        "p": "Fabric, construction and technical files, then prototypes fitted on your own people doing the actual work.",
-        "m": "Approved one garment at a time."
+        "h": "Samples and fittings",
+        "p": "We choose fabrics and make samples for your team to try at work, checking fit, comfort and details.",
+        "m": "You approve each garment."
       },
       {
-        "h": "Pre-production and production",
-        "p": "Quantities, colours and size splits are confirmed and locked, then production follows the approved version.",
-        "m": "Released on approvals."
+        "h": "Final approval and production",
+        "p": "You confirm the quantities, colours and sizes. We then produce the garments to the agreed design.",
+        "m": "Production starts after approval."
       },
       {
-        "h": "Delivery and reorder",
-        "p": "Garments ship to your locations, and the approved revision is archived against the project.",
-        "m": "A reorder is made from the file."
+        "h": "Delivery and reorders",
+        "p": "We deliver your uniforms and keep the approved garment details for replacements and new team members.",
+        "m": "Your designs stay on file."
       }
     ]
   },
   "includes": {
     "kicker": "What is included",
-    "h2": "The details that make the uniform yours.",
-    "intro": "Your brief defines what we develop, which decisions need your approval, and what is included. Every part below produces something you can hold or read — a sample, a record, a decision.",
+    "h2": "The details behind your custom workwear",
+    "intro": "We agree what your project includes before starting. The examples below show the plans, samples and records that guide the work.",
     "items": [
       {
-        "h": "Role and garment plan",
-        "p": "Who needs what, from individual positions to a coordinated team wardrobe. Roles first, garments second.",
+        "h": "Garments for each role",
+        "p": "We plan what each person needs, from one role to a complete team wardrobe that works together.",
         "a": "plan"
       },
       {
-        "h": "Fabric and construction",
-        "p": "Weight, composition and finish selected against your wash cycle and climate, not against a mood board.",
+        "h": "Fabrics for daily work",
+        "p": "Fabric weight, composition and finishes are chosen for your working conditions and laundry routine.",
         "a": "fabric"
       },
       {
-        "h": "Prototypes and fitting",
-        "p": "Samples tried on the people who will wear them, doing the actual work. Feedback recorded per garment.",
+        "h": "Samples and fittings",
+        "p": "Your team tries the samples at work. We record their feedback for each garment before approval.",
         "a": "proto"
       },
       {
-        "h": "Brand details",
-        "p": "Colours, trims and personalisation developed within the agreed scope, at a size that survives laundry.",
+        "h": "Your brand details",
+        "p": "Colours, labels and details follow the agreed design and suit daily wear and washing.",
         "a": "brand"
       },
       {
-        "h": "An archived specification",
-        "p": "The approved revision stored with its measurements, fabrics, colours and suppliers.",
+        "h": "Your garment records",
+        "p": "We keep the approved measurements, fabrics, colours and suppliers together in a garment record.",
         "a": "spec"
       },
       {
-        "h": "A reorder that matches",
-        "p": "Produced against the archived file, then rechecked for availability, price and timing.",
+        "h": "Ready for reorders",
+        "p": "We check fabric availability, price and timing before making your approved design again.",
         "a": "reorder"
       }
     ],
@@ -1451,7 +1451,7 @@
       },
       "fabric": {
         "label": "Fabric shortlist",
-        "meta": "Against your wash cycle",
+        "meta": "For your laundry routine",
         "rows": [
           [
             "Twill",
@@ -1500,8 +1500,8 @@
       "brand": {
         "label": "Label and colourways",
         "meta": "40 × 12 mm",
-        "mark": "YOUR MARK",
-        "note": "woven label, sewn into the seam",
+        "mark": "YOUR BRAND",
+        "note": "woven label sewn into the seam",
         "swatches": [
           [
             "#011251",
@@ -1531,7 +1531,7 @@
           ],
           [
             "Colour",
-            "Custom navy · lab dip 3"
+            "Custom navy · colour sample 3"
           ],
           [
             "Positions",
@@ -1560,7 +1560,7 @@
             "Unchanged"
           ]
         ],
-        "check": "Produced against the archived file, not a memory"
+        "check": "Made from your approved garment record"
       }
     }
   }

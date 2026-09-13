@@ -577,12 +577,16 @@ function renderHome(loc) {
 
   const sectorKeys = ['sector-hotels', 'sector-restaurants', 'sector-wellness', 'sector-medical', 'sector-service', 'sector-guest'];
 
+  /* Control ids are prefixed: two of these names (timeline, brief) are also
+     section ids on the same page, and a duplicate id makes getElementById
+     and every in-page link resolve to whichever came first. */
+  const fid = (id) => `f-${id}`;
   const field = (id, name, type, required, extra = '') => {
     const label = h.contact.form.labels[id] || id;
     const ph = h.contact.form.placeholders[id];
     const control = type === 'textarea'
-      ? `<textarea class="inp" id="${id}" name="${name}" rows="4" maxlength="2000"${ph ? ` placeholder="${attr(ph)}"` : ''}></textarea>`
-      : `<input class="inp" id="${id}" name="${name}" type="${type}"${required ? ' required aria-required="true"' : ''}${ph ? ` placeholder="${attr(ph)}"` : ''}${extra}>`;
+      ? `<textarea class="inp" id="${fid(id)}" name="${name}" rows="4" maxlength="2000"${ph ? ` placeholder="${attr(ph)}"` : ''}></textarea>`
+      : `<input class="inp" id="${fid(id)}" name="${name}" type="${type}"${required ? ' required aria-required="true"' : ''}${ph ? ` placeholder="${attr(ph)}"` : ''}${extra}>`;
     const help = h.contact.form.helps?.[id];
     return `<label class="fld${required ? ' fld--req' : ''}${type === 'textarea' ? ' bf-full' : ''}">
 <span class="fld-l">${esc(label)}</span>${control}${help ? `<span class="fld-h">${esc(help)}</span>` : ''}</label>`;
@@ -590,7 +594,7 @@ function renderHome(loc) {
   const select = (id) => {
     const opts = h.contact.form.options[id] || [];
     return `<label class="fld fld--req"><span class="fld-l">${esc(h.contact.form.labels[id] || id)}</span>
-<select class="inp" id="${id}" name="${id}" required aria-required="true">
+<select class="inp" id="${fid(id)}" name="${id}" required aria-required="true">
 ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? ' disabled selected' : ''}>${esc(o.t)}</option>`).join('\n')}
 </select></label>`;
   };
