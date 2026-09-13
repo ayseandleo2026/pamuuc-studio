@@ -64,6 +64,13 @@
     "de": "/de/legal/"
   },
   "postSlugs": {
+    "hotellaundry": {
+      "en": "hotel-uniform-laundry-requirements",
+      "es": "requisitos-lavado-uniformes-hotel",
+      "fr": "exigences-blanchisserie-uniformes-hotel",
+      "it": "requisiti-lavaggio-divise-hotel",
+      "de": "waescheanforderungen-fuer-hoteluniformen"
+    },
     "hoteldurability": {
       "en": "hotel-uniform-durability",
       "es": "durabilidad-uniformes-hotel",
@@ -122,6 +129,7 @@
     }
   },
   "postOrder": [
+    "hotellaundry",
     "hoteldurability",
     "bestfabrics",
     "hotelfabrics",
