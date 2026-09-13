@@ -3,11 +3,11 @@
   "sections": [
     {
       "id": "privacy",
-      "title": "politica sulla riservatezza",
+      "title": "Informativa sulla privacy",
       "blocks": [
         {
           "t": "p",
-          "v": "Soggetto giuridico: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcellona - info@pamuuc.com"
+          "v": "Soggetto giuridico: Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcellona · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -60,7 +60,7 @@
             "Indirizzo e-mail",
             "Numero di telefono",
             "Nome dell'azienda",
-            "Dimensione della squadra",
+            "Dimensione del team",
             "Descrizione del progetto",
             "Qualsiasi informazione inclusa nel tuo messaggio"
           ]
@@ -97,7 +97,7 @@
             "Per mantenere la comunicazione con i potenziali clienti",
             "Per migliorare l'usabilità e le prestazioni del sito web",
             "Per mantenere la sicurezza del sito web e prevenire usi impropri",
-            "Per comprendere come i visitatori interagiscono con il sito Web in cui è stato fornito il consenso analitico"
+            "Per comprendere come i visitatori interagiscono con il sito web, quando è stato fornito il consenso alle analisi statistiche"
           ]
         },
         {
@@ -111,14 +111,14 @@
         {
           "t": "ul",
           "v": [
-            "L'interessato ha richiesto informazioni o contatti in merito a servizi, che costituiscono fasi precontrattuali.",
+            "L’interessato ha richiesto informazioni o un contatto in merito ai servizi, nell’ambito di misure precontrattuali.",
             "Interesse legittimo nella gestione di richieste e comunicazioni professionali.",
             "Consenso, ove richiesto, in particolare per cookie analitici e tecnologie simili."
           ]
         },
         {
           "t": "h",
-          "v": "5. TRATTAMENTO DEL FORM DI CONTATTO"
+          "v": "5. TRATTAMENTO DEI DATI DEL MODULO DI CONTATTO"
         },
         {
           "t": "p",
@@ -154,7 +154,7 @@
         },
         {
           "t": "p",
-          "v": "La conservazione dei dati di Analytics segue la configurazione della piattaforma di analisi utilizzata."
+          "v": "La conservazione dei dati di analisi segue la configurazione della piattaforma di analisi utilizzata."
         },
         {
           "t": "p",
@@ -186,7 +186,7 @@
         },
         {
           "t": "p",
-          "v": "Questo sito Web utilizza cookie e tecnologie simili per migliorare la funzionalità del sito Web, memorizzare le preferenze della lingua e misurare l'utilizzo del sito Web laddove è stato concesso il consenso all'analisi."
+          "v": "Questo sito web utilizza cookie e tecnologie simili per migliorarne le funzionalità, memorizzare le preferenze linguistiche e misurarne l’utilizzo, quando è stato fornito il consenso alle analisi statistiche."
         },
         {
           "t": "p",
@@ -234,7 +234,7 @@
         },
         {
           "t": "p",
-          "v": "Tuttavia, nessun metodo di trasmissione Internet o sistema di archiviazione può garantire che sia completamente sicuro."
+          "v": "Tuttavia, nessun metodo di trasmissione via Internet o sistema di archiviazione può garantire una sicurezza completa."
         },
         {
           "t": "h",
@@ -246,7 +246,7 @@
         },
         {
           "t": "h",
-          "v": "13. MODIFICHE A QUESTA POLITICA"
+          "v": "13. MODIFICHE ALLA PRESENTE INFORMATIVA"
         },
         {
           "t": "p",
@@ -264,11 +264,11 @@
     },
     {
       "id": "cookies",
-      "title": "Politica sui cookie",
+      "title": "Informativa sui cookie",
       "blocks": [
         {
           "t": "p",
-          "v": "Soggetto giuridico: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcellona - info@pamuuc.com"
+          "v": "Soggetto giuridico: Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcellona · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -301,7 +301,7 @@
         {
           "t": "ul",
           "v": [
-            "ricorda la selezione della lingua",
+            "ricordare la lingua selezionata",
             "memorizzare le preferenze di consenso sui cookie",
             "mantenere la funzionalità di base del sito web"
           ]
@@ -340,11 +340,11 @@
         },
         {
           "t": "p",
-          "v": "Non usati su questo sito; lo storage pubblicitario resta disattivato."
+          "v": "Non utilizzati su questo sito; la memorizzazione di dati a fini pubblicitari resta disattivata."
         },
         {
           "t": "h",
-          "v": "3. CONSENSO COOKIE"
+          "v": "3. CONSENSO AI COOKIE"
         },
         {
           "t": "p",
@@ -397,21 +397,21 @@
         },
         {
           "t": "h",
-          "v": "6. MODIFICHE A QUESTA POLITICA"
+          "v": "6. MODIFICHE ALLA PRESENTE INFORMATIVA"
         },
         {
           "t": "p",
-          "v": "La presente Politica sui cookie può essere aggiornata di volta in volta per riflettere requisiti legali, cambiamenti tecnologici o modifiche al sito web."
+          "v": "La presente Informativa sui cookie può essere aggiornata di volta in volta per riflettere requisiti legali, cambiamenti tecnologici o modifiche al sito web."
         }
       ]
     },
     {
       "id": "terms",
-      "title": "Termini di utilizzo",
+      "title": "Condizioni d’uso",
       "blocks": [
         {
           "t": "p",
-          "v": "Soggetto giuridico: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcellona - info@pamuuc.com"
+          "v": "Soggetto giuridico: Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcellona · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -550,7 +550,7 @@
       "blocks": [
         {
           "t": "p",
-          "v": "Soggetto giuridico: Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcellona - info@pamuuc.com"
+          "v": "Soggetto giuridico: Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcellona · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -598,7 +598,7 @@
         },
         {
           "t": "p",
-          "v": "L'accesso a questo sito web implica l'accettazione delle condizioni descritte nel presente Avviso Legale e nelle altre politiche pubblicate sul sito web."
+          "v": "L’accesso a questo sito web implica l’accettazione delle condizioni descritte nelle presenti Note legali e nelle altre informative pubblicate sul sito web."
         },
         {
           "t": "p",
@@ -651,7 +651,7 @@
         },
         {
           "t": "p",
-          "v": "La presente Nota Legale è regolata dalla legge spagnola."
+          "v": "Le presenti Note legali sono regolate dalla legge spagnola."
         },
         {
           "t": "p",

@@ -7,7 +7,7 @@
   "description": "Comment construire un système d’uniformes pour des équipes de studios bien-être en alignant espace, confort, service quotidien et durabilité des tissus.",
   "kicker": "Continuité opérationnelle",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "wellness-studio-uniform-system",
   "coverAlt": "Vestiaire coordonné pour l’équipe d’un studio de bien-être",
@@ -16,7 +16,7 @@
 ---
 Dans les studios de bien-être, l’expérience client commence avant même le soin. L’accueil, les matières, la lumière, le son et la présence visuelle de l’équipe façonnent tous la perception de la qualité. Les vêtements du personnel font donc partie intégrante du projet spatial.
 
-C’est pourquoi les uniformes doivent être abordés comme un système intégré. Au lieu de choisir des pièces séparées dans un catalogue, il est plus pertinent d’aligner la garde-robe avec l’architecture, le flux de service et les besoins opérationnels du quotidien.
+C’est pourquoi les uniformes doivent être abordés comme un système intégré. Au lieu de choisir des pièces séparées dans un catalogue, il est plus pertinent d’aligner le vestiaire avec l’architecture, le flux de service et les besoins opérationnels du quotidien.
 
 ## Le rôle des uniformes dans les environnements bien-être
 
@@ -32,7 +32,7 @@ Beaucoup de studios contemporains évitent l’esthétique clinique rigide et pr
 
 ## Confort, durabilité et entretien
 
-Les professionnels réalisent un travail précis pendant de longues heures. Les uniformes doivent soutenir la liberté de mouvement, un confort continu et une bonne tenue formelle tout au long de la journée.
+Les professionnels réalisent un travail précis pendant de longues heures. Les uniformes doivent soutenir la liberté de mouvement, un confort continu et une présentation soignée tout au long de la journée.
 
 Le choix des tissus est décisif : des fibres respirantes pour le confort, des mélanges techniques pour la durabilité, des couleurs stables pour des lavages fréquents. La construction compte elle aussi, avec des renforts sur les zones les plus sollicitées pour limiter les remplacements prématurés.
 

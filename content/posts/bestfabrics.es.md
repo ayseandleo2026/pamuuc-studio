@@ -2,18 +2,18 @@
   "key": "bestfabrics",
   "locale": "es",
   "slug": "comparar-muestras-tejidos-uniformes-hotel",
-  "title": "Cómo comparar muestras de tejidos",
+  "title": "Comparar tejidos para uniformes de hotel",
   "headline": "Cómo comparar muestras de tejidos para uniformes de hotel por función",
-  "description": "Utiliza una tabla práctica para comparar muestras de tejidos por imagen, movimiento, pruebas de cuidado y prototipos terminados.",
+  "description": "Compara muestras de tejidos para uniformes de hotel según su aspecto, movimiento, pruebas de mantenimiento y evaluación de prendas terminadas.",
   "kicker": "Evaluación de muestras",
   "published": "2026-09-05",
-  "modified": "2026-09-05",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "best-fabrics-hotel-uniforms",
   "coverAlt": "Cinco muestras preseleccionadas para uniformes de hotel con cuellos, puños, bolsillos y costuras",
   "coverCaption": "Visualización editorial de cinco tejidos ficticios, creada con IA a partir de referencias reales documentadas.",
   "takeaways": [
-    "Parte de un briefing aprobado y puntúa las muestras exactas del proveedor según sus requisitos.",
+    "Parte de un briefing aprobado de función y cuidado, y puntúa las muestras exactas de los proveedores según sus requisitos.",
     "Compara las muestras de forma anónima cuando sea posible para que la etiqueta no condicione la primera valoración.",
     "Vincula cada puntuación sobre color, dimensiones, abrasión y costuras con pruebas pertinentes.",
     "Aprueba una opción solo después de revisar un prototipo en movimiento y con la ruta de cuidado prevista."
@@ -26,7 +26,7 @@ Cuando el hotel ya ha definido lo que debe cumplir cada uniforme, el siguiente r
 
 ## Lleva el briefing aprobado a la mesa de muestras
 
-Empieza por la prenda y el turno. Una chaqueta de recepción puede necesitar una línea controlada después de horas de pie y sentada. Una camisa de restaurante debe acompañar el calor, las manchas y los cambios rápidos de dirección. Un pantalón de housekeeping afronta flexiones, bolsillos cargados, rozamiento y cuidados frecuentes.
+Empieza por la prenda y el turno. Una chaqueta de recepción puede necesitar una silueta definida tras horas de uso de pie o en posición sentada. Una camisa de restaurante debe acompañar el calor, las manchas y los cambios rápidos de dirección. Un pantalón del servicio de pisos afronta flexiones, bolsillos cargados, rozamiento y cuidados frecuentes.
 
 Lleva esas prioridades a la evaluación antes de abrir los sobres del proveedor. Incluye el clima de trabajo, el movimiento, el contacto con huéspedes, la exposición a manchas, la opacidad, el tacto y la ruta real de lavado, secado y acabado. La [guía de tejidos para uniformes de hotel](/es/blog/guia-tejidos-uniformes-hotel/) explica cómo convertir esas condiciones en un briefing que el proveedor pueda responder.
 
@@ -34,11 +34,11 @@ Este artículo empieza cuando ese briefing ya existe. Su objetivo es comparar la
 
 ## Crea la tabla antes de revelar las etiquetas
 
-Asigna a cada tejido preseleccionado un código neutro, como Muestra A, B o C. Cuando sea viable, realiza la primera valoración visual y táctil sin mostrar la composición ni el proveedor. Así evitas que una fibra conocida, una frase comercial o una preferencia previa decidan el resultado antes de examinar el tejido.
+Asigna a cada tejido preseleccionado un código neutro, como Muestra A, B o C. Cuando sea viable, realiza la primera valoración visual y táctil sin mostrar la composición ni el proveedor. Así evitas que una fibra conocida, una afirmación de sostenibilidad o una descripción comercial decidan el resultado antes de examinar el tejido.
 
 Utiliza la misma tabla para todas las opciones. Registra superficie, peso, opacidad, caída, elasticidad, recuperación, tacto, brillo y respuesta bajo la iluminación del hotel. Añade una observación breve junto a cada puntuación. Un número sin explicación resulta difícil de revisar después con diseño, operaciones, compras y lavandería.
 
-No valores un retal suelto como si fuera un uniforme terminado. Colócalo sobre un fondo opaco, cuelga una pieza mayor cuando sea posible y compáralo con los colores y materiales del espacio real. Señala lo que todavía no puede juzgarse, como el comportamiento de las costuras, la estabilidad de los bolsillos, el planchado y la recuperación tras el uso.
+No valores un retal suelto como si fuera un uniforme terminado. Dóblalo sobre un fondo opaco, cuelga una pieza mayor cuando sea posible y compáralo con los colores y materiales del espacio real. Señala lo que todavía no puede juzgarse, como el comportamiento de las costuras, la estabilidad de los bolsillos, el planchado y la recuperación tras el uso.
 
 La primera revisión debe reducir la selección, no declarar un ganador. Conserva dos opciones cuando ambas respondan al briefing de manera distinta. Una puede ofrecer una línea más estructurada y otra mayor libertad y suavidad. Esas diferencias se convierten en preguntas para la prueba por función y el desarrollo del prototipo.
 
@@ -46,7 +46,7 @@ Revela las fichas completas después de la ronda de observación. Comprueba si l
 
 ## Prueba la forma en recepción y conserjería
 
-Para una chaqueta de recepción o un pantalón de conserjería, compara las muestras preseleccionadas sobre la misma silueta. Pregunta cómo conserva cada opción la línea prevista, cómo responde después de estar sentada, cómo se ve bajo la luz del vestíbulo y cómo vuelve al servicio después del cuidado real.
+Para una chaqueta de recepción o un pantalón de conserjería, compara las muestras preseleccionadas sobre la misma silueta. Pregunta cómo conserva cada opción la línea prevista, cómo responde después de usar la prenda en posición sentada, cómo se ve bajo la luz del vestíbulo y cómo vuelve al servicio después del cuidado real.
 
 El tejido también debe sostener el patrón. La estructura del hombro, el forro, los bolsillos y la holgura de espalda pueden cambiar la presencia del mismo material en movimiento. Revisa la chaqueta cerrada, abierta y con los brazos extendidos sobre un mostrador. Después comprueba la recuperación en rodillas y asiento sin depender de una afirmación imprecisa sobre resistencia a las arrugas.
 
@@ -56,15 +56,15 @@ En restaurante y bar, compara todas las muestras con los mismos movimientos y co
 
 Valora por separado camisas, delantales, chalecos y pantalones. Una camisa suave de sala y un chaleco estructurado no necesitan el mismo tejido aunque compartan color. Puños, tapetas, bocas de bolsillo y costuras laterales reciben esfuerzos diferentes, por lo que las muestras de confección importan junto al retal principal.
 
-Consulta el [caso de hostelería de Pamuuc](/es/blog/uniformes-hosteleria-personalizados/) como ejemplo de diferenciación por función dentro de un vestuario coherente. Es una referencia de proyecto, no una prueba de que la misma mezcla sirva para otro hotel.
+Consulta el [caso de hostelería de PAMUUC](/es/blog/uniformes-hosteleria-personalizados/) como ejemplo de diferenciación por función dentro de un vestuario coherente. Es una referencia de proyecto, no una prueba de que la misma mezcla sirva para otro hotel.
 
-## Separa las evaluaciones de spa y housekeeping
+## Separa las evaluaciones de spa y pisos
 
 En spa, el tacto suave, el movimiento fluido, la opacidad y el confort en zonas húmedas pueden encabezar la comparación. Puntúa esas cualidades en las muestras exactas y confirma después si mantienen la imagen requerida tras el lavado y secado previstos.
 
-Housekeeping suele desplazar la evaluación hacia el movimiento, la función de los bolsillos, los puntos de fricción, la opacidad y un cuidado fiable. El peso, la elasticidad, la recuperación y las costuras deciden si el pantalón terminado acompaña flexiones y levantamientos repetidos, por lo que una muestra puede recibir aquí una puntuación distinta.
+El servicio de pisos suele desplazar la evaluación hacia el movimiento, la función de los bolsillos, los puntos de fricción, la opacidad y un cuidado fiable. El peso, la elasticidad, la recuperación y las costuras deciden si el pantalón terminado acompaña flexiones y levantamientos repetidos, por lo que una muestra puede recibir aquí una puntuación distinta.
 
-No obligues a spa y housekeeping a compartir una respuesta material solo porque ambas funciones están alejadas de recepción. Sus contactos, movimientos y cuidados son diferentes. El color o los acabados compartidos pueden mantener la coherencia mientras cambia el tejido base.
+No obligues a spa y pisos a compartir un mismo tejido solo porque ambas funciones están alejadas de recepción. Sus contactos, movimientos y cuidados son diferentes. El color o los acabados compartidos pueden mantener la coherencia mientras cambia el tejido base.
 
 ## Vincula cada puntuación con pruebas pertinentes
 
@@ -80,4 +80,4 @@ Termina la evaluación con dos opciones por prenda, no con una ganadora para tod
 
 Prepara muestras de prendas terminadas, porque un retal no muestra el efecto completo del patrón, el forro, las costuras, los bolsillos, los acabados y el planchado. Revísalas bajo la luz y el movimiento reales de la función, y somételas a la ruta de cuidado prevista antes de aprobarlas.
 
-El resultado es una decisión trazable que operaciones, diseño, lavandería y compras pueden revisar juntos. Usa el [proceso de diseño de Pamuuc](/es/#process) para conectar la selección con el desarrollo de prendas, o [solicita una primera reunión](/es/#contact) para crear una tabla de evaluación por función.
+El resultado es una decisión trazable que operaciones, diseño, lavandería y compras pueden revisar juntos. Usa el [proceso de diseño de PAMUUC](/es/#process) para conectar la selección con el desarrollo de prendas, o [solicita una primera reunión](/es/#contact) para crear una tabla de evaluación por función.

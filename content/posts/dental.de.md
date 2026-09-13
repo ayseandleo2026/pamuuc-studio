@@ -2,12 +2,12 @@
   "key": "dental",
   "locale": "de",
   "slug": "uniformen-zahnarztpraxen-barcelona",
-  "title": "Uniformen für Zahnarztpraxen",
+  "title": "Individuelle Uniformen für Zahnarztpraxen",
   "headline": "Individuelle Uniformen für Zahnarztpraxen: eine Teamgarderobe im Markenbild",
   "description": "Eine Fallstudie darüber, wie eine Premium-Zahnarztpraxis in Barcelona individuelle Uniformen genutzt hat, um Raum, Markenbild und täglichen Einsatz zusammenzuführen.",
   "kicker": "Gestaltung einer Teamgarderobe",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-dental-clinic-uniforms-barcelona",
   "coverAlt": "Team einer Zahnarztpraxis in abgestimmten, maßgeschneiderten Uniformen in einer hochwertigen Praxis in Barcelona",
@@ -48,7 +48,7 @@ Traditionelle Uniformen kommunizieren oft nur minimale Funktionalität. Hier lag
 
 ## Von der Entwicklung zur Produktion
 
-Sobald die Richtung definiert war, ging das Projekt in Musterung und Entwicklung über: Passformkorrekturen, Längen, Taschen, Verschlüsse und die Überprüfung des Materialverhaltens im realen Einsatz. Diese Phase bestimmt die Alltagsqualität des Systems.
+Sobald die Richtung definiert war, ging das Projekt in Musterfertigung und Entwicklung über: Passformkorrekturen, Längen, Taschen, Verschlüsse und die Überprüfung des Materialverhaltens im realen Einsatz. Diese Phase bestimmt die Alltagsqualität des Systems.
 
 ## Fazit
 

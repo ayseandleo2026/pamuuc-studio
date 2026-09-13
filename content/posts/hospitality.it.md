@@ -7,7 +7,7 @@
   "description": "Scopri come per METT Barcelona abbiamo progettato divise su misura in armonia con l’identità dell’hotel, scegliendo tessuti resistenti per un uso quotidiano intenso.",
   "kicker": "Caso ospitalità",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
   "coverAlt": "Esterno dell’hotel di lusso METT Barcelona",
@@ -16,7 +16,7 @@
 ---
 Per METT Barcelona, un nuovo hotel di lusso a 5 stelle, il nostro studio ha realizzato un sistema completo di divise per tutto il personale. Siamo partiti dai rendering architettonici e dal progetto d’interni degli spazi bar, ristorante e spa. Le divise sono state sviluppate per armonizzarsi con la palette cromatica e i materiali dell’hotel.
 
-Il responsabile della ristorazione richiedeva tenute distinte per oltre 20 persone, oltre alla direzione, in funzione dei diversi ruoli. Abbiamo quindi progettato capi su misura per le aree a contatto con gli ospiti, i reparti interni e la direzione. I tessuti sono stati selezionati in base alle prestazioni: soprattutto cotone biologico combinato con fibre tecniche per assicurare comfort, facilità di manutenzione e lunga durata.
+Il responsabile della ristorazione richiedeva divise distinte per oltre 20 persone, oltre alla direzione, in funzione dei diversi ruoli. Abbiamo quindi progettato capi su misura per le aree a contatto con gli ospiti, i reparti interni e la direzione. I tessuti sono stati selezionati in base alle prestazioni: soprattutto cotone biologico combinato con fibre tecniche per assicurare comfort, facilità di manutenzione e lunga durata.
 
 Tutti i capi sono stati disegnati, prototipati e prodotti a Barcellona, per un totale di 315 pezzi, con filiera e manifattura locali. Dopo un anno di utilizzo quotidiano, le divise risultano ancora in ottime condizioni e il personale non ha segnalato criticità.
 
@@ -34,9 +34,9 @@ Le divise alberghiere devono resistere a un uso intenso e a frequenti cicli di l
 
 Abbiamo usato miscele di cotone biologico con poliestere o elastan. Il cotone assicura traspirabilità e morbidezza; le fibre sintetiche aggiungono resistenza, elasticità e migliore stabilità dimensionale.
 
-Tutti i tessuti sono stati pre-retratti meccanicamente e tinti con pigmenti di qualità.
+Tutti i tessuti sono stati sottoposti a un trattamento meccanico per ridurre il restringimento e tinti con pigmenti di qualità.
 
-Abbiamo inoltre applicato finiture funzionali: trattamenti idrorepellenti e antimacchia su capi selezionati, e doppie cuciture nei punti ad alto stress come gomiti e ginocchia. Nei test su cicli ripetuti, colore e struttura sono rimasti stabili.
+Abbiamo inoltre applicato finiture funzionali: trattamenti idrorepellenti e antimacchia su capi selezionati, e doppie cuciture nei punti più sollecitati come gomiti e ginocchia. Nei test su cicli ripetuti, colore e struttura sono rimasti stabili.
 
 ## Divise differenziate per ruolo
 

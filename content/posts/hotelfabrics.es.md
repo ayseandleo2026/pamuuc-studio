@@ -3,11 +3,11 @@
   "locale": "es",
   "slug": "guia-tejidos-uniformes-hotel",
   "title": "Guía de tejidos para uniformes de hotel",
-  "headline": "Guía de tejidos para uniformes de hotel: elige desde el turno",
+  "headline": "Guía de tejidos para uniformes de hotel: elige según el trabajo",
   "description": "Una guía por puestos para convertir lavado, clima, movimiento e imagen en un briefing textil respaldado por pruebas del proveedor.",
   "kicker": "Materiales para hotel",
   "published": "2026-09-03",
-  "modified": "2026-09-03",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-fabric-guide",
   "coverAlt": "Chaqueta de recepción, camisa de servicio, pantalón de pisos y muestras de tejido sobre una mesa",
@@ -34,11 +34,11 @@ Anota el circuito actual, el propuesto y cualquier duda entre ambos. Después, p
 
 ## Divide por puesto: imagen, servicio o alta movilidad
 
-Agrupa los puestos según lo que debe hacer la prenda, no solo por el nombre del departamento. Las prendas centradas en la imagen necesitan una línea controlada bajo la iluminación del hotel y después de pasar tiempo de pie o sentado. Las de servicio deben acompañar alcances repetidos, cargas y cambios rápidos de dirección. Las de alta movilidad tienen que dejar espacio para agacharse, levantar, arrodillarse y trabajar alrededor de equipos.
+Agrupa los puestos según lo que debe hacer la prenda, no solo por el nombre del departamento. Las prendas centradas en la imagen necesitan una silueta definida bajo la iluminación del hotel y después de pasar tiempo de pie o sentado. Las de servicio deben acompañar alcances repetidos, cargas y cambios rápidos de dirección. Las de alta movilidad tienen que dejar espacio para agacharse, levantar, arrodillarse y trabajar alrededor de equipos.
 
-No se trata de una jerarquía. Un pantalón de pisos no es una versión menos cuidada de un pantalón de recepción: cumple otra función. El mismo tejido también puede comportarse de forma distinta en una chaqueta entallada, una camisa suelta o un pantalón con bolsillos y costuras muy solicitados. La confección, la holgura y los refuerzos deben aparecer en el briefing junto a la composición.
+No se trata de una jerarquía. Un pantalón de pisos no es una versión menos cuidada de un pantalón de recepción: cumple otra función. El mismo tejido también puede comportarse de forma distinta en una chaqueta entallada, una camisa abierta o un pantalón con bolsillos y costuras muy solicitados. La confección, la holgura y los refuerzos deben aparecer en el briefing junto a la composición.
 
-Consulta el [caso de hostelería de Pamuuc](/es/blog/uniformes-hosteleria-personalizados/) como ejemplo de prendas diferenciadas por puesto dentro de un vestuario coherente. Es una referencia de proyecto, no la prueba de que una elección textil funcione para otro establecimiento.
+Consulta el [caso de hostelería de PAMUUC](/es/blog/uniformes-hosteleria-personalizados/) como ejemplo de prendas diferenciadas por puesto dentro de un vestuario coherente. Es una referencia de proyecto, no la prueba de que una elección textil funcione para otro establecimiento.
 
 ## Divide por clima: interior controlado, terraza, spa o temporada
 
@@ -50,7 +50,7 @@ El clima también cambia durante el año. Si el hotel necesita opciones estacion
 
 ## Traduce sensaciones a peso, ligamento, elasticidad, recuperación y tacto
 
-Palabras como ligero, suave, nítido, transpirable y resistente solo sirven si el equipo acuerda qué significan en uso. Convierte cada una en algo que pueda verse, tocarse o comprobarse en la prenda. Ligero puede referirse al peso, al color visual o a cómo se mueve el tejido. Suave puede describir la superficie, la caída o una estructura menos rígida.
+Palabras como ligero, suave, con cuerpo, transpirable y resistente solo sirven si el equipo acuerda qué significan en uso. Convierte cada una en algo que pueda verse, tocarse o comprobarse en la prenda. Ligero puede referirse al peso, al color visual o a cómo se mueve el tejido. Suave puede describir la superficie, la caída o una estructura menos rígida.
 
 Construye la selección con variables conectadas:
 
@@ -84,4 +84,4 @@ Reúne la decisión en un documento que puedan leer operaciones, la lavandería,
 
 Indica quién confirma cada parte. Operaciones puede describir el turno; la lavandería, validar el proceso; el proveedor, identificar el tejido ofrecido y sus informes; y el equipo de diseño, conectar esos datos con patrón, confección y coherencia del vestuario. Las incógnitas deben permanecer visibles hasta que una muestra o un ensayo las resuelva.
 
-Utiliza la guía sobre [cómo diseñar uniformes de hotel](/es/blog/como-disenar-uniformes-de-hotel/) para relacionar el briefing textil con el recorrido del huésped y el sistema de puestos. Después, consulta el [proceso de diseño de Pamuuc](/es/#process) o [solicita una primera reunión](/es/#contact) para convertir el ejercicio de las tres prendas en una selección por puesto lista para muestras y aprobación conjunta.
+Utiliza la guía sobre [cómo diseñar uniformes de hotel](/es/blog/como-disenar-uniformes-de-hotel/) para relacionar el briefing textil con el recorrido del huésped y el sistema de puestos. Después, consulta el [proceso de diseño de PAMUUC](/es/#process) o [solicita una primera reunión](/es/#contact) para convertir el ejercicio de las tres prendas en una selección por puesto lista para muestras y aprobación conjunta.

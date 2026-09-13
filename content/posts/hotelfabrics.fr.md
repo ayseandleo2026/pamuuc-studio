@@ -7,7 +7,7 @@
   "description": "Un guide par métier pour traduire lavage, climat, mouvement et allure en un cahier des charges textile étayé par des preuves.",
   "kicker": "Matières hôtelières",
   "published": "2026-09-03",
-  "modified": "2026-09-03",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-fabric-guide",
   "coverAlt": "Veste d’accueil, chemise de service, pantalon d’étage et échantillons de tissus sur une table",
@@ -15,7 +15,7 @@
   "takeaways": [
     "Définissez le circuit réel de lavage et de finition avant de comparer fibres, grammages ou traitements.",
     "Spécifiez le tissu par métier et par climat : présentation, service et forte mobilité créent des contraintes différentes.",
-    "Transformez léger, doux ou résistant en critères observables de poids, armure, reprise, toucher et opacité.",
+    "Transformez léger, doux ou résistant en critères observables de poids, armure, reprise de forme, toucher et opacité.",
     "Demandez des preuves distinctes pour la couleur, les dimensions, l’abrasion et les coutures ; aucun résultat ne remplace les autres."
   ],
   "keywords": ["guide tissus uniformes hôtel", "tissus uniformes hôtellerie", "textiles tenues hôtelières", "cahier des charges textile"],
@@ -36,9 +36,9 @@ Consignez le circuit actuel, celui qui est envisagé et toute incertitude entre 
 
 Regroupez les métiers selon ce que le vêtement doit permettre, pas seulement selon le nom du service. Les pièces axées sur la présentation doivent conserver une ligne maîtrisée sous l’éclairage de l’hôtel, après des périodes debout ou assises. Les tenues de service doivent accompagner les gestes répétés, le port d’objets et les changements rapides de direction. Les vêtements de forte mobilité doivent laisser de l’aisance pour se pencher, soulever, s’agenouiller et travailler autour du matériel.
 
-Il ne s’agit pas d’une hiérarchie. Un pantalon d’étage n’est pas une version moins soignée d’un pantalon d’accueil : il répond à un autre travail. Un même tissu peut aussi se comporter différemment dans une veste ajustée, une chemise ample ou un pantalon dont les poches et les coutures sont fortement sollicitées. La construction, l’aisance et les renforts doivent figurer dans le cahier des charges aux côtés de la composition.
+Il ne s’agit pas d’une hiérarchie. Un pantalon d’étage n’est pas une version moins soignée d’un pantalon d’accueil : il répond à un autre travail. Un même tissu peut aussi se comporter différemment dans une veste ajustée, une chemise ouverte ou un pantalon dont les poches et les coutures sont fortement sollicitées. La construction, l’aisance et les renforts doivent figurer dans le cahier des charges aux côtés de la composition.
 
-Le [cas hôtelier de Pamuuc](/fr/blog/uniformes-hotellerie-personnalises/) montre comment différencier les vêtements par métier au sein d’un vestiaire cohérent. C’est une référence de projet, pas la preuve qu’un choix de matière convient à un autre établissement.
+Le [cas hôtelier de PAMUUC](/fr/blog/uniformes-hotellerie-personnalises/) montre comment différencier les vêtements par métier au sein d’un vestiaire cohérent. C’est une référence de projet, pas la preuve qu’un choix de matière convient à un autre établissement.
 
 ## Distinguez les climats : intérieur régulé, terrasse, spa ou saison
 
@@ -48,15 +48,15 @@ Transformez le climat en questions plutôt qu’en suppositions. Le tissu reste-
 
 Le climat varie aussi au fil de l’année. Si l’hôtel prévoit des options saisonnières, conservez un langage commun de couleur et de construction tout en adaptant le poids ou les couches. Le vestiaire reste ainsi cohérent sans demander à une seule étoffe de résoudre des conditions incompatibles.
 
-## Traduisez les sensations en poids, armure, élasticité, reprise et toucher
+## Traduisez les sensations en poids, armure, élasticité, reprise de forme et toucher
 
-Des mots comme léger, doux, net, respirant ou résistant ne servent que si l’équipe s’accorde sur leur sens en situation. Transformez chaque terme en un critère visible, perceptible ou testable sur le vêtement. Léger peut désigner la masse, la valeur visuelle d’une couleur ou le mouvement de l’étoffe. Doux peut renvoyer à la surface, au tombé ou à une structure moins ferme.
+Des mots comme léger, doux, ferme, respirant ou résistant ne servent que si l’équipe s’accorde sur leur sens en situation. Transformez chaque terme en un critère visible, perceptible ou testable sur le vêtement. Léger peut désigner la masse, la valeur visuelle d’une couleur ou le mouvement de l’étoffe. Doux peut renvoyer à la surface, au tombé ou à une structure moins ferme.
 
 Construisez la sélection autour de variables liées :
 
 - **Poids et opacité :** une couverture adaptée à la couleur et à la lumière, sans volume inutile
 - **Armure ou maille :** la structure qui conditionne tombé, circulation de l’air, aspect de surface et extensibilité naturelle
-- **Élasticité et reprise :** l’amplitude pendant le geste et le retour à la forme prévue
+- **Élasticité et reprise de forme :** l’amplitude pendant le geste et le retour à la forme prévue
 - **Toucher et doublure :** le contact avec la peau, les zones de frottement et l’effet d’une couche supplémentaire sur le confort
 - **Séchage et finition :** les exigences du circuit réel avant le retour du vêtement en service
 
@@ -74,14 +74,14 @@ Demandez quelle méthode, quel protocole et quel échantillon ont été utilisé
 
 Faites suivre la même séquence à une veste d’accueil, une chemise de service en salle et un pantalon d’étage. Définissez d’abord l’entretien. Consignez ensuite le climat, les mouvements, l’allure face au client, l’exposition aux salissures, les points de contact et l’opacité. Comparez seulement alors les tissus et leurs preuves.
 
-La veste d’accueil peut placer structure, reprise et finition en tête du cahier des charges tout en exigeant une aisance suffisante au comptoir. La chemise de restaurant peut accorder davantage de poids à la circulation de l’air, aux gestes rapides, aux taches et au délai de remise en service. Le pantalon d’étage peut privilégier l’aisance en flexion, la tension aux poches, les frottements, l’opacité et la compatibilité avec le programme réel de lavage.
+La veste d’accueil peut placer structure, reprise de forme et finition en tête du cahier des charges tout en exigeant une aisance suffisante au comptoir. La chemise de restaurant peut accorder davantage de poids à la circulation de l’air, aux gestes rapides, aux taches et au délai de remise en service. Le pantalon d’étage peut privilégier l’aisance en flexion, la tension aux poches, les frottements, l’opacité et la compatibilité avec le programme réel de lavage.
 
 L’exercice doit faire apparaître des priorités différentes, pas désigner à l’avance une fibre gagnante. Si un candidat figure dans les trois sélections, il doit répondre séparément aux exigences de chaque métier. Standardiser un tissu peut simplifier le vestiaire, mais la commodité ne constitue pas une preuve d’adéquation.
 
 ## Soumettez le cahier des charges textile à une validation commune
 
-Rassemblez la décision dans un document lisible par les équipes opérationnelles, la blanchisserie, l’équipe de création et le fournisseur. Pour chaque vêtement, consignez métier, environnement, mouvements, rythme de port, exposition aux salissures, entretien, allure attendue, toucher, poids, armure, élasticité, reprise, séchage, opacité et preuves encore nécessaires.
+Rassemblez la décision dans un document lisible par les équipes opérationnelles, la blanchisserie, l’équipe de création et le fournisseur. Pour chaque vêtement, consignez métier, environnement, mouvements, rythme de port, exposition aux salissures, entretien, allure attendue, toucher, poids, armure, élasticité, reprise de forme, séchage, opacité et preuves encore nécessaires.
 
 Attribuez chaque validation. Les équipes opérationnelles décrivent le service ; la blanchisserie confirme le processus ; le fournisseur identifie l’étoffe proposée et les rapports associés ; l’équipe de création relie ces faits au patronage, à la construction et à la cohérence du vestiaire. Les inconnues doivent rester visibles jusqu’à ce qu’un échantillon ou un essai les résolve.
 
-Utilisez le guide [comment concevoir des uniformes d’hôtel](/fr/blog/comment-concevoir-uniformes-hotellerie/) pour relier le cahier des charges textile au parcours client et au système de métiers. Consultez ensuite le [processus de design de Pamuuc](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) afin de transformer l’exercice des trois vêtements en une sélection par métier prête pour les échantillons et la validation commune.
+Utilisez le guide [comment concevoir des uniformes d’hôtel](/fr/blog/comment-concevoir-uniformes-hotellerie/) pour relier le cahier des charges textile au parcours client et au système de métiers. Consultez ensuite le [processus de conception de PAMUUC](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) afin de transformer l’exercice des trois vêtements en une sélection par métier prête pour les échantillons et la validation commune.

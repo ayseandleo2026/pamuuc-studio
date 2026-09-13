@@ -1,10 +1,10 @@
 {
   "locale": "en",
   "meta": {
-    "title": "Custom Uniform Design Studio in Barcelona | Pamuuc Studio",
+    "title": "Custom Uniform Design Studio in Barcelona | PAMUUC Studio",
     "description": "Custom uniform design and production for hotels, restaurants, wellness spaces and clinics. Produced in Barcelona, with orders from 10 pieces per style.",
-    "ogTitle": "Custom Uniform Design Studio in Barcelona | Pamuuc Studio",
-    "ogDescription": "Made-to-order uniform systems for hotels, restaurants, wellness spaces, clinics and guest-facing teams—from design and fittings to production and reorders."
+    "ogTitle": "Custom Uniform Design Studio in Barcelona | PAMUUC Studio",
+    "ogDescription": "Made-to-order uniform systems for hotels, restaurants, wellness spaces, clinics and guest-facing teams, from design and fittings to production and reorders."
   },
   "nav": [
     {
@@ -31,7 +31,7 @@
   "hero": {
     "eyebrow": "CUSTOM UNIFORM DESIGN AND PRODUCTION · BARCELONA",
     "h1": "Custom uniforms for hotels, restaurants, wellness spaces and private clinics",
-    "lead": "We design and produce made-to-order uniform systems around your brand, team roles and daily work—from the first brief and fittings to production and future reorders.",
+    "lead": "We design and produce made-to-order uniform systems around your brand, team roles and daily work, from the first brief and fittings to production and future reorders.",
     "pills": [
       "Designed for your brand",
       "Developed by role",
@@ -40,7 +40,7 @@
     ],
     "primary": "Discuss your uniform project",
     "secondary": "View selected work",
-    "imageAlt": "Custom uniform design and garment development by Pamuuc Studio in Barcelona",
+    "imageAlt": "Custom uniform design and garment development by PAMUUC Studio in Barcelona",
     "proofs": [
       {
         "label": "First project",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "WHAT WE DO",
     "h2": "A complete custom-uniform service, not a catalogue",
-    "intro": "Pamuuc Studio designs, develops and produces custom uniforms for hospitality, wellness, healthcare and guest-facing teams. Every project is built around the business, the people wearing the garments and the work they do.",
+    "intro": "PAMUUC Studio designs, develops and produces custom uniforms for hospitality, wellness, healthcare and guest-facing teams. Every project is built around the business, the people wearing the garments and the work they do.",
     "card": {
       "topline": "DESIGN, DEVELOPMENT AND PRODUCTION",
       "h3": "Custom uniform systems",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "The Pamuuc Studio atelier in Barcelona: garment rail, press and cutting table"
+    "alt": "The PAMUUC Studio atelier in Barcelona: garment rail, press and cutting table"
   },
   "sectors": {
     "kicker": "WHO WE WORK WITH",
@@ -347,7 +347,7 @@
   "parameters": {
     "kicker": "PROJECT PRACTICALITIES",
     "h2": "Three ways in, with the numbers attached",
-    "intro": "You do not have to commission a full wardrobe. Pricing is quoted per project — we do not work from a rigid price list — and the schedule follows the number of styles, the fittings and the fabric.",
+    "intro": "You do not have to commission a full wardrobe. Pricing is quoted per project, without a rigid price list. The schedule follows the number of styles, the fittings and the fabric.",
     "groups": [
       {
         "h3": "Recommended minimum quantities",
@@ -447,14 +447,14 @@
   "projects": {
     "kicker": "SELECTED WORK AND GUIDANCE",
     "h2": "Three programmes, in the environments they were made for",
-    "intro": "A hotel opening, a wellness team and a private clinic — the same method, three very different rooms.",
+    "intro": "A hotel opening, a wellness team and a private clinic: the same method, three very different rooms.",
     "items": [
       {
         "tag": "HOTEL CASE STUDY",
         "h3": "Custom hotel uniforms for METT Barcelona",
         "p": "A complete, role-based wardrobe developed from the hotel’s interior concept for reception, food and beverage, management and spa teams, then designed, prototyped and produced in Barcelona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Hotel front-of-house uniforms developed by Pamuuc Studio for METT Barcelona",
+        "alt": "Hotel front-of-house uniforms developed by PAMUUC Studio for METT Barcelona",
         "href": "/en/blog/custom-hospitality-uniforms/",
         "linkLabel": "Read the hotel case study"
       },
@@ -1119,7 +1119,7 @@
     "phase-1": [
       {
         "t": "h",
-        "v": "Phase 01 — Discovery"
+        "v": "Phase 01: Discovery"
       },
       {
         "t": "h",
@@ -1155,7 +1155,7 @@
     "phase-2": [
       {
         "t": "h",
-        "v": "Phase 02 — Development"
+        "v": "Phase 02: Development"
       },
       {
         "t": "h",
@@ -1191,7 +1191,7 @@
     "phase-3": [
       {
         "t": "h",
-        "v": "Phase 03 — Production"
+        "v": "Phase 03: Production"
       },
       {
         "t": "h",
@@ -1299,7 +1299,7 @@
       },
       {
         "h": "Developed as one system",
-        "p": "Fabric, fit, construction, colour and branding are decided together, once — so reception, floor and back of house read as one team."
+        "p": "Fabric, fit, construction, colour and branding are decided together, once, so reception, floor and back of house read as one team."
       },
       {
         "h": "Archived for reorders",

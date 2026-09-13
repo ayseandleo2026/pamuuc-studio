@@ -7,7 +7,7 @@
   "description": "315 pièces sur mesure pour un 5 étoiles à Barcelone : design issu du concept intérieur, tissus pensés pour le blanchissage industriel.",
   "kicker": "Cas hôtellerie",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
   "coverAlt": "Extérieur de l’hôtel de luxe METT Barcelona",
@@ -18,7 +18,7 @@ Dans le cadre d’un projet mené chez METT Barcelona, nouvel hôtel de luxe 5 �
 
 Le responsable de la restauration avait besoin de tenues distinctes pour plus de 20 membres de l’équipe, ainsi que pour la direction, selon leurs différents rôles. Nous avons donc conçu des pièces sur mesure pour les équipes en contact avec la clientèle, les équipes en coulisses et la direction. Les tissus ont été choisis pour leurs performances, principalement du coton biologique associé à des fibres techniques afin d’assurer confort, facilité d’entretien et longévité.
 
-Toutes les pièces ont été conçues, prototypées et produites à Barcelone, soit 315 articles au total, avec une chaîne d’approvisionnement et une fabrication locales. Après une année d’usage quotidien, les uniformes sont toujours en excellent état et le personnel n’a signalé aucun problème.
+Toutes les pièces ont été conçues, prototypées et produites à Barcelone, soit 315 pièces au total, avec une chaîne d’approvisionnement et une fabrication locales. Après une année d’usage quotidien, les uniformes sont toujours en excellent état et le personnel n’a signalé aucun problème.
 
 ## Des uniformes alignés avec le concept de l’hôtel
 
@@ -30,15 +30,15 @@ Nous avons travaillé avec l’équipe d’architecture intérieure pour traduir
 
 ## Choisir des tissus durables et confortables
 
-Les uniformes hôteliers doivent résister à une forte usure et à des cycles fréquents de blanchisserie industrielle. Dans les opérations réelles, les vêtements sont exposés à des conditions de lavage exigeantes. C’est pourquoi nous avons spécifié des matières adaptées à des processus professionnels.
+Les uniformes hôteliers doivent résister à une forte usure et à des cycles fréquents de blanchisserie industrielle. Au quotidien, les vêtements sont exposés à des conditions de lavage exigeantes. C’est pourquoi nous avons spécifié des matières adaptées à des processus professionnels.
 
 Nous avons utilisé des mélanges de coton biologique avec du polyester ou de l’élasthanne. Le coton apporte respirabilité et douceur, tandis que les fibres synthétiques ajoutent résistance, élasticité et une meilleure stabilité dimensionnelle. Tous les tissus ont été pré-rétrécis mécaniquement et teints avec des pigments de haute qualité.
 
-Nous avons également appliqué des finitions fonctionnelles : traitements déperlants et anti-taches sur certaines pièces, ainsi que des doubles coutures sur les zones soumises à forte tension comme les coudes et les genoux. Lors des tests répétés, la couleur comme la structure sont restées stables.
+Nous avons également appliqué des finitions fonctionnelles : traitements déperlants et antitaches sur certaines pièces, ainsi que des doubles coutures sur les zones soumises à forte tension comme les coudes et les genoux. Lors des essais sur des cycles répétés, la couleur comme la structure sont restées stables.
 
 ## Des uniformes différenciés selon les rôles
 
-Une décision centrale a été de construire une garde-robe dédiée pour chaque catégorie de rôle. Les fonctions en contact client, accueil, salle, conciergerie, ont reçu des pièces plus soignées, conçues pour exprimer le professionnalisme sans limiter le mouvement pendant de longues journées.
+Une décision centrale a été de construire un vestiaire adapté à chaque fonction. Les équipes en contact avec les clients, à l’accueil, en salle et à la conciergerie, ont reçu des pièces plus soignées, conçues pour exprimer le professionnalisme sans limiter le mouvement pendant de longues journées.
 
 Les serveurs et les barmen portaient des chemises, des gilets et des vestes dans des tissus stretch souples. Les fonctions en coulisses, chefs, soutien cuisine, étages, ont quant à elles reçu des pièces plus robustes et plus fonctionnelles, avec des patronages adaptés à une activité opérationnelle intense.
 

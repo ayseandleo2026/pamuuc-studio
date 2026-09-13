@@ -1,9 +1,9 @@
 {
   "locale": "de",
   "meta": {
-    "title": "Studio für Maßuniformen in Barcelona | Pamuuc Studio",
+    "title": "Studio für Maßuniformen in Barcelona | PAMUUC Studio",
     "description": "Design und Produktion maßgeschneiderter Uniformen für Hotels, Restaurants, Wellnessbereiche und Kliniken. Produziert in Barcelona, ab 10 Teilen pro Modell.",
-    "ogTitle": "Studio für maßgeschneiderte Uniformen in Barcelona | Pamuuc Studio",
+    "ogTitle": "Studio für maßgeschneiderte Uniformen in Barcelona | PAMUUC Studio",
     "ogDescription": "Maßgeschneiderte Uniformsysteme für Hotels, Restaurants, Wellnessbereiche, Kliniken und Teams mit Kundenkontakt: von Design und Anproben bis zu Produktion und Nachbestellungen."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Uniformprojekt besprechen",
     "secondary": "Ausgewählte Projekte ansehen",
-    "imageAlt": "Design maßgeschneiderter Uniformen und Bekleidungsentwicklung durch Pamuuc Studio in Barcelona",
+    "imageAlt": "Design maßgeschneiderter Uniformen und Bekleidungsentwicklung durch PAMUUC Studio in Barcelona",
     "proofs": [
       {
         "label": "Erstes Projekt",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "WAS WIR TUN",
     "h2": "Ein vollständiger Service für maßgeschneiderte Uniformen, kein Katalog",
-    "intro": "Pamuuc Studio entwirft, entwickelt und produziert maßgeschneiderte Uniformen für Hotellerie, Wellness, Gesundheitswesen und Teams mit Kundenkontakt. Jedes Projekt orientiert sich am Unternehmen, an den Menschen, die die Kleidung tragen, und an ihrer täglichen Arbeit.",
+    "intro": "PAMUUC Studio entwirft, entwickelt und produziert maßgeschneiderte Uniformen für Hotellerie, Wellness, Gesundheitswesen und Teams mit Kundenkontakt. Jedes Projekt orientiert sich am Unternehmen, an den Menschen, die die Kleidung tragen, und an ihrer täglichen Arbeit.",
     "card": {
       "topline": "DESIGN, ENTWICKLUNG UND PRODUKTION",
       "h3": "Maßgeschneiderte Uniformsysteme",
@@ -77,7 +77,7 @@
       "Verbinden unterschiedliche Rollen in einer Garderobe",
       "Bleiben bei Nachbestellungen konsistent"
     ],
-    "kicker": "Gelieferte Arbeiten",
+    "kicker": "Realisierte Projekte",
     "stats": [
       {
         "v": "1000+",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "Das Pamuuc-Studios-Atelier in Barcelona: Kleiderstange, Presse und Zuschneidetisch"
+    "alt": "Das Atelier von PAMUUC Studio in Barcelona: Kleiderstange, Presse und Zuschneidetisch"
   },
   "sectors": {
     "kicker": "MIT WEM WIR ARBEITEN",
@@ -116,12 +116,12 @@
         "modal": "modal-sector-restaurants",
         "desc": "Uniformen für Service, Bar, Küche und Leitung in dynamischen Arbeitsumgebungen.",
         "img": "/assets/images/home/sector-02-restaurants.jpg",
-        "alt": "Service am Tisch, ein von Hand vollendeter Teller"
+        "alt": "Service am Tisch, ein von Hand angerichteter Teller"
       },
       {
         "name": "Wellness",
         "modal": "modal-sector-wellness",
-        "desc": "Ruhige, funktionale Uniformen für Empfang, Behandlungen und unterstützende Rollen.",
+        "desc": "Schlichte, funktionale Uniformen für Empfang, Behandlungen und unterstützende Aufgaben.",
         "img": "/assets/images/home/sector-03-wellness.jpg",
         "alt": "Ruhiger Behandlungsraum in warmen Naturtönen"
       },
@@ -192,7 +192,7 @@
           "Polos und T-Shirts",
           "Blazer",
           "Jacken",
-          "Oberbekleidung",
+          "Jacken und Mäntel",
           "Abgestimmte Accessoires"
         ]
       },
@@ -236,7 +236,7 @@
         "items": [
           "Analyse von Team und Abläufen",
           "Erfassung der Rollen",
-          "Erste Richtung für die Garderobe"
+          "Erstes Bekleidungskonzept"
         ],
         "modal": "modal-phase-1",
         "img": "/assets/images/home/process-01-sketches.jpg",
@@ -245,7 +245,7 @@
       {
         "tag": "PHASE 02",
         "h3": "Entwicklung",
-        "desc": "Wir übersetzen die freigegebene Richtung in Kleidungsstücke und prüfen die entscheidenden Details.",
+        "desc": "Wir setzen das freigegebene Konzept in Kleidungsstücke um und prüfen die entscheidenden Details.",
         "items": [
           "Prüfung von Stoffen und Materialien",
           "Prototypen, Muster und Anproben",
@@ -258,11 +258,11 @@
       {
         "tag": "PHASE 03",
         "h3": "Produktion",
-        "desc": "Nach der Freigabe fertigen, bereiten und liefern wir die finalen Kleidungsstücke.",
+        "desc": "Nach der Freigabe fertigen wir die endgültigen Kleidungsstücke, bereiten sie für die Auslieferung vor und liefern sie aus.",
         "items": [
           "Freigabe vor Produktionsbeginn",
           "Lokale Produktion",
-          "Lieferung und Einrichtung der Nachbestelllogik"
+          "Lieferung und Vorbereitung künftiger Nachbestellungen"
         ],
         "modal": "modal-phase-3",
         "img": "/assets/images/home/process-03-production.jpg",
@@ -289,7 +289,7 @@
       }
     ],
     "note": "Der bestätigte Zeitplan hängt von der Anzahl der Modelle, der Stoffverfügbarkeit, den Anproben, den Überarbeitungsrunden, der Konstruktion, den Mengen und den Freigabezeiten ab.",
-    "handoff": "Setzen Sie ein Datum auf Ihr Projekt"
+    "handoff": "Termin für Ihr Projekt festlegen"
   },
   "personalised": {
     "kicker": "INDIVIDUALISIERUNG",
@@ -306,7 +306,7 @@
       },
       {
         "q": "Farben",
-        "p": "Die Farbrichtung entsteht aus Raum und Marke und wird anschließend über Kleidungsstücke, Rollen, Licht und verfügbare Stoffe hinweg geprüft.",
+        "p": "Das Farbkonzept entsteht aus Raum und Marke. Anschließend prüfen wir seine Wirkung bei den verschiedenen Kleidungsstücken und Tätigkeiten, unter der Beleuchtung vor Ort und auf den verfügbaren Stoffen.",
         "items": [
           "Optionen: Verfügbare Stofffarbkarten können die Entwicklung beschleunigen. Eigene Farben sind möglich, wenn Stoff und Menge es zulassen.",
           "Auswahlkriterien: Konsistenz zwischen den Rollen, geeigneter Kontrast und Wirkung unter der Beleuchtung des Raums."
@@ -335,7 +335,7 @@
         "p": "Die Entwicklung in Studionähe ermöglicht schnellere Rückmeldungen, klarere technische Entscheidungen und direkte Kommunikation."
       },
       {
-        "h3": "Für die reale Arbeit entwickelt",
+        "h3": "Für den Arbeitsalltag entwickelt",
         "p": "Bewegung, Schichtdauer, Aufgaben, Pflege und Arbeitsumgebung fließen in jedes Kleidungsstück ein."
       },
       {
@@ -347,14 +347,14 @@
   "parameters": {
     "kicker": "PRAKTISCHE PROJEKTDATEN",
     "h2": "Drei Einstiegsmöglichkeiten mit den wichtigsten Zahlen",
-    "intro": "Sie müssen keine komplette Garderobe beauftragen. Der Preis wird pro Projekt kalkuliert — wir arbeiten nicht mit einer starren Preisliste — und der Zeitplan richtet sich nach der Anzahl der Modelle, den Anproben und dem Stoff.",
+    "intro": "Sie müssen keine komplette Garderobe beauftragen. Der Preis wird pro Projekt kalkuliert, ohne starre Preisliste. Der Zeitplan richtet sich nach der Anzahl der Modelle, den Anproben und dem Stoff.",
     "groups": [
       {
         "h3": "Empfohlene Mindestmengen",
         "notes": [
           {
             "head": "Ab 10 Teilen pro Modell",
-            "body": "Wir können ab 10 Teilen pro Modell produzieren, wobei Preis und Konstruktion auf die Menge abgestimmt werden."
+            "body": "Ausgewählte Modelle lassen sich ab 10 Stück produzieren. Der Preis richtet sich nach der Verarbeitung und der Menge."
           },
           {
             "head": "10–15 Teile pro Modell",
@@ -454,7 +454,7 @@
         "h3": "Maßgeschneiderte Hoteluniformen für METT Barcelona",
         "p": "Eine vollständige, rollenbezogene Garderobe, die aus dem Innenraumkonzept des Hotels für Empfang, Gastronomie, Leitung und Spa entwickelt und anschließend in Barcelona entworfen, prototypisiert und produziert wurde.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Von Pamuuc Studio für METT Barcelona entwickelte Uniformen für den Gästebereich",
+        "alt": "Von PAMUUC Studio für METT Barcelona entwickelte Uniformen für den Gästebereich",
         "href": "/de/blog/uniformen-hotellerie/",
         "linkLabel": "Hotel-Fallstudie lesen"
       },
@@ -477,7 +477,7 @@
         "linkLabel": "Klinik-Fallstudie lesen"
       }
     ],
-    "handoff": "Ein Programm wie diese starten"
+    "handoff": "Ein ähnliches Programm starten"
   },
   "faq": {
     "kicker": "HÄUFIGE FRAGEN",
@@ -490,11 +490,11 @@
       },
       {
         "q": "Übernehmen Sie Nachbestellungen nach der ersten Produktion?",
-        "a": "Ja. Schnitte, Stoffe, Veredelungen und Individualisierungssysteme werden archiviert, um Kontinuität über die Zeit zu sichern. Das reduziert erneute Entwicklungsphasen, gewährleistet Konsistenz für neue Teammitglieder und vereinfacht zukünftige Nachbestellungen."
+        "a": "Ja. Freigegebene Schnitte, Stoffe, Veredelungen, Markenkennzeichnungen und Spezifikationen werden für künftige Bestellungen dokumentiert. So gibt es eine einheitliche Grundlage für Ersatzkleidung, neue Mitarbeitende und das Wachstum des Teams, ohne den gesamten Entwicklungsprozess zu wiederholen."
       },
       {
         "q": "Müssen wir mit einer kompletten Garderobe starten?",
-        "a": "Nein. Es ist ebenso möglich, mit einer einzelnen Produktkategorie oder einer spezifischen Rolle zu beginnen und das Projekt dann schrittweise auszubauen. Gemeinsam definieren wir den sinnvollsten Ausgangspunkt auf Basis von Prioritäten, Budget und operativer Wirkung."
+        "a": "Nein. Sie können mit einer Tätigkeit, einer Abteilung oder einer Bekleidungskategorie beginnen und später erweitern. Wir bestimmen den sinnvollsten Ausgangspunkt anhand der Sichtbarkeit für Kunden, des betrieblichen Bedarfs, der Menge, des Budgets und des Zeitplans."
       },
       {
         "q": "Entwickeln Sie Farben und individuelle Details?",
@@ -506,7 +506,7 @@
       },
       {
         "q": "Was kostet ein maßgeschneidertes Uniformprojekt?",
-        "a": "Wir arbeiten nicht mit einer starren Preisliste. Das Angebot entsteht aus dem bestätigten Umfang: Kleidungsstücke, Mengen, Materialien, Konstruktion und Individualisierungsgrad. Zwei ähnlich aussehende Teile können sehr unterschiedliche Entwicklung, Materialien und Fertigung erfordern – wir kalkulieren daher das Projekt statt eines Einheitspreises pro Teil."
+        "a": "Wir arbeiten nicht mit einer starren Preisliste. Das Angebot entsteht aus dem bestätigten Umfang: Kleidungsstücke, Mengen, Materialien, Konstruktion und Individualisierungsgrad. Zwei ähnlich aussehende Teile können sehr unterschiedliche Entwicklung, Materialien und Fertigung erfordern; wir kalkulieren daher das Projekt statt eines Einheitspreises pro Teil."
       },
       {
         "q": "Wie lange dauert ein Projekt vom Briefing bis zur Lieferung?",
@@ -521,7 +521,7 @@
         "a": "Ja. Prototypen, Muster und Anproben kommen vor jeder Produktionszusage. Passform, Stoff, Konstruktion und Markenkennzeichnung werden an echten Kleidungsstücken freigegeben, nicht an Zeichnungen."
       },
       {
-        "q": "Wie lösen Sie die Größen für ein ganzes Team?",
+        "q": "Wie legen Sie die Größen für ein ganzes Team fest?",
         "a": "Bei der Größen- und Mengenbestätigung werden die Mengen auf die benötigten Größen verteilt; durch Anproben legen wir vor Produktionsbeginn die Größenstaffel fest. Für neue Mitarbeitende stehen anschließend die archivierten Schnitte und Spezifikationen bereit."
       },
       {
@@ -550,7 +550,7 @@
     "form": {
       "labels": {
         "name": "Vollständiger Name",
-        "email": "Geschäftliche E-Mail-Adresse",
+        "email": "Geschäftliche E-Mail",
         "phone": "Telefonnummer",
         "company": "Unternehmensname",
         "team-size": "Teamgröße",
@@ -563,7 +563,7 @@
         "name": "Vollständiger Name",
         "email": "name@unternehmen.com",
         "phone": "+34 ...",
-        "company": "Firmenname",
+        "company": "Unternehmen oder Betrieb",
         "brief": "Beschreiben Sie Raum, Team, Rollen, Kleidungsstücke, ungefähre Mengen, Zieltermin und die Aufgaben, die die Uniformen erfüllen sollen."
       },
       "helps": {
@@ -630,8 +630,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising oder Markenbekleidung",
-            "t": "Merchandising oder Markenbekleidung",
+            "v": "Merchandising oder Kleidung mit Ihrer Marke",
+            "t": "Merchandising oder Kleidung mit Ihrer Marke",
             "disabled": false
           },
           {
@@ -674,13 +674,13 @@
         ]
       },
       "consent": "Ich akzeptiere die {privacy:Datenschutzerklärung} und die {terms:Bedingungen}.",
-      "hint": "Das Formular dauert etwa zwei Minuten. In der Regel antworten wir innerhalb eines Werktags.",
+      "hint": "Das Ausfüllen dauert etwa zwei Minuten. In der Regel antworten wir innerhalb eines Werktags.",
       "submit": "Projektanfrage senden"
     }
   },
   "footer": {
-    "about": "In Barcelona entwickelte individuelle Uniformsysteme.",
-    "legal": "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com",
+    "about": "Maßgeschneiderte Uniformkonzepte, in Barcelona entworfen, entwickelt und produziert.",
+    "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
         "title": "Studio",
@@ -746,7 +746,7 @@
       },
       {
         "t": "p",
-        "v": "Das Ergebnis ist eine zusammenhängende Garderobe statt einer Gruppe einzelner Teile. Verschiedene Rollen können unterschiedliche Kleidungsstücke tragen und dennoch dieselbe visuelle Sprache bei Farbe, Passform, Material und Detail teilen."
+        "v": "Das Ergebnis ist eine zusammenhängende Garderobe statt einer Gruppe einzelner Teile. Mitarbeitende mit unterschiedlichen Aufgaben können verschiedene Kleidungsstücke tragen und dennoch dieselbe visuelle Sprache bei Farbe, Passform, Material und Details teilen."
       },
       {
         "t": "h",
@@ -791,7 +791,7 @@
           "Hosen und Röcke",
           "Kleider",
           "Schürzen und operative Bekleidung",
-          "Strick- und Oberbekleidung",
+          "Strickwaren, Jacken und Mäntel",
           "Abgestimmte Accessoires"
         ]
       }
@@ -807,7 +807,7 @@
       },
       {
         "t": "p",
-        "v": "Ein Hotel vereint Abteilungen mit Gäste-, Service- und operativen Aufgaben und sehr unterschiedlichen Arbeitsanforderungen. Wir entwickeln rollenspezifische Kleidungsstücke, die dennoch eine gemeinsame Hotelgarderobe bilden."
+        "v": "Ein Hotel vereint Gästebetreuung, Service und interne Betriebsbereiche mit sehr unterschiedlichen Arbeitsanforderungen. Wir entwickeln Kleidungsstücke für die jeweilige Tätigkeit, die dennoch eine gemeinsame Hotelgarderobe bilden."
       },
       {
         "t": "h",
@@ -836,7 +836,7 @@
           "Kleider",
           "Blazer und Jacken",
           "Schürzen",
-          "Strick und äußere Bekleidungsschichten"
+          "Strickwaren, Jacken und Mäntel"
         ]
       },
       {
@@ -1043,7 +1043,7 @@
           "Technische Hosen",
           "Overshirts",
           "Leichte Jacken",
-          "Äußere Bekleidungsschichten"
+          "Jacken und Mäntel"
         ]
       },
       {
@@ -1119,7 +1119,7 @@
     "phase-1": [
       {
         "t": "h",
-        "v": "Phase 01 — Analyse"
+        "v": "Phase 01: Analyse"
       },
       {
         "t": "h",
@@ -1149,17 +1149,17 @@
       },
       {
         "t": "p",
-        "v": "Ein vereinbarter Projektumfang, eine Rollenübersicht und eine erste Richtung für die Garderobe."
+        "v": "Ein vereinbarter Projektumfang, eine Übersicht der Tätigkeiten und ein erstes Bekleidungskonzept."
       }
     ],
     "phase-2": [
       {
         "t": "h",
-        "v": "Phase 02 — Entwicklung"
+        "v": "Phase 02: Entwicklung"
       },
       {
         "t": "h",
-        "v": "Die Richtung in Kleidungsstücke übersetzen, die das Team bewerten kann"
+        "v": "Das Konzept in Kleidungsstücke umsetzen, die das Team beurteilen kann"
       },
       {
         "t": "p",
@@ -1191,7 +1191,7 @@
     "phase-3": [
       {
         "t": "h",
-        "v": "Phase 03 — Produktion"
+        "v": "Phase 03: Produktion"
       },
       {
         "t": "h",
@@ -1315,10 +1315,10 @@
       "Schürzen",
       "Strick",
       "Blazer",
-      "Mäntel",
+      "Jacken und Mäntel",
       "Accessoires"
     ],
-    "ctaText": "Nennen Sie uns die Rollen und wir entwickeln daraus die Garderobe.",
+    "ctaText": "Nennen Sie uns die Aufgaben im Team und wir schlagen Ihnen eine passende Garderobe vor.",
     "ctaLabel": "Briefing starten",
     "img": "/assets/images/home/wardrobe-rail.jpg",
     "alt": "Ein abgestimmtes Uniformset an einer Kleiderstange"

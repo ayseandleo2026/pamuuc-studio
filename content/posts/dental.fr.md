@@ -2,19 +2,19 @@
   "key": "dental",
   "locale": "fr",
   "slug": "uniformes-clinique-dentaire-sur-mesure-barcelone",
-  "title": "Uniformes pour cliniques dentaires",
-  "headline": "Uniformes sur mesure pour cliniques dentaires : une garde-robe alignée avec la marque",
-  "description": "Comment une clinique dentaire premium de Barcelone a aligné espace, image de marque et usage clinique quotidien dans une seule garde-robe.",
+  "title": "Uniformes sur mesure pour cliniques dentaires",
+  "headline": "Uniformes sur mesure pour cliniques dentaires : un vestiaire aligné avec la marque",
+  "description": "Comment une clinique dentaire premium de Barcelone a aligné espace, image de marque et usage clinique quotidien dans un vestiaire cohérent.",
   "kicker": "Direction créative de l’uniforme",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-dental-clinic-uniforms-barcelona",
   "coverAlt": "Équipe d’une clinique dentaire en uniformes sur mesure coordonnés dans un cabinet raffiné à Barcelone",
   "coverCaption": ""
 }
 ---
-Lorsqu’une clinique dentaire premium fait évoluer son image, le changement ne s’arrête pas au logo, au site web ou au design intérieur. La garde-robe de l’équipe fait elle aussi partie de cette transformation. Dans des environnements où les attentes sont élevées, chaque détail visible influence la confiance et la qualité perçue.
+Lorsqu’une clinique dentaire premium fait évoluer son image, le changement ne s’arrête pas au logo, au site web ou au design intérieur. Le vestiaire de l’équipe fait lui aussi partie de cette transformation. Dans des environnements où les attentes sont élevées, chaque détail visible influence la confiance et la qualité perçue.
 
 Ce projet situé sur le Passeig de Gracia est né d’un objectif clair : dépasser les codes visuels de la clinique classique pour créer un environnement plus contemporain, plus soigné et plus cohérent avec la marque.
 
@@ -26,7 +26,7 @@ Dans ce contexte, l’uniforme n’est pas un simple détail esthétique. C’es
 
 ## Partir du lieu, pas d’un catalogue
 
-La direction de la garde-robe a été construite à partir du contexte réel : matières, palette, lumière, implantation et atmosphère du lieu. Au lieu d’ajouter un logo sur un vêtement générique, nous avons traduit le langage de l’espace en pièces cohérentes.
+La direction du vestiaire a été construite à partir du contexte réel : matières, palette, lumière, implantation et atmosphère du lieu. Au lieu d’ajouter un logo sur un vêtement générique, nous avons traduit le langage de l’espace en pièces cohérentes.
 
 L’objectif était de préserver l’autorité clinique tout en adoucissant les codes visuels les plus rigides.
 
@@ -52,6 +52,6 @@ Une fois la direction définie, le projet est passé à l’échantillonnage et 
 
 ## Conclusion
 
-Ce cas montre qu’une garde-robe d’équipe peut soutenir concrètement l’évolution d’une marque, même dans la santé. Le résultat n’est pas de la mode appliquée à une clinique, mais un système de vêtements cohérent qui associe présentation, confort au travail, résistance des textiles et identité du lieu.
+Ce cas montre qu’un vestiaire d’équipe peut soutenir concrètement l’évolution d’une marque, même dans la santé. Le résultat n’est pas de la mode appliquée à une clinique, mais un système de vêtements cohérent qui associe présentation, confort au travail, performance des textiles et identité du lieu.
 
 Pour les activités de service qui recherchent une image plus cohérente, il s’agit d’une intervention concrète à fort impact. Découvrez aussi nos projets pour le bien-être et l’hôtellerie haut de gamme.

@@ -7,11 +7,11 @@
   "description": "A practical method for turning a hotel concept, team roles and operational needs into one coherent, supplier-ready uniform brief.",
   "kicker": "Hotel planning",
   "published": "2026-08-27",
-  "modified": "2026-08-27",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-design-guide",
   "coverAlt": "Uniform designer arranging hotel role sketches and fabric swatches on a lobby worktable",
-  "coverCaption": "An editorial visualisation of a fictional hotel uniform discovery session, created with AI from original Pamuuc references.",
+  "coverCaption": "An editorial visualisation of a fictional hotel uniform discovery session, created with AI from original PAMUUC references.",
   "takeaways": [
     "Start with the property and the guest journey before choosing garments or fabrics.",
     "Map each role through movement, tools, climate, guest contact and care requirements.",
@@ -60,7 +60,7 @@ Before approving a direction, follow it beyond the presentation board. Ask how e
 
 Then consider people entering and leaving the team. A wardrobe system needs a clear size approach, an agreed fitting method and enough specification detail to reproduce an approved garment later. Reordering should be designed into the project rather than treated as an emergency after launch.
 
-The [Pamuuc hospitality case study](/en/blog/custom-hospitality-uniforms/) shows how spatial references, role differentiation and operational durability can meet inside one programme. It is proof of the method in a real hotel context, not a template that should be copied from one property to another.
+The [PAMUUC hospitality case study](/en/blog/custom-hospitality-uniforms/) shows how spatial references, role differentiation and operational durability can meet inside one programme. It is proof of the method in a real hotel context, not a template that should be copied from one property to another.
 
 ## Turn observations into a supplier-ready brief
 
@@ -79,4 +79,4 @@ Attach evidence where it helps: photographs of spaces, material references, role
 
 A good brief does not pre-design the supplier's answer. It creates the conditions for informed proposals, prototypes and fittings. Materials, patterns and details can then be judged against a common definition of the property, the work and the operational system.
 
-Use the questions above as a working discovery document. Then review the [Pamuuc design and development process](/#process) or [request a first meeting](/#contact) to turn the brief into a clear starting scope. The goal is not more garments; it is a coherent wardrobe in which every garment has a reason to exist.
+Use the questions above as a working discovery document. Then review the [PAMUUC design and development process](/#process) or [request a first meeting](/#contact) to turn the brief into a clear starting scope. The goal is not more garments; it is a coherent wardrobe in which every garment has a reason to exist.

@@ -7,7 +7,7 @@
       "blocks": [
         {
           "t": "p",
-          "v": "Entité juridique : Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelone - info@pamuuc.com"
+          "v": "Entité juridique : Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelone · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -268,7 +268,7 @@
       "blocks": [
         {
           "t": "p",
-          "v": "Entité juridique : Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelone - info@pamuuc.com"
+          "v": "Entité juridique : Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelone · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -328,7 +328,7 @@
         },
         {
           "t": "h",
-          "v": "Fournisseur analytique"
+          "v": "Prestataire d’analyse statistique"
         },
         {
           "t": "p",
@@ -340,7 +340,7 @@
         },
         {
           "t": "p",
-          "v": "Non utilisés sur ce site; le stockage publicitaire reste refusé."
+          "v": "Non utilisés sur ce site ; le stockage à des fins publicitaires reste refusé."
         },
         {
           "t": "h",
@@ -411,7 +411,7 @@
       "blocks": [
         {
           "t": "p",
-          "v": "Entité juridique : Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelone - info@pamuuc.com"
+          "v": "Entité juridique : Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelone · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -550,7 +550,7 @@
       "blocks": [
         {
           "t": "p",
-          "v": "Entité juridique : Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelone - info@pamuuc.com"
+          "v": "Entité juridique : Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelone · info@pamuuc.com"
         },
         {
           "t": "h",
@@ -622,15 +622,15 @@
         },
         {
           "t": "p",
-          "v": "Pamuk Studio S.L n’est pas responsable des dommages résultant de :"
+          "v": "Pamuk Studio S.L n’est pas responsable des dommages résultant des situations suivantes :"
         },
         {
           "t": "ul",
           "v": [
             "l’indisponibilité temporaire du site web",
-            "d’erreurs techniques échappant à tout contrôle raisonnable",
-            "d’une utilisation impropre du site web par les utilisateurs",
-            "de contenus de tiers accessibles via les liens présents sur le site"
+            "erreurs techniques échappant à tout contrôle raisonnable",
+            "l’utilisation impropre du site web par les utilisateurs",
+            "contenus de tiers accessibles via les liens présents sur le site"
           ]
         },
         {

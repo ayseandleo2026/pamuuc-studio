@@ -7,7 +7,7 @@
   "description": "Descubre cómo en METT Barcelona diseñamos uniformes a medida en sintonía con el concepto del hotel, utilizando tejidos duraderos para uniformes hoteleros funcionales.",
   "kicker": "Caso de hostelería",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
   "coverAlt": "Exterior del hotel de lujo METT Barcelona",
@@ -18,7 +18,7 @@ En un proyecto realizado en METT Barcelona, un nuevo hotel de lujo de 5 estrella
 
 El responsable de restauración necesitaba conjuntos diferenciados para más de 20 miembros del equipo, además de dirección, según sus distintos roles. Por ello diseñamos prendas a medida para sala, operativa interna y dirección. Los tejidos se seleccionaron por rendimiento, principalmente algodón orgánico combinado con fibras técnicas para asegurar comodidad, facilidad de cuidado y una larga vida útil.
 
-Todas las prendas se diseñaron, prototiparon y produjeron en Barcelona, 315 unidades en total, con cadena de suministro local y fabricación local. Después de un año de uso diario, los uniformes siguen en excelentes condiciones y el personal no ha reportado incidencias.
+Todas las prendas se diseñaron, prototiparon y produjeron en Barcelona, 315 unidades en total, con cadena de suministro local y fabricación local. Después de un año de uso diario, los uniformes siguen en excelentes condiciones y el personal no ha comunicado incidencias.
 
 ## Uniformes alineados con el concepto del hotel
 
@@ -40,7 +40,7 @@ También aplicamos acabados funcionales: tratamientos hidrófugos y antimanchas 
 
 Una decisión central fue construir un vestuario específico para cada categoría de rol. Las funciones de cara al huésped, recepción, sala y conserjería, recibieron prendas más refinadas, diseñadas para expresar profesionalidad sin limitar el movimiento durante turnos largos.
 
-Camareros y cocteleros llevaban camisas, chalecos y chaquetas en tejidos elásticos y suaves. Las funciones internas, chefs, apoyo de cocina y pisos, recibieron prendas más robustas y funcionales, con patrones adaptados a una actividad operativa intensa.
+Camareros y personal de bar llevaban camisas, chalecos y chaquetas en tejidos elásticos y suaves. Los equipos internos, chefs, personal de apoyo en cocina y personal de pisos, recibieron prendas más robustas y funcionales, con patrones adaptados a una actividad operativa intensa.
 
 Para dirección, desarrollamos conjuntos a medida en lino o algodón en tonos neutros, coherentes con el posicionamiento premium del hotel. Esta diferenciación visual mediante color, tejido y corte ayuda a hacer legibles los roles tanto internamente como desde la perspectiva del huésped.
 

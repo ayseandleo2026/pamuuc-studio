@@ -2,7 +2,7 @@
   "key": "dental",
   "locale": "it",
   "slug": "divise-clinica-dentale-personalizzate-barcellona",
-  "title": "Divise per cliniche dentali",
+  "title": "Divise su misura per cliniche dentali",
   "headline": "Divise personalizzate per cliniche dentali: un guardaroba coerente con il marchio",
   "description": "Un caso studio su come una clinica dentale di alta gamma a Barcellona ha armonizzato spazio, identità del marchio e uso quotidiano attraverso divise su misura.",
   "kicker": "Direzione creativa delle divise",

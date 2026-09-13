@@ -7,7 +7,7 @@
   "description": "Una guida per ruolo che trasforma lavaggio, clima, movimento e immagine in un brief tessile a cui il fornitore risponda con prove.",
   "kicker": "Materiali per hotel",
   "published": "2026-09-03",
-  "modified": "2026-09-03",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-fabric-guide",
   "coverAlt": "Giacca per l’accoglienza, camicia di sala, pantaloni per il reparto piani e campioni di tessuto su un tavolo",
@@ -34,11 +34,11 @@ Registra il ciclo attuale, quello proposto e ogni incertezza tra i due. Chiedi p
 
 ## Distingui per ruolo: immagine, servizio o alta mobilità
 
-Raggruppa i ruoli in base a ciò che il capo deve fare, non soltanto al nome del reparto. I capi orientati all’immagine devono mantenere una linea controllata sotto le luci dell’hotel e dopo periodi in piedi o seduti. Quelli di servizio devono accompagnare gesti ripetuti, carichi e rapidi cambi di direzione. I capi per l’alta mobilità richiedono agio per piegarsi, sollevare, inginocchiarsi e lavorare intorno alle attrezzature.
+Raggruppa i ruoli in base a ciò che il capo deve fare, non soltanto al nome del reparto. I capi orientati all’immagine devono mantenere una linea definita sotto le luci dell’hotel e dopo periodi in piedi o seduti. Quelli di servizio devono accompagnare gesti ripetuti, carichi e rapidi cambi di direzione. I capi per l’alta mobilità richiedono agio per piegarsi, sollevare, inginocchiarsi e lavorare intorno alle attrezzature.
 
-Non è una gerarchia. Un pantalone per il reparto piani non è una versione meno curata di quello per l’accoglienza: svolge un lavoro diverso. Lo stesso tessuto può anche comportarsi in modo differente in una giacca aderente, una camicia ampia o un pantalone con tasche e cuciture molto sollecitate. Costruzione, agio e rinforzi devono comparire nelle specifiche accanto alla composizione.
+Non è una gerarchia. Un pantalone per il reparto piani non è una versione meno curata di quello per l’accoglienza: svolge un lavoro diverso. Lo stesso tessuto può anche comportarsi in modo differente in una giacca aderente, una camicia aperta o un pantalone con tasche e cuciture molto sollecitate. Costruzione, agio e rinforzi devono comparire nelle specifiche accanto alla composizione.
 
-Il [progetto Pamuuc per l’ospitalità](/it/blog/divise-hospitalita-personalizzate/) mostra come differenziare i capi per ruolo mantenendo un guardaroba coerente. È un riferimento di progetto, non la prova che una scelta tessile funzioni per un’altra struttura.
+Il [progetto PAMUUC per l’ospitalità](/it/blog/divise-hospitalita-personalizzate/) mostra come differenziare i capi per ruolo mantenendo un guardaroba coerente. È un riferimento di progetto, non la prova che una scelta tessile funzioni per un’altra struttura.
 
 ## Distingui per clima: interno controllato, terrazza, spa o stagione
 
@@ -50,7 +50,7 @@ Il clima cambia anche nel corso dell’anno. Se l’hotel richiede opzioni stagi
 
 ## Traduci le sensazioni in peso, armatura, elasticità, recupero e mano
 
-Parole come leggero, morbido, netto, traspirante e resistente sono utili solo se il gruppo di lavoro ne condivide il significato nell’uso. Trasforma ogni termine in qualcosa che si possa vedere, toccare o provare sul capo. Leggero può indicare la massa, il valore visivo del colore o il modo in cui il tessuto si muove. Morbido può riferirsi alla superficie, al drappeggio o a una struttura meno rigida.
+Parole come leggero, morbido, sostenuto, traspirante e resistente sono utili solo se il gruppo di lavoro ne condivide il significato nell’uso. Trasforma ogni termine in qualcosa che si possa vedere, toccare o provare sul capo. Leggero può indicare la massa, il valore visivo del colore o il modo in cui il tessuto si muove. Morbido può riferirsi alla superficie, al drappeggio o a una struttura meno rigida.
 
 Costruisci la selezione attraverso variabili collegate:
 
@@ -74,14 +74,14 @@ Chiedi quale metodo, procedura e campione siano stati utilizzati, se il rapporto
 
 Fai seguire la stessa sequenza a una giacca per l’accoglienza, una camicia di sala e un pantalone per il reparto piani. Prima definisci la manutenzione. Poi registra clima, movimenti, immagine davanti all’ospite, esposizione allo sporco, punti di contatto e opacità. Solo a quel punto confronta le opzioni tessili e le relative prove.
 
-La giacca per l’accoglienza può mettere struttura, recupero e finissaggio tra le priorità, continuando però a richiedere un’estensione comoda al banco. La camicia da ristorante può dare più peso al passaggio dell’aria, ai movimenti rapidi, alle macchie e ai tempi di rimessa in servizio. Il pantalone del reparto piani può concentrarsi sull’agio quando ci si piega, sulla tensione delle tasche, sull’attrito, sull’opacità e sulla compatibilità con il programma reale di lavaggio.
+La giacca per l’accoglienza può mettere struttura, recupero e finissaggio tra le priorità, continuando però a richiedere libertà di movimento delle braccia al banco. La camicia da ristorante può dare più peso al passaggio dell’aria, ai movimenti rapidi, alle macchie e ai tempi di rimessa in servizio. Il pantalone del reparto piani può concentrarsi sull’agio quando ci si piega, sulla tensione delle tasche, sull’attrito, sull’opacità e sulla compatibilità con il programma reale di lavaggio.
 
-L’esercizio deve produrre priorità diverse, non fibre vincitrici decise in anticipo. Se un candidato compare in tutte e tre le selezioni, chiedigli di rispondere separatamente a ogni ruolo. Standardizzare un tessuto può semplificare il guardaroba, ma la comodità non è una prova di idoneità al lavoro.
+L’esercizio deve produrre priorità diverse, non fibre vincitrici decise in anticipo. Se un candidato compare in tutte e tre le selezioni, verifica che soddisfi separatamente le esigenze di ogni ruolo. Standardizzare un tessuto può semplificare il guardaroba, ma la comodità non è una prova di idoneità al lavoro.
 
 ## Emetti il brief tessile per l’approvazione congiunta
 
 Raccogli la decisione in un documento leggibile dai responsabili operativi, dalla lavanderia, dal progettista e dal fornitore. Per ogni capo, registra ruolo, ambiente, movimenti, frequenza d’uso, esposizione allo sporco, ciclo di manutenzione, immagine richiesta, mano, peso, armatura, elasticità, recupero, asciugatura, opacità e prove ancora necessarie.
 
-Assegna ogni conferma. I responsabili operativi possono descrivere il turno; la lavanderia può convalidare il processo; il fornitore può identificare il tessuto proposto e i relativi rapporti; il team di progettazione può collegare i fatti a modello, costruzione e coerenza del guardaroba. Le incognite devono restare visibili finché un campione o una prova non le risolve.
+Assegna ogni conferma. I responsabili operativi possono descrivere il turno; la lavanderia può convalidare il processo; il fornitore può identificare il tessuto proposto e i relativi rapporti; il team di progettazione può collegare i fatti a cartamodello, costruzione e coerenza del guardaroba. Le incognite devono restare visibili finché un campione o una prova non le risolve.
 
-Usa la guida su [come progettare divise per hotel](/it/blog/come-progettare-divise-per-hotel/) per collegare le specifiche tessili al percorso dell’ospite e al sistema dei ruoli. Poi consulta il [processo di progettazione Pamuuc](/it/#process) o [richiedi un primo incontro](/it/#contact) per trasformare l’esercizio sui tre capi in una selezione per ruolo pronta per campioni e approvazione congiunta.
+Usa la guida su [come progettare divise per hotel](/it/blog/come-progettare-divise-per-hotel/) per collegare le specifiche tessili al percorso dell’ospite e al sistema dei ruoli. Poi consulta il [processo di progettazione PAMUUC](/it/#process) o [richiedi un primo incontro](/it/#contact) per trasformare l’esercizio sui tre capi in una selezione per ruolo pronta per campioni e approvazione congiunta.

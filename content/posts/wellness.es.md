@@ -7,7 +7,7 @@
   "description": "Cómo construir un sistema de uniformes para equipos de estudios de bienestar alineando espacio, comodidad, servicio diario y durabilidad de los tejidos.",
   "kicker": "Continuidad operativa",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "wellness-studio-uniform-system",
   "coverAlt": "Vestuario coordinado para el equipo de un estudio de bienestar",
@@ -22,7 +22,7 @@ Por esa razón, los uniformes deben abordarse como un sistema integrado. En luga
 
 Estos entornos se sitúan entre la hostelería, el cuidado y la estética. Los clientes buscan precisión e higiene, pero también calma y coherencia visual. Los uniformes deben comunicar competencia y comodidad al mismo tiempo.
 
-Las túnicas estándar resuelven solo el mínimo funcional, pero rara vez reflejan el lenguaje de la marca. En estudios guiados por el diseño, esa distancia se hace evidente.
+Las casacas estándar resuelven solo el mínimo funcional, pero rara vez reflejan el lenguaje de la marca. En estudios guiados por el diseño, esa distancia se hace evidente.
 
 ## Partir del espacio, no del catálogo
 
@@ -32,7 +32,7 @@ Muchos estudios contemporáneos evitan una estética clínica rígida y optan en
 
 ## Comodidad, durabilidad y mantenimiento
 
-Los profesionales realizan un trabajo preciso durante muchas horas. Los uniformes deben favorecer la libertad de movimiento, una comodidad constante y una presencia formal sólida durante toda la jornada.
+Los profesionales realizan un trabajo preciso durante muchas horas. Los uniformes deben favorecer la libertad de movimiento, una comodidad constante y una imagen profesional cuidada durante toda la jornada.
 
 La elección del tejido es decisiva: fibras transpirables para la comodidad, mezclas técnicas para la durabilidad, colores estables para lavados frecuentes. La construcción también importa, con refuerzos en las zonas más exigidas para reducir las sustituciones prematuras.
 

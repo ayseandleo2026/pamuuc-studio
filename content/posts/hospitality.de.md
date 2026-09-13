@@ -7,7 +7,7 @@
   "description": "315 maßgeschneiderte Teile für ein 5-Sterne-Haus in Barcelona: Design aus dem Interieurkonzept, Stoffe für industrielle Wäsche.",
   "kicker": "Hotellerie-Projekt",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
   "coverAlt": "Außenansicht des Luxushotels METT Barcelona",
@@ -34,7 +34,7 @@ Hoteluniformen müssen hohe Beanspruchung und häufige industrielle Waschgänge 
 
 Wir haben Mischungen aus Bio-Baumwolle mit Polyester oder Elasthan verwendet. Baumwolle sorgt für Atmungsaktivität und Weichheit, synthetische Fasern bringen Festigkeit, Elastizität und eine bessere Formstabilität. Alle Stoffe wurden mechanisch vorgeschrumpft und mit hochwertigen Pigmenten gefärbt.
 
-Außerdem haben wir funktionale Veredelungen eingesetzt: wasserabweisende und fleckenresistente Ausrüstungen bei ausgewählten Kleidungsstücken sowie Doppelsteppnähte an stark beanspruchten Stellen wie Ellenbogen und Knien. In Tests über wiederholte Zyklen hinweg blieben sowohl Farbe als auch Struktur stabil.
+Außerdem haben wir funktionale Veredelungen eingesetzt: wasserabweisende und fleckenresistente Ausrüstungen bei ausgewählten Kleidungsstücken sowie doppelte Nähte an stark beanspruchten Stellen wie Ellenbogen und Knien. In Tests über wiederholte Zyklen hinweg blieben sowohl Farbe als auch Struktur stabil.
 
 ## Uniformen nach Rollen differenziert
 
@@ -62,6 +62,6 @@ In der Hotellerie ist das Ausbleiben von Beschwerden über Passform und Funktion
 
 ## Fazit
 
-Das METT-Barcelona-Programm zeigt, dass Hoteluniformen dann am besten funktionieren, wenn sie als integriertes System und nicht als einzelne Kleidungsstücke behandelt werden. Durch die Abstimmung von Design und Hotelidentität, die Auswahl für intensive Nutzung geeigneter Stoffe, die Differenzierung nach Rollen und die Vereinfachung der Pflege unterstützt die Uniform gleichzeitig Betrieb und Markenwahrnehmung.
+Das Programm für METT Barcelona zeigt, dass Hoteluniformen dann am besten funktionieren, wenn sie als integriertes System und nicht als einzelne Kleidungsstücke behandelt werden. Durch die Abstimmung von Design und Hotelidentität, die Auswahl für intensive Nutzung geeigneter Stoffe, die Differenzierung nach Rollen und die Vereinfachung der Pflege unterstützt die Uniform gleichzeitig Betrieb und Markenwahrnehmung.
 
 Für Teams in der Hotellerie ist der entscheidende Punkt, von Anfang an in Materialqualität und funktionsgeleitete Designlogik zu investieren. Die Vorteile zeigen sich mit der Zeit: größere Haltbarkeit, mehr Vertrauen im Team und ein besseres Gästeerlebnis. Sie können auch unseren Prozess und ausgewählte Projekte ansehen.

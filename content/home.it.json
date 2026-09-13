@@ -1,9 +1,9 @@
 {
   "locale": "it",
   "meta": {
-    "title": "Studio di divise su misura a Barcellona | Pamuuc Studio",
+    "title": "Studio di divise su misura a Barcellona | PAMUUC Studio",
     "description": "Progettazione e produzione di divise su misura per hotel, ristoranti, spazi benessere e cliniche. Prodotte a Barcellona, da 10 pezzi per modello.",
-    "ogTitle": "Studio di divise su misura a Barcellona | Pamuuc Studio",
+    "ogTitle": "Studio di divise su misura a Barcellona | PAMUUC Studio",
     "ogDescription": "Sistemi di divise su misura per hotel, ristoranti, spazi benessere, cliniche e attività a contatto con il pubblico: dalla progettazione e dalle prove alla produzione e ai riordini."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Parlaci del tuo progetto di divise",
     "secondary": "Scopri i progetti selezionati",
-    "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati Pamuuc Studio a Barcellona",
+    "imageAlt": "Progettazione di divise su misura e sviluppo dei capi firmati PAMUUC Studio a Barcellona",
     "proofs": [
       {
         "label": "Primo progetto",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "COSA FACCIAMO",
     "h2": "Un servizio completo di divise su misura, non un catalogo",
-    "intro": "Pamuuc Studio progetta, sviluppa e produce divise su misura per ospitalità, benessere, sanità e attività a contatto con il pubblico. Ogni progetto nasce dall’organizzazione, dalle persone che indosseranno i capi e dal lavoro che svolgono.",
+    "intro": "PAMUUC Studio progetta, sviluppa e produce divise su misura per ospitalità, benessere, sanità e attività a contatto con il pubblico. Ogni progetto nasce dall’organizzazione, dalle persone che indosseranno i capi e dal lavoro che svolgono.",
     "card": {
       "topline": "PROGETTAZIONE, SVILUPPO E PRODUZIONE",
       "h3": "Sistemi di divise su misura",
@@ -77,7 +77,7 @@
       "Collegano ruoli diversi in un unico guardaroba",
       "Restano coerenti a ogni riordino"
     ],
-    "kicker": "Lavori consegnati",
+    "kicker": "Progetti realizzati",
     "stats": [
       {
         "v": "1000+",
@@ -97,7 +97,7 @@
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "L’atelier Pamuuc Studio a Barcellona: appendiabiti, pressa e tavolo da taglio"
+    "alt": "L’atelier PAMUUC Studio a Barcellona: appendiabiti, pressa e tavolo da taglio"
   },
   "sectors": {
     "kicker": "CON CHI LAVORIAMO",
@@ -203,7 +203,7 @@
           "Ricamo tono su tono",
           "Etichette tessute",
           "Etichette stampate",
-          "Etichette nominali",
+          "Etichette nominative",
           "Finiture personalizzate",
           "Bottoni personalizzati",
           "Serigrafia"
@@ -262,7 +262,7 @@
         "items": [
           "Approvazione pre-produzione",
           "Produzione locale",
-          "Consegna e impostazione dei riassortimenti"
+          "Consegna e organizzazione dei riordini"
         ],
         "modal": "modal-phase-3",
         "img": "/assets/images/home/process-03-production.jpg",
@@ -289,7 +289,7 @@
       }
     ],
     "note": "Il calendario definitivo dipende dal numero di modelli, dalla disponibilità dei tessuti, dalle prove, dai cicli di revisione, dalla costruzione, dalle quantità e dai tempi di approvazione.",
-    "handoff": "Metti una data sul tuo progetto"
+    "handoff": "Fissa una data per il tuo progetto"
   },
   "personalised": {
     "kicker": "PERSONALIZZAZIONE",
@@ -335,7 +335,7 @@
         "p": "Lo sviluppo vicino allo studio permette riscontri più rapidi, decisioni tecniche più chiare e una comunicazione diretta."
       },
       {
-        "h3": "Pensato per il lavoro reale",
+        "h3": "Pensato per il lavoro quotidiano",
         "p": "Movimento, durata del turno, mansioni, manutenzione e ambiente di lavoro guidano ogni capo."
       },
       {
@@ -347,14 +347,14 @@
   "parameters": {
     "kicker": "ASPETTI PRATICI DEL PROGETTO",
     "h2": "Tre modi per iniziare, con i numeri in chiaro",
-    "intro": "Non serve commissionare un guardaroba completo. Il prezzo si quota per progetto — non lavoriamo con un listino rigido — e il calendario segue il numero di modelli, le prove e il tessuto.",
+    "intro": "Non serve commissionare un guardaroba completo. Il preventivo viene definito per ogni progetto, senza un listino rigido. Le tempistiche dipendono dal numero di modelli, dalle prove e dal tessuto.",
     "groups": [
       {
         "h3": "Quantità minime consigliate",
         "notes": [
           {
             "head": "Da 10 pezzi per modello",
-            "body": "Possiamo produrre da 10 pezzi per modello, adattando il prezzo alla quantità e alla costruzione del capo."
+            "body": "Alcuni modelli possono essere prodotti a partire da 10 pezzi, con un prezzo adeguato alla costruzione del capo e alla quantità."
           },
           {
             "head": "10–15 pezzi per modello",
@@ -447,14 +447,14 @@
   "projects": {
     "kicker": "PROGETTI E GUIDE SELEZIONATI",
     "h2": "Tre programmi, negli ambienti per cui sono nati",
-    "intro": "L’apertura di un hotel, uno spazio benessere e una clinica privata: lo stesso metodo, tre contesti molto diversi.",
+    "intro": "L’apertura di un hotel, un team di un centro benessere e una clinica privata: lo stesso metodo, tre contesti molto diversi.",
     "items": [
       {
-        "tag": "CASO STUDIO — HOTEL",
+        "tag": "CASO STUDIO: HOTEL",
         "h3": "Divise su misura per METT Barcelona",
         "p": "Un guardaroba completo per ruolo, sviluppato dal progetto d’interni dell’hotel per accoglienza, ristorazione, direzione e spa, poi progettato, prototipato e prodotto a Barcellona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Divise per l’accoglienza sviluppate da Pamuuc Studio per METT Barcelona",
+        "alt": "Divise per l’accoglienza sviluppate da PAMUUC Studio per METT Barcelona",
         "href": "/it/blog/divise-hospitalita-personalizzate/",
         "linkLabel": "Leggi il caso studio dell’hotel"
       },
@@ -468,7 +468,7 @@
         "linkLabel": "Leggi la guida al benessere"
       },
       {
-        "tag": "CASO STUDIO — CLINICA",
+        "tag": "CASO STUDIO: CLINICA",
         "h3": "Divise su misura per uno studio dentistico di Barcellona",
         "p": "Un guardaroba professionale che supera l’abbigliamento clinico generico e collega spazio, marchio, immagine dell’accoglienza ed esigenze di manutenzione quotidiana.",
         "img": "/assets/images/project-clinic-editorial.jpg",
@@ -490,11 +490,11 @@
       },
       {
         "q": "Gestite i riordini dopo la prima produzione?",
-        "a": "Sì. Cartamodelli, tessuti, finiture e sistemi di personalizzazione vengono archiviati per garantire continuità nel tempo. Questo riduce le fasi di ri-sviluppo, assicurando coerenza nei nuovi inserimenti e semplificando i riordini futuri."
+        "a": "Sì. Cartamodelli, tessuti, finiture, personalizzazioni e specifiche approvati vengono organizzati per gli ordini futuri. Offrono una base coerente per sostituire i capi, vestire i nuovi membri del personale e accompagnare la crescita del team, senza ripetere l’intero sviluppo."
       },
       {
         "q": "È necessario partire da un guardaroba completo?",
-        "a": "No. È possibile iniziare anche da una singola categoria di capi o da un ruolo specifico, per poi estendere il progetto nel tempo. Definiamo insieme il punto di partenza più efficace in base a priorità, budget e impatto operativo."
+        "a": "No. Puoi iniziare da un ruolo, un reparto o una categoria di capi e ampliare il guardaroba in seguito. Definiamo il punto di partenza più utile in base alla visibilità presso i clienti, alle esigenze operative, alla quantità, al budget e alle tempistiche."
       },
       {
         "q": "Sviluppate colori e dettagli di personalizzazione?",
@@ -522,7 +522,7 @@
       },
       {
         "q": "Come gestite le taglie di un intero team?",
-        "a": "Le quantità vengono distribuite tra le taglie necessarie durante la conferma di taglie e quantità, mentre le prove servono a definire la scala taglie prima della produzione. I nuovi ingressi possono poi fare riferimento ai cartamodelli e alle specifiche archiviate."
+        "a": "Le quantità vengono distribuite tra le taglie necessarie durante la conferma di taglie e quantità. Le prove servono a definire la gamma di taglie prima della produzione. Per vestire i nuovi membri del personale si utilizzano poi i cartamodelli e le specifiche archiviate."
       },
       {
         "q": "I tessuti reggono il lavaggio industriale?",
@@ -563,7 +563,7 @@
         "name": "Nome e cognome",
         "email": "nome@azienda.com",
         "phone": "+34 ...",
-        "company": "Nome dell’azienda",
+        "company": "Azienda o struttura",
         "brief": "Parlaci dello spazio, del team, dei ruoli, dei capi, delle quantità indicative, della data obiettivo e di ciò che le divise devono ottenere."
       },
       "helps": {
@@ -630,8 +630,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising o abbigliamento brandizzato",
-            "t": "Merchandising o abbigliamento brandizzato",
+            "v": "Merchandising o capi con il tuo marchio",
+            "t": "Merchandising o capi con il tuo marchio",
             "disabled": false
           },
           {
@@ -675,12 +675,12 @@
       },
       "consent": "Accetto l’{privacy:informativa privacy} e i {terms:termini}.",
       "hint": "Il modulo richiede circa due minuti. Di solito rispondiamo entro un giorno lavorativo.",
-      "submit": "Invia la richiesta di progetto"
+      "submit": "Invia la richiesta"
     }
   },
   "footer": {
-    "about": "Sistemi di divise su misura sviluppati a Barcellona.",
-    "legal": "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com",
+    "about": "Divise su misura progettate, sviluppate e prodotte a Barcellona.",
+    "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
         "title": "Studio",
@@ -750,7 +750,7 @@
       },
       {
         "t": "h",
-        "v": "Progettato dal tuo ambiente"
+        "v": "Progettato a partire dal tuo ambiente"
       },
       {
         "t": "p",
@@ -836,7 +836,7 @@
           "Abiti",
           "Blazer e giacche",
           "Grembiuli",
-          "Maglieria e strati esterni"
+          "Maglieria e capispalla"
         ]
       },
       {
@@ -1043,7 +1043,7 @@
           "Pantaloni tecnici",
           "Sovracamicie",
           "Giacche leggere",
-          "Strati esterni"
+          "Capispalla"
         ]
       },
       {
@@ -1119,7 +1119,7 @@
     "phase-1": [
       {
         "t": "h",
-        "v": "Fase 01 — Scoperta"
+        "v": "Fase 01: Scoperta"
       },
       {
         "t": "h",
@@ -1155,7 +1155,7 @@
     "phase-2": [
       {
         "t": "h",
-        "v": "Fase 02 — Sviluppo"
+        "v": "Fase 02: Sviluppo"
       },
       {
         "t": "h",
@@ -1191,7 +1191,7 @@
     "phase-3": [
       {
         "t": "h",
-        "v": "Fase 03 — Produzione"
+        "v": "Fase 03: Produzione"
       },
       {
         "t": "h",
@@ -1291,7 +1291,7 @@
   "wardrobe": {
     "kicker": "Che cosa ottieni",
     "h2": "Un guardaroba sviluppato per ruolo e archiviato per i riordini",
-    "intro": "Nessun catalogo e nessun capo di stock adattato. Ogni capo viene definito a partire dal lavoro del ruolo e poi archiviato, così l’ordine successivo corrisponde al primo.",
+    "intro": "Nessun catalogo e nessun capo di stock adattato. Ogni capo viene definito in base alle mansioni di chi lo indossa e poi archiviato, così l’ordine successivo corrisponde al primo.",
     "pillars": [
       {
         "h": "Pensato intorno al ruolo",

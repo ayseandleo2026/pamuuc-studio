@@ -7,7 +7,7 @@
   "description": "Diagnose fading, shrinkage, abrasion, seam damage and failed trims, then correct the specification behind premature hotel uniform failure.",
   "kicker": "Durability diagnosis",
   "published": "2026-09-07",
-  "modified": "2026-09-07",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-durability",
   "coverAlt": "Hands inspecting wear around the pocket and seam of a dark hotel service jacket",
@@ -74,7 +74,7 @@ Open the garment and inspect both sides of every damaged construction point. At 
 
 Fasteners require the same discipline. A broken button, distorted zip or detached snap may relate to the component, its attachment, heat and mechanical action during care, or tension created by fit. Record how the failure occurred before specifying a stronger replacement.
 
-The [Pamuuc hospitality case study](/en/blog/custom-hospitality-uniforms/) shows one first party example of connecting role differences, fabric choices and operational use within a coherent wardrobe. It is project context, not evidence that one construction will perform the same way in another hotel.
+The [PAMUUC hospitality case study](/en/blog/custom-hospitality-uniforms/) shows one first party example of connecting role differences, fabric choices and operational use within a coherent wardrobe. It is project context, not evidence that one construction will perform the same way in another hotel.
 
 ## Build an evidence ladder
 
@@ -94,4 +94,4 @@ Change the smallest part of the specification that resolves the verified problem
 
 Finally, return the approved correction to the master specification, pattern, bill of materials, care instructions and reorder record that need it. Archive the rejected version and the reason for the change so the same failure does not return when a new batch is produced.
 
-Use the [Pamuuc design process](/#process) to connect failure evidence with sample development, or [request a first meeting](/#contact) to review a current hotel uniform system. The useful outcome is not a repaired garment alone. It is a documented correction that the next garment can reproduce.
+Use the [PAMUUC design process](/#process) to connect failure evidence with sample development, or [request a first meeting](/#contact) to review a current hotel uniform system. The useful outcome is not a repaired garment alone. It is a documented correction that the next garment can reproduce.

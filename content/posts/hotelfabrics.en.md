@@ -7,7 +7,7 @@
   "description": "A role-led guide for turning hotel laundry, climate, movement and appearance needs into a fabric brief suppliers can answer with evidence.",
   "kicker": "Hotel materials",
   "published": "2026-09-03",
-  "modified": "2026-09-03",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-fabric-guide",
   "coverAlt": "Reception jacket, service shirt, housekeeping trousers and fabric swatches on a worktable",
@@ -38,7 +38,7 @@ Group roles by what the garment must do rather than by department name. Presenta
 
 These groups are not a ranking. A housekeeping trouser is not a less refined version of a reception trouser; it has a different job. The same fabric can also behave differently when used in a close jacket, an open shirt or a trouser with stressed pocket and seam areas. Construction, ease and reinforcement belong beside composition in the brief.
 
-Use the [Pamuuc hospitality case study](/en/blog/custom-hospitality-uniforms/) as an example of differentiating garments by role within one coherent wardrobe. It is a project reference, not proof that one material choice will work for another property.
+Use the [PAMUUC hospitality case study](/en/blog/custom-hospitality-uniforms/) as an example of differentiating garments by role within one coherent wardrobe. It is a project reference, not proof that one material choice will work for another property.
 
 ## Branch by climate: controlled interior, terrace, spa or season
 
@@ -84,4 +84,4 @@ Put the decision in one document that operations, the laundry partner, the desig
 
 Name who confirms each part. Operations can describe the shift; the laundry partner can confirm the process; the supplier can identify the offered cloth and reports; and the design team can connect those facts to pattern, construction and wardrobe coherence. Unknowns should remain visible until sampling or testing resolves them.
 
-Use the companion guide on [how to design hotel uniforms](/en/blog/how-to-design-hotel-uniforms/) to connect the fabric brief to the wider guest journey and role system. Then review the [Pamuuc design process](/#process) or [request an introductory meeting](/#contact) to turn the three-garment exercise into a role-specific shortlist ready for samples and joint sign-off.
+Use the companion guide on [how to design hotel uniforms](/en/blog/how-to-design-hotel-uniforms/) to connect the fabric brief to the wider guest journey and role system. Then review the [PAMUUC design process](/#process) or [request an introductory meeting](/#contact) to turn the three-garment exercise into a role-specific shortlist ready for samples and joint sign-off.

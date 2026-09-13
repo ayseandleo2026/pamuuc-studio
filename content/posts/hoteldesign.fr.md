@@ -7,11 +7,11 @@
   "description": "Une méthode concrète pour transformer le concept d’un hôtel, ses métiers et ses contraintes opérationnelles en un cahier des charges cohérent.",
   "kicker": "Planification hôtelière",
   "published": "2026-08-27",
-  "modified": "2026-08-27",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-design-guide",
   "coverAlt": "Créatrice organisant des croquis de métiers et des échantillons de tissu sur une table d’hôtel",
-  "coverCaption": "Visualisation éditoriale d’une séance fictive de définition des uniformes, créée par IA à partir de références originales de Pamuuc.",
+  "coverCaption": "Visualisation éditoriale d’une séance fictive de définition des uniformes, créée par IA à partir de références originales de PAMUUC.",
   "takeaways": [
     "Commencez par le lieu et le parcours client avant de choisir les vêtements ou les tissus.",
     "Analysez chaque métier selon les gestes, les outils, le climat, le contact client et l’entretien.",
@@ -26,7 +26,7 @@ Pour concevoir les uniformes d’un hôtel, commencez par le parcours client, pa
 
 ## Le bel échantillon qui échoue à l’accueil
 
-Imaginez une veste de réception convaincante sur cintre. Derrière le comptoir, sa manche accroche lorsque la personne saisit une carte, sa poche ne contient pas les outils du service et son tissu devient trop chaud quand le hall se remplit. L’échantillon est séduisant, mais il ne répond pas encore aux exigences du métier.
+Imaginez une veste de réception convaincante sur cintre. Derrière le comptoir, sa manche accroche lorsque la personne saisit une carte d’accès, sa poche ne contient pas les outils du service et son tissu devient trop chaud quand le hall se remplit. L’échantillon est séduisant, mais il ne répond pas encore aux exigences du métier.
 
 C’est la faiblesse d’un cahier des charges centré sur le produit : il demande quels vêtements plaisent à l’hôtel avant de définir ce que la tenue doit accomplir. Un document utile commence par la séquence de service. Il suit l’arrivée du client, la personne qui l’accueille, la suite de l’interaction et les équipes qui deviennent visibles au fil du parcours.
 
@@ -42,7 +42,7 @@ Décrivez le caractère du service dans un langage simple, utilisable par toutes
 
 Un intitulé de poste est trop général pour définir un vêtement. Deux équipes d’accueil peuvent travailler debout ou assises, déplacer des bagages, sortir à l’extérieur ou utiliser des outils différents. Observez le service et relevez le contact avec les clients, les gestes répétés, les objets transportés, les variations de température, l’exposition aux taches et les couches nécessaires au fil de la journée.
 
-Échangez avec les personnes qui porteront la tenue. [L’étude de Tu et de ses collègues](https://doi.org/10.1080/10941665.2011.610149) a examiné les liens entre le style des uniformes, l’image de l’hôtel, la perception des employés par eux-mêmes et celle des clients. [L’étude de Nelson et Bowen dans des resorts](https://doi.org/10.1177/001088040004100221) a relié certains attributs de l’uniforme aux attitudes du personnel et recommandé de l’associer au choix.
+Échangez avec les personnes qui porteront la tenue. [L’étude de Tu et de ses collègues](https://doi.org/10.1080/10941665.2011.610149) a examiné les liens entre le style des uniformes, l’image de l’hôtel, l’image que les employés ont d’eux-mêmes et la perception des clients. [L’étude de Nelson et Bowen dans des resorts](https://doi.org/10.1177/001088040004100221) a relié certains attributs de l’uniforme aux attitudes du personnel et recommandé de l’associer au choix.
 
 Ces travaux ne prouvent pas qu’un design particulier produit un résultat commercial. Ils confortent néanmoins un principe pratique : le cahier des charges doit considérer à la fois la personne qui porte le vêtement et le client qui la rencontre. Un essayage révèle les proportions ; seule l’observation du travail montre si la tenue est réellement adaptée au service.
 
@@ -50,7 +50,7 @@ Ces travaux ne prouvent pas qu’un design particulier produit un résultat comm
 
 Un hôtel n’a pas besoin d’une tenue identique dans tous les services. Il lui faut des règles partagées qui relient les équipes tout en permettant à chaque métier de travailler naturellement. Cette grammaire peut définir la palette, la silhouette, les proportions, le langage des fermetures, la visibilité de la marque, les superpositions et le degré de formalité.
 
-Les différences entre les métiers doivent être intentionnelles. L’accueil peut demander une couche plus structurée ; la restauration, davantage d’aisance et des tabliers faciles à remplacer ; l’entretien des chambres, une coupe adaptée aux gestes répétés pour atteindre et se baisser. Des relations de couleur ou certains détails de construction peuvent unir ces vêtements sans les enfermer dans un modèle unique.
+Les différences entre les métiers doivent être intentionnelles. L’accueil peut demander une couche plus structurée ; la restauration, davantage d’aisance et des tabliers faciles à remplacer ; l’entretien des chambres, une coupe adaptée aux gestes répétés pour atteindre des objets et se baisser. Des relations de couleur ou certains détails de construction peuvent unir ces vêtements sans les enfermer dans un modèle unique.
 
 Cette démarche évite également l’effet déguisement. Un concept solide ne repose ni sur un thème littéral ni sur une décoration excessive. Il donne à l’équipe une présence claire, liée au lieu et crédible dans le travail quotidien.
 
@@ -60,7 +60,7 @@ Avant de valider une direction, testez-la au-delà de la planche de présentatio
 
 Pensez ensuite aux personnes qui rejoignent ou quittent l’équipe. Un système vestimentaire demande une approche claire des tailles, une méthode d’essayage convenue et des spécifications assez précises pour reproduire plus tard un vêtement validé. Le réassort doit être intégré au projet, pas traité comme une urgence après le lancement.
 
-Le [cas hôtelier présenté par Pamuuc](/fr/blog/uniformes-hotellerie-personnalises/) montre comment les références du lieu, la différenciation des métiers et la résistance à l’usage peuvent coexister dans un même programme. Il illustre la méthode dans un contexte hôtelier réel, sans devenir un modèle à copier d’un établissement à l’autre.
+Le [cas hôtelier présenté par PAMUUC](/fr/blog/uniformes-hotellerie-personnalises/) montre comment les références du lieu, la différenciation des métiers et la résistance à l’usage peuvent coexister dans un même programme. Il illustre la méthode dans un contexte hôtelier réel, sans devenir un modèle à copier d’un établissement à l’autre.
 
 ## Transformez l’observation en cahier des charges
 
@@ -69,7 +69,7 @@ Le document final doit rendre les décisions visibles et signaler clairement les
 - Identité du lieu et caractère du service, formulés avec des mots utiles au design
 - Chaque métier, son environnement, son contact client, ses gestes et ses outils
 - Règles vestimentaires communes et différences nécessaires entre les services
-- Circuit d’entretien, climat, superpositions, tailles et contraintes fonctionnelles
+- Circuit d’entretien, climat, superpositions, essayages et contraintes fonctionnelles
 - Attribution des tenues, intégration, remplacement et exigences de réassort
 - Responsables des décisions, validations, priorités de lancement et points à confirmer
 
@@ -79,4 +79,4 @@ Ajoutez des preuves lorsqu’elles sont utiles : photographies des espaces, réf
 
 Un bon cahier des charges ne préjuge pas de la réponse du fournisseur. Il crée les conditions nécessaires à des propositions, prototypes et essayages argumentés. Les matières, les patrons et les détails peuvent alors être évalués à partir d’une compréhension commune du lieu, du travail et de l’organisation opérationnelle.
 
-Utilisez les questions ci-dessus comme document d’exploration. Consultez ensuite le [processus de design et de développement de Pamuuc](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) pour en faire un périmètre de départ clair. Le but n’est pas d’ajouter des vêtements, mais de créer un vestiaire cohérent où chaque pièce a une raison d’exister.
+Utilisez les questions ci-dessus comme document d’exploration. Consultez ensuite le [processus de conception et de développement de PAMUUC](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) pour en faire un périmètre de départ clair. Le but n’est pas d’ajouter des vêtements, mais de créer un vestiaire cohérent où chaque pièce a une raison d’exister.

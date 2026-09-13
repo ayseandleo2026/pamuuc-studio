@@ -7,7 +7,7 @@
   "description": "Diagnostiquez décoloration, rétrécissement, abrasion, coutures et garnitures défaillantes, puis corrigez la spécification en cause.",
   "kicker": "Diagnostic de durabilité",
   "published": "2026-09-07",
-  "modified": "2026-09-07",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-durability",
   "coverAlt": "Des mains inspectent l’usure de la poche et de la couture d’une veste de service d’hôtel sombre",
@@ -15,7 +15,7 @@
   "takeaways": [
     "La durabilité concerne tout le système : tissu, couleur, coupe, coutures, garnitures, entretien et réparation.",
     "Partez du symptôme visible, puis reliez ce symptôme au rôle, aux gestes, au parcours de lavage et à la confection.",
-    "Méthodes en laboratoire, essais de lavage, tests portés et inspections réelles répondent à des questions différentes.",
+    "Méthodes en laboratoire, essais de lavage, essais au porté et inspections réelles répondent à des questions différentes.",
     "Corrigez et archivez l’origine du défaut afin que les réassorts reproduisent la modification approuvée."
   ],
   "keywords": ["durabilité uniformes hôtel", "uniformes hôtellerie durables", "diagnostic défaut uniforme", "qualité uniformes hôtel"],
@@ -62,11 +62,11 @@ Boulochage, lustrage, amincissement et accroc décrivent des évolutions de surf
 
 [ISO 12947-2:2016](https://www.iso.org/standard/61058.html) définit une procédure Martindale pour déterminer la détérioration d’une éprouvette sur les textiles concernés. Cette méthode peut répondre à une question contrôlée sur l’abrasion, mais elle ne prédit pas universellement la durée de vie d’un vêtement. L’exposition, la construction et la finition du tissu, la position de la couture et le design du vêtement restent essentiels.
 
-Comparez le défaut observé aux preuves disponibles pour le matériau exact. Si le rapport porte sur une autre couleur, finition ou construction, maintenez cette lacune visible. Reproduisez ensuite le contact concerné sur un prototype ou pendant un test porté au lieu de transformer un résultat de laboratoire en promesse de durée non étayée.
+Comparez le défaut observé aux preuves disponibles pour le matériau exact. Si le rapport porte sur une autre couleur, finition ou construction, maintenez cette lacune visible. Reproduisez ensuite le contact concerné sur un prototype ou pendant un essai au porté au lieu de transformer un résultat de laboratoire en promesse de durée non étayée.
 
 L’usure de surface peut aussi révéler une possibilité de design. Une poche peut être éloignée d’un point de frottement, une couture peut suivre un autre trajet ou un élément remplaçable peut protéger le vêtement principal. La correction doit répondre à la cause observée, pas ajouter du poids partout.
 
-## Inspectez coutures poches et fermetures
+## Inspectez coutures, poches et fermetures
 
 Ouvrez le vêtement et examinez les deux faces de chaque point endommagé. Sur une couture, déterminez si le fil a cassé, si le point s’est ouvert, si le tissu a glissé, si le bord s’est effiloché ou si l’étoffe voisine s’est déchirée. Ces symptômes posent des questions différentes sur le type de couture, la marge, le fil, l’aiguille, le renfort, la coupe et la charge.
 
@@ -74,11 +74,11 @@ Ouvrez le vêtement et examinez les deux faces de chaque point endommagé. Sur u
 
 Les fermetures demandent la même rigueur. Un bouton cassé, un zip déformé ou une pression arrachée peuvent être liés au composant, à sa fixation, à la chaleur et à l’action mécanique de l’entretien, ou à une tension créée par la coupe. Consignez la manière dont le défaut s’est produit avant de prescrire un remplacement plus résistant.
 
-Le [cas hôtelier de Pamuuc](/fr/blog/uniformes-hotellerie-personnalises/) montre un exemple propre au studio reliant différences de rôles, choix de tissus et usage opérationnel dans une garde robe cohérente. Il s’agit d’un contexte de projet, pas d’une preuve qu’une construction aura le même comportement dans un autre hôtel.
+Le [cas hôtelier de PAMUUC](/fr/blog/uniformes-hotellerie-personnalises/) montre un exemple propre au studio reliant différences de rôles, choix de tissus et usage opérationnel dans un vestiaire cohérent. Il s’agit d’un contexte de projet, pas d’une preuve qu’une construction aura le même comportement dans un autre hôtel.
 
 ## Construisez une échelle de preuves
 
-Chaque contrôle répond à une question différente. Une méthode en laboratoire isole une propriété définie. Un essai de lavage contrôlé montre la réaction du prototype complet à un parcours d’entretien choisi. Un test porté révèle la coupe, le mouvement, l’accès aux poches et les pressions récurrentes. L’inspection en service montre comment le programme livré évolue selon les rôles, les services et la manipulation réelle.
+Chaque contrôle répond à une question différente. Une méthode en laboratoire isole une propriété définie. Un essai de lavage contrôlé montre la réaction du prototype complet à un parcours d’entretien choisi. Un essai au porté révèle la coupe, le mouvement, l’accès aux poches et les pressions récurrentes. L’inspection en service montre comment le programme livré évolue selon les rôles, les services et la manipulation réelle.
 
 Utilisez les preuves dans l’ordre. Partez du symptôme et d’une hypothèse claire. Choisissez la méthode capable de la remettre en question, comparez le résultat au cahier des charges approuvé, puis décidez s’il faut accepter, réparer, corriger et retester, ou rejeter la construction actuelle.
 
@@ -92,6 +92,6 @@ Une cartographie des défauts doit relier symptôme, vêtement, rôle, emplaceme
 
 Modifiez la plus petite partie de la spécification qui résout le problème vérifié. Il peut s’agir d’une autre couture, d’un renfort sur une poche, de plus d’aisance pour un geste répété, d’une garniture compatible, d’un processus de finition révisé ou d’un autre matériau sur un vêtement. Un changement général de matière peut introduire de nouveaux problèmes de coupe, de toucher, d’apparence ou d’entretien.
 
-Intégrez enfin la correction approuvée dans la spécification maîtresse, le patron, la nomenclature, les consignes d’entretien et le dossier de réassort concernés. Archivez la version rejetée et la raison de la modification afin que le même défaut ne réapparaisse pas dans une nouvelle série.
+Intégrez enfin la correction approuvée dans la fiche technique de référence, le patron, la nomenclature, les consignes d’entretien et le dossier de réassort concernés. Archivez la version rejetée et la raison de la modification afin que le même défaut ne réapparaisse pas dans une nouvelle série.
 
-Utilisez le [processus de design de Pamuuc](/fr/#process) pour relier les preuves au développement des prototypes, ou [demandez un premier rendez-vous](/fr/#contact) afin d’examiner le système d’uniformes actuel d’un hôtel. Le résultat utile ne se limite pas à un vêtement réparé. C’est une correction documentée que la pièce suivante pourra reproduire.
+Utilisez le [processus de conception de PAMUUC](/fr/#process) pour relier les preuves au développement des prototypes, ou [demandez un premier rendez-vous](/fr/#contact) afin d’examiner le système d’uniformes actuel d’un hôtel. Le résultat utile ne se limite pas à un vêtement réparé. C’est une correction documentée que la pièce suivante pourra reproduire.

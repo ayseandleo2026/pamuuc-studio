@@ -7,7 +7,7 @@
   "description": "Five visual directions for hotel uniforms, each tested against real roles, climate, movement, care and continuity before it reaches the shortlist.",
   "kicker": "Hotel inspiration",
   "published": "2026-08-30",
-  "modified": "2026-08-30",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-design-ideas",
   "coverAlt": "Five unbranded hotel uniform prototypes arranged on a rail in a warm design studio",
@@ -68,7 +68,7 @@ The risk is restriction. A dramatic line can interfere with stairs, luggage, tra
 
 A direction should face the same test regardless of style. First, place it at arrival: can a guest identify the team, and does the wardrobe match the service tone without copying the interior? Second, place it at peak shift: can each role bend, reach, carry, sit, layer and manage its real tools? Third, place it after the actual care process: does the concept still read clearly when garments have been cleaned, pressed, issued and combined by different people?
 
-The [Pamuuc hospitality case study](/en/blog/custom-hospitality-uniforms/) shows how spatial references, role differences and operational requirements can meet in one wardrobe. It is a project example, not a visual template. For the full method behind space, roles and operations, use the companion guide on [how to design hotel uniforms](/en/blog/how-to-design-hotel-uniforms/).
+The [PAMUUC hospitality case study](/en/blog/custom-hospitality-uniforms/) shows how spatial references, role differences and operational requirements can meet in one wardrobe. It is a project example, not a visual template. For the full method behind space, roles and operations, use the companion guide on [how to design hotel uniforms](/en/blog/how-to-design-hotel-uniforms/).
 
 - **Arrival:** identity, approachability, role recognition and first impression
 - **Peak shift:** movement, tools, temperature, layering and wearer confidence
@@ -80,4 +80,4 @@ Reduce the moodboard to two coherent territories and describe each in the same l
 
 Do not merge every attractive reference into one overloaded answer. Two distinct directions give the hotel enough contrast to make a real decision while preserving room for prototypes and wearer feedback. If neither survives the three scenes, return to the service mood rather than searching for more images.
 
-Bring the hotel’s interior deck and role list to a concept review. Pamuuc can test the two directions against real garments, operations and continuity before development begins. See the [design process](/#process) or [request an introductory meeting](/#contact) when the shortlist is ready.
+Bring the hotel’s interior deck and role list to a concept review. PAMUUC can test the two directions against real garments, operations and continuity before development begins. See the [design process](/#process) or [request an introductory meeting](/#contact) when the shortlist is ready.

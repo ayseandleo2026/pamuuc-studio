@@ -7,7 +7,7 @@
   "description": "Use a practical scorecard to compare shortlisted hotel uniform fabric samples by appearance, movement, care evidence and finished garment testing.",
   "kicker": "Sample evaluation",
   "published": "2026-09-05",
-  "modified": "2026-09-05",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "best-fabrics-hotel-uniforms",
   "coverAlt": "Five shortlisted hotel uniform fabric samples with matching collars, cuffs, pockets and seams",
@@ -56,7 +56,7 @@ For restaurant and bar roles, compare each shortlisted sample through the same m
 
 Judge shirts, aprons, waistcoats and trousers separately. A soft service shirt and a structured waistcoat do not need the same fabric even when they share colour. Cuffs, plackets, pocket mouths and side seams also experience different stresses, so construction samples matter beside the main swatch.
 
-Use the [Pamuuc hospitality case study](/en/blog/custom-hospitality-uniforms/) as one example of differentiating garments by role within a coherent wardrobe. It is a project reference, not proof that the same blend will suit another hotel.
+Use the [PAMUUC hospitality case study](/en/blog/custom-hospitality-uniforms/) as one example of differentiating garments by role within a coherent wardrobe. It is a project reference, not proof that the same blend will suit another hotel.
 
 ## Separate the spa and housekeeping reviews
 
@@ -80,4 +80,4 @@ End the sample review with two candidates for each garment, not one winner for t
 
 Make finished garment samples because the swatch does not show the full effect of pattern, lining, seams, pockets, trims and pressing. Review them in the actual light and movement of the role, then put them through the intended care route before approval.
 
-The result is a traceable sample decision that operations, design, laundry and procurement can examine together. Use the [Pamuuc design process](/#process) to connect the shortlist to garment development, or [request a first meeting](/#contact) to build a fabric sample scorecard for each role.
+The result is a traceable sample decision that operations, design, laundry and procurement can examine together. Use the [PAMUUC design process](/#process) to connect the shortlist to garment development, or [request a first meeting](/#contact) to build a fabric sample scorecard for each role.

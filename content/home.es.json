@@ -1,9 +1,9 @@
 {
   "locale": "es",
   "meta": {
-    "title": "Estudio de uniformes a medida en Barcelona | Pamuuc Studio",
-    "description": "Diseño y producción de uniformes a medida para hoteles, restaurantes, espacios de bienestar y clínicas. Producidos en Barcelona, desde 10 piezas por modelo.",
-    "ogTitle": "Estudio de uniformes a medida en Barcelona | Pamuuc Studio",
+    "title": "Estudio de uniformes a medida en Barcelona | PAMUUC Studio",
+    "description": "Diseño y producción de uniformes a medida para hoteles, restaurantes, espacios de bienestar y clínicas. Producidos en Barcelona, desde 10 prendas por modelo.",
+    "ogTitle": "Estudio de uniformes a medida en Barcelona | PAMUUC Studio",
     "ogDescription": "Sistemas de uniformes por encargo para hoteles, restaurantes, espacios de bienestar, clínicas y equipos de atención al público: del diseño y las pruebas a la producción y las reposiciones."
   },
   "nav": [
@@ -40,7 +40,7 @@
     ],
     "primary": "Cuéntanos tu proyecto de uniformes",
     "secondary": "Ver proyectos seleccionados",
-    "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por Pamuuc Studio en Barcelona",
+    "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por PAMUUC Studio en Barcelona",
     "proofs": [
       {
         "label": "Primer proyecto",
@@ -55,7 +55,7 @@
   "services": {
     "kicker": "QUÉ HACEMOS",
     "h2": "Un servicio integral de uniformes a medida, no un catálogo",
-    "intro": "Pamuuc Studio diseña, desarrolla y produce uniformes a medida para hostelería, bienestar, salud y equipos de atención al público. Cada proyecto parte del negocio, de las personas que vestirán las prendas y del trabajo que realizan.",
+    "intro": "PAMUUC Studio diseña, desarrolla y produce uniformes a medida para hostelería, bienestar, salud y equipos de atención al público. Cada proyecto parte del negocio, de las personas que vestirán las prendas y del trabajo que realizan.",
     "card": {
       "topline": "DISEÑO, DESARROLLO Y PRODUCCIÓN",
       "h3": "Sistemas de uniformes a medida",
@@ -72,12 +72,12 @@
     "points": [
       "Reflejan tu espacio y tu identidad",
       "Acompañan el movimiento y las tareas reales",
-      "Producido localmente en Barcelona",
+      "Producidos localmente en Barcelona",
       "Pensados para el uso y el lavado repetidos",
       "Conectan distintos roles en un mismo vestuario",
       "Mantienen la coherencia en cada reposición"
     ],
-    "kicker": "Trabajo entregado",
+    "kicker": "Proyectos realizados",
     "stats": [
       {
         "v": "1000+",
@@ -93,11 +93,11 @@
       },
       {
         "v": "100%",
-        "l": "diseñado y producido en Barcelona"
+        "l": "diseñados y producidos en Barcelona"
       }
     ],
     "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "El taller de Pamuuc Studio en Barcelona: burro de prendas, plancha y mesa de corte"
+    "alt": "El taller de PAMUUC Studio en Barcelona: burro de prendas, plancha y mesa de corte"
   },
   "sectors": {
     "kicker": "CON QUIÉN TRABAJAMOS",
@@ -335,7 +335,7 @@
         "p": "Desarrollar cerca del estudio agiliza las observaciones, aclara las decisiones técnicas y facilita la comunicación directa."
       },
       {
-        "h3": "Diseñado para el trabajo real",
+        "h3": "Diseñado para el trabajo diario",
         "p": "El movimiento, la duración del turno, las tareas, el cuidado y el entorno de trabajo guían cada prenda."
       },
       {
@@ -347,14 +347,14 @@
   "parameters": {
     "kicker": "DATOS PRÁCTICOS DEL PROYECTO",
     "h2": "Tres formas de empezar, con las cifras delante",
-    "intro": "No hace falta encargar un vestuario completo. El precio se presupuesta por proyecto —no trabajamos con una lista rígida— y el calendario depende del número de modelos, las pruebas y el tejido.",
+    "intro": "No hace falta encargar un vestuario completo. El presupuesto se define por proyecto, sin una lista de precios rígida. Los plazos dependen del número de modelos, las pruebas y el tejido.",
     "groups": [
       {
         "h3": "Cantidades mínimas recomendadas",
         "notes": [
           {
             "head": "Desde 10 piezas por modelo",
-            "body": "Podemos producir desde 10 piezas por modelo, adaptando el precio a la cantidad y a la construcción de la prenda."
+            "body": "Algunos modelos pueden producirse desde 10 prendas, con un precio adaptado a la confección y la cantidad."
           },
           {
             "head": "10–15 piezas por modelo",
@@ -454,7 +454,7 @@
         "h3": "Uniformes a medida para METT Barcelona",
         "p": "Un vestuario completo por funciones, desarrollado a partir del concepto interior del hotel para los equipos de recepción, restauración, dirección y spa; diseñado, prototipado y producido en Barcelona.",
         "img": "/assets/images/project-hospitality-editorial.jpg",
-        "alt": "Uniformes de atención al huésped desarrollados por Pamuuc Studio para METT Barcelona",
+        "alt": "Uniformes de atención al huésped desarrollados por PAMUUC Studio para METT Barcelona",
         "href": "/es/blog/uniformes-hosteleria-personalizados/",
         "linkLabel": "Leer el caso del hotel"
       },
@@ -490,11 +490,11 @@
       },
       {
         "q": "¿Hay reposiciones después de la primera producción?",
-        "a": "Sí. Los patrones, tejidos, acabados y sistemas de personalización se archivan para garantizar continuidad a lo largo del tiempo. Esto reduce las fases de nuevo desarrollo, asegura coherencia para las nuevas incorporaciones y simplifica las reposiciones futuras."
+        "a": "Sí. Organizamos los patrones, tejidos, acabados, personalizaciones y especificaciones aprobados para futuros pedidos. Así contamos con una base coherente para sustituir prendas, vestir a las nuevas incorporaciones y acompañar el crecimiento del equipo, sin repetir todo el desarrollo."
       },
       {
         "q": "¿Es necesario empezar con un vestuario completo?",
-        "a": "No. También es posible empezar con una sola categoría de prenda o con un rol específico, y ampliar el proyecto con el tiempo. Definimos juntos el punto de partida más eficaz en función de las prioridades, el presupuesto y el impacto operativo."
+        "a": "No. Puedes empezar por una función, un departamento o una categoría de prendas y ampliar el vestuario más adelante. Definimos el punto de partida más útil según la visibilidad ante el cliente, las necesidades operativas, la cantidad, el presupuesto y el plazo."
       },
       {
         "q": "¿Podéis desarrollar colores y detalles personalizados?",
@@ -522,7 +522,7 @@
       },
       {
         "q": "¿Cómo se gestionan las tallas de todo un equipo?",
-        "a": "Las cantidades se reparten entre las tallas necesarias en la fase de confirmación de tallas y cantidades, y las pruebas sirven para fijar el escalado antes de producir. Las nuevas incorporaciones quedan cubiertas después por los patrones y las especificaciones archivados."
+        "a": "Las cantidades se reparten entre las tallas necesarias en la fase de confirmación de tallas y cantidades, y las pruebas sirven para definir la gama de tallas antes de producir. Para las nuevas incorporaciones se utilizan los patrones y las especificaciones archivados."
       },
       {
         "q": "¿Los tejidos aguantan la lavandería industrial?",
@@ -563,7 +563,7 @@
         "name": "Nombre y apellidos",
         "email": "nombre@empresa.com",
         "phone": "+34 ...",
-        "company": "Nombre de la empresa",
+        "company": "Empresa o establecimiento",
         "brief": "Háblanos del espacio, el equipo, las funciones, las prendas, las cantidades aproximadas, la fecha prevista y lo que deben resolver los uniformes."
       },
       "helps": {
@@ -630,8 +630,8 @@
             "disabled": false
           },
           {
-            "v": "Merchandising o prendas de marca",
-            "t": "Merchandising o prendas de marca",
+            "v": "Merchandising o prendas con tu marca",
+            "t": "Merchandising o prendas con tu marca",
             "disabled": false
           },
           {
@@ -679,8 +679,8 @@
     }
   },
   "footer": {
-    "about": "Sistemas de uniformes a medida desarrollados en Barcelona.",
-    "legal": "Pamuk Studio S.L - NIF/CIF ESB27664994 - Barcelona - info@pamuuc.com",
+    "about": "Uniformes a medida diseñados, desarrollados y producidos en Barcelona.",
+    "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · info@pamuuc.com",
     "cols": [
       {
         "title": "Estudio",
@@ -1119,7 +1119,7 @@
     "phase-1": [
       {
         "t": "h",
-        "v": "Fase 01 — Descubrimiento"
+        "v": "Fase 01: Descubrimiento"
       },
       {
         "t": "h",
@@ -1155,7 +1155,7 @@
     "phase-2": [
       {
         "t": "h",
-        "v": "Fase 02 — Desarrollo"
+        "v": "Fase 02: Desarrollo"
       },
       {
         "t": "h",
@@ -1191,7 +1191,7 @@
     "phase-3": [
       {
         "t": "h",
-        "v": "Fase 03 — Producción"
+        "v": "Fase 03: Producción"
       },
       {
         "t": "h",
@@ -1315,7 +1315,7 @@
       "Delantales",
       "Punto",
       "Blazers",
-      "Abrigos",
+      "Prendas de abrigo",
       "Accesorios"
     ],
     "ctaText": "Cuéntanos las funciones y te propondremos el vestuario.",

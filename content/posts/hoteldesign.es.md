@@ -7,16 +7,16 @@
   "description": "Un método práctico para convertir el concepto del hotel, los puestos y las necesidades operativas en un briefing de uniformes claro y coherente.",
   "kicker": "Planificación hotelera",
   "published": "2026-08-27",
-  "modified": "2026-08-27",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-design-guide",
   "coverAlt": "Diseñadora ordenando bocetos de puestos y muestras de tejido sobre una mesa de hotel",
-  "coverCaption": "Visualización editorial de una sesión ficticia de definición de uniformes, creada con IA a partir de referencias originales de Pamuuc.",
+  "coverCaption": "Visualización editorial de una sesión ficticia de definición de uniformes, creada con IA a partir de referencias originales de PAMUUC.",
   "takeaways": [
     "Empieza por el espacio y el recorrido del huésped antes de elegir prendas o tejidos.",
     "Analiza cada puesto según movimiento, herramientas, clima, contacto con huéspedes y cuidados.",
     "Crea una gramática común de vestuario y diferencia cada puesto solo cuando sea necesario.",
-    "Comprueba el concepto frente a pruebas de talla, lavado, altas, reposición y nuevos pedidos."
+    "Comprueba el concepto frente a pruebas de talla, lavado, nuevas incorporaciones, reposición y nuevos pedidos."
   ],
   "keywords": ["cómo diseñar uniformes de hotel", "diseño de uniformes para hoteles", "briefing de uniformes de hotel", "uniformes para personal de hotel"],
   "about": ["Uniformes de hotel", "Diseño de uniformes", "Operaciones hoteleras"]
@@ -26,7 +26,7 @@ Para diseñar uniformes de hotel, empieza por el recorrido del huésped, no por 
 
 ## La muestra bonita que falla en recepción
 
-Imagina una chaqueta de recepción que resulta convincente en una percha. En el mostrador, la manga se engancha al alcanzar una tarjeta, el bolsillo no admite las herramientas del turno y el tejido da demasiado calor cuando el vestíbulo se llena. La muestra es atractiva, pero todavía no responde al trabajo.
+Imagina una chaqueta de recepción que resulta convincente en una percha. En el mostrador, la manga se engancha al alcanzar una tarjeta de acceso, el bolsillo no admite las herramientas del turno y el tejido da demasiado calor cuando el vestíbulo se llena. La muestra es atractiva, pero todavía no responde al trabajo.
 
 Ese es el punto débil de un briefing centrado en el producto: pregunta qué prendas gustan al hotel antes de definir lo que el vestuario debe resolver. Un briefing útil comienza por la secuencia del servicio. Sigue la llegada del huésped, quién lo recibe, cómo continúa la interacción y qué equipos se hacen visibles durante el recorrido.
 
@@ -50,7 +50,7 @@ Estos estudios no demuestran que un diseño concreto produzca un resultado empre
 
 Un hotel no necesita el mismo conjunto para todos los departamentos. Necesita unas reglas compartidas que relacionen al equipo sin impedir que cada puesto trabaje con naturalidad. Esa gramática puede definir la paleta, la silueta, las proporciones, los cierres, la presencia de marca, las capas y el grado de formalidad.
 
-Las diferencias entre puestos deben ser intencionadas. Recepción puede necesitar una capa más estructurada; alimentos y bebidas, mayor libertad de movimiento y delantales fáciles de sustituir; pisos, un patrón que acompañe gestos repetidos al alcanzar y agacharse. Las relaciones de color o ciertos detalles constructivos pueden unir las prendas sin forzarlas a seguir una única plantilla.
+Las diferencias entre puestos deben ser intencionadas. Recepción puede necesitar una capa más estructurada; restauración, mayor libertad de movimiento y delantales fáciles de sustituir; pisos, un patrón que acompañe gestos repetidos al alcanzar objetos y agacharse. Las relaciones de color o ciertos detalles constructivos pueden unir las prendas sin forzarlas a seguir una única plantilla.
 
 Este enfoque también evita el disfraz. Un concepto sólido no depende de temas literales ni de una decoración excesiva. Da al equipo una presencia clara, vinculada al establecimiento y creíble durante el trabajo real.
 
@@ -60,7 +60,7 @@ Antes de aprobar una dirección, llévala más allá del panel de presentación.
 
 Después, piensa en las personas que entran y salen del equipo. Un sistema de vestuario necesita un criterio de tallaje claro, un método de prueba acordado y especificaciones suficientes para reproducir más adelante una prenda aprobada. La reposición debe formar parte del proyecto, no convertirse en una urgencia después del lanzamiento.
 
-El [caso de uniformes de hostelería de Pamuuc](/es/blog/uniformes-hosteleria-personalizados/) muestra cómo las referencias del espacio, la diferenciación por puestos y la durabilidad operativa pueden convivir en un mismo programa. Es una prueba del método en un hotel real, no una plantilla que deba copiarse de un establecimiento a otro.
+El [caso de uniformes de hostelería de PAMUUC](/es/blog/uniformes-hosteleria-personalizados/) muestra cómo las referencias del espacio, la diferenciación por puestos y la durabilidad operativa pueden convivir en un mismo programa. Es una prueba del método en un hotel real, no una plantilla que deba copiarse de un establecimiento a otro.
 
 ## Convierte la observación en un briefing útil
 
@@ -69,8 +69,8 @@ El documento final debe hacer visibles las decisiones y señalar con claridad lo
 - Identidad del establecimiento y carácter del servicio expresados con palabras útiles para diseñar
 - Todos los puestos con su entorno, contacto con huéspedes, movimientos y herramientas
 - Reglas comunes del vestuario y diferencias necesarias entre departamentos
-- Circuito de cuidado, clima, capas, tallaje y limitaciones funcionales
-- Entrega de prendas, altas, reposición y requisitos para nuevos pedidos
+- Circuito de cuidado, clima, capas, pruebas de ajuste y limitaciones funcionales
+- Entrega de prendas, nuevas incorporaciones, reposición y requisitos para nuevos pedidos
 - Responsables de decisión, momentos de aprobación, prioridades y aspectos por validar
 
 Añade pruebas cuando ayuden: fotografías de los espacios, referencias de materiales, observaciones de cada puesto, problemas del vestuario actual e información de mantenimiento aportada por el equipo operativo. El briefing es útil cuando otra persona entiende por qué existe un requisito, no solo qué se ha pedido.
@@ -79,4 +79,4 @@ Añade pruebas cuando ayuden: fotografías de los espacios, referencias de mater
 
 Un buen briefing no anticipa la respuesta del proveedor. Crea las condiciones para recibir propuestas, prototipos y pruebas de talla fundamentados. Así, los materiales, patrones y detalles pueden valorarse a partir de una visión compartida del establecimiento, el trabajo y la operativa.
 
-Utiliza las preguntas anteriores como documento de descubrimiento. Después, revisa el [proceso de diseño y desarrollo de Pamuuc](/es/#process) o [solicita una primera reunión](/es/#contact) para convertirlo en un alcance inicial claro. El objetivo no es tener más prendas, sino un vestuario coherente en el que cada prenda tenga un motivo para existir.
+Utiliza las preguntas anteriores como documento de análisis inicial. Después, revisa el [proceso de diseño y desarrollo de PAMUUC](/es/#process) o [solicita una primera reunión](/es/#contact) para convertirlo en un alcance inicial claro. El objetivo no es tener más prendas, sino un vestuario coherente en el que cada prenda tenga un motivo para existir.

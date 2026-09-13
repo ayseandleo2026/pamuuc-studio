@@ -7,11 +7,11 @@
   "description": "Un metodo pratico per trasformare il concept dell’hotel, i ruoli e le esigenze operative in un brief per le divise chiaro e coerente.",
   "kicker": "Pianificazione alberghiera",
   "published": "2026-08-27",
-  "modified": "2026-08-27",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "hotel-uniform-design-guide",
   "coverAlt": "Una designer ordina bozzetti dei ruoli e campioni di tessuto su un tavolo nella hall",
-  "coverCaption": "Visualizzazione editoriale di una sessione fittizia per definire le divise, creata con IA da riferimenti originali Pamuuc.",
+  "coverCaption": "Visualizzazione editoriale di una sessione fittizia per definire le divise, creata con IA da riferimenti originali PAMUUC.",
   "takeaways": [
     "Parti dallo spazio e dal percorso dell’ospite prima di scegliere capi o tessuti.",
     "Analizza ogni ruolo per movimenti, strumenti, clima, contatto con gli ospiti e manutenzione.",
@@ -26,7 +26,7 @@ Per progettare le divise di un hotel, parti dal percorso dell’ospite, non da u
 
 ## Il bel campione che non funziona al check-in
 
-Immagina una giacca per l’accoglienza convincente sulla gruccia. Al banco, la manica si impiglia quando chi la indossa prende una tessera, la tasca non contiene gli strumenti usati durante il turno e il tessuto diventa troppo caldo quando la hall si riempie. Il campione è gradevole, ma non risponde ancora alle esigenze del lavoro.
+Immagina una giacca per l’accoglienza convincente sulla gruccia. Al banco, la manica si impiglia quando chi la indossa prende una tessera di accesso, la tasca non contiene gli strumenti usati durante il turno e il tessuto diventa troppo caldo quando la hall si riempie. Il campione è gradevole, ma non risponde ancora alle esigenze del lavoro.
 
 Questo è il limite di un brief centrato sul prodotto: chiede quali capi piacciono all’hotel prima di definire cosa deve fare il guardaroba. Un brief utile comincia dalla sequenza del servizio. Segue l’arrivo dell’ospite, chi lo accoglie, dove prosegue l’interazione e quali squadre diventano visibili lungo il percorso.
 
@@ -56,11 +56,11 @@ Questo approccio evita anche l’effetto costume. Una direzione progettuale soli
 
 ## Metti il progetto alla prova del lavoro quotidiano
 
-Prima di approvare una direzione, portala oltre la tavola di presentazione. Chiedi come ogni capo verrà lavato, assegnato, conservato e sostituito. Verifica che gli strati funzionino insieme, che le tasche servano strumenti reali, che le chiusure siano facili da usare e che i tessuti proposti corrispondano al ciclo di manutenzione effettivo.
+Prima di approvare una direzione, portala oltre la tavola di presentazione. Chiedi come ogni capo verrà lavato, assegnato, conservato e sostituito. Verifica che gli strati funzionino insieme, che le tasche contengano gli strumenti realmente utilizzati, che le chiusure siano facili da usare e che i tessuti proposti corrispondano al ciclo di manutenzione effettivo.
 
 Considera poi chi entra e chi lascia la squadra. Un sistema di divise richiede un criterio chiaro per le taglie, un metodo di prova condiviso e specifiche sufficienti per riprodurre in seguito un capo approvato. Il riordino deve essere previsto nel progetto, non trattato come un’emergenza dopo il lancio.
 
-Il [caso Pamuuc dedicato all’ospitalità](/it/blog/divise-hospitalita-personalizzate/) mostra come riferimenti dello spazio, differenziazione dei ruoli e resistenza operativa possano convivere nello stesso programma. È una prova del metodo in un contesto alberghiero reale, non un modello da copiare da una struttura all’altra.
+Il [caso PAMUUC dedicato all’ospitalità](/it/blog/divise-hospitalita-personalizzate/) mostra come riferimenti dello spazio, differenziazione dei ruoli e resistenza operativa possano convivere nello stesso programma. È una prova del metodo in un contesto alberghiero reale, non un modello da copiare da una struttura all’altra.
 
 ## Trasforma le osservazioni in un brief utile
 
@@ -69,7 +69,7 @@ Il documento finale deve rendere visibili le decisioni e dichiarare con chiarezz
 - Identità della struttura e carattere del servizio, espressi con parole utili alla progettazione
 - Ogni ruolo con ambiente, contatto con gli ospiti, movimenti e strumenti
 - Regole comuni del guardaroba e differenze necessarie tra reparti
-- Ciclo di manutenzione, clima, strati, taglie e vincoli funzionali
+- Ciclo di manutenzione, clima, strati, prove di vestibilità e vincoli funzionali
 - Assegnazione dei capi, inserimento, sostituzione e requisiti per i riordini
 - Responsabili delle decisioni, momenti di approvazione, priorità e punti da verificare
 
@@ -77,6 +77,6 @@ Allega le prove quando aiutano: fotografie degli spazi, riferimenti materici, os
 
 ## Porta il brief nello sviluppo
 
-Un buon brief non disegna in anticipo la risposta del fornitore. Crea le condizioni per proposte, prototipi e prove motivate. Materiali, cartamodelli e dettagli possono così essere valutati rispetto a una definizione comune della struttura, del lavoro e del sistema operativo.
+Un buon brief non disegna in anticipo la risposta del fornitore. Crea le condizioni per proposte, prototipi e prove di vestibilità basati su esigenze concrete. Materiali, cartamodelli e dettagli possono così essere valutati rispetto a una definizione comune della struttura, del lavoro e del sistema operativo.
 
-Usa le domande precedenti come documento di analisi preliminare. Poi consulta il [processo di progettazione e sviluppo di Pamuuc](/it/#process) o [richiedi un primo incontro](/it/#contact) per trasformarlo in un perimetro iniziale chiaro. L’obiettivo non è avere più capi, ma un guardaroba coerente in cui ogni capo abbia un motivo per esistere.
+Usa le domande precedenti come documento di analisi preliminare. Poi consulta il [processo di progettazione e sviluppo di PAMUUC](/it/#process) o [richiedi un primo incontro](/it/#contact) per trasformarlo in un perimetro iniziale chiaro. L’obiettivo non è avere più capi, ma un guardaroba coerente in cui ogni capo abbia un motivo per esistere.

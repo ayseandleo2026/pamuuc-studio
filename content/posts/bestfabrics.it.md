@@ -2,18 +2,18 @@
   "key": "bestfabrics",
   "locale": "it",
   "slug": "confrontare-campioni-tessuti-divise-hotel",
-  "title": "Come confrontare campioni di tessuto",
+  "title": "Confrontare tessuti per divise da hotel",
   "headline": "Come confrontare campioni di tessuto per divise da hotel in base al ruolo",
-  "description": "Usa una scheda pratica per confrontare tessuti selezionati per aspetto, movimento, prove di cura e verifica sui prototipi finiti.",
+  "description": "Confronta tessuti per divise da hotel in base ad aspetto, movimento, prove di manutenzione e valutazione dei capi finiti.",
   "kicker": "Valutazione campioni",
   "published": "2026-09-05",
-  "modified": "2026-09-05",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "best-fabrics-hotel-uniforms",
   "coverAlt": "Cinque tessuti selezionati per divise da hotel con colletti, polsini, tasche e cuciture",
   "coverCaption": "Visualizzazione editoriale di cinque tessuti immaginari, creata con IA da riferimenti reali documentati.",
   "takeaways": [
-    "Parti da un brief approvato e valuta i tessuti esatti proposti dai fornitori rispetto ai requisiti.",
+    "Parti da un brief approvato su ruolo e manutenzione, poi valuta i campioni esatti proposti dai fornitori.",
     "Confronta i campioni in forma anonima quando possibile, così l’etichetta non guida il primo giudizio.",
     "Collega ogni voto su colore, dimensioni, abrasione e cuciture a prove pertinenti.",
     "Approva un candidato solo dopo aver valutato un prototipo in movimento e nel percorso di cura previsto."
@@ -26,7 +26,7 @@ Quando l’hotel ha già definito i requisiti di ogni divisa, il passo successiv
 
 ## Porta il brief approvato al tavolo dei campioni
 
-Parti dal capo e dal turno. Una giacca da reception può dover mantenere una linea controllata dopo ore trascorse in piedi o seduti. Una camicia da ristorante deve accompagnare calore, macchie e rapidi cambi di direzione. Un pantalone da housekeeping affronta piegamenti, tasche cariche, attrito e lavaggi frequenti.
+Parti dal capo e dal turno. Una giacca da reception può dover mantenere una linea definita dopo ore trascorse in piedi o seduti. Una camicia da ristorante deve accompagnare calore, macchie e rapidi cambi di direzione. Un pantalone per il reparto piani affronta piegamenti, tasche cariche, attrito e lavaggi frequenti.
 
 Porta queste priorità alla valutazione prima di aprire le buste del fornitore. Includi clima di lavoro, movimento, contatto con gli ospiti, esposizione allo sporco, coprenza, tatto e percorso reale di lavaggio, asciugatura e finissaggio. La [guida ai tessuti per divise da hotel](/it/blog/guida-tessuti-divise-hotel/) spiega come trasformare queste condizioni in un brief a cui il fornitore possa rispondere.
 
@@ -34,11 +34,11 @@ Questo articolo inizia quando il brief esiste già. Serve a confrontare i campio
 
 ## Crea la scheda prima di rivelare le etichette
 
-Assegna a ogni tessuto selezionato un codice neutro, come Campione A, B o C. Quando è possibile, esegui la prima valutazione visiva e tattile senza mostrare composizione o fornitore. Una fibra familiare, una frase commerciale o una preferenza precedente non devono decidere il risultato prima dell’esame del tessuto.
+Assegna a ogni tessuto selezionato un codice neutro, come Campione A, B o C. Quando è possibile, esegui la prima valutazione visiva e tattile senza mostrare composizione o fornitore. Una fibra familiare, un’affermazione sulla sostenibilità o una descrizione commerciale non devono decidere il risultato prima dell’esame del tessuto.
 
-Usa la stessa scheda per ogni candidato. Registra superficie, peso, coprenza, caduta, elasticità, ripresa, tatto, lucentezza e risposta sotto le luci dell’hotel. Aggiungi una breve osservazione a ogni voto. Un numero senza motivazione sarà difficile da discutere in seguito con design, operations, acquisti e lavanderia.
+Usa la stessa scheda per ogni candidato. Registra superficie, peso, coprenza, caduta, elasticità, recupero della forma, tatto, lucentezza e risposta sotto le luci dell’hotel. Aggiungi una breve osservazione a ogni voto. Un numero senza motivazione sarà difficile da discutere in seguito con design, gestione operativa, acquisti e lavanderia.
 
-Non valutare un ritaglio libero come se fosse una divisa finita. Appoggialo su un fondo opaco, sospendi una pezza più ampia quando possibile e confrontalo con colori e materiali dello spazio reale. Segna ogni qualità che non può ancora essere giudicata, come comportamento delle cuciture, stabilità delle tasche, stiratura e ripresa dopo l’uso.
+Non valutare un ritaglio libero come se fosse una divisa finita. Piegalo su un fondo opaco, sospendi una pezza più ampia quando possibile e confrontalo con colori e materiali dello spazio reale. Segna ogni qualità che non può ancora essere giudicata, come comportamento delle cuciture, stabilità delle tasche, stiratura e recupero della forma dopo l’uso.
 
 La prima valutazione deve ridurre la selezione, non dichiarare un vincitore. Mantieni due candidati quando entrambi rispondono al brief in modi diversi. Uno può offrire una linea più strutturata e l’altro maggiore agio e morbidezza. Queste differenze diventano domande per la prova di ruolo e lo sviluppo del prototipo.
 
@@ -48,7 +48,7 @@ Rivela le schede complete dopo il primo giro di osservazione. Verifica se compos
 
 Per una giacca da reception o un pantalone da concierge, confronta i campioni selezionati sulla stessa silhouette. Chiedi come ogni opzione mantiene la linea prevista, reagisce dopo essere stata indossata da seduti, appare sotto la luce della hall e torna in servizio dopo la cura reale.
 
-Il tessuto deve anche sostenere il cartamodello. Struttura delle spalle, fodera, posizione delle tasche e agio sulla schiena possono cambiare la presenza dello stesso materiale in movimento. Esamina la giacca chiusa, aperta e con le braccia tese sopra un banco. Controlla poi la ripresa su ginocchia e seduta senza affidarti a una vaga promessa antipiega.
+Il tessuto deve anche sostenere il cartamodello. Struttura delle spalle, fodera, posizione delle tasche e agio sulla schiena possono cambiare la presenza dello stesso materiale in movimento. Esamina la giacca chiusa, aperta e con le braccia tese sopra un banco. Controlla poi il recupero della forma su ginocchia e seduta senza affidarti a una vaga promessa antipiega.
 
 ## Prova il movimento nella ristorazione
 
@@ -56,15 +56,15 @@ Per ristorante e bar, confronta ogni campione negli stessi movimenti e nelle ste
 
 Valuta separatamente camicie, grembiuli, gilet e pantaloni. Una camicia da sala morbida e un gilet strutturato non richiedono lo stesso tessuto anche se condividono il colore. Polsini, paramonture, aperture delle tasche e cuciture laterali subiscono sollecitazioni diverse. I campioni di confezione contano quindi insieme al campione principale.
 
-Consulta il [progetto Pamuuc per l’ospitalità](/it/blog/divise-hospitalita-personalizzate/) come esempio di capi differenziati per ruolo in un guardaroba coerente. È un riferimento di progetto, non la prova che la stessa mischia sia adatta a un altro hotel.
+Consulta il [progetto PAMUUC per l’ospitalità](/it/blog/divise-hospitalita-personalizzate/) come esempio di capi differenziati per ruolo in un guardaroba coerente. È un riferimento di progetto, non la prova che la stessa mischia sia adatta a un altro hotel.
 
-## Separa le valutazioni di spa e housekeeping
+## Separa le valutazioni di spa e reparto piani
 
 Nella spa, tatto morbido, movimento fluido, coprenza e comfort nelle zone umide possono guidare il confronto. Valuta queste qualità sui campioni esatti e conferma poi se conservano l’aspetto richiesto dopo il lavaggio e l’asciugatura previsti.
 
-L’housekeeping sposta spesso la valutazione verso movimento, funzione delle tasche, punti di attrito, coprenza e affidabilità della cura. Peso, elasticità, ripresa e costruzione delle cuciture decidono se il pantalone finito accompagna piegamenti e sollevamenti ripetuti. Lo stesso campione può quindi ricevere qui un voto diverso.
+Il reparto piani sposta spesso la valutazione verso movimento, funzione delle tasche, punti di attrito, coprenza e compatibilità con la manutenzione prevista. Peso, elasticità, recupero della forma e costruzione delle cuciture decidono se il pantalone finito accompagna piegamenti e sollevamenti ripetuti. Lo stesso campione può quindi ricevere qui un voto diverso.
 
-Non imporre a spa e housekeeping un’unica risposta materiale solo perché entrambe sono lontane dalla reception. Contatti, movimenti e percorsi di cura sono diversi. Un colore o dettagli condivisi possono mantenere coerenza mentre il tessuto di base cambia in funzione del ruolo.
+Non imporre a spa e reparto piani un unico tessuto solo perché entrambi sono lontani dalla reception. Contatti, movimenti e percorsi di cura sono diversi. Un colore o dettagli condivisi possono mantenere coerenza mentre il tessuto di base cambia in funzione del ruolo.
 
 ## Collega ogni voto a una prova pertinente
 
@@ -80,4 +80,4 @@ Concludi la valutazione con due opzioni per ogni capo, non con un unico vincitor
 
 Realizza prototipi finiti, perché un campione di tessuto non mostra l’effetto completo di cartamodello, fodera, cuciture, tasche, finiture e stiratura. Esaminali nella luce e nei movimenti reali del ruolo, poi sottoponili al percorso di cura previsto prima dell’approvazione.
 
-Il risultato è una decisione tracciabile che operations, design, lavanderia e acquisti possono esaminare insieme. Usa il [processo di progettazione Pamuuc](/it/#process) per collegare la selezione allo sviluppo dei capi, oppure [richiedi un primo incontro](/it/#contact) per creare una scheda di valutazione per ogni ruolo.
+Il risultato è una decisione tracciabile che gestione operativa, design, lavanderia e acquisti possono esaminare insieme. Usa il [processo di progettazione PAMUUC](/it/#process) per collegare la selezione allo sviluppo dei capi, oppure [richiedi un primo incontro](/it/#contact) per creare una scheda di valutazione per ogni ruolo.

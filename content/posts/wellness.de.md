@@ -7,7 +7,7 @@
   "description": "Wie ein Uniformsystem für Teams in Wellness-Studios aufgebaut wird, das Raum, Komfort, täglichen Service und Stoffhaltbarkeit miteinander verbindet.",
   "kicker": "Operative Kontinuität",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "wellness-studio-uniform-system",
   "coverAlt": "Abgestimmte Teamgarderobe für ein Wellnessstudio",
@@ -52,4 +52,4 @@ In diesem Bereich ist Kontinuität nicht nur eine Produktionsfrage. Sie schützt
 
 Uniformen für Wellness-Studios zu gestalten bedeutet, Raum, Menschen und Betrieb in einem einzigen System zusammenzuführen. Wenn Architektur, Kleidung und Pflege gemeinsam entwickelt werden, arbeitet das Team klarer und mit weniger Reibung.
 
-Für designorientierte Studios stärkt dieser Ansatz die Wahrnehmung von Sorgfalt und Professionalität in jeder Kundeninteraktion. Siehe auch unseren Blog und ausgewählte Projekte.
+Für designorientierte Studios stärkt dieser Ansatz die Wahrnehmung von Sorgfalt und Professionalität in jeder Kundeninteraktion. Entdecken Sie auch unseren Blog und ausgewählte Projekte.

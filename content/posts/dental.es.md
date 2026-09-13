@@ -2,12 +2,12 @@
   "key": "dental",
   "locale": "es",
   "slug": "uniformes-clinica-dental-personalizados-barcelona",
-  "title": "Uniformes para clínicas dentales",
+  "title": "Uniformes a medida para clínicas dentales",
   "headline": "Uniformes a medida para clínicas dentales: un vestuario alineado con la marca",
   "description": "Un caso de estudio sobre cómo una clínica dental premium de Barcelona utilizó uniformes a medida para unir espacio, imagen de marca y uso cotidiano.",
   "kicker": "Dirección de diseño del uniforme",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-dental-clinic-uniforms-barcelona",
   "coverAlt": "Equipo de una clínica dental con uniformes a medida coordinados en una cuidada consulta de Barcelona",
@@ -48,7 +48,7 @@ Los uniformes tradicionales suelen comunicar solo una funcionalidad mínima. Aqu
 
 ## Del desarrollo a la producción
 
-Una vez definida la dirección, el proyecto pasó a muestreo y desarrollo: correcciones de ajuste, largos, bolsillos, cierres y verificación del comportamiento de los materiales en uso real. Esta fase determina la calidad cotidiana del sistema.
+Una vez definida la dirección, el proyecto pasó a la elaboración de muestras y al desarrollo: correcciones de ajuste, largos, bolsillos, cierres y verificación del comportamiento de los materiales en uso real. Esta fase determina la calidad cotidiana del sistema.
 
 ## Conclusión
 

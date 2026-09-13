@@ -7,7 +7,7 @@
   "description": "Come costruire un sistema di divise per studi di benessere, armonizzando spazio, comfort, servizio quotidiano e durata dei tessuti.",
   "kicker": "Continuità operativa",
   "published": "2026-03-10",
-  "modified": "2026-03-10",
+  "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "wellness-studio-uniform-system",
   "coverAlt": "Guardaroba coordinato per il team di un centro benessere",
@@ -22,7 +22,7 @@ Per questo le divise vanno impostate come sistema integrato. Invece di scegliere
 
 Questi ambienti stanno tra ospitalità, cura ed estetica. I clienti cercano precisione e igiene, ma anche calma e coerenza visiva. Le divise devono comunicare competenza e comfort nello stesso momento.
 
-Le tuniche standard rispondono alle esigenze funzionali essenziali, ma raramente riflettono il linguaggio del marchio. Negli studi con una precisa direzione creativa, questa distanza diventa evidente.
+Le casacche standard rispondono alle esigenze funzionali essenziali, ma raramente riflettono il linguaggio del marchio. Negli studi con una precisa direzione creativa, questa distanza diventa evidente.
 
 ## Partire dallo spazio, non dal catalogo
 
