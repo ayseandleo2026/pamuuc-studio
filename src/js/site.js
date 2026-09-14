@@ -23,6 +23,14 @@
     burger.addEventListener('click', () => setNav(nav.hidden));
     nav.addEventListener('click', (e) => { if (e.target.closest('a') && !wide()) setNav(false); });
     addEventListener('keydown', (e) => { if (e.key === 'Escape' && !wide()) setNav(false); });
+    /* The sheet covers the top of the page and the scrim below it is only
+       painted, so a tap on the page behind has to dismiss it the way a tap
+       outside any other menu does. */
+    document.addEventListener('click', (e) => {
+      if (wide() || nav.hidden) return;
+      if (nav.contains(e.target) || burger.contains(e.target)) return;
+      setNav(false);
+    });
     addEventListener('resize', () => setNav(wide() ? true : burger.getAttribute('aria-expanded') === 'true'));
   }
 
