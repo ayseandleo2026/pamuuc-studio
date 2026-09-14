@@ -105,7 +105,15 @@ for (const width of widths) {
   for (const u of urls) {
     await page.goto(ORIGIN + u, { waitUntil: 'load' });
     await page.waitForTimeout(180);
-    const r = await page.evaluate(probe);
+    /* The old policy paths are redirect stubs. Let one settle and measure
+       where it lands, rather than losing the context mid-evaluate. */
+    let r;
+    try { r = await page.evaluate(probe); }
+    catch {
+      await page.waitForTimeout(600);
+      try { r = await page.evaluate(probe); }
+      catch { console.log(`\n${width}px  ${u}\n  skipped   page navigated while measuring`); continue; }
+    }
     checked++;
     const bad = r.scroll > 0 || r.overflow.length || r.tiny.length || r.dead.length || r.clip.length;
     if (!bad) continue;
