@@ -213,7 +213,7 @@ same section count, same claims, same numbers.
 - The slug, `title`, `headline`, `description` and `kicker` are all localized —
   they are not the English strings with accents added.
 - Do not translate: the brand (`PAMUUC | STUDIO`, written `Pamuuc Studio` in
-  prose), the legal entity `Pamuk Studio S.L`, place names, `info@pamuuc.com`.
+  prose), the legal entity `Pamuk Studio S.L`, place names, `studio@pamuuc.com`.
 - Minimum order quantity is **10 pieces per style** in every language. Woven
   garments are efficient from 10–15 pieces per style; knitwear needs 100–150.
 
