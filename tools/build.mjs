@@ -449,6 +449,33 @@ function webpSize(file) {
   if (tag === 'VP8L') { const n = b.readUInt32LE(21); return { w: (n & 0x3fff) + 1, h: ((n >> 14) & 0x3fff) + 1 }; }
   return { w: 1600, h: 1267 };
 }
+
+/* The hero is the one photograph that is art-directed, so it is the one that
+   is a JPEG rather than a blog cover's webp. Walking to the frame header is
+   the only way to learn the size of a file the generator did not make. */
+function jpegSize(file) {
+  const b = readFileSync(file);
+  for (let i = 2; i < b.length - 9;) {
+    if (b[i] !== 0xFF) { i++; continue; }
+    const m = b[i + 1];
+    if (m === 0xD8 || m === 0x01 || (m >= 0xD0 && m <= 0xD7)) { i += 2; continue; }
+    const len = b.readUInt16BE(i + 2);
+    // SOF0-SOF15 carry the frame size; C4, C8 and CC are tables, not frames.
+    if (m >= 0xC0 && m <= 0xCF && m !== 0xC4 && m !== 0xC8 && m !== 0xCC)
+      return { h: b.readUInt16BE(i + 5), w: b.readUInt16BE(i + 7) };
+    if (len < 2) break;
+    i += 2 + len;
+  }
+  throw new Error(`cannot read the size of ${file}`);
+}
+const photoSize = (rel) => jpegSize(join(ROOT, 'src/images', rel));
+
+/* The two hero files are different shapes — the mobile one is nearly square,
+   the desktop one is landscape. The <source> has to carry its own size or the
+   browser reserves the desktop box and the hero jumps 46px when the real
+   picture lands, taking the card that sits on its bottom edge with it. */
+const HERO_D = photoSize('studio/hero.jpg');
+const HERO_M = photoSize('studio/heroMobile.jpg');
 const coverCache = new Map();
 function cover(name) {
   if (coverCache.has(name)) return coverCache.get(name);
@@ -621,8 +648,8 @@ ${opts.map((o) => `<option value="${attr(o.disabled ? '' : o.t)}"${o.disabled ? 
 </div>
 <div class="shero-media">
 <picture>
-<source media="(max-width:1000px)" srcset="/assets/images/studio/heroMobile.jpg">
-<img class="shero-img" src="/assets/images/studio/hero.jpg" width="1336" height="1200" fetchpriority="high" decoding="async" alt="${attr(h.hero.imageAlt || h.hero.h1)}">
+<source media="(max-width:1000px)" srcset="/assets/images/studio/heroMobile.jpg" width="${HERO_M.w}" height="${HERO_M.h}">
+<img class="shero-img" src="/assets/images/studio/hero.jpg" width="${HERO_D.w}" height="${HERO_D.h}" fetchpriority="high" decoding="async" alt="${attr(h.hero.imageAlt || h.hero.h1)}">
 </picture>
 <div class="shero-card">
 <div class="shero-card-h"><span class="eyebrow">${esc(h.band.kicker)}</span></div>

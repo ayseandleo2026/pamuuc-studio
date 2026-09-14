@@ -1000,7 +1000,10 @@ body.has-bar{padding-bottom:84px}
 .shero-t{margin-top:var(--sp-6)}
 .shero-d{margin-top:var(--sp-6);max-width:52ch}
 .shero-media{position:relative;min-width:0}
-.shero-img{width:100%}
+/* Two rules below cap this photograph with max-height. Without object-fit the
+   cap squashes it instead of cropping it, which on a short viewport stood the
+   whole hero on its side. */
+.shero-img{width:100%;object-fit:cover;object-position:center top}
 .shero-card{position:absolute;left:calc(var(--sp-8) * -1);bottom:var(--sp-7);width:min(330px,78%);
   background:var(--surface);border:var(--card-border);box-shadow:var(--shadow-4);padding:var(--sp-5)}
 .shero-card-h{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-3)}
@@ -1013,7 +1016,8 @@ body.has-bar{padding-bottom:84px}
 @media (max-width:1100px){.sol-g{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:1000px){.shero-in{grid-template-columns:minmax(0,1fr);gap:var(--sp-7)}
 .shero-media{order:-1}
-.shero-card{position:static;width:100%;margin-top:calc(var(--sp-6) * -1);box-shadow:var(--shadow-3)}}
+.shero-card{position:static;width:100%;margin-top:calc(var(--sp-6) * -1);
+  padding-top:var(--sp-7);box-shadow:var(--shadow-3)}}
 @media (max-width:720px){.sol-g{grid-template-columns:minmax(0,1fr)}}
 .tf-below .lnk{display:inline-block;margin-top:var(--sp-2)}
 .vat-row .inp{flex:1;min-width:0}
@@ -1092,7 +1096,8 @@ body.has-bar{padding-bottom:84px}
 .shero-img{border-radius:var(--r-panel);border:0}
 @media (min-width:1001px){.shero-img{max-height:calc(100svh - 260px)}}
 @media (min-width:1001px) and (max-width:1200px){.shero-d{max-width:42ch}}
-.shero-img img{object-position:center top}
+/* .shero-img is the <img>, not a wrapper, so this had no element to match.
+   The object-position it was reaching for is set on .shero-img itself. */
 .shero-card{left:calc(var(--sp-9) * -1);bottom:var(--sp-8);width:min(320px,80%);
   border-radius:var(--r-card);border:1px solid var(--line);box-shadow:var(--shadow-4)}
 .band{background:var(--band);color:var(--on-band);border-radius:var(--r-panel);
@@ -1197,8 +1202,12 @@ button.lnk-a{border:0;background:transparent;padding:0;font-family:inherit}
 .shero-media{order:0}
 .shero-img{max-height:clamp(300px,46svh,560px)}
 .shero-t{font-size:clamp(34px,7.4vw,56px)}
+/* The card is pulled onto the bottom of the photograph, so the padding that
+   clears its first line off that edge has to be bigger than the pull. At the
+   shared --sp-5 the kicker sat a few pixels under the crop and read as
+   printed on the picture. */
 .shero-card{position:static;left:auto;bottom:auto;width:100%;
-    margin-top:calc(var(--sp-6) * -1);box-shadow:var(--shadow-3)}
+    margin-top:calc(var(--sp-6) * -1);padding-top:var(--sp-7);box-shadow:var(--shadow-3)}
 .band{padding:var(--sp-8) var(--sp-6)}
 .band-g{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--sp-7) 0}
 .work-s{gap:var(--sp-7)}}
