@@ -71,6 +71,29 @@ to be followed literally, including by another model.
 It warns on over-long titles and descriptions, inline `max-width` on text, and
 links to internal URLs the site does not publish.
 
+## The mobile audit
+
+`tools/build.mjs --check` reads the markup; it cannot see a box that ends up
+off the side of a phone. `tools/mobile-audit.mjs` renders every published page
+at each width and fails on a page that scrolls sideways, a box outside the
+viewport, text under the 11px floor, text cut off by an `overflow:hidden`
+ancestor, or a flex/grid box far taller than what it holds.
+
+It is the only thing here that needs a dependency, so it is kept out of the
+tree — the site itself still builds with nothing but Node.
+
+```bash
+npm install playwright && npx playwright install chromium
+node tools/serve.mjs &
+node tools/mobile-audit.mjs                          # 320, 375, 414
+node tools/mobile-audit.mjs --width 320,768,1280     # any widths
+AUDIT_ORIGIN=https://pamuuc-studio.com node tools/mobile-audit.mjs
+```
+
+Run it after any change to `src/css/`. A bare `1fr` grid track is the fault it
+catches most often: it means `minmax(auto,1fr)`, so it cannot go narrower than
+its longest word, and one German compound noun takes the whole page with it.
+
 ## URLs
 
 25 indexable, 5 `noindex` legal hubs, plus redirect stubs for the old policy
