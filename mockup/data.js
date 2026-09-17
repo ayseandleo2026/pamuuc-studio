@@ -784,7 +784,7 @@ const SEED = {
     {id:'of_first', active:true, scope:'merch', code:'FIRST',
      label:'First order',
      headline:'Your first order comes with a discount.',
-     line:'Tiered by quantity — the more the run, the better the rate. Applied to the quote, before you approve it.',
+     line:'Tiered by quantity — the more the run, the better the rate. There is no code: we apply it to the quote, before you approve it.',
      short:'First order: 5–10% off, by quantity.',
      tiers:[
        {min:1,   max:99,   pct:5,  say:'Under 100 pieces'},

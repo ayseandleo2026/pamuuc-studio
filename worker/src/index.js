@@ -143,7 +143,10 @@ async function handleIntake(kind, request, env, origin) {
     weight: clean(fields.weight, 60),
     personalisation: clean(fields.personalisation, 120),
     placement: clean(fields.placement, 120),
-    code: clean(fields.code, 40).toUpperCase(),
+    /* There is no customer-facing discount code any more: the studio applies
+       the first order rate when it prices the quote. What arrives is only a
+       marker that this request came from somebody who asked about it. */
+    firstOrder: clean(fields.firstOrder, 8) === 'yes' ? 'yes' : '',
     /* Custom Uniforms asks a great deal more than Merchandise does, and the
        studio has to see all of it — an enquiry with the team size and the
        timeline missing is a phone call we did not need to make. The hyphenated
@@ -227,7 +230,7 @@ async function handleIntake(kind, request, env, origin) {
     'Project type': f.projectType, 'Team size': f.teamSize, Timeline: f.timeline,
     'Proposed call': f.meeting,
     Artwork: artworkUrl || '', 'Artwork file': f.artworkName || '',
-    'Offer code': f.code, Message: f.message, Consent: f.consent,
+    'First order': f.firstOrder, Message: f.message, Consent: f.consent,
     Locale: f.locale, Source: origin || '', Status: 'New', Answered: '',
   });
 
@@ -238,12 +241,13 @@ async function handleSubscribe(request, env, origin) {
   const { fields } = await readForm(request);
   if (clean(fields._gotcha)) return json({ ok: true }, 200, origin);
   const email = clean(fields.email, 200);
-  const code = clean(fields.code, 40).toUpperCase() || 'FIRST';
+  /* which offer they joined — an internal reference, never shown to them */
+  const offer = clean(fields.offer, 40) || clean(fields.code, 40) || 'of_first';
   if (!isEmail(email)) return json({ ok: false, error: 'email' }, 400, origin);
 
-  await store(env, `SUB-${Date.now()}-${email}`, { kind: 'subscribe', email, code, at: new Date().toISOString() });
+  await store(env, `SUB-${Date.now()}-${email}`, { kind: 'subscribe', email, offer, at: new Date().toISOString() });
 
-  const m = offerEmail(code, env.OFFER_TIERS ? JSON.parse(env.OFFER_TIERS) : null);
+  const m = offerEmail(offer, env.OFFER_TIERS ? JSON.parse(env.OFFER_TIERS) : null);
   try {
     await sendMail(env, {
       to: email, replyTo: env.STUDIO_TO,
@@ -256,7 +260,7 @@ async function handleSubscribe(request, env, origin) {
 
   await appendSheet(env, {
     Reference: '', Received: new Date().toISOString(), Type: 'Subscriber',
-    Email: email, 'Offer code': code, Source: origin || '', Status: 'Subscribed',
+    Email: email, Offer: offer, Source: origin || '', Status: 'Subscribed',
   });
   return json({ ok: true }, 200, origin);
 }

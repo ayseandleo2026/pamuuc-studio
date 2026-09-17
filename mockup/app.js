@@ -3424,7 +3424,7 @@ function offerHome(branch){
           <p class="lede oblock-d">${esc(o.line)}</p>
           <div class="btn-row btn-row--top">
             <button class="btn btn--primary btn--arrow" data-act="offerOpen" data-id="${esc(o.id)}">
-              Get the code<i class="btn-a" aria-hidden="true">&#8594;</i></button>
+              Get the discount<i class="btn-a" aria-hidden="true">&#8594;</i></button>
             ${ctaBtn('products', 'Browse all products', 'ghost')}
           </div>
           ${o.ends ? `<p class="t-xs muted oblock-e">Runs until ${dateShort(o.ends)}. One discount per account, on the first order.</p>` : ''}
@@ -3454,9 +3454,9 @@ function offerPopup(){
       <button class="opop-x" data-act="offerClose" aria-label="Close">✕</button>
       ${done ? `
         <span class="tag tag--merch tag--plain">You are on the list</span>
-        <h2 class="opop-t" id="opop-t">Your code is <b>${esc(o.code)}</b>.</h2>
-        <p class="opop-d">We have sent it to ${esc(done)}. Quote it on your first request and the tier your
-          quantity falls into is applied before you approve anything.</p>
+        <h2 class="opop-t" id="opop-t">Your first order discount is set up.</h2>
+        <p class="opop-d">We have confirmed it to ${esc(done)}. There is no code to remember — we apply the
+          tier your quantity falls into when we price your quote, before you approve anything.</p>
         <div class="otiers otiers--flat">
           ${(o.tiers || []).map(t => `<div class="otier"><span class="otier-p">${t.pct}<i>%</i></span>
             <span class="otier-s">${esc(t.say)}</span></div>`).join('')}
@@ -3476,7 +3476,7 @@ function offerPopup(){
           <input class="inp" id="opop_email" type="email" inputmode="email" autocomplete="email"
             placeholder="you@company.com"></label>
         <div class="btn-row opop-b">
-          <button class="btn btn--primary" data-act="offerSubmit" data-id="${esc(o.id)}">Send me the code</button>
+          <button class="btn btn--primary" data-act="offerSubmit" data-id="${esc(o.id)}">Apply it to my quote</button>
           <button class="btn btn--quiet" data-act="offerClose">Not now</button>
         </div>
         <p class="t-xs faint opop-s">One message with the code, and the occasional offer. Unsubscribe in a click.

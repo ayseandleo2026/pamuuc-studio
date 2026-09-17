@@ -187,7 +187,6 @@ export function studioEmail(kind, ref, f, artworkUrl) {
 
     ${merch ? group('The order', [
       row('Quantity', f.quantity ? `<span style="font-size:17px">${esc(f.quantity)}</span> <span style="color:${MUTED};font-weight:400">pieces</span>` : ''),
-      row('Offer code', f.code ? `<span style="color:${accent};font-weight:600">${esc(f.code)}</span>` : ''),
     ]) : ''}
 
     ${!merch ? group('The project', [
@@ -243,7 +242,7 @@ export function studioEmail(kind, ref, f, artworkUrl) {
     ]) : '') +
 
     (merch ? tsec('The order', [
-      tline('Quantity', f.quantity && `${f.quantity} pieces`), tline('Offer code', f.code),
+      tline('Quantity', f.quantity && `${f.quantity} pieces`),
     ]) : '') +
 
     (!merch ? tsec('The project', [
@@ -320,11 +319,12 @@ export function customerEmail(kind, ref, f) {
         <p style="margin:6px 0 0;font:400 13px/1.5 ${FONT};color:${MUTED}">We confirm the time when we reply.</p>`,
     }) : ''}
 
-    ${f.code ? `<tr><td style="padding:24px 32px 0">
+    ${f.firstOrder ? `<tr><td style="padding:24px 32px 0">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
              style="border-left:3px solid ${accent};background:${PAPER}">
         <tr><td style="padding:13px 18px;font:400 14px/1.5 ${FONT};color:${INK}">
-          Your <strong style="color:${accent}">${esc(f.code)}</strong> discount is on the request and is applied to the quote before you approve it.
+          Your first order discount is on this request. There is no code to quote — we apply it
+          when we price the quote, before you approve it.
         </td></tr>
       </table>
     </td></tr>` : ''}
@@ -350,7 +350,7 @@ export function customerEmail(kind, ref, f) {
       tline('The call you proposed', f.meeting && when(f.meeting)),
     ])) +
 
-    (f.code ? `\nYour ${f.code} discount is on the request and is applied to the quote before you approve it.\n` : '') +
+    (f.firstOrder ? `\nYour first order discount is on this request. There is no code to quote — we apply it when we price the quote.\n` : '') +
     `\nIf anything above is wrong, reply to this email — it reaches the person handling it.\n\n` +
     `Pamuk Studio S.L, trading as PAMUUC — Barcelona\n`;
 
@@ -377,11 +377,11 @@ export function offerEmail(code, tiers) {
   const body = `
     <tr><td style="padding:10px 32px 0">
       <h1 style="margin:0;font:400 28px/1.2 ${FONT};color:${INK};letter-spacing:-.01em">
-        Your code is <span style="color:${RED};font-weight:500">${esc(code)}</span>.
+        Your first order discount is set up.
       </h1>
       <p style="margin:12px 0 0;font:400 16px/1.6 ${FONT};color:${INK}">
-        Quote it on your first request and we apply the discount to the quote before you approve it.
-        The rate follows the quantity.
+        There is nothing to remember and no code to quote. Send us a request and we apply the
+        discount when we price it, before you approve anything. The rate follows the quantity.
       </p>
     </td></tr>
 
@@ -420,20 +420,20 @@ export function offerEmail(code, tiers) {
   `;
 
   const text =
-    `Your code is ${code}.\n\n` +
-    `Quote it on your first request and we apply the discount to the quote before you approve it.\n\n` +
+    `Your first order discount is set up.\n\n` +
+    `There is nothing to remember and no code to quote. Send us a request and we apply the discount when we price it, before you approve anything.\n\n` +
     list.map((t) => `${t.say}: ${t.pct}%`).join('\n') + '\n\n' +
     `One discount per account, on the first order. Nothing is charged when you request a quote.\n\n` +
     `Pamuk Studio S.L, trading as PAMUUC — Barcelona\n`;
 
   return {
-    subject: `Your first order code: ${code}`,
+    subject: 'Your first order discount is set up',
     text,
     html: shell({
-      title: `Your code: ${code}`, accent: RED, eyebrow: 'First order',
+      title: 'Your first order discount', accent: RED, eyebrow: 'First order',
       preheader: `Up to ${best}% off your first order, by quantity.`,
       body,
-      footNote: 'You are getting this because you asked for the code on pamuuc-studio.com. ' +
+      footNote: 'You are getting this because you asked about the first order discount on pamuuc-studio.com. ' +
         '<a href="{{unsubscribe}}" style="color:' + MUTED + ';text-decoration:underline">Unsubscribe</a>.',
     }),
   };

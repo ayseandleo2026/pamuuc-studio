@@ -350,7 +350,10 @@
     put('weight', (first.cfg || {}).weight || '');
     put('personalisation', p0.methodName || p0.method);
     put('placement', p0.posName || p0.pos);
-    put('code', window.__MERCH_OFFER_CODE__ || '');
+    /* No discount code is issued any more — the studio applies the first
+       order rate when it prices the quote. All the request carries is whether
+       this person asked about it. */
+    try { if (localStorage.getItem('pamuuc_first_order') === 'yes') put('firstOrder', 'yes'); } catch (e) {}
     put('locale', document.documentElement.lang || 'en');
     /* The contact step collects a surname and a marketing opt-in and the
        prototype kept neither. Dropping a surname makes the studio's reply
@@ -437,8 +440,10 @@
         /* id is the offer's internal key (of_first); the customer-facing
            code is o.code (FIRST), and that is what the email tells them to
            quote. Sending the id would email somebody "Your code is OF_FIRST". */
-        var offer = ((typeof S !== 'undefined' && S.offers) || []).filter(function (o) { return o.id === id; })[0];
-        f.append('code', String((offer && offer.code) || id || '').toUpperCase());
+        /* the offer id is an internal marker for which offer they joined, not
+           something the customer is ever asked to quote */
+        f.append('offer', String(id || ''));
+        try { localStorage.setItem('pamuuc_first_order', 'yes'); } catch (e2) {}
         f.append('locale', document.documentElement.lang || 'en');
         send('/subscribe', f).catch(function (e) { if (window.console) console.error(e); });
       } catch (e) { if (window.console) console.error('joinOffer', e); }
