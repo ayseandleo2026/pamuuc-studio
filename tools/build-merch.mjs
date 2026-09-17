@@ -10,7 +10,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadMockup } from './merch-render.mjs';
-import { pageList, catLookup } from './merch-routes.mjs';
+import { pageList, catLookup, urlFor, productSlug } from './merch-routes.mjs';
 import { linkify, dimension, displayClasses, wireForms } from './merch-static.mjs';
 import { translate } from './merch-strings.mjs';
 
@@ -84,6 +84,130 @@ function sentences(text, min, max) {
   return out.length > max ? out.slice(0, max - 1).replace(/\s+\S*$/, '') : out;
 }
 
+
+/* ---- structured data ------------------------------------------------------
+   The custom uniforms page has carried Organization and FAQPage from the
+   start; the 31 product pages had nothing at all, which for a catalogue is
+   the markup that matters most.
+
+   What is claimed here is only what the page itself shows. lowPrice is the
+   same "from" figure printed on the page, so the two cannot disagree — a
+   price in the markup that does not match the page is worse than no price.
+   A product priced on request gets no offer node rather than a made-up one,
+   and the minimum order quantity is stated because it is a real condition of
+   that price.
+   ========================================================================= */
+function productLD(p, url, meta, site, imageUrl, say) {
+  const node = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    '@id': site.origin + url + '#product',
+    name: say(p.name),
+    description: meta.description,
+    sku: p.ref,
+    category: say(p.cat),
+    brand: { '@type': 'Brand', name: site.brand.plain },
+    url: site.origin + url,
+  };
+  if (imageUrl) node.image = site.origin + imageUrl;
+
+  /* Only when the page prints a price. quoteOnly products say "price on
+     request", and inventing a number for them would be a lie in markup. */
+  /* p.from is the price at ONE piece, which is the dearest the product ever
+     is — the page's headline "From" figure is the cheapest quantity break. So
+     the range comes from the breaks themselves: low is what the page shows,
+     high is the single-piece price. Publishing p.from as lowPrice would have
+     claimed 14.99 on a page printing 7.99, which is the kind of mismatch
+     Google penalises and a reader would notice first. */
+  const prices = (p.breaks || []).map((b) => Number(b.price)).filter((n) => n > 0);
+  if (!p.quoteOnly && prices.length) {
+    const low = Math.min(...prices), high = Math.max(...prices);
+    node.offers = {
+      '@type': 'AggregateOffer',
+      priceCurrency: 'EUR',
+      lowPrice: low.toFixed(2),
+      highPrice: high.toFixed(2),
+      offerCount: prices.length,
+      availability: 'https://schema.org/InStock',
+      seller: { '@type': 'Organization', name: site.brand.plain },
+      /* per piece, garment only, before personalisation and before VAT —
+         which is what the page says beside the same number */
+      eligibleQuantity: { '@type': 'QuantitativeValue', minValue: p.moq || 1, unitCode: 'C62' },
+    };
+  }
+  return node;
+}
+
+function breadcrumbLD(trail, site) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((t, i) => ({
+      '@type': 'ListItem', position: i + 1, name: t.name, item: site.origin + t.url,
+    })),
+  };
+}
+
+function collectionLD(name, url, products, site, urlOf) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name,
+    url: site.origin + url,
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: products.length,
+      itemListElement: products.map((p, i) => ({
+        '@type': 'ListItem', position: i + 1, url: site.origin + urlOf(p),
+      })),
+    },
+  };
+}
+
+/** Which nodes a given page carries. */
+function structuredData(page, M, meta, site, loc, imageUrl, say) {
+  const out = [];
+  const home = { name: 'PAMUUC', url: site.locales[loc].prefix };
+  const merch = { name: say('Merchandise'), url: urlFor('public:merch', loc, site) };
+
+  if (page.id.startsWith('product:')) {
+    const p = (M.S.merchProducts || []).find((x) => x.id === page.arg);
+    if (!p) return out;
+    const cat = M.categories().find((c) => c.cat === p.cat);
+    out.push(productLD(p, page.url, meta, site, imageUrl, say));
+    out.push(breadcrumbLD([
+      home, merch,
+      ...(cat ? [{ name: say(cat.name), url: urlFor('public:collection:' + cat.slug, loc, site, catLookup(M)) }] : []),
+      { name: say(p.name), url: page.url },
+    ], site));
+    return out;
+  }
+
+  if (page.id.startsWith('collection:')) {
+    const cat = M.categories().find((c) => c.slug === page.id.split(':')[1]);
+    if (!cat) return out;
+    const items = (M.S.merchProducts || []).filter((x) => x.cat === cat.cat);
+    out.push(collectionLD(say(cat.name), page.url, items, site,
+      (x) => `${site.locales[loc].prefix}merchandise/products/${productSlug(x.id)}/`));
+    out.push(breadcrumbLD([home, merch, { name: say(cat.name), url: page.url }], site));
+    return out;
+  }
+
+  if (page.id === 'merch') {
+    out.push(breadcrumbLD([home, merch], site));
+    return out;
+  }
+
+  if (page.id === 'products' || page.id === 'collections') {
+    const items = M.S.merchProducts || [];
+    if (page.id === 'products') {
+      out.push(collectionLD(meta.title.split(' | ')[0], page.url, items, site,
+        (x) => `${site.locales[loc].prefix}merchandise/products/${productSlug(x.id)}/`));
+    }
+    out.push(breadcrumbLD([home, merch, { name: meta.title.split(' | ')[0], url: page.url }], site));
+  }
+  return out;
+}
 
 /**
  * @param {object} deps  from build.mjs: { ROOT, site, LOCALES, head, abs }
@@ -198,11 +322,19 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
       for (const [t, n] of a.stats.unknown) problems.push(`${p.id} (${loc}): ${n}x link to unmapped target ${t}`);
       for (const u of b.stats.unknown) problems.push(`${p.id} (${loc}): image not in the manifest — ${u}`);
 
+      /* The picture the page actually leads with, so the markup points at the
+         same image a reader sees rather than a different one. */
+      const firstImg = (a.html.match(/<img\b[^>]*\ssrc="([^"]+)"/) || [])[1] || null;
+      const extraLD = structuredData(p, M, meta, site, loc, firstImg, (t) => {
+        const d = (dicts[loc] || {}).copy;
+        return (d && d[t]) || t;
+      });
+
       pages.push({
         url: p.url, loc, cluster: clusters.find((c2) => c2.id === 'merch:' + p.id),
         html: head({
           loc, url: p.url, title: meta.title, description: meta.description,
-          cluster: clusters.find((c2) => c2.id === 'merch:' + p.id),
+          cluster: clusters.find((c2) => c2.id === 'merch:' + p.id), extraLD,
         }) + `<div id="root">` + html + `</div>`
           /* Outside #root on purpose: the app replaces everything inside it on
              every render, and a consent choice must not be undone by redrawing
