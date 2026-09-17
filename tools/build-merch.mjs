@@ -7,11 +7,12 @@
    the site. Nothing here draws anything — if a page looks wrong, it looks
    wrong in the mockup too, which is the point.
    ========================================================================= */
-import { readFileSync } from 'node:fs';
+import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadMockup } from './merch-render.mjs';
 import { pageList, catLookup, productSlug } from './merch-routes.mjs';
 import { linkify, dimension, displayClasses, wireForms } from './merch-static.mjs';
+import { translate } from './merch-strings.mjs';
 
 /* Titles and descriptions are written, not scraped. Scraping looked tempting —
    every page has an h1 and a lede — but the lede on half of them belongs to
@@ -119,12 +120,30 @@ function metaFor(page, M) {
  * @param {object} deps  from build.mjs: { ROOT, site, LOCALES, head, abs }
  * @returns {{pages: Array, clusters: Array, problems: Array}}
  */
+/* content/merch.<loc>.json, when it exists. A language with no file, or with
+   gaps in it, falls back to English string by string rather than page by page:
+   a half-translated page is still more use than an English one, and the build
+   reports exactly what is missing. */
+function dictionaries(ROOT, LOCALES) {
+  const out = {};
+  for (const loc of LOCALES) {
+    const f = join(ROOT, `content/merch.${loc}.json`);
+    if (!existsSync(f)) { out[loc] = null; continue; }
+    const d = JSON.parse(readFileSync(f, 'utf8'));
+    out[loc] = d.copy || d;
+  }
+  return out;
+}
+
 export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
   const manifest = JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8'));
   const M = loadMockup(join(ROOT, 'mockup'), manifest);
   const hasDisplay = displayClasses(readFileSync(join(ROOT, 'mockup/app.css'), 'utf8'));
   const cats = catLookup(M);
   const problems = [];
+  const dicts = dictionaries(ROOT, LOCALES);
+  const COLOURS = new Set(JSON.parse(readFileSync(join(ROOT, 'content/merch.colours.json'), 'utf8')));
+  const untranslated = {};
 
   /* one cluster per page id, holding its URL in each language */
   const ids = pageList(M, site, LOCALES[0]).map((p) => p.id);
@@ -152,6 +171,18 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
 
       const meta = metaFor(p, M);
       if (!meta) { problems.push(`${p.id} has no title or description`); continue; }
+
+      /* Translated before anything else touches it: linkify and the dimension
+         pass work on attributes and tags, and the copy pass works on text, so
+         doing copy first keeps each of them reading what it expects. */
+      if (dicts[loc]) {
+        const t = translate(body, dicts[loc], COLOURS);
+        body = t.html;
+        if (t.miss.length) {
+          untranslated[loc] = untranslated[loc] || new Set();
+          for (const m of t.miss) untranslated[loc].add(m);
+        }
+      }
 
       const a = linkify(body, loc, site, hasDisplay, cats);
       const b = dimension(a.html, manifest);
@@ -201,7 +232,12 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
     }
   }
 
-  return { clusters, problems, M, renderPages, metaByUrl };
+  return {
+    clusters, problems, M, renderPages, metaByUrl, dicts,
+    /* what each language is still missing, for the build's own report */
+    untranslated: () => Object.fromEntries(
+      Object.entries(untranslated).map(([l, set]) => [l, [...set]])),
+  };
 }
 
 export { productSlug };

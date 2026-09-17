@@ -192,6 +192,53 @@ const SHIM = `
     if (r) { ROUTE = r; render(); applyMeta(); }
   });
 
+  /* The app redraws in English — its strings live in its own source. So the
+     same catalogue the builder used is applied to the DOM after every render.
+     A TreeWalker over text nodes rather than a rewrite of innerHTML: it leaves
+     the markup, the event bindings and the scroll position alone, and it is
+     far the cheaper of the two. */
+  var COPY = window.__MERCH_COPY__ || null;
+  var COPY_ATTRS = ['alt', 'title', 'placeholder', 'aria-label'];
+
+  function retext(root) {
+    if (!COPY) return;
+    var base = root || document.body;
+    /* The app builds some labels by concatenation, and the DOM keeps those as
+       adjacent text nodes rather than one. Matching per node then sees
+       "Collection" and "s" separately: the first has an entry, the second does
+       not, and the label comes out "Coleccións". normalize() merges adjacent
+       text into a single node first, which is what the builder's tokenizer
+       sees when it works on the HTML string. */
+    base.normalize();
+    var w = document.createTreeWalker(base, NodeFilter.SHOW_TEXT, null);
+    var n, hits = [];
+    while ((n = w.nextNode())) {
+      var par = n.parentNode;
+      if (!par) continue;
+      var tn = par.tagName;
+      if (tn === 'SCRIPT' || tn === 'STYLE') continue;
+      var raw = n.nodeValue;
+      var key = raw.replace(/\s+/g, ' ').trim();
+      if (!key) continue;
+      var hit = COPY[key];
+      if (hit && hit !== key) hits.push([n, raw, hit]);
+    }
+    for (var i = 0; i < hits.length; i++) {
+      var raw2 = hits[i][1];
+      hits[i][0].nodeValue = raw2.match(/^\s*/)[0] + hits[i][2] + raw2.match(/\s*$/)[0];
+    }
+    var els = base.querySelectorAll('[alt],[title],[placeholder],[aria-label]');
+    for (var j = 0; j < els.length; j++) {
+      for (var k = 0; k < COPY_ATTRS.length; k++) {
+        var v = els[j].getAttribute(COPY_ATTRS[k]);
+        if (!v) continue;
+        var kk = v.replace(/\s+/g, ' ').trim();
+        var h2 = COPY[kk];
+        if (h2 && h2 !== kk) els[j].setAttribute(COPY_ATTRS[k], h2);
+      }
+    }
+  }
+
   /* app.js redraws into #root, and its own markup navigates by data-go with
      no href. That is fine for clicking — its handler still works — but it
      costs middle-click, ctrl-click and "open in new tab", which on a product
@@ -235,7 +282,7 @@ const SHIM = `
   var innerRender = render;
   render = function () {
     var r = innerRender.apply(this, arguments);
-    try { applyMeta(); relink(); } catch (e) {}
+    try { retext(); applyMeta(); relink(); } catch (e) {}
     return r;
   };
 
@@ -252,7 +299,31 @@ const SHIM = `
     /* a failed re-render must not take the server-rendered page with it */
     if (window.console && console.error) console.error('merch router', e);
   }
+  retext();
   applyMeta();
+
+  /* render() is not the only way the page changes: the app also patches parts
+     of the DOM directly, and anything it writes that way arrives in English
+     and unlinked. Rather than chase each of those call sites — there are
+     dozens, and a new one would silently regress — the root is observed and
+     the two passes re-applied when it changes. Debounced to the end of the
+     task so a render that touches a hundred nodes costs one pass, and
+     disconnected while they run so they cannot retrigger themselves. */
+  if (COPY && window.MutationObserver) {
+    var root = document.getElementById('root') || document.body;
+    var queued = false;
+    var observer = new MutationObserver(function () {
+      if (queued) return;
+      queued = true;
+      setTimeout(function () {
+        queued = false;
+        observer.disconnect();
+        try { retext(root); relink(); } catch (e) {}
+        observer.observe(root, { childList: true, subtree: true, characterData: true });
+      }, 0);
+    });
+    observer.observe(root, { childList: true, subtree: true, characterData: true });
+  }
 })();
 `;
 

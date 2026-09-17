@@ -34,6 +34,7 @@ const abs = (u) => site.origin + u;
    page lives. */
 const { buildMerch } = await import('./build-merch.mjs');
 const { merchJS, MERCH_CSS } = await import('./merch-bundle.mjs');
+const { createHash } = await import('node:crypto');
 
 /* ── tiny helpers ────────────────────────────────────────────────────────── */
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -61,6 +62,36 @@ const legalURL = (loc) => site.legalPrefix[loc];
 /* Built before the cluster list, because the merchandise pages bring their own
    clusters — one per page id, holding that page's URL in all five languages. */
 const MERCH = buildMerch({ ROOT, site, LOCALES, intakeEndpoint: site.intake.endpoint });
+
+/* The runtime bundle and the per-language copy files are built here, before
+   any page, so their content hash can go in the URL every page references.
+   Without it a returning visitor keeps running the previous deploy's
+   JavaScript — a browser has no reason to re-fetch a URL that never changed —
+   which is how a fixed bug comes back for exactly the people who saw it.
+
+   The copy is decoded on the way out: the builder's keys come from raw HTML
+   where "&" is "&amp;", and the runtime matches against DOM text where it is
+   not, so an entity in a key would never match anything on the page. */
+const MERCH_ASSETS = (() => {
+  const js = merchJS({
+    ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
+    manifest: JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8')),
+  });
+  const decode = (t) => String(t)
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, '\u00a0')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n));
+  const copy = {};
+  for (const loc of LOCALES) {
+    const d = MERCH.dicts[loc];
+    if (!d || loc === DEFAULT) continue;
+    const real = {};
+    for (const [k, v] of Object.entries(d)) { if (v && v !== k) real[decode(k)] = decode(v); }
+    if (Object.keys(real).length) copy[loc] = `window.__MERCH_COPY__=${JSON.stringify(real)};`;
+  }
+  const h = (t) => createHash('sha1').update(t).digest('hex').slice(0, 10);
+  return { js, copy, jsHash: h(js), copyHash: Object.fromEntries(Object.entries(copy).map(([l, t]) => [l, h(t)])) };
+})();
 
 const clusters = [
   { id: 'home', type: 'page', priority: '1.0', urls: Object.fromEntries(LOCALES.map((l) => [l, homeURL(l)])) },
@@ -205,7 +236,10 @@ function head({ loc, url, title, description, ogTitle, ogDescription, cluster, i
      separate files rather than one merged sheet because the two sides share
      no classes and merging them would double what either has to download. */
   const stylesheet = merch ? '/assets/css/merch.css' : '/assets/css/site.css';
-  const script = merch ? '/assets/js/merch.js' : '/assets/js/site.js';
+  const script = merch ? `/assets/js/merch.${MERCH_ASSETS.jsHash}.js` : '/assets/js/site.js';
+  /* the app's own strings are English; a non-English page loads its copy first */
+  const copyScript = merch && MERCH_ASSETS.copyHash[loc]
+    ? `<script defer src="/assets/js/merch-copy.${loc}.${MERCH_ASSETS.copyHash[loc]}.js"></script>\n` : '';
   const alternates = cluster
     ? LOCALES.filter((l) => cluster.urls[l]).map((l) => `<link rel="alternate" hreflang="${l}" href="${abs(cluster.urls[l])}">`).join('\n')
       + `\n<link rel="alternate" hreflang="x-default" href="${abs(cluster.urls[DEFAULT])}">`
@@ -255,7 +289,7 @@ ${merch
   ? `<link rel="stylesheet" href="${stylesheet}">`
   : `<link rel="preload" as="style" href="${stylesheet}" data-css>
 <noscript><link rel="stylesheet" href="${stylesheet}"></noscript>`}
-<script defer src="${script}"></script>
+${copyScript}<script defer src="${script}"></script>
 ${extraLD.map((o) => `<script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n</script>`).join('\n')}
 </head>
 <body data-ga="${attr(site.analytics.ga4)}">
@@ -1269,10 +1303,10 @@ if (!CHECK && errors.length === 0) {
   writeFile('assets/css/merch.css',
     fontCSS + '\n' +
     readFileSync(join(ROOT, 'mockup/app.css'), 'utf8') + '\n' + MERCH_CSS);
-  writeFile('assets/js/merch.js', merchJS({
-    ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
-    manifest: JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8')),
-  }));
+  writeFile(`assets/js/merch.${MERCH_ASSETS.jsHash}.js`, MERCH_ASSETS.js);
+  for (const [loc, text] of Object.entries(MERCH_ASSETS.copy)) {
+    writeFile(`assets/js/merch-copy.${loc}.${MERCH_ASSETS.copyHash[loc]}.js`, text);
+  }
   cpSync(join(ROOT, 'src/fonts'), join(OUT, 'assets/fonts'), { recursive: true });
   cpSync(join(ROOT, 'src/brand'), join(OUT, 'assets/brand'), { recursive: true });
   /* src/images/incoming holds full-resolution originals for future crops.
