@@ -131,6 +131,81 @@ export const MERCH_CSS = `
    and flatten the card. */
 a[data-blk]{display:block}
 
+/* ---------------------------------------------------------------------------
+   Responsive corrections, from the audit across the twenty most-used screen
+   sizes of 2026 (tools/responsive-harness.js). Each one is a real failure at a
+   real size, not a preference.
+   ------------------------------------------------------------------------ */
+
+/* The headline price. At 34px with -.03em the decimal point is crushed between
+   two nines and "9.99" reads as one number. The cents get the tracking back
+   plus a hair of margin — a seam, not a gap. */
+.pdp-from b .cts{font-style:normal;letter-spacing:0;margin-left:.07em}
+
+/* The filter pills are <button> in the mockup and <a> here, and a link does not
+   centre its own text the way a button does. With min-height:40px and nothing
+   centring it, the label sat 4px from the top of the pill with 23px of air
+   underneath. Specificity has to beat a[data-blk]{display:block} above. */
+a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center}
+
+/* The filter row is a horizontal scroller, and on a phone it was being sliced
+   at the page gutter — a pill cut in half 16px short of the edge reads as a
+   layout fault rather than as "there is more, push it". Pulled out to the
+   screen edge and padded back in, so the pills start where the text starts and
+   scroll off the actual edge. */
+@media (max-width:900px){
+  .fscroll{margin-left:calc(var(--sp-4) * -1);margin-right:calc(var(--sp-4) * -1);
+    padding-left:var(--sp-4);padding-right:var(--sp-4);
+    scroll-padding-left:var(--sp-4)}
+}
+
+/* The offer bar is one line at every width. It wrapped at 320 even after the
+   sentence was shortened, and a promotional strip on two lines pushes the page
+   down and reads as a mistake. */
+.obar-in{flex-wrap:nowrap}
+.obar-t{white-space:nowrap}
+@media (max-width:400px){
+  .obar-in{font-size:var(--fs-xs);padding-left:var(--sp-5);padding-right:var(--sp-7)}
+}
+
+/* Controls below the 24px minimum of WCAG 2.5.8. All three were wide enough
+   and too short — a thumb misses them on a phone. */
+.obar-go{min-height:24px}
+.obar-x{min-width:24px;min-height:24px}
+.step-h{min-height:24px}
+
+/* The header at phone widths. Five controls and a lockup at a 24px gap come to
+   394px, so at 375 — the iPhone SE and the 13 mini, both still everywhere —
+   the Menu button hung 19px off the side and took the whole page into a
+   sideways scroll with it. The brand also had flex-shrink working on it, which
+   squashed the lockup to 3px at 320 while its text carried on across the
+   language switcher. */
+.brand{flex:none}
+@media (max-width:480px){
+  .pub-hd-in{gap:var(--sp-3)}
+  /* "| MERCHANDISE" goes: the page under it says which side you are on, and
+     the mark and the name do not. */
+  .brand .brand-bar,.brand .brand-sub{display:none}
+}
+@media (max-width:380px){
+  .pub-hd-in{gap:var(--sp-2);padding:0 var(--sp-3)}
+  /* The light/dark toggle is the one control with a system-level equivalent:
+     prefers-color-scheme still decides, and the switch returns above 380. */
+  .pub-hd-in [data-act="theme"]{display:none}
+}
+
+/* The two doors on the chooser. A grid item defaults to min-width:auto, so the
+   card was sized by its widest child rather than by its column: "Explore custom
+   uniforms →" is 262px on one line, which made a 312px card sit in a 288px
+   track and took the whole page into a sideways scroll at 320. The card may
+   shrink now, and at that width the label is allowed the second line it needs
+   rather than deciding the width of the page. */
+.pick{min-width:0}
+@media (max-width:380px){
+  .pick{padding:var(--sp-6)}
+  .pick .btn{white-space:normal;text-align:center}
+}
+
 /* The quote drawer scrolls as one list. The summary rows and the presentation
    card used to sit in the pinned footer, which on a laptop left the products
    themselves about two lines of scrollable height; they are in the scrolling

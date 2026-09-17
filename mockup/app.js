@@ -697,6 +697,20 @@ const stageDef = (id) => STAGES.find(s => s.id === id);
 const st = (k) => STATUS[k] || {label:k, fam:'idle', say:''};
 const money = (n, cur) => n == null ? '—' :
   new Intl.NumberFormat('en-GB',{style:'currency',currency:cur||'EUR',minimumFractionDigits:2}).format(n);
+/* The headline price only. Intl hands back one string, and at 34px with the
+   display tracking of -.03em the decimal point is squeezed between two nines
+   until "EUR 9.99" reads as a single run of digits. Splitting the cents off
+   lets them be given back a fraction of the space the tracking took — a seam,
+   not a gap. Everywhere else money() is unchanged: this is a display problem
+   at one size, not a formatting one. */
+const moneyBig = (n, cur) => {
+  const s = money(n, cur);
+  const m = /^(.*?)([.,])(\d{2})$/.exec(s);
+  /* <i> rather than <span>: .pdp-from span is already the small grey caption
+     beside the figure, and a span here would inherit it. */
+  return m ? `${esc(m[1])}<i class="cts">${esc(m[2] + m[3])}</i>` : esc(s);
+};
+
 /* every product now takes a minimum of one, so "1 pieces" is reachable copy */
 const pcs = (n) => n + (Number(n) === 1 ? ' piece' : ' pieces');
 /* Catalogue copy counts the families on the page rather than asserting a
@@ -3408,7 +3422,7 @@ function offerBar(branch){
   <div class="obar" role="region" aria-label="Current offer">
     <div class="obar-in">
       <span class="obar-tag">${esc(o.label)}</span>
-      <span class="obar-t">Up to ${offerBest(o)}% off your first order, by quantity.</span>
+      <span class="obar-t">Up to ${offerBest(o)}% off your first order.</span>
       <button class="obar-go" data-act="offerOpen" data-id="${esc(o.id)}">
         See how<i aria-hidden="true">&#8250;</i></button>
     </div>
@@ -7629,7 +7643,7 @@ function pubProduct(id){
               : (p.matrix ? `<span>Sizes vary by garment</span>` : '')}
           </div>
           ${lowNow ? `<div class="pdp-from"><span class="pdp-from-l">From</span>
-            <b>${money(lowNow.price)}</b>
+            <b>${moneyBig(lowNow.price)}</b>
             <span>per piece · product only, excl. VAT</span></div>`
             : `<div class="pdp-from"><b>Price on request</b>
             <span>quoted when your request is reviewed</span></div>`}

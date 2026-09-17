@@ -2,7 +2,7 @@
  "_comment": "The merchandise copy, extracted from mockup/app.js by tools/extract-copy.mjs. This is the English source. Translations are content/merch.<loc>.json with the same keys. Editing a value here changes the wording on the site; editing a key breaks the link to it.",
  "_generated": "2026-09-17",
  "_strings": 1119,
- "_words": 10845,
+ "_words": 10843,
  "copy": {
   "Legal and registration details are confirmed before publication.": "Legal and registration details are confirmed before publication.",
   "Start your project brief": "Start your project brief",
@@ -28,7 +28,7 @@
   "Terms": "Terms",
   "Menu": "Menu",
   "Studio": "Studio",
-  "Up to 10% off your first order, by quantity.": "Up to 10% off your first order, by quantity.",
+  "Up to 10% off your first order.": "Up to 10% off your first order.",
   "Hide this offer": "Hide this offer",
   "Current offer": "Current offer",
   "First order": "First order",
