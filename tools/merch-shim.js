@@ -468,10 +468,27 @@
       });
   }
 
+  /* One line per product, for the sheet's own column and for the email when a
+     basket holds more than one. The long-form describe() below is for a person
+     reading an email; this is for a column you can scan, sort and filter — the
+     sheet's Product column holds the FIRST product only, so a request whose
+     second line was the polo shirt did not answer a search for polo shirts. */
+  function summarise(lines) {
+    return lines.map(function (l) {
+      var pl = (l.placements || []).map(function (x) {
+        return (x.posName || x.pos) + ' ' + (x.methodName || x.method);
+      }).join(', ');
+      return l.productName + ' \u00d7' + l.qty
+        + ' \u00b7 ' + ((l.cfg || {}).sku || l.ref || '')
+        + ' \u00b7 ' + (l.colourName || l.colour || '')
+        + (pl ? ' \u00b7 ' + pl : '');
+    }).join('\n');
+  }
+
   /* One request, however many products are on it: the Worker issues one
      reference and the studio answers one email. The first line fills the
-     structured fields the quote email lays out; every line is written into the
-     message, so nothing is lost for a basket of three. */
+     structured fields the quote email lays out, items carries all of them,
+     and every line is written into the message in full. */
   function describe(lines) {
     return lines.map(function (l, i) {
       var pl = (l.placements || []).map(function (x) {
@@ -512,6 +529,9 @@
        order rate when it prices the quote. All the request carries is whether
        this person asked about it. */
     try { if (localStorage.getItem('pamuuc_first_order') === 'yes') put('firstOrder', 'yes'); } catch (e) {}
+    /* Everything on the request, not just the line that happened to be first. */
+    put('items', summarise(lines));
+    put('lineCount', lines.length);
     put('locale', document.documentElement.lang || 'en');
     /* The contact step collects a surname and a marketing opt-in and the
        prototype kept neither. Dropping a surname makes the studio's reply

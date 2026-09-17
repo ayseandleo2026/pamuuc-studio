@@ -143,6 +143,13 @@ async function handleIntake(kind, request, env, origin) {
     weight: clean(fields.weight, 60),
     personalisation: clean(fields.personalisation, 120),
     placement: clean(fields.placement, 120),
+    /* The seven fields above describe the FIRST product on the request. A
+       basket can hold several, and the studio reads this sheet by filtering
+       it, so every product is also carried as one scannable line each. 2000
+       characters is about forty products — past that the message still has
+       them all. */
+    items: clean(fields.items, 2000),
+    lineCount: clean(fields.lineCount, 6),
     /* There is no customer-facing discount code any more: the studio applies
        the first order rate when it prices the quote. What arrives is only a
        marker that this request came from somebody who asked about it. */
@@ -227,6 +234,7 @@ async function handleIntake(kind, request, env, origin) {
     Phone: f.phone, Country: f.country, 'Marketing opt-in': f.marketingOptIn,
     Product: f.product, SKU: f.sku, Colour: f.colour, Quantity: f.quantity,
     Fit: f.fit, Weight: f.weight, Personalisation: f.personalisation, Placement: f.placement,
+    Items: f.items, 'Products on request': f.lineCount,
     'Project type': f.projectType, 'Team size': f.teamSize, Timeline: f.timeline,
     'Proposed call': f.meeting,
     Artwork: artworkUrl || '', 'Artwork file': f.artworkName || '',

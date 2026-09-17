@@ -103,6 +103,11 @@ const row = (k, v) => v
    extra raw html under them, inside the same section
    box    lays the section on paper with an accent edge — for the two things
           that must not be skim-read past: the mark, and a proposed call */
+/* A basket can hold several products. The structured rows below describe the
+   first one, which read as the whole request when it was not — so when there
+   is more than one, the heading says so and every product is listed. */
+const many = (f) => Number(f.lineCount || 1) > 1;
+
 function group(label, rows, opts) {
   const o = opts || {};
   const inner = (rows || []).filter(Boolean).join('');
@@ -177,13 +182,18 @@ export function studioEmail(kind, ref, f, artworkUrl) {
       row('Marketing', f.marketingOptIn === 'yes' ? 'Asked to hear from us' : ''),
     ], { first: true })}
 
-    ${merch ? group('The garment', [
+    ${merch ? group(many(f) ? `The first garment of ${esc(f.lineCount)}` : 'The garment', [
       row('Product', esc(f.product)),
       row('Reference', esc(f.sku)),
       row('Colour', esc(f.colour)),
       row('Fit', esc(f.fit)),
       row('Cloth', esc(f.weight)),
     ]) : ''}
+
+    ${merch && many(f) && f.items ? group(`All ${esc(f.lineCount)} products`, [], {
+      box: true,
+      extra: `<div style="white-space:pre-line;font:400 14px/1.7 ${FONT};color:${INK}">${esc(f.items)}</div>`,
+    }) : ''}
 
     ${merch ? group('The order', [
       row('Quantity', f.quantity ? `<span style="font-size:17px">${esc(f.quantity)}</span> <span style="color:${MUTED};font-weight:400">pieces</span>` : ''),

@@ -32,15 +32,23 @@ const SHEET_NAME = 'Requests';
    on the right; anything here that it does not send stays blank. */
 const COLUMNS = [
   'Reference', 'Received', 'Type', 'Status', 'Answered',
-  'Name', 'Company', 'Email', 'Phone', 'Country',
+  'Name', 'Last name', 'Company', 'Email', 'Phone', 'Country', 'Marketing opt-in',
+  /* These seven describe the FIRST product on a request. "Items" carries every
+     product, one per line, because a basket can hold several and this sheet is
+     read by filtering it — a request whose second line was the polo shirt did
+     not answer a search for polo shirts. */
   'Product', 'SKU', 'Colour', 'Quantity', 'Fit', 'Weight',
-  'Personalisation', 'Placement', 'Artwork', 'Artwork file',
+  'Personalisation', 'Placement', 'Items', 'Products on request',
+  'Artwork', 'Artwork file',
   'Project type', 'Team size', 'Timeline', 'Proposed call',
-  'Offer code', 'Message', 'Consent', 'Locale', 'Source',
+  /* There is no discount code any longer: the studio applies the first order
+     rate when it prices the quote, and this is only the marker that the
+     customer asked about it. "Offer" is which offer a subscriber joined. */
+  'First order', 'Offer', 'Message', 'Consent', 'Locale', 'Source',
 ];
 
 /* Columns that hold a lot of text and would otherwise stretch the sheet. */
-const WIDE = { Message: 420, Artwork: 260, 'Proposed call': 180, Email: 220 };
+const WIDE = { Message: 420, Items: 340, Artwork: 260, 'Proposed call': 180, Email: 220 };
 
 function doPost(e) {
   const lock = LockService.getScriptLock();
@@ -153,12 +161,14 @@ function dressUp(sheet, headers) {
     const w = WIDE[headers[i]];
     if (w) sheet.setColumnWidth(i + 1, w);
   }
-  /* Long messages read better wrapped than spilling across the row. */
-  const msg = headers.indexOf('Message');
-  if (msg !== -1) {
-    sheet.getRange(2, msg + 1, Math.max(sheet.getMaxRows() - 1, 1), 1)
+  /* Long messages read better wrapped than spilling across the row. Items is
+     one product per line and has to keep those line breaks to be readable. */
+  ['Message', 'Items'].forEach(function (name) {
+    const c = headers.indexOf(name);
+    if (c === -1) return;
+    sheet.getRange(2, c + 1, Math.max(sheet.getMaxRows() - 1, 1), 1)
       .setWrapStrategy(SpreadsheetApp.WrapStrategy.WRAP);
-  }
+  });
   /* A filter makes the sheet usable the moment the first request lands. */
   try { if (!sheet.getFilter()) sheet.getRange(1, 1, sheet.getMaxRows(), headers.length).createFilter(); }
   catch (ignored) {}
