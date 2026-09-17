@@ -22,7 +22,7 @@
   "ga4": "G-HS8HYY7LV1"
  },
  "form": {
-  "endpoint": "https://pamuuc-intake.pamuuc.workers.dev/enquiry",
+  "endpoint": "https://pamuuc-intake.black-butterfly-384c.workers.dev/enquiry",
   "_comment": "The Custom Uniforms enquiry. Posts to the intake Worker, which emails the studio with Reply-To set to the customer. Replaced Formspree."
  },
  "locales": {
@@ -346,7 +346,7 @@
   "/en/": "/"
  },
  "intake": {
-  "_comment": "The Cloudflare Worker the forms post to. Set after `wrangler deploy` prints the URL; it also appears in the CSP, so it cannot be guessed at runtime.",
-  "endpoint": "https://pamuuc-intake.pamuuc.workers.dev"
+  "_comment": "The Cloudflare Worker the forms post to. The subdomain was assigned by Cloudflare when the account's first Worker was deployed; it is also in the CSP, so it cannot be discovered at runtime.",
+  "endpoint": "https://pamuuc-intake.black-butterfly-384c.workers.dev"
  }
 }

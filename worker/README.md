@@ -28,6 +28,13 @@ Three places a request lands, in order of durability:
 
 ## Deploying
 
+**Live at `https://pamuuc-intake.black-butterfly-384c.workers.dev`.** The
+subdomain was assigned by Cloudflare when the account's first Worker was
+deployed — it is not a name anyone chose, and it can be changed in the
+dashboard, but every URL that references it changes with it (including the CSP
+in content/site.json), so it is not worth doing without a reason.
+
+
 From this folder:
 
 ```bash
@@ -54,7 +61,7 @@ Everything else is in `wrangler.toml` and is not sensitive.
 Check it is alive:
 
 ```bash
-curl https://pamuuc-intake.<your-subdomain>.workers.dev/health
+curl https://pamuuc-intake.black-butterfly-384c.workers.dev/health
 ```
 
 ## The Google Sheet
@@ -175,7 +182,7 @@ changing the script: **Deploy → Manage deployments → ✏️ → Version: New
 One constant in the site's content config:
 
 ```json
-"form": { "endpoint": "https://pamuuc-intake.<your-subdomain>.workers.dev" }
+"intake": { "endpoint": "https://pamuuc-intake.black-butterfly-384c.workers.dev" }
 ```
 
 The enquiry form posts to `/enquiry`, the merchandise quote to `/quote`, the
