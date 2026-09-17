@@ -74,6 +74,17 @@ const MERCH = buildMerch({ ROOT, site, LOCALES, intakeEndpoint: site.intake.endp
    The copy is decoded on the way out: the builder's keys come from raw HTML
    where "&" is "&amp;", and the runtime matches against DOM text where it is
    not, so an entity in a key would never match anything on the page. */
+/* The consent bar's own rules, taken from the site stylesheet so the two
+   banners look the same on both sides rather than drifting apart. */
+function consentCSS() {
+  const css = readFileSync(join(ROOT, 'src/css/site.css'), 'utf8');
+  const out = [];
+  for (const m of css.matchAll(/(^|\})([^{}]*consent-bar[^{}]*)\{([^}]*)\}/g)) {
+    out.push(`${m[2].trim()}{${m[3].trim()}}`);
+  }
+  return out.join('\n');
+}
+
 const MERCH_ASSETS = (() => {
   const js = merchJS({
     ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
@@ -387,6 +398,21 @@ function header(loc, current) {
 </header>`;
 }
 
+/* The consent bar, as its own function so both sides of the site can use it.
+   It used to be inline in footer(), which the merchandise pages do not call —
+   so 280 pages had no banner and, because the analytics loader is gated on it,
+   no analytics either. */
+function consentBar(loc) {
+  return `<div class="consent-bar" data-consent hidden role="region" aria-label="${attr(S(loc).cookieText).slice(0, 60)}">
+<p class="consent-bar__t">${esc(S(loc).cookieText)}</p>
+<p class="consent-bar__l"><a href="${legalURL(loc)}#cookies">${esc(S(loc).legal)}</a></p>
+<div class="consent-bar__a">
+<button class="btn btn--primary btn--sm" data-consent-action="granted">${esc(S(loc).cookieAccept)}</button>
+<button class="btn btn--ghost btn--sm" data-consent-action="denied">${esc(S(loc).cookieReject)}</button>
+</div>
+</div>`;
+}
+
 function footer(loc) {
   const h = HOME[loc], str = S(loc);
   const cols = [
@@ -417,14 +443,7 @@ ${cols.map((c) => `<div><h2>${esc(c.title)}</h2><ul>${c.links.map((l) => `<li><a
 </div>
 </div>
 </footer>
-<div class="consent-bar" data-consent hidden role="region" aria-label="${attr(S(loc).cookieText).slice(0, 60)}">
-<p class="consent-bar__t">${esc(S(loc).cookieText)}</p>
-<p class="consent-bar__l"><a href="${legalURL(loc)}#cookies">${esc(S(loc).legal)}</a></p>
-<div class="consent-bar__a">
-<button class="btn btn--primary btn--sm" data-consent-action="granted">${esc(S(loc).cookieAccept)}</button>
-<button class="btn btn--ghost btn--sm" data-consent-action="denied">${esc(S(loc).cookieReject)}</button>
-</div>
-</div>
+${consentBar(loc)}
 </body>
 </html>`;
 }
@@ -1281,7 +1300,7 @@ for (const loc of LOCALES) {
   }
   pages.push({ url: legalURL(loc), html: renderLegal(loc), cluster: clusters.find((c) => c.id === 'legal'), loc });
 }
-pages.push(...MERCH.renderPages((o) => head({ ...o, merch: true })));
+pages.push(...MERCH.renderPages((o) => head({ ...o, merch: true }), consentBar));
 for (const p of MERCH.problems) errors.push(`merchandise: ${p}`);
 const KNOWN_URLS = new Set([...pages.map((p) => p.url), ...Object.keys(site.legacyRedirects), '/404.html']);
 
@@ -1320,7 +1339,7 @@ if (!CHECK && errors.length === 0) {
     `src:url("/assets/fonts/gilmer-${name}.woff2") format("woff2")}`).join('\n');
   writeFile('assets/css/merch.css',
     fontCSS + '\n' +
-    readFileSync(join(ROOT, 'mockup/app.css'), 'utf8') + '\n' + MERCH_CSS);
+    readFileSync(join(ROOT, 'mockup/app.css'), 'utf8') + '\n' + MERCH_CSS + '\n' + consentCSS());
   writeFile(`assets/js/merch.${MERCH_ASSETS.jsHash}.js`, MERCH_ASSETS.js);
   for (const [loc, text] of Object.entries(MERCH_ASSETS.copy)) {
     writeFile(`assets/js/merch-copy.${loc}.${MERCH_ASSETS.copyHash[loc]}.js`, text);

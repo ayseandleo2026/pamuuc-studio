@@ -16,6 +16,48 @@
    It is a plain file now: read and concatenated, never interpolated, so what
    is written here is exactly what ships.
    ========================================================================= */
+/* ---- consent and analytics ------------------------------------------------
+   The merchandise pages load this bundle instead of site.js, and site.js is
+   where the consent banner and the analytics loader live. So 280 pages had no
+   banner and — because the loader is gated on consent — no analytics at all.
+   Nothing was being measured on the entire merchandise side.
+
+   Same storage key and same behaviour as site.js, deliberately: somebody who
+   accepted on the custom uniforms side is not asked again here, and a refusal
+   there is honoured here. Nothing is requested from Google until a yes. */
+(function () {
+  var KEY = 'pamuuc-consent';
+  var bar = document.querySelector('[data-consent]');
+
+  function loadAnalytics() {
+    var id = document.body.dataset.ga;
+    if (window.__ga || !id) return;
+    window.__ga = 1;
+    var g = document.createElement('script');
+    g.async = true;
+    g.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+    document.head.appendChild(g);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', id, { anonymize_ip: true });
+  }
+
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch (e) {}
+  if (stored === 'granted') loadAnalytics();
+  if (!bar) return;
+  if (!stored) bar.hidden = false;
+  bar.addEventListener('click', function (e) {
+    var act = e.target.closest && e.target.closest('[data-consent-action]');
+    if (!act) return;
+    var v = act.dataset.consentAction;
+    try { localStorage.setItem(KEY, v); } catch (err) {}
+    if (v === 'granted') loadAnalytics();
+    bar.hidden = true;
+  });
+})();
+
 /* ---- path routing --------------------------------------------------------
    app.js is untouched; these two globals are simply replaced. In a classic
    script a top-level `function` becomes a property of the global object, so

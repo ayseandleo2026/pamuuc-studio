@@ -150,7 +150,7 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
      go in its cluster list — but the pages need head(), which closes over
      things defined further down that file. So the work is split: clusters now,
      HTML when asked. */
-  const renderPages = (head) => {
+  const renderPages = (head, consentBar) => {
   const pages = [];
   for (const loc of LOCALES) {
     for (const p of pageList(M, site, loc)) {
@@ -203,7 +203,12 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
         html: head({
           loc, url: p.url, title: meta.title, description: meta.description,
           cluster: clusters.find((c2) => c2.id === 'merch:' + p.id),
-        }) + `<div id="root">` + html + `</div>` + '\n</body>\n</html>\n',
+        }) + `<div id="root">` + html + `</div>`
+          /* Outside #root on purpose: the app replaces everything inside it on
+             every render, and a consent choice must not be undone by redrawing
+             the page. */
+          + (consentBar ? '\n' + consentBar(loc) : '')
+          + '\n</body>\n</html>\n',
       });
     }
   }
