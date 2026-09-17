@@ -80,4 +80,4 @@ End the sample review with two candidates for each garment, not one winner for t
 
 Make finished garment samples because the swatch does not show the full effect of pattern, lining, seams, pockets, trims and pressing. Review them in the actual light and movement of the role, then put them through the intended care route before approval.
 
-The result is a traceable sample decision that operations, design, laundry and procurement can examine together. Use the [PAMUUC design process](/#process) to connect the shortlist to garment development, or [request a first meeting](/#contact) to build a fabric sample scorecard for each role.
+The result is a traceable sample decision that operations, design, laundry and procurement can examine together. Use the [PAMUUC design process](/custom-uniforms/#how) to connect the shortlist to garment development, or [request a first meeting](/custom-uniforms/#brief) to build a fabric sample scorecard for each role.

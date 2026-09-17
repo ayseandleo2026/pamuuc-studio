@@ -38,6 +38,9 @@ const isStub = (html) => /http-equiv="refresh"/i.test(html);
 
 const titles = new Map(), descs = new Map();
 let imgCount = 0, linkCount = 0, stubs = 0;
+/* Every "/page/#anchor" seen, checked once the whole site has been read —
+   the target page may not have been reached yet when the link is found. */
+const fragments = [];
 
 for (const file of pages) {
   const url = urlOf(file);
@@ -98,7 +101,9 @@ for (const file of pages) {
       if (!existsSync(join(OUT, path.slice(1)))) at(`asset link 404: ${path}`);
       continue;
     }
-    if (!KNOWN.has(path)) at(`link to a page that was not built: ${path}`);
+    if (!KNOWN.has(path)) { at(`link to a page that was not built: ${path}`); continue; }
+    const frag = href.split('#')[1];
+    if (frag) fragments.push({ from: url, path, frag: frag.split('?')[0] });
   }
 
   /* --- hreflang --- */
@@ -109,6 +114,22 @@ for (const file of pages) {
     }
     if (!alts.includes('x-default')) at('hreflang x-default is missing');
   }
+}
+
+/* --- a link to an anchor must land on an anchor ---------------------------
+   The footer pointed every one of 280 pages at /legal/#accessibility for as
+   long as that footer has existed, and no such section was ever written. The
+   link resolved, the page opened, and the reader was left at the top of a
+   different policy — which is why a link check that stops at the path does not
+   catch it. */
+const idsOf = new Map();
+for (const { from, path, frag } of fragments) {
+  if (!idsOf.has(path)) {
+    const f = join(OUT, path.slice(1), 'index.html');
+    const h = existsSync(f) ? readFileSync(f, 'utf8') : '';
+    idsOf.set(path, new Set([...h.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1])));
+  }
+  if (!idsOf.get(path).has(frag)) F(`${from}: link to ${path}#${frag} — no element has that id`);
 }
 
 /* --- duplicate titles and descriptions are an SEO problem, not a crash --- */

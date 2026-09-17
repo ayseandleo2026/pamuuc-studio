@@ -2,7 +2,7 @@
  "_comment": "The merchandise copy, extracted from mockup/app.js by tools/extract-copy.mjs. This is the English source. Translations are content/merch.<loc>.json with the same keys. Editing a value here changes the wording on the site; editing a key breaks the link to it.",
  "_generated": "2026-09-17",
  "_strings": 1119,
- "_words": 10861,
+ "_words": 10863,
  "copy": {
   "Legal and registration details are confirmed before publication.": "Legal and registration details are confirmed before publication.",
   "Start your project brief": "Start your project brief",
@@ -168,8 +168,8 @@
   "Small": "Small",
   "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.": "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.",
   "Production time is not an arrival date — destination and schedule are confirmed with the quote.": "Production time is not an arrival date — destination and schedule are confirmed with the quote.",
+  "includes one placement at the screen print rate, 1 colour, small": "includes one placement at the screen print rate, 1 colour, small",
   "Embroidery — setup €35.49 per job · priced by size": "Embroidery — setup €35.49 per job · priced by size",
-  "includes one placement — screen print, 1 colour, small": "includes one placement — screen print, 1 colour, small",
   "Build yours · 2 fits · 4 weights": "Build yours · 2 fits · 4 weights",
   "one-off, per job — not per piece": "one-off, per job — not per piece",
   "Build yours · 2 styles": "Build yours · 2 styles",

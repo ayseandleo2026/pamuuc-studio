@@ -80,4 +80,4 @@ Before bulk production, put the hotel, laundry and supplier around the same fini
 
 Run a trial through the intended process when required, then review the complete result. Record what was tested, which route was used, what changed and what remains open. Approve only the route and construction actually examined. If a later operational change affects that route, reopen the relevant approval instead of assuming compatibility.
 
-The [PAMUUC hospitality article](/en/blog/custom-hospitality-uniforms/) shows how role differences belong inside one coherent wardrobe. Use the [PAMUUC design process](/#process) to connect laundry requirements with sampling and fitting, or [request a first meeting](/#contact) to map the route before uniforms enter production.
+The [PAMUUC hospitality article](/en/blog/custom-hospitality-uniforms/) shows how role differences belong inside one coherent wardrobe. Use the [PAMUUC design process](/custom-uniforms/#how) to connect laundry requirements with sampling and fitting, or [request a first meeting](/custom-uniforms/#brief) to map the route before uniforms enter production.

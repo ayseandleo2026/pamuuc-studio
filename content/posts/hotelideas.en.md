@@ -80,4 +80,4 @@ Reduce the moodboard to two coherent territories and describe each in the same l
 
 Do not merge every attractive reference into one overloaded answer. Two distinct directions give the hotel enough contrast to make a real decision while preserving room for prototypes and wearer feedback. If neither survives the three scenes, return to the service mood rather than searching for more images.
 
-Bring the hotel’s interior deck and role list to a concept review. PAMUUC can test the two directions against real garments, operations and continuity before development begins. See the [design process](/#process) or [request an introductory meeting](/#contact) when the shortlist is ready.
+Bring the hotel’s interior deck and role list to a concept review. PAMUUC can test the two directions against real garments, operations and continuity before development begins. See the [design process](/custom-uniforms/#how) or [request an introductory meeting](/custom-uniforms/#brief) when the shortlist is ready.

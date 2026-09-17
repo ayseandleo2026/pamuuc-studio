@@ -94,4 +94,4 @@ Modifica la parte più piccola della specifica che risolve il problema verificat
 
 Riporta infine la correzione approvata nella specifica principale, nel cartamodello, nella distinta base, nelle istruzioni di cura e nel registro dei riordini pertinenti. Archivia la versione rifiutata e il motivo della modifica, affinché lo stesso difetto non torni in un nuovo lotto.
 
-Usa il [processo di progettazione PAMUUC](/it/#process) per collegare le prove allo sviluppo dei campioni, oppure [richiedi un primo incontro](/it/#contact) per esaminare il sistema attuale di divise di un hotel. Il risultato utile non è soltanto un capo riparato. È una correzione documentata che il capo successivo può riprodurre.
+Usa il [processo di progettazione PAMUUC](/it/custom-uniforms/#how) per collegare le prove allo sviluppo dei campioni, oppure [richiedi un primo incontro](/it/custom-uniforms/#brief) per esaminare il sistema attuale di divise di un hotel. Il risultato utile non è soltanto un capo riparato. È una correzione documentata che il capo successivo può riprodurre.

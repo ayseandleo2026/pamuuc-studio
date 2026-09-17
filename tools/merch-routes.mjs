@@ -49,7 +49,7 @@ export function urlFor(target, loc, site, cats) {
     case 'home':          return p;
     case 'custom':        return `${p}custom-uniforms/`;
     /* the enquiry form is a section of the custom uniforms page, not a page */
-    case 'form':          return `${p}custom-uniforms/#enquiry`;
+    case 'form':          return `${p}custom-uniforms/#brief`;
 
     case 'merch':         return merch;
     case 'products':      return `${merch}products/`;

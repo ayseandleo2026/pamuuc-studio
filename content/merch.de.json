@@ -224,7 +224,6 @@
   "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.": "Mindestens 1 Stück. Die Stufen sind Abkürzungen — geben Sie eine beliebige Zahl ein und der Preis folgt. Angezeigt wird der Stückpreis für das Kleidungsstück mit der enthaltenen Spezifikation, vor Veredelung und ohne MwSt.; die Größen werden später aufgeteilt.",
   "Production time is not an arrival date — destination and schedule are confirmed with the quote.": "Die Produktionszeit ist kein Ankunftsdatum — Lieferziel und Termin werden mit dem Angebot bestätigt.",
   "Embroidery — setup €35.49 per job · priced by size": "Stickerei — Einrichtung 35,49 € pro Auftrag · nach Größe berechnet",
-  "includes one placement — screen print, 1 colour, small": "enthält eine Platzierung — Siebdruck, 1 Farbe, klein",
   "Build yours · 2 fits · 4 weights": "Selbst zusammenstellen · 2 Schnitte · 4 Gewichte",
   "one-off, per job — not per piece": "einmalig, pro Auftrag — nicht pro Stück",
   "Build yours · 2 styles": "Selbst zusammenstellen · 2 Modelle",
@@ -1189,7 +1188,8 @@
   "Close": "Schließen",
   "Branded merchandise, chosen by you and personalised for your company.": "Werbeartikel mit Logo für Ihr Unternehmen.",
   "1 piece": "1 Stück",
-  "Start choosing": "Jetzt auswählen"
+  "Start choosing": "Jetzt auswählen",
+  "includes one placement at the screen print rate, 1 colour, small": "enthält eine Platzierung zum Siebdruck-Tarif, 1 Farbe, klein"
  },
  "_translated": 1107,
  "_of": 1119,

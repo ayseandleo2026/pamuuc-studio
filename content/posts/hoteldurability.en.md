@@ -94,4 +94,4 @@ Change the smallest part of the specification that resolves the verified problem
 
 Finally, return the approved correction to the master specification, pattern, bill of materials, care instructions and reorder record that need it. Archive the rejected version and the reason for the change so the same failure does not return when a new batch is produced.
 
-Use the [PAMUUC design process](/#process) to connect failure evidence with sample development, or [request a first meeting](/#contact) to review a current hotel uniform system. The useful outcome is not a repaired garment alone. It is a documented correction that the next garment can reproduce.
+Use the [PAMUUC design process](/custom-uniforms/#how) to connect failure evidence with sample development, or [request a first meeting](/custom-uniforms/#brief) to review a current hotel uniform system. The useful outcome is not a repaired garment alone. It is a documented correction that the next garment can reproduce.

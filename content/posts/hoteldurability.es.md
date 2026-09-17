@@ -94,4 +94,4 @@ Cambia la parte más pequeña de la especificación que resuelva el problema ver
 
 Devuelve por último la corrección aprobada a la especificación maestra, el patrón, la lista de materiales, las instrucciones de cuidado y el registro de reposición que corresponda. Archiva la versión rechazada y el motivo del cambio para que el mismo fallo no reaparezca en un nuevo lote.
 
-Usa el [proceso de diseño de PAMUUC](/es/#process) para conectar la evidencia con el desarrollo de muestras, o [solicita una primera reunión](/es/#contact) para revisar el sistema actual de uniformes de un hotel. El resultado útil no es solo una prenda reparada. Es una corrección documentada que la siguiente prenda puede reproducir.
+Usa el [proceso de diseño de PAMUUC](/es/custom-uniforms/#how) para conectar la evidencia con el desarrollo de muestras, o [solicita una primera reunión](/es/custom-uniforms/#brief) para revisar el sistema actual de uniformes de un hotel. El resultado útil no es solo una prenda reparada. Es una corrección documentada que la siguiente prenda puede reproducir.

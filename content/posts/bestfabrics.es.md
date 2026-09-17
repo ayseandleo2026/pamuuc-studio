@@ -80,4 +80,4 @@ Termina la evaluación con dos opciones por prenda, no con una ganadora para tod
 
 Prepara muestras de prendas terminadas, porque un retal no muestra el efecto completo del patrón, el forro, las costuras, los bolsillos, los acabados y el planchado. Revísalas bajo la luz y el movimiento reales de la función, y somételas a la ruta de cuidado prevista antes de aprobarlas.
 
-El resultado es una decisión trazable que operaciones, diseño, lavandería y compras pueden revisar juntos. Usa el [proceso de diseño de PAMUUC](/es/#process) para conectar la selección con el desarrollo de prendas, o [solicita una primera reunión](/es/#contact) para crear una tabla de evaluación por función.
+El resultado es una decisión trazable que operaciones, diseño, lavandería y compras pueden revisar juntos. Usa el [proceso de diseño de PAMUUC](/es/custom-uniforms/#how) para conectar la selección con el desarrollo de prendas, o [solicita una primera reunión](/es/custom-uniforms/#brief) para crear una tabla de evaluación por función.

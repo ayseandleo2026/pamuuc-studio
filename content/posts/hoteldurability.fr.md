@@ -94,4 +94,4 @@ Modifiez la plus petite partie de la spécification qui résout le problème vé
 
 Intégrez enfin la correction approuvée dans la fiche technique de référence, le patron, la nomenclature, les consignes d’entretien et le dossier de réassort concernés. Archivez la version rejetée et la raison de la modification afin que le même défaut ne réapparaisse pas dans une nouvelle série.
 
-Utilisez le [processus de conception de PAMUUC](/fr/#process) pour relier les preuves au développement des prototypes, ou [demandez un premier rendez-vous](/fr/#contact) afin d’examiner le système d’uniformes actuel d’un hôtel. Le résultat utile ne se limite pas à un vêtement réparé. C’est une correction documentée que la pièce suivante pourra reproduire.
+Utilisez le [processus de conception de PAMUUC](/fr/custom-uniforms/#how) pour relier les preuves au développement des prototypes, ou [demandez un premier rendez-vous](/fr/custom-uniforms/#brief) afin d’examiner le système d’uniformes actuel d’un hôtel. Le résultat utile ne se limite pas à un vêtement réparé. C’est une correction documentée que la pièce suivante pourra reproduire.

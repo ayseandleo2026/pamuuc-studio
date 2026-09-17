@@ -224,7 +224,6 @@
   "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.": "Minimum 1 pièce. Les paliers sont des raccourcis : saisissez n'importe quel nombre et le prix suit. Ce qui est affiché s'entend à la pièce pour le vêtement avec la spécification incluse, avant personnalisation et hors taxes ; les tailles se répartissent ensuite.",
   "Production time is not an arrival date — destination and schedule are confirmed with the quote.": "Le temps de production n'est pas une date d'arrivée — la destination et le calendrier sont confirmés avec le devis.",
   "Embroidery — setup €35.49 per job · priced by size": "Broderie — préparation 35,49 € par travail · tarifée à la taille",
-  "includes one placement — screen print, 1 colour, small": "comprend un placement — sérigraphie, 1 couleur, petit",
   "Build yours · 2 fits · 4 weights": "Composez le vôtre · 2 coupes · 4 grammages",
   "one-off, per job — not per piece": "unique, par travail — pas par pièce",
   "Build yours · 2 styles": "Composez le vôtre · 2 modèles",
@@ -1189,7 +1188,8 @@
   "Close": "Fermer",
   "Branded merchandise, chosen by you and personalised for your company.": "Objets publicitaires pour votre entreprise.",
   "1 piece": "1 pièce",
-  "Start choosing": "Commencer à choisir"
+  "Start choosing": "Commencer à choisir",
+  "includes one placement at the screen print rate, 1 colour, small": "comprend un placement au tarif sérigraphie, 1 couleur, petit"
  },
  "_translated": 1104,
  "_of": 1119,

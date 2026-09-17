@@ -521,12 +521,18 @@ function sizeRange(sizes){
 const SIZE_MM = {small:80, medium:130, large:200};
 /* Say what the price actually covers, from the rate card rather than from a
    sentence written when it covered something else. */
+/* What the list price covers is an ALLOWANCE, not a promise of that method.
+   The sheet includes one placement valued at the screen print rate; choose
+   embroidery and the line below charges the difference, which is correct and
+   read as "you are getting a screen print" by anyone who had chosen
+   embroidery three controls further up. Naming it as a rate says the same
+   thing about the money and stops implying anything about the product. */
 function includedNote(rc){
   const i = rc && rc.included;
   if(!i || !i.placements) return 'personalisation priced separately';
   const meth = (SEED.personalization[i.method] || {}).name || i.method;
   return 'includes ' + nWord(i.placements) + ' placement' + (i.placements === 1 ? '' : 's')
-    + ' — ' + meth.toLowerCase() + ', ' + (i.ink || 1) + ' colour, ' + (i.band || 'small');
+    + ' at the ' + meth.toLowerCase() + ' rate, ' + (i.ink || 1) + ' colour, ' + (i.band || 'small');
 }
 function includedShort(rc){
   const i = rc && rc.included;

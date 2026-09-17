@@ -165,8 +165,8 @@
   "Small": 11,
   "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.": 10,
   "Production time is not an arrival date — destination and schedule are confirmed with the quote.": 10,
+  "includes one placement at the screen print rate, 1 colour, small": 10,
   "Embroidery — setup €35.49 per job · priced by size": 10,
-  "includes one placement — screen print, 1 colour, small": 10,
   "Build yours · 2 fits · 4 weights": 10,
   "one-off, per job — not per piece": 10,
   "Build yours · 2 styles": 10,
@@ -2270,14 +2270,14 @@
    "product:m_baby_bodysuits",
    "product:m_baby_bibs"
   ],
-  "Embroidery — setup €35.49 per job · priced by size": [
+  "includes one placement at the screen print rate, 1 colour, small": [
    "product:m_zip_sweatshirts",
    "product:m_long_sleeve_polo_shirts",
    "product:m_sherpa_jackets",
    "product:m_baby_bodysuits",
    "product:m_baby_bibs"
   ],
-  "includes one placement — screen print, 1 colour, small": [
+  "Embroidery — setup €35.49 per job · priced by size": [
    "product:m_zip_sweatshirts",
    "product:m_long_sleeve_polo_shirts",
    "product:m_sherpa_jackets",

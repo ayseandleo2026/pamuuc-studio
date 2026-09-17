@@ -79,4 +79,4 @@ Ajoutez des preuves lorsqu’elles sont utiles : photographies des espaces, réf
 
 Un bon cahier des charges ne préjuge pas de la réponse du fournisseur. Il crée les conditions nécessaires à des propositions, prototypes et essayages argumentés. Les matières, les patrons et les détails peuvent alors être évalués à partir d’une compréhension commune du lieu, du travail et de l’organisation opérationnelle.
 
-Utilisez les questions ci-dessus comme document d’exploration. Consultez ensuite le [processus de conception et de développement de PAMUUC](/fr/#process) ou [demandez un premier rendez-vous](/fr/#contact) pour en faire un périmètre de départ clair. Le but n’est pas d’ajouter des vêtements, mais de créer un vestiaire cohérent où chaque pièce a une raison d’exister.
+Utilisez les questions ci-dessus comme document d’exploration. Consultez ensuite le [processus de conception et de développement de PAMUUC](/fr/custom-uniforms/#how) ou [demandez un premier rendez-vous](/fr/custom-uniforms/#brief) pour en faire un périmètre de départ clair. Le but n’est pas d’ajouter des vêtements, mais de créer un vestiaire cohérent où chaque pièce a une raison d’exister.

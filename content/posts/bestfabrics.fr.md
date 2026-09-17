@@ -80,4 +80,4 @@ Terminez l’évaluation avec deux options par vêtement, pas avec un gagnant po
 
 Réalisez des prototypes finis, car un coupon ne montre pas l’effet complet du patron, de la doublure, des coutures, des poches, des garnitures et du repassage. Examinez les pièces dans la lumière et les mouvements réels du rôle, puis soumettez ces pièces au parcours d’entretien prévu avant validation.
 
-Vous obtenez ainsi une décision traçable que les opérations, le design, la blanchisserie et les achats peuvent étudier ensemble. Utilisez le [processus de conception de PAMUUC](/fr/#process) pour relier la sélection au développement des vêtements, ou [demandez un premier rendez-vous](/fr/#contact) afin de créer une grille d’évaluation pour chaque rôle.
+Vous obtenez ainsi une décision traçable que les opérations, le design, la blanchisserie et les achats peuvent étudier ensemble. Utilisez le [processus de conception de PAMUUC](/fr/custom-uniforms/#how) pour relier la sélection au développement des vêtements, ou [demandez un premier rendez-vous](/fr/custom-uniforms/#brief) afin de créer une grille d’évaluation pour chaque rôle.
