@@ -80,4 +80,4 @@ Beenden Sie die Bewertung mit zwei Kandidaten pro Kleidungsstück, nicht mit ein
 
 Erstellen Sie fertige Kleidungsstücke als Muster, denn ein Stoffabschnitt zeigt nicht die volle Wirkung von Schnitt, Futter, Nähten, Taschen, Besätzen und Pressen. Prüfen Sie sie im tatsächlichen Licht und in den Bewegungen der Rolle. Führen Sie sie danach vor der Freigabe durch den vorgesehenen Pflegeweg.
 
-Das Ergebnis ist eine nachvollziehbare Entscheidung, die Betrieb, Design, Wäscherei und Einkauf gemeinsam prüfen können. Nutzen Sie den [Designprozess von PAMUUC](/de/#process), um die Auswahl mit der Entwicklung der Kleidungsstücke zu verbinden, oder [fragen Sie ein Erstgespräch an](/de/#contact), um eine Bewertungsmatrix für jede Rolle zu erstellen.
+Das Ergebnis ist eine nachvollziehbare Entscheidung, die Betrieb, Design, Wäscherei und Einkauf gemeinsam prüfen können. Nutzen Sie den [Designprozess von PAMUUC](/de/custom-uniforms/#how), um die Auswahl mit der Entwicklung der Kleidungsstücke zu verbinden, oder [fragen Sie ein Erstgespräch an](/de/custom-uniforms/#brief), um eine Bewertungsmatrix für jede Rolle zu erstellen.

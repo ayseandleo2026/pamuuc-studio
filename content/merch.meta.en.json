@@ -1,0 +1,247 @@
+{
+ "_comment": "Reviewed PAMUUC SEO copy, 17 September 2026. pages contains explicit titles and descriptions for all 56 current routes and takes precedence over templates. Review metadata for each new route before publication. Product descriptions in the fallback builder still come from catalogue copy; the product description template is reserved. Keep route IDs and placeholders intact.",
+ "pages": {
+  "chooser": {
+   "title": "Uniforms & branded merchandise, PAMUUC Barcelona",
+   "description": "Custom uniforms and branded merchandise for your business. Choose clothing developed for your team or catalogue products personalised with your logo."
+  },
+  "merch": {
+   "title": "Branded merchandise & company clothing, PAMUUC",
+   "description": "Branded clothing and promotional products for teams, events and company gifts. Compare products, add your logo and request a quote. From 1 piece."
+  },
+  "products": {
+   "title": "Custom clothing & branded accessories, PAMUUC",
+   "description": "Explore custom T-shirts, hoodies, polos, jackets and bags for your company. Compare fits, fabrics and logo options, then request a quote."
+  },
+  "collections": {
+   "title": "Branded clothing by category, PAMUUC",
+   "description": "Find company merchandise across seven clothing and accessory categories. Compare products and personalisation options before requesting your quote."
+  },
+  "method": {
+   "title": "Embroidery, screen printing & logo options, PAMUUC",
+   "description": "Compare embroidery, screen printing and digital printing for your company clothing. Understand logo placement, design files and setup costs."
+  },
+  "howto": {
+   "title": "How to order branded merchandise, PAMUUC",
+   "description": "Choose your products, add your logo and request a quote. Learn how review, design approval, payment and production work. No payment when you enquire."
+  },
+  "merchhelp": {
+   "title": "Help with personalised merchandise, PAMUUC",
+   "description": "Questions about quantities, logo files, samples, prices or delivery? Find answers or ask the PAMUUC team for help with your merchandise request."
+  },
+  "quote": {
+   "title": "Request a branded merchandise quote, PAMUUC",
+   "description": "Review your products, quantities and logo options, then request a quote. We usually reply within two working days. No order or payment at this stage."
+  },
+  "about": {
+   "title": "About PAMUUC, uniforms & merchandise in Barcelona",
+   "description": "Meet PAMUUC, the Barcelona studio for custom uniforms and branded merchandise. Discover how we develop team clothing and personalise catalogue products."
+  },
+  "contact": {
+   "title": "Contact PAMUUC, uniforms & branded merchandise",
+   "description": "Tell us about your uniform or merchandise project. Share your product ideas, quantity and preferred date. The PAMUUC team will reply by email."
+  },
+  "search": {
+   "title": "Search custom clothing & merchandise, PAMUUC",
+   "description": "Search PAMUUC products by name, type or reference. Find branded clothing and accessories, compare options and build your quote request."
+  },
+  "product:m_t_shirts": {
+   "title": "Custom T-Shirt | PAMUUC",
+   "description": "Custom T-Shirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_polo_shirts": {
+   "title": "Custom Polo Shirt | PAMUUC",
+   "description": "Custom Polo Shirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_crewneck_sweatshirts": {
+   "title": "Custom Crewneck Sweatshirt | PAMUUC",
+   "description": "Custom Crewneck Sweatshirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_pullover_hoodies": {
+   "title": "Custom Pullover Hoodie | PAMUUC",
+   "description": "Custom Pullover Hoodie for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_zip_hoodies": {
+   "title": "Custom Zip Hoodie | PAMUUC",
+   "description": "Custom Zip Hoodie for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_zip_sweatshirts": {
+   "title": "Custom Full Zip Sweatshirt | PAMUUC",
+   "description": "Custom Full Zip Sweatshirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_shirts": {
+   "title": "Custom Shirt | PAMUUC",
+   "description": "Custom Shirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_tank_tops": {
+   "title": "Custom Tank Top | PAMUUC",
+   "description": "Custom Tank Top for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_fleece_jackets": {
+   "title": "Custom Fleece Jacket | PAMUUC",
+   "description": "Custom Fleece Jacket for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_softshell_jackets": {
+   "title": "Custom Softshell Jacket | PAMUUC",
+   "description": "Custom Softshell Jacket for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_bodywarmers": {
+   "title": "Custom Bodywarmer | PAMUUC",
+   "description": "Custom Bodywarmer for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_padded_jackets_parkas": {
+   "title": "Custom Padded Jacket | PAMUUC",
+   "description": "Custom Padded Jacket for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_light_jackets": {
+   "title": "Custom Casual Jacket | PAMUUC",
+   "description": "Custom Casual Jacket for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_rain_jackets_windbreakers": {
+   "title": "Custom Windbreaker | PAMUUC",
+   "description": "Custom Windbreaker for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_joggers": {
+   "title": "Custom Joggers | PAMUUC",
+   "description": "Custom Joggers for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_long_sleeve_t_shirts": {
+   "title": "Custom Long Sleeve T-Shirt | PAMUUC",
+   "description": "Custom Long Sleeve T-Shirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_long_sleeve_polo_shirts": {
+   "title": "Custom Long Sleeve Polo Shirt | PAMUUC",
+   "description": "Custom Long Sleeve Polo Shirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_quarter_zip_sweatshirts": {
+   "title": "Custom Quarter Zip Sweatshirt | PAMUUC",
+   "description": "Custom Quarter Zip Sweatshirt for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_sherpa_jackets": {
+   "title": "Custom Sherpa Jacket | PAMUUC",
+   "description": "Custom Sherpa Jacket for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_waterproof_jackets": {
+   "title": "Custom Waterproof Jacket | PAMUUC",
+   "description": "Custom Waterproof Jacket for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_padded_parkas": {
+   "title": "Custom Padded Parka | PAMUUC",
+   "description": "Custom Padded Parka for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_sweat_shorts": {
+   "title": "Custom Sweat Shorts | PAMUUC",
+   "description": "Custom Sweat Shorts for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_baby_bodysuits": {
+   "title": "Custom Baby Bodysuit | PAMUUC",
+   "description": "Custom Baby Bodysuit for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_baby_bibs": {
+   "title": "Custom Baby Bib | PAMUUC",
+   "description": "Custom Baby Bib for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_beanies": {
+   "title": "Custom Beanie | PAMUUC",
+   "description": "Custom Beanie for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_bucket_hats": {
+   "title": "Custom Bucket Hat | PAMUUC",
+   "description": "Custom Bucket Hat for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_tote_bags": {
+   "title": "Branded tote bags with your logo | PAMUUC",
+   "description": "Branded bags for events, teams and company gifts. Compare tote bag fabrics, colours and printing options, then request a quote for your quantity."
+  },
+  "product:m_drawstring_gym_bags": {
+   "title": "Custom Drawstring Bag | PAMUUC",
+   "description": "Custom Drawstring Bag for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_duffle_bags": {
+   "title": "Custom Duffle Bag | PAMUUC",
+   "description": "Custom Duffle Bag for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_belt_bags": {
+   "title": "Custom Belt Bag | PAMUUC",
+   "description": "Custom Belt Bag for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "product:m_pencil_cases": {
+   "title": "Custom Pencil Case | PAMUUC",
+   "description": "Custom Pencil Case for your company. Compare colours, sizes and logo options, then request a quote. We confirm the details before you order."
+  },
+  "collection:t-shirts": {
+   "title": "Custom T-shirts | PAMUUC",
+   "description": "Custom T-shirts for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:t-shirts": {
+   "title": "Choose your t-shirts | PAMUUC",
+   "description": "Find the right t-shirts for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "collection:polo-shirts": {
+   "title": "Personalised polo shirts | PAMUUC",
+   "description": "Personalised polo shirts for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:polo-shirts": {
+   "title": "Choose your polos | PAMUUC",
+   "description": "Find the right polos for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "collection:shirts": {
+   "title": "Personalised shirts | PAMUUC",
+   "description": "Personalised shirts for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:shirts": {
+   "title": "Choose your shirts | PAMUUC",
+   "description": "Find the right shirts for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "collection:sweatshirts": {
+   "title": "Custom sweatshirts and hoodies | PAMUUC",
+   "description": "Custom sweatshirts and hoodies for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:sweatshirts": {
+   "title": "Choose your sweatshirts | PAMUUC",
+   "description": "Find the right sweatshirts for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "collection:jackets": {
+   "title": "Personalised jackets | PAMUUC",
+   "description": "Personalised jackets for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:jackets": {
+   "title": "Choose your outerwear | PAMUUC",
+   "description": "Find the right outerwear for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "collection:joggers-and-shorts": {
+   "title": "Personalised trousers and shorts | PAMUUC",
+   "description": "Personalised trousers and shorts for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:joggers-and-shorts": {
+   "title": "Choose your trousers and shorts | PAMUUC",
+   "description": "Find the right trousers and shorts for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "collection:accessories": {
+   "title": "Personalised bags and accessories | PAMUUC",
+   "description": "Personalised bags and accessories for teams and events. Compare styles, fabrics and logo options. Choose your quantity and request a quote before ordering."
+  },
+  "build:accessories": {
+   "title": "Choose your accessories | PAMUUC",
+   "description": "Find the right accessories for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  }
+ },
+ "templates": {
+  "product": {
+   "title": "{name} with your logo | PAMUUC",
+   "description": "{name} for teams and events. Compare the available options and request a quote for personalisation with your logo."
+  },
+  "collection": {
+   "title": "Branded {name} for companies | PAMUUC",
+   "description": "Explore {n} {products} in our {name} category. Compare fabrics and logo options, then request a quote for your team or event."
+  },
+  "build": {
+   "title": "Choose {name} for your team | PAMUUC",
+   "description": "Find {name} for your team. Choose who will wear them, the fit, fabric weight and finish to compare suitable products."
+  }
+ },
+ "words": {
+  "product": "product",
+  "products": "products"
+ }
+}

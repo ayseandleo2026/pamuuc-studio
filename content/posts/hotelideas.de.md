@@ -80,4 +80,4 @@ Reduzieren Sie das Moodboard auf zwei stimmige Richtungen und beschreiben Sie be
 
 Vermischen Sie nicht jede attraktive Referenz zu einer überladenen Antwort. Zwei unterschiedliche Richtungen schaffen genug Kontrast für eine echte Entscheidung und lassen Raum für Prototypen und Rückmeldungen des Teams. Besteht keine die drei Szenen, kehren Sie zum Servicecharakter zurück, statt nach mehr Bildern zu suchen.
 
-Bringen Sie das Innenraumkonzept und die Rollenliste des Hotels zu einer Konzeptprüfung. PAMUUC kann die beiden Richtungen an realen Kleidungsstücken, Betriebsabläufen und Kontinuität prüfen, bevor die Entwicklung beginnt. Sehen Sie sich den [Designprozess](/de/#process) an oder [fragen Sie ein Erstgespräch an](/de/#contact), sobald die Auswahl steht.
+Bringen Sie das Innenraumkonzept und die Rollenliste des Hotels zu einer Konzeptprüfung. PAMUUC kann die beiden Richtungen an realen Kleidungsstücken, Betriebsabläufen und Kontinuität prüfen, bevor die Entwicklung beginnt. Sehen Sie sich den [Designprozess](/de/custom-uniforms/#how) an oder [fragen Sie ein Erstgespräch an](/de/custom-uniforms/#brief), sobald die Auswahl steht.

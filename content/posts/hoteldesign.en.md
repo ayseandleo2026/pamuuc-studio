@@ -79,4 +79,4 @@ Attach evidence where it helps: photographs of spaces, material references, role
 
 A good brief does not pre-design the supplier's answer. It creates the conditions for informed proposals, prototypes and fittings. Materials, patterns and details can then be judged against a common definition of the property, the work and the operational system.
 
-Use the questions above as a working discovery document. Then review the [PAMUUC design and development process](/#process) or [request a first meeting](/#contact) to turn the brief into a clear starting scope. The goal is not more garments; it is a coherent wardrobe in which every garment has a reason to exist.
+Use the questions above as a working discovery document. Then review the [PAMUUC design and development process](/custom-uniforms/#how) or [request a first meeting](/custom-uniforms/#brief) to turn the brief into a clear starting scope. The goal is not more garments; it is a coherent wardrobe in which every garment has a reason to exist.

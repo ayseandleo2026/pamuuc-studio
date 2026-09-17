@@ -80,4 +80,4 @@ Riduci la moodboard a due territori coerenti e descrivili con lo stesso linguagg
 
 Non fondere ogni riferimento attraente in una risposta sovraccarica. Due direzioni distinte offrono un contrasto sufficiente per prendere una decisione reale e lasciano spazio a prototipi e riscontri del personale. Se nessuna supera le tre scene, torna al carattere del servizio invece di cercare altre immagini.
 
-Porta il dossier degli interni e l’elenco dei ruoli dell’hotel a una revisione del concept. PAMUUC può verificare le due direzioni rispetto a capi, operatività e continuità reali prima di iniziare lo sviluppo. Consulta il [processo di progettazione](/it/#process) o [richiedi un primo incontro](/it/#contact) quando la selezione è pronta.
+Porta il dossier degli interni e l’elenco dei ruoli dell’hotel a una revisione del concept. PAMUUC può verificare le due direzioni rispetto a capi, operatività e continuità reali prima di iniziare lo sviluppo. Consulta il [processo di progettazione](/it/custom-uniforms/#how) o [richiedi un primo incontro](/it/custom-uniforms/#brief) quando la selezione è pronta.

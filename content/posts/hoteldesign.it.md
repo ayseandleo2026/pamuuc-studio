@@ -79,4 +79,4 @@ Allega le prove quando aiutano: fotografie degli spazi, riferimenti materici, os
 
 Un buon brief non disegna in anticipo la risposta del fornitore. Crea le condizioni per proposte, prototipi e prove di vestibilità basati su esigenze concrete. Materiali, cartamodelli e dettagli possono così essere valutati rispetto a una definizione comune della struttura, del lavoro e del sistema operativo.
 
-Usa le domande precedenti come documento di analisi preliminare. Poi consulta il [processo di progettazione e sviluppo di PAMUUC](/it/#process) o [richiedi un primo incontro](/it/#contact) per trasformarlo in un perimetro iniziale chiaro. L’obiettivo non è avere più capi, ma un guardaroba coerente in cui ogni capo abbia un motivo per esistere.
+Usa le domande precedenti come documento di analisi preliminare. Poi consulta il [processo di progettazione e sviluppo di PAMUUC](/it/custom-uniforms/#how) o [richiedi un primo incontro](/it/custom-uniforms/#brief) per trasformarlo in un perimetro iniziale chiaro. L’obiettivo non è avere più capi, ma un guardaroba coerente in cui ogni capo abbia un motivo per esistere.

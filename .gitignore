@@ -4,3 +4,14 @@ node_modules/
 
 # full-resolution originals: kept locally, never published
 src/images/incoming/
+
+# The mockup's photo packs: ~60MB of base64 inside JavaScript, which is how an
+# Artifact has to carry images. tools/extract-images.mjs turns them into the
+# real files in src/images/, and those are what the site ships — committing
+# both would put every photograph in the repo twice.
+# (journal.js stays: it is nine blog posts of data and no images at all.)
+mockup/photos.js
+mockup/home.js
+mockup/covers.js
+mockup/merch-hero.js
+mockup/shots-*.js

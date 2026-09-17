@@ -1,1567 +1,1567 @@
 {
-  "locale": "es",
-  "meta": {
-    "title": "Uniformes y ropa de trabajo a medida en Barcelona | PAMUUC",
-    "description": "Uniformes y ropa de trabajo a medida para hoteles, restaurantes, spas y clínicas. Diseñados y fabricados en Barcelona, de las muestras y las pruebas a las reposiciones.",
-    "ogTitle": "Uniformes y ropa de trabajo a medida en Barcelona | PAMUUC",
-    "ogDescription": "Uniformes y ropa de trabajo a medida para hoteles, restaurantes, spas y clínicas. Diseñados y fabricados en Barcelona, de las muestras y las pruebas a las reposiciones."
+ "locale": "es",
+ "meta": {
+  "title": "Uniformes y ropa de trabajo a medida en Barcelona | PAMUUC",
+  "description": "Uniformes y ropa de trabajo a medida para hoteles, restaurantes, spas y clínicas. Diseñados y fabricados en Barcelona, de las muestras y las pruebas a las reposiciones.",
+  "ogTitle": "Uniformes y ropa de trabajo a medida en Barcelona | PAMUUC",
+  "ogDescription": "Uniformes y ropa de trabajo a medida para hoteles, restaurantes, spas y clínicas. Diseñados y fabricados en Barcelona, de las muestras y las pruebas a las reposiciones."
+ },
+ "nav": [
+  {
+   "label": "Sectores",
+   "href": "/es/custom-uniforms/#sectors"
   },
-  "nav": [
-    {
-      "label": "Sectores",
-      "href": "/es/#sectors"
-    },
-    {
-      "label": "Proceso",
-      "href": "/es/#process"
-    },
-    {
+  {
+   "label": "Proceso",
+   "href": "/es/custom-uniforms/#how"
+  },
+  {
+   "label": "Proyectos",
+   "href": "/es/custom-uniforms/#work"
+  },
+  {
+   "label": "Blog",
+   "href": "/es/blog/"
+  },
+  {
+   "label": "Cuéntenos su proyecto",
+   "href": "/es/custom-uniforms/#brief"
+  }
+ ],
+ "hero": {
+  "eyebrow": "DISEÑO Y PRODUCCIÓN DE UNIFORMES · BARCELONA",
+  "h1": "Uniformes y ropa de trabajo para su equipo",
+  "lead": "Diseñamos y fabricamos uniformes para hoteles, restaurantes, spas y clínicas privadas. Hechos en Barcelona, con muestras, pruebas con el equipo y reposiciones.",
+  "pills": [
+   "Diseñados para su marca",
+   "Desarrollados por rol",
+   "Producidos en Barcelona",
+   "Preparados para reposiciones"
+  ],
+  "primary": "Cuéntenos su proyecto",
+  "secondary": "Vea nuestro trabajo",
+  "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por PAMUUC Studio en Barcelona",
+  "proofs": [
+   {
+    "label": "Primer proyecto",
+    "text": "Diseño, muestras, pruebas y producción para su equipo."
+   },
+   {
+    "label": "Pedidos futuros",
+    "text": "Guardamos sus diseños aprobados para reposiciones y nuevas incorporaciones."
+   }
+  ]
+ },
+ "services": {
+  "kicker": "QUÉ HACEMOS",
+  "h2": "Diseño y producción de uniformes a medida",
+  "intro": "PAMUUC Studio diseña, desarrolla y produce uniformes a medida para hostelería, bienestar, salud y equipos de atención al público. Cada proyecto parte del negocio, de las personas que vestirán las prendas y del trabajo que realizan.",
+  "card": {
+   "topline": "DISEÑO, DESARROLLO Y PRODUCCIÓN",
+   "h3": "Uniformes y ropa de trabajo a medida",
+   "p": "Un vestuario profesional coordinado, diseñado en torno a su espacio, su marca, los roles, el movimiento, los requisitos de cuidado y el crecimiento futuro del equipo.",
+   "features": [
+    "Prendas planificadas para cada rol y entorno de trabajo",
+    "Tejidos, ajuste, construcción, colores e identidad desarrollados en conjunto",
+    "Patrones y especificaciones preparados para reposiciones coherentes"
+   ]
+  }
+ },
+ "band": {
+  "text": "Uniformes que reflejan su marca y funcionan para su equipo",
+  "points": [
+   "Reflejan su espacio y su identidad",
+   "Acompañan el movimiento y las tareas reales",
+   "Producidos localmente en Barcelona",
+   "Pensados para el uso y el lavado repetidos",
+   "Conectan distintos roles en un mismo vestuario",
+   "Mantienen la coherencia en cada reposición"
+  ],
+  "kicker": "Trabajo entregado",
+  "stats": [
+   {
+    "v": "2.600",
+    "u": "",
+    "l": "Prendas fabricadas en 2026",
+    "n": "Patronadas, cortadas, cosidas y acabadas a menos de treinta kilómetros de Barcelona, en los proyectos del año."
+   },
+   {
+    "v": "12",
+    "u": "semanas",
+    "l": "Proyecto completo, media",
+    "n": "Del primer briefing a la entrega. Confirmamos su calendario según las prendas, las cantidades y las aprobaciones necesarias."
+   },
+   {
+    "v": "3",
+    "u": "semanas",
+    "l": "Tiempo de reposición",
+    "n": "Hechas con los detalles aprobados que guardamos. Volvemos a comprobar disponibilidad y precio antes de producir."
+   },
+   {
+    "v": "150 €",
+    "u": "",
+    "l": "Media por persona",
+    "n": "Gasto habitual por persona en las prendas acordadas. El desarrollo, el tejido y la cantidad ajustan el precio final."
+   }
+  ],
+  "img": "/assets/images/home/band-workshop.jpg",
+  "alt": "El taller de PAMUUC Studio en Barcelona: burro de prendas, plancha y mesa de corte"
+ },
+ "sectors": {
+  "kicker": "CON QUIÉN TRABAJAMOS",
+  "h2": "Uniformes para su sector",
+  "intro": "De la recepción del hotel a la cocina o la sala de tratamiento, cada función tiene sus necesidades.",
+  "items": [
+   {
+    "name": "Hoteles y hostelería",
+    "modal": "modal-sector-hotels",
+    "desc": "Uniformes de hotel que unen recepción, restaurante, pisos, spa y dirección.",
+    "img": "/assets/images/home/sector-01-hotels.jpg",
+    "alt": "Pasillo de hotel, una mano en la puerta de una habitación"
+   },
+   {
+    "name": "Restaurantes y cafeterías",
+    "modal": "modal-sector-restaurants",
+    "desc": "Uniformes de restaurante y de cocina para el servicio intenso, el movimiento y el lavado frecuente.",
+    "img": "/assets/images/home/sector-02-restaurants.jpg",
+    "alt": "Servicio en mesa, un plato acabado a mano"
+   },
+   {
+    "name": "Spa y bienestar",
+    "modal": "modal-sector-wellness",
+    "desc": "Uniformes de spa y estética cómodos, a la altura de la calma de su espacio.",
+    "img": "/assets/images/home/sector-03-wellness.jpg",
+    "alt": "Interior de tratamiento en tonos neutros cálidos"
+   },
+   {
+    "name": "Clínicas dentales y privadas",
+    "modal": "modal-sector-medical",
+    "desc": "Uniformes de clínica a medida para recepción y atención, cómodos y lavables a diario.",
+    "img": "/assets/images/home/sector-04-clinics.jpg",
+    "alt": "Sala de tratamiento de una clínica privada"
+   },
+   {
+    "name": "Mantenimiento y apoyo",
+    "modal": "modal-sector-service",
+    "desc": "Ropa de trabajo para mantenimiento, logística y apoyo, pensada para moverse a diario.",
+    "img": "/assets/images/home/sector-05-service.jpg",
+    "alt": "Delantal para zonas internas y ropa de trabajo técnica"
+   },
+   {
+    "name": "Retail y atención",
+    "modal": "modal-sector-guest",
+    "desc": "Uniformes a medida para recibir a los clientes, atenderlos y representar a su negocio.",
+    "img": "/assets/images/home/sector-06-guest.jpg",
+    "alt": "Recepción de hotel con el equipo de atención"
+   }
+  ],
+  "handoff": "Cuéntenos qué necesita su equipo"
+ },
+ "approach": {
+  "kicker": "CÓMO DISEÑAMOS",
+  "intro": "Empezamos por su espacio y diseñamos para las personas que hacen el trabajo",
+  "cards": [
+   {
+    "n": "01",
+    "h3": "Espacio",
+    "p": "La arquitectura, los materiales, el color, la luz y la atmósfera marcan la dirección visual."
+   },
+   {
+    "n": "02",
+    "h3": "Funciones",
+    "p": "Analizamos el movimiento, el ritmo del servicio, las herramientas, la visibilidad y el cuidado que exige cada función."
+   },
+   {
+    "n": "03",
+    "h3": "Prendas",
+    "p": "Ajustes, siluetas, capas y categorías de prendas se integran en un único vestuario."
+   },
+   {
+    "n": "04",
+    "h3": "Operativa",
+    "p": "La construcción, el lavado, las sustituciones y las reposiciones se planifican desde el principio."
+   }
+  ]
+ },
+ "categories": {
+  "kicker": "QUÉ PODEMOS DESARROLLAR",
+  "h2": "Uniformes para cada función del equipo",
+  "intro": "Podemos crear un vestuario completo para varios roles o empezar por un departamento, una función o una categoría de prenda. Todas las decisiones se coordinan antes de producir.",
+  "groups": [
+   {
+    "label": "Categorías de prendas",
+    "items": [
+     "Camisas",
+     "Pantalones",
+     "Faldas",
+     "Vestidos",
+     "Delantales profesionales",
+     "Punto",
+     "Polos y camisetas",
+     "Blazers",
+     "Chaquetas",
+     "Prendas de abrigo",
+     "Accesorios coordinados"
+    ]
+   },
+   {
+    "label": "Marca e identidad",
+    "items": [
+     "Bordado",
+     "Bordado tono sobre tono",
+     "Etiquetas tejidas",
+     "Etiquetas impresas",
+     "Etiquetas nominativas",
+     "Acabados personalizados",
+     "Botones personalizados",
+     "Serigrafía"
+    ]
+   },
+   {
+    "label": "Construcción y rendimiento",
+    "items": [
+     "Tejidos elegidos para el sistema de lavado previsto",
+     "Construcciones elásticas",
+     "Costuras reforzadas",
+     "Tejidos transpirables",
+     "Tejidos de fácil cuidado",
+     "Bolsillos funcionales",
+     "Cierres integrados",
+     "Acabados duraderos"
+    ]
+   }
+  ]
+ },
+ "process": {
+  "kicker": "PROCESO",
+  "h2": "Tres fases del briefing a la entrega",
+  "intro": "Cada fase termina con una decisión y una aprobación antes de que empiece la siguiente.",
+  "phases": [
+   {
+    "tag": "FASE 01",
+    "h3": "Descubrimiento",
+    "desc": "Definimos lo que necesita el equipo antes de empezar a desarrollar las prendas.",
+    "items": [
+     "Análisis del equipo y la operativa",
+     "Definición de funciones",
+     "Dirección inicial del vestuario"
+    ],
+    "modal": "modal-phase-1",
+    "img": "/assets/images/home/process-01-sketches.jpg",
+    "alt": "Bocetos de diseño con muestras de tejido sobre la mesa de patronaje"
+   },
+   {
+    "tag": "FASE 02",
+    "h3": "Desarrollo",
+    "desc": "Convertimos la dirección aprobada en prendas y ponemos a prueba las decisiones clave.",
+    "items": [
+     "Validación de tejidos y materiales",
+     "Prototipos, muestras y pruebas",
+     "Revisión y perfeccionamiento"
+    ],
+    "modal": "modal-phase-2",
+    "img": "/assets/images/home/process-02-fitting.jpg",
+    "alt": "Una chaqueta hilvanada en el maniquí durante la prueba"
+   },
+   {
+    "tag": "FASE 03",
+    "h3": "Producción",
+    "desc": "Tras la aprobación, fabricamos, preparamos y entregamos las prendas finales.",
+    "items": [
+     "Aprobación de preproducción",
+     "Producción local",
+     "Entrega y puesta en marcha de reposiciones"
+    ],
+    "modal": "modal-phase-3",
+    "img": "/assets/images/home/process-03-production.jpg",
+    "alt": "La planta de producción durante una serie"
+   }
+  ],
+  "statsLabel": "Plazos orientativos",
+  "stats": [
+   {
+    "v": "4–6 semanas",
+    "l": "Plazo habitual de desarrollo"
+   },
+   {
+    "v": "3–5 semanas",
+    "l": "Plazo habitual de producción"
+   },
+   {
+    "v": "Alrededor de 8 semanas",
+    "l": "Plazo orientativo para muchos proyectos totalmente a medida"
+   },
+   {
+    "v": "Puede haber plazos más cortos",
+    "l": "Cuando una base previamente desarrollada y aprobada encaja con el briefing"
+   }
+  ],
+  "note": "El calendario definitivo depende del número de modelos, la disponibilidad de tejidos, las pruebas, las rondas de revisión, la construcción, las cantidades y los tiempos de aprobación.",
+  "handoff": "Hablemos de su fecha de entrega"
+ },
+ "personalised": {
+  "kicker": "PERSONALIZACIÓN",
+  "h2": "Cada opción responde al uso, el cuidado y la identidad",
+  "intro": "Recomendamos tejidos, colores, acabados y métodos de personalización según la función, el mantenimiento, la dirección visual, la cantidad y el presupuesto.",
+  "accordions": [
+   {
+    "q": "Tejidos",
+    "p": "La selección del tejido empieza por el turno: clima, movimiento, contacto, presencia y sistema de lavado previsto.",
+    "items": [
+     "Ejemplos: mezclas de algodón, mezclas de lino y tejidos técnicos de fácil cuidado, según la función y los requisitos confirmados.",
+     "Criterios de selección: comodidad, durabilidad, aspecto, cuidado y estabilidad tras el uso y el lavado repetidos."
+    ]
+   },
+   {
+    "q": "Colores",
+    "p": "La dirección cromática parte del espacio y de la marca, y después se comprueba en las prendas, los roles, la iluminación y los tejidos disponibles.",
+    "items": [
+     "Opciones: las cartas de color disponibles pueden agilizar el desarrollo. Se pueden valorar colores exclusivos cuando el tejido y la cantidad lo permitan.",
+     "Criterios de selección: coherencia entre roles, contraste adecuado y aspecto bajo la iluminación del espacio."
+    ]
+   },
+   {
+    "q": "Accesorios y acabados",
+    "p": "Botones, cremalleras, etiquetas, pespuntes y cierres aportan identidad, pero deben seguir siendo prácticos de usar, cuidar y sustituir.",
+    "items": [
+     "Ejemplos: botones personalizados, cremalleras, etiquetas tejidas, etiquetas de nombre y pespuntes a contraste.",
+     "Criterios de selección: durabilidad, facilidad de uso, sustitución práctica y coherencia visual."
+    ]
+   },
+   {
+    "q": "Métodos de personalización",
+    "p": "La personalización se elige según la prenda, la visibilidad necesaria, el uso previsto y el proceso de cuidado.",
+    "items": [
+     "Ejemplos: bordado, bordado tono sobre tono, etiquetas tejidas y serigrafía.",
+     "Criterios de selección: legibilidad, durabilidad, escala y ubicación."
+    ]
+   }
+  ],
+  "cards": [
+   {
+    "h3": "Muestras y pruebas locales",
+    "p": "Desarrollar cerca del estudio agiliza las observaciones, aclara las decisiones técnicas y facilita la comunicación directa."
+   },
+   {
+    "h3": "Diseñado para el trabajo diario",
+    "p": "El movimiento, la duración del turno, las tareas, el cuidado y el entorno de trabajo guían cada prenda."
+   },
+   {
+    "h3": "Especificaciones guardadas para dar continuidad",
+    "p": "Los patrones, acabados y especificaciones aprobados se organizan para que los pedidos futuros sigan el mismo sistema."
+   }
+  ]
+ },
+ "parameters": {
+  "kicker": "DATOS PRÁCTICOS DEL PROYECTO",
+  "h2": "Tres formas de empezar, con las cifras delante",
+  "intro": "No hace falta encargar un vestuario completo. El presupuesto se define por proyecto, sin lista de precios rígida. Los plazos dependen de los modelos, las pruebas y el tejido.",
+  "groups": [
+   {
+    "h3": "Cantidades mínimas recomendadas",
+    "notes": [
+     {
+      "head": "Desde 10 piezas por modelo",
+      "body": "Algunos modelos pueden producirse desde 10 prendas, con un precio adaptado a la confección y la cantidad."
+     },
+     {
+      "head": "10–15 piezas por modelo",
+      "body": "Punto de partida habitual para prendas de tejido plano a medida, repartidas entre las tallas necesarias."
+     },
+     {
+      "head": "100–150 piezas por modelo",
+      "body": "Punto de partida habitual para prendas de punto a medida, ya que el proceso de fabricación exige una cantidad mayor."
+     }
+    ],
+    "items": [],
+    "modal": "parameter-quantities"
+   },
+   {
+    "h3": "Un presupuesto por proyecto",
+    "notes": [
+     {
+      "head": "",
+      "body": "No trabajamos con una lista de precios rígida. La propuesta se construye en torno a las prendas, las cantidades, los materiales, la construcción, los detalles personalizados, el trabajo de desarrollo y la fecha prevista."
+     }
+    ],
+    "itemsLabel": "Variables clave del presupuesto",
+    "items": [
+     "Materiales y acabados",
+     "Número y complejidad de los modelos",
+     "Cantidad por modelo",
+     "Desarrollo de patrones y muestras",
+     "Rango de tallas y requisitos de las pruebas",
+     "Identidad de marca y detalles personalizados",
+     "Calendario de producción"
+    ],
+    "modal": "parameter-pricing"
+   },
+   {
+    "h3": "Qué influye en el calendario",
+    "notes": [
+     {
+      "head": "",
+      "body": "El calendario depende del trabajo de desarrollo y de las condiciones de producción que requiera el proyecto."
+     }
+    ],
+    "itemsLabel": "Principales factores de plazo",
+    "items": [
+     "Desarrollo de patrones",
+     "Número de prototipos y pruebas",
+     "Ritmo de revisión y aprobación",
+     "Construcciones técnicas o soluciones a medida",
+     "Aprovisionamiento de tejidos",
+     "Complejidad de los acabados",
+     "Cantidad y calendario de producción"
+    ],
+    "modal": "parameter-timing"
+   }
+  ]
+ },
+ "continuity": {
+  "kicker": "REPOSICIONES",
+  "h2": "Desarrolla una vez. Repón desde un sistema aprobado.",
+  "intro": "La primera producción establece el vestuario. Después organizamos los patrones, la construcción, los colores, los acabados y las especificaciones de marca aprobados para que las sustituciones, las nuevas incorporaciones y el crecimiento del equipo no obliguen a empezar de nuevo.",
+  "rows": [
+   [
+    "Criterio",
+    "Proyecto inicial",
+    "Reposiciones futuras"
+   ],
+   [
+    "Alcance",
+    "Diseñado a medida en función de su espacio, sus roles y sus necesidades operativas.",
+    "Se utiliza como un sistema de vestuario reproducible para el equipo."
+   ],
+   [
+    "Desarrollo",
+    "Se desarrollan y aprueban los patrones, el ajuste, la construcción y los acabados.",
+    "Las bases aprobadas se reactivan sin repetir todo el proceso de desarrollo."
+   ],
+   [
+    "Pedido",
+    "La primera producción se revisa, se perfecciona y se aprueba.",
+    "Las nuevas cantidades se producen a partir de la especificación aprobada, sujetas a la disponibilidad de materiales y a las condiciones de producción confirmadas."
+   ]
+  ],
+  "loop": [
+   "Aprueba el vestuario",
+   "→",
+   "Archiva los patrones y las especificaciones",
+   "→",
+   "Repón con coherencia"
+  ]
+ },
+ "projects": {
+  "kicker": "PROYECTOS Y GUÍAS SELECCIONADOS",
+  "h2": "Uniformes en la práctica",
+  "intro": "Nuestros proyectos de hotel y de clínica, más una guía práctica de uniformes para equipos de bienestar.",
+  "items": [
+   {
+    "tag": "CASO DE HOTEL",
+    "h3": "Uniformes a medida para METT Barcelona",
+    "p": "Un vestuario de hotel completo, inspirado en los interiores, con uniformes para recepción, restaurante, dirección y spa. Diseñado, muestreado y fabricado en Barcelona.",
+    "img": "/assets/images/project-barcelona-heritage.jpg",
+    "alt": "Una fachada modernista en el centro de Barcelona, el tipo de edificio para el que se crean estos programas de uniformes",
+    "href": "/es/blog/uniformes-hosteleria-personalizados/",
+    "linkLabel": "Leer el caso del hotel"
+   },
+   {
+    "tag": "GUÍA DE BIENESTAR",
+    "h3": "Guía de uniformes de spa y bienestar",
+    "p": "Cómo unir recepción, tratamientos y apoyo a través de colores, tejidos y detalles de las prendas, pensando en los pedidos futuros.",
+    "img": "/assets/images/project-multi-role-service-team.jpg",
+    "alt": "Vestuario de un equipo de bienestar que conecta recepción y tratamientos",
+    "href": "/es/blog/uniformes-estudios-bienestar/",
+    "linkLabel": "Leer la guía de bienestar"
+   },
+   {
+    "tag": "CASO DE CLÍNICA",
+    "h3": "Uniformes a medida para una clínica dental",
+    "p": "Uniformes a medida para una clínica dental que reflejan el espacio y la marca, con prendas prácticas para recepción y consulta.",
+    "img": "/assets/images/project-clinic-editorial.jpg",
+    "alt": "Uniformes clínicos a medida en una clínica dental de Barcelona",
+    "href": "/es/blog/uniformes-clinica-dental-personalizados-barcelona/",
+    "linkLabel": "Leer el caso de la clínica"
+   }
+  ],
+  "handoff": "Hablemos de un proyecto"
+ },
+ "faq": {
+  "kicker": "PREGUNTAS FRECUENTES",
+  "h2": "Qué saber antes de empezar",
+  "intro": "Respuestas prácticas sobre pedidos, precios, plazos y forma de trabajar.",
+  "items": [
+   {
+    "q": "¿Trabajáis a partir de un catálogo?",
+    "a": "No. Diseñamos los uniformes a partir de su negocio, su equipo y su trabajo diario. Si un diseño existente ahorra tiempo o coste, partimos de él y lo adaptamos."
+   },
+   {
+    "q": "¿Podemos repetir los mismos uniformes más adelante?",
+    "a": "Sí. Guardamos sus patrones, tejidos, colores y detalles aprobados. Las reposiciones y los uniformes de las nuevas incorporaciones parten de ese diseño, y comprobamos disponibilidad, precio y plazos antes de cada pedido."
+   },
+   {
+    "q": "¿Es necesario empezar con un vestuario completo?",
+    "a": "No. Puede empezar por una función, un departamento o un tipo de prenda y ampliar después. Le ayudamos a elegir el punto de partida según sus prioridades, cantidades y plazos."
+   },
+   {
+    "q": "¿Podéis desarrollar colores y detalles personalizados?",
+    "a": "Sí. Podemos elegir entre los colores de tejido existentes o estudiar un color propio si el tejido y la cantidad lo permiten. Las etiquetas, la marca y los demás detalles se eligen según la prenda, su marca y la forma de lavarla."
+   },
+   {
+    "q": "¿Cuál es la cantidad mínima de pedido?",
+    "a": "Algunos modelos pueden producirse desde 10 piezas por modelo. Las prendas de tejido plano a medida suelen empezar en torno a 10–15 piezas por modelo, repartidas entre las tallas y las variantes aprobadas; las prendas de punto a medida suelen empezar en torno a 100–150 piezas porque el proceso de fabricación exige una cantidad mayor. Confirmamos el mínimo después de revisar el tipo de prenda, el tejido, el color, la construcción y el nivel de personalización."
+   },
+   {
+    "q": "¿Cuánto cuesta un proyecto de uniformes a medida?",
+    "a": "Presupuestamos cada proyecto de forma individual. El precio depende de las prendas, las cantidades, los tejidos, la construcción y los detalles a medida, más el trabajo de diseño y de muestras necesario. Su propuesta recoge el alcance acordado y lo que incluye."
+   },
+   {
+    "q": "¿Cuánto tarda un proyecto desde el briefing hasta la entrega?",
+    "a": "El desarrollo suele durar de cuatro a seis semanas y la producción otras tres a cinco, lo que sitúa muchos proyectos totalmente a medida en torno a ocho semanas en total. Pueden darse plazos más cortos según el número de modelos, las pruebas y el tejido. El calendario se confirma tras revisar el briefing."
+   },
+   {
+    "q": "¿Dónde se diseñan y producen las prendas?",
+    "a": "En Barcelona. Diseño, desarrollo, muestras, pruebas y producción se gestionan con nuestra cadena local, cerca de quienes fabrican sus prendas."
+   },
+   {
+    "q": "¿Veremos prototipos antes de empezar la producción?",
+    "a": "Sí. Usted revisa las muestras y prueba las prendas antes de comprometer la producción. El ajuste, el tejido, la construcción y los detalles de marca se acuerdan sobre prendas reales."
+   },
+   {
+    "q": "¿Cómo se gestionan las tallas de todo un equipo?",
+    "a": "Usamos las pruebas para comprobar las tallas que necesita su equipo y después acordamos la cantidad de cada talla antes de producir. Los patrones y detalles aprobados quedan guardados para futuras incorporaciones y repeticiones."
+   },
+   {
+    "q": "¿Los tejidos aguantan la lavandería industrial?",
+    "a": "El tejido y la construcción se eligen para el régimen de cuidado real de las prendas, incluida la lavandería industrial cuando corresponde. Los uniformes entregados para la apertura de un hotel de cinco estrellas llevan doce meses de servicio diario y lavado industrial."
+   },
+   {
+    "q": "¿Con qué sectores trabajáis?",
+    "a": "Diseñamos uniformes para hoteles, restaurantes, spas, centros de bienestar, clínicas dentales y privadas, equipos de mantenimiento, retail y atención al cliente. Cada proyecto se adapta al trabajo, a las personas y al entorno."
+   },
+   {
+    "q": "¿Pueden los uniformes seguir el interiorismo o la marca?",
+    "a": "Sí. Sus interiores y su marca pueden guiar los colores, los tejidos y los detalles, como ocurrió en la apertura de un hotel de cinco estrellas en Barcelona. Usamos colores de tejido disponibles o estudiamos colores propios cuando el material y la cantidad lo permiten."
+   }
+  ],
+  "handoff": "¿Tiene otra pregunta? Escríbanos abajo"
+ },
+ "contact": {
+  "kicker": "Empiece su proyecto",
+  "h2": "Planifiquemos los uniformes de su equipo",
+  "paras": [
+   "Cuéntenos su negocio, su equipo y la fecha prevista. Revisaremos lo que necesita y le propondremos un punto de partida.",
+   "Podemos vernos en sus instalaciones en Barcelona, en España o en el extranjero, o por videollamada. La primera conversación nos ayuda a entender su equipo."
+  ],
+  "emailLabel": "¿Prefieres escribirnos?",
+  "form": {
+   "labels": {
+    "name": "Nombre y apellidos",
+    "email": "Correo electrónico profesional",
+    "phone": "Número de teléfono",
+    "company": "Nombre de la empresa",
+    "team-size": "Tamaño del equipo",
+    "project-type": "Tipo de proyecto",
+    "timeline": "Plazo previsto",
+    "meeting-datetime": "Fecha y hora preferidas",
+    "brief": "Descripción del proyecto"
+   },
+   "placeholders": {
+    "name": "Nombre y apellidos",
+    "email": "nombre@empresa.com",
+    "phone": "+34 ...",
+    "company": "Empresa o establecimiento",
+    "brief": "¿A qué se dedica su equipo? Díganos qué prendas necesita, cuántas aproximadamente y su fecha de entrega preferida."
+   },
+   "helps": {
+    "phone": "Opcional",
+    "meeting-datetime": "Opcional. Confirmaremos la disponibilidad."
+   },
+   "options": {
+    "team-size": [
+     {
+      "v": "",
+      "t": "Selecciona un rango",
+      "disabled": true
+     },
+     {
+      "v": "Menos de 10",
+      "t": "Menos de 10",
+      "disabled": false
+     },
+     {
+      "v": "10–25",
+      "t": "10–25",
+      "disabled": false
+     },
+     {
+      "v": "26–50",
+      "t": "26–50",
+      "disabled": false
+     },
+     {
+      "v": "51–120",
+      "t": "51–120",
+      "disabled": false
+     },
+     {
+      "v": "120+",
+      "t": "120+",
+      "disabled": false
+     }
+    ],
+    "project-type": [
+     {
+      "v": "",
+      "t": "Selecciona el tipo de proyecto",
+      "disabled": true
+     },
+     {
+      "v": "Uniformes para todo el equipo",
+      "t": "Uniformes para todo el equipo",
+      "disabled": false
+     },
+     {
+      "v": "Un solo rol",
+      "t": "Un solo rol",
+      "disabled": false
+     },
+     {
+      "v": "Una categoría de prenda",
+      "t": "Una categoría de prenda",
+      "disabled": false
+     },
+     {
+      "v": "Un departamento",
+      "t": "Un departamento",
+      "disabled": false
+     },
+     {
+      "v": "Merchandising o ropa con su marca",
+      "t": "Merchandising o ropa con su marca",
+      "disabled": false
+     },
+     {
+      "v": "Otro",
+      "t": "Otro",
+      "disabled": false
+     }
+    ],
+    "timeline": [
+     {
+      "v": "",
+      "t": "Selecciona el plazo",
+      "disabled": true
+     },
+     {
+      "v": "Lo antes posible",
+      "t": "Lo antes posible",
+      "disabled": false
+     },
+     {
+      "v": "En 1–2 meses",
+      "t": "En 1–2 meses",
+      "disabled": false
+     },
+     {
+      "v": "En 3–4 meses",
+      "t": "En 3–4 meses",
+      "disabled": false
+     },
+     {
+      "v": "Previsto para más adelante este año",
+      "t": "Previsto para más adelante este año",
+      "disabled": false
+     },
+     {
+      "v": "Fecha específica",
+      "t": "Fecha específica",
+      "disabled": false
+     }
+    ]
+   },
+   "consent": "Acepto la {privacy:política de privacidad} y los {terms:términos}.",
+   "hint": "El formulario lleva unos dos minutos. Solemos responder en un día laborable.",
+   "submit": "Enviar consulta"
+  }
+ },
+ "footer": {
+  "about": "Uniformes y ropa de trabajo a medida, diseñados y fabricados en Barcelona.",
+  "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · studio@pamuuc.com",
+  "cols": [
+   {
+    "title": "Estudio",
+    "links": [
+     {
+      "label": "Mapa del sitio",
+      "href": "/sitemap.xml"
+     },
+     {
+      "label": "PAMUUC.COM",
+      "href": "https://pamuuc.com"
+     },
+     {
+      "label": "Servicios",
+      "href": "/es/custom-uniforms/"
+     },
+     {
       "label": "Proyectos",
-      "href": "/es/#projects"
-    },
-    {
+      "href": "/es/custom-uniforms/#work"
+     },
+     {
       "label": "Blog",
       "href": "/es/blog/"
-    },
-    {
-      "label": "Cuéntenos su proyecto",
-      "href": "/es/#contact"
-    }
+     }
+    ]
+   },
+   {
+    "title": "Políticas",
+    "links": [
+     {
+      "label": "Política de privacidad",
+      "href": "/es/privacy-policy/"
+     },
+     {
+      "label": "Política de cookies",
+      "href": "/es/cookie-policy/"
+     },
+     {
+      "label": "Términos y condiciones",
+      "href": "/es/terms-and-conditions/"
+     },
+     {
+      "label": "Aviso legal",
+      "href": "/es/legal-notice/"
+     }
+    ]
+   }
+  ]
+ },
+ "detail": {
+  "service-custom": [
+   {
+    "t": "h",
+    "v": "Uniformes totalmente a medida para su equipo"
+   },
+   {
+    "t": "h",
+    "v": "Un vestuario coordinado, desarrollado en torno a su espacio, sus funciones y su operativa"
+   },
+   {
+    "t": "p",
+    "v": "No empezamos pidiéndole que elija prendas de un catálogo estándar. Empezamos por su negocio: el espacio, el servicio, la estructura del equipo y lo que cada función necesita de la ropa."
+   },
+   {
+    "t": "p",
+    "v": "El resultado es un vestuario conectado, no un conjunto de piezas aisladas. Las distintas funciones pueden llevar prendas diferentes y compartir un mismo lenguaje visual en color, ajuste, material y detalle."
+   },
+   {
+    "t": "h",
+    "v": "Diseñado desde su entorno"
+   },
+   {
+    "t": "p",
+    "v": "La arquitectura, los materiales, la luz y la identidad de marca guían la dirección visual del vestuario."
+   },
+   {
+    "t": "h",
+    "v": "Desarrollado por función"
+   },
+   {
+    "t": "p",
+    "v": "Recepción, servicio, dirección, clínica y operaciones se estudian por separado para que el movimiento, las responsabilidades, las herramientas y la visibilidad definan cada prenda."
+   },
+   {
+    "t": "h",
+    "v": "Probado con el equipo"
+   },
+   {
+    "t": "p",
+    "v": "Las proporciones, los largos, el ajuste y los detalles funcionales se comprueban mediante muestras y pruebas antes de aprobar la producción."
+   },
+   {
+    "t": "h",
+    "v": "Preparado para dar continuidad"
+   },
+   {
+    "t": "p",
+    "v": "Conservamos los patrones y las especificaciones aprobados para que las sustituciones, las nuevas incorporaciones y los pedidos futuros sigan el mismo sistema."
+   },
+   {
+    "t": "h",
+    "v": "Prendas que podemos desarrollar"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Camisas y sobrecamisas",
+     "Pantalones y faldas",
+     "Vestidos",
+     "Delantales y prendas operativas",
+     "Punto y prendas de abrigo",
+     "Accesorios coordinados"
+    ]
+   }
   ],
-  "hero": {
-    "eyebrow": "DISEÑO Y PRODUCCIÓN DE UNIFORMES · BARCELONA",
-    "h1": "Uniformes y ropa de trabajo para su equipo",
-    "lead": "Diseñamos y fabricamos uniformes para hoteles, restaurantes, spas y clínicas privadas. Hechos en Barcelona, con muestras, pruebas con el equipo y reposiciones.",
-    "pills": [
-      "Diseñados para su marca",
-      "Desarrollados por rol",
-      "Producidos en Barcelona",
-      "Preparados para reposiciones"
-    ],
-    "primary": "Cuéntenos su proyecto",
-    "secondary": "Vea nuestro trabajo",
-    "imageAlt": "Diseño de uniformes a medida y desarrollo de prendas por PAMUUC Studio en Barcelona",
-    "proofs": [
-      {
-        "label": "Primer proyecto",
-        "text": "Diseño, muestras, pruebas y producción para su equipo."
-      },
-      {
-        "label": "Pedidos futuros",
-        "text": "Guardamos sus diseños aprobados para reposiciones y nuevas incorporaciones."
-      }
+  "sector-hotels": [
+   {
+    "t": "h",
+    "v": "Uniformes a medida para hoteles"
+   },
+   {
+    "t": "h",
+    "v": "Una imagen común en todos los equipos del hotel"
+   },
+   {
+    "t": "p",
+    "v": "Diseñamos uniformes de hostelería para cada equipo del hotel, de recepción y pisos a restaurante y spa. Cada función recibe las prendas que necesita, con una imagen común en toda la casa."
+   },
+   {
+    "t": "h",
+    "v": "Funciones habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Recepción y bienvenida",
+     "Conserjería y atención al huésped",
+     "Restaurante y bar",
+     "Dirección",
+     "Pisos",
+     "Spa y bienestar"
     ]
-  },
-  "services": {
-    "kicker": "QUÉ HACEMOS",
-    "h2": "Diseño y producción de uniformes a medida",
-    "intro": "PAMUUC Studio diseña, desarrolla y produce uniformes a medida para hostelería, bienestar, salud y equipos de atención al público. Cada proyecto parte del negocio, de las personas que vestirán las prendas y del trabajo que realizan.",
-    "card": {
-      "topline": "DISEÑO, DESARROLLO Y PRODUCCIÓN",
-      "h3": "Uniformes y ropa de trabajo a medida",
-      "p": "Un vestuario profesional coordinado, diseñado en torno a su espacio, su marca, los roles, el movimiento, los requisitos de cuidado y el crecimiento futuro del equipo.",
-      "features": [
-        "Prendas planificadas para cada rol y entorno de trabajo",
-        "Tejidos, ajuste, construcción, colores e identidad desarrollados en conjunto",
-        "Patrones y especificaciones preparados para reposiciones coherentes"
-      ]
-    }
-  },
-  "band": {
-    "text": "Uniformes que reflejan su marca y funcionan para su equipo",
-    "points": [
-      "Reflejan su espacio y su identidad",
-      "Acompañan el movimiento y las tareas reales",
-      "Producidos localmente en Barcelona",
-      "Pensados para el uso y el lavado repetidos",
-      "Conectan distintos roles en un mismo vestuario",
-      "Mantienen la coherencia en cada reposición"
-    ],
-    "kicker": "Trabajo entregado",
-    "stats": [
-      {
-        "v": "2.600",
-        "u": "",
-        "l": "Prendas fabricadas en 2026",
-        "n": "Patronadas, cortadas, cosidas y acabadas a menos de treinta kilómetros de Barcelona, en los proyectos del año."
-      },
-      {
-        "v": "12",
-        "u": "semanas",
-        "l": "Proyecto completo, media",
-        "n": "Del primer briefing a la entrega. Confirmamos su calendario según las prendas, las cantidades y las aprobaciones necesarias."
-      },
-      {
-        "v": "3",
-        "u": "semanas",
-        "l": "Tiempo de reposición",
-        "n": "Hechas con los detalles aprobados que guardamos. Volvemos a comprobar disponibilidad y precio antes de producir."
-      },
-      {
-        "v": "150 €",
-        "u": "",
-        "l": "Media por persona",
-        "n": "Gasto habitual por persona en las prendas acordadas. El desarrollo, el tejido y la cantidad ajustan el precio final."
-      }
-    ],
-    "img": "/assets/images/home/band-workshop.jpg",
-    "alt": "El taller de PAMUUC Studio en Barcelona: burro de prendas, plancha y mesa de corte"
-  },
-  "sectors": {
-    "kicker": "CON QUIÉN TRABAJAMOS",
-    "h2": "Uniformes para su sector",
-    "intro": "De la recepción del hotel a la cocina o la sala de tratamiento, cada función tiene sus necesidades.",
-    "items": [
-      {
-        "name": "Hoteles y hostelería",
-        "modal": "modal-sector-hotels",
-        "desc": "Uniformes de hotel que unen recepción, restaurante, pisos, spa y dirección.",
-        "img": "/assets/images/home/sector-01-hotels.jpg",
-        "alt": "Pasillo de hotel, una mano en la puerta de una habitación"
-      },
-      {
-        "name": "Restaurantes y cafeterías",
-        "modal": "modal-sector-restaurants",
-        "desc": "Uniformes de restaurante y de cocina para el servicio intenso, el movimiento y el lavado frecuente.",
-        "img": "/assets/images/home/sector-02-restaurants.jpg",
-        "alt": "Servicio en mesa, un plato acabado a mano"
-      },
-      {
-        "name": "Spa y bienestar",
-        "modal": "modal-sector-wellness",
-        "desc": "Uniformes de spa y estética cómodos, a la altura de la calma de su espacio.",
-        "img": "/assets/images/home/sector-03-wellness.jpg",
-        "alt": "Interior de tratamiento en tonos neutros cálidos"
-      },
-      {
-        "name": "Clínicas dentales y privadas",
-        "modal": "modal-sector-medical",
-        "desc": "Uniformes de clínica a medida para recepción y atención, cómodos y lavables a diario.",
-        "img": "/assets/images/home/sector-04-clinics.jpg",
-        "alt": "Sala de tratamiento de una clínica privada"
-      },
-      {
-        "name": "Mantenimiento y apoyo",
-        "modal": "modal-sector-service",
-        "desc": "Ropa de trabajo para mantenimiento, logística y apoyo, pensada para moverse a diario.",
-        "img": "/assets/images/home/sector-05-service.jpg",
-        "alt": "Delantal para zonas internas y ropa de trabajo técnica"
-      },
-      {
-        "name": "Retail y atención",
-        "modal": "modal-sector-guest",
-        "desc": "Uniformes a medida para recibir a los clientes, atenderlos y representar a su negocio.",
-        "img": "/assets/images/home/sector-06-guest.jpg",
-        "alt": "Recepción de hotel con el equipo de atención"
-      }
-    ],
-    "handoff": "Cuéntenos qué necesita su equipo"
-  },
-  "approach": {
-    "kicker": "CÓMO DISEÑAMOS",
-    "intro": "Empezamos por su espacio y diseñamos para las personas que hacen el trabajo",
-    "cards": [
-      {
-        "n": "01",
-        "h3": "Espacio",
-        "p": "La arquitectura, los materiales, el color, la luz y la atmósfera marcan la dirección visual."
-      },
-      {
-        "n": "02",
-        "h3": "Funciones",
-        "p": "Analizamos el movimiento, el ritmo del servicio, las herramientas, la visibilidad y el cuidado que exige cada función."
-      },
-      {
-        "n": "03",
-        "h3": "Prendas",
-        "p": "Ajustes, siluetas, capas y categorías de prendas se integran en un único vestuario."
-      },
-      {
-        "n": "04",
-        "h3": "Operativa",
-        "p": "La construcción, el lavado, las sustituciones y las reposiciones se planifican desde el principio."
-      }
+   },
+   {
+    "t": "h",
+    "v": "Prendas habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Camisas y sobrecamisas",
+     "Pantalones y faldas",
+     "Vestidos",
+     "Blazers y chaquetas",
+     "Delantales",
+     "Punto y capas exteriores"
     ]
-  },
-  "categories": {
-    "kicker": "QUÉ PODEMOS DESARROLLAR",
-    "h2": "Uniformes para cada función del equipo",
-    "intro": "Podemos crear un vestuario completo para varios roles o empezar por un departamento, una función o una categoría de prenda. Todas las decisiones se coordinan antes de producir.",
-    "groups": [
-      {
-        "label": "Categorías de prendas",
-        "items": [
-          "Camisas",
-          "Pantalones",
-          "Faldas",
-          "Vestidos",
-          "Delantales profesionales",
-          "Punto",
-          "Polos y camisetas",
-          "Blazers",
-          "Chaquetas",
-          "Prendas de abrigo",
-          "Accesorios coordinados"
-        ]
-      },
-      {
-        "label": "Marca e identidad",
-        "items": [
-          "Bordado",
-          "Bordado tono sobre tono",
-          "Etiquetas tejidas",
-          "Etiquetas impresas",
-          "Etiquetas nominativas",
-          "Acabados personalizados",
-          "Botones personalizados",
-          "Serigrafía"
-        ]
-      },
-      {
-        "label": "Construcción y rendimiento",
-        "items": [
-          "Tejidos elegidos para el sistema de lavado previsto",
-          "Construcciones elásticas",
-          "Costuras reforzadas",
-          "Tejidos transpirables",
-          "Tejidos de fácil cuidado",
-          "Bolsillos funcionales",
-          "Cierres integrados",
-          "Acabados duraderos"
-        ]
-      }
+   },
+   {
+    "t": "h",
+    "v": "Prioridades de diseño"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Una identidad clara entre departamentos",
+     "Comodidad y movimiento durante turnos largos",
+     "Materiales y construcción para el uso diario",
+     "Coherencia con la arquitectura y la marca",
+     "Un sistema práctico para altas y reposiciones"
     ]
-  },
-  "process": {
-    "kicker": "PROCESO",
-    "h2": "Tres fases del briefing a la entrega",
-    "intro": "Cada fase termina con una decisión y una aprobación antes de que empiece la siguiente.",
-    "phases": [
-      {
-        "tag": "FASE 01",
-        "h3": "Descubrimiento",
-        "desc": "Definimos lo que necesita el equipo antes de empezar a desarrollar las prendas.",
-        "items": [
-          "Análisis del equipo y la operativa",
-          "Definición de funciones",
-          "Dirección inicial del vestuario"
-        ],
-        "modal": "modal-phase-1",
-        "img": "/assets/images/home/process-01-sketches.jpg",
-        "alt": "Bocetos de diseño con muestras de tejido sobre la mesa de patronaje"
-      },
-      {
-        "tag": "FASE 02",
-        "h3": "Desarrollo",
-        "desc": "Convertimos la dirección aprobada en prendas y ponemos a prueba las decisiones clave.",
-        "items": [
-          "Validación de tejidos y materiales",
-          "Prototipos, muestras y pruebas",
-          "Revisión y perfeccionamiento"
-        ],
-        "modal": "modal-phase-2",
-        "img": "/assets/images/home/process-02-fitting.jpg",
-        "alt": "Una chaqueta hilvanada en el maniquí durante la prueba"
-      },
-      {
-        "tag": "FASE 03",
-        "h3": "Producción",
-        "desc": "Tras la aprobación, fabricamos, preparamos y entregamos las prendas finales.",
-        "items": [
-          "Aprobación de preproducción",
-          "Producción local",
-          "Entrega y puesta en marcha de reposiciones"
-        ],
-        "modal": "modal-phase-3",
-        "img": "/assets/images/home/process-03-production.jpg",
-        "alt": "La planta de producción durante una serie"
-      }
-    ],
-    "statsLabel": "Plazos orientativos",
-    "stats": [
-      {
-        "v": "4–6 semanas",
-        "l": "Plazo habitual de desarrollo"
-      },
-      {
-        "v": "3–5 semanas",
-        "l": "Plazo habitual de producción"
-      },
-      {
-        "v": "Alrededor de 8 semanas",
-        "l": "Plazo orientativo para muchos proyectos totalmente a medida"
-      },
-      {
-        "v": "Puede haber plazos más cortos",
-        "l": "Cuando una base previamente desarrollada y aprobada encaja con el briefing"
-      }
-    ],
-    "note": "El calendario definitivo depende del número de modelos, la disponibilidad de tejidos, las pruebas, las rondas de revisión, la construcción, las cantidades y los tiempos de aprobación.",
-    "handoff": "Hablemos de su fecha de entrega"
-  },
-  "personalised": {
-    "kicker": "PERSONALIZACIÓN",
-    "h2": "Cada opción responde al uso, el cuidado y la identidad",
-    "intro": "Recomendamos tejidos, colores, acabados y métodos de personalización según la función, el mantenimiento, la dirección visual, la cantidad y el presupuesto.",
-    "accordions": [
-      {
-        "q": "Tejidos",
-        "p": "La selección del tejido empieza por el turno: clima, movimiento, contacto, presencia y sistema de lavado previsto.",
-        "items": [
-          "Ejemplos: mezclas de algodón, mezclas de lino y tejidos técnicos de fácil cuidado, según la función y los requisitos confirmados.",
-          "Criterios de selección: comodidad, durabilidad, aspecto, cuidado y estabilidad tras el uso y el lavado repetidos."
-        ]
-      },
-      {
-        "q": "Colores",
-        "p": "La dirección cromática parte del espacio y de la marca, y después se comprueba en las prendas, los roles, la iluminación y los tejidos disponibles.",
-        "items": [
-          "Opciones: las cartas de color disponibles pueden agilizar el desarrollo. Se pueden valorar colores exclusivos cuando el tejido y la cantidad lo permitan.",
-          "Criterios de selección: coherencia entre roles, contraste adecuado y aspecto bajo la iluminación del espacio."
-        ]
-      },
-      {
-        "q": "Accesorios y acabados",
-        "p": "Botones, cremalleras, etiquetas, pespuntes y cierres aportan identidad, pero deben seguir siendo prácticos de usar, cuidar y sustituir.",
-        "items": [
-          "Ejemplos: botones personalizados, cremalleras, etiquetas tejidas, etiquetas de nombre y pespuntes a contraste.",
-          "Criterios de selección: durabilidad, facilidad de uso, sustitución práctica y coherencia visual."
-        ]
-      },
-      {
-        "q": "Métodos de personalización",
-        "p": "La personalización se elige según la prenda, la visibilidad necesaria, el uso previsto y el proceso de cuidado.",
-        "items": [
-          "Ejemplos: bordado, bordado tono sobre tono, etiquetas tejidas y serigrafía.",
-          "Criterios de selección: legibilidad, durabilidad, escala y ubicación."
-        ]
-      }
-    ],
-    "cards": [
-      {
-        "h3": "Muestras y pruebas locales",
-        "p": "Desarrollar cerca del estudio agiliza las observaciones, aclara las decisiones técnicas y facilita la comunicación directa."
-      },
-      {
-        "h3": "Diseñado para el trabajo diario",
-        "p": "El movimiento, la duración del turno, las tareas, el cuidado y el entorno de trabajo guían cada prenda."
-      },
-      {
-        "h3": "Especificaciones guardadas para dar continuidad",
-        "p": "Los patrones, acabados y especificaciones aprobados se organizan para que los pedidos futuros sigan el mismo sistema."
-      }
+   }
+  ],
+  "sector-restaurants": [
+   {
+    "t": "h",
+    "v": "Uniformes a medida para restaurantes"
+   },
+   {
+    "t": "h",
+    "v": "Para el servicio intenso y el lavado frecuente"
+   },
+   {
+    "t": "p",
+    "v": "Los equipos de restaurante lidian con calor, manchas y turnos largos. Diseñamos uniformes cómodos de llevar, acordes con el carácter del local, de la sala a la cocina."
+   },
+   {
+    "t": "h",
+    "v": "Funciones habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Recepción y bienvenida",
+     "Sala",
+     "Equipos de bar",
+     "Cocina y apoyo",
+     "Dirección"
     ]
-  },
-  "parameters": {
-    "kicker": "DATOS PRÁCTICOS DEL PROYECTO",
-    "h2": "Tres formas de empezar, con las cifras delante",
-    "intro": "No hace falta encargar un vestuario completo. El presupuesto se define por proyecto, sin lista de precios rígida. Los plazos dependen de los modelos, las pruebas y el tejido.",
-    "groups": [
-      {
-        "h3": "Cantidades mínimas recomendadas",
-        "notes": [
-          {
-            "head": "Desde 10 piezas por modelo",
-            "body": "Algunos modelos pueden producirse desde 10 prendas, con un precio adaptado a la confección y la cantidad."
-          },
-          {
-            "head": "10–15 piezas por modelo",
-            "body": "Punto de partida habitual para prendas de tejido plano a medida, repartidas entre las tallas necesarias."
-          },
-          {
-            "head": "100–150 piezas por modelo",
-            "body": "Punto de partida habitual para prendas de punto a medida, ya que el proceso de fabricación exige una cantidad mayor."
-          }
-        ],
-        "items": [],
-        "modal": "parameter-quantities"
-      },
-      {
-        "h3": "Un presupuesto por proyecto",
-        "notes": [
-          {
-            "head": "",
-            "body": "No trabajamos con una lista de precios rígida. La propuesta se construye en torno a las prendas, las cantidades, los materiales, la construcción, los detalles personalizados, el trabajo de desarrollo y la fecha prevista."
-          }
-        ],
-        "itemsLabel": "Variables clave del presupuesto",
-        "items": [
-          "Materiales y acabados",
-          "Número y complejidad de los modelos",
-          "Cantidad por modelo",
-          "Desarrollo de patrones y muestras",
-          "Rango de tallas y requisitos de las pruebas",
-          "Identidad de marca y detalles personalizados",
-          "Calendario de producción"
-        ],
-        "modal": "parameter-pricing"
-      },
-      {
-        "h3": "Qué influye en el calendario",
-        "notes": [
-          {
-            "head": "",
-            "body": "El calendario depende del trabajo de desarrollo y de las condiciones de producción que requiera el proyecto."
-          }
-        ],
-        "itemsLabel": "Principales factores de plazo",
-        "items": [
-          "Desarrollo de patrones",
-          "Número de prototipos y pruebas",
-          "Ritmo de revisión y aprobación",
-          "Construcciones técnicas o soluciones a medida",
-          "Aprovisionamiento de tejidos",
-          "Complejidad de los acabados",
-          "Cantidad y calendario de producción"
-        ],
-        "modal": "parameter-timing"
-      }
+   },
+   {
+    "t": "h",
+    "v": "Prendas habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Camisas y sobrecamisas",
+     "Delantales",
+     "Pantalones",
+     "Polos y camisetas",
+     "Chaquetas ligeras"
     ]
-  },
-  "continuity": {
-    "kicker": "REPOSICIONES",
-    "h2": "Desarrolla una vez. Repón desde un sistema aprobado.",
-    "intro": "La primera producción establece el vestuario. Después organizamos los patrones, la construcción, los colores, los acabados y las especificaciones de marca aprobados para que las sustituciones, las nuevas incorporaciones y el crecimiento del equipo no obliguen a empezar de nuevo.",
+   },
+   {
+    "t": "h",
+    "v": "Prioridades de diseño"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Libertad de movimiento",
+     "Tejidos transpirables y de fácil cuidado",
+     "Bolsillos y cierres funcionales",
+     "Construcción reforzada donde sea necesario",
+     "Una dirección visual acorde con la experiencia del restaurante"
+    ]
+   }
+  ],
+  "sector-wellness": [
+   {
+    "t": "h",
+    "v": "Uniformes de spa y estética"
+   },
+   {
+    "t": "h",
+    "v": "Comodidad a la altura de la calma de su espacio"
+   },
+   {
+    "t": "p",
+    "v": "En los espacios de bienestar, el equipo forma parte de la atmósfera. Conectamos la ropa con el espacio y prevemos el contacto cercano, el movimiento, los turnos y el cuidado."
+   },
+   {
+    "t": "h",
+    "v": "Funciones habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Recepción",
+     "Terapeutas y equipos de tratamiento",
+     "Atención en el spa",
+     "Funciones de apoyo",
+     "Dirección"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prendas habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Túnicas y tops suaves",
+     "Pantalones",
+     "Vestidos",
+     "Sobrecamisas y capas ligeras"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prioridades de diseño"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Comodidad y libertad de movimiento",
+     "Materiales transpirables y agradables",
+     "Colores serenos y detalles medidos",
+     "Conexión clara entre recepción y tratamientos",
+     "Coherencia cuando el equipo cambia o crece"
+    ]
+   }
+  ],
+  "sector-medical": [
+   {
+    "t": "h",
+    "v": "Uniformes a medida para clínicas dentales y privadas"
+   },
+   {
+    "t": "h",
+    "v": "Ropa práctica que tranquiliza"
+   },
+   {
+    "t": "p",
+    "v": "Las clínicas privadas necesitan prendas que acompañen largas jornadas, movimiento y cuidados frecuentes, y transmitan al paciente una imagen limpia y tranquilizadora."
+   },
+   {
+    "t": "h",
+    "v": "Funciones habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Recepción y coordinación de pacientes",
+     "Equipos clínicos",
+     "Apoyo en tratamientos",
+     "Dirección de la clínica"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prendas habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Tops sanitarios",
+     "Conjuntos de trabajo coordinados",
+     "Pantalones",
+     "Sobrecamisas y capas de recepción"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prioridades de diseño"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Tejidos transpirables y de fácil cuidado",
+     "Movimiento y comodidad durante toda la jornada",
+     "Bolsillos y cierres funcionales",
+     "Una apariencia limpia bajo la iluminación clínica",
+     "Continuidad visual entre recepción y tratamiento"
+    ]
+   }
+  ],
+  "sector-service": [
+   {
+    "t": "h",
+    "v": "Uniformes para equipos operativos"
+   },
+   {
+    "t": "h",
+    "v": "Ropa de trabajo práctica, fiel a la marca"
+   },
+   {
+    "t": "p",
+    "v": "Los equipos de mantenimiento, logística y apoyo necesitan prendas que prioricen el movimiento, el almacenaje, la durabilidad y el fácil cuidado, sin parecer ajenas a la organización."
+   },
+   {
+    "t": "h",
+    "v": "Prendas habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Camisas de trabajo",
+     "Pantalones técnicos",
+     "Sobrecamisas",
+     "Chaquetas ligeras",
+     "Capas exteriores"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prioridades de diseño"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Construcción reforzada donde sea necesario",
+     "Bolsillos funcionales",
+     "Materiales de fácil cuidado",
+     "Identificación clara de cada función",
+     "Coherencia visual con el personal de atención"
+    ]
+   }
+  ],
+  "sector-guest": [
+   {
+    "t": "h",
+    "v": "Uniformes para funciones de atención al público"
+   },
+   {
+    "t": "h",
+    "v": "Una imagen acogedora que refleja su negocio"
+   },
+   {
+    "t": "p",
+    "v": "En clubes privados, comercios premium, galerías, espacios culturales y otros servicios, el equipo es una de las primeras expresiones visibles de la organización."
+   },
+   {
+    "t": "h",
+    "v": "Funciones habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Bienvenida y recepción",
+     "Relaciones con huéspedes",
+     "Atención al cliente",
+     "Equipos de sala",
+     "Dirección"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prendas habituales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Camisas",
+     "Pantalones y faldas",
+     "Vestidos",
+     "Blazers y chaquetas",
+     "Accesorios coordinados"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Prioridades de diseño"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Una identidad visual reconocible y adecuada",
+     "Comodidad en interacciones largas",
+     "Funciones claras sin formalidad innecesaria",
+     "Coherencia entre ubicaciones y pedidos futuros"
+    ]
+   }
+  ],
+  "phase-1": [
+   {
+    "t": "h",
+    "v": "Fase 01: Descubrimiento"
+   },
+   {
+    "t": "h",
+    "v": "Definir el briefing antes de empezar el desarrollo"
+   },
+   {
+    "t": "p",
+    "v": "Empezamos por las personas, el espacio, las funciones, las cantidades, el calendario y las necesidades del negocio. Así, el proyecto cuenta con una dirección acordada antes de invertir tiempo en muestras o decisiones de producción."
+   },
+   {
+    "t": "h",
+    "v": "Qué analizamos"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "La operativa diaria y el flujo del servicio",
+     "La estructura del equipo, las funciones y el número de personas",
+     "El espacio, los materiales y la identidad de marca",
+     "Las prendas prioritarias y las necesidades funcionales",
+     "El calendario previsto y los parámetros de presupuesto"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Resultado"
+   },
+   {
+    "t": "p",
+    "v": "Un alcance de proyecto acordado, un mapa de funciones y una dirección inicial para el vestuario."
+   }
+  ],
+  "phase-2": [
+   {
+    "t": "h",
+    "v": "Fase 02: Desarrollo"
+   },
+   {
+    "t": "h",
+    "v": "Convertir la dirección en prendas que el equipo pueda evaluar"
+   },
+   {
+    "t": "p",
+    "v": "Desarrollamos los tejidos, los patrones, el ajuste, la construcción y los detalles; después los ponemos a prueba con prototipos y sesiones de prueba antes de aprobar la producción."
+   },
+   {
+    "t": "h",
+    "v": "Actividades principales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Selección y validación de materiales",
+     "Desarrollo de patrones",
+     "Creación de prototipos",
+     "Pruebas con miembros representativos del equipo",
+     "Correcciones de ajuste, función y detalle"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Resultado"
+   },
+   {
+    "t": "p",
+    "v": "Prendas, materiales y decisiones técnicas aprobados y listos para producir."
+   }
+  ],
+  "phase-3": [
+   {
+    "t": "h",
+    "v": "Fase 03: Producción"
+   },
+   {
+    "t": "h",
+    "v": "Pasar de la aprobación final a la entrega con control directo"
+   },
+   {
+    "t": "p",
+    "v": "Una vez aprobadas las prendas, los materiales, las tallas y los acabados, el proyecto pasa a producción. La producción local mantiene la comunicación técnica y el control de calidad cerca del estudio."
+   },
+   {
+    "t": "h",
+    "v": "Actividades principales"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Aprobación final previa a producción",
+     "Confirmación de tallas y cantidades",
+     "Coordinación de la producción",
+     "Controles de calidad",
+     "Preparación y entrega",
+     "Organización de la información para futuras reposiciones"
+    ]
+   },
+   {
+    "t": "h",
+    "v": "Resultado"
+   },
+   {
+    "t": "p",
+    "v": "Prendas entregadas y un sistema de producción aprobado capaz de sostener pedidos futuros."
+   }
+  ],
+  "parameter-quantities": [
+   {
+    "t": "h",
+    "v": "Cantidades mínimas"
+   },
+   {
+    "t": "h",
+    "v": "La cantidad inicial depende de cómo se fabrica la prenda"
+   },
+   {
+    "t": "h",
+    "v": "Orientación general"
+   },
+   {
+    "t": "ul",
+    "v": [
+     "Las prendas de tejido plano suelen empezar en torno a 10–15 piezas por modelo, repartidas entre las tallas y las variantes aprobadas.",
+     "Las prendas de punto a medida suelen empezar en torno a 100–150 piezas por modelo.",
+     "Se puede valorar una cantidad menor cuando la construcción lo permita, analizando el precio y la eficiencia productiva caso por caso."
+    ]
+   },
+   {
+    "t": "p",
+    "v": "Confirmamos el mínimo tras revisar el tipo de prenda, el tejido, el color, la construcción y el nivel de personalización."
+   }
+  ],
+  "parameter-pricing": [
+   {
+    "t": "h",
+    "v": "Cómo se define el precio"
+   },
+   {
+    "t": "p",
+    "v": "Dos prendas de aspecto similar pueden requerir trabajos de desarrollo, materiales y producción muy distintos. Por eso presupuestamos el alcance confirmado del proyecto en lugar de aplicar una tarifa estándar por prenda."
+   },
+   {
+    "t": "p",
+    "v": "La propuesta detalla qué incluye, los supuestos utilizados y las decisiones con mayor efecto sobre el coste. Así podemos equilibrar imagen, función, durabilidad y presupuesto sin ocultar el alcance tras un precio genérico."
+   }
+  ],
+  "parameter-timing": [
+   {
+    "t": "h",
+    "v": "Calendario del proyecto"
+   },
+   {
+    "t": "p",
+    "v": "Desarrollo habitual: 4–6 semanas"
+   },
+   {
+    "t": "p",
+    "v": "Producción habitual: 3–5 semanas"
+   },
+   {
+    "t": "p",
+    "v": "Proyecto completo orientativo: unas 8 semanas para muchos proyectos totalmente a medida"
+   },
+   {
+    "t": "p",
+    "v": "El calendario definitivo se establece cuando conocemos el alcance de las prendas, los materiales, las rondas de muestras, las cantidades y la fecha prevista. Planificar las aprobaciones con antelación ofrece la vía más clara hacia la entrega."
+   }
+  ]
+ },
+ "wardrobe": {
+  "kicker": "Lo que obtienes",
+  "h2": "Un vestuario desarrollado por función y archivado para futuras reposiciones",
+  "intro": "Sin catálogo ni prendas de stock adaptadas. Cada prenda se define a partir del trabajo de su función y después se archiva para que el siguiente pedido coincida con el primero.",
+  "pillars": [
+   {
+    "h": "Planificado en torno a la función",
+    "p": "Cada prenda responde al trabajo: cómo se mueve el cuerpo, qué carga y cómo es la sala a las siete de la mañana y a medianoche."
+   },
+   {
+    "h": "Desarrollado como un sistema",
+    "p": "Tejido, ajuste, construcción, color e identidad se deciden juntos, una sola vez, para que recepción, sala y zonas internas se perciban como un mismo equipo."
+   },
+   {
+    "h": "Archivado para reposiciones",
+    "p": "Los patrones y las especificaciones quedan archivados. El segundo pedido coincide con el primero incluso dos años después, sin repetir el desarrollo."
+   }
+  ],
+  "garmentsLead": "Qué incluye",
+  "garments": [
+   "Camisas",
+   "Pantalones",
+   "Faldas",
+   "Vestidos",
+   "Delantales",
+   "Punto",
+   "Blazers",
+   "Prendas de abrigo",
+   "Accesorios"
+  ],
+  "ctaText": "Cuéntenos cómo es su equipo. Le ayudamos a planificar los uniformes adecuados.",
+  "ctaLabel": "Díganos qué necesita",
+  "img": "/assets/images/home/wardrobe-rail.jpg",
+  "alt": "Un conjunto coordinado de uniformes colgado en un perchero"
+ },
+ "stages": {
+  "kicker": "Cómo funciona",
+  "h2": "De la primera idea al siguiente pedido",
+  "intro": "Seis etapas claras. Usted aprueba las decisiones clave y dejamos constancia de lo acordado.",
+  "items": [
+   {
+    "h": "Diseño",
+    "p": "Un diseñador externo crea una propuesta a partir de su briefing para que la revise. Si el diseño no está incluido, empezamos por el desarrollo."
+   },
+   {
+    "h": "Tejidos y detalles",
+    "p": "Elegimos tejidos, botones, avíos y acabados acordes con sus condiciones de trabajo y con la forma en que lava los uniformes."
+   },
+   {
+    "h": "Desarrollo",
+    "p": "Convertimos el diseño en un plan claro para cada prenda, con sus detalles, colores y cantidades."
+   },
+   {
+    "h": "Producción",
+    "p": "Fabricamos sus prendas según el diseño aprobado. El corte empieza solo cuando los detalles necesarios tienen su aprobación."
+   },
+   {
+    "h": "Entrega",
+    "p": "Enviamos las prendas a sus centros. Usted confirma la recepción y dejamos los modelos aprobados listos para futuros pedidos."
+   },
+   {
+    "h": "Reposiciones",
+    "p": "Usamos las medidas, tejidos y colores guardados para su siguiente pedido. Disponibilidad, precio y plazos se comprueban antes de producir."
+   }
+  ]
+ },
+ "phases": {
+  "kicker": "Calendario",
+  "h2": "Su proyecto, paso a paso",
+  "phaseLabel": "Fase",
+  "intro": "Acordamos un calendario según sus prendas, cantidades, pruebas y aprobaciones.",
+  "items": [
+   {
+    "h": "Su briefing y la primera reunión",
+    "p": "Cuéntenos su equipo, cantidades y fecha. Revisamos lo que necesita y concertamos una reunión si podemos ayudar.",
+    "m": "Sin cuenta ni pago."
+   },
+   {
+    "h": "Muestras y pruebas",
+    "p": "Elegimos tejidos y hacemos muestras para que su equipo las pruebe trabajando: ajuste, comodidad y detalles.",
+    "m": "Usted aprueba cada prenda."
+   },
+   {
+    "h": "Aprobación final y producción",
+    "p": "Usted confirma cantidades, colores y tallas. Después producimos las prendas según el diseño acordado.",
+    "m": "La producción empieza tras la aprobación."
+   },
+   {
+    "h": "Entrega y reposiciones",
+    "p": "Entregamos sus uniformes y guardamos los detalles aprobados para reposiciones y nuevas incorporaciones.",
+    "m": "Sus diseños quedan guardados."
+   }
+  ]
+ },
+ "includes": {
+  "kicker": "Qué incluye",
+  "h2": "Los detalles de su ropa de trabajo a medida",
+  "intro": "Acordamos qué incluye su proyecto antes de empezar. Los ejemplos de abajo muestran los planes, las muestras y los registros que guían el trabajo.",
+  "items": [
+   {
+    "h": "Prendas para cada función",
+    "p": "Planificamos qué necesita cada persona, de una función a un vestuario de equipo coherente.",
+    "a": "plan"
+   },
+   {
+    "h": "Tejidos para el día a día",
+    "p": "El gramaje, la composición y los acabados se eligen para su trabajo y su rutina de lavado.",
+    "a": "fabric"
+   },
+   {
+    "h": "Muestras y pruebas",
+    "p": "Su equipo prueba las muestras trabajando. Registramos sus comentarios prenda a prenda.",
+    "a": "proto"
+   },
+   {
+    "h": "Los detalles de su marca",
+    "p": "Colores, etiquetas y detalles siguen el diseño acordado y resisten el uso diario.",
+    "a": "brand"
+   },
+   {
+    "h": "El registro de sus prendas",
+    "p": "Guardamos medidas, tejidos, colores y proveedores aprobados en un registro por prenda.",
+    "a": "spec"
+   },
+   {
+    "h": "Listo para reponer",
+    "p": "Comprobamos disponibilidad, precio y plazos antes de volver a fabricar su diseño.",
+    "a": "reorder"
+   }
+  ],
+  "art": {
+   "plan": {
+    "label": "Plan de puestos",
+    "meta": "4 puestos",
     "rows": [
-      [
-        "Criterio",
-        "Proyecto inicial",
-        "Reposiciones futuras"
-      ],
-      [
-        "Alcance",
-        "Diseñado a medida en función de su espacio, sus roles y sus necesidades operativas.",
-        "Se utiliza como un sistema de vestuario reproducible para el equipo."
-      ],
-      [
-        "Desarrollo",
-        "Se desarrollan y aprueban los patrones, el ajuste, la construcción y los acabados.",
-        "Las bases aprobadas se reactivan sin repetir todo el proceso de desarrollo."
-      ],
-      [
-        "Pedido",
-        "La primera producción se revisa, se perfecciona y se aprueba.",
-        "Las nuevas cantidades se producen a partir de la especificación aprobada, sujetas a la disponibilidad de materiales y a las condiciones de producción confirmadas."
-      ]
-    ],
-    "loop": [
-      "Aprueba el vestuario",
-      "→",
-      "Archiva los patrones y las especificaciones",
-      "→",
-      "Repón con coherencia"
+     [
+      "Recepción",
+      "Camisa · delantal"
+     ],
+     [
+      "Restaurante",
+      "Chaqueta · pantalón"
+     ],
+     [
+      "Cocina",
+      "Chaquetilla"
+     ],
+     [
+      "Pisos",
+      "Túnica"
+     ]
     ]
-  },
-  "projects": {
-    "kicker": "PROYECTOS Y GUÍAS SELECCIONADOS",
-    "h2": "Uniformes en la práctica",
-    "intro": "Nuestros proyectos de hotel y de clínica, más una guía práctica de uniformes para equipos de bienestar.",
-    "items": [
-      {
-        "tag": "CASO DE HOTEL",
-        "h3": "Uniformes a medida para METT Barcelona",
-        "p": "Un vestuario de hotel completo, inspirado en los interiores, con uniformes para recepción, restaurante, dirección y spa. Diseñado, muestreado y fabricado en Barcelona.",
-        "img": "/assets/images/project-barcelona-heritage.jpg",
-        "alt": "Una fachada modernista en el centro de Barcelona, el tipo de edificio para el que se crean estos programas de uniformes",
-        "href": "/es/blog/uniformes-hosteleria-personalizados/",
-        "linkLabel": "Leer el caso del hotel"
-      },
-      {
-        "tag": "GUÍA DE BIENESTAR",
-        "h3": "Guía de uniformes de spa y bienestar",
-        "p": "Cómo unir recepción, tratamientos y apoyo a través de colores, tejidos y detalles de las prendas, pensando en los pedidos futuros.",
-        "img": "/assets/images/project-multi-role-service-team.jpg",
-        "alt": "Vestuario de un equipo de bienestar que conecta recepción y tratamientos",
-        "href": "/es/blog/uniformes-estudios-bienestar/",
-        "linkLabel": "Leer la guía de bienestar"
-      },
-      {
-        "tag": "CASO DE CLÍNICA",
-        "h3": "Uniformes a medida para una clínica dental",
-        "p": "Uniformes a medida para una clínica dental que reflejan el espacio y la marca, con prendas prácticas para recepción y consulta.",
-        "img": "/assets/images/project-clinic-editorial.jpg",
-        "alt": "Uniformes clínicos a medida en una clínica dental de Barcelona",
-        "href": "/es/blog/uniformes-clinica-dental-personalizados-barcelona/",
-        "linkLabel": "Leer el caso de la clínica"
-      }
-    ],
-    "handoff": "Hablemos de un proyecto"
-  },
-  "faq": {
-    "kicker": "PREGUNTAS FRECUENTES",
-    "h2": "Qué saber antes de empezar",
-    "intro": "Respuestas prácticas sobre pedidos, precios, plazos y forma de trabajar.",
-    "items": [
-      {
-        "q": "¿Trabajáis a partir de un catálogo?",
-        "a": "No. Diseñamos los uniformes a partir de su negocio, su equipo y su trabajo diario. Si un diseño existente ahorra tiempo o coste, partimos de él y lo adaptamos."
-      },
-      {
-        "q": "¿Podemos repetir los mismos uniformes más adelante?",
-        "a": "Sí. Guardamos sus patrones, tejidos, colores y detalles aprobados. Las reposiciones y los uniformes de las nuevas incorporaciones parten de ese diseño, y comprobamos disponibilidad, precio y plazos antes de cada pedido."
-      },
-      {
-        "q": "¿Es necesario empezar con un vestuario completo?",
-        "a": "No. Puede empezar por una función, un departamento o un tipo de prenda y ampliar después. Le ayudamos a elegir el punto de partida según sus prioridades, cantidades y plazos."
-      },
-      {
-        "q": "¿Podéis desarrollar colores y detalles personalizados?",
-        "a": "Sí. Podemos elegir entre los colores de tejido existentes o estudiar un color propio si el tejido y la cantidad lo permiten. Las etiquetas, la marca y los demás detalles se eligen según la prenda, su marca y la forma de lavarla."
-      },
-      {
-        "q": "¿Cuál es la cantidad mínima de pedido?",
-        "a": "Algunos modelos pueden producirse desde 10 piezas por modelo. Las prendas de tejido plano a medida suelen empezar en torno a 10–15 piezas por modelo, repartidas entre las tallas y las variantes aprobadas; las prendas de punto a medida suelen empezar en torno a 100–150 piezas porque el proceso de fabricación exige una cantidad mayor. Confirmamos el mínimo después de revisar el tipo de prenda, el tejido, el color, la construcción y el nivel de personalización."
-      },
-      {
-        "q": "¿Cuánto cuesta un proyecto de uniformes a medida?",
-        "a": "Presupuestamos cada proyecto de forma individual. El precio depende de las prendas, las cantidades, los tejidos, la construcción y los detalles a medida, más el trabajo de diseño y de muestras necesario. Su propuesta recoge el alcance acordado y lo que incluye."
-      },
-      {
-        "q": "¿Cuánto tarda un proyecto desde el briefing hasta la entrega?",
-        "a": "El desarrollo suele durar de cuatro a seis semanas y la producción otras tres a cinco, lo que sitúa muchos proyectos totalmente a medida en torno a ocho semanas en total. Pueden darse plazos más cortos según el número de modelos, las pruebas y el tejido. El calendario se confirma tras revisar el briefing."
-      },
-      {
-        "q": "¿Dónde se diseñan y producen las prendas?",
-        "a": "En Barcelona. Diseño, desarrollo, muestras, pruebas y producción se gestionan con nuestra cadena local, cerca de quienes fabrican sus prendas."
-      },
-      {
-        "q": "¿Veremos prototipos antes de empezar la producción?",
-        "a": "Sí. Usted revisa las muestras y prueba las prendas antes de comprometer la producción. El ajuste, el tejido, la construcción y los detalles de marca se acuerdan sobre prendas reales."
-      },
-      {
-        "q": "¿Cómo se gestionan las tallas de todo un equipo?",
-        "a": "Usamos las pruebas para comprobar las tallas que necesita su equipo y después acordamos la cantidad de cada talla antes de producir. Los patrones y detalles aprobados quedan guardados para futuras incorporaciones y repeticiones."
-      },
-      {
-        "q": "¿Los tejidos aguantan la lavandería industrial?",
-        "a": "El tejido y la construcción se eligen para el régimen de cuidado real de las prendas, incluida la lavandería industrial cuando corresponde. Los uniformes entregados para la apertura de un hotel de cinco estrellas llevan doce meses de servicio diario y lavado industrial."
-      },
-      {
-        "q": "¿Con qué sectores trabajáis?",
-        "a": "Diseñamos uniformes para hoteles, restaurantes, spas, centros de bienestar, clínicas dentales y privadas, equipos de mantenimiento, retail y atención al cliente. Cada proyecto se adapta al trabajo, a las personas y al entorno."
-      },
-      {
-        "q": "¿Pueden los uniformes seguir el interiorismo o la marca?",
-        "a": "Sí. Sus interiores y su marca pueden guiar los colores, los tejidos y los detalles, como ocurrió en la apertura de un hotel de cinco estrellas en Barcelona. Usamos colores de tejido disponibles o estudiamos colores propios cuando el material y la cantidad lo permiten."
-      }
-    ],
-    "handoff": "¿Tiene otra pregunta? Escríbanos abajo"
-  },
-  "contact": {
-    "kicker": "Empiece su proyecto",
-    "h2": "Planifiquemos los uniformes de su equipo",
-    "paras": [
-      "Cuéntenos su negocio, su equipo y la fecha prevista. Revisaremos lo que necesita y le propondremos un punto de partida.",
-      "Podemos vernos en sus instalaciones en Barcelona, en España o en el extranjero, o por videollamada. La primera conversación nos ayuda a entender su equipo."
-    ],
-    "emailLabel": "¿Prefieres escribirnos?",
-    "form": {
-      "labels": {
-        "name": "Nombre y apellidos",
-        "email": "Correo electrónico profesional",
-        "phone": "Número de teléfono",
-        "company": "Nombre de la empresa",
-        "team-size": "Tamaño del equipo",
-        "project-type": "Tipo de proyecto",
-        "timeline": "Plazo previsto",
-        "meeting-datetime": "Fecha y hora preferidas",
-        "brief": "Descripción del proyecto"
-      },
-      "placeholders": {
-        "name": "Nombre y apellidos",
-        "email": "nombre@empresa.com",
-        "phone": "+34 ...",
-        "company": "Empresa o establecimiento",
-        "brief": "¿A qué se dedica su equipo? Díganos qué prendas necesita, cuántas aproximadamente y su fecha de entrega preferida."
-      },
-      "helps": {
-        "phone": "Opcional",
-        "meeting-datetime": "Opcional. Confirmaremos la disponibilidad."
-      },
-      "options": {
-        "team-size": [
-          {
-            "v": "",
-            "t": "Selecciona un rango",
-            "disabled": true
-          },
-          {
-            "v": "Menos de 10",
-            "t": "Menos de 10",
-            "disabled": false
-          },
-          {
-            "v": "10–25",
-            "t": "10–25",
-            "disabled": false
-          },
-          {
-            "v": "26–50",
-            "t": "26–50",
-            "disabled": false
-          },
-          {
-            "v": "51–120",
-            "t": "51–120",
-            "disabled": false
-          },
-          {
-            "v": "120+",
-            "t": "120+",
-            "disabled": false
-          }
-        ],
-        "project-type": [
-          {
-            "v": "",
-            "t": "Selecciona el tipo de proyecto",
-            "disabled": true
-          },
-          {
-            "v": "Uniformes para todo el equipo",
-            "t": "Uniformes para todo el equipo",
-            "disabled": false
-          },
-          {
-            "v": "Un solo rol",
-            "t": "Un solo rol",
-            "disabled": false
-          },
-          {
-            "v": "Una categoría de prenda",
-            "t": "Una categoría de prenda",
-            "disabled": false
-          },
-          {
-            "v": "Un departamento",
-            "t": "Un departamento",
-            "disabled": false
-          },
-          {
-            "v": "Merchandising o ropa con su marca",
-            "t": "Merchandising o ropa con su marca",
-            "disabled": false
-          },
-          {
-            "v": "Otro",
-            "t": "Otro",
-            "disabled": false
-          }
-        ],
-        "timeline": [
-          {
-            "v": "",
-            "t": "Selecciona el plazo",
-            "disabled": true
-          },
-          {
-            "v": "Lo antes posible",
-            "t": "Lo antes posible",
-            "disabled": false
-          },
-          {
-            "v": "En 1–2 meses",
-            "t": "En 1–2 meses",
-            "disabled": false
-          },
-          {
-            "v": "En 3–4 meses",
-            "t": "En 3–4 meses",
-            "disabled": false
-          },
-          {
-            "v": "Previsto para más adelante este año",
-            "t": "Previsto para más adelante este año",
-            "disabled": false
-          },
-          {
-            "v": "Fecha específica",
-            "t": "Fecha específica",
-            "disabled": false
-          }
-        ]
-      },
-      "consent": "Acepto la {privacy:política de privacidad} y los {terms:términos}.",
-      "hint": "El formulario lleva unos dos minutos. Solemos responder en un día laborable.",
-      "submit": "Enviar consulta"
-    }
-  },
-  "footer": {
-    "about": "Uniformes y ropa de trabajo a medida, diseñados y fabricados en Barcelona.",
-    "legal": "Pamuk Studio S.L · NIF/CIF ESB27664994 · Barcelona · studio@pamuuc.com",
-    "cols": [
-      {
-        "title": "Estudio",
-        "links": [
-          {
-            "label": "Mapa del sitio",
-            "href": "/sitemap.xml"
-          },
-          {
-            "label": "PAMUUC.COM",
-            "href": "https://pamuuc.com"
-          },
-          {
-            "label": "Servicios",
-            "href": "/es/#services"
-          },
-          {
-            "label": "Proyectos",
-            "href": "/es/#projects"
-          },
-          {
-            "label": "Blog",
-            "href": "/es/blog/"
-          }
-        ]
-      },
-      {
-        "title": "Políticas",
-        "links": [
-          {
-            "label": "Política de privacidad",
-            "href": "/es/privacy-policy/"
-          },
-          {
-            "label": "Política de cookies",
-            "href": "/es/cookie-policy/"
-          },
-          {
-            "label": "Términos y condiciones",
-            "href": "/es/terms-and-conditions/"
-          },
-          {
-            "label": "Aviso legal",
-            "href": "/es/legal-notice/"
-          }
-        ]
-      }
+   },
+   "fabric": {
+    "label": "Tejidos elegidos",
+    "meta": "Para su lavado",
+    "rows": [
+     [
+      "Sarga",
+      "280"
+     ],
+     [
+      "Piqué",
+      "220"
+     ],
+     [
+      "Melton",
+      "480"
+     ],
+     [
+      "Popelín",
+      "130"
+     ]
     ]
-  },
-  "detail": {
-    "service-custom": [
-      {
-        "t": "h",
-        "v": "Uniformes totalmente a medida para su equipo"
-      },
-      {
-        "t": "h",
-        "v": "Un vestuario coordinado, desarrollado en torno a su espacio, sus funciones y su operativa"
-      },
-      {
-        "t": "p",
-        "v": "No empezamos pidiéndole que elija prendas de un catálogo estándar. Empezamos por su negocio: el espacio, el servicio, la estructura del equipo y lo que cada función necesita de la ropa."
-      },
-      {
-        "t": "p",
-        "v": "El resultado es un vestuario conectado, no un conjunto de piezas aisladas. Las distintas funciones pueden llevar prendas diferentes y compartir un mismo lenguaje visual en color, ajuste, material y detalle."
-      },
-      {
-        "t": "h",
-        "v": "Diseñado desde su entorno"
-      },
-      {
-        "t": "p",
-        "v": "La arquitectura, los materiales, la luz y la identidad de marca guían la dirección visual del vestuario."
-      },
-      {
-        "t": "h",
-        "v": "Desarrollado por función"
-      },
-      {
-        "t": "p",
-        "v": "Recepción, servicio, dirección, clínica y operaciones se estudian por separado para que el movimiento, las responsabilidades, las herramientas y la visibilidad definan cada prenda."
-      },
-      {
-        "t": "h",
-        "v": "Probado con el equipo"
-      },
-      {
-        "t": "p",
-        "v": "Las proporciones, los largos, el ajuste y los detalles funcionales se comprueban mediante muestras y pruebas antes de aprobar la producción."
-      },
-      {
-        "t": "h",
-        "v": "Preparado para dar continuidad"
-      },
-      {
-        "t": "p",
-        "v": "Conservamos los patrones y las especificaciones aprobados para que las sustituciones, las nuevas incorporaciones y los pedidos futuros sigan el mismo sistema."
-      },
-      {
-        "t": "h",
-        "v": "Prendas que podemos desarrollar"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Camisas y sobrecamisas",
-          "Pantalones y faldas",
-          "Vestidos",
-          "Delantales y prendas operativas",
-          "Punto y prendas de abrigo",
-          "Accesorios coordinados"
-        ]
-      }
-    ],
-    "sector-hotels": [
-      {
-        "t": "h",
-        "v": "Uniformes a medida para hoteles"
-      },
-      {
-        "t": "h",
-        "v": "Una imagen común en todos los equipos del hotel"
-      },
-      {
-        "t": "p",
-        "v": "Diseñamos uniformes de hostelería para cada equipo del hotel, de recepción y pisos a restaurante y spa. Cada función recibe las prendas que necesita, con una imagen común en toda la casa."
-      },
-      {
-        "t": "h",
-        "v": "Funciones habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Recepción y bienvenida",
-          "Conserjería y atención al huésped",
-          "Restaurante y bar",
-          "Dirección",
-          "Pisos",
-          "Spa y bienestar"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prendas habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Camisas y sobrecamisas",
-          "Pantalones y faldas",
-          "Vestidos",
-          "Blazers y chaquetas",
-          "Delantales",
-          "Punto y capas exteriores"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prioridades de diseño"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Una identidad clara entre departamentos",
-          "Comodidad y movimiento durante turnos largos",
-          "Materiales y construcción para el uso diario",
-          "Coherencia con la arquitectura y la marca",
-          "Un sistema práctico para altas y reposiciones"
-        ]
-      }
-    ],
-    "sector-restaurants": [
-      {
-        "t": "h",
-        "v": "Uniformes a medida para restaurantes"
-      },
-      {
-        "t": "h",
-        "v": "Para el servicio intenso y el lavado frecuente"
-      },
-      {
-        "t": "p",
-        "v": "Los equipos de restaurante lidian con calor, manchas y turnos largos. Diseñamos uniformes cómodos de llevar, acordes con el carácter del local, de la sala a la cocina."
-      },
-      {
-        "t": "h",
-        "v": "Funciones habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Recepción y bienvenida",
-          "Sala",
-          "Equipos de bar",
-          "Cocina y apoyo",
-          "Dirección"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prendas habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Camisas y sobrecamisas",
-          "Delantales",
-          "Pantalones",
-          "Polos y camisetas",
-          "Chaquetas ligeras"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prioridades de diseño"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Libertad de movimiento",
-          "Tejidos transpirables y de fácil cuidado",
-          "Bolsillos y cierres funcionales",
-          "Construcción reforzada donde sea necesario",
-          "Una dirección visual acorde con la experiencia del restaurante"
-        ]
-      }
-    ],
-    "sector-wellness": [
-      {
-        "t": "h",
-        "v": "Uniformes de spa y estética"
-      },
-      {
-        "t": "h",
-        "v": "Comodidad a la altura de la calma de su espacio"
-      },
-      {
-        "t": "p",
-        "v": "En los espacios de bienestar, el equipo forma parte de la atmósfera. Conectamos la ropa con el espacio y prevemos el contacto cercano, el movimiento, los turnos y el cuidado."
-      },
-      {
-        "t": "h",
-        "v": "Funciones habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Recepción",
-          "Terapeutas y equipos de tratamiento",
-          "Atención en el spa",
-          "Funciones de apoyo",
-          "Dirección"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prendas habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Túnicas y tops suaves",
-          "Pantalones",
-          "Vestidos",
-          "Sobrecamisas y capas ligeras"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prioridades de diseño"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Comodidad y libertad de movimiento",
-          "Materiales transpirables y agradables",
-          "Colores serenos y detalles medidos",
-          "Conexión clara entre recepción y tratamientos",
-          "Coherencia cuando el equipo cambia o crece"
-        ]
-      }
-    ],
-    "sector-medical": [
-      {
-        "t": "h",
-        "v": "Uniformes a medida para clínicas dentales y privadas"
-      },
-      {
-        "t": "h",
-        "v": "Ropa práctica que tranquiliza"
-      },
-      {
-        "t": "p",
-        "v": "Las clínicas privadas necesitan prendas que acompañen largas jornadas, movimiento y cuidados frecuentes, y transmitan al paciente una imagen limpia y tranquilizadora."
-      },
-      {
-        "t": "h",
-        "v": "Funciones habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Recepción y coordinación de pacientes",
-          "Equipos clínicos",
-          "Apoyo en tratamientos",
-          "Dirección de la clínica"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prendas habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Tops sanitarios",
-          "Conjuntos de trabajo coordinados",
-          "Pantalones",
-          "Sobrecamisas y capas de recepción"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prioridades de diseño"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Tejidos transpirables y de fácil cuidado",
-          "Movimiento y comodidad durante toda la jornada",
-          "Bolsillos y cierres funcionales",
-          "Una apariencia limpia bajo la iluminación clínica",
-          "Continuidad visual entre recepción y tratamiento"
-        ]
-      }
-    ],
-    "sector-service": [
-      {
-        "t": "h",
-        "v": "Uniformes para equipos operativos"
-      },
-      {
-        "t": "h",
-        "v": "Ropa de trabajo práctica, fiel a la marca"
-      },
-      {
-        "t": "p",
-        "v": "Los equipos de mantenimiento, logística y apoyo necesitan prendas que prioricen el movimiento, el almacenaje, la durabilidad y el fácil cuidado, sin parecer ajenas a la organización."
-      },
-      {
-        "t": "h",
-        "v": "Prendas habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Camisas de trabajo",
-          "Pantalones técnicos",
-          "Sobrecamisas",
-          "Chaquetas ligeras",
-          "Capas exteriores"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prioridades de diseño"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Construcción reforzada donde sea necesario",
-          "Bolsillos funcionales",
-          "Materiales de fácil cuidado",
-          "Identificación clara de cada función",
-          "Coherencia visual con el personal de atención"
-        ]
-      }
-    ],
-    "sector-guest": [
-      {
-        "t": "h",
-        "v": "Uniformes para funciones de atención al público"
-      },
-      {
-        "t": "h",
-        "v": "Una imagen acogedora que refleja su negocio"
-      },
-      {
-        "t": "p",
-        "v": "En clubes privados, comercios premium, galerías, espacios culturales y otros servicios, el equipo es una de las primeras expresiones visibles de la organización."
-      },
-      {
-        "t": "h",
-        "v": "Funciones habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Bienvenida y recepción",
-          "Relaciones con huéspedes",
-          "Atención al cliente",
-          "Equipos de sala",
-          "Dirección"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prendas habituales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Camisas",
-          "Pantalones y faldas",
-          "Vestidos",
-          "Blazers y chaquetas",
-          "Accesorios coordinados"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Prioridades de diseño"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Una identidad visual reconocible y adecuada",
-          "Comodidad en interacciones largas",
-          "Funciones claras sin formalidad innecesaria",
-          "Coherencia entre ubicaciones y pedidos futuros"
-        ]
-      }
-    ],
-    "phase-1": [
-      {
-        "t": "h",
-        "v": "Fase 01: Descubrimiento"
-      },
-      {
-        "t": "h",
-        "v": "Definir el briefing antes de empezar el desarrollo"
-      },
-      {
-        "t": "p",
-        "v": "Empezamos por las personas, el espacio, las funciones, las cantidades, el calendario y las necesidades del negocio. Así, el proyecto cuenta con una dirección acordada antes de invertir tiempo en muestras o decisiones de producción."
-      },
-      {
-        "t": "h",
-        "v": "Qué analizamos"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "La operativa diaria y el flujo del servicio",
-          "La estructura del equipo, las funciones y el número de personas",
-          "El espacio, los materiales y la identidad de marca",
-          "Las prendas prioritarias y las necesidades funcionales",
-          "El calendario previsto y los parámetros de presupuesto"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Resultado"
-      },
-      {
-        "t": "p",
-        "v": "Un alcance de proyecto acordado, un mapa de funciones y una dirección inicial para el vestuario."
-      }
-    ],
-    "phase-2": [
-      {
-        "t": "h",
-        "v": "Fase 02: Desarrollo"
-      },
-      {
-        "t": "h",
-        "v": "Convertir la dirección en prendas que el equipo pueda evaluar"
-      },
-      {
-        "t": "p",
-        "v": "Desarrollamos los tejidos, los patrones, el ajuste, la construcción y los detalles; después los ponemos a prueba con prototipos y sesiones de prueba antes de aprobar la producción."
-      },
-      {
-        "t": "h",
-        "v": "Actividades principales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Selección y validación de materiales",
-          "Desarrollo de patrones",
-          "Creación de prototipos",
-          "Pruebas con miembros representativos del equipo",
-          "Correcciones de ajuste, función y detalle"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Resultado"
-      },
-      {
-        "t": "p",
-        "v": "Prendas, materiales y decisiones técnicas aprobados y listos para producir."
-      }
-    ],
-    "phase-3": [
-      {
-        "t": "h",
-        "v": "Fase 03: Producción"
-      },
-      {
-        "t": "h",
-        "v": "Pasar de la aprobación final a la entrega con control directo"
-      },
-      {
-        "t": "p",
-        "v": "Una vez aprobadas las prendas, los materiales, las tallas y los acabados, el proyecto pasa a producción. La producción local mantiene la comunicación técnica y el control de calidad cerca del estudio."
-      },
-      {
-        "t": "h",
-        "v": "Actividades principales"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Aprobación final previa a producción",
-          "Confirmación de tallas y cantidades",
-          "Coordinación de la producción",
-          "Controles de calidad",
-          "Preparación y entrega",
-          "Organización de la información para futuras reposiciones"
-        ]
-      },
-      {
-        "t": "h",
-        "v": "Resultado"
-      },
-      {
-        "t": "p",
-        "v": "Prendas entregadas y un sistema de producción aprobado capaz de sostener pedidos futuros."
-      }
-    ],
-    "parameter-quantities": [
-      {
-        "t": "h",
-        "v": "Cantidades mínimas"
-      },
-      {
-        "t": "h",
-        "v": "La cantidad inicial depende de cómo se fabrica la prenda"
-      },
-      {
-        "t": "h",
-        "v": "Orientación general"
-      },
-      {
-        "t": "ul",
-        "v": [
-          "Las prendas de tejido plano suelen empezar en torno a 10–15 piezas por modelo, repartidas entre las tallas y las variantes aprobadas.",
-          "Las prendas de punto a medida suelen empezar en torno a 100–150 piezas por modelo.",
-          "Se puede valorar una cantidad menor cuando la construcción lo permita, analizando el precio y la eficiencia productiva caso por caso."
-        ]
-      },
-      {
-        "t": "p",
-        "v": "Confirmamos el mínimo tras revisar el tipo de prenda, el tejido, el color, la construcción y el nivel de personalización."
-      }
-    ],
-    "parameter-pricing": [
-      {
-        "t": "h",
-        "v": "Cómo se define el precio"
-      },
-      {
-        "t": "p",
-        "v": "Dos prendas de aspecto similar pueden requerir trabajos de desarrollo, materiales y producción muy distintos. Por eso presupuestamos el alcance confirmado del proyecto en lugar de aplicar una tarifa estándar por prenda."
-      },
-      {
-        "t": "p",
-        "v": "La propuesta detalla qué incluye, los supuestos utilizados y las decisiones con mayor efecto sobre el coste. Así podemos equilibrar imagen, función, durabilidad y presupuesto sin ocultar el alcance tras un precio genérico."
-      }
-    ],
-    "parameter-timing": [
-      {
-        "t": "h",
-        "v": "Calendario del proyecto"
-      },
-      {
-        "t": "p",
-        "v": "Desarrollo habitual: 4–6 semanas"
-      },
-      {
-        "t": "p",
-        "v": "Producción habitual: 3–5 semanas"
-      },
-      {
-        "t": "p",
-        "v": "Proyecto completo orientativo: unas 8 semanas para muchos proyectos totalmente a medida"
-      },
-      {
-        "t": "p",
-        "v": "El calendario definitivo se establece cuando conocemos el alcance de las prendas, los materiales, las rondas de muestras, las cantidades y la fecha prevista. Planificar las aprobaciones con antelación ofrece la vía más clara hacia la entrega."
-      }
+   },
+   "proto": {
+    "label": "Registro de pruebas",
+    "meta": "4 prendas",
+    "rows": [
+     [
+      "Chaquetilla",
+      "Aprobada",
+      "go"
+     ],
+     [
+      "Pantalón de servicio",
+      "Aprobado",
+      "go"
+     ],
+     [
+      "Chaqueta cruzada",
+      "Cambios solicitados",
+      "wait"
+     ],
+     [
+      "Delantal",
+      "Ronda 2",
+      "flow"
+     ]
     ]
-  },
-  "wardrobe": {
-    "kicker": "Lo que obtienes",
-    "h2": "Un vestuario desarrollado por función y archivado para futuras reposiciones",
-    "intro": "Sin catálogo ni prendas de stock adaptadas. Cada prenda se define a partir del trabajo de su función y después se archiva para que el siguiente pedido coincida con el primero.",
-    "pillars": [
-      {
-        "h": "Planificado en torno a la función",
-        "p": "Cada prenda responde al trabajo: cómo se mueve el cuerpo, qué carga y cómo es la sala a las siete de la mañana y a medianoche."
-      },
-      {
-        "h": "Desarrollado como un sistema",
-        "p": "Tejido, ajuste, construcción, color e identidad se deciden juntos, una sola vez, para que recepción, sala y zonas internas se perciban como un mismo equipo."
-      },
-      {
-        "h": "Archivado para reposiciones",
-        "p": "Los patrones y las especificaciones quedan archivados. El segundo pedido coincide con el primero incluso dos años después, sin repetir el desarrollo."
-      }
-    ],
-    "garmentsLead": "Qué incluye",
-    "garments": [
-      "Camisas",
-      "Pantalones",
-      "Faldas",
-      "Vestidos",
-      "Delantales",
-      "Punto",
-      "Blazers",
-      "Prendas de abrigo",
-      "Accesorios"
-    ],
-    "ctaText": "Cuéntenos cómo es su equipo. Le ayudamos a planificar los uniformes adecuados.",
-    "ctaLabel": "Díganos qué necesita",
-    "img": "/assets/images/home/wardrobe-rail.jpg",
-    "alt": "Un conjunto coordinado de uniformes colgado en un perchero"
-  },
-  "stages": {
-    "kicker": "Cómo funciona",
-    "h2": "De la primera idea al siguiente pedido",
-    "intro": "Seis etapas claras. Usted aprueba las decisiones clave y dejamos constancia de lo acordado.",
-    "items": [
-      {
-        "h": "Diseño",
-        "p": "Un diseñador externo crea una propuesta a partir de su briefing para que la revise. Si el diseño no está incluido, empezamos por el desarrollo."
-      },
-      {
-        "h": "Tejidos y detalles",
-        "p": "Elegimos tejidos, botones, avíos y acabados acordes con sus condiciones de trabajo y con la forma en que lava los uniformes."
-      },
-      {
-        "h": "Desarrollo",
-        "p": "Convertimos el diseño en un plan claro para cada prenda, con sus detalles, colores y cantidades."
-      },
-      {
-        "h": "Producción",
-        "p": "Fabricamos sus prendas según el diseño aprobado. El corte empieza solo cuando los detalles necesarios tienen su aprobación."
-      },
-      {
-        "h": "Entrega",
-        "p": "Enviamos las prendas a sus centros. Usted confirma la recepción y dejamos los modelos aprobados listos para futuros pedidos."
-      },
-      {
-        "h": "Reposiciones",
-        "p": "Usamos las medidas, tejidos y colores guardados para su siguiente pedido. Disponibilidad, precio y plazos se comprueban antes de producir."
-      }
+   },
+   "brand": {
+    "label": "Etiqueta y colores",
+    "meta": "40 × 12 mm",
+    "mark": "SU MARCA",
+    "note": "etiqueta tejida cosida en la costura",
+    "swatches": [
+     [
+      "#011251",
+      "Azul marino a medida"
+     ],
+     [
+      "#F4F2ED",
+      "Blanco roto"
+     ],
+     [
+      "#2F5D74",
+      "Azul a medida"
+     ],
+     [
+      "#0E0E0E",
+      "Tinta"
+     ]
     ]
-  },
-  "phases": {
-    "kicker": "Calendario",
-    "h2": "Su proyecto, paso a paso",
-    "phaseLabel": "Fase",
-    "intro": "Acordamos un calendario según sus prendas, cantidades, pruebas y aprobaciones.",
-    "items": [
-      {
-        "h": "Su briefing y la primera reunión",
-        "p": "Cuéntenos su equipo, cantidades y fecha. Revisamos lo que necesita y concertamos una reunión si podemos ayudar.",
-        "m": "Sin cuenta ni pago."
-      },
-      {
-        "h": "Muestras y pruebas",
-        "p": "Elegimos tejidos y hacemos muestras para que su equipo las pruebe trabajando: ajuste, comodidad y detalles.",
-        "m": "Usted aprueba cada prenda."
-      },
-      {
-        "h": "Aprobación final y producción",
-        "p": "Usted confirma cantidades, colores y tallas. Después producimos las prendas según el diseño acordado.",
-        "m": "La producción empieza tras la aprobación."
-      },
-      {
-        "h": "Entrega y reposiciones",
-        "p": "Entregamos sus uniformes y guardamos los detalles aprobados para reposiciones y nuevas incorporaciones.",
-        "m": "Sus diseños quedan guardados."
-      }
+   },
+   "spec": {
+    "label": "Ficha técnica",
+    "meta": "Revisión 4",
+    "rows": [
+     [
+      "Tejido",
+      "Sarga de algodón 280 g/m²"
+     ],
+     [
+      "Color",
+      "Azul marino propio · muestra de color 3"
+     ],
+     [
+      "Posiciones",
+      "Pecho · cuello"
+     ],
+     [
+      "Tallas",
+      "XS–3XL, 9 pasos"
+     ]
     ]
-  },
-  "includes": {
-    "kicker": "Qué incluye",
-    "h2": "Los detalles de su ropa de trabajo a medida",
-    "intro": "Acordamos qué incluye su proyecto antes de empezar. Los ejemplos de abajo muestran los planes, las muestras y los registros que guían el trabajo.",
-    "items": [
-      {
-        "h": "Prendas para cada función",
-        "p": "Planificamos qué necesita cada persona, de una función a un vestuario de equipo coherente.",
-        "a": "plan"
-      },
-      {
-        "h": "Tejidos para el día a día",
-        "p": "El gramaje, la composición y los acabados se eligen para su trabajo y su rutina de lavado.",
-        "a": "fabric"
-      },
-      {
-        "h": "Muestras y pruebas",
-        "p": "Su equipo prueba las muestras trabajando. Registramos sus comentarios prenda a prenda.",
-        "a": "proto"
-      },
-      {
-        "h": "Los detalles de su marca",
-        "p": "Colores, etiquetas y detalles siguen el diseño acordado y resisten el uso diario.",
-        "a": "brand"
-      },
-      {
-        "h": "El registro de sus prendas",
-        "p": "Guardamos medidas, tejidos, colores y proveedores aprobados en un registro por prenda.",
-        "a": "spec"
-      },
-      {
-        "h": "Listo para reponer",
-        "p": "Comprobamos disponibilidad, precio y plazos antes de volver a fabricar su diseño.",
-        "a": "reorder"
-      }
+   },
+   "reorder": {
+    "label": "Registro de repetición",
+    "meta": "88 piezas",
+    "rows": [
+     [
+      "Revisión aprobada",
+      "Rev. 4"
+     ],
+     [
+      "Pedido de reposición",
+      "88 piezas"
+     ],
+     [
+      "Precio unitario",
+      "Sin cambios"
+     ]
     ],
-    "art": {
-      "plan": {
-        "label": "Plan de puestos",
-        "meta": "4 puestos",
-        "rows": [
-          [
-            "Recepción",
-            "Camisa · delantal"
-          ],
-          [
-            "Restaurante",
-            "Chaqueta · pantalón"
-          ],
-          [
-            "Cocina",
-            "Chaquetilla"
-          ],
-          [
-            "Pisos",
-            "Túnica"
-          ]
-        ]
-      },
-      "fabric": {
-        "label": "Tejidos elegidos",
-        "meta": "Para su lavado",
-        "rows": [
-          [
-            "Sarga",
-            "280"
-          ],
-          [
-            "Piqué",
-            "220"
-          ],
-          [
-            "Melton",
-            "480"
-          ],
-          [
-            "Popelín",
-            "130"
-          ]
-        ]
-      },
-      "proto": {
-        "label": "Registro de pruebas",
-        "meta": "4 prendas",
-        "rows": [
-          [
-            "Chaquetilla",
-            "Aprobada",
-            "go"
-          ],
-          [
-            "Pantalón de servicio",
-            "Aprobado",
-            "go"
-          ],
-          [
-            "Chaqueta cruzada",
-            "Cambios solicitados",
-            "wait"
-          ],
-          [
-            "Delantal",
-            "Ronda 2",
-            "flow"
-          ]
-        ]
-      },
-      "brand": {
-        "label": "Etiqueta y colores",
-        "meta": "40 × 12 mm",
-        "mark": "SU MARCA",
-        "note": "etiqueta tejida cosida en la costura",
-        "swatches": [
-          [
-            "#011251",
-            "Azul marino a medida"
-          ],
-          [
-            "#F4F2ED",
-            "Blanco roto"
-          ],
-          [
-            "#2F5D74",
-            "Azul a medida"
-          ],
-          [
-            "#0E0E0E",
-            "Tinta"
-          ]
-        ]
-      },
-      "spec": {
-        "label": "Ficha técnica",
-        "meta": "Revisión 4",
-        "rows": [
-          [
-            "Tejido",
-            "Sarga de algodón 280 g/m²"
-          ],
-          [
-            "Color",
-            "Azul marino propio · muestra de color 3"
-          ],
-          [
-            "Posiciones",
-            "Pecho · cuello"
-          ],
-          [
-            "Tallas",
-            "XS–3XL, 9 pasos"
-          ]
-        ]
-      },
-      "reorder": {
-        "label": "Registro de repetición",
-        "meta": "88 piezas",
-        "rows": [
-          [
-            "Revisión aprobada",
-            "Rev. 4"
-          ],
-          [
-            "Pedido de reposición",
-            "88 piezas"
-          ],
-          [
-            "Precio unitario",
-            "Sin cambios"
-          ]
-        ],
-        "check": "Hecho con el registro aprobado de la prenda"
-      }
-    }
+    "check": "Hecho con el registro aprobado de la prenda"
+   }
   }
+ }
 }

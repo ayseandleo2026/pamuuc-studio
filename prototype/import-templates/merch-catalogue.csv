@@ -1,0 +1,32 @@
+row_type,ref,handle,name,category,status,moq,currency,price_25,price_50,price_100,price_250,price_500,cost_price,lead_weeks_min,lead_weeks_max,colours,sizes,personalisation_methods,personalisation_positions,artwork_required,description,materials,weight_gsm,care,provenance,country_of_origin,supplier,supplier_ref,colour,sku,price_adjustment,stock_on_hand,reorder_point,image_url,image_alt,image_position,method,position,max_width_mm,max_height_mm,max_colours,artwork_format,notes,setup_cost,priced_by,band_small_max_mm,band_medium_max_mm,mult_2_colours,mult_3_colours,mult_4_colours,size_band,qty_min,unit_cost,provisional
+deco_method,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,embroidery,,,,,,Setup is per job. Confirm whether it is charged per position.,35.00,size,99,150,,,,,,,
+deco_method,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,Multipliers are absolute against 1 colour. Confirm whether setup is per screen (per colour) or per job.,40.00,quantity,,,1.200,1.320,1.386,,,,
+deco_method,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtf,,,,,,No setup cost recorded — confirm whether DTF carries one.,,size,99,150,,,,,,,
+deco_method,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtg,,,,,,"No setup cost recorded. Unit costs are DTF + 50%, provisional.",,size,99,150,,,,,,,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,embroidery,,,,,,,,,,,,,,small,,0.60,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,embroidery,,,,,,,,,,,,,,medium,,0.85,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,embroidery,,,,,,,,,,,,,,large,,1.20,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtf,,,,,,,,,,,,,,small,,0.60,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtf,,,,,,,,,,,,,,medium,,0.90,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtf,,,,,,,,,,,,,,large,,1.20,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtg,,,,,,DTF + 50%,,,,,,,,small,,0.90,yes
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtg,,,,,,DTF + 50%,,,,,,,,medium,,1.35,yes
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,dtg,,,,,,DTF + 50%,,,,,,,,large,,1.80,yes
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 1-9 pieces.,,,,,,,,,1,4.50,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 10-24 pieces.,,,,,,,,,10,4.30,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 25-49 pieces.,,,,,,,,,25,4.10,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 50-99 pieces.,,,,,,,,,50,3.70,
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 100-249. Interpolated between the 50 and 500 anchors.,,,,,,,,,100,2.64,yes
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 250-499. Interpolated between the 50 and 500 anchors.,,,,,,,,,250,1.68,yes
+deco_rate,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,,,,,,1 colour. 500+.,,,,,,,,,500,1.20,
+product,EXAMPLE-01,heavy-canvas-tote,Heavy canvas tote,Bags,published,25,EUR,14.50,13.20,12.10,11.40,10.80,6.15,3,4,ecru|ink|forest,One size,screen|embroidery,left_chest|hem,yes,A 400 g/m² canvas tote that survives a laundry cycle and a winter. Reinforced base and webbing handles.,60% recycled cotton / 40% cotton,400,"Machine wash 40°C, do not tumble dry",Recycled cotton canvas,Portugal,Têxtil Ribeira,TR-CANV-400,,,,,,,,,,,,,,,,,,,,,,,,,,
+variant,EXAMPLE-01,,,,published,,,,,,,,,,,,,,,,,,,,,,,TR-CANV-400-ECR,ecru,MP01-ECR,0.00,140,40,,,,,,,,,,,,,,,,,,,,,
+variant,EXAMPLE-01,,,,published,,,,,,,,,,,,,,,,,,,,,,,TR-CANV-400-INK,ink,MP01-INK,0.00,85,40,,,,,,,,,,,,,,,,,,,,,
+variant,EXAMPLE-01,,,,published,,,,,,,,,,,,,,,,,,,,,,,TR-CANV-400-FOR,forest,MP01-FOR,0.60,0,25,,,,,,,,,,,,,,,,,,,,,
+image,EXAMPLE-01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.pamuuc.com/merch/heavy-canvas-tote/tote-01.jpg,"Heavy canvas tote in ecru, front",1,,,,,,,Position 1 is the thumbnail. No colour = product image.,,,,,,,,,,,
+image,EXAMPLE-01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,https://cdn.pamuuc.com/merch/heavy-canvas-tote/tote-detail.jpg,Base and webbing handle detail,2,,,,,,,,,,,,,,,,,,
+image,EXAMPLE-01,,,,,,,,,,,,,,,,,,,,,,,,,,,,ink,,,,,https://cdn.pamuuc.com/merch/heavy-canvas-tote/tote-ink.jpg,Heavy canvas tote in ink,10,,,,,,,A colour makes this the variant image for that colour.,,,,,,,,,,,
+decoration,EXAMPLE-01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,left_chest,220,260,4,Vector,Largest usable area. Keep 20 mm clear of the seam.,,,,,,,,,,,
+decoration,EXAMPLE-01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,screen,hem,180,60,2,Vector,,,,,,,,,,,,
+decoration,EXAMPLE-01,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,embroidery,left_chest,90,90,6,Vector or DST,Fits the small band — 0.60 per piece.,,,,,,,,,,,
+product,EXAMPLE-02,six-panel-cap,Six-panel cap,Headwear,published,25,EUR,11.00,10.10,9.40,8.90,8.40,4.30,3,4,ecru|navy|ink|stone,One size,embroidery,left_chest|nape,yes,Structured six-panel with a brass slider. Embroidery only — the crown holds a stitch better than a print.,100% organic cotton twill,280,Spot clean only,GOTS organic cotton,Portugal,Têxtil Ribeira,TR-CAP-6P,,,,,,,,,,,,,,,,,,,,,,,,,,

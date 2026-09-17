@@ -79,4 +79,4 @@ Ergänzen Sie Belege, wo sie helfen: Fotos der Räume, Materialreferenzen, Rolle
 
 Ein gutes Briefing nimmt die Antwort des Anbieters nicht vorweg. Es schafft die Grundlage für begründete Vorschläge, Prototypen und Anproben. Materialien, Schnitte und Details lassen sich dann an einem gemeinsamen Verständnis von Haus, Arbeit und Betriebsabläufen messen.
 
-Nutzen Sie die Fragen oben als Arbeitsdokument für die Analysephase. Sehen Sie sich anschließend den [Design- und Entwicklungsprozess von PAMUUC](/de/#process) an oder [fragen Sie ein Erstgespräch an](/de/#contact), um daraus einen klaren Ausgangsrahmen zu machen. Das Ziel sind nicht mehr Kleidungsstücke, sondern eine stimmige Garderobe, in der jedes Teil einen Grund hat.
+Nutzen Sie die Fragen oben als Arbeitsdokument für die Analysephase. Sehen Sie sich anschließend den [Design- und Entwicklungsprozess von PAMUUC](/de/custom-uniforms/#how) an oder [fragen Sie ein Erstgespräch an](/de/custom-uniforms/#brief), um daraus einen klaren Ausgangsrahmen zu machen. Das Ziel sind nicht mehr Kleidungsstücke, sondern eine stimmige Garderobe, in der jedes Teil einen Grund hat.

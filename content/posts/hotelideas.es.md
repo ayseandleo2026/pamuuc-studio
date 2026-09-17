@@ -80,4 +80,4 @@ Reduce el panel a dos territorios coherentes y describe ambos con el mismo lengu
 
 No mezcles todas las referencias atractivas en una respuesta sobrecargada. Dos direcciones distintas ofrecen contraste suficiente para tomar una decisión real y conservan margen para prototipos y comentarios del equipo. Si ninguna supera las tres escenas, vuelve al carácter del servicio en lugar de buscar más imágenes.
 
-Lleva el dossier de interiorismo y la lista de puestos del hotel a una revisión de concepto. PAMUUC puede contrastar las dos direcciones con prendas, operativa y continuidad reales antes de empezar el desarrollo. Consulta el [proceso de diseño](/es/#process) o [solicita una primera reunión](/es/#contact) cuando la selección esté lista.
+Lleva el dossier de interiorismo y la lista de puestos del hotel a una revisión de concepto. PAMUUC puede contrastar las dos direcciones con prendas, operativa y continuidad reales antes de empezar el desarrollo. Consulta el [proceso de diseño](/es/custom-uniforms/#how) o [solicita una primera reunión](/es/custom-uniforms/#brief) cuando la selección esté lista.

@@ -79,4 +79,4 @@ Añade pruebas cuando ayuden: fotografías de los espacios, referencias de mater
 
 Un buen briefing no anticipa la respuesta del proveedor. Crea las condiciones para recibir propuestas, prototipos y pruebas de talla fundamentados. Así, los materiales, patrones y detalles pueden valorarse a partir de una visión compartida del establecimiento, el trabajo y la operativa.
 
-Utiliza las preguntas anteriores como documento de análisis inicial. Después, revisa el [proceso de diseño y desarrollo de PAMUUC](/es/#process) o [solicita una primera reunión](/es/#contact) para convertirlo en un alcance inicial claro. El objetivo no es tener más prendas, sino un vestuario coherente en el que cada prenda tenga un motivo para existir.
+Utiliza las preguntas anteriores como documento de análisis inicial. Después, revisa el [proceso de diseño y desarrollo de PAMUUC](/es/custom-uniforms/#how) o [solicita una primera reunión](/es/custom-uniforms/#brief) para convertirlo en un alcance inicial claro. El objetivo no es tener más prendas, sino un vestuario coherente en el que cada prenda tenga un motivo para existir.

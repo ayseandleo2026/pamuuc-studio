@@ -1,0 +1,185 @@
+ref,supplier_ref,product,category,our cost (worst size/colour),market blank q100 (median),cheapest competitor q100,dearest competitor q100,our price q25,our price q50,our price q100,our price q250,our price q500,margin q25,margin q50,margin q100,margin q250,margin q500,x market q100,position
+MP-0001,STAU029,Baby Bib,Accessories,2.95,3.68,2.9,3.82,19.74,16.58,13.55,11.14,9.99,35%,35%,35%,35%,35%,3.68,above market
+MP-0002,STAU893,Bucket Hat,Accessories,7.25,9.0,7.18,12.38,26.36,23.2,20.17,17.75,16.6,35%,35%,35%,35%,35%,2.24,above market
+MP-0003,STAU892,Duffle Bag,Accessories,14.9,18.27,14.63,25.23,38.13,34.97,31.94,29.52,28.37,35%,35%,35%,35%,35%,1.75,above market
+MP-0004,STAU297,Fielder,Accessories,,,,,,,,,,,,,,,,quote on inquiry
+MP-0005,STAU771,Fisherman Beanie,Accessories,7.3,8.83,6.97,12.02,26.43,23.27,20.24,17.83,16.68,35%,35%,35%,35%,35%,2.29,above market
+MP-0006,STAU296,Fisherman Beanie 2.0,Accessories,7.3,8.88,6.97,12.02,26.43,23.27,20.24,17.83,16.68,35%,35%,35%,35%,35%,2.28,above market
+MP-0007,STAU763,Gym Bag,Accessories,5.75,7.05,5.66,9.76,24.05,20.89,17.86,15.44,14.3,35%,35%,35%,35%,35%,2.53,above market
+MP-0008,STAU891,Hip Bag,Accessories,9.75,11.99,8.9,16.54,30.2,27.04,24.01,21.6,20.45,35%,35%,35%,35%,35%,2.0,above market
+MP-0009,STAU773,Light Tote Bag,Accessories,2.17,2.73,1.92,3.67,18.54,15.38,12.35,9.94,8.79,35%,35%,35%,35%,35%,4.52,above market
+MP-0010,STAU116,Mid Tote bag,Accessories,3.5,4.44,3.45,5.95,20.59,17.43,14.4,11.98,10.84,35%,35%,35%,35%,35%,3.25,above market
+MP-0011,STAU764,Pencil Case,Accessories,3.25,4.09,3.24,5.59,20.2,17.04,14.01,11.6,10.45,35%,35%,35%,35%,35%,3.43,above market
+MP-0012,STAU772,Rib Beanie,Accessories,7.2,8.56,6.83,9.76,26.28,23.12,20.09,17.67,16.53,35%,35%,35%,35%,35%,2.35,above market
+MP-0013,STAU295,Rib Beanie 2.0,Accessories,7.2,8.71,6.83,11.78,26.28,23.12,20.09,17.67,16.53,35%,35%,35%,35%,35%,2.31,above market
+MP-0014,STAU117,Shopping bag 2.0,Accessories,6.15,7.68,6.07,10.47,24.67,21.5,18.48,16.06,14.91,35%,35%,35%,35%,35%,2.41,above market
+MP-0015,STAU760,Tote Bag,Accessories,3.95,4.86,3.86,6.66,21.28,18.12,15.09,12.67,11.53,35%,35%,35%,35%,35%,3.1,above market
+MP-0016,STJU844,Bomber,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0017,STJU251,Bomber 2.0,Outerwear,46.15,56.58,45.47,78.42,86.2,83.04,80.01,77.6,76.45,35%,35%,35%,35%,35%,1.41,above market
+MP-0018,STJU248,Brooker,Outerwear,41.65,51.08,41.06,70.81,79.28,76.12,73.09,70.67,69.53,35%,35%,35%,35%,35%,1.43,above market
+MP-0019,STJU294,Chore Jacket,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0020,STJU833,Coacher,Outerwear,27.6,33.28,26.39,46.89,57.67,54.5,51.48,49.06,47.91,35%,35%,35%,35%,35%,1.55,above market
+MP-0021,STJU879,Coacher AOP,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0022,STJU846,Commuter,Outerwear,33.5,34.28,27.53,47.48,66.74,63.58,60.55,58.14,56.99,35%,35%,35%,35%,35%,1.77,above market
+MP-0023,STJU289,Drifter,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0024,STJU249,Liner,Outerwear,35.7,44.57,35.19,60.69,70.13,66.97,63.94,61.52,60.37,35%,35%,35%,35%,35%,1.43,above market
+MP-0025,STJU883,Outsider,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0026,STJU841,Padded Parker,Outerwear,55.85,68.5,55.06,94.96,101.13,97.97,94.94,92.52,91.37,35%,35%,35%,35%,35%,1.39,above market
+MP-0027,STJU840,Puffer,Outerwear,66.65,81.72,65.69,113.29,117.74,114.58,111.55,109.14,107.99,35%,35%,35%,35%,35%,1.37,above market
+MP-0028,STJU292,Puffer 2.0,Outerwear,66.65,81.94,65.69,113.29,117.74,114.58,111.55,109.14,107.99,35%,35%,35%,35%,35%,1.36,above market
+MP-0029,STJU250,Puffer Gilet,Outerwear,41.85,51.35,41.26,71.16,79.59,76.43,73.4,70.98,69.84,35%,35%,35%,35%,35%,1.43,above market
+MP-0030,STJU293,Puffer Gilet 2.0,Outerwear,41.85,53.43,42.78,73.78,79.59,76.43,73.4,70.98,69.84,35%,35%,35%,35%,35%,1.37,above market
+MP-0031,STJU834,Speeder,Outerwear,33.2,40.73,32.71,56.41,66.28,63.12,60.09,57.67,56.53,35%,35%,35%,35%,35%,1.48,above market
+MP-0032,STJU878,Speeder AOP,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0033,STJM189,Stanley Climber 2.0,Outerwear,38.45,39.52,31.27,54.5,74.36,71.2,68.17,65.75,64.6,35%,35%,35%,35%,35%,1.72,above market
+MP-0034,STJM158,Stanley Discoverer,Outerwear,59.3,60.61,48.71,84.01,106.43,103.27,100.24,97.83,96.68,35%,35%,35%,35%,35%,1.65,above market
+MP-0035,STJM238,Stanley Guider,Outerwear,25.05,25.62,20.56,35.46,53.74,50.58,47.55,45.14,43.99,35%,35%,35%,35%,35%,1.86,above market
+MP-0036,STJM167,Stanley Navigator,Outerwear,54.6,54.82,44.03,77.35,99.2,96.04,93.01,90.6,89.45,35%,35%,35%,35%,35%,1.7,above market
+MP-0037,STJM240,Stanley Quester,Outerwear,21.65,22.19,17.8,30.7,48.51,45.35,42.32,39.91,38.76,35%,35%,35%,35%,35%,1.91,above market
+MP-0038,STJM290,Stanley Stormer,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0039,STJM235,Stanley Trail Blazer,Outerwear,41.85,42.78,34.36,59.26,79.59,76.43,73.4,70.98,69.84,35%,35%,35%,35%,35%,1.72,above market
+MP-0040,STJM188,Stanley Voyager 2.0,Outerwear,57.1,59.0,46.92,80.92,103.05,99.89,96.86,94.44,93.3,35%,35%,35%,35%,35%,1.64,above market
+MP-0041,STJW190,Stella Climber 2.0,Outerwear,38.45,39.77,31.6,54.5,74.36,71.2,68.17,65.75,64.6,35%,35%,35%,35%,35%,1.71,above market
+MP-0042,STJW159,Stella Discoverer,Outerwear,49.4,60.61,48.71,84.01,91.2,88.04,85.01,82.6,81.45,35%,35%,35%,35%,35%,1.4,above market
+MP-0043,STJW239,Stella Guider,Outerwear,20.85,25.62,20.56,35.46,47.28,44.12,41.09,38.67,37.53,35%,35%,35%,35%,35%,1.6,above market
+MP-0044,STJW166,Stella Navigator,Outerwear,45.35,54.64,44.03,77.11,84.97,81.81,78.78,76.37,75.22,35%,35%,35%,35%,35%,1.44,above market
+MP-0045,STJW241,Stella Quester,Outerwear,18.05,22.19,17.8,30.7,42.97,39.81,36.78,34.37,33.22,35%,35%,35%,35%,35%,1.66,above market
+MP-0046,STJW291,Stella Stormer,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0047,STJW236,Stella Trail Blazer,Outerwear,34.85,42.78,34.36,59.26,68.82,65.66,62.63,60.21,59.07,35%,35%,35%,35%,35%,1.46,above market
+MP-0048,STJW191,Stella Voyager 2.0,Outerwear,57.1,59.0,46.92,80.92,103.05,99.89,96.86,94.44,93.3,35%,35%,35%,35%,35%,1.64,above market
+MP-0049,STJU849,Tracker,Outerwear,,,,,,,,,,,,,,,,quote on inquiry
+MP-0050,STJU242,Trekker,Outerwear,34.85,42.78,34.36,59.26,68.82,65.66,62.63,60.21,59.07,35%,35%,35%,35%,35%,1.46,above market
+MP-0051,STBB187,Baby Tumbler,Pants & shorts,11.7,12.14,9.59,16.54,33.2,30.04,27.01,24.6,23.45,35%,35%,35%,35%,35%,2.22,above market
+MP-0052,STBU276,Barreler,Pants & shorts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0053,STBU944,Boarder Dry,Pants & shorts,20.85,24.27,19.46,33.56,47.28,44.12,41.09,38.67,37.53,35%,35%,35%,35%,35%,1.69,above market
+MP-0054,STBU157,Jammer Dry,Pants & shorts,30.9,35.74,28.7,49.5,62.74,59.58,56.55,54.14,52.99,35%,35%,35%,35%,35%,1.58,above market
+MP-0055,STBK102,Mini Bolter,Pants & shorts,13.05,14.65,11.73,20.23,35.28,32.12,29.09,26.67,25.53,35%,35%,35%,35%,35%,1.98,above market
+MP-0056,STSK183,Mini Mover 2.0,Pants & shorts,16.5,18.14,14.56,25.47,40.59,37.43,34.4,31.98,30.84,35%,35%,35%,35%,35%,1.9,above market
+MP-0057,STBU185,Mover 2.0,Pants & shorts,23.76,26.73,21.53,37.6,51.76,48.6,45.57,43.15,42.0,35%,35%,35%,35%,35%,1.7,above market
+MP-0058,STBU576,Mover Vintage,Pants & shorts,27.45,33.7,27.05,46.65,57.43,54.27,51.24,48.83,47.68,35%,35%,35%,35%,35%,1.52,above market
+MP-0059,STBU274,Needer,Pants & shorts,18.95,22.62,17.94,30.94,44.36,41.2,38.17,35.75,34.6,35%,35%,35%,35%,35%,1.69,above market
+MP-0060,STBU186,Trainer 2.0,Pants & shorts,17.3,20.21,16.22,27.97,41.82,38.66,35.63,33.21,32.07,35%,35%,35%,35%,35%,1.76,above market
+MP-0061,STPU252,Coaster Vintage,Polos,11.5,14.14,11.32,19.52,32.9,29.74,26.71,24.29,23.14,35%,35%,35%,35%,35%,1.89,above market
+MP-0062,STPK908,Mini Sprinter,Polos,9.6,11.17,8.49,15.59,29.97,26.81,23.78,21.37,20.22,35%,35%,35%,35%,35%,2.13,above market
+MP-0063,STPU222,Prepster 2.0,Polos,15.9,15.04,11.18,21.06,39.67,36.5,33.48,31.06,29.91,35%,35%,35%,35%,35%,2.23,above market
+MP-0064,STPU223,Prepster 2.0 Long Sleeve,Polos,14.75,17.22,12.9,24.16,37.9,34.74,31.71,29.29,28.14,35%,35%,35%,35%,35%,1.84,above market
+MP-0065,STPU332,Prepster Long Sleeve,Polos,,,,,,,,,,,,,,,,quote on inquiry
+MP-0066,STPM224,Stanley Coaster,Polos,11.1,10.37,7.87,14.28,32.28,29.12,26.09,23.67,22.53,35%,35%,35%,35%,35%,2.52,above market
+MP-0067,STPW977,Stella Coaster,Polos,11.1,10.24,7.87,14.28,32.28,29.12,26.09,23.67,22.53,35%,35%,35%,35%,35%,2.55,above market
+MP-0068,STPW333,Stella Elliser,Polos,,,,,,,,,,,,,,,,quote on inquiry
+MP-0069,STWU287,Palmer,Shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0070,STWM967,Stanley Denim Shirt,Shirts,26.55,27.16,21.8,37.6,56.05,52.89,49.86,47.44,46.3,35%,35%,35%,35%,35%,1.84,above market
+MP-0071,STWM968,Stanley Oxford Shirt,Shirts,26.1,26.66,21.39,36.89,55.36,52.2,49.17,46.75,45.6,35%,35%,35%,35%,35%,1.84,above market
+MP-0072,STWM969,Stanley Styler Shirt,Shirts,25.25,25.38,20.7,35.7,54.05,50.89,47.86,45.44,44.3,35%,35%,35%,35%,35%,1.89,above market
+MP-0073,STWW970,Stella Denim Shirt,Shirts,26.55,27.16,21.8,37.6,56.05,52.89,49.86,47.44,46.3,35%,35%,35%,35%,35%,1.84,above market
+MP-0074,STWW288,Stella Ember,Shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0075,STWW270,Stella Harper,Shirts,21.05,26.09,20.7,35.7,47.59,44.43,41.4,38.98,37.84,35%,35%,35%,35%,35%,1.59,above market
+MP-0076,STWW971,Stella Oxford Shirt,Shirts,26.1,26.66,21.39,36.89,55.36,52.2,49.17,46.75,45.6,35%,35%,35%,35%,35%,1.84,above market
+MP-0077,STWW973,Stella Styler Shirt,Shirts,21.0,25.38,20.7,35.7,47.51,44.35,41.32,38.91,37.76,35%,35%,35%,35%,35%,1.63,above market
+MP-0078,STWU975,Worker,Shirts,25.05,27.48,24.7,30.25,53.74,50.58,47.55,45.14,43.99,35%,35%,35%,35%,35%,1.73,above market
+MP-0079,STSU011,Archer,Sweatshirts,21.95,25.71,20.63,35.58,48.97,45.81,42.78,40.37,39.22,35%,35%,35%,35%,35%,1.66,above market
+MP-0080,STSU040,Archer Vintage,Sweatshirts,27.7,34.03,27.32,47.12,57.82,54.66,51.63,49.21,48.07,35%,35%,35%,35%,35%,1.52,above market
+MP-0081,STSU261,Astor,Sweatshirts,33.65,39.95,31.74,54.74,66.97,63.81,60.78,58.37,57.22,35%,35%,35%,35%,35%,1.52,above market
+MP-0082,STSB920,Baby Changer,Sweatshirts,11.45,11.87,8.97,16.18,32.82,29.66,26.63,24.21,23.07,35%,35%,35%,35%,35%,2.24,above market
+MP-0083,STSB105,Baby Connector,Sweatshirts,13.9,14.48,11.45,19.75,36.59,33.43,30.4,27.98,26.84,35%,35%,35%,35%,35%,2.1,above market
+MP-0084,STSB919,Baby Cruiser,Sweatshirts,11.6,14.03,11.11,19.16,33.05,29.89,26.86,24.44,23.3,35%,35%,35%,35%,35%,1.91,above market
+MP-0085,STSU178,Changer 2.0,Sweatshirts,21.35,20.75,16.72,29.16,48.05,44.89,41.86,39.44,38.3,35%,35%,35%,35%,35%,2.02,above market
+MP-0086,STSU077,Chaser,Sweatshirts,21.75,25.21,20.21,35.46,48.67,45.5,42.48,40.06,38.91,35%,35%,35%,35%,35%,1.69,above market
+MP-0087,STSU282,Chaser Vintage,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0088,STSU820,Connector,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0089,STSU207,Connector 2.0,Sweatshirts,26.35,29.41,23.6,40.7,55.74,52.58,49.55,47.14,45.99,35%,35%,35%,35%,35%,1.68,above market
+MP-0090,STSU797,Cooper Dry,Sweatshirts,35.05,40.73,32.71,56.41,69.13,65.97,62.94,60.52,59.37,35%,35%,35%,35%,35%,1.55,above market
+MP-0091,STSU177,Cruiser 2.0,Sweatshirts,27.65,27.42,21.76,37.96,57.74,54.58,51.55,49.14,47.99,35%,35%,35%,35%,35%,1.88,above market
+MP-0092,STSM566,Cultivator,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0093,STSU179,Cultivator 2.0,Sweatshirts,32.1,31.27,25.53,44.03,64.59,61.43,58.4,55.98,54.84,35%,35%,35%,35%,35%,1.87,above market
+MP-0094,STSU168,Drummer 2.0,Sweatshirts,20.7,21.84,17.39,30.7,47.05,43.89,40.86,38.44,37.3,35%,35%,35%,35%,35%,1.87,above market
+MP-0095,STSU279,Former,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0096,STSU275,Fronter,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0097,STSU956,Hygger Sherpa,Sweatshirts,46.4,53.92,43.33,76.82,86.59,83.43,80.4,77.98,76.84,35%,35%,35%,35%,35%,1.49,above market
+MP-0098,STSU201,Knoxer,Sweatshirts,27.8,32.48,26.08,44.98,57.97,54.81,51.78,49.37,48.22,35%,35%,35%,35%,35%,1.59,above market
+MP-0099,STSU798,Ledger Dry,Sweatshirts,27.75,31.89,25.6,44.15,57.9,54.74,51.71,49.29,48.14,35%,35%,35%,35%,35%,1.62,above market
+MP-0100,STSU953,Locker Heavy,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0101,STSU799,Matcher,Sweatshirts,17.2,19.88,15.94,27.49,41.67,38.5,35.48,33.06,31.91,35%,35%,35%,35%,35%,1.78,above market
+MP-0102,STSU085,Matcher Vintage,Sweatshirts,22.75,27.95,22.43,38.68,50.2,47.04,44.01,41.6,40.45,35%,35%,35%,35%,35%,1.57,above market
+MP-0103,STSU795,Miller Dry,Sweatshirts,30.5,35.42,28.43,49.03,62.13,58.97,55.94,53.52,52.37,35%,35%,35%,35%,35%,1.58,above market
+MP-0104,STSK181,Mini Changer 2.0,Sweatshirts,15.3,15.46,12.56,21.66,38.74,35.58,32.55,30.14,28.99,35%,35%,35%,35%,35%,2.11,above market
+MP-0105,STSK180,Mini Cruiser 2.0,Sweatshirts,18.5,18.65,15.18,26.18,43.67,40.5,37.48,35.06,33.91,35%,35%,35%,35%,35%,2.01,above market
+MP-0106,STSK182,Mini Cultivator 2.0,Sweatshirts,20.15,22.55,18.08,31.18,46.2,43.04,40.01,37.6,36.45,35%,35%,35%,35%,35%,1.77,above market
+MP-0107,STSU205,Mixer,Sweatshirts,26.9,25.8,20.82,36.3,56.59,53.43,50.4,47.98,46.84,35%,35%,35%,35%,35%,1.95,above market
+MP-0108,STSU273,Proper,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0109,STSU800,RE-Cruiser,Sweatshirts,22.35,27.42,22.01,37.96,49.59,46.43,43.4,40.98,39.84,35%,35%,35%,35%,35%,1.58,above market
+MP-0110,STSU208,Radder 2.0,Sweatshirts,21.9,25.21,20.21,35.46,48.9,45.74,42.71,40.29,39.14,35%,35%,35%,35%,35%,1.69,above market
+MP-0111,STSU210,Radder 2.0 Vintage,Sweatshirts,24.65,30.27,24.29,41.89,53.13,49.97,46.94,44.52,43.37,35%,35%,35%,35%,35%,1.55,above market
+MP-0112,STSU866,Radder Heavy,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0113,STSU868,Roller,Sweatshirts,18.32,17.3,13.95,24.28,43.39,40.23,37.2,34.78,33.64,35%,35%,35%,35%,35%,2.15,above market
+MP-0114,STSU255,Ryler,Sweatshirts,20.9,25.91,20.56,35.46,47.36,44.2,41.17,38.75,37.6,35%,35%,35%,35%,35%,1.59,above market
+MP-0115,STSU278,Sculpter,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0116,STSU209,Slammer 2.0,Sweatshirts,27.8,31.93,25.76,44.98,57.97,54.81,51.78,49.37,48.22,35%,35%,35%,35%,35%,1.62,above market
+MP-0117,STSU211,Slammer 2.0 vintage,Sweatshirts,31.8,39.02,31.33,54.03,64.13,60.97,57.94,55.52,54.37,35%,35%,35%,35%,35%,1.49,above market
+MP-0118,STSU867,Slammer Heavy,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0119,STSU229,Sounder,Sweatshirts,21.9,25.21,20.56,35.46,48.9,45.74,42.71,40.29,39.14,35%,35%,35%,35%,35%,1.69,above market
+MP-0120,STSU257,Stanley Gamechanger,Sweatshirts,27.6,24.24,22.01,27.59,57.67,54.5,51.48,49.06,47.91,35%,35%,35%,35%,35%,2.12,above market
+MP-0121,STSU269,Stanley Thinker,Sweatshirts,21.4,18.62,16.91,21.24,48.13,44.97,41.94,39.52,38.37,35%,35%,35%,35%,35%,2.25,above market
+MP-0122,STSM611,Stanley Trucker,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0123,STSW212,Stella Alma,Sweatshirts,19.3,19.8,15.87,27.37,44.9,41.74,38.71,36.29,35.14,35%,35%,35%,35%,35%,1.96,above market
+MP-0124,STSW284,Stella Alma Vintage,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0125,STSW132,Stella Bower,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0126,STSW217,Stella Clara,Sweatshirts,18.3,18.76,15.04,25.94,43.36,40.2,37.17,34.75,33.6,35%,35%,35%,35%,35%,1.98,above market
+MP-0127,STSW873,Stella Cropster,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0128,STSW125,Stella Dazzler,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0129,STSW268,Stella Gamechanger,Sweatshirts,23.55,27.59,22.01,37.96,51.43,48.27,45.24,42.83,41.68,35%,35%,35%,35%,35%,1.64,above market
+MP-0130,STSW214,Stella Ida,Sweatshirts,24.25,27.9,22.5,39.27,52.51,49.35,46.32,43.91,42.76,35%,35%,35%,35%,35%,1.66,above market
+MP-0131,STSW262,Stella Lianna,Sweatshirts,22.35,25.23,20.01,34.51,49.59,46.43,43.4,40.98,39.84,35%,35%,35%,35%,35%,1.72,above market
+MP-0132,STSW213,Stella Nora,Sweatshirts,25.05,25.21,20.21,35.46,53.74,50.58,47.55,45.14,43.99,35%,35%,35%,35%,35%,1.89,above market
+MP-0133,STSW285,Stella Nora Vintage,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0134,STSW218,Stella Paloma,Sweatshirts,23.25,27.16,21.8,37.6,50.97,47.81,44.78,42.37,41.22,35%,35%,35%,35%,35%,1.65,above market
+MP-0135,STDW143,Stella Streeter,Sweatshirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0136,STSW254,Stella Thinker,Sweatshirts,18.2,21.24,16.91,29.16,43.2,40.04,37.01,34.6,33.45,35%,35%,35%,35%,35%,1.74,above market
+MP-0137,STSU202,Striker,Sweatshirts,35.3,40.52,33.12,57.12,69.51,66.35,63.32,60.91,59.76,35%,35%,35%,35%,35%,1.56,above market
+MP-0138,STSU253,Trailer 2.0,Sweatshirts,26.8,26.36,20.91,36.06,56.43,53.27,50.24,47.83,46.68,35%,35%,35%,35%,35%,1.91,above market
+MP-0139,STSU204,Trucker 2.0,Sweatshirts,26.45,25.8,20.7,35.7,55.9,52.74,49.71,47.29,46.14,35%,35%,35%,35%,35%,1.93,above market
+MP-0140,STSU256,Voicer,Sweatshirts,25.25,31.29,24.84,42.84,54.05,50.89,47.86,45.44,44.3,35%,35%,35%,35%,35%,1.53,above market
+MP-0141,STTU078,Asher,T-shirts,13.45,15.25,11.39,20.71,35.9,32.74,29.71,27.29,26.14,35%,35%,35%,35%,35%,1.95,above market
+MP-0142,STUB103,Baby Body,T-shirts,6.4,6.62,4.49,9.04,25.05,21.89,18.86,16.44,15.3,35%,35%,35%,35%,35%,2.85,above market
+MP-0143,STTB918,Baby Creator,T-shirts,4.65,5.02,3.59,6.66,22.36,19.2,16.17,13.75,12.6,35%,35%,35%,35%,35%,3.22,above market
+MP-0144,STTU263,Blaker,T-shirts,8.95,10.31,7.59,13.8,28.97,25.81,22.78,20.37,19.22,35%,35%,35%,35%,35%,2.21,above market
+MP-0145,STTU959,Blaster 2.0,T-shirts,10.1,11.5,7.87,15.59,30.74,27.58,24.55,22.14,20.99,35%,35%,35%,35%,35%,2.13,above market
+MP-0146,STTU964,Breezer,T-shirts,6.05,7.03,5.04,9.28,24.51,21.35,18.32,15.91,14.76,35%,35%,35%,35%,35%,2.61,above market
+MP-0147,STTU170,Crafter,T-shirts,6.1,5.7,4.35,7.85,24.59,21.43,18.4,15.98,14.84,35%,35%,35%,35%,35%,3.23,above market
+MP-0148,STTU976,Crafter Vintage,T-shirts,7.85,9.85,7.73,13.33,27.28,24.12,21.09,18.67,17.53,35%,35%,35%,35%,35%,2.14,above market
+MP-0149,STTU169,Creator 2.0,T-shirts,7.85,6.96,5.04,9.4,27.28,24.12,21.09,18.67,17.53,35%,35%,35%,35%,35%,3.03,above market
+MP-0150,STTU199,Creator 2.0 Long Sleeve,T-shirts,9.25,9.4,7.18,13.09,29.43,26.27,23.24,20.83,19.68,35%,35%,35%,35%,35%,2.47,above market
+MP-0151,STTU788,Freestyler,T-shirts,12.4,14.11,10.35,18.92,34.28,31.12,28.09,25.67,24.53,35%,35%,35%,35%,35%,1.99,above market
+MP-0152,STTU200,Freestyler Long Sleeve,T-shirts,14.65,16.13,12.49,22.61,37.74,34.58,31.55,29.14,27.99,35%,35%,35%,35%,35%,1.96,above market
+MP-0153,STTU280,Freestyler Super Vintage,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0154,STTU073,Freestyler Vintage,T-shirts,12.55,15.67,12.35,21.3,34.51,31.35,28.32,25.91,24.76,35%,35%,35%,35%,35%,1.81,above market
+MP-0155,STTU277,Hazener,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0156,STTU258,Hypster,T-shirts,8.4,10.51,7.87,14.28,28.13,24.97,21.94,19.52,18.37,35%,35%,35%,35%,35%,2.09,above market
+MP-0157,STTK184,Mini Creator 2.0,T-shirts,4.95,5.02,3.73,6.9,22.82,19.66,16.63,14.21,13.07,35%,35%,35%,35%,35%,3.31,above market
+MP-0158,STTU787,RE-Creator,T-shirts,5.55,6.96,5.45,9.4,23.74,20.58,17.55,15.14,13.99,35%,35%,35%,35%,35%,2.52,above market
+MP-0159,STTU272,Reeser,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0160,STTU758,Rocker,T-shirts,6.13,4.93,3.56,6.61,24.63,21.47,18.44,16.03,14.88,35%,35%,35%,35%,35%,3.74,above market
+MP-0161,STTM558,Shifts Dry,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0162,STTU171,Sparker 2.0,T-shirts,10.6,10.75,7.66,14.99,31.51,28.35,25.32,22.91,21.76,35%,35%,35%,35%,35%,2.36,above market
+MP-0163,STTM562,Stanley Presenter,T-shirts,7.45,9.39,6.49,12.73,26.67,23.5,20.48,18.06,16.91,35%,35%,35%,35%,35%,2.18,above market
+MP-0164,STTM560,Stanley Shuffler,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0165,STTM961,Stanley Stancer,T-shirts,5.75,6.5,4.9,8.93,24.05,20.89,17.86,15.44,14.3,35%,35%,35%,35%,35%,2.75,above market
+MP-0166,STTW963,Stella Ava,T-shirts,5.4,6.04,4.62,8.33,23.51,20.35,17.32,14.91,13.76,35%,35%,35%,35%,35%,2.87,above market
+MP-0167,STTW089,Stella Collider,T-shirts,10.2,9.4,7.18,13.09,30.9,27.74,24.71,22.29,21.14,35%,35%,35%,35%,35%,2.63,above market
+MP-0168,STTW038,Stella Dancer,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0169,STTW013,Stella Dreamer,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0170,STTW174,Stella Ella,T-shirts,6.05,6.87,5.11,9.28,24.51,21.35,18.32,15.91,14.76,35%,35%,35%,35%,35%,2.67,above market
+MP-0171,STTW264,Stella Etta,T-shirts,6.95,8.03,5.87,10.71,25.9,22.74,19.71,17.29,16.14,35%,35%,35%,35%,35%,2.45,above market
+MP-0172,STTW079,Stella Expresser 2.0,T-shirts,6.15,5.88,4.35,7.85,24.67,21.5,18.48,16.06,14.91,35%,35%,35%,35%,35%,3.14,above market
+MP-0173,STTW176,Stella Isla,T-shirts,5.55,6.21,4.69,8.57,23.74,20.58,17.55,15.14,13.99,35%,35%,35%,35%,35%,2.83,above market
+MP-0174,STTW962,Stella Mia,T-shirts,5.25,5.86,4.49,8.09,23.28,20.12,17.09,14.67,13.53,35%,35%,35%,35%,35%,2.92,above market
+MP-0175,STTW084,Stella Minter,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0176,STTW172,Stella Muser,T-shirts,6.75,6.79,5.04,9.4,25.59,22.43,19.4,16.98,15.84,35%,35%,35%,35%,35%,2.86,above market
+MP-0177,STTW219,Stella Muser Long Sleeve,T-shirts,9.25,9.66,7.18,13.09,29.43,26.27,23.24,20.83,19.68,35%,35%,35%,35%,35%,2.4,above market
+MP-0178,STTW175,Stella Nova,T-shirts,6.8,7.55,5.8,10.47,25.67,22.5,19.48,17.06,15.91,35%,35%,35%,35%,35%,2.58,above market
+MP-0179,STTW283,Stella Nova Vintage,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0180,STTW259,Stella Raya,T-shirts,7.0,8.91,6.56,11.9,25.97,22.81,19.78,17.37,16.22,35%,35%,35%,35%,35%,2.22,above market
+MP-0181,STTW112,Stella Rounder Slub,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0182,STTW173,Stella Serena,T-shirts,5.55,5.7,4.35,7.85,23.74,20.58,17.55,15.14,13.99,35%,35%,35%,35%,35%,3.08,above market
+MP-0183,STTW021,Stella Singer,T-shirts,,,,,,,,,,,,,,,,quote on inquiry
+MP-0184,STDW144,Stella Spinner,T-shirts,,,,,,,,,,,,,,,,quote on inquiry

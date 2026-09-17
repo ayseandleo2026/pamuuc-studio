@@ -29,6 +29,15 @@ const read = (p) => readFileSync(join(ROOT, p), 'utf8');
 const json = (p) => JSON.parse(read(p));
 const abs = (u) => site.origin + u;
 
+/* The merchandise side is drawn by the approved mockup's own renderers — see
+   tools/merch-render.mjs for why, and tools/merch-routes.mjs for where each
+   page lives. */
+const { buildMerch } = await import('./build-merch.mjs');
+const { merchJS, MERCH_CSS } = await import('./merch-bundle.mjs');
+const { createHash } = await import('node:crypto');
+const { createRequire } = await import('node:module');
+const require = createRequire(import.meta.url);
+
 /* ── tiny helpers ────────────────────────────────────────────────────────── */
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const attr = (s = '') => esc(s);
@@ -41,10 +50,88 @@ const humanDate = (iso, loc) =>
   new Date(iso + 'T09:00:00Z').toLocaleDateString(DATE_FMT[loc], { day: 'numeric', month: 'long', year: 'numeric' });
 
 /* ── URL map ─────────────────────────────────────────────────────────────── */
-const homeURL = (loc) => site.locales[loc].prefix;
+/* The root is the two-door chooser now, so the custom uniforms page — which
+   used to BE the root — has its own address. This was decided knowing it costs
+   the ranking the root currently holds: a chooser has almost nothing to rank
+   on, and there is no 301 to be had, because `/` still has to serve something.
+   The transfer rides on internal linking instead. */
+const homeURL = (loc) => site.locales[loc].prefix + 'custom-uniforms/';
+const chooserURL = (loc) => site.locales[loc].prefix;
 const blogURL = (loc) => site.locales[loc].blog;
 const postURL = (key, loc) => blogURL(loc) + site.postSlugs[key][loc] + '/';
 const legalURL = (loc) => site.legalPrefix[loc];
+
+/* Built before the cluster list, because the merchandise pages bring their own
+   clusters — one per page id, holding that page's URL in all five languages. */
+const MERCH = buildMerch({ ROOT, site, LOCALES, intakeEndpoint: site.intake.endpoint });
+
+/* The runtime bundle and the per-language copy files are built here, before
+   any page, so their content hash can go in the URL every page references.
+   Without it a returning visitor keeps running the previous deploy's
+   JavaScript — a browser has no reason to re-fetch a URL that never changed —
+   which is how a fixed bug comes back for exactly the people who saw it.
+
+   The copy is decoded on the way out: the builder's keys come from raw HTML
+   where "&" is "&amp;", and the runtime matches against DOM text where it is
+   not, so an entity in a key would never match anything on the page. */
+/* The consent bar's own rules, taken from the site stylesheet so the two
+   banners look the same on both sides rather than drifting apart. */
+function consentCSS() {
+  const css = readFileSync(join(ROOT, 'src/css/site.css'), 'utf8');
+  const out = [];
+  for (const m of css.matchAll(/(^|\})([^{}]*consent-bar[^{}]*)\{([^}]*)\}/g)) {
+    out.push(`${m[2].trim()}{${m[3].trim()}}`);
+  }
+  return out.join('\n');
+}
+
+const MERCH_ASSETS = (() => {
+  const js = merchJS({
+    ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
+    intake: site.intake.endpoint,
+    covers: JSON.parse(readFileSync(join(ROOT, 'content/merch.covers.json'), 'utf8')).covers,
+    manifest: JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8')),
+  });
+  const decode = (t) => String(t)
+    .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, '\u00a0')
+    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n));
+  /* Everything the runtime needs to translate a redraw, which is everything
+     translate() in tools/merch-strings.mjs uses at build time. Shipping only
+     the exact map was a silent half-translation: the patterns stayed behind,
+     so a page was correct until app.js redrew it and every generated label —
+     "20 options available" on all 31 product cards and every product page —
+     came back English in all four languages. */
+  const colourNames = JSON.parse(readFileSync(join(ROOT, 'content/merch.colours.json'), 'utf8'));
+  const copy = {};
+  for (const loc of LOCALES) {
+    const d = MERCH.dicts[loc];
+    if (!d || loc === DEFAULT) continue;
+    const real = {};
+    for (const [k, v] of Object.entries(d.copy || d)) { if (v && v !== k) real[decode(k)] = decode(v); }
+    if (!Object.keys(real).length) continue;
+    copy[loc] = `window.__MERCH_COPY__=${JSON.stringify(real)};`
+      + `window.__MERCH_PATTERNS__=${JSON.stringify((d.patterns || []).map(([re, to]) => [re, decode(to)]))};`
+      + `window.__MERCH_PREP__=${JSON.stringify(d.colourPreposition || 'in')};`
+      + `window.__MERCH_COLOURS__=${JSON.stringify(colourNames)};`;
+  }
+  /* The runtime bundle is assembled from a template literal, and a lone \n or
+     backtick in that literal collapses at build time and cuts a string in half.
+     That has happened three times, and every time the build stayed green while
+     the browser got a SyntaxError and no interactivity at all. So the bundle is
+     parsed here before it is written: a broken one fails the build. */
+  try {
+    new (require('node:vm').Script)(js, { filename: 'merch.js' });
+  } catch (e) {
+    const line = Number((/merch\.js:(\d+)/.exec(e.stack || '') || [])[1]);
+    const around = line ? js.split('\n').slice(Math.max(0, line - 3), line + 2).join('\n') : '';
+    throw new Error(`the merchandise bundle does not parse: ${e.message}`
+      + (around ? `\n  near line ${line}:\n${around}` : ''));
+  }
+
+  const h = (t) => createHash('sha1').update(t).digest('hex').slice(0, 10);
+  return { js, copy, jsHash: h(js), copyHash: Object.fromEntries(Object.entries(copy).map(([l, t]) => [l, h(t)])) };
+})();
 
 const clusters = [
   { id: 'home', type: 'page', priority: '1.0', urls: Object.fromEntries(LOCALES.map((l) => [l, homeURL(l)])) },
@@ -54,6 +141,7 @@ const clusters = [
     urls: Object.fromEntries(LOCALES.map((l) => [l, postURL(key, l)])),
   })),
   { id: 'legal', type: 'page', noindex: true, urls: Object.fromEntries(LOCALES.map((l) => [l, legalURL(l)])) },
+  ...MERCH.clusters,
 ];
 
 /* ── content ─────────────────────────────────────────────────────────────── */
@@ -182,8 +270,21 @@ const readTime = (post, loc) => `${Math.max(2, Math.round(wordCount(post) / 200)
 /* ── layout ──────────────────────────────────────────────────────────────── */
 const CRITICAL = read('src/css/critical.css').replace(/\/\*[\s\S]*?\*\//g, '').trim();
 
-function head({ loc, url, title, description, ogTitle, ogDescription, cluster, image, type = 'website', extraLD = [], preloadImage, article }) {
-  const alternates = cluster
+function head({ loc, url, title, description, ogTitle, ogDescription, cluster, image, type = 'website', extraLD = [], preloadImage, article, merch }) {
+  /* The merchandise pages carry the mockup's stylesheet, which is the design
+     that was signed off; the custom uniforms side keeps its own. They are
+     separate files rather than one merged sheet because the two sides share
+     no classes and merging them would double what either has to download. */
+  const stylesheet = merch ? '/assets/css/merch.css' : '/assets/css/site.css';
+  const script = merch ? `/assets/js/merch.${MERCH_ASSETS.jsHash}.js` : '/assets/js/site.js';
+  /* the app's own strings are English; a non-English page loads its copy first */
+  const copyScript = merch && MERCH_ASSETS.copyHash[loc]
+    ? `<script defer src="/assets/js/merch-copy.${loc}.${MERCH_ASSETS.copyHash[loc]}.js"></script>\n` : '';
+  /* x-default only when there IS a default URL. The 404 page passes a cluster
+     with no urls at all, and appending the line unconditionally produced
+     href="https://pamuuc-studio.comundefined" — the one malformed alternate on
+     the site. */
+  const alternates = cluster && cluster.urls && cluster.urls[DEFAULT]
     ? LOCALES.filter((l) => cluster.urls[l]).map((l) => `<link rel="alternate" hreflang="${l}" href="${abs(cluster.urls[l])}">`).join('\n')
       + `\n<link rel="alternate" hreflang="x-default" href="${abs(cluster.urls[DEFAULT])}">`
     : '';
@@ -213,7 +314,7 @@ ${LOCALES.filter((l) => l !== loc).map((l) => `<meta property="og:locale:alterna
 ${article ? `<meta property="article:published_time" content="${article.published}T09:00:00+01:00">
 <meta property="article:modified_time" content="${article.modified}T09:00:00+01:00">
 <meta property="article:author" content="${attr(article.author)}">` : ''}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action https://formspree.io; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' ${site.intake.endpoint} https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action 'self' ${site.intake.endpoint}; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#FBF8F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0C1413" media="(prefers-color-scheme: dark)">
@@ -224,9 +325,15 @@ ${article ? `<meta property="article:published_time" content="${article.publishe
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/gilmer-light.woff2" crossorigin>
 ${preloadImage || ''}
 <style>${CRITICAL}</style>
-<link rel="preload" as="style" href="/assets/css/site.css" data-css>
-<noscript><link rel="stylesheet" href="/assets/css/site.css"></noscript>
-<script defer src="/assets/js/site.js"></script>
+${merch
+  /* The preload-and-promote trick below is driven by site.js, and the
+     merchandise pages do not load site.js — they load the app. Without the
+     promotion the stylesheet never applies and the page renders unstyled, so
+     this side asks for it plainly. */
+  ? `<link rel="stylesheet" href="${stylesheet}">`
+  : `<link rel="preload" as="style" href="${stylesheet}" data-css>
+<noscript><link rel="stylesheet" href="${stylesheet}"></noscript>`}
+${copyScript}<script defer src="${script}"></script>
 ${extraLD.map((o) => `<script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n</script>`).join('\n')}
 </head>
 <body data-ga="${attr(site.analytics.ga4)}">
@@ -306,6 +413,21 @@ function header(loc, current) {
 </header>`;
 }
 
+/* The consent bar, as its own function so both sides of the site can use it.
+   It used to be inline in footer(), which the merchandise pages do not call —
+   so 280 pages had no banner and, because the analytics loader is gated on it,
+   no analytics either. */
+function consentBar(loc) {
+  return `<div class="consent-bar" data-consent hidden role="region" aria-label="${attr(S(loc).cookieText).slice(0, 60)}">
+<p class="consent-bar__t">${esc(S(loc).cookieText)}</p>
+<p class="consent-bar__l"><a href="${legalURL(loc)}#cookies">${esc(S(loc).legal)}</a></p>
+<div class="consent-bar__a">
+<button class="btn btn--primary btn--sm" data-consent-action="granted">${esc(S(loc).cookieAccept)}</button>
+<button class="btn btn--ghost btn--sm" data-consent-action="denied">${esc(S(loc).cookieReject)}</button>
+</div>
+</div>`;
+}
+
 function footer(loc) {
   const h = HOME[loc], str = S(loc);
   const cols = [
@@ -336,14 +458,7 @@ ${cols.map((c) => `<div><h2>${esc(c.title)}</h2><ul>${c.links.map((l) => `<li><a
 </div>
 </div>
 </footer>
-<div class="consent-bar" data-consent hidden role="region" aria-label="${attr(S(loc).cookieText).slice(0, 60)}">
-<p class="consent-bar__t">${esc(S(loc).cookieText)}</p>
-<p class="consent-bar__l"><a href="${legalURL(loc)}#cookies">${esc(S(loc).legal)}</a></p>
-<div class="consent-bar__a">
-<button class="btn btn--primary btn--sm" data-consent-action="granted">${esc(S(loc).cookieAccept)}</button>
-<button class="btn btn--ghost btn--sm" data-consent-action="denied">${esc(S(loc).cookieReject)}</button>
-</div>
-</div>
+${consentBar(loc)}
 </body>
 </html>`;
 }
@@ -778,6 +893,7 @@ ${h.contact.paras.slice(0, 1).map((p) => `<p class="lede ask-d">${esc(p)}</p>`).
 ${h.contact.paras.slice(1).map((p) => `<p class="ask-sup bf-meet">${esc(p)}</p>`).join('')}
 <form class="bf" data-form action="${attr(site.form.endpoint)}" method="post"
       data-sending="${attr(str.formSending)}" data-ok="${attr(str.formOk)}" data-error="${attr(str.formError)}">
+<input type="hidden" name="locale" value="${loc}">
 <div class="bf-g">
 ${field('name', 'name', 'text', true, ' autocomplete="name" maxlength="100"')}
 ${field('email', 'email', 'email', true, ' autocomplete="email" maxlength="120" inputmode="email" autocapitalize="none"')}
@@ -832,7 +948,7 @@ function renderBlogIndex(loc) {
 + header(loc, cluster) + `
 <main id="main" data-page="blog">
 <section class="pub-sec pub-sec--top"><div class="wrap">
-<nav class="crumb" aria-label="Breadcrumb">
+<nav class="crumb" aria-label="${attr(S(loc).breadcrumb)}">
 <a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a><span class="crumb-sep">/</span><span class="crumb-here">${esc(ui.crumbBlog || str.journal)}</span>
 </nav>
 ${chapterHead('\u2014', ui.blogKicker, ui.blogH1, ui.blogLead, { h1: true })}
@@ -927,7 +1043,7 @@ function renderPost(key, loc) {
 <main id="main" data-page="post">
 <article class="po">
 <section class="pub-sec pub-sec--top"><div class="wrap">
-<nav class="crumb" aria-label="Breadcrumb">
+<nav class="crumb" aria-label="${attr(S(loc).breadcrumb)}">
 <a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a><span class="crumb-sep">/</span>
 <a href="${blogURL(loc)}">${esc(ui.crumbBlog || str.journal)}</a><span class="crumb-sep">/</span>
 <span class="crumb-here">${esc(p.title)}</span>
@@ -1013,7 +1129,7 @@ ${s.blocks.map((b) => (b.t === 'h' ? `<h3>${esc(b.v)}</h3>` : b.t === 'ul' ? `<u
 </section>`;
   return head({ loc, url, title: `${str.legal} | ${site.brand.plain}`, description: str.legalIntro, cluster })
 + header(loc, cluster) + `
-<nav class="crumbs wrap" aria-label="Breadcrumb">
+<nav class="crumbs wrap" aria-label="${attr(S(loc).breadcrumb)}">
 <ol><li><a href="${homeURL(loc)}">${esc(UI[loc].crumbHome || 'Home')}</a></li><li aria-current="page">${esc(str.legal)}</li></ol>
 </nav>
 <main id="main">
@@ -1200,6 +1316,8 @@ for (const loc of LOCALES) {
   }
   pages.push({ url: legalURL(loc), html: renderLegal(loc), cluster: clusters.find((c) => c.id === 'legal'), loc });
 }
+pages.push(...MERCH.renderPages((o) => head({ ...o, merch: true }), consentBar));
+for (const p of MERCH.problems) errors.push(`merchandise: ${p}`);
 const KNOWN_URLS = new Set([...pages.map((p) => p.url), ...Object.keys(site.legacyRedirects), '/404.html']);
 
 for (const p of pages) audit(p.url, p.html, p.cluster, p.loc);
@@ -1224,12 +1342,34 @@ if (!CHECK && errors.length === 0) {
 
   cpSync(join(ROOT, 'src/css/site.css'), join(OUT, 'assets/css/site.css'));
   cpSync(join(ROOT, 'src/js/site.js'), join(OUT, 'assets/js/site.js'));
+  /* The merchandise side ships the mockup's own stylesheet — the signed-off
+     design, unedited — with its webfont faces ahead of it. */
+  /* The mockup carries Gilmer as five base64 @font-face rules, because an
+     Artifact cannot fetch a font from anywhere. This site already serves those
+     exact five faces as .woff2 files, so the merchandise sheet points at them:
+     129KB smaller, cached across both sides of the site, and it stops the CSP
+     (font-src 'self') from refusing every one of them. */
+  const FACES = { 300: 'light', 400: 'regular', 500: 'medium', 700: 'bold', 800: 'heavy' };
+  const fontCSS = Object.entries(FACES).map(([weight, name]) =>
+    `@font-face{font-family:"Gilmer";font-weight:${weight};font-style:normal;font-display:swap;` +
+    `src:url("/assets/fonts/gilmer-${name}.woff2") format("woff2")}`).join('\n');
+  writeFile('assets/css/merch.css',
+    fontCSS + '\n' +
+    readFileSync(join(ROOT, 'mockup/app.css'), 'utf8') + '\n' + MERCH_CSS + '\n' + consentCSS());
+  writeFile(`assets/js/merch.${MERCH_ASSETS.jsHash}.js`, MERCH_ASSETS.js);
+  for (const [loc, text] of Object.entries(MERCH_ASSETS.copy)) {
+    writeFile(`assets/js/merch-copy.${loc}.${MERCH_ASSETS.copyHash[loc]}.js`, text);
+  }
   cpSync(join(ROOT, 'src/fonts'), join(OUT, 'assets/fonts'), { recursive: true });
   cpSync(join(ROOT, 'src/brand'), join(OUT, 'assets/brand'), { recursive: true });
   /* src/images/incoming holds full-resolution originals for future crops.
      They are referenced by nothing, so they must not be published. */
   cpSync(join(ROOT, 'src/images'), join(OUT, 'assets/images'), { recursive: true,
-    filter: (src) => !src.includes(`${sep}images${sep}incoming`) });
+    /* incoming/ holds full-resolution originals for future crops, and the
+       catalogue manifest is a build input — 1.05MB that nothing on the site
+       ever requests. Neither belongs in what gets published. */
+    filter: (src) => !src.includes(`${sep}images${sep}incoming`)
+      && !src.endsWith(`${sep}manifest.json`) });
   cpSync(join(ROOT, 'src/static'), OUT, { recursive: true });
 }
 

@@ -1,0 +1,60 @@
+field,allowed value,label
+row_type,product,A product row
+row_type,variant,A variant row
+row_type,image,A image row
+row_type,decoration,A decoration row
+row_type,deco_method,A deco_method row
+row_type,deco_rate,A deco_rate row
+colours / colour,white,Optic white
+colours / colour,ecru,Ecru
+colours / colour,sand,Sand
+colours / colour,clay,Clay
+colours / colour,navy,Deep navy
+colours / colour,ink,Ink
+colours / colour,forest,Forest
+colours / colour,olive,Olive
+colours / colour,stone,Stone grey
+colours / colour,maritime,Marítim blue
+colours / colour,terracotta,Terracotta
+colours / colour,black,Black
+personalisation_methods / method,embroidery,Embroidery
+personalisation_methods / method,screen,Screen print
+personalisation_methods / method,woven_label,Woven label
+personalisation_methods / method,heat,Heat transfer
+personalisation_methods / method,dtf,DTF
+personalisation_methods / method,dtg,DTG
+personalisation_positions / position,left_chest,Left chest
+personalisation_positions / position,nape,Nape of neck
+personalisation_positions / position,cuff,Cuff
+personalisation_positions / position,pocket,Pocket
+personalisation_positions / position,hem,Hem
+personalisation_positions / position,sleeve,Sleeve
+sizes,XS,XS
+sizes,S,S
+sizes,M,M
+sizes,L,L
+sizes,XL,XL
+sizes,XXL,XXL
+sizes,One size,Unsized product
+status,draft,Draft
+status,published,Published
+status,hidden,Hidden
+status,archived,Archived
+artwork_required / provisional,yes,yes
+artwork_required / provisional,no,no
+size_band,small,small
+size_band,medium,medium
+size_band,large,large
+priced_by,size,priced by size
+priced_by,quantity,priced by quantity
+price breaks,price_25,Unit price at 25+ pieces
+price breaks,price_50,Unit price at 50+ pieces
+price breaks,price_100,Unit price at 100+ pieces
+price breaks,price_250,Unit price at 250+ pieces
+price breaks,price_500,Unit price at 500+ pieces
+category,Bags,existing category
+category,Headwear,existing category
+category,Apparel,existing category
+category,Drinkware,existing category
+category,Stationery,existing category
+category,Service,existing category

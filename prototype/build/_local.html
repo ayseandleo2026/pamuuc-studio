@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>:root{color-scheme:light}body{margin:0;padding:0;background:#faf9f5;color:#141413}img{max-width:100%}</style>
+</head><body>
+<title>PAMUUC Suite</title>
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="app.css">
+<div id="root"><noscript>This prototype needs JavaScript.</noscript></div>
+<script>
+/* If any part of the app fails to load, say so instead of showing a blank page. */
+window.addEventListener('error', function(e){
+  var t = e.target;
+  if(!t || (t.tagName !== 'SCRIPT' && t.tagName !== 'LINK')) return;
+  var root = document.getElementById('root');
+  if(root && !root.dataset.failed){
+    root.dataset.failed = '1';
+    root.innerHTML = '<div style="max-width:640px;margin:80px auto;padding:0 24px;'
+      + 'font:16px/1.5 system-ui,sans-serif"><strong>The prototype could not finish loading.</strong>'
+      + '<p>' + (t.src || t.href || 'a file') + ' did not load. Reload the page to try again.</p></div>';
+  }
+}, true);
+</script>
+<script src="data.js"></script>
+<script src="catalogue.js"></script>
+<script src="app.js"></script>
+</body></html>

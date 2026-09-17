@@ -1,0 +1,9 @@
+# Copy to .dev.vars (which is gitignored) and fill in.
+# Used only by `wrangler dev` for local testing. Production values are set with
+# `wrangler secret put` and never live in a file.
+SMTP_HOST="smtp.purelymail.com"
+SMTP_PORT="465"
+SMTP_USER="simone@pamuuc-studio.com"
+SMTP_PASS="the app password, not the account password"
+# Optional for local runs; leave unset to skip the sheet.
+SHEET_URL=""

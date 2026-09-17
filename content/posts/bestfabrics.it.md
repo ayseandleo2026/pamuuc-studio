@@ -80,4 +80,4 @@ Concludi la valutazione con due opzioni per ogni capo, non con un unico vincitor
 
 Realizza prototipi finiti, perché un campione di tessuto non mostra l’effetto completo di cartamodello, fodera, cuciture, tasche, finiture e stiratura. Esaminali nella luce e nei movimenti reali del ruolo, poi sottoponili al percorso di cura previsto prima dell’approvazione.
 
-Il risultato è una decisione tracciabile che gestione operativa, design, lavanderia e acquisti possono esaminare insieme. Usa il [processo di progettazione PAMUUC](/it/#process) per collegare la selezione allo sviluppo dei capi, oppure [richiedi un primo incontro](/it/#contact) per creare una scheda di valutazione per ogni ruolo.
+Il risultato è una decisione tracciabile che gestione operativa, design, lavanderia e acquisti possono esaminare insieme. Usa il [processo di progettazione PAMUUC](/it/custom-uniforms/#how) per collegare la selezione allo sviluppo dei capi, oppure [richiedi un primo incontro](/it/custom-uniforms/#brief) per creare una scheda di valutazione per ogni ruolo.
