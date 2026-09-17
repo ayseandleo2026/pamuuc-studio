@@ -175,7 +175,8 @@
    "faqMore": "Show all questions",
    "faqLess": "Show fewer questions",
    "sectionShow": "Show this section",
-   "sectionHide": "Hide this section"
+   "sectionHide": "Hide this section",
+   "breadcrumb": "Breadcrumb"
   },
   "es": {
    "takeaways": "Puntos clave",
@@ -211,7 +212,8 @@
    "faqMore": "Ver todas las preguntas",
    "faqLess": "Ver menos preguntas",
    "sectionShow": "Ver esta sección",
-   "sectionHide": "Ocultar esta sección"
+   "sectionHide": "Ocultar esta sección",
+   "breadcrumb": "Migas de pan"
   },
   "fr": {
    "takeaways": "À retenir",
@@ -247,7 +249,8 @@
    "faqMore": "Voir toutes les questions",
    "faqLess": "Voir moins de questions",
    "sectionShow": "Voir cette section",
-   "sectionHide": "Masquer cette section"
+   "sectionHide": "Masquer cette section",
+   "breadcrumb": "Fil d'Ariane"
   },
   "it": {
    "takeaways": "In sintesi",
@@ -283,7 +286,8 @@
    "faqMore": "Mostra tutte le domande",
    "faqLess": "Mostra meno domande",
    "sectionShow": "Mostra questa sezione",
-   "sectionHide": "Nascondi questa sezione"
+   "sectionHide": "Nascondi questa sezione",
+   "breadcrumb": "Percorso"
   },
   "de": {
    "takeaways": "Das Wichtigste",
@@ -319,7 +323,8 @@
    "faqMore": "Alle Fragen anzeigen",
    "faqLess": "Weniger Fragen anzeigen",
    "sectionShow": "Diesen Abschnitt anzeigen",
-   "sectionHide": "Diesen Abschnitt ausblenden"
+   "sectionHide": "Diesen Abschnitt ausblenden",
+   "breadcrumb": "Brotkrümelnavigation"
   }
  },
  "legacyRedirects": {

@@ -234,6 +234,30 @@
  },
  "patterns": [
   [
+   "^1 colour$",
+   "1 color"
+  ],
+  [
+   "^1 option available$",
+   "1 opción disponible"
+  ],
+  [
+   "^1 style$",
+   "1 modelo"
+  ],
+  [
+   "^1 product$",
+   "1 producto"
+  ],
+  [
+   "^1 piece$",
+   "1 pieza"
+  ],
+  [
+   "^1 family$",
+   "1 familia"
+  ],
+  [
    "^(\\d+) colours?$",
    "$1 colores"
   ],

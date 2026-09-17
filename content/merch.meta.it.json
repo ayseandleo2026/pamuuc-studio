@@ -1,63 +1,243 @@
 {
- "_comment": "Merchandise page titles and meta descriptions, it. Machine translated by Claude and NOT yet checked by a native speaker. Title 15-65 chars, description 50-170 — the build audit enforces both.",
+ "_comment": "Reviewed PAMUUC SEO copy, 17 September 2026. pages contains explicit titles and descriptions for all 56 current routes and takes precedence over templates. Review metadata for each new route before publication. Product descriptions in the fallback builder still come from catalogue copy; the product description template is reserved. Keep route IDs and placeholders intact.",
  "pages": {
   "chooser": {
-   "title": "PAMUUC | Divise su misura e merchandising",
-   "description": "Divise sviluppate a partire da come lavora il suo team, e merchandising di marca che personalizza lei. Due servizi da uno studio di Barcellona."
+   "title": "Divise e gadget personalizzati, PAMUUC Barcellona",
+   "description": "Divise su misura e gadget personalizzati per aziende. Scelga capi progettati per il suo team o prodotti a catalogo con il suo logo."
   },
   "merch": {
-   "title": "Merchandising di marca per aziende | PAMUUC",
-   "description": "Abbigliamento personalizzato per personale, eventi e merchandising aziendale. Scelga il capo, il tessuto, il colore e la personalizzazione: preventiviamo a mano."
+   "title": "Gadget personalizzati e abbigliamento aziendale, PAMUUC",
+   "description": "Abbigliamento e gadget aziendali personalizzati per team ed eventi. Confronti i prodotti, aggiunga il logo e richieda un preventivo. Da 1 pezzo."
   },
   "products": {
-   "title": "Tutto l’abbigliamento personalizzabile | PAMUUC",
-   "description": "Ogni capo a catalogo, confrontato su ciò che decide davvero: la grammatura del tessuto, la personalizzazione che accetta e la quantità di partenza."
+   "title": "Abbigliamento e accessori personalizzati, PAMUUC",
+   "description": "Magliette, felpe, polo, giacche e borse personalizzate per aziende. Confronti vestibilità, tessuti e opzioni del logo e richieda un preventivo."
   },
   "collections": {
-   "title": "Merchandising per famiglia di prodotto | PAMUUC",
-   "description": "Sette famiglie di abbigliamento di marca. Ne apra una per confrontare i prodotti, le quantità di partenza e la personalizzazione di ogni capo."
+   "title": "Abbigliamento personalizzato per categoria, PAMUUC",
+   "description": "Scopra sette categorie di abbigliamento e accessori personalizzati. Confronti prodotti e tecniche prima di richiedere un preventivo."
   },
   "method": {
-   "title": "Metodi di personalizzazione e file | PAMUUC",
-   "description": "Ricamo, serigrafia, transfer e stampa: a cosa serve ciascuno, quanto costa prepararlo e quale file ci serve da lei."
+   "title": "Ricamo, serigrafia e stampa su tessuto, PAMUUC",
+   "description": "Confronti ricamo, serigrafia e stampa digitale per l’abbigliamento aziendale. Posizioni del logo, file necessari e costi di preparazione spiegati."
   },
   "howto": {
-   "title": "Come ordinare merchandising | PAMUUC",
-   "description": "Dalla scelta del capo all’approvazione del preventivo: cosa succede a ogni passo, cosa ci serve da lei e quanto tempo richiede."
+   "title": "Come ordinare gadget personalizzati, PAMUUC",
+   "description": "Scelga i prodotti, aggiunga il logo e richieda un preventivo. Scopra verifica, approvazione, pagamento e produzione. Nessun pagamento alla richiesta."
   },
   "merchhelp": {
-   "title": "Assistenza per una richiesta | PAMUUC",
-   "description": "Risposte su quantità, file, consegna e prezzi del merchandising di marca, e un modo per chiederci qualcosa che la pagina non copre."
+   "title": "Assistenza per prodotti personalizzati, PAMUUC",
+   "description": "Dubbi su quantità, file, campioni, prezzi o consegna? Trovi le risposte o contatti il team PAMUUC per la sua richiesta di prodotti personalizzati."
   },
   "quote": {
-   "title": "Richiedere un preventivo | PAMUUC",
-   "description": "Ci dica il capo, la quantità e la personalizzazione: una persona lo preventiva a mano. Non si ordina e non si addebita nulla finché non approva."
+   "title": "Richiedere un preventivo per gadget aziendali, PAMUUC",
+   "description": "Verifichi prodotti, quantità e personalizzazione e richieda un preventivo. Rispondiamo solitamente entro due giorni lavorativi. Nessun ordine o pagamento."
   },
   "about": {
-   "title": "Chi è PAMUUC | Studio a Barcellona",
-   "description": "Uno studio di Barcellona che realizza divise e abbigliamento di marca dal 2019, per team che indossano il proprio lavoro. Chi siamo e come lavoriamo."
+   "title": "PAMUUC, divise e gadget aziendali a Barcellona",
+   "description": "Scopra PAMUUC, lo studio di Barcellona per divise su misura e gadget aziendali. Progettiamo capi per team e personalizziamo prodotti a catalogo."
   },
   "contact": {
-   "title": "Contatti PAMUUC | Barcellona",
-   "description": "Ci dica di cosa ha bisogno e qualcuno lo legge davvero. Divise su misura, merchandising di marca o una domanda su un ordine in corso."
+   "title": "Contatti PAMUUC, divise e gadget personalizzati",
+   "description": "Ci racconti il progetto di divise o gadget aziendali. Indichi prodotti, quantità e data desiderata. Il team PAMUUC risponderà via email."
   },
   "search": {
-   "title": "Cerca merchandising di marca | PAMUUC",
-   "description": "Cerchi nel catalogo per capo, grammatura del tessuto, colore e personalizzazione accettata da ogni prodotto."
+   "title": "Cercare abbigliamento e gadget personalizzati, PAMUUC",
+   "description": "Cerchi prodotti PAMUUC per nome, tipo o riferimento. Trovi abbigliamento e accessori personalizzati, confronti le opzioni e prepari la richiesta."
+  },
+  "product:m_t_shirts": {
+   "title": "Maglietta personalizzata | PAMUUC",
+   "description": "Maglietta personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_polo_shirts": {
+   "title": "Polo personalizzata | PAMUUC",
+   "description": "Polo personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_crewneck_sweatshirts": {
+   "title": "Felpa girocollo personalizzata | PAMUUC",
+   "description": "Felpa girocollo personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_pullover_hoodies": {
+   "title": "Felpa con cappuccio personalizzata | PAMUUC",
+   "description": "Felpa con cappuccio personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_zip_hoodies": {
+   "title": "Felpa con cappuccio e zip personalizzata | PAMUUC",
+   "description": "Felpa con cappuccio e zip personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_zip_sweatshirts": {
+   "title": "Felpa con zip intera personalizzata | PAMUUC",
+   "description": "Felpa con zip intera personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_shirts": {
+   "title": "Camicia personalizzata | PAMUUC",
+   "description": "Camicia personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_tank_tops": {
+   "title": "Canotta personalizzata | PAMUUC",
+   "description": "Canotta personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_fleece_jackets": {
+   "title": "Giacca in pile personalizzata | PAMUUC",
+   "description": "Giacca in pile personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_softshell_jackets": {
+   "title": "Giacca softshell personalizzata | PAMUUC",
+   "description": "Giacca softshell personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_bodywarmers": {
+   "title": "Gilet personalizzato | PAMUUC",
+   "description": "Gilet personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_padded_jackets_parkas": {
+   "title": "Giacca imbottita personalizzata | PAMUUC",
+   "description": "Giacca imbottita personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_light_jackets": {
+   "title": "Giacca casual personalizzata | PAMUUC",
+   "description": "Giacca casual personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_rain_jackets_windbreakers": {
+   "title": "Giacca antivento personalizzata | PAMUUC",
+   "description": "Giacca antivento personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_joggers": {
+   "title": "Pantaloni jogger personalizzati | PAMUUC",
+   "description": "Pantaloni jogger personalizzati per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_long_sleeve_t_shirts": {
+   "title": "Maglietta personalizzata a maniche lunghe | PAMUUC",
+   "description": "Maglietta personalizzata a maniche lunghe per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_long_sleeve_polo_shirts": {
+   "title": "Polo personalizzata a maniche lunghe | PAMUUC",
+   "description": "Polo personalizzata a maniche lunghe per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_quarter_zip_sweatshirts": {
+   "title": "Felpa con mezza zip personalizzata | PAMUUC",
+   "description": "Felpa con mezza zip personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_sherpa_jackets": {
+   "title": "Giacca sherpa personalizzata | PAMUUC",
+   "description": "Giacca sherpa personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_waterproof_jackets": {
+   "title": "Giacca impermeabile personalizzata | PAMUUC",
+   "description": "Giacca impermeabile personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_padded_parkas": {
+   "title": "Parka imbottito personalizzato | PAMUUC",
+   "description": "Parka imbottito personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_sweat_shorts": {
+   "title": "Pantaloncini in felpa personalizzati | PAMUUC",
+   "description": "Pantaloncini in felpa personalizzati per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_baby_bodysuits": {
+   "title": "Body neonato personalizzato | PAMUUC",
+   "description": "Body neonato personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_baby_bibs": {
+   "title": "Bavaglino personalizzato | PAMUUC",
+   "description": "Bavaglino personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_beanies": {
+   "title": "Berretto personalizzato | PAMUUC",
+   "description": "Berretto personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_bucket_hats": {
+   "title": "Cappello da pescatore personalizzato | PAMUUC",
+   "description": "Cappello da pescatore personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_tote_bags": {
+   "title": "Shopper personalizzate con logo | PAMUUC",
+   "description": "Shopper personalizzate per aziende, team ed eventi. Confronti materiali, colori e opzioni di stampa e richieda un preventivo per la quantità desiderata."
+  },
+  "product:m_drawstring_gym_bags": {
+   "title": "Sacca con coulisse personalizzata | PAMUUC",
+   "description": "Sacca con coulisse personalizzata per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_duffle_bags": {
+   "title": "Borsone personalizzato | PAMUUC",
+   "description": "Borsone personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_belt_bags": {
+   "title": "Marsupio personalizzato | PAMUUC",
+   "description": "Marsupio personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "product:m_pencil_cases": {
+   "title": "Astuccio personalizzato | PAMUUC",
+   "description": "Astuccio personalizzato per la sua azienda. Confronti colori, taglie e personalizzazione e richieda un preventivo prima di ordinare."
+  },
+  "collection:t-shirts": {
+   "title": "Magliette personalizzate | PAMUUC",
+   "description": "Magliette personalizzate per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:t-shirts": {
+   "title": "Scegliere: magliette personalizzate | PAMUUC",
+   "description": "Trovi magliette personalizzate per il suo team. Confronti vestibilità, tessuti e opzioni del logo per scegliere il modello adatto."
+  },
+  "collection:polo-shirts": {
+   "title": "Polo personalizzate | PAMUUC",
+   "description": "Polo personalizzate per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:polo-shirts": {
+   "title": "Scegliere: polo personalizzate | PAMUUC",
+   "description": "Scelga polo personalizzate per la sua azienda. Confronti vestibilità, tessuti e opzioni di personalizzazione prima di richiedere un preventivo."
+  },
+  "collection:shirts": {
+   "title": "Camicie personalizzate | PAMUUC",
+   "description": "Camicie personalizzate per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:shirts": {
+   "title": "Scegliere: camicie personalizzate | PAMUUC",
+   "description": "Trovi camicie personalizzate per il suo team. Confronti vestibilità, tessuti e opzioni del logo, poi prepari la richiesta di preventivo."
+  },
+  "collection:sweatshirts": {
+   "title": "Felpe personalizzate | PAMUUC",
+   "description": "Felpe personalizzate per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:sweatshirts": {
+   "title": "Scegliere: felpe personalizzate | PAMUUC",
+   "description": "Scelga felpe personalizzate per il suo team. Confronti modelli con o senza cappuccio, vestibilità e tessuti e prepari la sua richiesta."
+  },
+  "collection:jackets": {
+   "title": "Giacche personalizzate | PAMUUC",
+   "description": "Giacche personalizzate per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:jackets": {
+   "title": "Scegliere: giacche personalizzate | PAMUUC",
+   "description": "Trovi giacche personalizzate per il suo team. Confronti tipi di giacca, tessuti e opzioni del logo prima di richiedere un preventivo."
+  },
+  "collection:joggers-and-shorts": {
+   "title": "Pantaloni e pantaloncini personalizzati | PAMUUC",
+   "description": "Pantaloni e pantaloncini personalizzati per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:joggers-and-shorts": {
+   "title": "Scegliere: pantaloni e pantaloncini personalizzati | PAMUUC",
+   "description": "Scelga pantaloni e pantaloncini personalizzati per il suo team. Confronti modelli, vestibilità e tessuti e aggiunga la selezione alla richiesta."
+  },
+  "collection:accessories": {
+   "title": "Borse e accessori personalizzati | PAMUUC",
+   "description": "Borse e accessori personalizzati per team ed eventi. Confronti modelli, tessuti e opzioni del logo. Scelga la quantità e richieda un preventivo."
+  },
+  "build:accessories": {
+   "title": "Scegliere: borse e accessori personalizzati | PAMUUC",
+   "description": "Trovi borse e accessori personalizzati per la sua azienda. Confronti prodotti, materiali e opzioni del logo e prepari la sua richiesta."
   }
  },
  "templates": {
   "product": {
    "title": "{name} con il suo logo | PAMUUC",
-   "description": ""
+   "description": "{name} per team ed eventi. Confronti le opzioni disponibili e richieda un preventivo per la personalizzazione con il suo logo."
   },
   "collection": {
-   "title": "{name} di marca per aziende | PAMUUC",
-   "description": "{n} {products} in {name}, confrontati sulla stessa base: grammatura del tessuto, personalizzazione accettata e quantità di partenza."
+   "title": "{name} per aziende | PAMUUC",
+   "description": "Scopra {n} {products} nella categoria {name}. Confronti tessuti e opzioni di personalizzazione, poi richieda un preventivo."
   },
   "build": {
-   "title": "Scelga {name} in base a cosa le serve | PAMUUC",
-   "description": "Risponda a quattro domande — chi lo indossa, la vestibilità, la grammatura e la finitura — e i {name} a catalogo si riducono a quello giusto."
+   "title": "Scelga {name} per il suo team | PAMUUC",
+   "description": "Trovi i prodotti adatti al suo team nella categoria {name}. Scelga destinatari, vestibilità, grammatura e finitura per confrontare i modelli."
   }
  },
  "words": {

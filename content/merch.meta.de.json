@@ -1,64 +1,244 @@
 {
- "_comment": "Merchandise page titles and meta descriptions, de. Machine translated by Claude and NOT yet checked by a native speaker. Title 15-65 chars, description 50-170 — the build audit enforces both.",
+ "_comment": "Reviewed PAMUUC SEO copy, 17 September 2026. pages contains explicit titles and descriptions for all 56 current routes and takes precedence over templates. Review metadata for each new route before publication. Product descriptions in the fallback builder still come from catalogue copy; the product description template is reserved. Keep route IDs and placeholders intact.",
  "pages": {
   "chooser": {
-   "title": "PAMUUC | Berufskleidung und Merchandise",
-   "description": "Berufskleidung, entwickelt aus der Arbeit Ihres Teams, und Merchandise, das Sie selbst veredeln. Zwei Leistungen aus einem Studio in Barcelona."
+   "title": "Berufskleidung und Werbeartikel, PAMUUC Barcelona",
+   "description": "Individuelle Berufskleidung und Werbeartikel für Unternehmen. Wählen Sie Kleidung für Ihr Team oder Katalogprodukte mit Ihrem Logo."
   },
   "merch": {
-   "title": "Merchandise mit Logo für Unternehmen | PAMUUC",
-   "description": "Bedruckte Kleidung für Teams, Events und Firmenmerchandise. Wählen Sie Kleidungsstück, Stoff, Farbe und Veredelung — wir kalkulieren von Hand."
+   "title": "Werbeartikel und Werbemittel mit Logo, PAMUUC",
+   "description": "Kleidung und Werbeartikel mit Logo für Teams, Events und Firmengeschenke. Produkte vergleichen, Logo wählen und Angebot anfragen. Ab 1 Stück."
   },
   "products": {
-   "title": "Alle bedruckbaren Kleidungsstücke | PAMUUC",
-   "description": "Jedes Kleidungsstück im Katalog, verglichen nach dem, was wirklich entscheidet: Flächengewicht, mögliche Veredelung und die Menge, ab der es beginnt."
+   "title": "Kleidung und Accessoires mit Logo, PAMUUC",
+   "description": "T-Shirts, Hoodies, Poloshirts, Jacken und Taschen mit Logo für Unternehmen. Schnitte, Stoffe und Logooptionen vergleichen und Angebot anfragen."
   },
   "collections": {
-   "title": "Merchandise nach Produktfamilie | PAMUUC",
-   "description": "Sieben Familien bedruckbarer Kleidung. Öffnen Sie eine, um Produkte, Mindestmengen und die Veredelung jedes Kleidungsstücks zu vergleichen."
+   "title": "Firmenbekleidung nach Kategorie, PAMUUC",
+   "description": "Entdecken Sie sieben Kategorien für Kleidung und Accessoires mit Logo. Vergleichen Sie Produkte und Personalisierungen vor Ihrer Angebotsanfrage."
   },
   "method": {
-   "title": "Veredelungsverfahren und Druckdaten | PAMUUC",
-   "description": "Stickerei, Siebdruck, Transfer und Prägung: wofür sich welches eignet, was die Einrichtung kostet und welche Daten wir von Ihnen brauchen."
+   "title": "Stickerei, Siebdruck und Textildruck, PAMUUC",
+   "description": "Vergleichen Sie Stickerei, Siebdruck und Digitaldruck für Firmenbekleidung. Alles zu Logopositionen, Druckdateien und Einrichtungskosten."
   },
   "howto": {
-   "title": "So bestellen Sie Merchandise | PAMUUC",
-   "description": "Von der Auswahl bis zur Freigabe des Angebots: was in jedem Schritt passiert, was wir von Ihnen brauchen und wie lange das Ganze dauert."
+   "title": "Werbeartikel bestellen: So geht es, PAMUUC",
+   "description": "Produkte wählen, Logo hinzufügen und Angebot anfragen. Erfahren Sie, wie Prüfung, Freigabe, Zahlung und Produktion ablaufen. Keine Zahlung bei Anfrage."
   },
   "merchhelp": {
-   "title": "Hilfe zu einer Anfrage | PAMUUC",
-   "description": "Antworten zu Mengen, Druckdaten, Lieferung und Preisen für Merchandise — und eine Möglichkeit, uns etwas zu fragen, das hier nicht steht."
+   "title": "Hilfe zu Werbeartikeln mit Logo, PAMUUC",
+   "description": "Fragen zu Mengen, Druckdateien, Mustern, Preisen oder Lieferung? Finden Sie Antworten oder lassen Sie sich vom PAMUUC Team beraten."
   },
   "quote": {
-   "title": "Angebot für Merchandise anfragen | PAMUUC",
-   "description": "Nennen Sie Kleidungsstück, Menge und Veredelung — ein Mensch kalkuliert von Hand. Es wird nichts bestellt und nichts berechnet, bis Sie zustimmen."
+   "title": "Angebot für Werbeartikel anfragen, PAMUUC",
+   "description": "Prüfen Sie Produkte, Mengen und Logooptionen und fragen Sie ein Angebot an. Antwort meist innerhalb von zwei Werktagen. Noch keine Bestellung oder Zahlung."
   },
   "about": {
-   "title": "Über PAMUUC | Studio in Barcelona",
-   "description": "Ein Studio in Barcelona, das seit 2019 Berufskleidung und bedruckte Kleidung fertigt, für Teams, die ihre Arbeit tragen. Wer wir sind und wie wir arbeiten."
+   "title": "Über PAMUUC, Berufskleidung und Werbeartikel",
+   "description": "Lernen Sie PAMUUC in Barcelona kennen. Wir entwickeln individuelle Berufskleidung und personalisieren Katalogprodukte für Ihr Unternehmen."
   },
   "contact": {
-   "title": "Kontakt PAMUUC | Barcelona",
-   "description": "Sagen Sie uns, was Sie brauchen — jemand liest es wirklich. Berufskleidung, Merchandise oder eine Frage zu einem laufenden Auftrag."
+   "title": "PAMUUC kontaktieren, Berufskleidung und Werbeartikel",
+   "description": "Beschreiben Sie Ihr Projekt für Berufskleidung oder Werbeartikel. Nennen Sie Produkte, Menge und Wunschtermin. Das PAMUUC Team antwortet per E-Mail."
   },
   "search": {
-   "title": "Merchandise durchsuchen | PAMUUC",
-   "description": "Durchsuchen Sie den Katalog nach Kleidungsstück, Flächengewicht, Farbe und der Veredelung, die jedes Produkt trägt."
+   "title": "Kleidung und Werbeartikel durchsuchen, PAMUUC",
+   "description": "PAMUUC Produkte nach Name, Art oder Referenz suchen. Kleidung und Accessoires mit Logo finden, Optionen vergleichen und eine Anfrage zusammenstellen."
+  },
+  "product:m_t_shirts": {
+   "title": "T-Shirt mit Logo | PAMUUC",
+   "description": "T-Shirt mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_polo_shirts": {
+   "title": "Poloshirt mit Ihrem Logo | PAMUUC",
+   "description": "Poloshirt mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_crewneck_sweatshirts": {
+   "title": "Sweatshirt mit Rundhalsausschnitt und Logo | PAMUUC",
+   "description": "Sweatshirt mit Rundhalsausschnitt und Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_pullover_hoodies": {
+   "title": "Hoodies bedrucken und besticken lassen | PAMUUC",
+   "description": "Hoodies bedrucken oder besticken lassen, für Teams und Unternehmen. Vergleichen Sie Farben, Passformen und Logooptionen und fragen Sie ein Angebot an."
+  },
+  "product:m_zip_hoodies": {
+   "title": "Zip-Hoodie mit Ihrem Logo | PAMUUC",
+   "description": "Zip-Hoodie mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_zip_sweatshirts": {
+   "title": "Sweatjacke mit Ihrem Logo | PAMUUC",
+   "description": "Sweatjacke mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_shirts": {
+   "title": "Hemd mit Logo | PAMUUC",
+   "description": "Hemd mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_tank_tops": {
+   "title": "Tanktop mit Logo | PAMUUC",
+   "description": "Tanktop mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_fleece_jackets": {
+   "title": "Fleecejacke mit Ihrem Logo | PAMUUC",
+   "description": "Fleecejacke mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_softshell_jackets": {
+   "title": "Softshelljacke mit Ihrem Logo | PAMUUC",
+   "description": "Softshelljacke mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_bodywarmers": {
+   "title": "Bodywarmer mit Ihrem Logo | PAMUUC",
+   "description": "Bodywarmer mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_padded_jackets_parkas": {
+   "title": "Steppjacke mit Ihrem Logo | PAMUUC",
+   "description": "Steppjacke mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_light_jackets": {
+   "title": "Freizeitjacke mit Ihrem Logo | PAMUUC",
+   "description": "Freizeitjacke mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_rain_jackets_windbreakers": {
+   "title": "Windjacke mit Logo | PAMUUC",
+   "description": "Windjacke mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_joggers": {
+   "title": "Jogginghose mit Logo | PAMUUC",
+   "description": "Jogginghose mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_long_sleeve_t_shirts": {
+   "title": "Langarmshirt mit Logo | PAMUUC",
+   "description": "Langarmshirt mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_long_sleeve_polo_shirts": {
+   "title": "Langarm-Poloshirt mit Logo | PAMUUC",
+   "description": "Langarm-Poloshirt mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_quarter_zip_sweatshirts": {
+   "title": "Troyer mit Ihrem Logo | PAMUUC",
+   "description": "Troyer mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_sherpa_jackets": {
+   "title": "Sherpajacke mit Logo | PAMUUC",
+   "description": "Sherpajacke mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_waterproof_jackets": {
+   "title": "Wasserdichte Jacke mit Logo | PAMUUC",
+   "description": "Wasserdichte Jacke mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_padded_parkas": {
+   "title": "Gefütterter Parka mit Logo | PAMUUC",
+   "description": "Gefütterter Parka mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_sweat_shorts": {
+   "title": "Sweatshorts mit Logo | PAMUUC",
+   "description": "Sweatshorts mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_baby_bodysuits": {
+   "title": "Babybody mit Logo | PAMUUC",
+   "description": "Babybody mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_baby_bibs": {
+   "title": "Lätzchen mit Ihrem Logo | PAMUUC",
+   "description": "Lätzchen mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_beanies": {
+   "title": "Mütze mit Ihrem Logo | PAMUUC",
+   "description": "Mütze mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_bucket_hats": {
+   "title": "Fischerhut mit Ihrem Logo | PAMUUC",
+   "description": "Fischerhut mit Ihrem Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_tote_bags": {
+   "title": "Stofftaschen bedrucken mit Ihrem Logo | PAMUUC",
+   "description": "Stofftaschen bedrucken lassen, für Unternehmen, Teams und Events. Vergleichen Sie Stoffe, Farben und Druckoptionen und fragen Sie ein Angebot an."
+  },
+  "product:m_drawstring_gym_bags": {
+   "title": "Turnbeutel mit Logo | PAMUUC",
+   "description": "Turnbeutel mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_duffle_bags": {
+   "title": "Reisetasche mit Logo | PAMUUC",
+   "description": "Reisetasche mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_belt_bags": {
+   "title": "Gürteltasche mit Logo | PAMUUC",
+   "description": "Gürteltasche mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "product:m_pencil_cases": {
+   "title": "Etui mit Logo | PAMUUC",
+   "description": "Etui mit Logo für Ihr Unternehmen. Farben, Größen und Personalisierungen vergleichen und ein Angebot vor der Bestellung anfragen."
+  },
+  "collection:t-shirts": {
+   "title": "T-Shirts bedrucken | PAMUUC",
+   "description": "T-Shirts bedrucken für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:t-shirts": {
+   "title": "T-Shirts bedrucken auswählen | PAMUUC",
+   "description": "Finden Sie T-Shirts zum Bedrucken für Ihr Team. Vergleichen Sie Schnitte, Stoffe und Logooptionen und wählen Sie passende Modelle aus."
+  },
+  "collection:polo-shirts": {
+   "title": "Poloshirts mit Logo | PAMUUC",
+   "description": "Poloshirts mit Logo für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:polo-shirts": {
+   "title": "Poloshirts mit Logo auswählen | PAMUUC",
+   "description": "Wählen Sie Poloshirts mit Logo für Ihr Unternehmen. Vergleichen Sie Schnitte, Stoffe und Möglichkeiten zur Personalisierung vor Ihrer Anfrage."
+  },
+  "collection:shirts": {
+   "title": "Hemden mit Logo | PAMUUC",
+   "description": "Hemden mit Logo für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:shirts": {
+   "title": "Hemden mit Logo auswählen | PAMUUC",
+   "description": "Finden Sie Hemden mit Logo für Ihr Team. Vergleichen Sie Schnitte, Stoffe und Logooptionen und stellen Sie Ihre Angebotsanfrage zusammen."
+  },
+  "collection:sweatshirts": {
+   "title": "Sweatshirts und Hoodies mit Logo | PAMUUC",
+   "description": "Sweatshirts und Hoodies mit Logo für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:sweatshirts": {
+   "title": "Sweatshirts und Hoodies mit Logo auswählen | PAMUUC",
+   "description": "Wählen Sie Sweatshirts und Hoodies mit Logo für Ihr Team. Vergleichen Sie Modelle, Schnitte und Stoffe und bereiten Sie Ihre Anfrage vor."
+  },
+  "collection:jackets": {
+   "title": "Jacken mit Logo | PAMUUC",
+   "description": "Jacken mit Logo für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:jackets": {
+   "title": "Jacken mit Logo auswählen | PAMUUC",
+   "description": "Finden Sie Jacken mit Logo für Ihr Team. Vergleichen Sie Jackenarten, Stoffe und Logooptionen, bevor Sie ein Angebot anfragen."
+  },
+  "collection:joggers-and-shorts": {
+   "title": "Hosen und Shorts mit Logo | PAMUUC",
+   "description": "Hosen und Shorts mit Logo für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:joggers-and-shorts": {
+   "title": "Hosen und Shorts mit Logo auswählen | PAMUUC",
+   "description": "Wählen Sie Hosen und Shorts mit Logo für Ihr Team. Vergleichen Sie Modelle, Schnitte und Stoffe und nehmen Sie Ihre Auswahl in die Anfrage auf."
+  },
+  "collection:accessories": {
+   "title": "Taschen und Accessoires mit Logo | PAMUUC",
+   "description": "Taschen und Accessoires mit Logo für Teams und Events. Modelle, Stoffe und Logooptionen vergleichen, Menge wählen und Angebot vor der Bestellung anfragen."
+  },
+  "build:accessories": {
+   "title": "Taschen und Accessoires mit Logo auswählen | PAMUUC",
+   "description": "Finden Sie Taschen und Accessoires mit Logo für Ihr Unternehmen. Vergleichen Sie Produkte, Materialien und Logooptionen und fragen Sie ein Angebot an."
   }
  },
  "templates": {
   "product": {
    "title": "{name} | PAMUUC",
-   "description": "",
+   "description": "{name} für Teams und Veranstaltungen. Vergleichen Sie die verfügbaren Optionen und fragen Sie ein Angebot für Ihr Logo an.",
    "_note": "The German product names already end in \"mit Ihrem Logo\", so the template does not repeat it. The other languages carry the phrase here."
   },
   "collection": {
    "title": "{name} mit Logo für Unternehmen | PAMUUC",
-   "description": "{n} {products} in {name}, auf derselben Grundlage verglichen: Flächengewicht, mögliche Veredelung und die Menge, ab der es beginnt."
+   "description": "Entdecken Sie {n} {products} in der Kategorie {name}. Vergleichen Sie Stoffe und Logooptionen und fragen Sie ein Angebot an."
   },
   "build": {
-   "title": "{name} nach Bedarf auswählen | PAMUUC",
-   "description": "Beantworten Sie vier Fragen — wer es trägt, Schnitt, Gewicht und Finish — und die {name} im Katalog schrumpfen auf das passende."
+   "title": "{name} für Ihr Team auswählen | PAMUUC",
+   "description": "Finden Sie passende Produkte in der Kategorie {name}. Wählen Sie Zielgruppe, Schnitt, Stoffgewicht und Verarbeitung und vergleichen Sie die Auswahl."
   }
  },
  "words": {

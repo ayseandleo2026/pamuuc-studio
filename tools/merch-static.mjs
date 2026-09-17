@@ -62,6 +62,22 @@ export function linkify(html, loc, site, hasDisplay, cats) {
   for (const m of [...html.matchAll(OPEN)]) {
     const [full, tag, attrs, target] = m;
     const start = m.index;
+
+    /* Every match is collected up front, so this list still contains the
+       data-go elements nested INSIDE one that has already been converted and
+       whose interior was copied through whole. Processing those again rewound
+       `last` to a point already emitted, which re-emitted the opening tag and
+       orphaned the original closer: a collection card came out as an <a> with
+       no <article> to match its </article>, and the stray </div></div> that
+       followed closed the grid and then the page wrapper. Five cards ended up
+       outside <main> on the merchandise landing, collections and search pages
+       in all five locales.
+
+       An element already inside a converted one is skipped on purpose — <a>
+       inside <a> is invalid anyway, and the nested target stays reachable from
+       its own index page. */
+    if (start < last) { stats.nested++; continue; }
+
     out += html.slice(last, start);
     last = start + full.length;
 
@@ -106,9 +122,7 @@ export function linkify(html, loc, site, hasDisplay, cats) {
            The card becomes the link; the chip inside it stays a button and
            keeps working at runtime, and its URL is reachable from the index
            page anyway, so nothing becomes uncrawlable. */
-        const inner = html.slice(last, end - (`</${tag}>`).length);
-        stats.nested += (inner.match(/\sdata-go="/g) || []).length;
-        out += inner + '</a>';
+        out += html.slice(last, end - (`</${tag}>`).length) + '</a>';
         last = end;
       } else {
         /* no matching close: emitting an unclosed <a> would swallow the rest

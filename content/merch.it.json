@@ -2,6 +2,30 @@
  "_comment": "Merchandise copy, it. Keys are the English source in content/merch.en.json; values are what the site shows. A missing or empty value falls back to English for that one string. Machine translated by Claude and NOT yet checked by a native speaker.",
  "patterns": [
   [
+   "^1 colour$",
+   "1 colore"
+  ],
+  [
+   "^1 option available$",
+   "1 opzione disponibile"
+  ],
+  [
+   "^1 style$",
+   "1 modello"
+  ],
+  [
+   "^1 product$",
+   "1 prodotto"
+  ],
+  [
+   "^1 piece$",
+   "1 pezzo"
+  ],
+  [
+   "^1 family$",
+   "1 famiglia"
+  ],
+  [
    "^(\\d+) colours?$",
    "$1 colori"
   ],
@@ -262,6 +286,6 @@
   "Nape of neck": "Nuca"
  },
  "_translated": 225,
- "_of": 1196,
+ "_of": 1119,
  "colourPreposition": "in"
 }

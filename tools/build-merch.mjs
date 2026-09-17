@@ -97,7 +97,7 @@ function sentences(text, min, max) {
    and the minimum order quantity is stated because it is a real condition of
    that price.
    ========================================================================= */
-function productLD(p, url, meta, site, imageUrl, say) {
+function productLD(p, url, meta, site, imageUrl, say, printedFrom) {
   const node = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -119,9 +119,16 @@ function productLD(p, url, meta, site, imageUrl, say) {
      high is the single-piece price. Publishing p.from as lowPrice would have
      claimed 14.99 on a page printing 7.99, which is the kind of mismatch
      Google penalises and a reader would notice first. */
+  /* The ladder in p.breaks is the product's own, but a family can contain a
+     garment that is cheaper than any rung on it — tank tops bottom out at 9.99
+     in the data while the page prints "From 9.49". So lowPrice is taken from
+     the figure the page actually shows, and the data only sets the ceiling.
+     Deriving it from the rendered page is the one way the two cannot drift. */
   const prices = (p.breaks || []).map((b) => Number(b.price)).filter((n) => n > 0);
   if (!p.quoteOnly && prices.length) {
-    const low = Math.min(...prices), high = Math.max(...prices);
+    const fromData = Math.min(...prices);
+    const low = printedFrom && printedFrom < fromData ? printedFrom : fromData;
+    const high = Math.max(...prices, low);
     node.offers = {
       '@type': 'AggregateOffer',
       priceCurrency: 'EUR',
@@ -165,7 +172,7 @@ function collectionLD(name, url, products, site, urlOf) {
 }
 
 /** Which nodes a given page carries. */
-function structuredData(page, M, meta, site, loc, imageUrl, say) {
+function structuredData(page, M, meta, site, loc, imageUrl, say, printedFrom) {
   const out = [];
   const home = { name: 'PAMUUC', url: site.locales[loc].prefix };
   const merch = { name: say('Merchandise'), url: urlFor('public:merch', loc, site) };
@@ -174,7 +181,7 @@ function structuredData(page, M, meta, site, loc, imageUrl, say) {
     const p = (M.S.merchProducts || []).find((x) => x.id === page.arg);
     if (!p) return out;
     const cat = M.categories().find((c) => c.cat === p.cat);
-    out.push(productLD(p, page.url, meta, site, imageUrl, say));
+    out.push(productLD(p, page.url, meta, site, imageUrl, say, printedFrom));
     out.push(breadcrumbLD([
       home, merch,
       ...(cat ? [{ name: say(cat.name), url: urlFor('public:collection:' + cat.slug, loc, site, catLookup(M)) }] : []),
@@ -325,10 +332,15 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
       /* The picture the page actually leads with, so the markup points at the
          same image a reader sees rather than a different one. */
       const firstImg = (a.html.match(/<img\b[^>]*\ssrc="([^"]+)"/) || [])[1] || null;
+      /* the "From" figure the page prints, so the markup can quote the same one */
+      const printedFrom = (() => {
+        const m = /class="pdp-from"[\s\S]{0,200}?<b[^>]*>\s*€\s*([\d.,]+)/.exec(a.html);
+        return m ? Number(String(m[1]).replace(',', '.')) : null;
+      })();
       const extraLD = structuredData(p, M, meta, site, loc, firstImg, (t) => {
         const d = (dicts[loc] || {}).copy;
         return (d && d[t]) || t;
-      });
+      }, printedFrom);
 
       pages.push({
         url: p.url, loc, cluster: clusters.find((c2) => c2.id === 'merch:' + p.id),

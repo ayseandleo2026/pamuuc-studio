@@ -269,7 +269,11 @@ function head({ loc, url, title, description, ogTitle, ogDescription, cluster, i
   /* the app's own strings are English; a non-English page loads its copy first */
   const copyScript = merch && MERCH_ASSETS.copyHash[loc]
     ? `<script defer src="/assets/js/merch-copy.${loc}.${MERCH_ASSETS.copyHash[loc]}.js"></script>\n` : '';
-  const alternates = cluster
+  /* x-default only when there IS a default URL. The 404 page passes a cluster
+     with no urls at all, and appending the line unconditionally produced
+     href="https://pamuuc-studio.comundefined" — the one malformed alternate on
+     the site. */
+  const alternates = cluster && cluster.urls && cluster.urls[DEFAULT]
     ? LOCALES.filter((l) => cluster.urls[l]).map((l) => `<link rel="alternate" hreflang="${l}" href="${abs(cluster.urls[l])}">`).join('\n')
       + `\n<link rel="alternate" hreflang="x-default" href="${abs(cluster.urls[DEFAULT])}">`
     : '';
@@ -932,7 +936,7 @@ function renderBlogIndex(loc) {
 + header(loc, cluster) + `
 <main id="main" data-page="blog">
 <section class="pub-sec pub-sec--top"><div class="wrap">
-<nav class="crumb" aria-label="Breadcrumb">
+<nav class="crumb" aria-label="${attr(S(loc).breadcrumb)}">
 <a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a><span class="crumb-sep">/</span><span class="crumb-here">${esc(ui.crumbBlog || str.journal)}</span>
 </nav>
 ${chapterHead('\u2014', ui.blogKicker, ui.blogH1, ui.blogLead, { h1: true })}
@@ -1027,7 +1031,7 @@ function renderPost(key, loc) {
 <main id="main" data-page="post">
 <article class="po">
 <section class="pub-sec pub-sec--top"><div class="wrap">
-<nav class="crumb" aria-label="Breadcrumb">
+<nav class="crumb" aria-label="${attr(S(loc).breadcrumb)}">
 <a href="${homeURL(loc)}">${esc(ui.crumbHome || 'Home')}</a><span class="crumb-sep">/</span>
 <a href="${blogURL(loc)}">${esc(ui.crumbBlog || str.journal)}</a><span class="crumb-sep">/</span>
 <span class="crumb-here">${esc(p.title)}</span>
@@ -1113,7 +1117,7 @@ ${s.blocks.map((b) => (b.t === 'h' ? `<h3>${esc(b.v)}</h3>` : b.t === 'ul' ? `<u
 </section>`;
   return head({ loc, url, title: `${str.legal} | ${site.brand.plain}`, description: str.legalIntro, cluster })
 + header(loc, cluster) + `
-<nav class="crumbs wrap" aria-label="Breadcrumb">
+<nav class="crumbs wrap" aria-label="${attr(S(loc).breadcrumb)}">
 <ol><li><a href="${homeURL(loc)}">${esc(UI[loc].crumbHome || 'Home')}</a></li><li aria-current="page">${esc(str.legal)}</li></ol>
 </nav>
 <main id="main">
@@ -1349,7 +1353,11 @@ if (!CHECK && errors.length === 0) {
   /* src/images/incoming holds full-resolution originals for future crops.
      They are referenced by nothing, so they must not be published. */
   cpSync(join(ROOT, 'src/images'), join(OUT, 'assets/images'), { recursive: true,
-    filter: (src) => !src.includes(`${sep}images${sep}incoming`) });
+    /* incoming/ holds full-resolution originals for future crops, and the
+       catalogue manifest is a build input — 1.05MB that nothing on the site
+       ever requests. Neither belongs in what gets published. */
+    filter: (src) => !src.includes(`${sep}images${sep}incoming`)
+      && !src.endsWith(`${sep}manifest.json`) });
   cpSync(join(ROOT, 'src/static'), OUT, { recursive: true });
 }
 
