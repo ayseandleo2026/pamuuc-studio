@@ -22,52 +22,54 @@ import { translate } from './merch-strings.mjs';
    it is worth writing.
 
    Lengths are held inside the audit's limits: title 15-65, description 50-170. */
-const META = {
-  chooser: {
-    title: 'PAMUUC | Custom uniforms and branded merchandise',
-    description: 'Uniforms developed around how your team works, and branded merchandise you personalise yourself. Two services from one studio in Barcelona.',
-  },
-  merch: {
-    title: 'Branded merchandise for companies | PAMUUC',
-    description: 'Custom apparel for staff, events and company merchandise. Choose the garment, the cloth, the colour and the personalisation, and we quote it by hand.',
-  },
-  products: {
-    title: 'All branded apparel you can personalise | PAMUUC',
-    description: 'Every garment in the catalogue, compared by what actually decides it: cloth weight, the personalisation it takes and the quantity it starts from.',
-  },
-  collections: {
-    title: 'Branded merchandise by product family | PAMUUC',
-    description: 'Seven families of branded clothing. Open one to compare the products in it, the quantities they start from and the personalisation each garment carries.',
-  },
-  method: {
-    title: 'Personalisation methods and artwork | PAMUUC',
-    description: 'Embroidery, screen print, transfer and embossing — what each one suits, what it costs to set up, and the artwork each method needs from you.',
-  },
-  howto: {
-    title: 'How to order branded merchandise | PAMUUC',
-    description: 'From choosing a garment to approving the quote: what happens at each step, what we need from you, and how long the whole thing takes.',
-  },
-  merchhelp: {
-    title: 'Help with a merchandise request | PAMUUC',
-    description: 'Answers on quantities, artwork, delivery and pricing for branded merchandise — and a way to ask us something the page does not cover.',
-  },
-  quote: {
-    title: 'Request a merchandise quote | PAMUUC',
-    description: 'Tell us the garment, the quantity and the personalisation, and a person prices it by hand. Nothing is ordered and nothing is charged until you approve it.',
-  },
-  about: {
-    title: 'About PAMUUC | Barcelona uniform studio',
-    description: 'A Barcelona studio making uniforms and branded clothing since 2019, for teams who wear their work every day. Who we are and how we work.',
-  },
-  contact: {
-    title: 'Contact PAMUUC | Barcelona',
-    description: 'Tell us what you need and one of us reads it properly. Custom uniforms, branded merchandise, or a question about an order already under way.',
-  },
-  search: {
-    title: 'Search branded merchandise | PAMUUC',
-    description: 'Search the catalogue of branded apparel by garment, cloth weight, colour and the personalisation each product will take.',
-  },
-};
+/* Titles and meta descriptions — the lines that appear under a link in a
+   search result — live in content/merch.meta.<loc>.json so they can be
+   translated and proofread like everything else. They were literals here, in
+   English, which meant 280 pages across four languages carried an English
+   title under a Spanish, French, Italian or German page. */
+function metaFor(page, M, meta, dict) {
+  const pages = meta.pages || {};
+  const T = meta.templates || {};
+  const W = meta.words || { product: 'product', products: 'products' };
+  if (pages[page.id]) return pages[page.id];
+
+  /* A translated string, when the language has one; the English otherwise. */
+  const say = (t) => (dict && dict[t]) || t;
+  const fill = (tpl, vars) => String(tpl || '').replace(/\{(\w+)\}/g, (m, k) => (k in vars ? vars[k] : m));
+
+  if (page.id.startsWith('product:')) {
+    const p = (M.S.merchProducts || []).find((x) => x.id === page.arg);
+    if (!p) return null;
+    const name = say(p.name);
+    /* A long product name plus the template can run past the 65 characters
+       Google will show. Rather than truncate mid-word — which reads as a bug —
+       drop the phrase and keep the name, which is the part that matters. */
+    let title = fill(T.product.title, { name });
+    if (title.length > 65) title = `${name} | PAMUUC`;
+    if (title.length > 65) title = `${name.slice(0, 54).replace(/\s+\S*$/, '')} | PAMUUC`;
+    return {
+      title,
+      /* the product's own description, translated if the catalogue copy is */
+      description: sentences(say(p.desc), 50, 170)
+        || fill(T.product.title, { name }).slice(0, 170),
+    };
+  }
+
+  if (page.id.startsWith('collection:') || page.id.startsWith('build:')) {
+    const slug = page.id.split(':')[1];
+    const cat = M.categories().find((c) => c.slug === slug);
+    const rawName = cat ? cat.name : slug;
+    const name = say(rawName).toLowerCase();
+    const n = (M.S.merchProducts || []).filter((p) => cat && p.cat === cat.cat).length;
+    const kind = page.id.startsWith('build:') ? T.build : T.collection;
+    return {
+      title: fill(kind.title, { name }).slice(0, 65),
+      description: fill(kind.description, { name, n, products: n === 1 ? W.product : W.products }).slice(0, 170),
+    };
+  }
+  return null;
+}
+
 
 /* Whole sentences up to the limit. Cutting mid-sentence and adding an ellipsis
    is what makes a search result look automated. */
@@ -82,36 +84,6 @@ function sentences(text, min, max) {
   return out.length > max ? out.slice(0, max - 1).replace(/\s+\S*$/, '') : out;
 }
 
-function metaFor(page, M) {
-  if (META[page.id]) return META[page.id];
-
-  if (page.id.startsWith('product:')) {
-    const p = (M.S.merchProducts || []).find((x) => x.id === page.arg);
-    if (p) {
-      return {
-        title: `${p.name} with your logo | PAMUUC`,
-        description: sentences(p.desc, 50, 170) || `${p.name} personalised with your logo, for teams, events and company merchandise.`,
-      };
-    }
-  }
-  if (page.id.startsWith('collection:') || page.id.startsWith('build:')) {
-    const slug = page.id.split(':')[1];
-    const cat = M.categories().find((c) => c.slug === slug);
-    const name = cat ? cat.name : slug;
-    const n = (M.S.merchProducts || []).filter((p) => cat && p.cat === cat.cat).length;
-    if (page.id.startsWith('build:')) {
-      return {
-        title: `Choose ${name.toLowerCase()} by what you need | PAMUUC`,
-        description: `Answer four questions — who wears it, the fit, the weight and the finish — and the ${name.toLowerCase()} in the catalogue narrow to the one that suits your team.`.slice(0, 170),
-      };
-    }
-    return {
-      title: `Branded ${name.toLowerCase()} for companies | PAMUUC`,
-      description: `${n} ${n === 1 ? 'product' : 'products'} in ${name.toLowerCase()}, compared on the same basis: cloth weight, the personalisation each takes, and the quantity it starts from.`.slice(0, 170),
-    };
-  }
-  return null;
-}
 
 /**
  * @param {object} deps  from build.mjs: { ROOT, site, LOCALES, head, abs }
@@ -145,6 +117,20 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
   const cats = catLookup(M);
   const problems = [];
   const dicts = dictionaries(ROOT, LOCALES);
+  /* One meta file per language, falling back to English per field rather than
+     per file, so a half-translated language still gets what it has. */
+  const metaEn = JSON.parse(readFileSync(join(ROOT, 'content/merch.meta.en.json'), 'utf8'));
+  const metas = {};
+  for (const loc of LOCALES) {
+    const f = join(ROOT, `content/merch.meta.${loc}.json`);
+    if (loc === 'en' || !existsSync(f)) { metas[loc] = metaEn; continue; }
+    const m = JSON.parse(readFileSync(f, 'utf8'));
+    metas[loc] = {
+      pages: { ...metaEn.pages, ...(m.pages || {}) },
+      templates: { ...metaEn.templates, ...(m.templates || {}) },
+      words: { ...metaEn.words, ...(m.words || {}) },
+    };
+  }
   const COLOURS = new Set(JSON.parse(readFileSync(join(ROOT, 'content/merch.colours.json'), 'utf8')));
   const untranslated = {};
 
@@ -172,7 +158,7 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
       try { body = p.arg ? M.render(p.render, p.arg) : M.render(p.render); }
       catch (e) { problems.push(`${p.id} (${loc}) did not render: ${e.message}`); continue; }
 
-      const meta = metaFor(p, M);
+      const meta = metaFor(p, M, metas[loc], (dicts[loc] || {}).copy);
       if (!meta) { problems.push(`${p.id} has no title or description`); continue; }
 
       /* Translated before anything else touches it: linkify and the dimension
@@ -230,7 +216,7 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
   const metaByUrl = {};
   for (const loc of LOCALES) {
     for (const p of pageList(M, site, loc)) {
-      const m = metaFor(p, M);
+      const m = metaFor(p, M, metas[loc], (dicts[loc] || {}).copy);
       if (m) metaByUrl[p.url] = m;
     }
   }

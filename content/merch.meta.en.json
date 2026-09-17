@@ -1,0 +1,67 @@
+{
+ "_comment": "Titles and meta descriptions for the merchandise pages — the lines that appear in a search result. pages: one entry per fixed page. templates: the pattern for the generated ones, where {name} is the product or family and {n} the number of products. Lengths must stay inside the build audit: title 15-65, description 50-170.",
+ "pages": {
+  "chooser": {
+   "title": "PAMUUC | Custom uniforms and branded merchandise",
+   "description": "Uniforms developed around how your team works, and branded merchandise you personalise yourself. Two services from one studio in Barcelona."
+  },
+  "merch": {
+   "title": "Branded merchandise for companies | PAMUUC",
+   "description": "Custom apparel for staff, events and company merchandise. Choose the garment, the cloth, the colour and the personalisation, and we quote it by hand."
+  },
+  "products": {
+   "title": "All branded apparel you can personalise | PAMUUC",
+   "description": "Every garment in the catalogue, compared by what actually decides it: cloth weight, the personalisation it takes and the quantity it starts from."
+  },
+  "collections": {
+   "title": "Branded merchandise by product family | PAMUUC",
+   "description": "Seven families of branded clothing. Open one to compare the products in it, the quantities they start from and the personalisation each garment carries."
+  },
+  "method": {
+   "title": "Personalisation methods and artwork | PAMUUC",
+   "description": "Embroidery, screen print, transfer and embossing — what each one suits, what it costs to set up, and the artwork each method needs from you."
+  },
+  "howto": {
+   "title": "How to order branded merchandise | PAMUUC",
+   "description": "From choosing a garment to approving the quote: what happens at each step, what we need from you, and how long the whole thing takes."
+  },
+  "merchhelp": {
+   "title": "Help with a merchandise request | PAMUUC",
+   "description": "Answers on quantities, artwork, delivery and pricing for branded merchandise — and a way to ask us something the page does not cover."
+  },
+  "quote": {
+   "title": "Request a merchandise quote | PAMUUC",
+   "description": "Tell us the garment, the quantity and the personalisation, and a person prices it by hand. Nothing is ordered and nothing is charged until you approve it."
+  },
+  "about": {
+   "title": "About PAMUUC | Barcelona uniform studio",
+   "description": "A Barcelona studio making uniforms and branded clothing since 2019, for teams who wear their work every day. Who we are and how we work."
+  },
+  "contact": {
+   "title": "Contact PAMUUC | Barcelona",
+   "description": "Tell us what you need and one of us reads it properly. Custom uniforms, branded merchandise, or a question about an order already under way."
+  },
+  "search": {
+   "title": "Search branded merchandise | PAMUUC",
+   "description": "Search the catalogue of branded apparel by garment, cloth weight, colour and the personalisation each product will take."
+  }
+ },
+ "templates": {
+  "product": {
+   "title": "{name} with your logo | PAMUUC",
+   "description": ""
+  },
+  "collection": {
+   "title": "Branded {name} for companies | PAMUUC",
+   "description": "{n} {products} in {name}, compared on the same basis: cloth weight, the personalisation each takes, and the quantity it starts from."
+  },
+  "build": {
+   "title": "Choose {name} by what you need | PAMUUC",
+   "description": "Answer four questions — who wears it, the fit, the weight and the finish — and the {name} in the catalogue narrow to the one that suits your team."
+  }
+ },
+ "words": {
+  "product": "product",
+  "products": "products"
+ }
+}

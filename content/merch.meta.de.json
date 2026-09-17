@@ -1,0 +1,68 @@
+{
+ "_comment": "Merchandise page titles and meta descriptions, de. Machine translated by Claude and NOT yet checked by a native speaker. Title 15-65 chars, description 50-170 — the build audit enforces both.",
+ "pages": {
+  "chooser": {
+   "title": "PAMUUC | Berufskleidung und Merchandise",
+   "description": "Berufskleidung, entwickelt aus der Arbeit Ihres Teams, und Merchandise, das Sie selbst veredeln. Zwei Leistungen aus einem Studio in Barcelona."
+  },
+  "merch": {
+   "title": "Merchandise mit Logo für Unternehmen | PAMUUC",
+   "description": "Bedruckte Kleidung für Teams, Events und Firmenmerchandise. Wählen Sie Kleidungsstück, Stoff, Farbe und Veredelung — wir kalkulieren von Hand."
+  },
+  "products": {
+   "title": "Alle bedruckbaren Kleidungsstücke | PAMUUC",
+   "description": "Jedes Kleidungsstück im Katalog, verglichen nach dem, was wirklich entscheidet: Flächengewicht, mögliche Veredelung und die Menge, ab der es beginnt."
+  },
+  "collections": {
+   "title": "Merchandise nach Produktfamilie | PAMUUC",
+   "description": "Sieben Familien bedruckbarer Kleidung. Öffnen Sie eine, um Produkte, Mindestmengen und die Veredelung jedes Kleidungsstücks zu vergleichen."
+  },
+  "method": {
+   "title": "Veredelungsverfahren und Druckdaten | PAMUUC",
+   "description": "Stickerei, Siebdruck, Transfer und Prägung: wofür sich welches eignet, was die Einrichtung kostet und welche Daten wir von Ihnen brauchen."
+  },
+  "howto": {
+   "title": "So bestellen Sie Merchandise | PAMUUC",
+   "description": "Von der Auswahl bis zur Freigabe des Angebots: was in jedem Schritt passiert, was wir von Ihnen brauchen und wie lange das Ganze dauert."
+  },
+  "merchhelp": {
+   "title": "Hilfe zu einer Anfrage | PAMUUC",
+   "description": "Antworten zu Mengen, Druckdaten, Lieferung und Preisen für Merchandise — und eine Möglichkeit, uns etwas zu fragen, das hier nicht steht."
+  },
+  "quote": {
+   "title": "Angebot für Merchandise anfragen | PAMUUC",
+   "description": "Nennen Sie Kleidungsstück, Menge und Veredelung — ein Mensch kalkuliert von Hand. Es wird nichts bestellt und nichts berechnet, bis Sie zustimmen."
+  },
+  "about": {
+   "title": "Über PAMUUC | Studio in Barcelona",
+   "description": "Ein Studio in Barcelona, das seit 2019 Berufskleidung und bedruckte Kleidung fertigt, für Teams, die ihre Arbeit tragen. Wer wir sind und wie wir arbeiten."
+  },
+  "contact": {
+   "title": "Kontakt PAMUUC | Barcelona",
+   "description": "Sagen Sie uns, was Sie brauchen — jemand liest es wirklich. Berufskleidung, Merchandise oder eine Frage zu einem laufenden Auftrag."
+  },
+  "search": {
+   "title": "Merchandise durchsuchen | PAMUUC",
+   "description": "Durchsuchen Sie den Katalog nach Kleidungsstück, Flächengewicht, Farbe und der Veredelung, die jedes Produkt trägt."
+  }
+ },
+ "templates": {
+  "product": {
+   "title": "{name} | PAMUUC",
+   "description": "",
+   "_note": "The German product names already end in \"mit Ihrem Logo\", so the template does not repeat it. The other languages carry the phrase here."
+  },
+  "collection": {
+   "title": "{name} mit Logo für Unternehmen | PAMUUC",
+   "description": "{n} {products} in {name}, auf derselben Grundlage verglichen: Flächengewicht, mögliche Veredelung und die Menge, ab der es beginnt."
+  },
+  "build": {
+   "title": "{name} nach Bedarf auswählen | PAMUUC",
+   "description": "Beantworten Sie vier Fragen — wer es trägt, Schnitt, Gewicht und Finish — und die {name} im Katalog schrumpfen auf das passende."
+  }
+ },
+ "words": {
+  "product": "Produkt",
+  "products": "Produkte"
+ }
+}

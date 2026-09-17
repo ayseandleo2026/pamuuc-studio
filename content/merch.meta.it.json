@@ -1,0 +1,67 @@
+{
+ "_comment": "Merchandise page titles and meta descriptions, it. Machine translated by Claude and NOT yet checked by a native speaker. Title 15-65 chars, description 50-170 — the build audit enforces both.",
+ "pages": {
+  "chooser": {
+   "title": "PAMUUC | Divise su misura e merchandising",
+   "description": "Divise sviluppate a partire da come lavora il suo team, e merchandising di marca che personalizza lei. Due servizi da uno studio di Barcellona."
+  },
+  "merch": {
+   "title": "Merchandising di marca per aziende | PAMUUC",
+   "description": "Abbigliamento personalizzato per personale, eventi e merchandising aziendale. Scelga il capo, il tessuto, il colore e la personalizzazione: preventiviamo a mano."
+  },
+  "products": {
+   "title": "Tutto l’abbigliamento personalizzabile | PAMUUC",
+   "description": "Ogni capo a catalogo, confrontato su ciò che decide davvero: la grammatura del tessuto, la personalizzazione che accetta e la quantità di partenza."
+  },
+  "collections": {
+   "title": "Merchandising per famiglia di prodotto | PAMUUC",
+   "description": "Sette famiglie di abbigliamento di marca. Ne apra una per confrontare i prodotti, le quantità di partenza e la personalizzazione di ogni capo."
+  },
+  "method": {
+   "title": "Metodi di personalizzazione e file | PAMUUC",
+   "description": "Ricamo, serigrafia, transfer e stampa: a cosa serve ciascuno, quanto costa prepararlo e quale file ci serve da lei."
+  },
+  "howto": {
+   "title": "Come ordinare merchandising | PAMUUC",
+   "description": "Dalla scelta del capo all’approvazione del preventivo: cosa succede a ogni passo, cosa ci serve da lei e quanto tempo richiede."
+  },
+  "merchhelp": {
+   "title": "Assistenza per una richiesta | PAMUUC",
+   "description": "Risposte su quantità, file, consegna e prezzi del merchandising di marca, e un modo per chiederci qualcosa che la pagina non copre."
+  },
+  "quote": {
+   "title": "Richiedere un preventivo | PAMUUC",
+   "description": "Ci dica il capo, la quantità e la personalizzazione: una persona lo preventiva a mano. Non si ordina e non si addebita nulla finché non approva."
+  },
+  "about": {
+   "title": "Chi è PAMUUC | Studio a Barcellona",
+   "description": "Uno studio di Barcellona che realizza divise e abbigliamento di marca dal 2019, per team che indossano il proprio lavoro. Chi siamo e come lavoriamo."
+  },
+  "contact": {
+   "title": "Contatti PAMUUC | Barcellona",
+   "description": "Ci dica di cosa ha bisogno e qualcuno lo legge davvero. Divise su misura, merchandising di marca o una domanda su un ordine in corso."
+  },
+  "search": {
+   "title": "Cerca merchandising di marca | PAMUUC",
+   "description": "Cerchi nel catalogo per capo, grammatura del tessuto, colore e personalizzazione accettata da ogni prodotto."
+  }
+ },
+ "templates": {
+  "product": {
+   "title": "{name} con il suo logo | PAMUUC",
+   "description": ""
+  },
+  "collection": {
+   "title": "{name} di marca per aziende | PAMUUC",
+   "description": "{n} {products} in {name}, confrontati sulla stessa base: grammatura del tessuto, personalizzazione accettata e quantità di partenza."
+  },
+  "build": {
+   "title": "Scelga {name} in base a cosa le serve | PAMUUC",
+   "description": "Risponda a quattro domande — chi lo indossa, la vestibilità, la grammatura e la finitura — e i {name} a catalogo si riducono a quello giusto."
+  }
+ },
+ "words": {
+  "product": "prodotto",
+  "products": "prodotti"
+ }
+}

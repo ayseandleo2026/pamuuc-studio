@@ -1,0 +1,67 @@
+{
+ "_comment": "Merchandise page titles and meta descriptions, fr. Machine translated by Claude and NOT yet checked by a native speaker. Title 15-65 chars, description 50-170 — the build audit enforces both.",
+ "pages": {
+  "chooser": {
+   "title": "PAMUUC | Uniformes sur mesure et merchandising",
+   "description": "Des uniformes conçus autour du travail de votre équipe, et du merchandising de marque que vous personnalisez. Deux services depuis un studio à Barcelone."
+  },
+  "merch": {
+   "title": "Merchandising de marque pour entreprises | PAMUUC",
+   "description": "Vêtements personnalisés pour équipes, événements et merchandising d'entreprise. Choisissez le vêtement, le tissu et le coloris ; nous chiffrons à la main."
+  },
+  "products": {
+   "title": "Tous les vêtements personnalisables | PAMUUC",
+   "description": "Chaque vêtement du catalogue, comparé sur ce qui décide vraiment : le grammage du tissu, la personnalisation qu'il accepte et la quantité de départ."
+  },
+  "collections": {
+   "title": "Merchandising par famille de produit | PAMUUC",
+   "description": "Sept familles de vêtements de marque. Ouvrez-en une pour comparer les produits, les quantités de départ et la personnalisation de chaque vêtement."
+  },
+  "method": {
+   "title": "Personnalisation et fichiers | PAMUUC",
+   "description": "Broderie, sérigraphie, transfert et marquage : ce que chacun permet, ce que coûte sa préparation, et le fichier dont nous avons besoin de votre part."
+  },
+  "howto": {
+   "title": "Comment commander du merchandising | PAMUUC",
+   "description": "Du choix du vêtement à la validation du devis : ce qui se passe à chaque étape, ce dont nous avons besoin, et le temps que cela prend."
+  },
+  "merchhelp": {
+   "title": "Aide pour une demande | PAMUUC",
+   "description": "Réponses sur les quantités, les fichiers, la livraison et les prix du merchandising de marque, et de quoi nous poser une question non couverte."
+  },
+  "quote": {
+   "title": "Demander un devis merchandising | PAMUUC",
+   "description": "Indiquez le vêtement, la quantité et la personnalisation : une personne chiffre à la main. Rien n'est commandé ni facturé avant votre accord."
+  },
+  "about": {
+   "title": "À propos de PAMUUC | Studio à Barcelone",
+   "description": "Un studio barcelonais qui fabrique uniformes et vêtements de marque depuis 2019, pour des équipes qui portent leur travail. Qui nous sommes et comment nous travaillons."
+  },
+  "contact": {
+   "title": "Contact PAMUUC | Barcelone",
+   "description": "Dites-nous ce qu'il vous faut : quelqu'un le lit vraiment. Uniformes sur mesure, merchandising de marque, ou une question sur une commande en cours."
+  },
+  "search": {
+   "title": "Rechercher du merchandising | PAMUUC",
+   "description": "Cherchez dans le catalogue par vêtement, grammage du tissu, coloris et personnalisation acceptée par chaque produit."
+  }
+ },
+ "templates": {
+  "product": {
+   "title": "{name} avec votre logo | PAMUUC",
+   "description": ""
+  },
+  "collection": {
+   "title": "{name} de marque pour entreprises | PAMUUC",
+   "description": "{n} {products} en {name}, comparés sur la même base : grammage du tissu, personnalisation acceptée et quantité de départ."
+  },
+  "build": {
+   "title": "Choisir {name} selon vos besoins | PAMUUC",
+   "description": "Répondez à quatre questions — qui le porte, la coupe, le grammage et la finition — et les {name} du catalogue se réduisent à celui qui convient."
+  }
+ },
+ "words": {
+  "product": "produit",
+  "products": "produits"
+ }
+}

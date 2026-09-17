@@ -1,0 +1,67 @@
+{
+ "_comment": "Merchandise page titles and meta descriptions, es. Machine translated by Claude and NOT yet checked by a native speaker. Title 15-65 chars, description 50-170 — the build audit enforces both.",
+ "pages": {
+  "chooser": {
+   "title": "PAMUUC | Uniformes a medida y merchandising",
+   "description": "Uniformes desarrollados a partir de cómo trabaja su equipo, y merchandising de marca que personaliza usted. Dos servicios desde un estudio en Barcelona."
+  },
+  "merch": {
+   "title": "Merchandising de marca para empresas | PAMUUC",
+   "description": "Ropa personalizada para plantilla, eventos y merchandising corporativo. Elija la prenda, el tejido, el color y la personalización, y la presupuestamos a mano."
+  },
+  "products": {
+   "title": "Toda la ropa personalizable | PAMUUC",
+   "description": "Cada prenda del catálogo, comparada por lo que realmente decide: el gramaje del tejido, la personalización que admite y la cantidad desde la que parte."
+  },
+  "collections": {
+   "title": "Merchandising por familia de producto | PAMUUC",
+   "description": "Siete familias de ropa de marca. Abra una para comparar los productos, las cantidades desde las que parten y la personalización que admite cada prenda."
+  },
+  "method": {
+   "title": "Métodos de personalización y arte | PAMUUC",
+   "description": "Bordado, serigrafía, transfer y estampación: para qué sirve cada uno, qué cuesta su preparación y qué arte necesitamos de usted."
+  },
+  "howto": {
+   "title": "Cómo pedir merchandising de marca | PAMUUC",
+   "description": "Desde elegir una prenda hasta aprobar el presupuesto: qué pasa en cada paso, qué necesitamos de usted y cuánto tarda todo el proceso."
+  },
+  "merchhelp": {
+   "title": "Ayuda con una solicitud | PAMUUC",
+   "description": "Respuestas sobre cantidades, arte, entrega y precios del merchandising de marca, y una forma de preguntarnos algo que la página no cubra."
+  },
+  "quote": {
+   "title": "Solicitar un presupuesto | PAMUUC",
+   "description": "Díganos la prenda, la cantidad y la personalización, y una persona lo presupuesta a mano. No se pide nada ni se cobra nada hasta que usted lo aprueba."
+  },
+  "about": {
+   "title": "Sobre PAMUUC | Estudio en Barcelona",
+   "description": "Un estudio de Barcelona que fabrica uniformes y ropa de marca desde 2019, para equipos que visten su trabajo cada día. Quiénes somos y cómo trabajamos."
+  },
+  "contact": {
+   "title": "Contacto PAMUUC | Barcelona",
+   "description": "Cuéntenos qué necesita y alguien lo lee con atención. Uniformes a medida, merchandising de marca o una duda sobre un pedido en curso."
+  },
+  "search": {
+   "title": "Buscar merchandising de marca | PAMUUC",
+   "description": "Busque en el catálogo de ropa de marca por prenda, gramaje del tejido, color y la personalización que admite cada producto."
+  }
+ },
+ "templates": {
+  "product": {
+   "title": "{name} con su logotipo | PAMUUC",
+   "description": ""
+  },
+  "collection": {
+   "title": "{name} de marca para empresas | PAMUUC",
+   "description": "{n} {products} en {name}, comparados sobre la misma base: gramaje del tejido, la personalización que admite cada uno y la cantidad desde la que parte."
+  },
+  "build": {
+   "title": "Elija {name} por lo que necesita | PAMUUC",
+   "description": "Responda a cuatro preguntas — quién lo lleva, el corte, el gramaje y el acabado — y los {name} del catálogo se reducen al que encaja con su equipo."
+  }
+ },
+ "words": {
+  "product": "producto",
+  "products": "productos"
+ }
+}
