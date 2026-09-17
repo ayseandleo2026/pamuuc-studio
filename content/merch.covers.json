@@ -1,0 +1,41 @@
+{
+ "_comment": "Alt text and captions for the journal cover photographs. The images are in src/images/merch (see the catalogue manifest); this is the only part of mockup/covers.js that is content rather than pixels, and it lives here so the build never needs that 1.4MB file.",
+ "covers": {
+  "bestfabrics": {
+   "alt": "Five shortlisted hotel uniform fabric samples with matching collars, cuffs, pockets and seams",
+   "cap": "An editorial visualisation of five fictional fabric candidates, created with AI from documented real references."
+  },
+  "dental": {
+   "alt": "Dental clinic team in coordinated custom uniforms inside a refined Barcelona practice",
+   "cap": ""
+  },
+  "hospitality": {
+   "alt": "METT Barcelona luxury hotel exterior",
+   "cap": ""
+  },
+  "hoteldesign": {
+   "alt": "Uniform designer arranging hotel role sketches and fabric swatches on a lobby worktable",
+   "cap": "An editorial visualisation of a fictional hotel uniform discovery session, created with AI from original Pamuuc references."
+  },
+  "hoteldurability": {
+   "alt": "Hands inspecting wear around the pocket and seam of a dark hotel service jacket",
+   "cap": "An original AI editorial study of fictional uniform wear, grounded in documented real references."
+  },
+  "hotelfabrics": {
+   "alt": "Reception jacket, service shirt, housekeeping trousers and fabric swatches on a worktable",
+   "cap": "An editorial visualisation of a fictional hotel fabric review, created with AI from documented real references."
+  },
+  "hotelideas": {
+   "alt": "Five unbranded hotel uniform prototypes arranged on a rail in a warm design studio",
+   "cap": "An editorial visualisation of five fictional hotel uniform directions, created with AI from documented real references."
+  },
+  "hotellaundry": {
+   "alt": "Laundry attendant returning an olive hotel service shirt to a clean garment rail",
+   "cap": "An original AI editorial scene of a fictional hotel laundry workflow, grounded in documented real references."
+  },
+  "wellness": {
+   "alt": "Team wardrobe system for wellness studios",
+   "cap": ""
+  }
+ }
+}

@@ -78,6 +78,7 @@ const MERCH_ASSETS = (() => {
   const js = merchJS({
     ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
     intake: site.intake.endpoint,
+    covers: JSON.parse(readFileSync(join(ROOT, 'content/merch.covers.json'), 'utf8')).covers,
     manifest: JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8')),
   });
   const decode = (t) => String(t)

@@ -137,7 +137,10 @@ function dictionaries(ROOT, LOCALES) {
 
 export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
   const manifest = JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8'));
-  const M = loadMockup(join(ROOT, 'mockup'), manifest);
+  const covers = existsSync(join(ROOT, 'content/merch.covers.json'))
+    ? JSON.parse(readFileSync(join(ROOT, 'content/merch.covers.json'), 'utf8')).covers
+    : {};
+  const M = loadMockup(join(ROOT, 'mockup'), manifest, covers);
   const hasDisplay = displayClasses(readFileSync(join(ROOT, 'mockup/app.css'), 'utf8'));
   const cats = catLookup(M);
   const problems = [];

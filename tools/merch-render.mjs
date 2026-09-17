@@ -31,9 +31,19 @@ import vm from 'node:vm';
    journal.js is visible to app.js. Running each file through its own
    runInContext would give each its own scope, so they are concatenated and run
    as one script, which is what the browser effectively does. */
-const ORDER = [
-  'photos.js', 'home.js', 'journal.js', 'covers.js', 'data.js',
-  'catalogue.js', 'merch-hero.js', 'app.js',
+/* The files the build genuinely needs: the design, the data and the copy. All
+   four are in git. */
+const REQUIRED = ['journal.js', 'data.js', 'catalogue.js', 'app.js'];
+
+/* The photograph packs. These are ~60MB of base64 and are NOT in git, because
+   tools/extract-images.mjs has already turned them into the real files the
+   site ships. They are not needed either: every data URI in them is replaced
+   by a manifest URL before anything renders, so only the KEYS ever mattered —
+   and the manifest holds every key. When the packs are present they are used;
+   when they are not, they are rebuilt from the manifest, which is what lets a
+   fresh clone build. */
+const PACK_FILES = [
+  'photos.js', 'home.js', 'covers.js', 'merch-hero.js',
   'shots-model.js', 'shots-model-1.js', 'shots-model-2.js',
   'shots-back.js', 'shots-swatch.js', 'shots-hero-alt.js',
 ];
@@ -63,17 +73,48 @@ const stubEl = () => ({
  * @param {string} mockupDir  the mockup/ folder
  * @param {object} manifest   key -> {url}, from tools/extract-images.mjs
  */
-export function loadMockup(mockupDir, manifest) {
-  const missing = ORDER.filter((f) => !existsSync(join(mockupDir, f)));
-  if (missing.length) {
-    throw new Error(
-      `the mockup is missing ${missing.join(', ')}.\n` +
-      `The photo packs are gitignored — they are ~60MB of base64 and the real\n` +
-      `files in src/images are what the site ships. Restore them from the\n` +
-      `mockup source to rebuild the catalogue photography.`);
+/**
+ * The pack objects as JavaScript, built from the image manifest. Same variable
+ * names and same keys as the real packs; the values are URLs rather than base64,
+ * which is what they would have been rewritten to anyway.
+ */
+export function packSource(manifest, covers) {
+  const out = [];
+  for (const [name, prefix] of Object.entries(PACK_PREFIX)) {
+    if (name === 'COVERS') continue;
+    const map = {};
+    for (const [key, e] of Object.entries(manifest)) {
+      if (prefix) { if (key.startsWith(prefix)) map[key.slice(prefix.length)] = e.url; }
+      else if (!key.includes('/') && !key.startsWith('cover-') && key !== 'merch-hero') map[key] = e.url;
+    }
+    out.push(`var ${name} = ${JSON.stringify(map)};`);
+  }
+  /* COVERS carries alt text and a caption beside each image, and those are
+     content — they come from content/merch.covers.json, not the manifest. */
+  const cov = {};
+  for (const [key, meta] of Object.entries(covers || {})) {
+    const e = manifest['cover-' + key];
+    if (e) cov[key] = { src: e.url, alt: meta.alt || '', cap: meta.cap || '' };
+  }
+  out.push(`var COVERS = ${JSON.stringify(cov)};`);
+  out.push(`window.MERCH_HERO = ${JSON.stringify((manifest['merch-hero'] || {}).url || '')};`);
+  return out.join('\n');
+}
+
+export function loadMockup(mockupDir, manifest, covers) {
+  const gone = REQUIRED.filter((f) => !existsSync(join(mockupDir, f)));
+  if (gone.length) {
+    throw new Error(`the mockup is missing ${gone.join(', ')} — these are the design and the data, and they are in git.`);
   }
 
-  const src = ORDER.map((f) => readFileSync(join(mockupDir, f), 'utf8')).join('\n;\n');
+  /* Use the real packs when they are here, otherwise rebuild them. Either way
+     the values become manifest URLs, so the output is the same. */
+  const havePacks = PACK_FILES.every((f) => existsSync(join(mockupDir, f)));
+  const packJS = havePacks
+    ? PACK_FILES.map((f) => readFileSync(join(mockupDir, f), 'utf8')).join('\n;\n')
+    : packSource(manifest, covers);
+
+  const src = [packJS, ...REQUIRED.map((f) => readFileSync(join(mockupDir, f), 'utf8'))].join('\n;\n');
 
   const rootEl = stubEl();
   const store = new Map();
