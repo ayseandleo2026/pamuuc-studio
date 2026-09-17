@@ -10,7 +10,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadMockup } from './merch-render.mjs';
-import { pageList, catLookup, productSlug } from './merch-routes.mjs';
+import { pageList, catLookup } from './merch-routes.mjs';
 import { linkify, dimension, displayClasses, wireForms } from './merch-static.mjs';
 import { translate } from './merch-strings.mjs';
 
@@ -68,9 +68,6 @@ const META = {
     description: 'Search the catalogue of branded apparel by garment, cloth weight, colour and the personalisation each product will take.',
   },
 };
-
-const strip = (s) => String(s || '').replace(/<[^>]+>/g, ' ')
-  .replace(/&amp;/g, '&').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
 
 /* Whole sentences up to the limit. Cutting mid-sentence and adding an ellipsis
    is what makes a search result look automated. */
@@ -242,5 +239,3 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
       Object.entries(untranslated).map(([l, set]) => [l, [...set]])),
   };
 }
-
-export { productSlug };

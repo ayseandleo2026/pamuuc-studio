@@ -46,7 +46,7 @@ const ATTRS = ['alt', 'title', 'placeholder', 'aria-label'];
  * Walks a page's copy. `fn(key)` returns a replacement, or null to leave it.
  * Returns the rewritten HTML; pass a collector as `fn` to extract instead.
  */
-export function mapCopy(html, fn) {
+function mapCopy(html, fn) {
   let out = '';
   let i = 0;
 
@@ -122,7 +122,7 @@ export function collect(pages) {
    newline WOULD change what the reader sees. Neither belongs to a page this
    site builds — they are message threads and design notes on the account and
    back-office surfaces — so this is a tripwire rather than a special case. */
-export const PRE_CLASSES = ['msg-t', 'dsn-note'];
+const PRE_CLASSES = ['msg-t', 'dsn-note'];
 export const hasSignificantWhitespace = (html) =>
   PRE_CLASSES.filter((c) => html.includes(`class="${c}`) || html.includes(` ${c}"`));
 

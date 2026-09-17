@@ -179,9 +179,5 @@ export function loadMockup(mockupDir, manifest) {
         name: name ? name(c) : String(c),
       }));
     },
-    /** Sets ROUTE/UI before a render, for pages that read them. */
-    setRoute(page, params) {
-      ctx.ROUTE = Object.assign(ctx.ROUTE || {}, { surface: 'public', page, params: params || {} });
-    },
   };
 }

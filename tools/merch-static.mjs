@@ -96,9 +96,7 @@ export function linkify(html, loc, site, hasDisplay, cats) {
       const boxed = cls.split(/\s+/).some((c) => c && hasDisplay.has(c));
       const mark = boxed ? '' : ' data-blk';
       if (!boxed) stats.marked++;
-      /* a <button> that becomes a link should still announce itself as one */
-      const role = tag === 'button' ? '' : '';
-      out += `<a href="${href}"${mark}${role}${attrs}>`;
+      out += `<a href="${href}"${mark}${attrs}>`;
       stats.converted++;
       const end = closeOf(html, tag, last);
       if (end >= 0) {
@@ -115,7 +113,7 @@ export function linkify(html, loc, site, hasDisplay, cats) {
       } else {
         /* no matching close: emitting an unclosed <a> would swallow the rest
            of the page, so put the original tag back instead */
-        out = out.slice(0, out.length - `<a href="${href}"${mark}${role}${attrs}>`.length) + full;
+        out = out.slice(0, out.length - `<a href="${href}"${mark}${attrs}>`.length) + full;
         stats.converted--;
       }
     }

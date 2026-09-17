@@ -17,7 +17,7 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { loadMockup } from './merch-render.mjs';
 import { pageList } from './merch-routes.mjs';
-import { collect, translate, keyOf, hasSignificantWhitespace } from './merch-strings.mjs';
+import { collect, translate, hasSignificantWhitespace } from './merch-strings.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const site = JSON.parse(readFileSync(join(ROOT, 'content/site.json'), 'utf8'));
@@ -85,13 +85,13 @@ const sameToTheReader = (a, b) => {
     (i % 2 ? part : part.replace(/\s+/g, ' '))).join('');
   return flat(a) === flat(b);
 };
-let broken = 0, missed = 0;
+let broken = 0, silent = 0;
 for (const p of pages) {
   const pre = hasSignificantWhitespace(p.html);
   if (pre.length) console.log(`  ${p.id} contains ${pre.join(', ')} — whitespace there is significant`);
   const { html } = translate(p.html, marked);
   const marks = (html.match(new RegExp(MARK, 'g')) || []).length;
-  if (!marks) missed++;
+  if (!marks) silent++;
   if (!sameToTheReader(unmark(html), p.html)) {
     broken++;
     if (broken <= 3) {
@@ -121,6 +121,11 @@ const guide = {
   count: Object.fromEntries(strings.map((s) => [s.key, s.pages.length])),
   where: Object.fromEntries(strings.map((s) => [s.key, s.pages.slice(0, 5)])),
 };
+
+/* A page where nothing at all could be replaced is not an error — the legal
+   pages are almost entirely links — but it is worth saying out loud, because
+   it is also what a broken tokenizer looks like. */
+if (silent) console.log(`  ${silent} page(s) contained no replaceable copy`);
 
 if (broken) {
   console.log(`\n${broken} page(s) do not round-trip — the catalogue was NOT written.`);
