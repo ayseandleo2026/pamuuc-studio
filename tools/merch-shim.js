@@ -252,7 +252,7 @@
   var innerRender = render;
   render = function () {
     var r = innerRender.apply(this, arguments);
-    try { retext(); applyMeta(); relink(); } catch (e) {}
+    try { retext(); applyMeta(); relink(); saveQuote(); } catch (e) {}
     return r;
   };
 
@@ -385,6 +385,43 @@
       return out;
     };
   }
+
+  /* ---- keeping the quote basket ------------------------------------------
+     UI.quote lives in memory. In the mockup that was fine: it is one page in
+     an artifact and nobody ever reloads it. On a site made of real URLs people
+     reload, open a product in a new tab, and come back an hour later — and
+     every one of those emptied the basket without a word.
+
+     Only the basket is kept. UI.qc holds the contact details somebody typed
+     into the quote form, and leaving a name, an email and a phone number in
+     localStorage on a shared machine is not a trade worth making to save
+     retyping them.
+
+     Written after every render, which is after anything that could change it,
+     including the submit that empties it. */
+  var QKEY = 'pamuuc_merch_quote';
+
+  function saveQuote() {
+    try {
+      var lines = (typeof UI !== 'undefined' && UI.quote) || [];
+      if (lines.length) localStorage.setItem(QKEY, JSON.stringify(lines));
+      else localStorage.removeItem(QKEY);
+    } catch (e) {}
+  }
+
+  function restoreQuote() {
+    try {
+      var raw = localStorage.getItem(QKEY);
+      if (!raw) return;
+      var lines = JSON.parse(raw);
+      if (Array.isArray(lines) && lines.length) UI.quote = lines;
+    } catch (e) {
+      /* a basket we cannot read is a basket we drop, not an error page */
+      try { localStorage.removeItem(QKEY); } catch (e2) {}
+    }
+  }
+
+  restoreQuote();
 
   /* app.js boots at the end of its own file, which is BEFORE this shim exists,
      so it has already read the (empty) hash and rendered the home page over
