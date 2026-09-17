@@ -416,6 +416,7 @@
   "Custom Softshell Jacket with your logo for teams and company merchandise. Made in women&#39;s and men&#39;s cuts, in a regular fit. Embroidered or screen printed to your artwork.": 1,
   "The required approvals, the artwork proof where one is needed, and the agreed payment. Production is released when those are in place, not when the quote is sent.": 1,
   "Custom Casual Jacket with your logo for teams and company merchandise. Made in unisex cut, in a regular fit. Embroidered or screen printed to your artwork.": 1,
+  "Tiered by quantity — the more the run, the better the rate. There is no code: we apply it to the quote, before you approve it.": 1,
   "Choose the service closest to your question, or say you are not sure. We read every message and reply to the address you give us.": 1,
   "Configure what you want, send it, and we come back with a reviewed quote. Nothing is ordered and nothing is charged until you approve it.": 1,
   "Custom Drawstring Gym Bag with your logo for teams and company merchandise. Made in unisex cut. Embroidered, screen printed or DTF printed to your artwork.": 1,
@@ -447,7 +448,6 @@
   "No method is best for every product. The available options on each product page are the ones that product supports.": 1,
   "Production starts once the approvals and payment are in place, and the approved file is archived for the next run.": 1,
   "Seven families, each one checked the same way. Open one to compare products, minimums and the personalisation each garment carries.": 1,
-  "Tiered by quantity — the more the run, the better the rate. Applied to the quote, before you approve it.": 1,
   "Viewing a digital mockup does not establish fabric feel, exact colour or physical fit. These four objects answer different questions.": 1,
   "Ask which certifications apply to the products in your request and we will send the certificates that cover them.": 1,
   "Compare weight, composition and the methods a product carries. The minimum is on the card, before you open anything.": 1,
@@ -986,7 +986,7 @@
   "Confirmed per product": 1,
   "Custom uniform development": 1,
   "Direct to garment": 1,
-  "Get the code": 1,
+  "Get the discount": 1,
   "Heavyweight woven shopper": 1,
   "Hotels and hospitality": 1,
   "How ordering works": 1,
@@ -3543,6 +3543,9 @@
   "Custom Casual Jacket with your logo for teams and company merchandise. Made in unisex cut, in a regular fit. Embroidered or screen printed to your artwork.": [
    "product:m_light_jackets"
   ],
+  "Tiered by quantity — the more the run, the better the rate. There is no code: we apply it to the quote, before you approve it.": [
+   "merch"
+  ],
   "Choose the service closest to your question, or say you are not sure. We read every message and reply to the address you give us.": [
    "contact"
   ],
@@ -3634,9 +3637,6 @@
    "merch"
   ],
   "Seven families, each one checked the same way. Open one to compare products, minimums and the personalisation each garment carries.": [
-   "merch"
-  ],
-  "Tiered by quantity — the more the run, the better the rate. Applied to the quote, before you approve it.": [
    "merch"
   ],
   "Viewing a digital mockup does not establish fabric feel, exact colour or physical fit. These four objects answer different questions.": [
@@ -5253,7 +5253,7 @@
   "Direct to garment": [
    "method"
   ],
-  "Get the code": [
+  "Get the discount": [
    "merch"
   ],
   "Heavyweight woven shopper": [

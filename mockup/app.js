@@ -1904,7 +1904,7 @@ const act = {
   },
 
   /* ---- studio project builder ------------------------------------------ */
-  /* Someone asked for the code. The prototype cannot post email, so it records
+  /* Someone asked for the discount. The prototype cannot post email, so it records
      the subscriber and writes the message into the same outbox every other
      customer email goes through — the words are reviewable rather than
      imagined, exactly like the rest. §17.2 */
@@ -3472,14 +3472,14 @@ function offerPopup(){
           ${(o.tiers || []).map(t => `<div class="otier"><span class="otier-p">${t.pct}<i>%</i></span>
             <span class="otier-s">${esc(t.say)}</span></div>`).join('')}
         </div>
-        <label class="field opop-f"><span class="field-l">Where should we send it?</span>
+        <label class="field opop-f"><span class="field-l">Your email address</span>
           <input class="inp" id="opop_email" type="email" inputmode="email" autocomplete="email"
             placeholder="you@company.com"></label>
         <div class="btn-row opop-b">
           <button class="btn btn--primary" data-act="offerSubmit" data-id="${esc(o.id)}">Apply it to my quote</button>
           <button class="btn btn--quiet" data-act="offerClose">Not now</button>
         </div>
-        <p class="t-xs faint opop-s">One message with the code, and the occasional offer. Unsubscribe in a click.
+        <p class="t-xs faint opop-s">One message to confirm, and the occasional offer. Unsubscribe in a click.
           We never pass your address on.</p>`}
     </div>
   </div>`;
@@ -13758,7 +13758,7 @@ document.addEventListener('click', (e) => {
       /* enough of a check to catch a slip, not enough to argue with a real address */
       if(!/^[^@\s]+@[^@\s.]+\.[^@\s]{2,}$/.test(v)){
         if(el){ el.classList.add('inp--err'); el.focus(); }
-        toast('That address does not look right', 'We need somewhere to send the code.');
+        toast('That address does not look right', 'We need somewhere to send your confirmation.');
         return;
       }
       act.joinOffer(d.id, v);

@@ -114,6 +114,19 @@
     return BY_ROUTE[LOC + '|' + page + '|' + (param || '')] || null;
   }
 
+  /* The other half of tools/merch-seed-guard.js. That file clears the saved
+     state before app.js can restore it; this stops app.js writing a new one,
+     which would pin today's copy into the visitor's browser and hand it back
+     to them unchanged after the next price change.
+
+     Same mechanism as readHash and go below: a top-level `function save()` in
+     a classic script is a property of the global object, so replacing it here
+     replaces it for every one of the 85 calls inside app.js without editing a
+     line of it. Nothing on this side of the site is lost — the quote basket is
+     kept below under its own key, and consent, theme and the first-order
+     marker were never part of S. */
+  save = function () {};
+
   readHash = function () {
     return routeForPath(location.pathname, location.search) || { surface: 'public', page: 'home', params: {} };
   };
@@ -174,6 +187,40 @@
   var COPY = window.__MERCH_COPY__ || null;
   var COPY_ATTRS = ['alt', 'title', 'placeholder', 'aria-label'];
 
+  /* The same three rules translate() applies at build time, in the same order.
+     They have to be here too: the static page is only what paints first, and
+     app.js redraws all of it the moment it boots. An exact-match-only runtime
+     meant every generated label reverted to English a second after load. */
+  var PATTERNS = (window.__MERCH_PATTERNS__ || []).map(function (p) {
+    try { return [new RegExp(p[0]), p[1]]; } catch (e) { return null; }
+  }).filter(Boolean);
+  var PREP = window.__MERCH_PREP__ || 'in';
+  var COLOURS = (function () {
+    var m = {}, list = window.__MERCH_COLOURS__ || [];
+    for (var i = 0; i < list.length; i++) m[list[i]] = true;
+    return m;
+  })();
+  var IN_COLOUR = /^(.+) in (.+)$/;
+
+  /** A translation for one collapsed string, or null to leave it as it is. */
+  function lookup(key) {
+    var hit = COPY[key];
+    if (hit && hit !== key) return hit;
+
+    /* "Custom Tank Top in White": the product name is language, the supplier's
+       colour is a reference. Only the name and the preposition move. */
+    var m = IN_COLOUR.exec(key);
+    if (m && COLOURS[m[2]]) {
+      var name = COPY[m[1]];
+      return name ? name + ' ' + PREP + ' ' + m[2] : null;
+    }
+
+    for (var i = 0; i < PATTERNS.length; i++) {
+      if (PATTERNS[i][0].test(key)) return key.replace(PATTERNS[i][0], PATTERNS[i][1]);
+    }
+    return null;                      /* a bare colour name lands here, kept */
+  }
+
   function retext(root) {
     if (!COPY) return;
     var base = root || document.body;
@@ -194,7 +241,7 @@
       var raw = n.nodeValue;
       var key = raw.replace(/\s+/g, ' ').trim();
       if (!key) continue;
-      var hit = COPY[key];
+      var hit = lookup(key);
       if (hit && hit !== key) hits.push([n, raw, hit]);
     }
     for (var i = 0; i < hits.length; i++) {
@@ -207,7 +254,7 @@
         var v = els[j].getAttribute(COPY_ATTRS[k]);
         if (!v) continue;
         var kk = v.replace(/\s+/g, ' ').trim();
-        var h2 = COPY[kk];
+        var h2 = lookup(kk);
         if (h2 && h2 !== kk) els[j].setAttribute(COPY_ATTRS[k], h2);
       }
     }
@@ -429,7 +476,7 @@
     };
   }
 
-  /* the offer pop-up: the code is emailed by the Worker, not by the prototype */
+  /* the offer pop-up: the Worker sends the confirmation, not the prototype */
   if (typeof act === 'object' && act && typeof act.joinOffer === 'function') {
     var innerJoin = act.joinOffer;
     act.joinOffer = function (id, email) {
@@ -437,11 +484,9 @@
       try {
         var f = new FormData();
         f.append('email', email || '');
-        /* id is the offer's internal key (of_first); the customer-facing
-           code is o.code (FIRST), and that is what the email tells them to
-           quote. Sending the id would email somebody "Your code is OF_FIRST". */
-        /* the offer id is an internal marker for which offer they joined, not
-           something the customer is ever asked to quote */
+        /* An internal marker for which offer they joined, recorded so the
+           studio knows to apply the tier. It is never shown to the customer
+           and never something they are asked to quote. */
         f.append('offer', String(id || ''));
         try { localStorage.setItem('pamuuc_first_order', 'yes'); } catch (e2) {}
         f.append('locale', document.documentElement.lang || 'en');

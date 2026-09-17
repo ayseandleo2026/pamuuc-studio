@@ -26,13 +26,18 @@ than an English one.
 
 ### Where it is *not*
 
-Two sets of words are not in these files:
+Three sets of words are not in these files:
 
 - **Page titles and meta descriptions** — the lines that appear in a Google
-  result — are in `tools/build-merch.mjs`, in the `META` block near the top.
-  **These are still English in all five languages.** They matter more for
-  search than anything else on the page, so they need doing before launch.
-- **The three intake emails** are in `worker/src/emails.js`, also English only.
+  result — are in `content/merch.meta.<loc>.json`, one file per language, all
+  five written and reviewed.
+- **The three intake emails** are in `worker/src/emails.js`, English only.
+- **Strings only the browser ever draws.** The offer banner's pop-up is built
+  by JavaScript after the page loads, so `extract-copy.mjs` never sees it and
+  it is not in `merch.en.json`. Those live in the locale files as entries whose
+  key is not in the English source — twelve of them today. `translate-status`
+  counts against the English source, so they are invisible to it; that is the
+  only thing in these files not driven by the extractor.
 
 ---
 
@@ -148,16 +153,23 @@ entity as it is — `Sizes &amp; colours` becomes `Tallas &amp; colores`, not
 ```
 1119 strings on the merchandise side
 
-  es  ██████······················   225/1119
-  fr  █████·······················   218/1119
-  it  ██████······················   225/1119
-  de  ██████······················   222/1119
+  es  ████████████████████████████   1111/1119
+  fr  ████████████████████████████   1104/1119
+  it  ████████████████████████████   1112/1119
+  de  ████████████████████████████   1107/1119
 ```
 
-Those 225 are the highest-traffic strings — navigation, footer, the FAQ, the
-product page's core, the product names — so the vocabulary decisions that get
-repeated across the site are already made and are what to check first. Terms
-worth a second opinion:
+**Those are complete.** The shortfall is the counter, not the work: a value
+that equals its English key reads as untranslated, and some of them genuinely
+are the same word — *Journal*, *Total*, *Unisex*, *Polos*, *Anorak*, *Bomber*,
+and in French *Collections*, *Contact*, *Placement*, *Certification*. Eight in
+Spanish, fifteen in French, seven in Italian, twelve in German. Each was
+checked; none is a gap.
+
+All of it is machine translation that has not yet been read by a native
+speaker. The register was checked by rule and is formal throughout — no *tú*,
+*tu*, *du* or informal *tuo* anywhere in the four files. Terms worth a second
+opinion, because they recur hundreds of times:
 
 | English | es | fr | it | de |
 | --- | --- | --- | --- | --- |
@@ -193,25 +205,72 @@ check fails, the extraction is wrong and nothing is overwritten.
 
 ---
 
-## Known defect — read before publishing
+## The runtime pass, and why it was wrong twice
 
-**Build-time translation is correct. The runtime pass is not.**
+Every static page is translated at build time: `/es/merchandise/` really does
+say *Productos* and *Colecciones*, and that is what a crawler reads and what
+paints first.
 
-Every static page is right: `/es/merchandise/` really does say *Productos* and
-*Colecciones*. That is what Google indexes and what a visitor sees on first
-paint.
+Then the page loads the mockup's own JavaScript — the thing that makes the
+configurator work — and that code redraws the page in English. A second pass,
+`retext()` in `tools/merch-shim.js`, walks the new DOM and puts the language
+back. Getting that pass to agree with the build took three fixes, and each one
+looked fine in the JSON while being wrong on the screen.
 
-But the merchandise pages then load the mockup's own JavaScript, which is what
-makes the configurator work — choosing a colour, a quantity, a placement. That
-code redraws the page **in English**, and a translation pass is supposed to put
-the language back. It does so only partly: some strings translate, some stay
-English, and `Collections` comes out as `Coleccións`.
+**The tokenizer was eating its own escapes.** The shim used to be a template
+literal inside a `.mjs` file, and a template literal consumes one level of
+escaping before the string is ever written: `\s` collapsed to `s`, so
+`"Products"` was keyed as `"Product"` and `Collections` came out *Coleccións*.
+The shim is a real `.js` file now, read and concatenated, never interpolated.
+Do not put it back.
 
-So a Spanish visitor currently sees the page flip partly back to English a
-moment after it loads. `normalize()` on the text nodes, HTML-entity decoding and
-a `MutationObserver` did not fix it and the cause is not yet found.
+**The rules were not shipped.** Only the exact key→value map reached the
+browser. The `patterns` — the rules that translate the labels the catalogue
+generates from a number — stayed behind on the build machine, so every
+`20 options available` on all 31 product cards and every product page reverted
+to English a second after load, in all four languages, while the static HTML
+those pages were served as was perfectly correct. `patterns`,
+`colourPreposition` and the colour list now ship alongside the map, and
+`lookup()` in the shim applies the same three rules in the same order as
+`translate()` in `tools/merch-strings.mjs`. **If you add a rule to one, add it
+to the other.**
 
-**This has to be fixed before the site is published in any language other than
-English.** Finishing the translation is still worth doing — it is the same
-dictionary either way — but the two jobs are independent and this one blocks
-launch.
+**A sentence with a name in it can never match a key.** The offer confirmation
+reads *We have confirmed it to you@company.com.* — one text node, with an
+address in the middle of it, so no fixed key will ever equal it. It is a
+`patterns` entry, the same mechanism the counts use: the address is data, the
+words around it are language.
+
+### Checking it
+
+Build-time and runtime are separate surfaces and a change can fix one and
+break the other, so check both:
+
+```bash
+node tools/build.mjs && python3 -m http.server 8802 --directory dist
+```
+
+Static: fetch a page and read it. Runtime: open it, let the JavaScript settle,
+then walk the DOM and ask the dictionary whether each text node *could* have
+been translated. Anything it can translate that is still English is a leak —
+that test is exact, unlike grepping for English words, which flags *options
+disponibles* in French. All four languages are clean on every page type,
+including the product configurator and both states of the offer pop-up.
+
+---
+
+## The one thing that is not in these files
+
+The mockup saves its whole world to `localStorage` under `pamuuc_suite_v12`,
+and restores it on load. That is correct for a prototype — your work survives a
+reload — and a slow-acting copy bug on a website, because `restore()` replaces
+the catalogue and the offers wholesale and only refreshes them when a count
+changes. A reworded sentence, a new price, a changed minimum: none of those
+move a count, so a returning visitor keeps whatever the site said the day they
+first arrived.
+
+It surfaced here as a banner still reading wording that had been deleted from
+the repository and appeared in no built file. `tools/merch-seed-guard.js` runs
+before the mockup's own files and clears the key; the shim replaces `save()`
+with a no-op so nothing pins a new one. The quote basket, consent, theme and
+the first-order marker have their own keys and are untouched.

@@ -52,6 +52,10 @@
   [
    "^(\\d+) famil(y|ies)$",
    "$1 Familien"
+  ],
+  [
+   "^We have confirmed it to (.+?)\\. There is no code to remember — we apply the tier your quantity falls into when we price your quote, before you approve anything\\.$",
+   "Wir haben die Bestätigung an $1 gesendet. Sie müssen sich keinen Code merken — wir berücksichtigen die Ihrer Menge entsprechende Staffel bei der Angebotserstellung, bevor Sie etwas freigeben."
   ]
  ],
  "copy": {
@@ -501,7 +505,6 @@
   "No method is best for every product. The available options on each product page are the ones that product supports.": "Das passende Verfahren hängt von Produkt und Motiv ab. Jede Produktseite zeigt die verfügbaren Optionen.",
   "Production starts once the approvals and payment are in place, and the approved file is archived for the next run.": "Nach Freigabe und Zahlung starten wir die Produktion und speichern Ihr freigegebenes Motiv für spätere Bestellungen.",
   "Seven families, each one checked the same way. Open one to compare products, minimums and the personalisation each garment carries.": "T-Shirts, Sweatshirts und Taschen für Ihr Team, Events oder Firmengeschenke. Vergleichen Sie die Produkte und wählen Sie die Position Ihres Logos.",
-  "Tiered by quantity — the more the run, the better the rate. Applied to the quote, before you approve it.": "Ihr Rabatt steigt mit der Menge und steht vor Ihrer Freigabe im Angebot.",
   "Viewing a digital mockup does not establish fabric feel, exact colour or physical fit. These four objects answer different questions.": "Eine digitale Vorschau zeigt weder das Materialgefühl noch die exakte Farbe oder Passform. Diese vier Möglichkeiten helfen Ihnen, unterschiedliche Details zu prüfen.",
   "Ask which certifications apply to the products in your request and we will send the certificates that cover them.": "Fragen Sie nach den Zertifizierungen Ihrer gewählten Produkte. Wir können Ihnen die zugehörigen Zertifikate senden.",
   "Compare weight, composition and the methods a product carries. The minimum is on the card, before you open anything.": "Vergleichen Sie Stoffe, Passformen und die Möglichkeiten für Ihr Logo. Die Mindestmenge steht auf jeder Produktkarte.",
@@ -1040,7 +1043,6 @@
   "Confirmed per product": "Für jedes Produkt bestätigt",
   "Custom uniform development": "Entwicklung individueller Berufskleidung",
   "Direct to garment": "Textildirektdruck (DTG)",
-  "Get the code": "Code erhalten",
   "Heavyweight woven shopper": "Einkaufstasche aus schwerem Gewebe",
   "Hotels and hospitality": "Hotels",
   "How ordering works": "So bestellen Sie",
@@ -1173,9 +1175,23 @@
   "Reference": "Referenz",
   "Rib-knit": "Rippstrick",
   "Sort": "Sortieren",
-  "Woven": "Gewebe"
+  "Woven": "Gewebe",
+  "Get the discount": "Rabatt sichern",
+  "Your first order discount is set up.": "Ihr Rabatt für die erste Bestellung ist aktiviert.",
+  "Apply it to my quote": "Auf mein Angebot anwenden",
+  "Tiered by quantity — the more the run, the better the rate. There is no code: we apply it to the quote, before you approve it.": "Der Rabatt richtet sich nach der Menge: Je größer die Bestellung, desto höher der Rabatt. Sie benötigen keinen Code; wir berücksichtigen ihn im Angebot, bevor Sie es freigeben.",
+  "Before you price it up": "Rabatt aktivieren",
+  "Leave your email and we will apply the tier your quantity falls into to your first quote, before you approve it.": "Geben Sie Ihre E-Mail-Adresse ein. Wir berücksichtigen den Mengenrabatt in Ihrem ersten Angebot, bevor Sie es freigeben.",
+  "Your email address": "Ihre E-Mail-Adresse",
+  "Not now": "Jetzt nicht",
+  "One message to confirm, and the occasional offer. Unsubscribe in a click. We never pass your address on.": "Sie erhalten eine Bestätigung und gelegentliche Angebote. Eine Abmeldung ist jederzeit möglich. Wir geben Ihre E-Mail-Adresse niemals weiter.",
+  "You are on the list": "Rabatt aktiviert",
+  "Close": "Schließen",
+  "Branded merchandise, chosen by you and personalised for your company.": "Werbeartikel mit Logo für Ihr Unternehmen.",
+  "1 piece": "1 Stück",
+  "Start choosing": "Jetzt auswählen"
  },
- "_translated": 222,
+ "_translated": 1107,
  "_of": 1119,
  "colourPreposition": "in"
 }

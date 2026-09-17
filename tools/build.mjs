@@ -96,13 +96,24 @@ const MERCH_ASSETS = (() => {
     .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
     .replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, '\u00a0')
     .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(+n));
+  /* Everything the runtime needs to translate a redraw, which is everything
+     translate() in tools/merch-strings.mjs uses at build time. Shipping only
+     the exact map was a silent half-translation: the patterns stayed behind,
+     so a page was correct until app.js redrew it and every generated label —
+     "20 options available" on all 31 product cards and every product page —
+     came back English in all four languages. */
+  const colourNames = JSON.parse(readFileSync(join(ROOT, 'content/merch.colours.json'), 'utf8'));
   const copy = {};
   for (const loc of LOCALES) {
     const d = MERCH.dicts[loc];
     if (!d || loc === DEFAULT) continue;
     const real = {};
     for (const [k, v] of Object.entries(d.copy || d)) { if (v && v !== k) real[decode(k)] = decode(v); }
-    if (Object.keys(real).length) copy[loc] = `window.__MERCH_COPY__=${JSON.stringify(real)};`;
+    if (!Object.keys(real).length) continue;
+    copy[loc] = `window.__MERCH_COPY__=${JSON.stringify(real)};`
+      + `window.__MERCH_PATTERNS__=${JSON.stringify((d.patterns || []).map(([re, to]) => [re, decode(to)]))};`
+      + `window.__MERCH_PREP__=${JSON.stringify(d.colourPreposition || 'in')};`
+      + `window.__MERCH_COLOURS__=${JSON.stringify(colourNames)};`;
   }
   /* The runtime bundle is assembled from a template literal, and a lone \n or
      backtick in that literal collapses at build time and cuts a string in half.

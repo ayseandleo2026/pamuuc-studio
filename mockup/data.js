@@ -795,7 +795,7 @@ const SEED = {
      /* where it is allowed to appear */
      bar:true, home:true, popup:true,
      popupTitle:'Before you price it up',
-     popupLine:'Tell us where to send it and we will confirm the tier your quantity falls into, with the code on your first quote.'},
+     popupLine:'Leave your email and we will apply the tier your quantity falls into to your first quote, before you approve it.'},
   ],
   /* Everyone who has given us an address for an offer. The prototype cannot
      post email, so it keeps the record the same way the outbox does. */

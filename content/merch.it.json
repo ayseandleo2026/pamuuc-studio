@@ -52,6 +52,10 @@
   [
    "^(\\d+) famil(y|ies)$",
    "$1 famiglie"
+  ],
+  [
+   "^We have confirmed it to (.+?)\\. There is no code to remember — we apply the tier your quantity falls into when we price your quote, before you approve anything\\.$",
+   "Le abbiamo inviato la conferma a $1. Non c’è nessun codice da ricordare: applichiamo lo scaglione corrispondente alla sua quantità quando calcoliamo il preventivo, prima di ogni approvazione."
   ]
  ],
  "copy": {
@@ -501,7 +505,6 @@
   "No method is best for every product. The available options on each product page are the ones that product supports.": "La tecnica giusta dipende dal prodotto e dal disegno. Ogni scheda mostra le opzioni disponibili.",
   "Production starts once the approvals and payment are in place, and the approved file is archived for the next run.": "Avviamo la produzione dopo approvazione e pagamento e conserviamo il disegno approvato per i riordini.",
   "Seven families, each one checked the same way. Open one to compare products, minimums and the personalisation each garment carries.": "Magliette, felpe e borse per il suo team, eventi o regali aziendali. Confronti i prodotti e scelga dove aggiungere il logo.",
-  "Tiered by quantity — the more the run, the better the rate. Applied to the quote, before you approve it.": "Lo sconto aumenta con la quantità ed è indicato nel preventivo prima dell’approvazione.",
   "Viewing a digital mockup does not establish fabric feel, exact colour or physical fit. These four objects answer different questions.": "Un’anteprima digitale non mostra la mano, il colore esatto o la vestibilità reale. Queste quattro opzioni aiutano a verificare aspetti diversi.",
   "Ask which certifications apply to the products in your request and we will send the certificates that cover them.": "Ci chieda quali certificazioni coprono i prodotti scelti. Possiamo inviarle i relativi certificati.",
   "Compare weight, composition and the methods a product carries. The minimum is on the card, before you open anything.": "Confronti tessuti, vestibilità e opzioni di personalizzazione. Ogni scheda indica la quantità minima.",
@@ -1040,7 +1043,6 @@
   "Confirmed per product": "Confermato per ogni prodotto",
   "Custom uniform development": "Progettazione di divise su misura",
   "Direct to garment": "Stampa diretta su tessuto (DTG)",
-  "Get the code": "Ricevere il codice",
   "Heavyweight woven shopper": "Shopper in tessuto pesante",
   "Hotels and hospitality": "Hotel e accoglienza",
   "How ordering works": "Come ordinare",
@@ -1173,9 +1175,23 @@
   "Reference": "Riferimento",
   "Rib-knit": "Maglia a coste",
   "Sort": "Ordinare",
-  "Woven": "Tessuto a navetta"
+  "Woven": "Tessuto a navetta",
+  "Get the discount": "Ottenere lo sconto",
+  "Your first order discount is set up.": "Lo sconto sul primo ordine è attivo.",
+  "Apply it to my quote": "Applicarlo al mio preventivo",
+  "Tiered by quantity — the more the run, the better the rate. There is no code: we apply it to the quote, before you approve it.": "Lo sconto aumenta con la quantità ordinata. Non serve alcun codice: lo applichiamo al preventivo prima della sua approvazione.",
+  "Before you price it up": "Attivi lo sconto",
+  "Leave your email and we will apply the tier your quantity falls into to your first quote, before you approve it.": "Inserisca la sua email e applicheremo al primo preventivo lo sconto previsto per la quantità, prima della sua approvazione.",
+  "Your email address": "Il suo indirizzo email",
+  "Not now": "Non ora",
+  "One message to confirm, and the occasional offer. Unsubscribe in a click. We never pass your address on.": "Riceverà una conferma e qualche offerta occasionale. Può annullare l’iscrizione in qualsiasi momento. Non condividiamo mai il suo indirizzo email.",
+  "You are on the list": "Sconto attivato",
+  "Close": "Chiudere",
+  "Branded merchandise, chosen by you and personalised for your company.": "Gadget personalizzati per la sua azienda.",
+  "1 piece": "1 pezzo",
+  "Start choosing": "Inizi a scegliere"
  },
- "_translated": 225,
+ "_translated": 1112,
  "_of": 1119,
  "colourPreposition": "in"
 }

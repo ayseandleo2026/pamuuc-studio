@@ -83,6 +83,10 @@ function routeTable(M, site, LOCALES) {
    verbatim, never interpolated. */
 const SHIM = readFileSync(join(HERE, 'merch-shim.js'), 'utf8');
 
+/* Runs before the mockup's own files: app.js boots from an IIFE at its end, so
+   a saved state has already been restored by the time the shim is reached. */
+const SEED_GUARD = readFileSync(join(HERE, 'merch-seed-guard.js'), 'utf8');
+
 /** One line of CSS for the elements the builder turned into links. */
 export const MERCH_CSS = `
 /* Prototype furniture that must never reach a customer. The app redraws the
@@ -111,6 +115,7 @@ export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake, c
     `window.__MERCH_INTAKE__ = ${JSON.stringify(intake || '')};`,
     `window.__MERCH_STUDIO_EMAIL__ = ${JSON.stringify(site.intake.studioEmail || 'simone@pamuuc-studio.com')};`,
     `window.__MERCH_OFFSITE__ = ${JSON.stringify(offsiteLinks(site, LOCALES))};`,
+    SEED_GUARD,
     app,
     SHIM,
   ].join('\n;\n');

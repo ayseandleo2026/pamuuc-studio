@@ -52,6 +52,10 @@
   [
    "^(\\d+) famil(y|ies)$",
    "$1 familles"
+  ],
+  [
+   "^We have confirmed it to (.+?)\\. There is no code to remember — we apply the tier your quantity falls into when we price your quote, before you approve anything\\.$",
+   "Nous l’avons confirmé à $1. Aucun code à retenir : nous appliquons le palier correspondant à votre quantité lors du chiffrage de votre devis, avant toute validation."
   ]
  ],
  "copy": {
@@ -501,7 +505,6 @@
   "No method is best for every product. The available options on each product page are the ones that product supports.": "La bonne technique dépend du produit et du visuel. Chaque fiche présente les options disponibles.",
   "Production starts once the approvals and payment are in place, and the approved file is archived for the next run.": "Nous lançons la production après validation et paiement, et conservons votre visuel validé pour les prochaines commandes.",
   "Seven families, each one checked the same way. Open one to compare products, minimums and the personalisation each garment carries.": "T-shirts, sweats et sacs : des produits dérivés personnalisés pour vos équipes, vos événements ou vos clients.",
-  "Tiered by quantity — the more the run, the better the rate. Applied to the quote, before you approve it.": "Votre remise augmente avec la quantité et figure dans le devis avant validation.",
   "Viewing a digital mockup does not establish fabric feel, exact colour or physical fit. These four objects answer different questions.": "Un aperçu numérique ne permet pas de juger le toucher, la couleur exacte ou la coupe réelle. Ces quatre options servent à vérifier des aspects différents.",
   "Ask which certifications apply to the products in your request and we will send the certificates that cover them.": "Demandez quelles certifications couvrent vos produits. Nous pouvons vous envoyer les certificats correspondants.",
   "Compare weight, composition and the methods a product carries. The minimum is on the card, before you open anything.": "Comparez tissus, coupes et options de personnalisation. Chaque aperçu produit indique la quantité minimale.",
@@ -1040,7 +1043,6 @@
   "Confirmed per product": "Confirmé pour chaque produit",
   "Custom uniform development": "Création d’uniformes sur mesure",
   "Direct to garment": "Impression directe sur textile (DTG)",
-  "Get the code": "Obtenir le code",
   "Heavyweight woven shopper": "Grand sac en tissu épais",
   "Hotels and hospitality": "Hôtellerie",
   "How ordering works": "Comment commander",
@@ -1173,9 +1175,23 @@
   "Reference": "Référence",
   "Rib-knit": "Maille côtelée",
   "Sort": "Trier",
-  "Woven": "Tissu chaîne et trame"
+  "Woven": "Tissu chaîne et trame",
+  "Get the discount": "Profiter de la remise",
+  "Your first order discount is set up.": "Votre remise de première commande est activée.",
+  "Apply it to my quote": "Appliquer à mon devis",
+  "Tiered by quantity — the more the run, the better the rate. There is no code: we apply it to the quote, before you approve it.": "Le taux de remise dépend de la quantité : plus la commande est importante, plus la remise augmente. Aucun code n’est nécessaire : nous l’appliquons au devis avant votre validation.",
+  "Before you price it up": "Activez la remise",
+  "Leave your email and we will apply the tier your quantity falls into to your first quote, before you approve it.": "Indiquez votre e-mail et nous appliquerons la remise correspondant à la quantité sur votre premier devis, avant votre validation.",
+  "Your email address": "Votre adresse e-mail",
+  "Not now": "Pas maintenant",
+  "One message to confirm, and the occasional offer. Unsubscribe in a click. We never pass your address on.": "Vous recevrez une confirmation et quelques offres occasionnelles. Désabonnement possible à tout moment. Nous ne partageons jamais votre adresse e-mail.",
+  "You are on the list": "Remise activée",
+  "Close": "Fermer",
+  "Branded merchandise, chosen by you and personalised for your company.": "Objets publicitaires pour votre entreprise.",
+  "1 piece": "1 pièce",
+  "Start choosing": "Commencer à choisir"
  },
- "_translated": 218,
+ "_translated": 1104,
  "_of": 1119,
  "colourPreposition": "en"
 }
