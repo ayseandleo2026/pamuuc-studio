@@ -7033,9 +7033,9 @@ function pubAbout(){
           <a class="lnk" data-go="public:merch">Browse merchandise</a>
         </div>
       </div>
-      <div class="banner banner--wait banner--top"><div>
-        <div class="banner-t">Company details are confirmed before publication</div>
-        <div class="banner-d">Legal name, registration and tax identifiers, founding date and team information are published once verified. This prototype does not carry placeholder figures in their place.</div>
+      <div class="banner banner--top"><div>
+        <div class="banner-t">Company details</div>
+        <div class="banner-d">See the company&#39;s registration and tax details in the legal notice.</div>
       </div></div>
     </div>
   </section>

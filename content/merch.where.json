@@ -423,7 +423,6 @@
   "Custom Windbreaker with your logo for teams and company merchandise. Made in unisex cut, in a regular fit. Embroidered or screen printed to your artwork.": 1,
   "Embroidery, screen print and direct-to-garment printing, and which of them a garment will carry. Product compatibility and the final proof determine what can be produced.": 1,
   "Fisherman. 93% cotton / 1% elastane / 6% polyamide · 8 colours · OS. Cotton with a little elastane, so it stretches and springs back.": 1,
-  "Legal name, registration and tax identifiers, founding date and team information are published once verified. This prototype does not carry placeholder figures in their place.": 1,
   "Vector files reproduce at any size without redrawing. A high resolution raster file works for transfer and direct to garment. We review suitability before production.": 1,
   "Custom Baby Bib with your logo for teams and company merchandise. Made in baby cut. Embroidered, screen printed or DTF printed to your artwork.": 1,
   "Custom Belt Bag with your logo for teams and company merchandise. Made in unisex cut. Embroidered, screen printed or DTF printed to your artwork.": 1,
@@ -642,6 +641,7 @@
   "Men · Sleeveless fleece jacket · Regular fit · 300 g/m²": 1,
   "Men · Sleeveless softshell bodywarmer · Regular fit · 315 g/m²": 1,
   "Search 10 trousers and shorts — style, cut, weight or colour": 1,
+  "See the company&#39;s registration and tax details in the legal notice.": 1,
   "Unisex · Cotton canvas jacket · Regular fit · 379 g/m²": 1,
   "Unisex · Dry-handfeel jogger shorts · Relaxed fit · 400 g/m²": 1,
   "Unisex · Essential unisex t-shirt · Regular fit · 150 g/m²": 1,
@@ -867,7 +867,6 @@
   "Choosing sweatshirts for a branded run": 1,
   "Choosing t-shirts for a branded run": 1,
   "Commercial proposal for the specified scope": 1,
-  "Company details are confirmed before publication": 1,
   "Configure it, and we quote it.": 1,
   "Custom Beanie · 100% organic cotton": 1,
   "Custom Full Zip Sweatshirt · Burgundy": 1,
@@ -1031,6 +1030,7 @@
   "Barcelona, Spain.": 1,
   "Blank sample": 1,
   "Chemical safety": 1,
+  "Company details": 1,
   "Configure it": 1,
   "Cotton canvas": 1,
   "Custom Uniforms": 1,
@@ -3564,9 +3564,6 @@
   "Fisherman. 93% cotton / 1% elastane / 6% polyamide · 8 colours · OS. Cotton with a little elastane, so it stretches and springs back.": [
    "product:m_beanies"
   ],
-  "Legal name, registration and tax identifiers, founding date and team information are published once verified. This prototype does not carry placeholder figures in their place.": [
-   "about"
-  ],
   "Vector files reproduce at any size without redrawing. A high resolution raster file works for transfer and direct to garment. We review suitability before production.": [
    "method"
   ],
@@ -4220,6 +4217,9 @@
   ],
   "Search 10 trousers and shorts — style, cut, weight or colour": [
    "collection:joggers-and-shorts"
+  ],
+  "See the company&#39;s registration and tax details in the legal notice.": [
+   "about"
   ],
   "Unisex · Cotton canvas jacket · Regular fit · 379 g/m²": [
    "collection:jackets"
@@ -4896,9 +4896,6 @@
   "Commercial proposal for the specified scope": [
    "howto"
   ],
-  "Company details are confirmed before publication": [
-   "about"
-  ],
   "Configure it, and we quote it.": [
    "merch"
   ],
@@ -5387,6 +5384,9 @@
   ],
   "Chemical safety": [
    "merch"
+  ],
+  "Company details": [
+   "about"
   ],
   "Configure it": [
    "merch"
