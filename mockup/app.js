@@ -6753,22 +6753,31 @@ function quoteDrawer(){
               </div>
             </div>
           </div>`;}).join('')}
+
+      ${/* Everything that is not the total and the button scrolls WITH the
+            products. Pinned, these five blocks — three rows, the presentation
+            card, the note — were 640px of a 930px drawer, which left the list
+            of things you are actually buying about two lines tall. */
+        lines.length ? `
+      <div class="dsum">
+        <div class="drow"><span>Artwork review</span><span>Included</span></div>
+        <div class="drow"><span>Setup charges</span><span>Confirmed on review</span></div>
+        <div class="drow"><span>Delivery</span><span>Confirmed on review</span></div>
+        ${presDrawer()}
+        ${unresolved ? `<p class="t-xs muted">${unresolved} line${unresolved === 1 ? '' : 's'} priced on review, so this is a subtotal rather than a total.</p>` : ''}
+        <button class="btn btn--quiet btn--sm btn--block" data-go="public:quote">Open the full quote</button>
+      </div>` : ''}
     </div>
 
-    ${lines.length ? `
+    ${/* What stays put: what it comes to, and how to send it. */
+      lines.length ? `
     <div class="drawer-foot">
-      <div class="drow"><span>Artwork review</span><span>Included</span></div>
-      <div class="drow"><span>Setup charges</span><span>Confirmed on review</span></div>
-      <div class="drow"><span>Delivery</span><span>Confirmed on review</span></div>
-      ${presDrawer()}
       <div class="drow drow--t">
         <span>${unresolved ? 'Known subtotal' : 'Estimated total'}</span>
         <span class="num">${money(known + (UI.quotePres ? PRESENTATION : 0))}</span>
       </div>
-      ${unresolved ? `<p class="t-xs muted">${unresolved} line${unresolved === 1 ? '' : 's'} priced on review, so this is a subtotal rather than a total.</p>` : ''}
       <button class="btn btn--primary btn--lg btn--block" data-go="public:qcontact">View quote</button>
       <p class="dnote t-xs">No payment is needed yet. This is a request.</p>
-      <button class="btn btn--quiet btn--sm btn--block" data-go="public:quote">Open the full quote</button>
     </div>` : ''}
   </aside>`;
 }

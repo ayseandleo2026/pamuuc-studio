@@ -131,6 +131,28 @@ export const MERCH_CSS = `
    and flatten the card. */
 a[data-blk]{display:block}
 
+/* The quote drawer scrolls as one list. The summary rows and the presentation
+   card used to sit in the pinned footer, which on a laptop left the products
+   themselves about two lines of scrollable height; they are in the scrolling
+   body now, and the footer keeps only the total and the button. .dsum is the
+   seam between the two — it needs the rule the footer's border used to give. */
+.dsum{margin-top:var(--sp-5);padding-top:var(--sp-5);border-top:1px solid var(--line)}
+.dsum .btn--block{margin-top:var(--sp-4)}
+/* Room to scroll past the last control rather than ending flush against the
+   footer, which reads as "there is nothing more" when there is. */
+.drawer-body{padding-bottom:var(--sp-6)}
+/* A short window is exactly where this went wrong, so the footer is capped and
+   given its own scroll rather than being allowed to grow without limit again. */
+.drawer-foot{max-height:45vh;overflow-y:auto}
+/* On a laptop the browser's own chrome takes a third of the screen before the
+   page gets any, and the drawer is full height — so the two bands that do not
+   scroll give some of their padding back rather than charging it to the list. */
+@media (max-height:780px){
+  .drawer-h{padding:var(--sp-4) var(--sp-6)}
+  .drawer-foot{padding:var(--sp-4) var(--sp-6)}
+  .drawer-foot .btn--block{margin-top:var(--sp-3)}
+}
+
 /* The language switcher. The mockup had a stub button and no menu to style,
    so this is new — but it is the merchandise side's own tokens throughout, and
    the shape deliberately matches the switcher the custom uniforms pages have
