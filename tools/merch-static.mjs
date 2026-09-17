@@ -19,8 +19,25 @@
      drops   controls pointing at the customer account and the back office.
              Neither surface is being built, and 104 dead links in a header is
              worse than no control at all.
+
+     language  the mockup's "EN" stub becomes a real switcher pointing at this
+             same page in the other four languages. Rendered from
+             tools/merch-lang.js, the same file the browser runs when app.js
+             redraws the stub back in, so the two cannot differ.
    ========================================================================= */
+import { readFileSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { runInNewContext } from 'node:vm';
 import { urlFor, DROPPED } from './merch-routes.mjs';
+
+/* Plain ES5 on purpose: one file, run here through a vm and in the browser as
+   part of the bundle. Importing it would need a module, and a module cannot be
+   concatenated into a classic script. */
+const LANG_NS = {};
+runInNewContext(readFileSync(join(dirname(fileURLToPath(import.meta.url)), 'merch-lang.js'), 'utf8'),
+  { window: LANG_NS });
+const langHTML = LANG_NS.__MERCH_LANG__.langHTML;
 
 /* Classes that set their own `display`, read from the mockup's stylesheet. A
    <div> turned into an <a> goes inline unless something says otherwise, so the
@@ -185,4 +202,34 @@ export function wireForms(html, endpoint) {
     return `<form action="${endpoint}/${kind}" method="post" enctype="multipart/form-data"${attrs}>`;
   });
   return { html: out, stats: { wired } };
+}
+
+
+/* ---- the language switcher ----------------------------------------------
+   The mockup marks three controls with data-act="lang": one in the header,
+   one on the photo hero, and a line of language names in the footer. All
+   three were stubs. The two buttons become a menu; the footer's becomes a row
+   of links, because a dropdown at the bottom of a page is a dropdown nobody
+   opens.
+
+   Replaced rather than given an href, because one control has to become five
+   links. `data-act` goes with it: leaving it would let the app's own click
+   handler reopen the stub modal over the working control. */
+const LANG_EL = /<(button|a)\b([^>]*\bdata-act="lang"[^>]*)>([\s\S]*?)<\/\1>/g;
+
+export function langSwitch(html, { urls, loc, labels, title }) {
+  const stats = { replaced: 0, empty: 0 };
+  let instance = 0;
+  const out = html.replace(LANG_EL, (whole, tag, attrs) => {
+    /* The footer's is an <a> of language names; the header's are buttons. */
+    const markup = langHTML({
+      urls, loc, labels, title, inline: tag === 'a', instance: instance++,
+    });
+    if (!markup) { stats.empty++; return whole; }
+    stats.replaced++;
+    /* the hero button carries its own colour class, which has to survive */
+    const onPhoto = /btn--onphoto/.test(attrs);
+    return onPhoto ? markup.replace('class="mlang"', 'class="mlang mlang--onphoto"') : markup;
+  });
+  return { html: out, stats };
 }

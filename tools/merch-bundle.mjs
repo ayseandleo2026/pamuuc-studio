@@ -60,19 +60,44 @@ function offsiteLinks(site, LOCALES) {
   return out;
 }
 
+const PAGE_OF = { chooser: 'home', merch: 'merch', products: 'products',
+  collections: 'collections', method: 'method', howto: 'howto',
+  merchhelp: 'merchhelp', quote: 'quote', about: 'about', contact: 'contact',
+  search: 'search', product: 'product', collection: 'collection', build: 'build' };
+
+/** page|id for one entry of pageList — the key both tables below are cut on. */
+function routeKey(p) {
+  const [kind, arg] = p.id.split(':');
+  const page = PAGE_OF[kind];
+  if (!page) return null;
+  const id = kind === 'product' || kind === 'build' ? p.arg : arg;
+  return { page, id, key: page + '|' + (id || '') };
+}
+
 /** pathname -> the route the app should be on. Generated from the same table
     the builder used, so the two cannot disagree. */
 function routeTable(M, site, LOCALES) {
   const table = {};
   for (const loc of LOCALES) {
     for (const p of pageList(M, site, loc)) {
-      const [kind, arg] = p.id.split(':');
-      const page = { chooser: 'home', merch: 'merch', products: 'products',
-        collections: 'collections', method: 'method', howto: 'howto',
-        merchhelp: 'merchhelp', quote: 'quote', about: 'about', contact: 'contact',
-        search: 'search', product: 'product', collection: 'collection', build: 'build' }[kind];
-      if (!page) continue;
-      table[p.url] = { page, id: kind === 'product' ? p.arg : (kind === 'build' ? p.arg : arg), loc };
+      const r = routeKey(p);
+      if (r) table[p.url] = { page: r.page, id: r.id, loc };
+    }
+  }
+  return table;
+}
+
+/** page|id -> {en: url, es: url, …}: the same page in every language.
+    One table serves two jobs that were both broken in the same way — the
+    switcher, which sent every visitor to the home page, and the hreflang set,
+    which kept the first page's languages after a client-side navigation. */
+function langTable(M, site, LOCALES) {
+  const table = {};
+  for (const loc of LOCALES) {
+    for (const p of pageList(M, site, loc)) {
+      const r = routeKey(p);
+      if (!r) continue;
+      (table[r.key] || (table[r.key] = {}))[loc] = p.url;
     }
   }
   return table;
@@ -82,6 +107,10 @@ function routeTable(M, site, LOCALES) {
    of tools/merch-shim.js for the four bugs that cost. It is concatenated
    verbatim, never interpolated. */
 const SHIM = readFileSync(join(HERE, 'merch-shim.js'), 'utf8');
+
+/* The switcher's markup, shared with the static builder so the control the
+   crawler reads and the control that survives a redraw cannot differ. */
+const LANG = readFileSync(join(HERE, 'merch-lang.js'), 'utf8');
 
 /* Runs before the mockup's own files: app.js boots from an IIFE at its end, so
    a saved state has already been restored by the time the shim is reached. */
@@ -101,6 +130,40 @@ export const MERCH_CSS = `
    a rule like a.pc{display:block} would beat .pc{display:flex} on specificity
    and flatten the card. */
 a[data-blk]{display:block}
+
+/* The language switcher. The mockup had a stub button and no menu to style,
+   so this is new — but it is the merchandise side's own tokens throughout, and
+   the shape deliberately matches the switcher the custom uniforms pages have
+   had all along, because they are one site and this is one control. */
+.mlang{position:relative;display:inline-flex}
+.mlang-b{gap:var(--sp-1);letter-spacing:.06em}
+.mlang-b svg{opacity:.7;transition:transform var(--dur-focus) var(--ease)}
+.mlang-b[aria-expanded="true"] svg{transform:rotate(180deg)}
+.mlang-m{position:absolute;right:0;top:calc(100% + var(--sp-2));z-index:70;
+  min-width:12rem;padding:var(--sp-1);background:var(--surface);
+  border:1px solid var(--line);border-radius:var(--radius-md);box-shadow:var(--shadow-3)}
+.mlang-m[hidden]{display:none}
+.mlang-m a{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-5);
+  padding:var(--sp-2) var(--sp-3);border-radius:var(--radius-sm);
+  font-size:var(--fs-sm);color:var(--ink);white-space:nowrap}
+.mlang-m a:hover{background:var(--surface-2)}
+.mlang-c{font-size:var(--fs-xs);letter-spacing:.06em;color:var(--muted)}
+.mlang-m a[aria-current="true"]{font-weight:500}
+.mlang-m a[aria-current="true"] .mlang-c{color:var(--ink)}
+
+/* On the hero photograph the control sits on the image, where the quiet
+   button's border and ink would disappear. Same rule the mockup's own
+   btn--onphoto uses, applied to the button this replaced it with. */
+.mlang--onphoto .mlang-b{background:transparent;border-color:rgba(244,242,237,.55);color:#F4F2ED}
+.mlang--onphoto .mlang-b:hover:not(:disabled){background:rgba(244,242,237,.12);border-color:#F4F2ED}
+
+/* The footer's row of names, in place of the stub that listed three languages
+   and did nothing. */
+.mlang-row{color:var(--muted);font-size:var(--fs-sm)}
+.mlang-row a{color:var(--muted)}
+.mlang-row a:hover{color:var(--ink)}
+.mlang-row a[aria-current="true"]{color:var(--ink)}
+.mlang-row i{font-style:normal;opacity:.5}
 `;
 
 export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake, covers }) {
@@ -115,7 +178,13 @@ export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake, c
     `window.__MERCH_INTAKE__ = ${JSON.stringify(intake || '')};`,
     `window.__MERCH_STUDIO_EMAIL__ = ${JSON.stringify(site.intake.studioEmail || 'simone@pamuuc-studio.com')};`,
     `window.__MERCH_OFFSITE__ = ${JSON.stringify(offsiteLinks(site, LOCALES))};`,
+    `window.__MERCH_LANGS__ = ${JSON.stringify(langTable(M, site, LOCALES))};`,
+    `window.__MERCH_LOCALES__ = ${JSON.stringify(Object.fromEntries(
+      LOCALES.map((l) => [l, site.locales[l].label])))};`,
+    `window.__MERCH_LANG_TITLE__ = ${JSON.stringify(Object.fromEntries(
+      LOCALES.map((l) => [l, (site.strings[l] || {}).language || 'Language'])))};`,
     SEED_GUARD,
+    LANG,
     app,
     SHIM,
   ].join('\n;\n');

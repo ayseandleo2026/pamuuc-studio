@@ -91,6 +91,34 @@
     if (d) d.setAttribute('content', m.description);
     var c = document.querySelector('link[rel="canonical"]');
     if (c) c.setAttribute('href', location.origin + norm(location.pathname));
+    applyAlternates();
+  }
+
+  /* The title, the description and the canonical were already corrected after
+     a client-side navigation; the hreflang set was not, so from the second
+     page onwards the head still advertised the FIRST page's five addresses.
+     Same table the switcher uses, so a link in the menu and a link in the head
+     cannot name different URLs. */
+  function applyAlternates() {
+    var urls = langsFor(ROUTE);
+    if (!urls) return;
+    var old = document.querySelectorAll('link[rel="alternate"][hreflang]');
+    for (var i = 0; i < old.length; i++) old[i].parentNode.removeChild(old[i]);
+    var head = document.head;
+    if (!head) return;
+    for (var j = 0; j < ORDER.length; j++) {
+      var l = ORDER[j];
+      if (urls[l]) head.appendChild(alternate(l, urls[l]));
+    }
+    if (urls.en) head.appendChild(alternate('x-default', urls.en));
+  }
+
+  function alternate(lang, href) {
+    var link = document.createElement('link');
+    link.setAttribute('rel', 'alternate');
+    link.setAttribute('hreflang', lang);
+    link.setAttribute('href', location.origin + href);
+    return link;
   }
 
   function norm(p) { return p.replace(/\/*$/, '/') || '/'; }
@@ -155,6 +183,15 @@
     var noHash = hash >= 0 ? href.slice(0, hash) : href;
     var q = noHash.indexOf('?');
     var path = q >= 0 ? noHash.slice(0, q) : noHash;
+    /* Another language is a real navigation, not a route change. The route
+       table holds all five, so without this the switcher would be taken over
+       here: the URL would become /fr/…, the page would redraw from the copy
+       file THIS document loaded, and the visitor would get a French address
+       showing Spanish. The language lives in the document, so changing it
+       means fetching a new one. */
+    var dest = TABLE[norm(path)];
+    if (dest && dest.loc !== LOC) return;
+
     var r = routeForPath(path, q >= 0 ? noHash.slice(q) : '');
     if (!r) return;                       /* not ours — let the browser go */
 
@@ -298,13 +335,87 @@
     }
   }
 
+  /* ---- the language switcher ----------------------------------------------
+     The builder replaces the mockup's "EN" stub in the static HTML, but app.js
+     redraws the header from its own source the moment it boots, which puts the
+     stub straight back. So the same replacement runs again after every draw,
+     from the same tools/merch-lang.js the builder used. */
+  var LANGS = window.__MERCH_LANGS__ || {};
+  var LABELS = window.__MERCH_LOCALES__ || {};
+  var LANG_TITLE = (window.__MERCH_LANG_TITLE__ || {})[LOC] || 'Language';
+  var LANG = (window.__MERCH_LANG__ || {}).langHTML;
+  var ORDER = (window.__MERCH_LANG__ || {}).LANG_ORDER || ['en', 'es', 'fr', 'it', 'de'];
+
+  /** This page in every language, or null when it is not one of ours. */
+  function langsFor(route) {
+    if (!route || route.surface !== 'public') return null;
+    var id = route.params && route.params.id;
+    return LANGS[route.page + '|' + (id || '')] || null;
+  }
+
+  function relang() {
+    if (!LANG) return;
+    var urls = langsFor(ROUTE);
+    var stubs = document.querySelectorAll('[data-act="lang"]');
+    if (!stubs.length) return;
+    for (var i = 0; i < stubs.length; i++) {
+      var el = stubs[i];
+      /* No table entry means a page this bundle does not route. Dropping the
+         control is right there: a switcher that cannot name the other four
+         addresses would be five guesses. */
+      var markup = urls ? LANG({
+        urls: urls, loc: LOC, labels: LABELS, title: LANG_TITLE,
+        inline: el.tagName === 'A', instance: i,
+      }) : '';
+      var box = document.createElement('span');
+      box.innerHTML = markup;
+      var made = box.firstChild;
+      if (made && /btn--onphoto/.test(el.className || '')) {
+        made.className += ' mlang--onphoto';
+      }
+      if (made) el.parentNode.replaceChild(made, el);
+      else el.parentNode.removeChild(el);
+    }
+  }
+
+  /* One listener for the document rather than one per button: the buttons are
+     replaced on every draw, and a listener bound to an element that has just
+     been thrown away is a listener that silently stops working. */
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('[data-mlang]');
+    var open = document.querySelectorAll('.mlang-m:not([hidden])');
+    for (var i = 0; i < open.length; i++) {
+      var owner = document.querySelector('[data-mlang="' + open[i].id + '"]');
+      if (btn && owner === btn) continue;
+      open[i].setAttribute('hidden', '');
+      if (owner) owner.setAttribute('aria-expanded', 'false');
+    }
+    if (!btn) return;
+    e.preventDefault();
+    var menu = document.getElementById(btn.getAttribute('data-mlang'));
+    if (!menu) return;
+    var wasOpen = !menu.hasAttribute('hidden');
+    if (wasOpen) { menu.setAttribute('hidden', ''); btn.setAttribute('aria-expanded', 'false'); }
+    else { menu.removeAttribute('hidden'); btn.setAttribute('aria-expanded', 'true'); }
+  }, true);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    var open = document.querySelectorAll('.mlang-m:not([hidden])');
+    for (var i = 0; i < open.length; i++) {
+      open[i].setAttribute('hidden', '');
+      var owner = document.querySelector('[data-mlang="' + open[i].id + '"]');
+      if (owner) { owner.setAttribute('aria-expanded', 'false'); owner.focus(); }
+    }
+  });
+
   /* Both corrections belong after every draw, not just the first, so render
      itself is wrapped. It is a top-level function declaration in a classic
      script, which makes it a global property and therefore replaceable. */
   var innerRender = render;
   render = function () {
     var r = innerRender.apply(this, arguments);
-    try { retext(); applyMeta(); relink(); saveQuote(); } catch (e) {}
+    try { retext(); applyMeta(); relink(); relang(); saveQuote(); } catch (e) {}
     return r;
   };
 
@@ -548,6 +659,11 @@
   }
   retext();
   applyMeta();
+  /* Belt and braces: the wrapped render above already does this, but it is
+     inside a try that swallows, and a page whose switcher silently vanished
+     would be hard to notice. relang() is idempotent — with no stub left to
+     replace it returns immediately. */
+  relang();
 
   /* render() is not the only way the page changes: the app also patches parts
      of the DOM directly, and anything it writes that way arrives in English
@@ -565,7 +681,7 @@
       setTimeout(function () {
         queued = false;
         observer.disconnect();
-        try { retext(root); relink(); } catch (e) {}
+        try { retext(root); relink(); relang(); } catch (e) {}
         observer.observe(root, { childList: true, subtree: true, characterData: true });
       }, 0);
     });

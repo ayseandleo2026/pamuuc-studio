@@ -11,7 +11,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadMockup } from './merch-render.mjs';
 import { pageList, catLookup, urlFor, productSlug } from './merch-routes.mjs';
-import { linkify, dimension, displayClasses, wireForms } from './merch-static.mjs';
+import { linkify, dimension, displayClasses, wireForms, langSwitch } from './merch-static.mjs';
 import { translate } from './merch-strings.mjs';
 
 /* Titles and descriptions are written, not scraped. Scraping looked tempting —
@@ -281,6 +281,14 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
      go in its cluster list — but the pages need head(), which closes over
      things defined further down that file. So the work is split: clusters now,
      HTML when asked. */
+  /* page id -> {en: url, es: url, …}. One walk of the same page list the
+     router and the builder use, so the switcher can never offer a URL the
+     site does not publish. */
+  const urlsById = {};
+  for (const l of LOCALES) {
+    for (const q of pageList(M, site, l)) (urlsById[q.id] || (urlsById[q.id] = {}))[l] = q.url;
+  }
+
   const renderPages = (head, consentBar) => {
   const pages = [];
   for (const loc of LOCALES) {
@@ -307,7 +315,17 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
       const a = linkify(body, loc, site, hasDisplay, cats);
       const b = dimension(a.html, manifest);
       const c = wireForms(b.html, intakeEndpoint);
-      let html = c.html;
+      /* The switcher points at this same page in the other languages, taken
+         from the page list rather than assembled from the path — a product
+         whose slug differs, or a page one language does not have, is then
+         simply absent from the menu instead of a 404 in it. */
+      const d = langSwitch(c.html, {
+        urls: urlsById[p.id] || {}, loc,
+        labels: Object.fromEntries(LOCALES.map((l) => [l, site.locales[l].label])),
+        title: (site.strings[loc] || {}).language || 'Language',
+      });
+      if (!d.stats.replaced) problems.push(`${p.id} (${loc}): the language switcher was not placed`);
+      let html = d.html;
 
       /* #root is where the app renders. The static HTML goes inside it so the
          page is complete before any script runs; when the bundle boots it
