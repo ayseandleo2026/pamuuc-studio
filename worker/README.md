@@ -59,41 +59,74 @@ curl https://pamuuc-intake.<your-subdomain>.workers.dev/health
 
 ## The Google Sheet
 
-Sheet: **PAMUUC — Requests (website intake)**.
+**Sheet:** [PAMUUC — Requests (website intake)](https://docs.google.com/spreadsheets/d/1jbd6FyobCuyV_9xLAaH100R_pXUXNJcqQeJIexGYyAg/edit)
+**Script:** [`sheet/Code.gs`](sheet/Code.gs)
 
-In the sheet: **Extensions → Apps Script**, replace everything with the script
-below, then **Deploy → New deployment → Web app**, with *Execute as* **Me** and
-*Who has access* **Anyone**. Copy the deployment URL into `SHEET_URL` above.
+There is nothing to set up in the sheet itself. The script writes its own
+header row — 29 columns — and adds a column if the Worker ever starts sending
+a field the sheet does not have. Typing the headings by hand would only be a
+chance to mistype one, and a mistyped heading fails silently: the column simply
+stays empty forever.
 
-"Anyone" sounds alarming and is not: the URL is unguessable, the script only
-appends, and it never reads anything back out.
+### Setting it up
 
-```javascript
-function doPost(e) {
-  var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-  var body = JSON.parse(e.postData.contents);
-  var headers = sheet.getRange(1, 1, 1, sheet.getLastColumn()).getValues()[0];
-  var row = headers.map(function (h) { return body[h] == null ? '' : body[h]; });
-  sheet.appendRow(row);
-  return ContentService
-    .createTextOutput(JSON.stringify({ ok: true }))
-    .setMimeType(ContentService.MimeType.JSON);
-}
+1. Open the sheet.
+2. **Extensions → Apps Script.** A tab opens with an empty `Code.gs`.
+3. Select everything in the editor and paste in the contents of
+   [`worker/sheet/Code.gs`](sheet/Code.gs).
+4. **Save** (⌘S). Name the project `PAMUUC intake` if it asks.
+5. *Optional:* choose **`setUp`** in the function dropdown and press **Run** —
+   this draws the header row now instead of when the first request arrives.
+   Google will ask you to authorise the script the first time; it only ever
+   touches this one spreadsheet.
+6. **Deploy → New deployment.**
+   - Click the gear beside *Select type* and choose **Web app**.
+   - *Description:* `intake`
+   - *Execute as:* **Me**
+   - *Who has access:* **Anyone**
+   - **Deploy**, authorise if asked, and copy the **Web app URL**.
+
+"Anyone" sounds alarming and is not. The URL is unguessable, the script only
+appends or updates a row, and it never reads anything back out. It is the same
+posture as a form endpoint.
+
+### Check it before wiring it in
+
+Paste the Web app URL into a browser. It should answer:
+
+```json
+{"ok":true,"sheet":"Requests","rows":0,"columns":29}
 ```
 
-It maps by column heading, so reordering or adding columns in the sheet needs no
-change here. Put these in row 1 — spelling and case must match, and any you leave
-out are simply not recorded:
+If you get an HTML error page instead, the deployment is wrong — usually
+*Who has access* left on *Only myself*.
 
-```
-Reference · Received · Type · Name · Company · Email · Phone · Country · Website
-Product · SKU · Colour · Quantity · Fit · Weight · Personalisation · Placement
-Project type · Team size · Timeline · Proposed call
-Artwork · Artwork file · Offer code · Message · Consent · Locale · Source
-Status · Answered
+### Then give it to the Worker
+
+```bash
+npx wrangler secret put SHEET_URL
 ```
 
-`Status` and `Answered` are left blank on purpose — they are yours to fill in.
+and paste the same URL.
+
+### What it does that the obvious version does not
+
+- **Builds its own header row**, so the sheet and the Worker cannot drift apart.
+- **Adds a column** for a field it has not seen, instead of dropping it. That
+  is how you avoid discovering months later that "Proposed call" was never
+  being recorded.
+- **Takes a lock.** Two forms submitted in the same second would otherwise read
+  the same last row and one would overwrite the other.
+- **Updates rather than duplicates** when a reference it already holds comes
+  round again.
+- **Never throws.** A failure here costs a row in a spreadsheet — the request
+  itself was already emailed to the studio before this ran.
+
+### Re-deploying after an edit
+
+Apps Script keeps serving the deployed version, not the saved one. After
+changing the script: **Deploy → Manage deployments → ✏️ → Version: New version
+→ Deploy.** The URL stays the same, so `SHEET_URL` does not change.
 
 ## Pointing the site at it
 
