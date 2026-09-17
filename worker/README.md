@@ -90,16 +90,41 @@ stays empty forever.
 appends or updates a row, and it never reads anything back out. It is the same
 posture as a form endpoint.
 
-### Check it before wiring it in
+### Check it before wiring it in — and not in your own browser
 
-Paste the Web app URL into a browser. It should answer:
+This is the step that catches the one mistake everybody makes, and it only
+catches it if you do it **signed out**.
 
-```json
-{"ok":true,"sheet":"Requests","rows":0,"columns":29}
+Opening the Web app URL in your normal browser proves nothing: you are signed
+in as the owner, so it works whatever *Who has access* is set to. The Worker
+is not signed in as anybody. Test the way the Worker will:
+
+```bash
+curl -sSL "PASTE_THE_WEB_APP_URL_HERE"
 ```
 
-If you get an HTML error page instead, the deployment is wrong — usually
-*Who has access* left on *Only myself*.
+or open the URL in a **private window**. You want:
+
+```json
+{"ok":true,"sheet":"Requests","rows":0,"columns":0}
+```
+
+`"columns":0` is correct before the first request — the header row is drawn on
+the first write, or when you run `setUp` from the editor.
+
+If instead you get a page of HTML saying **"Impossibile aprire il file in questo
+momento"** / **"Sorry, unable to open the file at this time"**, the deployment is
+private. Fix it:
+
+**Deploy → Manage deployments → ✏️ (edit) → Who has access: _Anyone_ → Deploy.**
+
+Not *Anyone with a Google Account* — that still refuses the Worker, which has
+no account. *Anyone* is right here: the URL is unguessable, the script only
+appends or updates one row, and it never reads anything back out.
+
+Get this wrong and nothing tells you. The Worker treats a sheet failure as
+non-fatal — the customer's request still succeeds and the studio still gets the
+email — so the only symptom is a spreadsheet that stays empty.
 
 ### Then give it to the Worker
 
