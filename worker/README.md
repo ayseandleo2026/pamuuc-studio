@@ -126,6 +126,23 @@ Get this wrong and nothing tells you. The Worker treats a sheet failure as
 non-fatal — the customer's request still succeeds and the studio still gets the
 email — so the only symptom is a spreadsheet that stays empty.
 
+### Testing a POST by hand
+
+Use `-d` and let curl choose the method. Do **not** add `-X POST`:
+
+```bash
+curl -sSL "$URL" -H 'content-type: application/json' -d '{"Reference":"TEST-1","Type":"Merchandise","Name":"Test"}'
+```
+
+Apps Script answers a POST with a 302 to `script.googleusercontent.com`, and
+that second hop only serves GET. `-X POST` forces the method through the
+redirect, so you get Drive's "Impossibile aprire il file" page back — **after
+the row has already been written**. The write succeeded; only the reply was
+lost, which is a confusing way to be told nothing is wrong.
+
+Browsers and Cloudflare's `fetch` both downgrade a 302 to GET, so the Worker
+never meets this. It is purely a curl footgun.
+
 ### Then give it to the Worker
 
 ```bash
