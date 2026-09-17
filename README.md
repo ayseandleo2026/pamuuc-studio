@@ -114,3 +114,9 @@ were kept exactly as they were, so nothing that was already indexed had to move.
   "Pamuuc Studio". The legal entity, "Pamuk Studio S.L", never changes.
 - Minimum order quantity is **10 pieces per style**. If that changes it changes in
   `content/home.<loc>.json` for all five languages at once.
+
+## Translating the merchandise side
+
+The merchandise copy is extracted out of the mockup into `content/merch.*.json`.
+See **[TRANSLATION.md](TRANSLATION.md)** — where the English lives, how to review
+it, and how to finish the four languages.

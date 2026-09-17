@@ -129,8 +129,11 @@ function dictionaries(ROOT, LOCALES) {
   for (const loc of LOCALES) {
     const f = join(ROOT, `content/merch.${loc}.json`);
     if (!existsSync(f)) { out[loc] = null; continue; }
-    const d = JSON.parse(readFileSync(f, 'utf8'));
-    out[loc] = d.copy || d;
+    /* The whole document, not just `copy`. translate() also reads `patterns`
+       and `colourPreposition` off it, and handing it the copy object alone
+       left both undefined — so the number rules and the colour composition
+       silently did nothing while looking like they worked. */
+    out[loc] = JSON.parse(readFileSync(f, 'utf8'));
   }
   return out;
 }

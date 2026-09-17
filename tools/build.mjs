@@ -86,7 +86,7 @@ const MERCH_ASSETS = (() => {
     const d = MERCH.dicts[loc];
     if (!d || loc === DEFAULT) continue;
     const real = {};
-    for (const [k, v] of Object.entries(d)) { if (v && v !== k) real[decode(k)] = decode(v); }
+    for (const [k, v] of Object.entries(d.copy || d)) { if (v && v !== k) real[decode(k)] = decode(v); }
     if (Object.keys(real).length) copy[loc] = `window.__MERCH_COPY__=${JSON.stringify(real)};`;
   }
   const h = (t) => createHash('sha1').update(t).digest('hex').slice(0, 10);

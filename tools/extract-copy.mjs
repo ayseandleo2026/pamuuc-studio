@@ -40,6 +40,20 @@ const GENERATED = [
   /^\d+ products?$/, /^\d+ pieces?$/, /^\d+ of \d+$/, /^\d+ famil(y|ies)$/,
 ];
 
+/* Not language. A product reference, a fabric weight, the brand itself and the
+   language switcher read the same in every locale, and putting them in the
+   review file means a translator is handed "PAM-TOTE-BAGS · 160–400 g/m²" and
+   has to work out that the right answer is to leave it alone. */
+const NOT_LANGUAGE = [
+  /^PAM-[A-Z0-9-]+(\s·.*)?$/,                 /* PAM-TOTE-BAGS · 160–400 g/m² */
+  /^(DTF|DTG)$/,
+  /^(EN|ES|FR|IT|DE)$/,
+  /^English · /,                               /* the language switcher */
+  /^© \d{4} Pamuk Studio S\.L/,
+  /^(PAMUUC|PAMUUC Studio|PAMUUC Merchandise|MERCHANDISE|STUDIO)$/,
+  /^[A-Z][a-z]+ · \d+([–-]\d+)? g\/m²$/,      /* Canvas · 300 g/m² */
+];
+
 /* Supplier colour names, taken from the photograph filenames, which is where
    they are authoritative. They are references rather than words and are never
    translated — see translate() in merch-strings.mjs. */
@@ -47,7 +61,9 @@ const COLOURS = new Set(JSON.parse(readFileSync(join(ROOT, 'content/merch.colour
 const isColour = (k) => COLOURS.has(k) || /^(.+) in (.+)$/.test(k) && COLOURS.has(/^(.+) in (.+)$/.exec(k)[2]);
 
 const strings = collect(pages)
-  .filter((s) => !GENERATED.some((re) => re.test(s.key)) && !isColour(s.key))
+  .filter((s) => !GENERATED.some((re) => re.test(s.key))
+    && !NOT_LANGUAGE.some((re) => re.test(s.key))
+    && !isColour(s.key))
   .sort((a, b) =>
   b.pages.length - a.pages.length || b.words - a.words || a.key.localeCompare(b.key));
 
@@ -100,8 +116,10 @@ const out = {
 };
 
 const guide = {
-  _comment: 'Where each string appears, for review. Not read by the build.',
-  where: Object.fromEntries(strings.map((s) => [s.key, s.pages.slice(0, 6)])),
+  _comment: 'How many pages carry each string, and a few examples. Used to put ' +
+    'the most-used copy at the top of the translation list. Not read by the build.',
+  count: Object.fromEntries(strings.map((s) => [s.key, s.pages.length])),
+  where: Object.fromEntries(strings.map((s) => [s.key, s.pages.slice(0, 5)])),
 };
 
 if (broken) {
