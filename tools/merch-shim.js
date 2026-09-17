@@ -72,6 +72,10 @@
     BY_ROUTE[r.loc + '|' + r.page + '|' + (r.id || '')] = url;
   }
   var LOC = (document.documentElement.lang || 'en');
+  /* The pages this bundle does not route — legal, custom uniforms, the
+     journal. Without them the footer's legally required links come back from a
+     redraw with no href at all. */
+  var OFFSITE = window.__MERCH_OFFSITE__ || {};
   var META = window.__MERCH_META__ || {};
 
   /* app.js sets document.title from its own page label on every render. That
@@ -223,6 +227,7 @@
       if (bits[0] !== 'public') continue;
       var url = BY_ROUTE[LOC + '|' + bits[1] + '|' + (bits.slice(2).join(':') || '')];
       if (!url) url = BY_ROUTE[LOC + '|' + bits[1] + '|'];
+      if (!url) url = OFFSITE[LOC + '|public:' + bits[1]];
       if (!url) continue;
       if (el.tagName === 'A') { el.setAttribute('href', url); continue; }
       /* The app draws a product card as <article data-go>, so there is nothing
@@ -267,6 +272,7 @@
      behaviour still runs, and the request additionally goes to the intake
      Worker, which emails the studio and appends the sheet. */
   var INTAKE = window.__MERCH_INTAKE__ || '';
+  var STUDIO = window.__MERCH_STUDIO_EMAIL__ || 'simone@pamuuc-studio.com';
 
   /* The prototype keeps only the artwork's FILE NAME — pl.art = f.name — and
      drops the file. It builds its file input with createElement and never puts
@@ -284,14 +290,24 @@
     return el;
   };
 
+  /* Returns a promise that RESOLVES with the Worker's JSON on success and
+     REJECTS on anything else. It used to swallow every failure into a
+     console.error while the page went on to say "your request has been
+     received" — so a customer whose submission failed was told it worked, and
+     the basket was emptied behind them so they could not even retry. */
   function send(path, form) {
-    if (!INTAKE) return;
-    try {
-      fetch(INTAKE + path, { method: 'POST', body: form })
-        .then(function (r) { return r.ok ? null : r.text(); })
-        .then(function (bad) { if (bad && window.console) console.error('intake ' + path, bad.slice(0, 200)); })
-        .catch(function (e) { if (window.console) console.error('intake ' + path, e); });
-    } catch (e) { if (window.console) console.error('intake ' + path, e); }
+    if (!INTAKE) return Promise.reject(new Error('no intake endpoint configured'));
+    return fetch(INTAKE + path, { method: 'POST', body: form })
+      .then(function (r) {
+        return r.text().then(function (body) {
+          var data = null;
+          try { data = JSON.parse(body); } catch (e) {}
+          if (!r.ok || !data || data.ok !== true) {
+            throw new Error('intake ' + path + ' ' + r.status + ' ' + body.slice(0, 160));
+          }
+          return data;
+        });
+      });
   }
 
   /* One request, however many products are on it: the Worker issues one
@@ -336,6 +352,12 @@
     put('placement', p0.posName || p0.pos);
     put('code', window.__MERCH_OFFER_CODE__ || '');
     put('locale', document.documentElement.lang || 'en');
+    /* The contact step collects a surname and a marketing opt-in and the
+       prototype kept neither. Dropping a surname makes the studio's reply
+       awkward; dropping an opt-in means somebody who asked to hear from us
+       never does, which is the wrong half of a consent question to lose. */
+    if (q.lastName) put('lastName', q.lastName);
+    if (q.marketingOptIn) put('marketingOptIn', 'yes');
 
     var notes = q.notes ? q.notes + '\n\n' : '';
     var when = q.date && q.date !== 'Not provided' ? 'Needed by: ' + q.date + '\n\n' : '';
@@ -351,7 +373,7 @@
         if (file) { f.append('artwork', file, file.name); i = lines.length; break; }
       }
     }
-    send('/quote', f);
+    return send('/quote', f);
   }
 
   if (typeof submitQuoteRequest === 'function') {
@@ -360,8 +382,46 @@
       /* captured first: the original empties UI.quote and UI.qc on its way out */
       var lines = (UI.quote || []).slice();
       var q = Object.assign({}, UI.qc || {});
+
+      /* collectContact() reads name, email, company, postcode, phone, date,
+         country and notes — not the surname, and not the marketing checkbox,
+         which the prototype renders with no name and no id at all. Both are on
+         screen and both were being thrown away: a surname makes the studio's
+         reply less awkward, and an opt-in is the half of a consent question it
+         is worst to lose. Read here, before the original redraws the form. */
+      try {
+        var lastEl = document.querySelector('[name="last"]');
+        if (lastEl && lastEl.value.trim()) q.lastName = lastEl.value.trim();
+        var optEl = document.querySelector('.co-chk input[type="checkbox"]');
+        if (optEl && optEl.checked) q.marketingOptIn = true;
+      } catch (e) {}
+
       var out = innerSubmit.apply(this, arguments);
-      try { postQuote(lines, q); } catch (e) { if (window.console) console.error('postQuote', e); }
+
+      var posting;
+      try { posting = postQuote(lines, q); }
+      catch (e) { posting = Promise.reject(e); }
+
+      posting.then(function (data) {
+        /* The confirmation shows a reference the prototype invented locally.
+           The business only ever sees the Worker's, so the customer must be
+           told that one or they will quote a number nobody can find. */
+        if (data && data.ref && UI.qDone) { UI.qDone.ref = String(data.ref); render(); }
+      }).catch(function (e) {
+        if (window.console) console.error(e);
+        /* Put the request back exactly as it was and say so. Telling somebody
+           their quote was received when it was not is the worst outcome here:
+           they wait, nobody replies, and the lead is gone without a trace. */
+        UI.quote = lines;
+        UI.qc = q;
+        saveQuote();
+        ROUTE = { surface: 'public', page: 'qcontact', params: {} };
+        render();
+        if (typeof toast === 'function') {
+          toast('Your request did not send',
+            'Nothing has been lost — your products are still here. Please try again, or email ' + STUDIO + '.');
+        }
+      });
       return out;
     };
   }
@@ -380,7 +440,7 @@
         var offer = ((typeof S !== 'undefined' && S.offers) || []).filter(function (o) { return o.id === id; })[0];
         f.append('code', String((offer && offer.code) || id || '').toUpperCase());
         f.append('locale', document.documentElement.lang || 'en');
-        send('/subscribe', f);
+        send('/subscribe', f).catch(function (e) { if (window.console) console.error(e); });
       } catch (e) { if (window.console) console.error('joinOffer', e); }
       return out;
     };

@@ -27,7 +27,7 @@
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { pageList } from './merch-routes.mjs';
+import { pageList, urlFor } from './merch-routes.mjs';
 import { packSource } from './merch-render.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -39,6 +39,26 @@ const APP_FILES = ['journal.js', 'data.js', 'catalogue.js', 'app.js'];
    builder uses, so the runtime and the build cannot disagree about what an
    image is called. It also had its own copy of the covers parser here, which
    expected quoted keys and so produced an empty COVERS on every build. */
+
+/* Targets the app links to that this bundle does not route: the legal pages,
+   the custom uniforms side and the journal, all built by the other builder.
+   The static HTML gets their href from linkify, but the app redraws its own
+   markup without one — so after hydration the footer's Privacy, Terms, Cookie
+   settings and Accessibility links, and the only route to Custom Uniforms,
+   became dead <a> elements with no href, no history entry and no way to open
+   in a new tab. relink() needs to know them too. */
+function offsiteLinks(site, LOCALES) {
+  const out = {};
+  const targets = ['public:privacy', 'public:terms', 'public:cookies',
+    'public:accessibility', 'public:custom', 'public:form', 'public:blog'];
+  for (const loc of LOCALES) {
+    for (const t of targets) {
+      const u = urlFor(t, loc, site);
+      if (u) out[loc + '|' + t] = u;
+    }
+  }
+  return out;
+}
 
 /** pathname -> the route the app should be on. Generated from the same table
     the builder used, so the two cannot disagree. */
@@ -89,6 +109,8 @@ export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake, c
     `window.__MERCH_ROUTES__ = ${JSON.stringify(table)};`,
     `window.__MERCH_META__ = ${JSON.stringify(metaByUrl || {})};`,
     `window.__MERCH_INTAKE__ = ${JSON.stringify(intake || '')};`,
+    `window.__MERCH_STUDIO_EMAIL__ = ${JSON.stringify(site.intake.studioEmail || 'simone@pamuuc-studio.com')};`,
+    `window.__MERCH_OFFSITE__ = ${JSON.stringify(offsiteLinks(site, LOCALES))};`,
     app,
     SHIM,
   ].join('\n;\n');

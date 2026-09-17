@@ -171,9 +171,10 @@ export function studioEmail(kind, ref, f, artworkUrl) {
     </td></tr>
 
     ${group('Who', [
-      row('Contact', esc(f.name)),
+      row('Contact', esc([f.name, f.lastName].filter(Boolean).join(' '))),
       row('Email', `<a href="mailto:${esc(f.email)}" style="color:${accent};text-decoration:underline">${esc(f.email)}</a>`),
       row('Phone', esc(f.phone)),
+      row('Marketing', f.marketingOptIn === 'yes' ? 'Asked to hear from us' : ''),
     ], { first: true })}
 
     ${merch ? group('The garment', [
@@ -232,7 +233,7 @@ export function studioEmail(kind, ref, f, artworkUrl) {
     `${what} — ${ref}\n${f.company || f.name}${f.country ? ' · ' + f.country : ''}\n` +
 
     tsec('Who', [
-      tline('Contact', f.name), tline('Email', f.email),
+      tline('Contact', [f.name, f.lastName].filter(Boolean).join(' ')), tline('Email', f.email),
       tline('Phone', f.phone),
     ]) +
 

@@ -303,7 +303,7 @@ ${LOCALES.filter((l) => l !== loc).map((l) => `<meta property="og:locale:alterna
 ${article ? `<meta property="article:published_time" content="${article.published}T09:00:00+01:00">
 <meta property="article:modified_time" content="${article.modified}T09:00:00+01:00">
 <meta property="article:author" content="${attr(article.author)}">` : ''}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' ${site.intake.endpoint} https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action 'self' ${site.intake.endpoint}; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' ${site.intake.endpoint} https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action 'self' ${site.intake.endpoint}; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#FBF8F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0C1413" media="(prefers-color-scheme: dark)">
@@ -882,6 +882,7 @@ ${h.contact.paras.slice(0, 1).map((p) => `<p class="lede ask-d">${esc(p)}</p>`).
 ${h.contact.paras.slice(1).map((p) => `<p class="ask-sup bf-meet">${esc(p)}</p>`).join('')}
 <form class="bf" data-form action="${attr(site.form.endpoint)}" method="post"
       data-sending="${attr(str.formSending)}" data-ok="${attr(str.formOk)}" data-error="${attr(str.formError)}">
+<input type="hidden" name="locale" value="${loc}">
 <div class="bf-g">
 ${field('name', 'name', 'text', true, ' autocomplete="name" maxlength="100"')}
 ${field('email', 'email', 'email', true, ' autocomplete="email" maxlength="120" inputmode="email" autocapitalize="none"')}

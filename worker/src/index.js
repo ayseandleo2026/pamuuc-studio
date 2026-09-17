@@ -153,6 +153,12 @@ async function handleIntake(kind, request, env, origin) {
     projectType: clean(fields['project-type'], 160),
     timeline: clean(fields.timeline, 120),
     meeting: clean(fields['meeting-datetime'], 40),
+    /* The merchandise contact step collects these two and the prototype threw
+       both away — see the shim. A surname makes the reply less awkward; an
+       opt-in is the half of a consent question it is worst to lose, because
+       somebody who asked to hear from us never would. */
+    lastName: clean(fields.lastName, 120),
+    marketingOptIn: clean(fields.marketingOptIn, 8) === 'yes' ? 'yes' : '',
     /* the enquiry form calls the message "brief" */
     message: clean(fields.message || fields.brief, 4000),
     consent: clean(fields.consent, 20),
@@ -214,7 +220,8 @@ async function handleIntake(kind, request, env, origin) {
 
   await appendSheet(env, {
     Reference: ref, Received: record.at, Type: kind === 'quote' ? 'Merchandise' : 'Custom uniforms',
-    Name: f.name, Company: f.company, Email: f.email, Phone: f.phone, Country: f.country,
+    Name: f.name, 'Last name': f.lastName, Company: f.company, Email: f.email,
+    Phone: f.phone, Country: f.country, 'Marketing opt-in': f.marketingOptIn,
     Product: f.product, SKU: f.sku, Colour: f.colour, Quantity: f.quantity,
     Fit: f.fit, Weight: f.weight, Personalisation: f.personalisation, Placement: f.placement,
     'Project type': f.projectType, 'Team size': f.teamSize, Timeline: f.timeline,
