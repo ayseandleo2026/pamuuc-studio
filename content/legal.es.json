@@ -122,7 +122,7 @@
         },
         {
           "t": "p",
-          "v": "Cuando envías el formulario de contacto, la información facilitada se transmite a Formspree, que procesa el envío y lo reenvía a nuestra bandeja de correo electrónico."
+          "v": "Cuando envías el formulario de contacto, la información facilitada se transmite a Cloudflare y Purelymail, que procesa el envío y lo reenvía a nuestra bandeja de correo electrónico."
         },
         {
           "t": "p",
@@ -170,7 +170,7 @@
         },
         {
           "t": "p",
-          "v": "Servicios de Google como Google Analytics y prestadores de servicios como Formspree pueden tratar información técnica y personal limitada necesaria para el funcionamiento del sitio web o la gestión de solicitudes."
+          "v": "Servicios de Google como Google Analytics y prestadores de servicios como Cloudflare y Purelymail pueden tratar información técnica y personal limitada necesaria para el funcionamiento del sitio web o la gestión de solicitudes."
         },
         {
           "t": "h",

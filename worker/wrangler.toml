@@ -1,0 +1,29 @@
+name = "pamuuc-intake"
+main = "src/index.js"
+compatibility_date = "2026-09-17"
+# node_compat is not needed: the SMTP client uses cloudflare:sockets directly.
+
+# Where the request record lives for 90 days, as a safety net behind the email
+# and the sheet. Deliberately not the system of record.
+[[kv_namespaces]]
+binding = "REQUESTS"
+id = "46edf51fe3604c8092fd6df39c42a2e0"
+
+# Customer artwork. Served back only through /artwork/<key>, never public.
+[[r2_buckets]]
+binding = "ARTWORK"
+bucket_name = "pamuuc-artwork"
+
+[vars]
+# Everything is sent from and received at the same mailbox: sending and
+# receiving on one domain removes any cross-domain deliverability question.
+STUDIO_TO = "simone@pamuuc-studio.com"
+MAIL_FROM = "simone@pamuuc-studio.com"
+MAIL_FROM_NAME = "PAMUUC Studio"
+SMTP_PORT = "465"
+
+# Secrets — never in this file. Set them once with:
+#   npx wrangler secret put SMTP_HOST
+#   npx wrangler secret put SMTP_USER
+#   npx wrangler secret put SMTP_PASS
+#   npx wrangler secret put SHEET_URL

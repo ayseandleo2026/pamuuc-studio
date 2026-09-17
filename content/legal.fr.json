@@ -122,7 +122,7 @@
         },
         {
           "t": "p",
-          "v": "Lorsque vous soumettez le formulaire de contact, les informations fournies sont transmises à Formspree, qui traite l’envoi et le transfère à notre boîte e-mail."
+          "v": "Lorsque vous soumettez le formulaire de contact, les informations fournies sont transmises à Cloudflare et Purelymail, qui traite l’envoi et le transfère à notre boîte e-mail."
         },
         {
           "t": "p",
@@ -170,7 +170,7 @@
         },
         {
           "t": "p",
-          "v": "Des services Google tels que Google Analytics et des prestataires comme Formspree peuvent traiter des informations techniques et personnelles limitées, nécessaires au fonctionnement du site web ou à la gestion des demandes."
+          "v": "Des services Google tels que Google Analytics et des prestataires comme Cloudflare et Purelymail peuvent traiter des informations techniques et personnelles limitées, nécessaires au fonctionnement du site web ou à la gestion des demandes."
         },
         {
           "t": "h",

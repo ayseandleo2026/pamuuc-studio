@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "queueSource": {
+    "path": "outputs/01a043a3-b21a-7100-b9fc-4ef04968fcf9/PAMUUC_Studio_Keyword_Map_2026-08-27.xlsx",
+    "sheet": "Blog Post Briefs",
+    "range": "A4:AA52",
+    "briefCount": 49
+  },
+  "published": [
+    {
+      "briefId": "B001",
+      "parentId": "I001",
+      "key": "hoteldesign",
+      "keyword": "how to design hotel uniforms",
+      "status": "published",
+      "published": "2026-08-27",
+      "commit": "d9fbd69971267579007c5c6bd809a87321cc6620",
+      "pullRequest": null,
+      "deploymentRun": "https://github.com/ayseandleo2026/pamuuc-studio/actions/runs/33121006511",
+      "slugs": {
+        "en": "how-to-design-hotel-uniforms",
+        "es": "como-disenar-uniformes-de-hotel",
+        "fr": "comment-concevoir-uniformes-hotellerie",
+        "it": "come-progettare-divise-per-hotel",
+        "de": "hoteluniformen-richtig-planen"
+      },
+      "cover": "hotel-uniform-design-guide",
+      "liveVerified": "2026-08-30T22:43:36+02:00"
+    },
+    {
+      "briefId": "B002",
+      "parentId": "I002",
+      "key": "hotelideas",
+      "keyword": "hotel uniform design ideas",
+      "status": "published",
+      "published": "2026-08-30",
+      "commit": "a0a95a6a136eab0c85007c9bf3c985185eaf7fd7",
+      "pullRequest": null,
+      "deploymentRun": "https://github.com/ayseandleo2026/pamuuc-studio/actions/runs/33335488920",
+      "slugs": {
+        "en": "hotel-uniform-design-ideas",
+        "es": "ideas-diseno-uniformes-hotel",
+        "fr": "idees-design-uniformes-hotel",
+        "it": "idee-design-divise-hotel",
+        "de": "hoteluniformen-design-ideen"
+      },
+      "cover": "hotel-uniform-design-ideas",
+      "references": [
+        "/Users/useraccount/Desktop/pamuuc-studio-redesign-feedback-v3/src/images/project-hospitality-editorial.jpg",
+        "/Users/useraccount/Desktop/pamuuc-studio-redesign-feedback-v3/src/images/project-multi-role-service-team.jpg",
+        "/Users/useraccount/Desktop/pamuuc-studio-redesign-feedback-v3/src/images/approach-desktop.jpg",
+        "/Users/useraccount/Desktop/pamuuc-studio-redesign-feedback-v3/src/images/system-desktop.jpg"
+      ],
+      "originalityReview": "PASS: newly composed fictional garment-rail scene; no recognizable person, client identity, logo, third-party mark, readable text or source-specific composition.",
+      "qa": "Five live article URLs, five indexes, reciprocal hreflang, sitemap and five feeds verified; GitHub Pages deployment succeeded.",
+      "liveVerified": "2026-09-03T10:17:05+02:00"
+    }
+  ],
+  "locallyComplete": [
+    {
+      "briefId": "B004",
+      "parentId": "I004",
+      "key": "bestfabrics",
+      "keyword": "best fabrics for hotel uniforms",
+      "articleTitle": "How to compare hotel uniform fabric samples",
+      "angle": "A post brief evaluation method for comparing exact supplier samples through a neutral scorecard, role testing, evidence review and finished garment prototypes.",
+      "status": "locally_complete",
+      "articleDate": "2026-09-05",
+      "completedAt": "2026-09-07T12:42:27+02:00",
+      "revisedAt": "2026-09-07T13:26:31+02:00",
+      "slugs": {
+        "en": "compare-hotel-uniform-fabric-samples",
+        "es": "comparar-muestras-tejidos-uniformes-hotel",
+        "fr": "comparer-echantillons-tissus-uniformes-hotel",
+        "it": "confrontare-campioni-tessuti-divise-hotel",
+        "de": "stoffmuster-fuer-hoteluniformen-vergleichen"
+      },
+      "expectedUrls": {
+        "status": "planning_only_not_live_or_verified",
+        "en": "https://pamuuc-studio.com/en/blog/compare-hotel-uniform-fabric-samples/",
+        "es": "https://pamuuc-studio.com/es/blog/comparar-muestras-tejidos-uniformes-hotel/",
+        "fr": "https://pamuuc-studio.com/fr/blog/comparer-echantillons-tissus-uniformes-hotel/",
+        "it": "https://pamuuc-studio.com/it/blog/confrontare-campioni-tessuti-divise-hotel/",
+        "de": "https://pamuuc-studio.com/de/blog/stoffmuster-fuer-hoteluniformen-vergleichen/"
+      },
+      "cover": "best-fabrics-hotel-uniforms",
+      "coverFiles": [
+        "src/images/blog/best-fabrics-hotel-uniforms.jpg",
+        "src/images/blog/best-fabrics-hotel-uniforms.webp"
+      ],
+      "references": [
+        {
+          "path": "src/images/system-desktop.jpg",
+          "owner": "PAMUUC",
+          "accessDate": "2026-09-07",
+          "role": "Relationship between fabric swatches and garment construction only"
+        },
+        {
+          "url": "https://www.carrington.co.uk/en/products/industry/hospitality-leisure/",
+          "owner": "Carrington Textiles",
+          "accessDate": "2026-09-07",
+          "role": "Hospitality movement, short sleeve practicality and role differences only"
+        },
+        {
+          "url": "https://media.miele.com/ex/professional/gr/prospectus/16-2221_Brochure_WetCare_en_INT_sc.pdf",
+          "owner": "Miele Professional",
+          "accessDate": "2026-09-07",
+          "role": "Different care routes for tailored and service garments only"
+        }
+      ],
+      "imageGeneration": {
+        "method": "Built in image generation with three directly supplied inspected references",
+        "originalityReview": "PASS: new overhead material library with five fictional fabric families, no people, logos, readable text, client identity, source pose, interior, copied palette or copied composition.",
+        "coverDimensions": "1040 x 500 JPEG and WebP"
+      },
+      "sources": [
+        "https://www.iso.org/standard/65152.html",
+        "https://www.iso.org/standard/75934.html",
+        "https://www.iso.org/standard/51276.html",
+        "https://www.iso.org/standard/61058.html",
+        "https://www.iso.org/standard/41877.html",
+        "https://www.iso.org/standard/60678.html"
+      ],
+      "qa": {
+        "sourceAudit": "PASS: five locales, seven shared sections, no Dutch, four localized internal links per locale, metadata and dates validated.",
+        "audit": "checked 50 pages (45 indexable) in 5 languages; clean.",
+        "build": "built 50 pages (45 indexable) in 5 languages; clean.",
+        "browser": "All five articles and five journal indexes passed at 1440 x 1000 and 390 x 844. Each page had no horizontal overflow, the expected canonical, six language alternates and the 1040 x 500 cover."
+      },
+      "localOnly": "No commit, push, pull request, merge, deployment or remote modification was performed."
+    },
+    {
+      "briefId": "B005",
+      "parentId": "I005",
+      "key": "hoteldurability",
+      "keyword": "hotel uniform durability",
+      "articleTitle": "Hotel uniform durability diagnosis",
+      "angle": "A garment failure autopsy that starts with visible symptoms and traces them through colour, dimensions, surface wear, construction, fit, movement, care and repair before closing the corrective loop.",
+      "status": "locally_complete",
+      "articleDate": "2026-09-07",
+      "completedAt": "2026-09-07T18:37:05+02:00",
+      "slugs": {
+        "en": "hotel-uniform-durability",
+        "es": "durabilidad-uniformes-hotel",
+        "fr": "durabilite-uniformes-hotel",
+        "it": "durata-divise-hotel",
+        "de": "langlebigkeit-von-hoteluniformen"
+      },
+      "expectedUrls": {
+        "status": "planning_only_not_live_or_verified",
+        "en": "https://pamuuc-studio.com/en/blog/hotel-uniform-durability/",
+        "es": "https://pamuuc-studio.com/es/blog/durabilidad-uniformes-hotel/",
+        "fr": "https://pamuuc-studio.com/fr/blog/durabilite-uniformes-hotel/",
+        "it": "https://pamuuc-studio.com/it/blog/durata-divise-hotel/",
+        "de": "https://pamuuc-studio.com/de/blog/langlebigkeit-von-hoteluniformen/"
+      },
+      "cover": "hotel-uniform-durability",
+      "coverFiles": [
+        "src/images/blog/hotel-uniform-durability.jpg",
+        "src/images/blog/hotel-uniform-durability.webp"
+      ],
+      "references": [
+        {
+          "path": "src/images/project-hospitality-editorial.jpg",
+          "owner": "PAMUUC",
+          "accessDate": "2026-09-07",
+          "role": "Relationship between repeated arm movement and sleeve, cuff and seam stress only"
+        },
+        {
+          "url": "https://www.persu.eu/hotel-clothes",
+          "owner": "PERSU.",
+          "accessDate": "2026-09-07",
+          "role": "Tailored construction and role variation only"
+        },
+        {
+          "url": "https://www.uniformedit.com/",
+          "owner": "Uniform Edit",
+          "accessDate": "2026-09-07",
+          "role": "Active hand movement near cuffs and pockets during service only"
+        }
+      ],
+      "imageGeneration": {
+        "method": "Built in image generation with three directly supplied inspected references",
+        "originalityReview": "PASS: new close construction inspection with anonymous hands, a fictional garment, a stone backdrop, a muted olive charcoal palette and raking light. No face, likeness, logo, readable text, copied garment, client identity, recognizable source setting or source specific composition.",
+        "coverDimensions": "1040 x 500 JPEG and WebP"
+      },
+      "sources": [
+        "https://pamuuc-studio.com/en/blog/custom-hospitality-uniforms/",
+        "https://www.iso.org/standard/65152.html",
+        "https://www.iso.org/standard/51276.html",
+        "https://www.iso.org/standard/61058.html",
+        "https://www.iso.org/standard/41877.html",
+        "https://www.iso.org/standard/60678.html"
+      ],
+      "qa": {
+        "sourceAudit": "PASS: five locales, seven shared sections, no Dutch, five localized internal links per locale, five ISO links per locale, metadata and dates validated.",
+        "audit": "checked 55 pages (50 indexable) in 5 languages; clean.",
+        "build": "built 55 pages (50 indexable) in 5 languages; clean.",
+        "browser": "All five articles and five journal indexes passed at 1440 x 1000 and 390 x 844. Each page returned HTTP 200, had no horizontal overflow, used the expected canonical, exposed six language alternates, showed the 1040 x 500 cover, contained valid structured data and linked the article from its localized index. Console errors and warnings were zero."
+      },
+      "report": "output/blog-runs/2026-09-07-hoteldurability-local-report.md",
+      "localOnly": "No commit, push, pull request, merge, deployment or remote modification was performed."
+    },
+    {
+      "briefId": "B006",
+      "parentId": "I006",
+      "key": "hotellaundry",
+      "keyword": "hotel uniform laundry requirements",
+      "articleTitle": "Hotel uniform laundry requirements",
+      "angle": "Follow one uniform from collection and sorting through washing, drying, finishing, inspection and clean return, turning every operational handoff into a garment specification and shared approval question.",
+      "status": "locally_complete",
+      "articleDate": "2026-09-11",
+      "completedAt": "2026-09-11T22:45:47+02:00",
+      "slugs": {
+        "en": "hotel-uniform-laundry-requirements",
+        "es": "requisitos-lavado-uniformes-hotel",
+        "fr": "exigences-blanchisserie-uniformes-hotel",
+        "it": "requisiti-lavaggio-divise-hotel",
+        "de": "waescheanforderungen-fuer-hoteluniformen"
+      },
+      "expectedUrls": {
+        "status": "planning_only_not_live_or_verified",
+        "en": "https://pamuuc-studio.com/en/blog/hotel-uniform-laundry-requirements/",
+        "es": "https://pamuuc-studio.com/es/blog/requisitos-lavado-uniformes-hotel/",
+        "fr": "https://pamuuc-studio.com/fr/blog/exigences-blanchisserie-uniformes-hotel/",
+        "it": "https://pamuuc-studio.com/it/blog/requisiti-lavaggio-divise-hotel/",
+        "de": "https://pamuuc-studio.com/de/blog/waescheanforderungen-fuer-hoteluniformen/"
+      },
+      "cover": "hotel-uniform-laundry-requirements",
+      "coverFiles": [
+        "src/images/blog/hotel-uniform-laundry-requirements.jpg",
+        "src/images/blog/hotel-uniform-laundry-requirements.webp"
+      ],
+      "references": [
+        {
+          "path": "src/images/home/sector-05-service.jpg",
+          "owner": "PAMUUC",
+          "accessDate": "2026-09-11",
+          "role": "Practical proportion of a service shirt and apron during movement only"
+        },
+        {
+          "url": "https://www.girbau.com/es-mx/acabado-textil/",
+          "owner": "Girbau",
+          "accessDate": "2026-09-11",
+          "role": "Distinct finishing stage and upright handling of a garment only"
+        },
+        {
+          "url": "https://media.miele.com/ex/professional/gr/prospectus/16-2221_Brochure_WetCare_en_INT_sc.pdf",
+          "owner": "Miele Professional",
+          "accessDate": "2026-09-11",
+          "role": "Controlled transfer of clean garments back to hotel operations only"
+        },
+        {
+          "url": "https://www.girbau.com/en-gb/success-cases/portaventura-world-drives-a-sustainable-industrial-laundry-developed-by-girbau/",
+          "owner": "Girbau",
+          "accessDate": "2026-09-11",
+          "role": "Depth and directional flow of a professional laundry environment only"
+        }
+      ],
+      "imageGeneration": {
+        "method": "Built in image generation with four directly supplied and visually inspected references",
+        "source": "/Users/useraccount/.codex/generated_images/01a08c0e-afae-7c00-9358-c7d8c4bca4a7/exec-fffb0bd8-6237-408f-a60c-e20721540b31.png",
+        "promptSummary": "A new photorealistic documentary scene showing an anonymous laundry attendant transferring a fictional olive hotel service shirt from finishing to a clean garment rail, with explicit exclusions for source people, poses, garments, facilities, machinery, palettes, logos, text and compositions.",
+        "originalityReview": "PASS: new person, rear side pose, fictional garment, apron, clean rail, industrial depth and lateral handoff composition. No recognisable person, copied pose, garment, facility, machine arrangement, palette, logo, readable text, client identity or source specific composition.",
+        "coverDimensions": "1040 x 500 JPEG and WebP"
+      },
+      "sources": [
+        "https://www.iso.org/standard/65152.html",
+        "https://www.iso.org/standard/74401.html",
+        "https://www.iso.org/standard/75934.html",
+        "https://www.iso.org/standard/51276.html",
+        "https://www.iso.org/standard/41877.html",
+        "https://pamuuc-studio.com/en/blog/custom-hospitality-uniforms/"
+      ],
+      "qa": {
+        "sourceAudit": "PASS: five locales, seven shared sections, no Dutch, five ISO links and five localized internal links per locale, metadata, dates and reader facing punctuation validated.",
+        "audit": "checked 60 pages (55 indexable) in 5 languages; clean.",
+        "build": "built 60 pages (55 indexable) in 5 languages; clean.",
+        "browser": "All five articles and five localized blog indexes passed at 1440 x 1000 and 390 x 844. The twenty screenshots showed no horizontal overflow. Each route had the expected language, canonical planning URL, six language alternates, structured data, article index link and 1040 x 500 cover. Final mobile article checks had zero browser errors and warnings."
+      },
+      "report": "output/blog-runs/2026-09-11-hotellaundry-local-report.md",
+      "localOnly": "No commit, push, pull request, merge, deployment or remote modification was performed."
+    }
+  ],
+  "inProgress": null
+}

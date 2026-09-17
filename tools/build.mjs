@@ -29,6 +29,12 @@ const read = (p) => readFileSync(join(ROOT, p), 'utf8');
 const json = (p) => JSON.parse(read(p));
 const abs = (u) => site.origin + u;
 
+/* The merchandise side is drawn by the approved mockup's own renderers — see
+   tools/merch-render.mjs for why, and tools/merch-routes.mjs for where each
+   page lives. */
+const { buildMerch } = await import('./build-merch.mjs');
+const { merchJS, MERCH_CSS } = await import('./merch-bundle.mjs');
+
 /* ── tiny helpers ────────────────────────────────────────────────────────── */
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const attr = (s = '') => esc(s);
@@ -41,10 +47,20 @@ const humanDate = (iso, loc) =>
   new Date(iso + 'T09:00:00Z').toLocaleDateString(DATE_FMT[loc], { day: 'numeric', month: 'long', year: 'numeric' });
 
 /* ── URL map ─────────────────────────────────────────────────────────────── */
-const homeURL = (loc) => site.locales[loc].prefix;
+/* The root is the two-door chooser now, so the custom uniforms page — which
+   used to BE the root — has its own address. This was decided knowing it costs
+   the ranking the root currently holds: a chooser has almost nothing to rank
+   on, and there is no 301 to be had, because `/` still has to serve something.
+   The transfer rides on internal linking instead. */
+const homeURL = (loc) => site.locales[loc].prefix + 'custom-uniforms/';
+const chooserURL = (loc) => site.locales[loc].prefix;
 const blogURL = (loc) => site.locales[loc].blog;
 const postURL = (key, loc) => blogURL(loc) + site.postSlugs[key][loc] + '/';
 const legalURL = (loc) => site.legalPrefix[loc];
+
+/* Built before the cluster list, because the merchandise pages bring their own
+   clusters — one per page id, holding that page's URL in all five languages. */
+const MERCH = buildMerch({ ROOT, site, LOCALES, intakeEndpoint: site.intake.endpoint });
 
 const clusters = [
   { id: 'home', type: 'page', priority: '1.0', urls: Object.fromEntries(LOCALES.map((l) => [l, homeURL(l)])) },
@@ -54,6 +70,7 @@ const clusters = [
     urls: Object.fromEntries(LOCALES.map((l) => [l, postURL(key, l)])),
   })),
   { id: 'legal', type: 'page', noindex: true, urls: Object.fromEntries(LOCALES.map((l) => [l, legalURL(l)])) },
+  ...MERCH.clusters,
 ];
 
 /* ── content ─────────────────────────────────────────────────────────────── */
@@ -182,7 +199,13 @@ const readTime = (post, loc) => `${Math.max(2, Math.round(wordCount(post) / 200)
 /* ── layout ──────────────────────────────────────────────────────────────── */
 const CRITICAL = read('src/css/critical.css').replace(/\/\*[\s\S]*?\*\//g, '').trim();
 
-function head({ loc, url, title, description, ogTitle, ogDescription, cluster, image, type = 'website', extraLD = [], preloadImage, article }) {
+function head({ loc, url, title, description, ogTitle, ogDescription, cluster, image, type = 'website', extraLD = [], preloadImage, article, merch }) {
+  /* The merchandise pages carry the mockup's stylesheet, which is the design
+     that was signed off; the custom uniforms side keeps its own. They are
+     separate files rather than one merged sheet because the two sides share
+     no classes and merging them would double what either has to download. */
+  const stylesheet = merch ? '/assets/css/merch.css' : '/assets/css/site.css';
+  const script = merch ? '/assets/js/merch.js' : '/assets/js/site.js';
   const alternates = cluster
     ? LOCALES.filter((l) => cluster.urls[l]).map((l) => `<link rel="alternate" hreflang="${l}" href="${abs(cluster.urls[l])}">`).join('\n')
       + `\n<link rel="alternate" hreflang="x-default" href="${abs(cluster.urls[DEFAULT])}">`
@@ -213,7 +236,7 @@ ${LOCALES.filter((l) => l !== loc).map((l) => `<meta property="og:locale:alterna
 ${article ? `<meta property="article:published_time" content="${article.published}T09:00:00+01:00">
 <meta property="article:modified_time" content="${article.modified}T09:00:00+01:00">
 <meta property="article:author" content="${attr(article.author)}">` : ''}
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action https://formspree.io; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-src 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src 'self' ${site.intake.endpoint} https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; form-action 'self' ${site.intake.endpoint}; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="theme-color" content="#FBF8F3" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0C1413" media="(prefers-color-scheme: dark)">
@@ -224,9 +247,15 @@ ${article ? `<meta property="article:published_time" content="${article.publishe
 <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/gilmer-light.woff2" crossorigin>
 ${preloadImage || ''}
 <style>${CRITICAL}</style>
-<link rel="preload" as="style" href="/assets/css/site.css" data-css>
-<noscript><link rel="stylesheet" href="/assets/css/site.css"></noscript>
-<script defer src="/assets/js/site.js"></script>
+${merch
+  /* The preload-and-promote trick below is driven by site.js, and the
+     merchandise pages do not load site.js — they load the app. Without the
+     promotion the stylesheet never applies and the page renders unstyled, so
+     this side asks for it plainly. */
+  ? `<link rel="stylesheet" href="${stylesheet}">`
+  : `<link rel="preload" as="style" href="${stylesheet}" data-css>
+<noscript><link rel="stylesheet" href="${stylesheet}"></noscript>`}
+<script defer src="${script}"></script>
 ${extraLD.map((o) => `<script type="application/ld+json">\n${JSON.stringify(o, null, 2)}\n</script>`).join('\n')}
 </head>
 <body data-ga="${attr(site.analytics.ga4)}">
@@ -1200,6 +1229,8 @@ for (const loc of LOCALES) {
   }
   pages.push({ url: legalURL(loc), html: renderLegal(loc), cluster: clusters.find((c) => c.id === 'legal'), loc });
 }
+pages.push(...MERCH.renderPages((o) => head({ ...o, merch: true })));
+for (const p of MERCH.problems) errors.push(`merchandise: ${p}`);
 const KNOWN_URLS = new Set([...pages.map((p) => p.url), ...Object.keys(site.legacyRedirects), '/404.html']);
 
 for (const p of pages) audit(p.url, p.html, p.cluster, p.loc);
@@ -1224,6 +1255,24 @@ if (!CHECK && errors.length === 0) {
 
   cpSync(join(ROOT, 'src/css/site.css'), join(OUT, 'assets/css/site.css'));
   cpSync(join(ROOT, 'src/js/site.js'), join(OUT, 'assets/js/site.js'));
+  /* The merchandise side ships the mockup's own stylesheet — the signed-off
+     design, unedited — with its webfont faces ahead of it. */
+  /* The mockup carries Gilmer as five base64 @font-face rules, because an
+     Artifact cannot fetch a font from anywhere. This site already serves those
+     exact five faces as .woff2 files, so the merchandise sheet points at them:
+     129KB smaller, cached across both sides of the site, and it stops the CSP
+     (font-src 'self') from refusing every one of them. */
+  const FACES = { 300: 'light', 400: 'regular', 500: 'medium', 700: 'bold', 800: 'heavy' };
+  const fontCSS = Object.entries(FACES).map(([weight, name]) =>
+    `@font-face{font-family:"Gilmer";font-weight:${weight};font-style:normal;font-display:swap;` +
+    `src:url("/assets/fonts/gilmer-${name}.woff2") format("woff2")}`).join('\n');
+  writeFile('assets/css/merch.css',
+    fontCSS + '\n' +
+    readFileSync(join(ROOT, 'mockup/app.css'), 'utf8') + '\n' + MERCH_CSS);
+  writeFile('assets/js/merch.js', merchJS({
+    ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
+    manifest: JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8')),
+  }));
   cpSync(join(ROOT, 'src/fonts'), join(OUT, 'assets/fonts'), { recursive: true });
   cpSync(join(ROOT, 'src/brand'), join(OUT, 'assets/brand'), { recursive: true });
   /* src/images/incoming holds full-resolution originals for future crops.

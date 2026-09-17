@@ -1,0 +1,287 @@
+/* ============================================================================
+   The runtime bundle
+   ---------------------------------------------------------------------------
+   The static HTML is what a crawler reads and what paints first. This is what
+   makes the page work for a person: choosing a colour, a quantity, a placement,
+   adding to a quote. Without it the catalogue is a brochure of the mockup
+   rather than the mockup.
+
+   It is the mockup's own files, concatenated in the order its index.html loads
+   them, plus two things:
+
+     images  the packs as URL maps instead of base64. Same keys, same lookups,
+             so app.js cannot tell the difference — but ~400KB of text rather
+             than 62MB of data URIs.
+
+     router  the app navigates by location.hash; a website navigates by path.
+             readHash() and go() are the only two functions that care, and both
+             are plain top-level declarations in a classic script, so they can
+             be replaced from a script appended after. Nothing in app.js is
+             edited — which is what keeps the runtime page and the built page
+             the same page.
+
+   Everything shares one global scope, exactly as it does in the mockup's
+   index.html, which is why this is one concatenated classic script and not
+   modules.
+   ========================================================================= */
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { pageList } from './merch-routes.mjs';
+
+/* the order mockup/index.html loads them in; the photo packs are replaced */
+const APP_FILES = ['journal.js', 'data.js', 'catalogue.js', 'app.js'];
+
+const PACK_VAR = {
+  PHOTOS: '', HOME_PHOTOS: '', COVERS: 'cover-',
+  MODEL: 'model/', MODEL_1: 'model/', MODEL_2: 'model/',
+  MODELB: 'back/', SWATCH: 'swatch/', HEROALT: 'alt/',
+};
+
+/** The pack objects, as URL maps. */
+function imagesJS(manifest, mockupDir) {
+  /* COVERS carries alt text and a caption beside the image, and those are
+     content — so its real shape is read from the mockup and only `src` is
+     swapped, rather than rebuilt from the manifest. */
+  const covers = {};
+  const raw = readFileSync(join(mockupDir, 'covers.js'), 'utf8');
+  for (const m of raw.matchAll(/"([A-Za-z0-9_-]+)"\s*:\s*\{([\s\S]*?)\}\s*(?=,\s*"|\s*\}\s*;?\s*$)/g)) {
+    const key = m[1];
+    const alt = /"alt"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(m[2])?.[1] ?? '';
+    const cap = /"cap"\s*:\s*"((?:[^"\\]|\\.)*)"/.exec(m[2])?.[1] ?? '';
+    const e = manifest['cover-' + key];
+    if (e) covers[key] = { src: e.url, alt, cap };
+  }
+
+  const out = [];
+  for (const [name, prefix] of Object.entries(PACK_VAR)) {
+    if (name === 'COVERS') continue;
+    const map = {};
+    for (const [key, e] of Object.entries(manifest)) {
+      if (prefix) { if (key.startsWith(prefix)) map[key.slice(prefix.length)] = e.url; }
+      else if (!key.includes('/') && !key.startsWith('cover-') && key !== 'merch-hero') map[key] = e.url;
+    }
+    /* the packs the mockup splits across files are declared even when empty,
+       because bindPacks() reads every name in PACK_NAMES */
+    out.push(`var ${name} = ${JSON.stringify(map)};`);
+  }
+  out.push(`var COVERS = ${JSON.stringify(covers)};`);
+  out.push(`window.MERCH_HERO = ${JSON.stringify(manifest['merch-hero']?.url || '')};`);
+  return out.join('\n');
+}
+
+/** pathname -> the route the app should be on. Generated from the same table
+    the builder used, so the two cannot disagree. */
+function routeTable(M, site, LOCALES) {
+  const table = {};
+  for (const loc of LOCALES) {
+    for (const p of pageList(M, site, loc)) {
+      const [kind, arg] = p.id.split(':');
+      const page = { chooser: 'home', merch: 'merch', products: 'products',
+        collections: 'collections', method: 'method', howto: 'howto',
+        merchhelp: 'merchhelp', quote: 'quote', about: 'about', contact: 'contact',
+        search: 'search', product: 'product', collection: 'collection', build: 'build' }[kind];
+      if (!page) continue;
+      table[p.url] = { page, id: kind === 'product' ? p.arg : (kind === 'build' ? p.arg : arg), loc };
+    }
+  }
+  return table;
+}
+
+const SHIM = `
+/* ---- path routing --------------------------------------------------------
+   app.js is untouched; these two globals are simply replaced. In a classic
+   script a top-level \`function\` becomes a property of the global object, so
+   reassigning it here is what every later call resolves to — and \`ROUTE\` is a
+   top-level \`let\`, which this script shares because it is part of the same
+   global lexical scope. */
+(function () {
+  var TABLE = window.__MERCH_ROUTES__ || {};
+  var BY_ROUTE = {};
+  for (var url in TABLE) {
+    var r = TABLE[url];
+    BY_ROUTE[r.loc + '|' + r.page + '|' + (r.id || '')] = url;
+  }
+  var LOC = (document.documentElement.lang || 'en');
+  var META = window.__MERCH_META__ || {};
+
+  /* app.js sets document.title from its own page label on every render. That
+     label is the heading, not the search-result title, and the one the builder
+     wrote is the one that was audited — so it is put back after each render.
+     The description moves with it, because a client-side navigation that
+     leaves the previous page's description behind is worse than no change. */
+  function applyMeta() {
+    var m = META[norm(location.pathname)];
+    if (!m) return;
+    document.title = m.title;
+    var d = document.querySelector('meta[name="description"]');
+    if (d) d.setAttribute('content', m.description);
+    var c = document.querySelector('link[rel="canonical"]');
+    if (c) c.setAttribute('href', location.origin + norm(location.pathname));
+  }
+
+  function norm(p) { return p.replace(/\\/*$/, '/') || '/'; }
+
+  function routeForPath(path, search) {
+    var hit = TABLE[norm(path)];
+    if (!hit) return null;
+    /* ?g= is the garment a product link was opened on — the same preselection
+       the mockup carries as the route's sku */
+    var sku = null;
+    var m = /[?&]g=([^&]+)/.exec(search || '');
+    if (m) { try { sku = decodeURIComponent(m[1]); } catch (e) { sku = m[1]; } }
+    return { surface: 'public', page: hit.page, params: { id: hit.id, sku: sku } };
+  }
+
+  /* A page this bundle does not know — the custom uniforms page, the journal,
+     anything the other builder owns. Returning null means "let the browser
+     handle it", which is the correct answer for a link off this side. */
+  function urlForRoute(surface, page, param) {
+    if (surface !== 'public') return null;
+    return BY_ROUTE[LOC + '|' + page + '|' + (param || '')] || null;
+  }
+
+  readHash = function () {
+    return routeForPath(location.pathname, location.search) || { surface: 'public', page: 'home', params: {} };
+  };
+
+  go = function (surface, page, param, sub) {
+    var url = urlForRoute(surface, page, param);
+    if (page !== ROUTE.page || param !== ROUTE.params.id) UI.shown = null;
+    ROUTE = { surface: surface, page: page, params: { id: param, sku: sub } };
+    if (url) { try { history.pushState({}, '', url); } catch (e) {} }
+    try { window.scrollTo(0, 0); } catch (e) {}
+    render();
+    applyMeta();
+  };
+
+  /* A real link is a real link: middle-click, ctrl-click and "open in new tab"
+     have to keep working, so only a plain left click is taken over. */
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a) return;
+    if (a.target && a.target !== '_self') return;
+    if (a.hasAttribute('download')) return;
+    var href = a.getAttribute('href') || '';
+    if (!href.startsWith('/') || href.startsWith('//')) return;
+    var hash = href.indexOf('#');
+    var noHash = hash >= 0 ? href.slice(0, hash) : href;
+    var q = noHash.indexOf('?');
+    var path = q >= 0 ? noHash.slice(0, q) : noHash;
+    var r = routeForPath(path, q >= 0 ? noHash.slice(q) : '');
+    if (!r) return;                       /* not ours — let the browser go */
+
+    /* The app has its own delegated handler for data-go, and it calls go(),
+       which is the override above and already pushes one history entry. It
+       does NOT call preventDefault, because it was written when these were
+       buttons rather than links — so that is all this does for them. Doing
+       the navigation here as well pushed a second entry for one click, and
+       the back button then appeared to do nothing. */
+    e.preventDefault();
+    if (a.hasAttribute('data-go')) return;
+
+    ROUTE = r;
+    try { history.pushState({}, '', href); } catch (err) {}
+    try { window.scrollTo(0, 0); } catch (err) {}
+    render();
+    applyMeta();
+  }, true);
+
+  window.addEventListener('popstate', function () {
+    var r = routeForPath(location.pathname, location.search);
+    if (r) { ROUTE = r; render(); applyMeta(); }
+  });
+
+  /* app.js redraws into #root, and its own markup navigates by data-go with
+     no href. That is fine for clicking — its handler still works — but it
+     costs middle-click, ctrl-click and "open in new tab", which on a product
+     catalogue people genuinely use. So after every render the same table the
+     builder used puts the href back. */
+  function relink() {
+    var els = document.querySelectorAll('[data-go]:not([href])');
+    for (var i = 0; i < els.length; i++) {
+      var el = els[i];
+      var t = el.getAttribute('data-go') || '';
+      var bits = t.split(':');
+      if (bits[0] !== 'public') continue;
+      var url = BY_ROUTE[LOC + '|' + bits[1] + '|' + (bits.slice(2).join(':') || '')];
+      if (!url) url = BY_ROUTE[LOC + '|' + bits[1] + '|'];
+      if (!url) continue;
+      if (el.tagName === 'A') { el.setAttribute('href', url); continue; }
+      /* The app draws a product card as <article data-go>, so there is nothing
+         to put an href on. The builder turns those into anchors; do the same
+         here, or the card is clickable but cannot be opened in a new tab —
+         which on a catalogue people actually do. Children are moved rather
+         than re-parsed, and the click handlers are delegated on document, so
+         nothing is lost in the swap. */
+      var a = document.createElement('a');
+      for (var j = 0; j < el.attributes.length; j++) {
+        a.setAttribute(el.attributes[j].name, el.attributes[j].value);
+      }
+      a.setAttribute('href', url);
+      if (!el.className || el.className.indexOf('gate2') === -1) {
+        /* the same fallback the builder marks, for a box with no display rule */
+        var cs = window.getComputedStyle(el).display;
+        if (cs === 'inline') a.setAttribute('data-blk', '');
+      }
+      while (el.firstChild) a.appendChild(el.firstChild);
+      if (el.parentNode) el.parentNode.replaceChild(a, el);
+    }
+  }
+
+  /* Both corrections belong after every draw, not just the first, so render
+     itself is wrapped. It is a top-level function declaration in a classic
+     script, which makes it a global property and therefore replaceable. */
+  var innerRender = render;
+  render = function () {
+    var r = innerRender.apply(this, arguments);
+    try { applyMeta(); relink(); } catch (e) {}
+    return r;
+  };
+
+  /* app.js boots at the end of its own file, which is BEFORE this shim exists,
+     so it has already read the (empty) hash and rendered the home page over
+     the server-rendered one. Nothing is wrong with that render except that it
+     is the wrong page — so now that the real router is installed, the route is
+     read again and the page drawn once more. One extra render at boot is the
+     price of not editing app.js, which is a price worth paying. */
+  try {
+    ROUTE = readHash();
+    render();
+  } catch (e) {
+    /* a failed re-render must not take the server-rendered page with it */
+    if (window.console && console.error) console.error('merch router', e);
+  }
+  applyMeta();
+})();
+`;
+
+/** One line of CSS for the elements the builder turned into links. */
+export const MERCH_CSS = `
+/* Prototype furniture that must never reach a customer. The app redraws the
+   page after it boots, so removing these from the built HTML alone is not
+   enough — they come back on the next render. A stylesheet rule holds for
+   both, and .switch in particular carries a "reset every record" button. */
+.switch{display:none !important}
+[data-go="public:login"],[data-go="public:studiohelp"]{display:none !important}
+
+/* Elements the static builder turned into <a> that had no display of their own.
+   Only these are touched: a class that already sets display keeps it, because
+   a rule like a.pc{display:block} would beat .pc{display:flex} on specificity
+   and flatten the card. */
+a[data-blk]{display:block}
+`;
+
+export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl }) {
+  const mockupDir = join(ROOT, 'mockup');
+  const app = APP_FILES.map((f) => readFileSync(join(mockupDir, f), 'utf8')).join('\n;\n');
+  const table = routeTable(M, site, LOCALES);
+  return [
+    '/* PAMUUC merchandise — generated by tools/merch-bundle.mjs. Do not edit. */',
+    imagesJS(manifest, mockupDir),
+    `window.__MERCH_ROUTES__ = ${JSON.stringify(table)};`,
+    `window.__MERCH_META__ = ${JSON.stringify(metaByUrl || {})};`,
+    app,
+    SHIM,
+  ].join('\n;\n');
+}

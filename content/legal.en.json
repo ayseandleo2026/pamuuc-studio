@@ -122,7 +122,7 @@
         },
         {
           "t": "p",
-          "v": "When you submit the contact form, the information provided is transmitted to Formspree, which processes the submission and forwards it to our email inbox."
+          "v": "When you submit the contact form, the information provided is transmitted to Cloudflare, which processes the submission and forwards it to our email inbox at Purelymail. Any artwork you attach is stored by Cloudflare and deleted when it is no longer needed."
         },
         {
           "t": "p",
@@ -170,7 +170,7 @@
         },
         {
           "t": "p",
-          "v": "Google services such as Google Analytics and service providers such as Formspree may process limited technical and personal information required for the functioning of the website or the handling of requests."
+          "v": "Google services such as Google Analytics and service providers such as Cloudflare and Purelymail may process limited technical and personal information required for the functioning of the website or the handling of requests."
         },
         {
           "t": "h",

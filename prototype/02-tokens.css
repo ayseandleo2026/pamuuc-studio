@@ -1,0 +1,183 @@
+/* ============================================================================
+   PAMUUC SUITE — token layer
+   One palette, one type scale, one motion system for all three surfaces.
+   Light palette is defined on bare :root. Dark redefines ONLY the tokens.
+   ========================================================================= */
+:root{
+  /* -- ground ------------------------------------------------------------ */
+  --paper:#FBF8F3;
+  --surface:#FFFFFF;
+  --surface-2:#F3EDE4;
+  --surface-3:#EBE3D6;
+  --ink:#0F1C1B;
+  --muted:#5B6A68;
+  --faint:#8A9694;
+  --line:color-mix(in srgb,#002B2A 12%,transparent);
+  --line-strong:color-mix(in srgb,#002B2A 24%,transparent);
+
+  /* -- navy: interactive + brand ONLY. INVERTS between themes. ------------
+     Text on navy must use var(--paper) or --on-navy-dim, never a hardcoded
+     off-white, or dark mode gives dark-on-dark. */
+  --navy:#13304F;
+  --navy-hover:#1B4068;
+  --navy-quiet:color-mix(in srgb,#13304F 8%,transparent);
+  --on-navy-dim:color-mix(in srgb,#FBF8F3 72%,transparent);
+
+  /* -- band: editorial anchor. NEVER inverts. Text uses --on-band. ------- */
+  --band:#002B2A;
+  --on-band:#FBF8F3;
+  --on-band-dim:color-mix(in srgb,#FBF8F3 66%,transparent);
+
+  /* -- red: MERCHANDISE line of business and nothing else. --------------- */
+  --red:#7F1D16;
+  --red-text:#7F1D16;
+  --red-quiet:color-mix(in srgb,#7F1D16 9%,transparent);
+
+  /* -- status families. --stop is danger/blocked — never --red. ---------- */
+  --stop:#B92740;
+  --stop-quiet:color-mix(in srgb,#B92740 10%,transparent);
+  --go:#1F6B4A;
+  --go-quiet:color-mix(in srgb,#1F6B4A 11%,transparent);
+  --wait:#8A5A08;
+  --wait-quiet:color-mix(in srgb,#B57F1B 15%,transparent);
+  --flow:#1E5679;
+  --flow-quiet:color-mix(in srgb,#1E5679 10%,transparent);
+  --idle:#5B6A68;
+  --idle-quiet:color-mix(in srgb,#5B6A68 10%,transparent);
+
+  /* -- Ink Glass. Chrome, controls and transient surfaces only. ---------- */
+  --ig-light:color-mix(in srgb,#FBF8F3 72%,transparent);
+  --ig-navy:color-mix(in srgb,#13304F 78%,transparent);
+  --ig-media:color-mix(in srgb,#0F1C1B 42%,transparent);
+  --ig-edge:color-mix(in srgb,#FBF8F3 38%,transparent);
+  --ig-blur:18px;
+
+  /* -- elevation. Cards carry shadow in light, border-only in dark. ------ */
+  --shadow-1:0 1px 2px color-mix(in srgb,#002B2A 8%,transparent),0 1px 1px color-mix(in srgb,#002B2A 4%,transparent);
+  --shadow-2:0 2px 6px color-mix(in srgb,#002B2A 10%,transparent);
+  --shadow-3:0 8px 24px color-mix(in srgb,#002B2A 12%,transparent);
+  --shadow-4:0 18px 48px color-mix(in srgb,#002B2A 18%,transparent);
+  --card-shadow:var(--shadow-1);
+  --card-border:1px solid var(--line);
+
+  /* -- shape law: rounded is reserved for things you can act on. ---------
+     Content cards stay SQUARE. Capsules are controls. 24/28 are panels. */
+  --radius-xs:2px;
+  --radius-sm:4px;
+  --radius-md:8px;
+  --radius-lg:24px;
+  --radius-xl:28px;
+  --radius-full:999px;
+
+  /* -- spacing ----------------------------------------------------------- */
+  --sp-1:4px;  --sp-2:8px;  --sp-3:12px; --sp-4:16px; --sp-5:20px;
+  --sp-6:24px; --sp-7:32px; --sp-8:40px; --sp-9:56px; --sp-10:80px;
+
+  /* -- motion: quiet and architectural, never bouncy. -------------------- */
+  --dur-press:90ms;
+  --dur-focus:160ms;
+  --dur-morph:260ms;
+  --ease:cubic-bezier(.2,.8,.2,1);
+
+  /* -- type. Gilmer only. Machine values get tabular-nums, not a 2nd face.
+     Nothing renders below 11px outside .paper. ------------------------- */
+  --f:"Gilmer","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --fs-micro:11px;
+  --fs-xs:12px;
+  --fs-sm:13px;
+  --fs-base:14px;
+  --fs-md:15px;
+  --fs-lg:18px;
+  --fs-xl:22px;
+  --fs-2xl:28px;
+  --fs-3xl:36px;
+
+  /* -- layout ------------------------------------------------------------ */
+  --nav-w:240px;
+  --nav-w-collapsed:72px;
+  --app-max:1440px;
+  --detail-max:1280px;
+  --read-max:720px;
+  --header-h:56px;
+}
+
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0C1413;
+  --surface:#111C1B;
+  --surface-2:#16221F;
+  --surface-3:#1D2A27;
+  --ink:#EDE7DD;
+  --muted:#A2B0AD;
+  --faint:#7B8A87;
+  --line:color-mix(in srgb,#EDE7DD 14%,transparent);
+  --line-strong:color-mix(in srgb,#EDE7DD 28%,transparent);
+
+  --navy:#8FB8E0;
+  --navy-hover:#A8C9EB;
+  --navy-quiet:color-mix(in srgb,#8FB8E0 14%,transparent);
+  --on-navy-dim:color-mix(in srgb,#0C1413 72%,transparent);
+
+  --red:#D98A80;
+  --red-text:#E29A90;
+  --red-quiet:color-mix(in srgb,#D98A80 14%,transparent);
+
+  --stop:#DE6478;
+  --stop-quiet:color-mix(in srgb,#DE6478 15%,transparent);
+  --go:#6FBF95;
+  --go-quiet:color-mix(in srgb,#6FBF95 15%,transparent);
+  --wait:#D9A94E;
+  --wait-quiet:color-mix(in srgb,#D9A94E 16%,transparent);
+  --flow:#7FB4D8;
+  --flow-quiet:color-mix(in srgb,#7FB4D8 14%,transparent);
+  --idle:#A2B0AD;
+  --idle-quiet:color-mix(in srgb,#A2B0AD 13%,transparent);
+
+  --ig-light:color-mix(in srgb,#16221F 76%,transparent);
+  --ig-navy:color-mix(in srgb,#13304F 82%,transparent);
+  --ig-media:color-mix(in srgb,#000 46%,transparent);
+  --ig-edge:color-mix(in srgb,#EDE7DD 16%,transparent);
+
+  --card-shadow:none;
+  --card-border:1px solid var(--line);
+  --shadow-3:0 8px 24px color-mix(in srgb,#000 40%,transparent);
+  --shadow-4:0 18px 48px color-mix(in srgb,#000 55%,transparent);
+}}
+
+:root[data-theme="dark"]{
+  --paper:#0C1413;
+  --surface:#111C1B;
+  --surface-2:#16221F;
+  --surface-3:#1D2A27;
+  --ink:#EDE7DD;
+  --muted:#A2B0AD;
+  --faint:#7B8A87;
+  --line:color-mix(in srgb,#EDE7DD 14%,transparent);
+  --line-strong:color-mix(in srgb,#EDE7DD 28%,transparent);
+  --navy:#8FB8E0;
+  --navy-hover:#A8C9EB;
+  --navy-quiet:color-mix(in srgb,#8FB8E0 14%,transparent);
+  --on-navy-dim:color-mix(in srgb,#0C1413 72%,transparent);
+  --red:#D98A80;
+  --red-text:#E29A90;
+  --red-quiet:color-mix(in srgb,#D98A80 14%,transparent);
+  --stop:#DE6478;
+  --stop-quiet:color-mix(in srgb,#DE6478 15%,transparent);
+  --go:#6FBF95;
+  --go-quiet:color-mix(in srgb,#6FBF95 15%,transparent);
+  --wait:#D9A94E;
+  --wait-quiet:color-mix(in srgb,#D9A94E 16%,transparent);
+  --flow:#7FB4D8;
+  --flow-quiet:color-mix(in srgb,#7FB4D8 14%,transparent);
+  --idle:#A2B0AD;
+  --idle-quiet:color-mix(in srgb,#A2B0AD 13%,transparent);
+  --ig-light:color-mix(in srgb,#16221F 76%,transparent);
+  --ig-navy:color-mix(in srgb,#13304F 82%,transparent);
+  --ig-media:color-mix(in srgb,#000 46%,transparent);
+  --ig-edge:color-mix(in srgb,#EDE7DD 16%,transparent);
+  --card-shadow:none;
+  --card-border:1px solid var(--line);
+  --shadow-3:0 8px 24px color-mix(in srgb,#000 40%,transparent);
+  --shadow-4:0 18px 48px color-mix(in srgb,#000 55%,transparent);
+}
+
+@media (min-width:769px){:root{--ig-blur:22px}}

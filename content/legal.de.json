@@ -122,7 +122,7 @@
         },
         {
           "t": "p",
-          "v": "Wenn Sie das Kontaktformular absenden, werden die bereitgestellten Informationen an Formspree übermittelt, das die Anfrage verarbeitet und an unser E-Mail-Postfach weiterleitet."
+          "v": "Wenn Sie das Kontaktformular absenden, werden die bereitgestellten Informationen an Cloudflare und Purelymail übermittelt, das die Anfrage verarbeitet und an unser E-Mail-Postfach weiterleitet."
         },
         {
           "t": "p",
@@ -170,7 +170,7 @@
         },
         {
           "t": "p",
-          "v": "Google-Dienste wie Google Analytics sowie Dienstleister wie Formspree können begrenzte technische und personenbezogene Informationen verarbeiten, die für den Betrieb der Website oder die Bearbeitung von Anfragen erforderlich sind."
+          "v": "Google-Dienste wie Google Analytics sowie Dienstleister wie Cloudflare und Purelymail können begrenzte technische und personenbezogene Informationen verarbeiten, die für den Betrieb der Website oder die Bearbeitung von Anfragen erforderlich sind."
         },
         {
           "t": "h",
