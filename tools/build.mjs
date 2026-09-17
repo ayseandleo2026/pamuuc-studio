@@ -35,6 +35,8 @@ const abs = (u) => site.origin + u;
 const { buildMerch } = await import('./build-merch.mjs');
 const { merchJS, MERCH_CSS } = await import('./merch-bundle.mjs');
 const { createHash } = await import('node:crypto');
+const { createRequire } = await import('node:module');
+const require = createRequire(import.meta.url);
 
 /* ── tiny helpers ────────────────────────────────────────────────────────── */
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -75,6 +77,7 @@ const MERCH = buildMerch({ ROOT, site, LOCALES, intakeEndpoint: site.intake.endp
 const MERCH_ASSETS = (() => {
   const js = merchJS({
     ROOT, site, LOCALES, M: MERCH.M, metaByUrl: MERCH.metaByUrl,
+    intake: site.intake.endpoint,
     manifest: JSON.parse(readFileSync(join(ROOT, 'src/images/catalogue/manifest.json'), 'utf8')),
   });
   const decode = (t) => String(t)
@@ -89,6 +92,20 @@ const MERCH_ASSETS = (() => {
     for (const [k, v] of Object.entries(d.copy || d)) { if (v && v !== k) real[decode(k)] = decode(v); }
     if (Object.keys(real).length) copy[loc] = `window.__MERCH_COPY__=${JSON.stringify(real)};`;
   }
+  /* The runtime bundle is assembled from a template literal, and a lone \n or
+     backtick in that literal collapses at build time and cuts a string in half.
+     That has happened three times, and every time the build stayed green while
+     the browser got a SyntaxError and no interactivity at all. So the bundle is
+     parsed here before it is written: a broken one fails the build. */
+  try {
+    new (require('node:vm').Script)(js, { filename: 'merch.js' });
+  } catch (e) {
+    const line = Number((/merch\.js:(\d+)/.exec(e.stack || '') || [])[1]);
+    const around = line ? js.split('\n').slice(Math.max(0, line - 3), line + 2).join('\n') : '';
+    throw new Error(`the merchandise bundle does not parse: ${e.message}`
+      + (around ? `\n  near line ${line}:\n${around}` : ''));
+  }
+
   const h = (t) => createHash('sha1').update(t).digest('hex').slice(0, 10);
   return { js, copy, jsHash: h(js), copyHash: Object.fromEntries(Object.entries(copy).map(([l, t]) => [l, h(t)])) };
 })();

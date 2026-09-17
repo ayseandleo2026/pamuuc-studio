@@ -286,6 +286,136 @@ const SHIM = `
     return r;
   };
 
+  /* ---- sending the request somewhere -------------------------------------
+     The mockup is a prototype: submitQuoteRequest() writes the request into
+     localStorage and shows a confirmation. Nothing leaves the browser — there
+     is not one fetch in the whole of app.js. On a real site that is the worst
+     failure there is, because it looks exactly like success.
+
+     So the three functions that finish a request are wrapped, the same way
+     go() and render() are. app.js is not edited, the prototype's own
+     behaviour still runs, and the request additionally goes to the intake
+     Worker, which emails the studio and appends the sheet. */
+  var INTAKE = window.__MERCH_INTAKE__ || '';
+
+  /* The prototype keeps only the artwork's FILE NAME — pl.art = f.name — and
+     drops the file. It builds its file input with createElement and never puts
+     it in the document, so there is no element to delegate from. Wrapping
+     createElement is the one hook that catches it without touching app.js. */
+  var ARTWORK = {};
+  var realCreate = document.createElement.bind(document);
+  document.createElement = function (tag) {
+    var el = realCreate(tag);
+    if (String(tag).toLowerCase() === 'input') {
+      el.addEventListener('change', function () {
+        if (el.type === 'file' && el.files && el.files[0]) ARTWORK[el.files[0].name] = el.files[0];
+      });
+    }
+    return el;
+  };
+
+  function send(path, form) {
+    if (!INTAKE) return;
+    try {
+      fetch(INTAKE + path, { method: 'POST', body: form })
+        .then(function (r) { return r.ok ? null : r.text(); })
+        .then(function (bad) { if (bad && window.console) console.error('intake ' + path, bad.slice(0, 200)); })
+        .catch(function (e) { if (window.console) console.error('intake ' + path, e); });
+    } catch (e) { if (window.console) console.error('intake ' + path, e); }
+  }
+
+  /* One request, however many products are on it: the Worker issues one
+     reference and the studio answers one email. The first line fills the
+     structured fields the quote email lays out; every line is written into the
+     message, so nothing is lost for a basket of three. */
+  function describe(lines) {
+    return lines.map(function (l, i) {
+      var pl = (l.placements || []).map(function (x) {
+        return '    ' + (x.posName || x.pos) + ' — ' + (x.methodName || x.method)
+          + (x.size ? ', ' + x.size : '') + (x.art ? ', artwork: ' + x.art : '');
+      }).join('\\n');
+      var sizes = (l.sizes || []).filter(function (s) { return s.qty; })
+        .map(function (s) { return s.size + '×' + s.qty; }).join(' ');
+      return (i + 1) + '. ' + l.productName + ' (' + (l.ref || '')
+        + ((l.cfg && l.cfg.sku) ? ' \\u00b7 ' + l.cfg.sku : '') + ')\\n'
+        + '    ' + l.qty + ' × ' + (l.colourName || l.colour)
+        + (l.unit ? ', ' + l.unit + ' each' : '') + (l.quoteOnly ? ', price on request' : '')
+        + (sizes ? '\\n    sizes: ' + sizes : '')
+        + (pl ? '\\n' + pl : '')
+        + (l.artHelp ? '\\n    help requested with artwork' : '');
+    }).join('\\n\\n');
+  }
+
+  function postQuote(lines, q) {
+    if (!lines.length) return;
+    var first = lines[0], p0 = (first.placements || [])[0] || {};
+    var f = new FormData();
+    var put = function (k, v) { f.append(k, v == null ? '' : String(v)); };
+
+    put('name', q.name); put('email', q.email); put('company', q.company);
+    put('phone', q.phone); put('country', q.country);
+    /* cfg.sku is the garment actually chosen (PM-TSH-012); first.ref is the
+       product family (PAM-TSHIRTS). The studio needs the former to price it,
+       so it leads and the family follows. */
+    put('product', first.productName);
+    put('sku', (first.cfg || {}).sku || first.ref);
+    put('colour', first.colourName || first.colour); put('quantity', first.qty);
+    put('fit', (first.cfg || {}).f);
+    put('weight', (first.cfg || {}).weight || '');
+    put('personalisation', p0.methodName || p0.method);
+    put('placement', p0.posName || p0.pos);
+    put('code', window.__MERCH_OFFER_CODE__ || '');
+    put('locale', document.documentElement.lang || 'en');
+
+    var notes = q.notes ? q.notes + '\\n\\n' : '';
+    var when = q.date && q.date !== 'Not provided' ? 'Needed by: ' + q.date + '\\n\\n' : '';
+    put('message', notes + when
+      + (lines.length > 1 ? lines.length + ' products on this request:\\n\\n' : 'On this request:\\n\\n')
+      + describe(lines));
+
+    /* the first real artwork file anyone attached, if the browser still has it */
+    for (var i = 0; i < lines.length; i++) {
+      var pls = lines[i].placements || [];
+      for (var j = 0; j < pls.length; j++) {
+        var file = pls[j].art && ARTWORK[pls[j].art];
+        if (file) { f.append('artwork', file, file.name); i = lines.length; break; }
+      }
+    }
+    send('/quote', f);
+  }
+
+  if (typeof submitQuoteRequest === 'function') {
+    var innerSubmit = submitQuoteRequest;
+    submitQuoteRequest = function () {
+      /* captured first: the original empties UI.quote and UI.qc on its way out */
+      var lines = (UI.quote || []).slice();
+      var q = Object.assign({}, UI.qc || {});
+      var out = innerSubmit.apply(this, arguments);
+      try { postQuote(lines, q); } catch (e) { if (window.console) console.error('postQuote', e); }
+      return out;
+    };
+  }
+
+  /* the offer pop-up: the code is emailed by the Worker, not by the prototype */
+  if (typeof act === 'object' && act && typeof act.joinOffer === 'function') {
+    var innerJoin = act.joinOffer;
+    act.joinOffer = function (id, email) {
+      var out = innerJoin.apply(this, arguments);
+      try {
+        var f = new FormData();
+        f.append('email', email || '');
+        /* id is the offer's internal key (of_first); the customer-facing
+           code is o.code (FIRST), and that is what the email tells them to
+           quote. Sending the id would email somebody "Your code is OF_FIRST". */
+        var offer = ((typeof S !== 'undefined' && S.offers) || []).filter(function (o) { return o.id === id; })[0];
+        f.append('code', String((offer && offer.code) || id || '').toUpperCase());
+        f.append('locale', document.documentElement.lang || 'en');
+        send('/subscribe', f);
+      } catch (e) { if (window.console) console.error('joinOffer', e); }
+      return out;
+    };
+  }
+
   /* app.js boots at the end of its own file, which is BEFORE this shim exists,
      so it has already read the (empty) hash and rendered the home page over
      the server-rendered one. Nothing is wrong with that render except that it
@@ -343,7 +473,7 @@ export const MERCH_CSS = `
 a[data-blk]{display:block}
 `;
 
-export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl }) {
+export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake }) {
   const mockupDir = join(ROOT, 'mockup');
   const app = APP_FILES.map((f) => readFileSync(join(mockupDir, f), 'utf8')).join('\n;\n');
   const table = routeTable(M, site, LOCALES);
@@ -352,6 +482,7 @@ export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl }) {
     imagesJS(manifest, mockupDir),
     `window.__MERCH_ROUTES__ = ${JSON.stringify(table)};`,
     `window.__MERCH_META__ = ${JSON.stringify(metaByUrl || {})};`,
+    `window.__MERCH_INTAKE__ = ${JSON.stringify(intake || '')};`,
     app,
     SHIM,
   ].join('\n;\n');
