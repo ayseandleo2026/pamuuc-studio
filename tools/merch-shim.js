@@ -255,6 +255,27 @@
     for (var i = 0; i < PATTERNS.length; i++) {
       if (PATTERNS[i][0].test(key)) return key.replace(PATTERNS[i][0], PATTERNS[i][1]);
     }
+
+    /* The quote page joins reference names into ONE text node — "Front ·
+       Embroidery", "Custom Sherpa Jacket · Black" — and retext() matches whole
+       nodes. Every part is already in the dictionary and already translated;
+       the join is the only thing defeating the lookup. A pattern cannot help,
+       because a pattern's replacement is static text and $1 would come back in
+       English.
+
+       Each part is translated if it is known and left alone if it is not, which
+       is exactly right here: in "Custom Sherpa Jacket · Black" the product name
+       moves and the supplier's colour stays, because a colour has no entry. */
+    if (key.indexOf(' \u00b7 ') > -1) {
+      var parts = key.split(' \u00b7 '), moved = false;
+      var out = parts.map(function (p) {
+        var h = COPY[p];
+        if (h && h !== p) { moved = true; return h; }
+        return p;
+      });
+      if (moved) return out.join(' \u00b7 ');
+    }
+
     return null;                      /* a bare colour name lands here, kept */
   }
 

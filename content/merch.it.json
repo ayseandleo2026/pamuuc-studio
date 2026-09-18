@@ -56,6 +56,62 @@
   [
    "^We have confirmed it to (.+?)\\. There is no code to remember — we apply the tier your quantity falls into when we price your quote, before you approve anything\\.$",
    "Le abbiamo inviato la conferma a $1. Non c’è nessun codice da ricordare: applichiamo lo scaglione corrispondente alla sua quantità quando calcoliamo il preventivo, prima di ogni approvazione."
+  ],
+  [
+   "^(.+?) is no longer in the request\\.$",
+   "$1 non è più nella richiesta."
+  ],
+  [
+   "^(.+?) — nothing is ordered or charged\\.$",
+   "$1 — non viene ordinato né addebitato nulla."
+  ],
+  [
+   "^Nothing has been lost — your products are still here\\. Please try again, or email (.+)\\.$",
+   "Non è andato perso nulla: i suoi prodotti sono ancora qui. Riprovi o scriva a $1."
+  ],
+  [
+   "^Placement (\\d+)$",
+   "Posizionamento $1"
+  ],
+  [
+   "^€([\\d.,]+) per piece at (\\d+), excl\\. VAT$",
+   "€$1 a pezzo per $2 pezzi, IVA esclusa"
+  ],
+  [
+   "^€([\\d.,]+) per unit$",
+   "€$1 a pezzo"
+  ],
+  [
+   "^Add it for €([\\d.,]+)$",
+   "Aggiungerla per €$1"
+  ],
+  [
+   "^Add €([\\d.,]+)$",
+   "Aggiungere €$1"
+  ],
+  [
+   "^1 line$",
+   "1 riga"
+  ],
+  [
+   "^(\\d+) lines$",
+   "$1 righe"
+  ],
+  [
+   "^1 answer still needed$",
+   "Manca 1 risposta"
+  ],
+  [
+   "^(\\d+) answers still needed$",
+   "Mancano $1 risposte"
+  ],
+  [
+   "^Amounts exclude VAT and cover the products and personalisation shown\\. 1 line are priced on review\\. Nothing is charged at this step\\.$",
+   "Gli importi sono IVA esclusa e coprono i prodotti e la personalizzazione mostrati. 1 riga è quotata dopo la verifica. Non viene addebitato nulla in questo passaggio."
+  ],
+  [
+   "^Amounts exclude VAT and cover the products and personalisation shown\\. (\\d+) lines are priced on review\\. Nothing is charged at this step\\.$",
+   "Gli importi sono IVA esclusa e coprono i prodotti e la personalizzazione mostrati. $1 righe sono quotate dopo la verifica. Non viene addebitato nulla in questo passaggio."
   ]
  ],
  "copy": {
@@ -1189,7 +1245,91 @@
   "Branded merchandise, chosen by you and personalised for your company.": "Gadget personalizzati per la sua azienda.",
   "1 piece": "1 pezzo",
   "Start choosing": "Inizi a scegliere",
-  "includes one placement at the screen print rate, 1 colour, small": "include un posizionamento alla tariffa serigrafia, 1 colore, piccolo"
+  "includes one placement at the screen print rate, 1 colour, small": "include un posizionamento alla tariffa serigrafia, 1 colore, piccolo",
+  "That address does not look right": "Questo indirizzo non sembra corretto",
+  "We need somewhere to send your confirmation.": "Ci serve un indirizzo a cui inviarle la conferma.",
+  "Removed from your quote": "Rimosso dal suo preventivo",
+  "Added to your quote": "Aggiunto al suo preventivo",
+  "Line updated": "Riga aggiornata",
+  "Branded presentation added": "Presentazione del marchio aggiunta",
+  "Branded presentation removed": "Presentazione del marchio rimossa",
+  "It is listed on your request — nothing is charged here.": "È indicata nella sua richiesta — qui non viene addebitato nulla.",
+  "Removed from your request.": "Rimossa dalla sua richiesta.",
+  "Artwork attached": "File grafico allegato",
+  "Your request did not send": "La sua richiesta non è stata inviata",
+  "Build a merchandise request for review.": "Prepari una richiesta di merchandising da verificare.",
+  "Review the products and personalisation you want us to assess. Nothing is ordered or charged when you send this request.": "Verifichi i prodotti e la personalizzazione che vuole sottoporci. Non viene ordinato né addebitato nulla quando invia questa richiesta.",
+  "Sizes provided": "Taglie indicate",
+  "Sizes to follow": "Taglie da indicare",
+  "Artwork to follow": "File grafico da inviare",
+  "Artwork help requested": "Richiesta assistenza sul file grafico",
+  "View configuration": "Vedere la configurazione",
+  "Price basis": "Base del prezzo",
+  "Confirmed on review": "Confermato dopo la verifica",
+  "Price on review": "Prezzo dopo la verifica",
+  "On review": "Dopo la verifica",
+  "No personalisation": "Senza personalizzazione",
+  "None requested": "Nessuna richiesta",
+  "Edit": "Modificare",
+  "Duplicate": "Duplicare",
+  "Remove": "Rimuovere",
+  "Change": "Cambiare",
+  "Optional extra": "Extra opzionale",
+  "Added to your request": "Aggiunto alla sua richiesta",
+  "See it before it is made": "Lo veda prima della produzione",
+  "A branded presentation of your artwork on the garments you chose, in your colours and placements, sent before anything goes into production. One charge for the whole request, not per piece.": "Una presentazione del marchio con il suo file grafico sui capi che ha scelto, nei suoi colori e posizionamenti, inviata prima che qualcosa entri in produzione. Un solo importo per l’intera richiesta, non per pezzo.",
+  "Remove it": "Rimuoverla",
+  "a visual of your artwork before production": "un’immagine del suo file grafico prima della produzione",
+  "Request summary": "Riepilogo della richiesta",
+  "Configurations": "Configurazioni",
+  "Total units": "Pezzi totali",
+  "Known subtotal": "Subtotale noto",
+  "Products and personalisation": "Prodotti e personalizzazione",
+  "Estimated total": "Totale stimato",
+  "Awaiting review": "In attesa di verifica",
+  "Confirmed in the reviewed quote": "Confermato nel preventivo revisionato",
+  "Amounts exclude VAT": "Importi IVA esclusa",
+  "Some lines need review before an amount can be shown, so this is a known subtotal rather than a total.": "Alcune righe devono essere verificate prima di poter mostrare un importo, quindi questo è un subtotale noto e non un totale.",
+  "Amounts exclude VAT and cover the products and personalisation shown. Nothing is charged at this step.": "Gli importi sono IVA esclusa e coprono i prodotti e la personalizzazione mostrati. Non viene addebitato nulla in questo passaggio.",
+  "Continue to contact details": "Continuare con i suoi dati",
+  "Add more products": "Aggiungere altri prodotti",
+  "Need help completing this quote?": "Serve aiuto per completare questo preventivo?",
+  "Summary": "Riepilogo",
+  "Need it by a date?": "Le serve entro una data?",
+  "Your contact details": "I suoi dati di contatto",
+  "First name": "Nome",
+  "Last name": "Cognome",
+  "(optional)": "(facoltativo)",
+  "Sole traders and organisations are both fine.": "Vanno bene sia liberi professionisti sia organizzazioni.",
+  "We send the reviewed quote to this address.": "Inviamo il preventivo revisionato a questo indirizzo.",
+  "Country": "Paese",
+  "Spain": "Spagna",
+  "France": "Francia",
+  "Portugal": "Portogallo",
+  "Italy": "Italia",
+  "Germany": "Germania",
+  "Netherlands": "Paesi Bassi",
+  "Other in Europe": "Altro in Europa",
+  "Outside Europe": "Fuori dall’Europa",
+  "Phone number": "Telefono",
+  "Only if you would rather we call.": "Solo se preferisce che la chiamiamo.",
+  "Send me occasional product updates. Separate from this quote, and never required.": "Desidero ricevere occasionali novità sui prodotti. È indipendente da questo preventivo e non è mai obbligatorio.",
+  "Request your quote": "Richiedere il suo preventivo",
+  "We use these details to prepare and respond to your quote request.": "Usiamo questi dati per preparare e rispondere alla sua richiesta di preventivo.",
+  "✓ Reviewed before you approve": "✓ Verificato prima della sua approvazione",
+  "✓ No payment at this step": "✓ Nessun pagamento in questo passaggio",
+  "✓ Artwork kept on file": "✓ Il file grafico resta archiviato",
+  "Enter a name so we know who to reply to.": "Indichi un nome così sappiamo a chi rispondere.",
+  "Enter an email address so we can send the quote.": "Indichi un’email per poterle inviare il preventivo.",
+  "Enter the company or organisation this is for.": "Indichi l’azienda o l’organizzazione a cui è destinato.",
+  "privacy notice": "informativa sulla privacy",
+  "apply.": "si applicano.",
+  "Language": "Lingua",
+  "Back to your quote": "Torna al suo preventivo",
+  "small": "piccolo",
+  "medium": "medio",
+  "large": "grande",
+  "Branded presentation": "Presentazione del marchio"
  },
  "_translated": 1112,
  "_of": 1119,
