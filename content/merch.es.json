@@ -1248,7 +1248,13 @@
   "Shopper": "Shopper",
   "Softshell": "Softshell",
   "Straight leg": "Pierna recta",
-  "Washed": "Lavado"
+  "Washed": "Lavado",
+  "Crew neck": "Cuello redondo",
+  "Rolled sleeve": "Manga vuelta",
+  "Standard": "Estándar",
+  "Finish": "Acabado",
+  "Quarter zip": "Quarter zip",
+  "Finish or detail": "Acabado o detalle"
  },
  "patterns": [
   [

@@ -7316,6 +7316,121 @@ function styleLabel(t){
   return out.charAt(0).toUpperCase() + out.slice(1);
 }
 
+/* ---- naming the cloth ----------------------------------------------------
+   Lifted out of the step that draws the cards, because the STYLE question now
+   sits above that step and has to read the same vocabulary to know what it is
+   asking about. */
+
+/* Weight means different things to different garments — 300 g is a light
+   hoodie and a very heavy t-shirt — so the bands are absolute and per family.
+   Banding each product against its own spread was tried first and fails: one
+   500 g hoodie stretched the range until nine of fourteen came back "Light", a
+   350 g one among them. Three bands, because three is what a buyer can hold in
+   their head; each pair below is an upper bound. */
+const WEIGHT_BANDS = {
+  tee:    [[170, 'Light'], [200, 'Classic'], [1e9, 'Heavy']],
+  polo:   [[200, 'Light'], [230, 'Classic'], [1e9, 'Heavy']],
+  sweat:  [[320, 'Light'], [380, 'Classic'], [1e9, 'Heavy']],
+  jogger: [[320, 'Light'], [380, 'Classic'], [1e9, 'Heavy']],
+  shirt:  [[200, 'Light'], [280, 'Classic'], [1e9, 'Heavy']],
+  bag:    [[200, 'Light'], [280, 'Classic'], [1e9, 'Heavy']],
+};
+/* Outerwear runs from a 38 g windbreaker to a 450 g parka, where the number
+   means something different at each end, and headwear carries no weight in the
+   sheet at all. Those name themselves by what they are instead. */
+const GARMENT_FAMILY = {
+  m_t_shirts: 'tee', m_tank_tops: 'tee', m_long_sleeve_t_shirts: 'tee',
+  m_baby_bodysuits: 'tee', m_baby_bibs: 'tee',
+  m_polo_shirts: 'polo', m_long_sleeve_polo_shirts: 'polo',
+  m_crewneck_sweatshirts: 'sweat', m_pullover_hoodies: 'sweat',
+  m_zip_hoodies: 'sweat', m_zip_sweatshirts: 'sweat',
+  m_quarter_zip_sweatshirts: 'sweat',
+  m_joggers: 'jogger', m_sweat_shorts: 'jogger',
+  m_shirts: 'shirt',
+  m_tote_bags: 'bag', m_drawstring_gym_bags: 'bag', m_duffle_bags: 'bag',
+  m_belt_bags: 'bag', m_pencil_cases: 'bag',
+};
+const BAND_ORDER = ['Light', 'Classic', 'Heavy'];
+function bandOf(pid, w){
+  const table = WEIGHT_BANDS[GARMENT_FAMILY[pid]];
+  if(!table || !+w) return null;
+  for(let i = 0; i < table.length; i++) if(+w < table[i][0]) return table[i][1];
+  return table[table.length - 1][1];
+}
+
+/* The finish is what was done to the cloth after it was knitted. It changes
+   how a garment looks and feels, which is the one thing a weight cannot tell
+   you. */
+const FINISHES = [
+  [/garment[- ]?dyed/i, 'Garment dyed'], [/panel washed/i, 'Panel washed'],
+  [/dry[- ]?hand ?feel/i, 'Dry handfeel'], [/fabric washed|washed/i, 'Washed'],
+  [/vintage/i, 'Vintage'], [/sherpa[- ]lined/i, 'Sherpa lined'],
+];
+/* Where the neck or the sleeve is cut differently. Kept apart from the rest of
+   the construction words because these two lists together are the STYLE
+   question, and across 153 garments only two carry one of each. */
+const NECKLINES = [
+  [/v-neck/i, 'V-neck'], [/scoop/i, 'Scoop neck'], [/high neck/i, 'High neck'],
+  [/crew neck/i, 'Crew neck'], [/rolled[- ]sleeve/i, 'Rolled sleeve'],
+  [/cropped|\bcrop\b/i, 'Cropped'], [/raglan/i, 'Raglan'],
+  [/pocket/i, 'Pocket'],
+];
+/* What the garment IS, for the families where weight is not the axis. */
+const DETAILS = [
+  [/quarter[- ]zip/i, 'Quarter zip'], [/zip[- ]through/i, 'Zip'],
+  [/rib[- ]knit/i, 'Ribbed'], [/fisherman/i, 'Fisherman'],
+  [/fleece lining|polar fleece/i, 'Fleece lined'], [/shopper/i, 'Shopper'],
+  [/hooded|\bhood\b/i, 'Hooded'],
+  [/long[- ]sleeve/i, 'Long sleeve'], [/short[- ]sleeve/i, 'Short sleeve'],
+  [/straight leg/i, 'Straight leg'], [/multifunctional/i, 'Multifunctional'],
+  [/anorak/i, 'Anorak'], [/bomber/i, 'Bomber'], [/coach/i, 'Coach'],
+  [/puffer/i, 'Puffer'], [/body warmer/i, 'Body warmer'],
+  [/softshell/i, 'Softshell'], [/sherpa/i, 'Sherpa'], [/fleece/i, 'Fleece'],
+  [/denim/i, 'Denim'], [/oxford/i, 'Oxford'], [/poplin/i, 'Poplin'],
+  [/canvas/i, 'Canvas'], [/woven/i, 'Woven'], [/jogger/i, 'Jogger'],
+  [/jacket/i, 'Jacket'],
+  /* last: on a bodywarmer everything is sleeveless, so it only speaks when
+     nothing above it did */
+  [/sleeveless/i, 'Sleeveless'],
+];
+/* Shape is the fit step's own question, so it only earns a word on the card
+   when the list holds more than one shape — which happens when the fit step
+   was never asked. */
+const SHAPES = [
+  [/boxy/i, 'Boxy'], [/oversized/i, 'Oversized'],
+  [/relaxed/i, 'Relaxed'], [/fitted/i, 'Fitted'],
+];
+/* Where two cards end up saying the same thing, the fibre separates them. */
+const FIBRES = [
+  [/modal/i, 'Modal'], [/elastane/i, 'Stretch'], [/nylon/i, 'Nylon'],
+  [/recycled/i, 'Recycled'],
+];
+function pickWord(table, str){
+  for(let i = 0; i < table.length; i++) if(table[i][0].test(str)) return table[i][1];
+  return '';
+}
+/* The STYLE question: one garment, one answer. A finish and a neck are never
+   really both claimed — two garments in a hundred and fifty-three carry one of
+   each, and for those the finish is the louder fact. "Standard" is the plain
+   one, and it is an answer, not the absence of one. */
+const PLAIN_STYLE = 'Standard';
+function styleOf(cut){
+  return pickWord(FINISHES, cut) || pickWord(NECKLINES, cut) || PLAIN_STYLE;
+}
+/* Whether the style question gets asked at all. Both the step that draws it
+   and the numbering of every step below it read this, or the colour step ends
+   up called 4 on a page where the garment step is already 4. */
+function stylesFor(p, g, f){
+  const opts = demoOptions(p, g, f);
+  return [...new Set(opts.map((r) => styleOf(optionName(p, r, opts))))];
+}
+/* Standard first, then the rest in a settled order so the chips do not shuffle
+   when the catalogue does. */
+function sortStyles(list){
+  return list.slice().sort((x, y) =>
+    (x === PLAIN_STYLE ? -1 : y === PLAIN_STYLE ? 1 : x.localeCompare(y)));
+}
+
 function journeyPlan(p){
   const m = p.matrix || [];
   const gs = [...new Set(m.map(x => x.g).filter(Boolean))];
@@ -7338,6 +7453,14 @@ function settleJourney(p){
   if(held && ((c.g && !servesCut(c.g, held.g)) || (c.f && held.f !== c.f))) c.sku = null;
   const opts = demoOptions(p, c.g, c.f);
   if(opts.length === 1) c.sku = opts[0].sku;
+  /* A style the audience and fit have ruled out is not an answer any more, and
+     a style only one garment offers was never a question. Both leave c.style
+     holding something the page no longer asks. */
+  const styles = [...new Set(opts.map((r) => styleOf(optionName(p, r, opts))))];
+  if(styles.length < 2 || !styles.includes(c.style)) c.style = null;
+  /* A garment chosen under a different style is not the answer to this one. */
+  const kept = demoRow(p, c.sku);
+  if(kept && c.style && styleOf(optionName(p, kept, opts)) !== c.style) c.sku = null;
   /* A settled garment answers every question above it. Without this the page
      could sit on a fully chosen garment while the Fit step still read
      "Choose" — 26 of the catalogue's combinations did exactly that, and it
@@ -7448,131 +7571,89 @@ function demoSteps(p){
      Neither puts a value ladder or a gsm figure on the card; only the volume
      print shops do. */
 
-  /* Weight means different things to different garments — 300 g is a light
-     hoodie and a very heavy t-shirt — so the bands are absolute and per
-     family. Banding each product against its own spread was tried first and
-     fails: one 500 g hoodie stretched the range until nine of fourteen came
-     back "Light", a 350 g one among them. Each pair is an upper bound. */
-  const WEIGHT_BANDS = {
-    tee:    [[170, 'Light'], [200, 'Classic'], [250, 'Heavy'], [1e9, 'Extra heavy']],
-    polo:   [[200, 'Light'], [230, 'Classic'], [1e9, 'Heavy']],
-    sweat:  [[320, 'Light'], [380, 'Classic'], [450, 'Heavy'], [1e9, 'Extra heavy']],
-    jogger: [[320, 'Light'], [380, 'Classic'], [1e9, 'Heavy']],
-    shirt:  [[200, 'Light'], [280, 'Classic'], [350, 'Heavy'], [1e9, 'Extra heavy']],
-    bag:    [[200, 'Light'], [280, 'Classic'], [350, 'Heavy'], [1e9, 'Extra heavy']],
-  };
-  /* Outerwear runs from a 38 g windbreaker to a 450 g parka, where the number
-     means something different at each end, and headwear carries no weight in
-     the sheet at all. Those name themselves by what they are instead. */
-  const FAMILY = {
-    m_t_shirts: 'tee', m_tank_tops: 'tee', m_long_sleeve_t_shirts: 'tee',
-    m_baby_bodysuits: 'tee', m_baby_bibs: 'tee',
-    m_polo_shirts: 'polo', m_long_sleeve_polo_shirts: 'polo',
-    m_crewneck_sweatshirts: 'sweat', m_pullover_hoodies: 'sweat',
-    m_zip_hoodies: 'sweat', m_zip_sweatshirts: 'sweat',
-    m_quarter_zip_sweatshirts: 'sweat',
-    m_joggers: 'jogger', m_sweat_shorts: 'jogger',
-    m_shirts: 'shirt',
-    m_tote_bags: 'bag', m_drawstring_gym_bags: 'bag', m_duffle_bags: 'bag',
-    m_belt_bags: 'bag', m_pencil_cases: 'bag',
-  };
-  const bandOf = (w) => {
-    const table = WEIGHT_BANDS[FAMILY[p.id]];
-    if(!table || !+w) return null;
-    for(let i = 0; i < table.length; i++) if(+w < table[i][0]) return table[i][1];
-    return table[table.length - 1][1];
-  };
-
-  /* The finish is what was done to the cloth after it was knitted. It changes
-     how a garment looks and feels, which is the one thing a weight cannot tell
-     you, so it takes the second word ahead of anything else. */
-  const FINISHES = [
-    [/garment[- ]?dyed/i, 'Garment dyed'], [/panel washed/i, 'Panel washed'],
-    [/dry[- ]?hand ?feel/i, 'Dry handfeel'], [/fabric washed|washed/i, 'Washed'],
-    [/vintage/i, 'Vintage'], [/sherpa[- ]lined/i, 'Sherpa lined'],
-  ];
-  /* Construction: what is cut or sewn differently. */
-  const DETAILS = [
-    [/v-neck/i, 'V-neck'], [/scoop/i, 'Scoop neck'], [/high neck/i, 'High neck'],
-    [/crew neck/i, 'Crew neck'], [/rolled[- ]sleeve/i, 'Rolled sleeve'],
-    [/raglan/i, 'Raglan'], [/quarter[- ]zip/i, 'Quarter zip'],
-    [/zip[- ]through/i, 'Zip'], [/pocket/i, 'Pocket'],
-    [/rib[- ]knit/i, 'Ribbed'], [/fisherman/i, 'Fisherman'],
-    [/fleece lining|polar fleece/i, 'Fleece lined'], [/shopper/i, 'Shopper'],
-    [/hooded|\bhood\b/i, 'Hooded'],
-    [/cropped|\bcrop\b/i, 'Cropped'], [/long[- ]sleeve/i, 'Long sleeve'],
-    [/short[- ]sleeve/i, 'Short sleeve'], [/straight leg/i, 'Straight leg'],
-    [/multifunctional/i, 'Multifunctional'], [/anorak/i, 'Anorak'],
-    [/bomber/i, 'Bomber'], [/coach/i, 'Coach'], [/puffer/i, 'Puffer'],
-    [/body warmer/i, 'Body warmer'], [/softshell/i, 'Softshell'],
-    [/sherpa/i, 'Sherpa'], [/fleece/i, 'Fleece'], [/denim/i, 'Denim'],
-    [/oxford/i, 'Oxford'], [/poplin/i, 'Poplin'], [/canvas/i, 'Canvas'],
-    [/woven/i, 'Woven'], [/jogger/i, 'Jogger'], [/jacket/i, 'Jacket'],
-    /* last: on a bodywarmer everything is sleeveless, so it only speaks when
-       nothing above it did */
-    [/sleeveless/i, 'Sleeveless'],
-  ];
-  /* Shape is the fit step's own question. It only earns a word here when this
-     list actually holds more than one shape, which happens when the fit step
-     was never asked — otherwise the card would parrot the chip above it. */
-  const SHAPES = [
-    [/boxy/i, 'Boxy'], [/oversized/i, 'Oversized'],
-    [/relaxed/i, 'Relaxed'], [/fitted/i, 'Fitted'],
-  ];
-  /* Where two cards end up saying the same thing, what actually separates them
-     is the fibre, and the composition line below spells it out in full. A
-     short note lifts that difference to where it can be scanned. It is a
-     tie-breaker and never the first thing a card says — leading with it is
-     exactly what put "Recycled" where a quality claim belonged. */
-  const FIBRES = [
-    [/modal/i, 'Modal'], [/elastane/i, 'Stretch'], [/nylon/i, 'Nylon'],
-    [/recycled/i, 'Recycled'],
-  ];
-  const pick = (table, str) => {
-    for(let i = 0; i < table.length; i++) if(table[i][0].test(str)) return table[i][1];
-    return '';
-  };
+  /* Shape is the fit step's own question, so it only earns a word on the card
+     when this list holds more than one shape. */
   const shapesVary = new Set(opts.map((r) => r.fitDetail || '')).size > 1;
 
   /* One or two words. The weight leads where weight is the axis; where it is
      not, the garment's own type does. */
   const wordsFor = (r) => {
     const name   = optionName(p, r, opts);
-    const finish = pick(FINISHES, name);
-    const detail = pick(DETAILS, name);
-    const shape  = shapesVary ? pick(SHAPES, name) : '';
-    const band   = bandOf(r.w);
-    if(band) return {head: band, sub: finish || detail || shape || ''};
-    const head = detail || finish || shape || 'Classic';
-    const sub  = [finish, detail, shape].filter((x) => x && x !== head)[0] || '';
+    const finish = pickWord(FINISHES, name);
+    const neck   = pickWord(NECKLINES, name);
+    const detail = pickWord(DETAILS, name);
+    const shape  = shapesVary ? pickWord(SHAPES, name) : '';
+    const band   = bandOf(p.id, r.w);
+    if(band) return {head: band, sub: finish || neck || detail || shape || ''};
+    const head = detail || finish || neck || shape || 'Classic';
+    const sub  = [finish, neck, detail, shape].filter((x) => x && x !== head)[0] || '';
     return {head, sub};
   };
 
-  /* Two cloths nobody can tell apart: same fibre, same shape, same finish and
-     the same construction, within a tenth of each other in weight. 150 g
-     against 155 g is three per cent — a difference no hand can feel and no
-     card can show. The cheaper one stands for both. */
-  const twinKey = (r) => {
-    const name = optionName(p, r, opts);
-    return [compOf(r) || '', r.fitDetail || '',
-            pick(FINISHES, name), pick(DETAILS, name)].join('|');
-  };
-  const kept = [];
-  opts.slice().sort((a, b) => (rowPrice(a) ?? 1e9) - (rowPrice(b) ?? 1e9)).forEach((r) => {
-    const k = twinKey(r);
-    const twin = kept.some((x) => twinKey(x) === k && +x.w && +r.w
-      && Math.abs(+x.w - +r.w) / Math.max(+x.w, +r.w) <= 0.10);
-    if(!twin) kept.push(r);
-  });
-  /* Lightest first, so the column climbs the same ladder the headline names. */
-  const ordered = kept.slice().sort((a, b) =>
-    ((+a.w || 0) - (+b.w || 0)) || ((rowPrice(a) ?? 1e9) - (rowPrice(b) ?? 1e9)));
+  /* THE STYLE ANSWER, AND ONE GARMENT PER BAND.
+     ---------------------------------------------------------------------
+     Showing everything that survived the audience and the fit was still
+     seventeen t-shirts on one screen. Most of them differ by something a buyer
+     can name — washed, garment dyed, a V-neck — so that became its own
+     question, asked before this one. What is left underneath is the only
+     question the cloth itself poses: how heavy. One garment answers it per
+     band, so this step is at most Light, Classic, Heavy. */
+  const styleFor = (r) => styleOf(optionName(p, r, opts));
+  const stylePool = (c.style && opts.some((r) => styleFor(r) === c.style))
+    ? opts.filter((r) => styleFor(r) === c.style)
+    : opts;
 
-  /* Five is a choice; the sixth onward is a catalogue. Only sixteen of the
-     hundred and eighty-six screens ever reach it, and a single card over the
-     cap is not worth a button to reveal. */
-  const CAP = 5;
-  const shown  = (ordered.length > CAP + 1 && !c.allG) ? ordered.slice(0, CAP) : ordered;
+  /* Which garment speaks for its band. The label is a claim about weight, so
+     the garment that carries it should be the one that best makes that claim:
+     the lightest of the Light, the heaviest of the Heavy, and for Classic the
+     one nearest the middle of what the band actually holds.
+
+     Picking the cheapest instead was tried and it hid the flagships. Our
+     heaviest hoodie and crewneck are 500 g and the heaviest t-shirt is 370 g;
+     each sits in a band beside something cheaper, so each became unreachable —
+     a card promising "Heavy" while the heavy one was the one you could not
+     have.
+
+     Among garments at that weight, the widest colour range wins, then the
+     cheaper. On the hoodie that is the same €42.49 for eleven colours or
+     fifty-one. */
+  const speaksFor = (group, band) => {
+    const ws = group.map((r) => +r.w || 0);
+    const lo = Math.min(...ws), hi = Math.max(...ws);
+    const target = band === 'Light' ? lo
+      : band === 'Heavy' ? hi
+      : (lo + hi) / 2;
+    const best = Math.min(...group.map((r) => Math.abs((+r.w || 0) - target)));
+    const at = group.filter((r) => Math.abs((+r.w || 0) - target) === best);
+    return at.slice().sort((x, y) =>
+      ((y.colours || []).length - (x.colours || []).length)
+      || ((rowPrice(x) ?? 1e9) - (rowPrice(y) ?? 1e9)))[0];
+  };
+
+  /* Weight families group by band. The rest — outerwear, headwear — have no
+     usable weight, so they group by what the garment is. */
+  const groupOf = (r) => bandOf(p.id, r.w)
+    || pickWord(DETAILS, optionName(p, r, opts)) || 'Classic';
+  const groups = new Map();
+  stylePool.forEach((r) => {
+    const k = groupOf(r);
+    if(!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(r);
+  });
+  const ordered = [...groups.entries()]
+    .map(([k, g]) => ({k, r: speaksFor(g, k)}))
+    .sort((x, y) => {
+      const ix = BAND_ORDER.indexOf(x.k), iy = BAND_ORDER.indexOf(y.k);
+      if(ix > -1 && iy > -1) return ix - iy;            /* Light -> Heavy */
+      return ((+x.r.w || 0) - (+y.r.w || 0))
+        || ((rowPrice(x.r) ?? 1e9) - (rowPrice(y.r) ?? 1e9));
+    })
+    .map((x) => x.r);
+
+  /* Three is the whole point. A weight family cannot exceed it; the type-led
+     families can, and the rest wait behind one button. */
+  const CAP = 3;
+  const shown  = (ordered.length > CAP && !c.allG) ? ordered.slice(0, CAP) : ordered;
   const hidden = ordered.length - shown.length;
 
   /* Beanies and bags carry no grammage at all, and three cards each reading
@@ -7595,7 +7676,7 @@ function demoSteps(p){
   shown.forEach((r) => {
     const x = words.get(r.sku);
     if(tally[label(x)] < 2) return;
-    const note = pick(FIBRES, compOf(r) || '');
+    const note = pickWord(FIBRES, compOf(r) || '');
     if(note && note !== x.sub) x.sub = x.sub ? x.sub + ' \u00b7 ' + note : note;
   });
 
@@ -7652,6 +7733,30 @@ function demoSteps(p){
         return chip(c.f === k, 'dFit', k, fitName(k),
           !rs.length ? 'Not in this cut' : lo != null ? 'From ' + money(lo) : 'Price on request',
           !rs.length); }).join('')));
+
+  /* 03 STYLE — the washed one, the garment-dyed one, the V-neck.
+     These used to arrive as extra cards in the step below, which is how a
+     t-shirt got to seventeen of them. Asked here, each answer leaves a cloth
+     range underneath rather than a list. A style nobody else offers is not a
+     question, so the step only appears where the answer could go two ways. */
+  const styleList = sortStyles(stylesFor(p, c.g, c.f));
+  /* Twenty-eight of the forty-seven screens that ask this offer finishes and
+     nothing else; the rest mix in a neck or a sleeve. The title says which,
+     because "Finish" over a list containing "V-neck" is not true, and "Style"
+     is already the word for the chosen model in the builder's own summary —
+     it translates as Modelo, Modèle, Modello, which is a different question.
+
+     "detail" rather than "cut", because cut is what the FIT step is called in
+     three of the five languages: in French this read "Finition ou coupe"
+     directly under "Coupe". A pocket and a cropped hem are not cuts anyway. */
+  const styleTitle = styleList.every((k) => k === PLAIN_STYLE || pickWord(FINISHES, k))
+    ? 'Finish' : 'Finish or detail';
+  if(styleList.length > 1) out.push(step('y', nextN(), styleTitle,
+      c.style && styleList.includes(c.style) ? c.style : null,
+      styleList.map(k => {
+        const rs = opts.filter(r => styleFor(r) === k); const lo = lowest(rs);
+        return chip(c.style === k, 'dStyle', k, k,
+          lo != null ? 'From ' + money(lo) : 'Price on request', false); }).join('')));
 
   /* Once the step collapses, this line is all that is left of it — so it has
      to speak the card's language. It was still printing optionName() raw, so
@@ -7775,7 +7880,8 @@ function pubProduct(id){
   /* Colour, Quantity and Personalisation continue the numbering, so a product
      that asks two questions does not label its fourth step "5". */
   const mSteps = p.matrix ? (() => { const j = journeyPlan(p);
-    return (j.needG ? 1 : 0) + (j.needF ? 1 : 0) + 1; })() : 0;
+    const y = stylesFor(p, cfg.g, cfg.f).length > 1 ? 1 : 0;
+    return (j.needG ? 1 : 0) + (j.needF ? 1 : 0) + y + 1; })() : 0;
   const mN = (i) => i + mSteps;
   if(!P_COLS.includes(cfg.colour)) cfg.colour = P_COLS[0];
   /* the same guard for the placement, whose method or position may not exist
@@ -14229,10 +14335,16 @@ document.addEventListener('click', (e) => {
       c.open = null;
       /* an answer higher up can invalidate the garment chosen below it, and
          it always gives a shorter list — so the reveal closes with it */
-      if(a === 'dGender'){ c.g = d.v; c.f = null; c.sku = null; c.allG = null; }
-      else if(a === 'dFit'){ c.f = d.v; c.sku = null; c.allG = null; }
+      if(a === 'dGender'){ c.g = d.v; c.f = null; c.style = null; c.sku = null; c.allG = null; }
+      else if(a === 'dFit'){ c.f = d.v; c.style = null; c.sku = null; c.allG = null; }
       else { c.sku = d.v; }
       render(); return; }
+    /* A style leaves a different three garments underneath it, so the garment
+       chosen against the old one cannot stand. Picking the style already
+       showing clears it, which is how you get back to all of them. */
+    if(a === 'dStyle'){ const c = UI.cfg || (UI.cfg = {});
+      c.open = null; c.style = c.style === d.v ? null : d.v;
+      c.sku = null; c.allG = null; render(); return; }
     /* Past five garments the step stops being a choice and starts being a
        catalogue, so the rest wait behind one button. It only ever opens. */
     if(a === 'dMoreG'){ const c = UI.cfg || (UI.cfg = {}); c.allG = true; render(); return; }
