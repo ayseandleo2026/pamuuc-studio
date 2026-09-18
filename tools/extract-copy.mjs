@@ -153,7 +153,19 @@ for (const loc of Object.keys(site.locales)) {
   if (loc === 'en') continue;
   const f = join(ROOT, `content/merch.${loc}.json`);
   if (!existsSync(f)) { console.log(`  content/merch.${loc}.json  — not written yet`); continue; }
-  const d = JSON.parse(readFileSync(f, 'utf8')).copy || {};
+  const doc = JSON.parse(readFileSync(f, 'utf8'));
+  const d = doc.copy || {};
   const done = Object.keys(out.copy).filter((k) => d[k] && d[k] !== k).length;
+
+  /* _translated and _of are written by translate-status --import and by
+     nothing else, so they went stale the moment the English source grew —
+     which is exactly what this file has just done. Nothing reads them, but a
+     number in a file that is wrong is worse than no number. Refreshed here,
+     because this is the tool that invalidates them. */
+  if (doc._translated !== done || doc._of !== strings.length) {
+    doc._translated = done;
+    doc._of = strings.length;
+    writeFileSync(f, JSON.stringify(doc, null, 1) + '\n');
+  }
   console.log(`  content/merch.${loc}.json  ${done}/${strings.length} translated`);
 }

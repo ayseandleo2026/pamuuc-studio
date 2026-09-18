@@ -112,6 +112,86 @@
   [
    "^Amounts exclude VAT and cover the products and personalisation shown\\. (\\d+) lines are priced on review\\. Nothing is charged at this step\\.$",
    "Gli importi sono IVA esclusa e coprono i prodotti e la personalizzazione mostrati. $1 righe sono quotate dopo la verifica. Non viene addebitato nulla in questo passaggio."
+  ],
+  [
+   "^1 min read$",
+   "1 min di lettura"
+  ],
+  [
+   "^(\\d+) min read$",
+   "$1 min di lettura"
+  ],
+  [
+   "^1 min read in full$",
+   "1 min di lettura completa"
+  ],
+  [
+   "^(\\d+) min read in full$",
+   "$1 min di lettura completa"
+  ],
+  [
+   "^1 minute$",
+   "1 minuto"
+  ],
+  [
+   "^(\\d+) minutes$",
+   "$1 minuti"
+  ],
+  [
+   "^1 article\\. Written by the studio that makes the garments, not by an agency writing about them\\.$",
+   "1 articolo. Scritto dallo studio che realizza i capi, non da un’agenzia che ne scrive."
+  ],
+  [
+   "^(\\d+) articles\\. Written by the studio that makes the garments, not by an agency writing about them\\.$",
+   "$1 articoli. Scritti dallo studio che realizza i capi, non da un’agenzia che ne scrive."
+  ],
+  [
+   "^(\\d{1,2}) January (\\d{4})$",
+   "$1 gennaio $2"
+  ],
+  [
+   "^(\\d{1,2}) February (\\d{4})$",
+   "$1 febbraio $2"
+  ],
+  [
+   "^(\\d{1,2}) March (\\d{4})$",
+   "$1 marzo $2"
+  ],
+  [
+   "^(\\d{1,2}) April (\\d{4})$",
+   "$1 aprile $2"
+  ],
+  [
+   "^(\\d{1,2}) May (\\d{4})$",
+   "$1 maggio $2"
+  ],
+  [
+   "^(\\d{1,2}) June (\\d{4})$",
+   "$1 giugno $2"
+  ],
+  [
+   "^(\\d{1,2}) July (\\d{4})$",
+   "$1 luglio $2"
+  ],
+  [
+   "^(\\d{1,2}) August (\\d{4})$",
+   "$1 agosto $2"
+  ],
+  [
+   "^(\\d{1,2}) September (\\d{4})$",
+   "$1 settembre $2"
+  ],
+  [
+   "^(\\d{1,2}) October (\\d{4})$",
+   "$1 ottobre $2"
+  ],
+  [
+   "^(\\d{1,2}) November (\\d{4})$",
+   "$1 novembre $2"
+  ],
+  [
+   "^(\\d{1,2}) December (\\d{4})$",
+   "$1 dicembre $2"
   ]
  ],
  "copy": {
@@ -1329,9 +1409,44 @@
   "small": "piccolo",
   "medium": "medio",
   "large": "grande",
-  "Branded presentation": "Presentazione del marchio"
+  "Branded presentation": "Presentazione del marchio",
+  "Fabric weight decides more than price does": "La grammatura decide più del prezzo",
+  "Two t-shirts at the same price can behave completely differently under the same print. Weight, not cost, is the first number to compare.": "Due t-shirt allo stesso prezzo possono comportarsi in modo completamente diverso sotto la stessa stampa. La grammatura, non il costo, è il primo numero da confrontare.",
+  "Why 150 and 220 are different products": "Perché 150 e 220 sono prodotti diversi",
+  "A 150 g/m² jersey is a campaign piece: light, cheap to ship, and it takes a large screen print cleanly because the ink sits on a smooth, thin surface. A 220 g/m² tee is a wardrobe piece. It holds its shape through more washes, drapes rather than clings, and carries embroidery without the fabric puckering around the stitch. Buying the lighter one for a uniform-adjacent use, or the heavier one for a one-day event, is the most common and most expensive mistake we see.": "Una t-shirt in jersey da 150 g/m² è un capo da campagna: leggera, economica da spedire, e accoglie in modo pulito una serigrafia grande perché l’inchiostro poggia su una superficie liscia e sottile. Una t-shirt da 220 g/m² è un capo da guardaroba. Mantiene la forma dopo più lavaggi, cade invece di aderire, e sostiene il ricamo senza che il tessuto si increspi attorno al punto. Comprare il più leggero per un uso vicino alla divisa, o il più pesante per un evento di un solo giorno, è l’errore più comune e più costoso che vediamo.",
+  "What weight does to a decoration": "Che cosa fa la grammatura a una decorazione",
+  "Embroidery needs something to sit on. Below roughly 180 g/m² the stitch pulls the cloth and the mark distorts after the first wash, which is why we move a chest logo to transfer or print on light garments rather than force the thread. Screen print is the opposite: a smooth, lighter surface takes flat colour better than a brushed fleece, where the pile lifts through the ink.": "Il ricamo ha bisogno di qualcosa su cui appoggiarsi. Sotto i 180 g/m² circa il punto tira il tessuto e il marchio si deforma dopo il primo lavaggio; per questo sui capi leggeri spostiamo un logo sul petto su transfer o stampa invece di forzare il filo. Con la serigrafia è il contrario: una superficie liscia e più leggera accoglie il colore pieno meglio di un pile spazzolato, dove il pelo affiora attraverso l’inchiostro.",
+  "How to compare honestly": "Come confrontare con onestà",
+  "Put the weight beside the price on every product you are considering, and compare those two numbers together. Our cards state g/m² for that reason. If a supplier will not tell you the weight, you cannot compare their price to anyone else’s.": "Metta la grammatura accanto al prezzo per ogni prodotto che sta valutando e confronti quei due numeri insieme. È per questo che le nostre schede indicano i g/m². Se un fornitore non le dice la grammatura, non può confrontare il suo prezzo con quello di nessun altro.",
+  "The quantity you order decides the decoration method": "La quantità che ordina decide il metodo di decorazione",
+  "Screens have a setup cost with nowhere to amortise on a short run. Below about a hundred pieces, that single fact changes the right answer.": "I telai hanno un costo di preparazione che non si ammortizza su una tiratura breve. Sotto il centinaio di pezzi, questo solo fatto cambia la risposta giusta.",
+  "Setup is the whole argument": "La preparazione è tutto l’argomento",
+  "Screen printing charges a setup per colour, once per artwork. At 500 pieces that cost disappears into the run. At 30 it dominates, and a four-colour design carries four of them. Transfer has no setup at all, which is exactly why a run of twenty-five is viable in the first place.": "La serigrafia addebita una preparazione per colore, una volta per file grafico. A 500 pezzi quel costo si diluisce nella tiratura. A 30 la domina, e un disegno a quattro colori ne porta quattro. Il transfer non ha alcuna preparazione, ed è esattamente per questo che una tiratura di venticinque è praticabile.",
+  "Where the crossover sits": "Dove si trova il punto di pareggio",
+  "Roughly a hundred pieces, for most flat-colour designs. Below it, transfer usually wins. Above it, screen print takes over and the gap widens with every additional piece. The crossover moves with the colour count: a one-colour design justifies screens sooner, a six-colour design may never justify them at your volume.": "Circa cento pezzi, per la maggior parte dei disegni a colore pieno. Sotto, di solito vince il transfer. Sopra, la serigrafia prende il sopravvento e il divario cresce con ogni pezzo in più. Il punto di pareggio si sposta con il numero di colori: un disegno a un colore giustifica i telai prima, uno a sei colori può non giustificarli mai al suo volume.",
+  "Embroidery is priced differently": "Il ricamo si calcola in modo diverso",
+  "Embroidery is costed on the area it covers, not the number of colours in it. A fifteen-colour crest at 60 mm can cost less than a two-colour logo at 140 mm. If your artwork is small and detailed, ask for embroidery before you assume print is cheaper.": "Il ricamo si calcola sulla superficie che copre, non sul numero di colori che contiene. Uno stemma a quindici colori a 60 mm può costare meno di un logo a due colori a 140 mm. Se il suo file grafico è piccolo e dettagliato, chieda il ricamo prima di dare per scontato che la stampa costi meno.",
+  "Notes from the workshop on fabric, laundry, fitting and reordering. Every article answers a question we are asked before an order, and is written from projects we have run.": "Note dal laboratorio su tessuti, lavaggio, prove e riordini. Ogni articolo risponde a una domanda che ci viene posta prima di un ordine ed è scritto a partire da progetti che abbiamo realizzato.",
+  "What we have learned making these.": "Quello che abbiamo imparato realizzandoli.",
+  "The questions that usually come next, answered the same way.": "Le domande che di solito vengono dopo, con lo stesso approccio.",
+  "In this article": "In questo articolo",
+  "Contents": "Indice",
+  "Published": "Pubblicato",
+  "Reading time": "Tempo di lettura",
+  "Written by": "Scritto da",
+  "The short answer": "La risposta breve",
+  "Keep reading": "Continuare a leggere",
+  "Related articles.": "Articoli correlati.",
+  "Latest": "Ultimi",
+  "Read the article": "Leggere l’articolo",
+  "2 min read": "2 min di lettura",
+  "2 min read in full": "2 min di lettura completa",
+  "2 minutes": "2 minuti",
+  "12 August 2026": "12 agosto 2026",
+  "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 articoli. Scritti dallo studio che realizza i capi, non da un’agenzia che ne scrive.",
+  "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcellona"
  },
- "_translated": 1112,
- "_of": 1119,
+ "_translated": 1147,
+ "_of": 1154,
  "colourPreposition": "in"
 }
