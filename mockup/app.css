@@ -3995,11 +3995,30 @@ main[data-branch] .mch--out,main[data-branch] .pdp-step--locked{box-shadow:none}
    step reads as a short form rather than a page of cards */
 /* one decision per row, separated by a hairline so the four read as four
    rather than one stack; the label sits on the first line of its control */
-.orow{display:grid;grid-template-columns:88px 1fr;gap:var(--sp-4);align-items:start;
+/* The label column was a flat 88px, which is the width of the English word.
+   "Posizionamento" wants 110 and ran out under the select beside it; Spanish
+   and German reach past 88 too. The column takes the width of the longest
+   label it actually holds, never dropping below the 88 the English set, and
+   the control's track is minmax(0,1fr) so it yields rather than overflowing
+   when a label is long and the row is narrow. */
+.orow{display:grid;grid-template-columns:minmax(88px,auto) minmax(0,1fr);
+  gap:var(--sp-4);align-items:start;
   padding:var(--sp-3) 0;border-top:1px solid color-mix(in srgb,#7F1D16 12%,transparent)}
 /* rows carry their own rhythm, so their containers add no gap on top of it */
 .place-flat>.orow:first-child,
 .place-card .place-opts>.orow:first-child{border-top:0;padding-top:0}
+/* Each .orow is its own grid, so sizing the label track to its own content
+   aligned nothing: the row with the long label pushed its control 22px right
+   of the others. Subgrid hands every row in one placement the SAME pair of
+   tracks, measured across all their labels at once — so the column is as wide
+   as the longest word in that language and the controls line up under it.
+   The declaration above stands as the fallback where subgrid is missing. */
+@supports (grid-template-columns: subgrid){
+  .place-flat,
+  .place-card .place-opts{grid-template-columns:minmax(88px,auto) minmax(0,1fr)}
+  .place-flat .orow,
+  .place-card .place-opts>.orow{grid-column:1 / -1;grid-template-columns:subgrid}
+}
 .orow .opt-lbl{margin:0;line-height:34px}
 .orow--add{padding-bottom:0}
 .orow--add .lnk{line-height:34px}
