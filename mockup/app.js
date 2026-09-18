@@ -7363,8 +7363,12 @@ function bandOf(pid, w){
    you. */
 const FINISHES = [
   [/garment[- ]?dyed/i, 'Garment dyed'], [/panel washed/i, 'Panel washed'],
-  [/dry[- ]?hand ?feel/i, 'Dry handfeel'], [/fabric washed|washed/i, 'Washed'],
+  [/dry[- ]?hand ?feel/i, 'Dry handfeel'],
   [/vintage/i, 'Vintage'], [/sherpa[- ]lined/i, 'Sherpa lined'],
+  /* Plain fabric washing is not here. It is on 83 of the 153 garments and on
+     every one of the ten most-stocked styles, so as a card's distinguishing
+     word it distinguished nothing — it just labelled the ordinary cloth.
+     Panel washing stays: 15 garments, and you can see it. */
 ];
 /* Where the neck or the sleeve is cut differently. Kept apart from the rest of
    the construction words because these two lists together are the STYLE
@@ -7409,20 +7413,48 @@ function pickWord(table, str){
   for(let i = 0; i < table.length; i++) if(table[i][0].test(str)) return table[i][1];
   return '';
 }
+/* A finish is a STEP 3 answer only where the supplier sells it as a different
+   product — where it is named in the garment's own type or style. A process
+   noted in the materials string is how the cloth was made, not a line you
+   choose between.
+
+   That distinction is the whole of this rule, and getting it wrong was
+   visible: "fabric washed" sits in the materials of 83 of these 153 garments,
+   including every one of the ten most-stocked styles in the catalogue. Offered
+   as a choice, it put the flagship 180 g tee — the one carried in 58 colours —
+   under "Washed", and left "Standard" holding whatever was left over. Standard
+   has to mean the ordinary, best-stocked cloth, or it means nothing.
+
+   What survives is what the supplier itself treats as a separate line, and
+   each of them runs to a handful of colours where the core styles run to
+   thirty and fifty: garment dyeing (sold as the Vintage line), the dry-handfeel
+   range, and one sherpa-lined style. Panel washing, brushing and sueding stay
+   out of this question and are still named on the card, because that is what
+   they are: a description of the cloth, not a range. */
+const LINE_FINISHES = [
+  /* the Vintage line IS the garment-dyed line, so both names answer alike */
+  [/garment[- ]?dyed|vintage/i, 'Garment dyed'],
+  [/dry[- ]?hand|\bdry\b/i,     'Dry handfeel'],
+  [/sherpa[- ]lined/i,          'Sherpa lined'],
+];
 /* The STYLE question: one garment, one answer. A finish and a neck are never
    really both claimed — two garments in a hundred and fifty-three carry one of
    each, and for those the finish is the louder fact. "Standard" is the plain
    one, and it is an answer, not the absence of one. */
 const PLAIN_STYLE = 'Standard';
-function styleOf(cut){
-  return pickWord(FINISHES, cut) || pickWord(NECKLINES, cut) || PLAIN_STYLE;
+function styleOf(p, r, opts){
+  /* the supplier's own product type, never the materials */
+  const line = String((r && r.style2) || '') + ' ' + String((r && r.style) || '');
+  return pickWord(LINE_FINISHES, line)
+    || pickWord(NECKLINES, optionName(p, r, opts))
+    || PLAIN_STYLE;
 }
 /* Whether the style question gets asked at all. Both the step that draws it
    and the numbering of every step below it read this, or the colour step ends
    up called 4 on a page where the garment step is already 4. */
 function stylesFor(p, g, f){
   const opts = demoOptions(p, g, f);
-  return [...new Set(opts.map((r) => styleOf(optionName(p, r, opts))))];
+  return [...new Set(opts.map((r) => styleOf(p, r, opts)))];
 }
 /* Standard first, then the rest in a settled order so the chips do not shuffle
    when the catalogue does. */
@@ -7456,11 +7488,11 @@ function settleJourney(p){
   /* A style the audience and fit have ruled out is not an answer any more, and
      a style only one garment offers was never a question. Both leave c.style
      holding something the page no longer asks. */
-  const styles = [...new Set(opts.map((r) => styleOf(optionName(p, r, opts))))];
+  const styles = [...new Set(opts.map((r) => styleOf(p, r, opts)))];
   if(styles.length < 2 || !styles.includes(c.style)) c.style = null;
   /* A garment chosen under a different style is not the answer to this one. */
   const kept = demoRow(p, c.sku);
-  if(kept && c.style && styleOf(optionName(p, kept, opts)) !== c.style) c.sku = null;
+  if(kept && c.style && styleOf(p, kept, opts) !== c.style) c.sku = null;
   /* A settled garment answers every question above it. Without this the page
      could sit on a fully chosen garment while the Fit step still read
      "Choose" — 26 of the catalogue's combinations did exactly that, and it
@@ -7474,7 +7506,7 @@ function settleJourney(p){
     if(row.f) c.f = row.f;
     /* and the style it is, or step 3 reads "Choose" under a garment that has
        already answered it */
-    if(styles.length > 1) c.style = styleOf(optionName(p, row, opts));
+    if(styles.length > 1) c.style = styleOf(p, row, opts);
   }
 }
 
@@ -7608,7 +7640,7 @@ function demoSteps(p){
      question, asked before this one. What is left underneath is the only
      question the cloth itself poses: how heavy. One garment answers it per
      band, so this step is at most Light, Classic, Heavy. */
-  const styleFor = (r) => styleOf(optionName(p, r, opts));
+  const styleFor = (r) => styleOf(p, r, opts);
   const stylePool = (c.style && opts.some((r) => styleFor(r) === c.style))
     ? opts.filter((r) => styleFor(r) === c.style)
     : opts;
@@ -7633,8 +7665,15 @@ function demoSteps(p){
     const target = band === 'Light' ? lo
       : band === 'Heavy' ? hi
       : (lo + hi) / 2;
+    /* "Nearest the target" has to mean nearest a buyer could feel. Taking the
+       single closest gram made the Light t-shirt a 150 g style carried in five
+       colours over a 155 g one carried in forty-one — a three per cent
+       difference in cloth against an eightfold difference in what you can
+       actually order. Anything within a twentieth of the target counts as
+       being at it, and then the colour range decides. */
     const best = Math.min(...group.map((r) => Math.abs((+r.w || 0) - target)));
-    const at = group.filter((r) => Math.abs((+r.w || 0) - target) === best);
+    const window = Math.max(best, target * 0.05);
+    const at = group.filter((r) => Math.abs((+r.w || 0) - target) <= window);
     return at.slice().sort((x, y) =>
       ((y.colours || []).length - (x.colours || []).length)
       || ((rowPrice(x) ?? 1e9) - (rowPrice(y) ?? 1e9)))[0];
@@ -7644,21 +7683,28 @@ function demoSteps(p){
      usable weight, so they group by what the garment is. */
   const groupOf = (r) => bandOf(p.id, r.w)
     || pickWord(DETAILS, optionName(p, r, opts)) || 'Classic';
-  const groups = new Map();
-  stylePool.forEach((r) => {
-    const k = groupOf(r);
-    if(!groups.has(k)) groups.set(k, []);
-    groups.get(k).push(r);
-  });
-  const ordered = [...groups.entries()]
-    .map(([k, g]) => ({k, r: speaksFor(g, k)}))
-    .sort((x, y) => {
-      const ix = BAND_ORDER.indexOf(x.k), iy = BAND_ORDER.indexOf(y.k);
-      if(ix > -1 && iy > -1) return ix - iy;            /* Light -> Heavy */
-      return ((+x.r.w || 0) - (+y.r.w || 0))
-        || ((rowPrice(x.r) ?? 1e9) - (rowPrice(y.r) ?? 1e9));
-    })
-    .map((x) => x.r);
+  /* The garments a pool would actually put on screen, one per band. The style
+     chips price themselves from this too: reading the whole pool instead had
+     the Standard chip promising "From €11.49" above a first card of €12.99,
+     because the €11.49 garment is not the one its band sends. */
+  const representatives = (pool) => {
+    const groups = new Map();
+    pool.forEach((r) => {
+      const k = groupOf(r);
+      if(!groups.has(k)) groups.set(k, []);
+      groups.get(k).push(r);
+    });
+    return [...groups.entries()]
+      .map(([k, g]) => ({k, r: speaksFor(g, k)}))
+      .sort((x, y) => {
+        const ix = BAND_ORDER.indexOf(x.k), iy = BAND_ORDER.indexOf(y.k);
+        if(ix > -1 && iy > -1) return ix - iy;          /* Light -> Heavy */
+        return ((+x.r.w || 0) - (+y.r.w || 0))
+          || ((rowPrice(x.r) ?? 1e9) - (rowPrice(y.r) ?? 1e9));
+      })
+      .map((x) => x.r);
+  };
+  const ordered = representatives(stylePool);
 
   /* Three is the whole point. A weight family cannot exceed it; the type-led
      families can, and the rest wait behind one button. */
@@ -7759,12 +7805,13 @@ function demoSteps(p){
      "detail" rather than "cut", because cut is what the FIT step is called in
      three of the five languages: in French this read "Finition ou coupe"
      directly under "Coupe". A pocket and a cropped hem are not cuts anyway. */
-  const styleTitle = styleList.every((k) => k === PLAIN_STYLE || pickWord(FINISHES, k))
+  const styleTitle = styleList.every((k) => k === PLAIN_STYLE || pickWord(LINE_FINISHES, k))
     ? 'Finish' : 'Finish or detail';
   if(styleList.length > 1) out.push(step('y', nextN(), styleTitle,
       c.style && styleList.includes(c.style) ? c.style : null,
       styleList.map(k => {
-        const rs = opts.filter(r => styleFor(r) === k); const lo = lowest(rs);
+        const rs = representatives(opts.filter(r => styleFor(r) === k));
+        const lo = lowest(rs);
         return chip(c.style === k, 'dStyle', k, k,
           lo != null ? 'From ' + money(lo) : 'Price on request', false); }).join('')));
 
