@@ -7436,6 +7436,15 @@ const LINE_FINISHES = [
   [/garment[- ]?dyed|vintage/i, 'Garment dyed'],
   [/dry[- ]?hand|\bdry\b/i,     'Dry handfeel'],
   [/sherpa[- ]lined/i,          'Sherpa lined'],
+  /* On a shirt the cloth IS the question a buyer arrives with, and the
+     supplier names it in the type exactly as it names a finish — "Oxford
+     Shirt", "Denim overshirt". Without these, poplin and oxford both fall
+     under 200 g and the band sends one of them: a men's regular shirt could
+     not be had in oxford at all. These three words occur nowhere outside the
+     shirts, so nothing else gains a question it did not have. */
+  [/\bpoplin\b/i,               'Poplin'],
+  [/\boxford\b/i,               'Oxford'],
+  [/\bdenim\b/i,                'Denim'],
 ];
 /* The STYLE question: one garment, one answer. A finish and a neck are never
    really both claimed — two garments in a hundred and fifty-three carry one of
