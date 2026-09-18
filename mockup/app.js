@@ -7446,6 +7446,9 @@ const LINE_FINISHES = [
   [/\boxford\b/i,               'Oxford'],
   [/\bdenim\b/i,                'Denim'],
 ];
+/* Which of those answers are cloths rather than finishes, so the step can say
+   which question it is asking. A poplin is not a finish. */
+const CLOTH_ANSWERS = ['Poplin', 'Oxford', 'Denim'];
 /* The STYLE question: one garment, one answer. A finish and a neck are never
    really both claimed — two garments in a hundred and fifty-three carry one of
    each, and for those the finish is the louder fact. "Standard" is the plain
@@ -7814,8 +7817,12 @@ function demoSteps(p){
      "detail" rather than "cut", because cut is what the FIT step is called in
      three of the five languages: in French this read "Finition ou coupe"
      directly under "Coupe". A pocket and a cropped hem are not cuts anyway. */
-  const styleTitle = styleList.every((k) => k === PLAIN_STYLE || pickWord(LINE_FINISHES, k))
-    ? 'Finish' : 'Finish or detail';
+  const answered = styleList.filter((k) => k !== PLAIN_STYLE);
+  const styleTitle =
+      answered.every((k) => CLOTH_ANSWERS.includes(k))           ? 'Fabric'
+    : answered.every((k) => pickWord(LINE_FINISHES, k)
+                            && !CLOTH_ANSWERS.includes(k))       ? 'Finish'
+    :                                                              'Finish or detail';
   if(styleList.length > 1) out.push(step('y', nextN(), styleTitle,
       c.style && styleList.includes(c.style) ? c.style : null,
       styleList.map(k => {
