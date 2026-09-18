@@ -41,6 +41,19 @@ for (const p of pageList(M, site, 'en')) {
 const GENERATED = [
   /^\d+ colours?$/, /^\d+ options? available$/, /^\d+ styles?$/,
   /^\d+ products?$/, /^\d+ pieces?$/, /^\d+ of \d+$/, /^\d+ famil(y|ies)$/,
+  /* Prices, for exactly the same reason, and more urgently: the rate card
+     moved 129 of 153 configurations in one afternoon, and every one of these
+     strings had the old number baked into a fixed key. They are translated by
+     rule in each language's `patterns`, so listing them here would be 75
+     entries of review noise that go stale the next time a price changes —
+     and worse, would quietly un-translate themselves when it did. */
+  /^From €[\d.,]+( per piece)?$/,
+  /^\d+ products? · from €[\d.,]+$/,
+  /^\d+ garments? · from €[\d.,]+$/,
+  /^\d+ garments? across \d+ products? · from €[\d.,]+ per piece$/,
+  /^€[\d.,]+ per piece · \d+ pieces? · \d+ placements?$/,
+  /^€[\d.,]+ per piece with the setup spread over \d+ pieces? · excludes VAT$/,
+  /^Embroidery — setup €[\d.,]+ per job · priced by size$/,
 ];
 
 /* Not language. A product reference, a fabric weight, the brand itself and the

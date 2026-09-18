@@ -192,6 +192,74 @@
   [
    "^(\\d{1,2}) December (\\d{4})$",
    "$1 décembre $2"
+  ],
+  [
+   "^From €([\\d.,]+)$",
+   "Dès €$1"
+  ],
+  [
+   "^From €([\\d.,]+) per piece$",
+   "Dès €$1 par pièce"
+  ],
+  [
+   "^1 product · from €([\\d.,]+)$",
+   "1 produit · dès €$1"
+  ],
+  [
+   "^(\\d+) products · from €([\\d.,]+)$",
+   "$1 produits · dès €$2"
+  ],
+  [
+   "^1 garment · from €([\\d.,]+)$",
+   "1 modèle · dès €$1"
+  ],
+  [
+   "^(\\d+) garments · from €([\\d.,]+)$",
+   "$1 modèles · dès €$2"
+  ],
+  [
+   "^1 garment across 1 product · from €([\\d.,]+) per piece$",
+   "1 modèle · 1 type de produit · dès €$1 par pièce"
+  ],
+  [
+   "^1 garment across (\\d+) products · from €([\\d.,]+) per piece$",
+   "1 modèle · $1 types de produits · dès €$2 par pièce"
+  ],
+  [
+   "^(\\d+) garments across 1 product · from €([\\d.,]+) per piece$",
+   "$1 modèles · 1 type de produit · dès €$2 par pièce"
+  ],
+  [
+   "^(\\d+) garments across (\\d+) products · from €([\\d.,]+) per piece$",
+   "$1 modèles · $2 types de produits · dès €$3 par pièce"
+  ],
+  [
+   "^€([\\d.,]+) per piece · 1 piece · 1 placement$",
+   "€$1 par pièce · 1 pièce · 1 emplacement du logo"
+  ],
+  [
+   "^€([\\d.,]+) per piece · 1 piece · (\\d+) placements$",
+   "€$1 par pièce · 1 pièce · $2 emplacements du logo"
+  ],
+  [
+   "^€([\\d.,]+) per piece · (\\d+) pieces · 1 placement$",
+   "€$1 par pièce · $2 pièces · 1 emplacement du logo"
+  ],
+  [
+   "^€([\\d.,]+) per piece · (\\d+) pieces · (\\d+) placements$",
+   "€$1 par pièce · $2 pièces · $3 emplacements du logo"
+  ],
+  [
+   "^€([\\d.,]+) per piece with the setup spread over 1 piece · excludes VAT$",
+   "€$1 par pièce, préparation répartie sur 1 pièce · hors TVA"
+  ],
+  [
+   "^€([\\d.,]+) per piece with the setup spread over (\\d+) pieces · excludes VAT$",
+   "€$1 par pièce, préparation répartie sur $2 pièces · hors TVA"
+  ],
+  [
+   "^Embroidery — setup €([\\d.,]+) per job · priced by size$",
+   "Broderie — préparation €$1 par travail · tarifée à la taille"
   ]
  ],
  "copy": {
@@ -359,7 +427,6 @@
   "Small": "Petit",
   "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.": "Minimum 1 pièce. Les paliers sont des raccourcis : saisissez n'importe quel nombre et le prix suit. Ce qui est affiché s'entend à la pièce pour le vêtement avec la spécification incluse, avant personnalisation et hors taxes ; les tailles se répartissent ensuite.",
   "Production time is not an arrival date — destination and schedule are confirmed with the quote.": "Le temps de production n'est pas une date d'arrivée — la destination et le calendrier sont confirmés avec le devis.",
-  "Embroidery — setup €35.49 per job · priced by size": "Broderie — préparation 35,49 € par travail · tarifée à la taille",
   "Build yours · 2 fits · 4 weights": "Composez le vôtre · 2 coupes · 4 grammages",
   "one-off, per job — not per piece": "unique, par travail — pas par pièce",
   "Build yours · 2 styles": "Composez le vôtre · 2 modèles",
@@ -464,13 +531,6 @@
   "Build yours · 3 fits · 4 weights": "Choisir · 3 coupes · 4 grammages",
   "Every placement on this product is in use.": "Tous les emplacements du logo sont sélectionnés.",
   "View the Trousers and shorts collection": "Voir : pantalons et shorts",
-  "1 product · from €36.99": "1 produit · dès €36.99",
-  "2 products · from €15.49": "2 produits · dès €15.49",
-  "2 products · from €17.99": "2 produits · dès €17.99",
-  "4 products · from €7.99": "4 produits · dès €7.99",
-  "5 products · from €16.99": "5 produits · dès €16.99",
-  "8 products · from €5.49": "8 produits · dès €5.49",
-  "9 products · from €31.49": "9 produits · dès €31.49",
   "View the Accessories collection": "Voir : accessoires",
   "View the Outerwear collection": "Voir : vestes",
   "View the Polos collection": "Voir : polos",
@@ -545,10 +605,6 @@
   "· Lightweight": "· Léger",
   "· Mid-weight": "· Grammage moyen",
   "10 garments": "10 modèles",
-  "From €27.49": "Dès €27.49",
-  "From €32.49": "Dès €32.49",
-  "From €36.99": "Dès €36.99",
-  "From €9.49": "Dès €9.49",
   "Left leg": "Jambe gauche",
   "Right leg": "Jambe droite",
   "Your name": "Nom complet",
@@ -728,16 +784,6 @@
   "Women · Sleeveless softshell bodywarmer · Slim fit · 315 g/m² — Custom Bodywarmer": "Femme · Gilet softshell · Coupe ajustée · 315 g/m² · Bodywarmer personnalisé",
   "Women · Softshell jacket · Regular fit · 342 g/m² — Custom Softshell Jacket": "Femme · Veste softshell · Coupe droite · 342 g/m² · Veste softshell personnalisée",
   "Women · Tank top · Regular fit · 155 g/m² — Custom Tank Top": "Femme · Débardeur · Coupe droite · 155 g/m² · Débardeur personnalisé",
-  "€110.48 per piece with the setup spread over 1 piece · excludes VAT": "€110.48 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€48.98 per piece with the setup spread over 1 piece · excludes VAT": "€48.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€49.48 per piece with the setup spread over 1 piece · excludes VAT": "€49.48 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€49.98 per piece with the setup spread over 1 piece · excludes VAT": "€49.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€51.98 per piece with the setup spread over 1 piece · excludes VAT": "€51.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€53.98 per piece with the setup spread over 1 piece · excludes VAT": "€53.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€59.98 per piece with the setup spread over 1 piece · excludes VAT": "€59.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€66.48 per piece with the setup spread over 1 piece · excludes VAT": "€66.48 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€69.98 per piece with the setup spread over 1 piece · excludes VAT": "€69.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
-  "€80.98 per piece with the setup spread over 1 piece · excludes VAT": "€80.98 par pièce, préparation répartie sur 1 pièce · hors TVA",
   "80% cotton / 20% polyester · Mid tier · 4 colours · OS": "80% coton / 20% polyester · Gamme intermédiaire · 4 coloris · OS",
   "93% cotton / 1% elastane / 6% polyamide · 8 colours · OS": "93% coton / 1% élasthanne / 6% polyamide · 8 coloris · OS",
   "Baby · Hoodie · Regular fit · 280 g/m² — Custom Pullover Hoodie": "Bébé · Sweat à capuche · Coupe droite · 280 g/m² · Sweat à capuche personnalisé",
@@ -851,17 +897,10 @@
   "Women · Scoop neck t-shirt · Regular fit · 155 g/m²": "Femme · T-shirt à encolure dégagée · Coupe droite · 155 g/m²",
   "Women · Sleeveless fleece jacket · Slim fit · 300 g/m²": "Femme · Gilet polaire · Coupe ajustée · 300 g/m²",
   "Women · Sleeveless softshell bodywarmer · Slim fit · 315 g/m²": "Femme · Gilet softshell · Coupe ajustée · 315 g/m²",
-  "10 garments across 1 product · from €36.99 per piece": "10 modèles · 1 types de produits · dès €36.99 par pièce",
-  "10 garments across 2 products · from €17.99 per piece": "10 modèles · 2 types de produits · dès €17.99 par pièce",
   "100% organic cotton · Essential · 17 colours · OS": "100% coton biologique · Essentiel · 17 coloris · OS",
   "100% recycled cotton · Essential · 21 colours · OS": "100% coton recyclé · Essentiel · 21 coloris · OS",
   "100% recycled cotton · Premium · 16 colours · OS": "100% coton recyclé · Haut de gamme · 16 coloris · OS",
-  "13 garments across 8 products · from €5.49 per piece": "13 modèles · 8 types de produits · dès €5.49 par pièce",
   "153 garments in the catalogue. Choose what you are after.": "153 modèles à découvrir. Trouvez celui qu’il vous faut.",
-  "28 garments across 9 products · from €31.49 per piece": "28 modèles · 9 types de produits · dès €31.49 par pièce",
-  "36 garments across 4 products · from €7.99 per piece": "36 modèles · 4 types de produits · dès €7.99 par pièce",
-  "50 garments across 5 products · from €16.99 per piece": "50 modèles · 5 types de produits · dès €16.99 par pièce",
-  "6 garments across 2 products · from €15.49 per piece": "6 modèles · 2 types de produits · dès €15.49 par pièce",
   "A tailored jacket and trouser in daylight, worn on shift": "Veste et pantalon de tailleur portés pendant le service, à la lumière naturelle",
   "Assess material, size and fit, under the approved sample policy": "Vérifiez la matière, la taille et la coupe selon les conditions convenues pour les échantillons",
   "Baby · Bib · 210 g/m² — Custom Baby Bib": "Bébé · Bavoir · 210 g/m² · Bavoir personnalisé",
@@ -931,16 +970,6 @@
   "Women · Softshell jacket · Regular fit · 342 g/m²": "Femme · Veste softshell · Coupe droite · 342 g/m²",
   "Women · Tank top · Regular fit · 155 g/m²": "Femme · Débardeur · Coupe droite · 155 g/m²",
   "Women · V-neck t-shirt · Regular fit · 155 g/m²": "Femme · T-shirt à col V · Coupe droite · 155 g/m²",
-  "€110.48 per piece · 1 piece · 1 placement": "€110.48 par pièce · 1 pièce · 1 emplacement du logo",
-  "€48.98 per piece · 1 piece · 1 placement": "€48.98 par pièce · 1 pièce · 1 emplacement du logo",
-  "€49.48 per piece · 1 piece · 1 placement": "€49.48 par pièce · 1 pièce · 1 emplacement du logo",
-  "€49.98 per piece · 1 piece · 1 placement": "€49.98 par pièce · 1 pièce · 1 emplacement du logo",
-  "€51.98 per piece · 1 piece · 1 placement": "€51.98 par pièce · 1 pièce · 1 emplacement du logo",
-  "€53.98 per piece · 1 piece · 1 placement": "€53.98 par pièce · 1 pièce · 1 emplacement du logo",
-  "€59.98 per piece · 1 piece · 1 placement": "€59.98 par pièce · 1 pièce · 1 emplacement du logo",
-  "€66.48 per piece · 1 piece · 1 placement": "€66.48 par pièce · 1 pièce · 1 emplacement du logo",
-  "€69.98 per piece · 1 piece · 1 placement": "€69.98 par pièce · 1 pièce · 1 emplacement du logo",
-  "€80.98 per piece · 1 piece · 1 placement": "€80.98 par pièce · 1 pièce · 1 emplacement du logo",
   "All 10 shirts we make, listed one by one.": "Découvrez les 10 modèles.",
   "All 13 accessories we make, listed one by one.": "Découvrez les 13 modèles.",
   "All 28 outerwear we make, listed one by one.": "Découvrez les 28 modèles.",
@@ -1083,15 +1112,8 @@
   "What do you need help with?": "Comment pouvons-nous vous aider ?",
   "What With polar fleece lining means": "La doublure polaire en détail",
   "1 left after your answers.": "1 modèle correspond.",
-  "10 garments · from €17.99": "10 modèles · dès €17.99",
-  "10 garments · from €36.99": "10 modèles · dès €36.99",
-  "13 garments · from €5.49": "13 modèles · dès €5.49",
-  "28 garments · from €31.49": "28 modèles · dès €31.49",
-  "36 garments · from €7.99": "36 modèles · dès €7.99",
   "4 left after your answers.": "4 modèles correspondent.",
   "5 left after your answers.": "5 modèles correspondent.",
-  "50 garments · from €16.99": "50 modèles · dès €16.99",
-  "6 garments · from €15.49": "6 modèles · dès €15.49",
   "8 left after your answers.": "8 modèles correspondent.",
   "9 left after your answers.": "9 modèles correspondent.",
   "Branded merchandise by product family.": "Trouvez vos produits personnalisés par catégorie.",
@@ -1126,7 +1148,6 @@
   "Checked on every product": "Vérifié pour chaque produit",
   "Dental and private clinics": "Cabinets dentaires et cliniques",
   "Durable when cured correctly": "Durable si la fixation est correcte",
-  "From €7.99 per piece": "Dès €7.99 par pièce",
   "Maintenance and support teams": "Maintenance et support",
   "Not sure which service": "Je ne sais pas encore",
   "PAMUUC Merchandise · Help": "PAMUUC Merchandise · Aide",
@@ -1228,35 +1249,6 @@
   "Decoration sample": "Échantillon personnalisé",
   "Digital proof": "Bon à tirer numérique",
   "Direct routes": "Liens utiles",
-  "From €10.49": "Dès €10.49",
-  "From €112.49": "Dès €112.49",
-  "From €13.99": "Dès €13.99",
-  "From €15.49": "Dès €15.49",
-  "From €16.49": "Dès €16.49",
-  "From €16.99": "Dès €16.99",
-  "From €17.99": "Dès €17.99",
-  "From €20.49": "Dès €20.49",
-  "From €20.99": "Dès €20.99",
-  "From €21.49": "Dès €21.49",
-  "From €21.99": "Dès €21.99",
-  "From €22.99": "Dès €22.99",
-  "From €25.99": "Dès €25.99",
-  "From €26.99": "Dès €26.99",
-  "From €29.49": "Dès €29.49",
-  "From €31.49": "Dès €31.49",
-  "From €31.99": "Dès €31.99",
-  "From €36.49": "Dès €36.49",
-  "From €37.49": "Dès €37.49",
-  "From €38.99": "Dès €38.99",
-  "From €40.49": "Dès €40.49",
-  "From €43.49": "Dès €43.49",
-  "From €49.99": "Dès €49.99",
-  "From €59.49": "Dès €59.49",
-  "From €60.99": "Dès €60.99",
-  "From €7.99": "Dès €7.99",
-  "From €77.49": "Dès €77.49",
-  "From €8.49": "Dès €8.49",
-  "From €80.99": "Dès €80.99",
   "Light woven": "Tissu léger",
   "Log in": "Se connecter",
   "Meet PAMUUC.": "Découvrez PAMUUC.",
@@ -1325,7 +1317,6 @@
   "Branded merchandise, chosen by you and personalised for your company.": "Objets publicitaires pour votre entreprise.",
   "1 piece": "1 pièce",
   "Start choosing": "Commencer à choisir",
-  "includes one placement at the screen print rate, 1 colour, small": "comprend un placement au tarif sérigraphie, 1 couleur, petit",
   "That address does not look right": "Cette adresse ne semble pas correcte",
   "We need somewhere to send your confirmation.": "Nous avons besoin d’une adresse pour vous envoyer votre confirmation.",
   "Removed from your quote": "Retiré de votre devis",
@@ -1444,9 +1435,10 @@
   "2 minutes": "2 minutes",
   "12 August 2026": "12 août 2026",
   "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 articles. Écrits par le studio qui fabrique les vêtements, pas par une agence qui écrit à leur sujet.",
-  "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcelone"
+  "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcelone",
+  "includes one placement — small or medium embroidery or DTF": "comprend un placement — broderie ou DTF, petite ou moyenne taille"
  },
- "_translated": 1138,
- "_of": 1154,
+ "_translated": 1062,
+ "_of": 1078,
  "colourPreposition": "en"
 }
