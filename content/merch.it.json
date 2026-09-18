@@ -328,6 +328,10 @@
   [
    "^(\\d+)%/(\\d+)% organic \\+ recycled cotton$",
    "$1%/$2% cotone biologico + riciclato"
+  ],
+  [
+   "^Show all (\\d+) options$",
+   "Vedi tutte le $1 opzioni"
   ]
  ],
  "copy": {
@@ -1370,7 +1374,7 @@
   "Reference": "Riferimento",
   "Rib-knit": "Maglia a coste",
   "Sort": "Ordinare",
-  "Woven": "Tessuto a navetta",
+  "Woven": "Tessuto",
   "Get the discount": "Ottenere lo sconto",
   "Your first order discount is set up.": "Lo sconto sul primo ordine è attivo.",
   "Apply it to my quote": "Applicarlo al mio preventivo",
@@ -1505,10 +1509,6 @@
   "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 articoli. Scritti dallo studio che realizza i capi, non da un’agenzia che ne scrive.",
   "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcellona",
   "includes one placement — small or medium embroidery or DTF": "include un posizionamento — ricamo o DTF, dimensione piccola o media",
-  "Essential": "Essenziale",
-  "Premium": "Premium",
-  "Luxury": "Lusso",
-  "Standard": "Standard",
   "Baby cut": "Vestibilità baby",
   "Body warmer": "Gilet",
   "Boxy": "Boxy",
@@ -1567,7 +1567,22 @@
   "Woven shopper": "Shopper in tessuto",
   "Zip": "Zip",
   "Zip-through": "Zip integrale",
-  "Women’s fitted": "Aderente donna"
+  "Women’s fitted": "Aderente donna",
+  "Dry handfeel": "Mano asciutta",
+  "Extra heavy": "Molto pesante",
+  "Fleece": "Pile",
+  "Fleece lined": "Foderato in pile",
+  "High neck": "Collo alto",
+  "Modal": "Modal",
+  "Puffer": "Piumino",
+  "Raglan": "Raglan",
+  "Ribbed": "A coste",
+  "Sherpa": "Sherpa",
+  "Sherpa lined": "Foderato in sherpa",
+  "Shopper": "Shopper",
+  "Softshell": "Softshell",
+  "Straight leg": "Gamba dritta",
+  "Washed": "Lavato"
  },
  "_translated": 1071,
  "_of": 1078,

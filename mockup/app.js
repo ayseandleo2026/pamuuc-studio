@@ -7430,117 +7430,180 @@ function demoSteps(p){
      Where it is missing, fall back to numbering them. */
   /* THE GARMENT CARD.
      ---------------------------------------------------------------------
-     This step used to answer a question nobody asked. Six t-shirts arrived
-     as "Lightweight", "Lightweight \u00b7 Unisex cut \u00b7 Fabric washed",
-     "Garment dyed mid-light" \u2014 headlines made of weight words sitting next
-     to the weight itself, one of them contradicting our own scale, and three
-     of the six reading "100% organic cotton" at within 30 g/m\u00b2 of each
-     other. Under that came a relative weight bar, a Lighter\u2013Heavier
-     legend, a colour count, a size range and an expandable note.
+     A buyer at this step is not ranking grams per square metre, and they are
+     not ranking us either: the price is already on the card. What they cannot
+     see is how substantial the cloth is. So the card names the cloth.
 
-     A buyer choosing a t-shirt is not ranking grams per square metre. They
-     want to know which one is the cheap one and which one is the good one.
-     So the card leads with where the garment sits in the range \u2014 Essential,
-     Premium, Luxury \u2014 says what it is made of, and puts the weight where a
-     number belongs when only some people want it: small, last and quiet.
+     It led with a value tier before this — Essential, Premium, Luxury — which
+     spent the headline restating the price two inches away and made a claim a
+     €14.49 t-shirt cannot carry. Worse: with the headline taken by rank, the
+     only slot left for what a garment actually IS was the small grey note, so
+     "Recycled" ended up reading as the reason something was Premium. It is a
+     credential, not an identity, and it belongs in the composition line, which
+     already states it exactly.
 
-     The tier is price rank inside THIS product's options, not a claim about
-     the wider market, so it never has to defend an absolute scale. */
+     Checked against the trade before changing it. AS Colour ships Basic 160 /
+     Staple 180 / Classic 220 / Heavy 280. Merchery, the closest thing we have
+     to a direct competitor, prints "T-shirt light", "Boxy heavy", "Relaxed".
+     Neither puts a value ladder or a gsm figure on the card; only the volume
+     print shops do. */
 
-  /* A garment we have not costed still has to sit somewhere in the column.
-     Its own weight places it: it borrows the price of the priced garments
-     nearest to it in grams. That figure orders the card and nothing else \u2014
-     the card still reads "Price on request", because it still is. Without it
-     every uncosted garment fell to the bottom and came back Luxury, which is
-     a claim about a price we do not have. */
-  const wPriced = opts.filter((r) => rowPrice(r) != null && +r.w);
-  const sortKey = (r) => {
-    const pr = rowPrice(r);
-    if(pr != null) return pr;
-    const w = +r.w;
-    if(!w || !wPriced.length) return Infinity;
-    const gaps = wPriced.map((x) => Math.abs(+x.w - w));
-    const near = Math.min(...gaps);
-    const peers = wPriced.filter((x, i) => gaps[i] === near).map(rowPrice);
-    return peers.reduce((a, b) => a + b, 0) / peers.length;
+  /* Weight means different things to different garments — 300 g is a light
+     hoodie and a very heavy t-shirt — so the bands are absolute and per
+     family. Banding each product against its own spread was tried first and
+     fails: one 500 g hoodie stretched the range until nine of fourteen came
+     back "Light", a 350 g one among them. Each pair is an upper bound. */
+  const WEIGHT_BANDS = {
+    tee:    [[170, 'Light'], [200, 'Classic'], [250, 'Heavy'], [1e9, 'Extra heavy']],
+    polo:   [[200, 'Light'], [230, 'Classic'], [1e9, 'Heavy']],
+    sweat:  [[320, 'Light'], [380, 'Classic'], [450, 'Heavy'], [1e9, 'Extra heavy']],
+    jogger: [[320, 'Light'], [380, 'Classic'], [1e9, 'Heavy']],
+    shirt:  [[200, 'Light'], [280, 'Classic'], [350, 'Heavy'], [1e9, 'Extra heavy']],
+    bag:    [[200, 'Light'], [280, 'Classic'], [350, 'Heavy'], [1e9, 'Extra heavy']],
   };
-  /* Cheapest first. The list used to run lightest-first so it read as a scale,
-     but the headline is the tier now, and a column whose badge reads Essential,
-     Premium, Essential, Luxury, Premium looks broken however true it is. */
-  const shown = opts.slice().sort((a, b) =>
-    (sortKey(a) - sortKey(b)) || ((+a.w || 0) - (+b.w || 0)));
-
-  /* Even thirds by POSITION, not by where a price lands inside its range. A
-     value-based split gave 2/1/2 on six options and 2/1/1 on four; a buyer
-     reading a column of cards expects the bands to be about equal. */
-  const TIERS = ['Essential', 'Premium', 'Luxury'];
-  const tierOf = (r) => {
-    const n = shown.length;
-    if(n < 2) return null;                       /* one option is not a range */
-    const i = shown.indexOf(r);
-    if(n === 2) return i === 0 ? 'Essential' : 'Premium';
-    return TIERS[Math.min(2, Math.floor(i * 3 / n))];
+  /* Outerwear runs from a 38 g windbreaker to a 450 g parka, where the number
+     means something different at each end, and headwear carries no weight in
+     the sheet at all. Those name themselves by what they are instead. */
+  const FAMILY = {
+    m_t_shirts: 'tee', m_tank_tops: 'tee', m_long_sleeve_t_shirts: 'tee',
+    m_baby_bodysuits: 'tee', m_baby_bibs: 'tee',
+    m_polo_shirts: 'polo', m_long_sleeve_polo_shirts: 'polo',
+    m_crewneck_sweatshirts: 'sweat', m_pullover_hoodies: 'sweat',
+    m_zip_hoodies: 'sweat', m_zip_sweatshirts: 'sweat',
+    m_quarter_zip_sweatshirts: 'sweat',
+    m_joggers: 'jogger', m_sweat_shorts: 'jogger',
+    m_shirts: 'shirt',
+    m_tote_bags: 'bag', m_drawstring_gym_bags: 'bag', m_duffle_bags: 'bag',
+    m_belt_bags: 'bag', m_pencil_cases: 'bag',
+  };
+  const bandOf = (w) => {
+    const table = WEIGHT_BANDS[FAMILY[p.id]];
+    if(!table || !+w) return null;
+    for(let i = 0; i < table.length; i++) if(+w < table[i][0]) return table[i][1];
+    return table[table.length - 1][1];
   };
 
-  /* What the garment's own name still says once the weight words are out of
-     it \u2014 "Garment dyed", "Side pocket", "V-neck". Those are real differences
-     between two garments in the same tier; "Heavyweight" beside 240 g/m\u00b2 is
-     not. Three rules earn their place:
-
-       only COMPOUND weight words go. An earlier pass took the bare adjective
-       too and turned "Medium fit" into "fit", because medium is a fit here and
-       a weight three fields away. "weigth" is in the sheet and is matched as
-       spelt, not corrected in it;
-
-       the tier word never survives, or the cheapest t-shirt reads
-       "Essential / Essential";
-
-       "unisex" goes, and a segment left as a bare "cut" goes with it, so
-       "Lightweight \u00b7 Unisex cut \u00b7 Fabric washed" arrives as "Fabric washed".
-       "Men's cut" keeps its own word and stays. */
-  const WEIGHTY = /\b(?:ultra|extra)?[- ]?(?:light|mid|medium|heavy)[- ]?(?:weight|weigth)\b|\bmid[- ]light\b/gi;
-  const GRAMMAGE = /\b\d{2,4}\s*g\s*\/?\s*m²?\b|\b\d{2,4}\s*gsm\b/gi;
-  const qualifier = (cut, tier) => {
-    const segs = String(cut || '').split(/\s*\u00b7\s*/).map((seg) => seg
-      .replace(WEIGHTY, ' ')
-      .replace(GRAMMAGE, ' ')
-      /* The tier words go whether or not this list has a tier: a single-option
-         product has none to compare against, and its card still read
-         "Essential" twice over. */
-      .replace(/\b(?:essential|premium|luxury)\b/gi, ' ')
-      .replace(/\bunisex\b/gi, ' ')
-      /* "Long-midweight polo" loses its middle and leaves "Long- polo"; the
-         hyphen belonged to the word that went. */
-      .replace(/(^|\s)-+|-+(?=\s|$)/g, '$1')
-      .replace(/\s{2,}/g, ' ').trim()
-    ).filter((seg) => seg.length > 2 && !/^cut$/i.test(seg));
-    if(!segs.length) return '';
-    /* Two descriptors at most. "Zip-through \u00b7 Recycled \u00b7 Fabric washed" is
-       38 characters of small grey type beside a tier and a price, and it wraps
-       to a second line on a phone. Dropping the third costs nothing: across
-       every product and filter the site can show, capping here leaves exactly
-       the same cards distinguishable as no cap at all. */
-    const out = segs.slice(0, 2).join(' \u00b7 ');
-    return out.charAt(0).toUpperCase() + out.slice(1);
+  /* The finish is what was done to the cloth after it was knitted. It changes
+     how a garment looks and feels, which is the one thing a weight cannot tell
+     you, so it takes the second word ahead of anything else. */
+  const FINISHES = [
+    [/garment[- ]?dyed/i, 'Garment dyed'], [/panel washed/i, 'Panel washed'],
+    [/dry[- ]?hand ?feel/i, 'Dry handfeel'], [/fabric washed|washed/i, 'Washed'],
+    [/vintage/i, 'Vintage'], [/sherpa[- ]lined/i, 'Sherpa lined'],
+  ];
+  /* Construction: what is cut or sewn differently. */
+  const DETAILS = [
+    [/v-neck/i, 'V-neck'], [/scoop/i, 'Scoop neck'], [/high neck/i, 'High neck'],
+    [/crew neck/i, 'Crew neck'], [/rolled[- ]sleeve/i, 'Rolled sleeve'],
+    [/raglan/i, 'Raglan'], [/quarter[- ]zip/i, 'Quarter zip'],
+    [/zip[- ]through/i, 'Zip'], [/pocket/i, 'Pocket'],
+    [/rib[- ]knit/i, 'Ribbed'], [/fisherman/i, 'Fisherman'],
+    [/fleece lining|polar fleece/i, 'Fleece lined'], [/shopper/i, 'Shopper'],
+    [/hooded|\bhood\b/i, 'Hooded'],
+    [/cropped|\bcrop\b/i, 'Cropped'], [/long[- ]sleeve/i, 'Long sleeve'],
+    [/short[- ]sleeve/i, 'Short sleeve'], [/straight leg/i, 'Straight leg'],
+    [/multifunctional/i, 'Multifunctional'], [/anorak/i, 'Anorak'],
+    [/bomber/i, 'Bomber'], [/coach/i, 'Coach'], [/puffer/i, 'Puffer'],
+    [/body warmer/i, 'Body warmer'], [/softshell/i, 'Softshell'],
+    [/sherpa/i, 'Sherpa'], [/fleece/i, 'Fleece'], [/denim/i, 'Denim'],
+    [/oxford/i, 'Oxford'], [/poplin/i, 'Poplin'], [/canvas/i, 'Canvas'],
+    [/woven/i, 'Woven'], [/jogger/i, 'Jogger'], [/jacket/i, 'Jacket'],
+    /* last: on a bodywarmer everything is sleeveless, so it only speaks when
+       nothing above it did */
+    [/sleeveless/i, 'Sleeveless'],
+  ];
+  /* Shape is the fit step's own question. It only earns a word here when this
+     list actually holds more than one shape, which happens when the fit step
+     was never asked — otherwise the card would parrot the chip above it. */
+  const SHAPES = [
+    [/boxy/i, 'Boxy'], [/oversized/i, 'Oversized'],
+    [/relaxed/i, 'Relaxed'], [/fitted/i, 'Fitted'],
+  ];
+  /* Where two cards end up saying the same thing, what actually separates them
+     is the fibre, and the composition line below spells it out in full. A
+     short note lifts that difference to where it can be scanned. It is a
+     tie-breaker and never the first thing a card says — leading with it is
+     exactly what put "Recycled" where a quality claim belonged. */
+  const FIBRES = [
+    [/modal/i, 'Modal'], [/elastane/i, 'Stretch'], [/nylon/i, 'Nylon'],
+    [/recycled/i, 'Recycled'],
+  ];
+  const pick = (table, str) => {
+    for(let i = 0; i < table.length; i++) if(table[i][0].test(str)) return table[i][1];
+    return '';
   };
+  const shapesVary = new Set(opts.map((r) => r.fitDetail || '')).size > 1;
+
+  /* One or two words. The weight leads where weight is the axis; where it is
+     not, the garment's own type does. */
+  const wordsFor = (r) => {
+    const name   = optionName(p, r, opts);
+    const finish = pick(FINISHES, name);
+    const detail = pick(DETAILS, name);
+    const shape  = shapesVary ? pick(SHAPES, name) : '';
+    const band   = bandOf(r.w);
+    if(band) return {head: band, sub: finish || detail || shape || ''};
+    const head = detail || finish || shape || 'Classic';
+    const sub  = [finish, detail, shape].filter((x) => x && x !== head)[0] || '';
+    return {head, sub};
+  };
+
+  /* Two cloths nobody can tell apart: same fibre, same shape, same finish and
+     the same construction, within a tenth of each other in weight. 150 g
+     against 155 g is three per cent — a difference no hand can feel and no
+     card can show. The cheaper one stands for both. */
+  const twinKey = (r) => {
+    const name = optionName(p, r, opts);
+    return [compOf(r) || '', r.fitDetail || '',
+            pick(FINISHES, name), pick(DETAILS, name)].join('|');
+  };
+  const kept = [];
+  opts.slice().sort((a, b) => (rowPrice(a) ?? 1e9) - (rowPrice(b) ?? 1e9)).forEach((r) => {
+    const k = twinKey(r);
+    const twin = kept.some((x) => twinKey(x) === k && +x.w && +r.w
+      && Math.abs(+x.w - +r.w) / Math.max(+x.w, +r.w) <= 0.10);
+    if(!twin) kept.push(r);
+  });
+  /* Lightest first, so the column climbs the same ladder the headline names. */
+  const ordered = kept.slice().sort((a, b) =>
+    ((+a.w || 0) - (+b.w || 0)) || ((rowPrice(a) ?? 1e9) - (rowPrice(b) ?? 1e9)));
+
+  /* Five is a choice; the sixth onward is a catalogue. Only sixteen of the
+     hundred and eighty-six screens ever reach it, and a single card over the
+     cap is not worth a button to reveal. */
+  const CAP = 5;
+  const shown  = (ordered.length > CAP + 1 && !c.allG) ? ordered.slice(0, CAP) : ordered;
+  const hidden = ordered.length - shown.length;
 
   /* Beanies and bags carry no grammage at all, and three cards each reading
      "Weight to confirm" is three lines of nothing. The line only appears where
      the range actually has weights to compare. */
   const anyW = shown.some((r) => +r.w);
 
+  /* A second word that lands on every card distinguishes nothing: all four
+     tote bags are woven, so "Woven" beside each of them is four repetitions of
+     a fact about the product, not about the garment. It only survives where
+     at least one card in the list does without it. */
+  const words = new Map(shown.map((r) => [r.sku, wordsFor(r)]));
+  const subsSeen = new Set([...words.values()].map((x) => x.sub));
+  if(subsSeen.size === 1 && !subsSeen.has('')) words.forEach((x) => { x.sub = ''; });
+
+  /* Anything still saying what its neighbour says falls back to the fibre. */
+  const label = (x) => x.head + '\u0000' + x.sub;
+  const tally = {};
+  words.forEach((x) => { tally[label(x)] = (tally[label(x)] || 0) + 1; });
+  shown.forEach((r) => {
+    const x = words.get(r.sku);
+    if(tally[label(x)] < 2) return;
+    const note = pick(FIBRES, compOf(r) || '');
+    if(note && note !== x.sub) x.sub = x.sub ? x.sub + ' \u00b7 ' + note : note;
+  });
+
   const optCards = shown.map((r) => {
     const pr = rowPrice(r);
     const on = c.sku === r.sku;
-    const cut = optionName(p, r, opts);
-    const tier = tierOf(r);
-    const qual = qualifier(cut, tier);
     const comp = compOf(r);
-    /* One option is not a range, so there is no tier to name and nothing to
-       compare it against. The garment's own qualifier leads instead, and
-       where it has none the card just says what every garment here is. */
-    const head = tier || qual || 'Standard';
-    const sub  = tier ? qual : '';
+    const {head, sub} = words.get(r.sku);
     /* No hand-built aria-label. The old card needed one, because its weight
        sat in a bar and its detail in a collapsed note, so the visible text did
        not say what the card meant. This one says everything in text, and a
@@ -7553,9 +7616,8 @@ function demoSteps(p){
       aria-pressed="${on}">
       <span class="gopt-t">${esc(head)}${
         /* the space is for the accessible name: without it the two spans run
-           together and the card announces itself as "EssentielFabric washed".
-           Whitespace between flex items is not itself an item, so the
-           rendered row is unchanged. */
+           together and the card announces itself as "LightWashed". Whitespace
+           between flex items is not itself an item, so the row is unchanged. */
         sub ? ` <em class="gopt-x">${esc(sub)}</em>` : ''}</span>
       ${comp ? `<span class="gopt-m">${esc(comp)}</span>` : ''}
       ${anyW ? `<span class="gopt-w">${
@@ -7570,8 +7632,12 @@ function demoSteps(p){
         : '<span class="gopt-r">Price on request</span>'}</span>
     </button>`;}).join('');
 
-  /* The Lighter–Heavier legend went with the bar it explained. */
-  const optScale = '';
+  /* The count is data, so this is one string with a number in it rather than
+     a fixed label — a fixed one stops matching the day a product gains a
+     garment, and that single line turns English again. */
+  const optScale = hidden > 0 ? `
+    <button class="btn btn--ghost btn--sm gopt-more" data-act="dMoreG">Show all ${
+      ordered.length} options</button>` : '';
 
   const out = [];
   if(j.needG) out.push(step('g', nextN(), 'Who wears it', c.g ? genderName(c.g) : null,
@@ -7592,14 +7658,13 @@ function demoSteps(p){
      choosing the polo closed the step down to "Mid-light · 185 g/m²": the
      weight word sitting beside the weight, which is the whole reason the card
      changed. Built from the same pieces the chosen card shows. */
-  const chosenTier = chosen ? tierOf(chosen) : null;
-  const chosenQual = chosen ? qualifier(optionName(p, chosen, opts), chosenTier) : '';
+  const chosenWords = chosen ? (words.get(chosen.sku) || wordsFor(chosen)) : null;
   out.push(step('s', nextN(), 'The garment', chosen
-      ? [chosenTier || chosenQual || 'Standard', chosenTier ? chosenQual : '',
+      ? [chosenWords.head, chosenWords.sub,
          (anyW && chosen.w) ? chosen.w + ' g/m²' : '']
           .filter(Boolean).join(' · ') || 'Chosen'
       : null,
-    opts.length ? optScale + `<div class="gopts">${optCards}</div>`
+    opts.length ? `<div class="gopts">${optCards}</div>` + optScale
       : (c.g || c.f)
         /* They answered, and the answers happen to meet on nothing. Repeating
            "choose who wears it and the fit" to someone who just did reads as
@@ -14162,11 +14227,15 @@ document.addEventListener('click', (e) => {
     if(a === 'dGender' || a === 'dFit' || a === 'dSku'){
       const c = UI.cfg || (UI.cfg = {});
       c.open = null;
-      /* an answer higher up can invalidate the garment chosen below it */
-      if(a === 'dGender'){ c.g = d.v; c.f = null; c.sku = null; }
-      else if(a === 'dFit'){ c.f = d.v; c.sku = null; }
+      /* an answer higher up can invalidate the garment chosen below it, and
+         it always gives a shorter list — so the reveal closes with it */
+      if(a === 'dGender'){ c.g = d.v; c.f = null; c.sku = null; c.allG = null; }
+      else if(a === 'dFit'){ c.f = d.v; c.sku = null; c.allG = null; }
       else { c.sku = d.v; }
       render(); return; }
+    /* Past five garments the step stops being a choice and starts being a
+       catalogue, so the rest wait behind one button. It only ever opens. */
+    if(a === 'dMoreG'){ const c = UI.cfg || (UI.cfg = {}); c.allG = true; render(); return; }
     if(a === 'bGender'){ const b = buildState(); b.gender = d.v; b.fit = b.weight = b.style = b.colour = b.method = null; render(); return; }
     if(a === 'bFit'){    const b = buildState(); b.fit = d.v;    b.weight = b.style = b.colour = b.method = null; render(); return; }
     if(a === 'bWeight'){ const b = buildState(); b.weight = d.v; b.style = b.colour = b.method = null;

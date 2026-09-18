@@ -1023,7 +1023,7 @@
   "Bomber": "Bomber",
   "Care": "Cuidado",
   "Certification": "Certificación",
-  "Coach": "Chaqueta tipo coach",
+  "Coach": "Chaqueta coach",
   "Compare": "Comparar",
   "Filters": "Filtros",
   "Fisherman": "Gorro corto",
@@ -1040,7 +1040,7 @@
   "Reference": "Referencia",
   "Rib-knit": "Punto canalé",
   "Sort": "Ordenar",
-  "Woven": "Tejido de calada",
+  "Woven": "Tejido",
   "Get the discount": "Obtener el descuento",
   "Your first order discount is set up.": "El descuento de su primer pedido está listo.",
   "Apply it to my quote": "Aplicarlo a mi presupuesto",
@@ -1175,10 +1175,6 @@
   "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 artículos. Escritos por el estudio que fabrica las prendas, no por una agencia que escribe sobre ellas.",
   "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcelona",
   "includes one placement — small or medium embroidery or DTF": "incluye una colocación — bordado o DTF, tamaño pequeño o mediano",
-  "Essential": "Esencial",
-  "Premium": "Premium",
-  "Luxury": "Lujo",
-  "Standard": "Estándar",
   "Baby cut": "Corte bebé",
   "Body warmer": "Chaleco",
   "Boxy": "Boxy",
@@ -1237,7 +1233,22 @@
   "Woven shopper": "Bolso shopper",
   "Zip": "Cremallera",
   "Zip-through": "Cremallera completa",
-  "Women’s fitted": "Entallado para mujer"
+  "Women’s fitted": "Entallado para mujer",
+  "Dry handfeel": "Tacto seco",
+  "Extra heavy": "Muy grueso",
+  "Fleece": "Polar",
+  "Fleece lined": "Forro polar",
+  "High neck": "Cuello alto",
+  "Modal": "Modal",
+  "Puffer": "Acolchada",
+  "Raglan": "Raglán",
+  "Ribbed": "Canalé",
+  "Sherpa": "Sherpa",
+  "Sherpa lined": "Forro sherpa",
+  "Shopper": "Shopper",
+  "Softshell": "Softshell",
+  "Straight leg": "Pierna recta",
+  "Washed": "Lavado"
  },
  "patterns": [
   [
@@ -1567,6 +1578,10 @@
   [
    "^(\\d+)%/(\\d+)% organic \\+ recycled cotton$",
    "$1%/$2% algodón orgánico + reciclado"
+  ],
+  [
+   "^Show all (\\d+) options$",
+   "Ver las $1 opciones"
   ]
  ],
  "_translated": 1069,

@@ -249,6 +249,8 @@ a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center
 /* quiet, and last */
 .gopt-w{grid-column:1;font-size:var(--fs-micro);color:var(--faint);
   font-variant-numeric:tabular-nums;letter-spacing:.02em;margin-top:4px}
+/* the rest of the range, one button, under the five that are shown */
+.gopt-more{margin-top:var(--sp-3)}
 
 /* The breadcrumb, given the same air on every page.
    ---------------------------------------------------------------------------

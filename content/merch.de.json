@@ -328,6 +328,10 @@
   [
    "^(\\d+)%/(\\d+)% organic \\+ recycled cotton$",
    "$1%/$2% Bio-Baumwolle + recycelte Baumwolle"
+  ],
+  [
+   "^Show all (\\d+) options$",
+   "Alle $1 Optionen anzeigen"
   ]
  ],
  "copy": {
@@ -1505,10 +1509,6 @@
   "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 Artikel. Geschrieben von dem Studio, das die Kleidung herstellt, nicht von einer Agentur, die darüber schreibt.",
   "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcelona",
   "includes one placement — small or medium embroidery or DTF": "enthält eine Platzierung — Stickerei oder DTF, klein oder mittel",
-  "Essential": "Basis",
-  "Premium": "Premium",
-  "Luxury": "Luxus",
-  "Standard": "Standard",
   "Baby cut": "Babyschnitt",
   "Body warmer": "Bodywarmer",
   "Boxy": "Boxy",
@@ -1567,7 +1567,22 @@
   "Woven shopper": "Shopper",
   "Zip": "Reißverschluss",
   "Zip-through": "Full-Zip",
-  "Women’s fitted": "Damen tailliert"
+  "Women’s fitted": "Damen tailliert",
+  "Dry handfeel": "Trockengriff",
+  "Extra heavy": "Sehr schwer",
+  "Fleece": "Fleece",
+  "Fleece lined": "Fleecegefüttert",
+  "High neck": "Stehkragen",
+  "Modal": "Modal",
+  "Puffer": "Puffer",
+  "Raglan": "Raglan",
+  "Ribbed": "Rippstrick",
+  "Sherpa": "Sherpa",
+  "Sherpa lined": "Sherpagefüttert",
+  "Shopper": "Shopper",
+  "Softshell": "Softshell",
+  "Straight leg": "Gerades Bein",
+  "Washed": "Gewaschen"
  },
  "_translated": 1065,
  "_of": 1078,
