@@ -1,6 +1,6 @@
 {
  "_comment": "The merchandise copy, extracted from mockup/app.js by tools/extract-copy.mjs. This is the English source. Translations are content/merch.<loc>.json with the same keys. Editing a value here changes the wording on the site; editing a key breaks the link to it.",
- "_generated": "2026-09-17",
+ "_generated": "2026-09-18",
  "_strings": 1119,
  "_words": 10843,
  "copy": {

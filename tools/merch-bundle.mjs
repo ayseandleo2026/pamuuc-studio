@@ -159,14 +159,45 @@ a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center
     scroll-padding-left:var(--sp-4)}
 }
 
-/* The offer bar is one line at every width. It wrapped at 320 even after the
-   sentence was shortened, and a promotional strip on two lines pushes the page
-   down and reads as a mistake. */
+/* The offer bar: one line at every width, in every language.
+   ---------------------------------------------------------------------------
+   Making it nowrap stopped it wrapping and started it colliding. The dismiss is
+   position:absolute, so the centred sentence beside it cannot see it; English
+   happened to be short enough to clear it and French was not — "Voir l'offre"
+   ran 17px under the ✕ on a Galaxy. Reserving padding for it would only move
+   the guess, so below 620 the dismiss goes into the flow instead and the
+   overlap becomes impossible rather than unlikely.
+
+   The label on the link goes at the same width. The five languages are not the
+   same length — "Voir l'offre" is 72px where "See how" is 44 — and a phone has
+   no room for the longest of them beside a sentence. The chevron stays, the
+   button keeps its accessible name, and the sentence is what a reader needs. */
 .obar-in{flex-wrap:nowrap}
-.obar-t{white-space:nowrap}
-@media (max-width:400px){
-  .obar-in{font-size:var(--fs-xs);padding-left:var(--sp-5);padding-right:var(--sp-7)}
+.obar-t{white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:620px){
+  .obar{display:flex;align-items:center}
+  .obar-in{flex:1;min-width:0;padding:7px var(--sp-2) 7px var(--sp-4);justify-content:flex-start}
+  .obar-x{position:static;transform:none;flex:none;margin-right:var(--sp-3)}
+  .obar-go-l{display:none}
+  /* With the label gone an underlined chevron reads as a stray character, so
+     it becomes the same round outlined control the rest of the site uses. */
+  .obar-go{min-width:26px;height:26px;justify-content:center;text-decoration:none;
+    border:1px solid color-mix(in srgb,#FFFFFF 45%,transparent);border-radius:var(--radius-full)}
+  .obar-go:hover{background:color-mix(in srgb,#FFFFFF 15%,transparent)}
 }
+/* Two steps down, because the longest sentence of the five is French at 278px
+   and the narrowest real screen is 320. */
+@media (max-width:420px){ .obar-in{font-size:var(--fs-xs)} }
+@media (max-width:360px){
+  .obar-in{font-size:var(--fs-micro);padding-left:var(--sp-3)}
+  .obar-x{margin-right:var(--sp-2)}
+}
+
+/* The mockup draws its own skip link, and head() emits one too, so every
+   merchandise page carried two — the builder strips the mockup's from the
+   static HTML but app.js puts it back the moment it boots. The one inside
+   #root is the app's copy. */
+#root .skip{display:none}
 
 /* Controls below the 24px minimum of WCAG 2.5.8. All three were wide enough
    and too short — a thumb misses them on a phone. */
@@ -187,12 +218,44 @@ a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center
      the mark and the name do not. */
   .brand .brand-bar,.brand .brand-sub{display:none}
 }
-@media (max-width:380px){
-  .pub-hd-in{gap:var(--sp-2);padding:0 var(--sp-3)}
-  /* The light/dark toggle is the one control with a system-level equivalent:
-     prefers-color-scheme still decides, and the switch returns above 380. */
+@media (max-width:480px){
+  /* The light/dark toggle is the one control with a system-level equivalent —
+     prefers-color-scheme still decides — so it is what gives way when the
+     header runs out of room. It has to go on every phone, not only the narrow
+     ones: the label on the primary button is "Quote" in English and
+     "Presupuesto" in Spanish, and that alone took the header past 390, which
+     is the iPhone 14/15/16. It returns above 480. */
   .pub-hd-in [data-act="theme"]{display:none}
 }
+@media (max-width:380px){
+  .pub-hd-in{gap:var(--sp-2);padding:0 var(--sp-3)}
+}
+
+/* A product name is not a caption, and four of the five languages are longer
+   than English. The card title was one line with an ellipsis, which is fine for
+   "Custom T-Shirt" and cuts "Camiseta de manga larga personalizada" and
+   "T-shirt personnalisé à manches longues" mid-word. Two lines, then ellipsis:
+   the grid stays tidy and the name survives. */
+.pc-t{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+  overflow:hidden;text-overflow:ellipsis}
+
+/* At the narrowest real screen — 320, the first iPhone SE — a Spanish or
+   French label simply does not fit a button on one line, and .btn is nowrap,
+   so instead of wrapping it pushed the whole page sideways: 347px of content
+   in a 320px window on the French collection page. Below 380 a label may take
+   a second line, and a word longer than the column breaks rather than
+   deciding the width of the document. */
+@media (max-width:380px){
+  .btn{white-space:normal;min-width:0}
+  body{overflow-wrap:break-word}
+}
+
+/* Two more places where a fixed nowrap meets a longer language. The card's
+   spec line is hard-cut mid-word at "9 grammages", and the fact row's value
+   cannot shrink because a flex child defaults to min-width:auto. */
+.pc-var span{white-space:normal}
+.factline{min-width:0}
+.factline > *{min-width:0}
 
 /* The two doors on the chooser. A grid item defaults to min-width:auto, so the
    card was sized by its widest child rather than by its column: "Explore custom

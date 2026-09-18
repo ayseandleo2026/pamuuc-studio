@@ -3423,8 +3423,8 @@ function offerBar(branch){
     <div class="obar-in">
       <span class="obar-tag">${esc(o.label)}</span>
       <span class="obar-t">Up to ${offerBest(o)}% off your first order.</span>
-      <button class="obar-go" data-act="offerOpen" data-id="${esc(o.id)}">
-        See how<i aria-hidden="true">&#8250;</i></button>
+      <button class="obar-go" data-act="offerOpen" data-id="${esc(o.id)}" aria-label="See how">
+        <span class="obar-go-l">See how</span><i aria-hidden="true">&#8250;</i></button>
     </div>
     <button class="obar-x" data-act="offerHide" data-id="${esc(o.id)}" aria-label="Hide this offer">✕</button>
   </div>`;

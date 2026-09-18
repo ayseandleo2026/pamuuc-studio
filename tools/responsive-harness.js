@@ -53,6 +53,26 @@
   ];
 
   function box(el) { return el.getBoundingClientRect(); }
+
+  /** An element's box after every clipping ancestor has had its say, or null
+      when nothing of it survives. */
+  function visible(el, win) {
+    var r = el.getBoundingClientRect();
+    var top = r.top, left = r.left, right = r.right, bottom = r.bottom;
+    var p = el.parentElement;
+    while (p) {
+      var ps = win.getComputedStyle(p);
+      if (ps.overflow !== 'visible' || ps.overflowX !== 'visible' || ps.overflowY !== 'visible') {
+        var pr = p.getBoundingClientRect();
+        top = Math.max(top, pr.top); left = Math.max(left, pr.left);
+        right = Math.min(right, pr.right); bottom = Math.min(bottom, pr.bottom);
+        if (right <= left || bottom <= top) return null;
+      }
+      p = p.parentElement;
+    }
+    return { top: top, left: left, right: right, bottom: bottom,
+             width: right - left, height: bottom - top };
+  }
   function name(el) {
     var c = (el.className || '').toString().trim().split(/\s+/)[0] || '';
     return el.tagName.toLowerCase() + (c ? '.' + c : '');
@@ -107,9 +127,17 @@
     /* --- the two bands the owner asked to stay on one line --- */
     var bar = doc.querySelector('.obar-in');
     if (bar) {
-      var lh = parseFloat(win.getComputedStyle(bar).lineHeight) || 18;
-      var lines = Math.round((box(bar).height - 14) / lh);
-      if (lines > 1) add('wrapped', '.obar-in', lines + ' lines');
+      /* Count where the children actually sit. Dividing the bar's height by
+         its line-height said "2 lines" the moment the bar gained a 26px
+         control taller than its own text — a false alarm that hid a real one. */
+      var rows = {}, nrows = 0;
+      for (var bi = 0; bi < bar.children.length; bi++) {
+        var bc = bar.children[bi];
+        if (win.getComputedStyle(bc).display === 'none') continue;
+        var bt = Math.round(box(bc).top / 6) * 6;        /* 6px tolerance */
+        if (!rows[bt]) { rows[bt] = 1; nrows++; }
+      }
+      if (nrows > 1) add('wrapped', '.obar-in', nrows + ' lines');
     }
     var row = doc.querySelector('.fscroll');
     if (row) {
@@ -121,6 +149,79 @@
           if (!tops[t]) { tops[t] = 1; n++; }
         }
         if (n > 1) add('wrapped', '.fscroll', n + ' rows of pills');
+      }
+    }
+
+    /* --- nothing that carries words may sit on top of anything else that
+           does. The first pass only compared the header's own children, so it
+           could not see the offer bar's dismiss — position:absolute, therefore
+           invisible to the centred sentence beside it — landing on top of
+           "Voir l'offre" in French. Comparing every text leaf catches that
+           class of fault wherever it happens, in any language. --- */
+    var leaves = [], nodes = doc.querySelectorAll('body *');
+    for (var li = 0; li < nodes.length; li++) {
+      var le = nodes[li];
+      if (le.children.length) continue;                    /* leaves only */
+      var lt = (le.textContent || '').trim();
+      if (!lt) continue;
+      var ls = win.getComputedStyle(le);
+      if (ls.display === 'none' || ls.visibility === 'hidden' || ls.opacity === '0') continue;
+      /* What the reader can actually see, not what the element claims. A
+         collapsed FAQ answer still has a box; it is just clipped to nothing by
+         an ancestor with overflow:hidden, and comparing raw boxes reported it
+         as lying on top of the question above it. */
+      /* Two rects, two jobs. visible() answers "is any of this on screen",
+         because a collapsed panel still has a box. The RAW box answers "where
+         is it", because clipping two elements to a shared scrolling ancestor
+         gives them the same rect and makes strangers look like they are lying
+         on top of each other — which is what reported half the uniforms page. */
+      var vis = visible(le, win);
+      if (!vis || vis.width < 2 || vis.height < 2) continue;
+      var lb = box(le);
+      if (lb.width < 2 || lb.height < 2) continue;
+      if (lb.left < -500 || lb.top < -500) continue;        /* visually hidden */
+      /* Overlays are meant to cover the page. */
+      if (le.closest('.drawer, .dscrim, .opop, .opop-veil, .hd-sheet, .consent-bar, .cc-wrap')) continue;
+      /* A closed <details> still hands out boxes for content it never paints —
+         Chrome keeps the layout and skips the painting — so every collapsed FAQ
+         answer looked like it was lying across the question below it. The
+         summary is the part that IS painted. */
+      /* EVERY details ancestor, not the nearest. The uniforms FAQ nests open
+         <details> items inside a closed "Show 6 more questions" — the inner one
+         is open, so checking only the nearest said "painted" about six answers
+         that are not. */
+      var det = le.closest('details'), closed = false;
+      while (det) {
+        if (!det.open) {
+          var sm = det.querySelector(':scope > summary');
+          if (!sm || !sm.contains(le)) { closed = true; break; }
+        }
+        det = det.parentElement ? det.parentElement.closest('details') : null;
+      }
+      if (closed) continue;
+      leaves.push({ el: le, b: lb, t: lt });
+    }
+    for (var x1 = 0; x1 < leaves.length; x1++) {
+      for (var x2 = x1 + 1; x2 < leaves.length; x2++) {
+        var A = leaves[x1], B = leaves[x2];
+        if (A.el.contains(B.el) || B.el.contains(A.el)) continue;
+        /* a real overlap, not a shared edge */
+        var ox = Math.min(A.b.right, B.b.right) - Math.max(A.b.left, B.b.left);
+        var oy = Math.min(A.b.bottom, B.b.bottom) - Math.max(A.b.top, B.b.top);
+        if (ox <= 1 || oy <= 1) continue;
+        /* Proportional, not absolute. Two paragraphs whose boxes share six
+           pixels of line-height are not on top of each other; a chevron with
+           half of itself under a close button is. Measured against the
+           SMALLER of the two, because that is the one being covered. */
+        var small = Math.min(A.b.width * A.b.height, B.b.width * B.b.height);
+        if (!small || (ox * oy) / small < 0.3) continue;
+        var key = 'x' + name(A.el) + name(B.el);
+        if (seen[key]) continue;
+        seen[key] = 1;
+        add('collision', name(A.el) + ' / ' + name(B.el),
+          Math.round(ox) + '×' + Math.round(oy) + 'px = '
+          + Math.round((ox * oy) / small * 100) + '% of the smaller — "'
+          + A.t.slice(0, 16) + '" / "' + B.t.slice(0, 16) + '"');
       }
     }
 
