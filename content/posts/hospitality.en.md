@@ -4,17 +4,17 @@
   "slug": "custom-hospitality-uniforms",
   "title": "Custom hotel uniforms: design & durability",
   "headline": "Custom uniforms for hospitality: design and durability in hotel workwear",
-  "description": "Discover how at METT Barcelona we designed bespoke uniforms in line with the hotel concept, using durable fabrics for functional hotel uniforms.",
+  "description": "Discover how we designed bespoke uniforms for a five-star hotel in Barcelona, in line with the interior concept, using durable fabrics built for daily service.",
   "kicker": "Hospitality case",
   "published": "2026-03-10",
   "modified": "2026-03-10",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "METT Barcelona luxury hotel exterior",
+  "coverAlt": "Exterior of a five-star luxury hotel in Barcelona",
   "coverCaption": ""
 }
 ---
-In a project carried out at METT Barcelona, a new 5-star luxury hotel, our studio created a complete uniform system for the entire team. We began with the architectural renders and the interior design concept for the bar, restaurant, and spa spaces. The uniforms were developed to sit in harmony with the hotel’s colour palettes and materials.
+In a project carried out for a new 5-star luxury hotel in Barcelona, our studio created a complete uniform system for the entire team. We began with the architectural renders and the interior design concept for the bar, restaurant, and spa spaces. The uniforms were developed to sit in harmony with the hotel’s colour palettes and materials.
 
 The Food & Beverage manager needed distinct outfits for more than 20 team members, as well as for management, according to their different roles. We therefore designed bespoke garments for front-of-house, back-of-house, and management. Fabrics were selected for performance, mainly organic cotton combined with technical fibres to ensure comfort, ease of care, and long life.
 
@@ -24,7 +24,7 @@ All garments were designed, prototyped, and produced in Barcelona, 315 items in 
 
 We treated each garment as an extension of the hotel’s brand and architecture. In hospitality, the uniform is one of the first signals perceived by the guest and immediately communicates tone, quality, and service positioning.
 
-The design choices grew out of the METT interiors. The spa team wears soft green tones derived from the decoration, while the bar and restaurant use warm neutrals and deep blues that match the interior finishes.
+The design choices grew out of the hotel interiors. The spa team wears soft green tones derived from the decoration, while the bar and restaurant use warm neutrals and deep blues that match the interior finishes.
 
 We worked with the interior team to translate some material details into the wardrobe. Copper elements used in the bar area, for example, became finishing details on certain jackets. Premium fabrics and resistant dyes help preserve the original appearance even under intensive use.
 
@@ -62,6 +62,6 @@ In hospitality, the absence of complaints about fit and functionality is often t
 
 ## Conclusion
 
-The METT Barcelona programme shows that hotel uniforms perform best when they are treated as an integrated system rather than isolated garments. By aligning design with the hotel’s identity, choosing fabrics suited to intensive use, differentiating solutions by role, and simplifying maintenance, the uniform supports both operations and brand perception at the same time.
+The programme shows that hotel uniforms perform best when they are treated as an integrated system rather than isolated garments. By aligning design with the hotel’s identity, choosing fabrics suited to intensive use, differentiating solutions by role, and simplifying maintenance, the uniform supports both operations and brand perception at the same time.
 
 For hospitality teams, the key point is to invest from the start in material quality and function-led design logic. The benefits emerge over time: greater durability, stronger staff confidence, and a better guest experience. You can also explore our process and selected projects.

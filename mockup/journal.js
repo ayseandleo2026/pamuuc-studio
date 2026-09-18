@@ -590,13 +590,13 @@ const JOURNAL = [
  {
   "id": "custom-hospitality-uniforms",
   "title": "Custom hotel uniforms: design & durability",
-  "lede": "Discover how at METT Barcelona we designed bespoke uniforms in line with the hotel concept, using durable fabrics for functional hotel uniforms.",
+  "lede": "Discover how we designed bespoke uniforms for a five-star hotel in Barcelona, in line with the hotel concept, using durable fabrics for functional hotel uniforms.",
   "date": "2026-03-10",
   "cat": "Custom uniforms",
   "sector": "Hotels and restaurants",
   "takeaways": [
    "We treated each garment as an extension of the hotel’s brand and architecture. In hospitality, the uniform is one of the first signals perceived by the guest and immediately communicates tone, quality, and service positioning.",
-   "The design choices grew out of the METT interiors. The spa team wears soft green tones derived from the decoration, while the bar and restaurant use warm neutrals and deep blues that match the interior finishes.",
+   "The design choices grew out of the hotel interiors. The spa team wears soft green tones derived from the decoration, while the bar and restaurant use warm neutrals and deep blues that match the interior finishes.",
    "We worked with the interior team to translate some material details into the wardrobe. Copper elements used in the bar area, for example, became finishing details on certain jackets. Premium fabrics and resistant dyes help preserve the original appearance even under intensive use."
   ],
   "body": [
@@ -604,7 +604,7 @@ const JOURNAL = [
     "h": "Uniforms aligned with the hotel concept",
     "p": [
      "We treated each garment as an extension of the hotel’s brand and architecture. In hospitality, the uniform is one of the first signals perceived by the guest and immediately communicates tone, quality, and service positioning.",
-     "The design choices grew out of the METT interiors. The spa team wears soft green tones derived from the decoration, while the bar and restaurant use warm neutrals and deep blues that match the interior finishes.",
+     "The design choices grew out of the hotel interiors. The spa team wears soft green tones derived from the decoration, while the bar and restaurant use warm neutrals and deep blues that match the interior finishes.",
      "We worked with the interior team to translate some material details into the wardrobe. Copper elements used in the bar area, for example, became finishing details on certain jackets. Premium fabrics and resistant dyes help preserve the original appearance even under intensive use."
     ],
     "li": []
@@ -648,14 +648,14 @@ const JOURNAL = [
    {
     "h": "Conclusion",
     "p": [
-     "The METT Barcelona programme shows that hotel uniforms perform best when they are treated as an integrated system rather than isolated garments. By aligning design with the hotel’s identity, choosing fabrics suited to intensive use, differentiating solutions by role, and simplifying maintenance, the uniform supports both operations and brand perception at the same time.",
+     "The programme shows that hotel uniforms perform best when they are treated as an integrated system rather than isolated garments. By aligning design with the hotel’s identity, choosing fabrics suited to intensive use, differentiating solutions by role, and simplifying maintenance, the uniform supports both operations and brand perception at the same time.",
      "For hospitality teams, the key point is to invest from the start in material quality and function-led design logic. The benefits emerge over time: greater durability, stronger staff confidence, and a better guest experience. You can also explore our process and selected projects."
     ],
     "li": []
    }
   ],
   "key": "hospitality",
-  "alt": "METT Barcelona luxury hotel exterior",
+  "alt": "Exterior of a five-star luxury hotel in Barcelona",
   "cap": ""
  },
  {

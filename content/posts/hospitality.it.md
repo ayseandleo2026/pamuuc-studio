@@ -4,17 +4,17 @@
   "slug": "divise-hospitalita-personalizzate",
   "title": "Divise alberghiere: design e durata",
   "headline": "Divise su misura per l’ospitalità: design e durata nell’abbigliamento alberghiero",
-  "description": "Scopri come per METT Barcelona abbiamo progettato divise su misura in armonia con l’identità dell’hotel, scegliendo tessuti resistenti per un uso quotidiano intenso.",
+  "description": "Divise su misura per un hotel a cinque stelle a Barcellona: design in armonia con gli interni e tessuti resistenti per un uso quotidiano intenso.",
   "kicker": "Caso ospitalità",
   "published": "2026-03-10",
   "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "Esterno dell’hotel di lusso METT Barcelona",
+  "coverAlt": "Esterno di un hotel di lusso a cinque stelle a Barcellona",
   "coverCaption": ""
 }
 ---
-Per METT Barcelona, un nuovo hotel di lusso a 5 stelle, il nostro studio ha realizzato un sistema completo di divise per tutto il personale. Siamo partiti dai rendering architettonici e dal progetto d’interni degli spazi bar, ristorante e spa. Le divise sono state sviluppate per armonizzarsi con la palette cromatica e i materiali dell’hotel.
+Per un nuovo hotel di lusso a 5 stelle a Barcellona, il nostro studio ha realizzato un sistema completo di divise per tutto il personale. Siamo partiti dai rendering architettonici e dal progetto d’interni degli spazi bar, ristorante e spa. Le divise sono state sviluppate per armonizzarsi con la palette cromatica e i materiali dell’hotel.
 
 Il responsabile della ristorazione richiedeva divise distinte per oltre 20 persone, oltre alla direzione, in funzione dei diversi ruoli. Abbiamo quindi progettato capi su misura per le aree a contatto con gli ospiti, i reparti interni e la direzione. I tessuti sono stati selezionati in base alle prestazioni: soprattutto cotone biologico combinato con fibre tecniche per assicurare comfort, facilità di manutenzione e lunga durata.
 
@@ -24,7 +24,7 @@ Tutti i capi sono stati disegnati, prototipati e prodotti a Barcellona, per un t
 
 Abbiamo trattato ogni capo come un’estensione del marchio e dell’architettura dell’hotel. Nel settore dell’ospitalità, la divisa è uno dei primi segnali percepiti dall’ospite e comunica subito tono, qualità e posizionamento del servizio.
 
-Le scelte progettuali sono nate dagli ambienti del METT. Il personale della spa indossa delicate tonalità di verde ispirate agli interni, mentre bar e ristorante utilizzano toni neutri caldi e blu profondi, in armonia con le finiture.
+Le scelte progettuali sono nate dagli ambienti dell’hotel. Il personale della spa indossa delicate tonalità di verde ispirate agli interni, mentre bar e ristorante utilizzano toni neutri caldi e blu profondi, in armonia con le finiture.
 
 Abbiamo collaborato con il team di progettazione degli interni per tradurre alcuni dettagli materici nel guardaroba. Gli elementi in rame presenti nell’area bar, ad esempio, sono diventati finiture su alcune giacche. Tessuti di alta qualità e tinture resistenti aiutano a mantenere l’aspetto originale anche con un uso intensivo.
 
@@ -64,6 +64,6 @@ Nell’ospitalità, l’assenza di segnalazioni su vestibilità e funzionalità 
 
 ## Conclusione
 
-Il programma METT Barcelona dimostra che le divise alberghiere rendono al meglio quando sono trattate come un sistema integrato e non come capi isolati. Allineando il design all’identità dell’hotel, scegliendo tessuti adatti a un uso intensivo, differenziando le soluzioni per ruolo e semplificando la manutenzione, la divisa sostiene allo stesso tempo il lavoro quotidiano e la percezione del marchio.
+Il programma dimostra che le divise alberghiere rendono al meglio quando sono trattate come un sistema integrato e non come capi isolati. Allineando il design all’identità dell’hotel, scegliendo tessuti adatti a un uso intensivo, differenziando le soluzioni per ruolo e semplificando la manutenzione, la divisa sostiene allo stesso tempo il lavoro quotidiano e la percezione del marchio.
 
 Per le strutture ricettive, il punto chiave è investire fin dall’inizio nella qualità dei materiali e in una logica progettuale guidata dalla funzione. I benefici emergono nel tempo: maggiore durata, più fiducia da parte del personale e una migliore esperienza per l’ospite. Scopri anche il nostro processo e la selezione di progetti.

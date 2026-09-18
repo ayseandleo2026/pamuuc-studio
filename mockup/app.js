@@ -4400,8 +4400,8 @@ function pubCustom(){
    and the constraints are written from what is true of that kind of house;
    the counts and the outcomes are placeholders until Leo replaces them. */
 const CASES = [
-  {id:'mett_hotel', photo:'work1',
-   tag:'Hotel case study', title:'Custom hotel uniforms for METT Barcelona',
+  {id:'hotel_bcn', photo:'work1',
+   tag:'Hotel case study', title:'Custom uniforms for a five-star hotel in Barcelona',
    p:'A complete hotel wardrobe inspired by the interiors, with uniforms for reception, restaurant, management and spa teams. Designed, sampled and made in Barcelona.',
    post:'custom-hospitality-uniforms', link:'Read the hotel case study',
    alt:'A modernista facade in central Barcelona, the kind of property these uniform programmes are made for'},

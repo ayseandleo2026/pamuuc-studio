@@ -10,11 +10,11 @@
   "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "Außenansicht des Luxushotels METT Barcelona",
+  "coverAlt": "Außenansicht eines Fünf-Sterne-Luxushotels in Barcelona",
   "coverCaption": ""
 }
 ---
-Für METT Barcelona, ein neues 5-Sterne-Luxushotel, hat unser Studio ein vollständiges Uniformsystem für das gesamte Team entwickelt. Ausgangspunkt waren die Architekturvisualisierungen und das Innenraumkonzept der Bar-, Restaurant- und Spa-Bereiche. Die Uniformen wurden so entwickelt, dass sie sich harmonisch in die Farbpaletten und Materialien des Hotels einfügen.
+Für ein neues 5-Sterne-Luxushotel in Barcelona hat unser Studio ein vollständiges Uniformsystem für das gesamte Team entwickelt. Ausgangspunkt waren die Architekturvisualisierungen und das Innenraumkonzept der Bar-, Restaurant- und Spa-Bereiche. Die Uniformen wurden so entwickelt, dass sie sich harmonisch in die Farbpaletten und Materialien des Hotels einfügen.
 
 Der Leiter des Gastronomiebereichs benötigte unterschiedliche Bekleidungslösungen für mehr als 20 Teammitglieder sowie für die Leitung, abgestimmt auf die jeweiligen Rollen. Daher entwickelten wir maßgeschneiderte Kleidungsstücke für den Gästekontakt, die internen Bereiche und die Leitung. Die Stoffe wurden nach ihren Eigenschaften ausgewählt, hauptsächlich Bio-Baumwolle in Kombination mit technischen Fasern, um Komfort, Pflegeleichtigkeit und Langlebigkeit sicherzustellen.
 
@@ -24,7 +24,7 @@ Alle Kleidungsstücke wurden in Barcelona entworfen, prototypisch entwickelt und
 
 Wir haben jedes Kleidungsstück als Erweiterung der Marke und Architektur des Hotels behandelt. In der Hotellerie ist die Uniform eines der ersten Signale, die Gäste wahrnehmen, und kommuniziert sofort Tonalität, Qualität und Positionierung des Services.
 
-Die Gestaltungsentscheidungen entstanden aus den Innenräumen des METT. Das Spa-Team trägt sanfte Grüntöne, die sich aus dem Dekor ableiten, während Bar und Restaurant mit warmen Neutraltönen und tiefen Blaunuancen arbeiten, die zu den Innenausstattungen passen.
+Die Gestaltungsentscheidungen entstanden aus den Innenräumen des Hotels. Das Spa-Team trägt sanfte Grüntöne, die sich aus dem Dekor ableiten, während Bar und Restaurant mit warmen Neutraltönen und tiefen Blaunuancen arbeiten, die zu den Innenausstattungen passen.
 
 Gemeinsam mit dem Innenarchitekturteam haben wir einige Materialdetails in die Garderobe übersetzt. Kupferelemente aus dem Barbereich wurden zum Beispiel zu besonderen Verarbeitungsdetails an ausgewählten Jacken. Hochwertige Stoffe und beständige Färbungen helfen dabei, das ursprüngliche Erscheinungsbild auch bei intensiver Nutzung zu erhalten.
 
@@ -62,6 +62,6 @@ In der Hotellerie ist das Ausbleiben von Beschwerden über Passform und Funktion
 
 ## Fazit
 
-Das Programm für METT Barcelona zeigt, dass Hoteluniformen dann am besten funktionieren, wenn sie als integriertes System und nicht als einzelne Kleidungsstücke behandelt werden. Durch die Abstimmung von Design und Hotelidentität, die Auswahl für intensive Nutzung geeigneter Stoffe, die Differenzierung nach Rollen und die Vereinfachung der Pflege unterstützt die Uniform gleichzeitig Betrieb und Markenwahrnehmung.
+Das Programm zeigt, dass Hoteluniformen dann am besten funktionieren, wenn sie als integriertes System und nicht als einzelne Kleidungsstücke behandelt werden. Durch die Abstimmung von Design und Hotelidentität, die Auswahl für intensive Nutzung geeigneter Stoffe, die Differenzierung nach Rollen und die Vereinfachung der Pflege unterstützt die Uniform gleichzeitig Betrieb und Markenwahrnehmung.
 
 Für Teams in der Hotellerie ist der entscheidende Punkt, von Anfang an in Materialqualität und funktionsgeleitete Designlogik zu investieren. Die Vorteile zeigen sich mit der Zeit: größere Haltbarkeit, mehr Vertrauen im Team und ein besseres Gästeerlebnis. Sie können auch unseren Prozess und ausgewählte Projekte ansehen.

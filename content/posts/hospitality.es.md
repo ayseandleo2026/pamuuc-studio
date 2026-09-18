@@ -4,17 +4,17 @@
   "slug": "uniformes-hosteleria-personalizados",
   "title": "Uniformes de hostelería: diseño y durabilidad",
   "headline": "Uniformes a medida para hostelería: diseño y durabilidad de la ropa de trabajo hotelera",
-  "description": "Descubre cómo en METT Barcelona diseñamos uniformes a medida en sintonía con el concepto del hotel, utilizando tejidos duraderos para uniformes hoteleros funcionales.",
+  "description": "Uniformes a medida para un hotel de cinco estrellas en Barcelona: diseño en sintonía con el interiorismo y tejidos duraderos para el uso diario.",
   "kicker": "Caso de hostelería",
   "published": "2026-03-10",
   "modified": "2026-09-13",
   "author": "Leonardo Gobbato",
   "cover": "custom-hospitality-uniforms",
-  "coverAlt": "Exterior del hotel de lujo METT Barcelona",
+  "coverAlt": "Exterior de un hotel de lujo de cinco estrellas en Barcelona",
   "coverCaption": ""
 }
 ---
-En un proyecto realizado en METT Barcelona, un nuevo hotel de lujo de 5 estrellas, nuestro estudio creó un sistema completo de uniformes para todo el equipo. Partimos de los renders arquitectónicos y del concepto de interiorismo de los espacios de bar, restaurante y spa. Los uniformes se desarrollaron para integrarse en armonía con las paletas cromáticas y los materiales del hotel.
+En un proyecto realizado para un nuevo hotel de lujo de 5 estrellas en Barcelona, nuestro estudio creó un sistema completo de uniformes para todo el equipo. Partimos de los renders arquitectónicos y del concepto de interiorismo de los espacios de bar, restaurante y spa. Los uniformes se desarrollaron para integrarse en armonía con las paletas cromáticas y los materiales del hotel.
 
 El responsable de restauración necesitaba conjuntos diferenciados para más de 20 miembros del equipo, además de dirección, según sus distintos roles. Por ello diseñamos prendas a medida para sala, operativa interna y dirección. Los tejidos se seleccionaron por rendimiento, principalmente algodón orgánico combinado con fibras técnicas para asegurar comodidad, facilidad de cuidado y una larga vida útil.
 
@@ -24,7 +24,7 @@ Todas las prendas se diseñaron, prototiparon y produjeron en Barcelona, 315 uni
 
 Tratamos cada prenda como una extensión de la marca y la arquitectura del hotel. En hostelería, el uniforme es una de las primeras señales que percibe el huésped y comunica de inmediato tono, calidad y posicionamiento del servicio.
 
-Las decisiones de diseño nacieron de los interiores de METT. El equipo del spa lleva tonos verdes suaves derivados de la decoración, mientras que el bar y el restaurante utilizan neutros cálidos y azules profundos que encajan con los acabados interiores.
+Las decisiones de diseño nacieron de los interiores del hotel. El equipo del spa lleva tonos verdes suaves derivados de la decoración, mientras que el bar y el restaurante utilizan neutros cálidos y azules profundos que encajan con los acabados interiores.
 
 Trabajamos con el equipo de interiorismo para trasladar algunos detalles materiales al vestuario. Los elementos de cobre presentes en la zona del bar, por ejemplo, se convirtieron en detalles de acabado en determinadas chaquetas. Los tejidos premium y los tintes resistentes ayudan a preservar el aspecto original incluso bajo un uso intensivo.
 
@@ -62,6 +62,6 @@ En hostelería, la ausencia de quejas sobre ajuste y funcionalidad suele ser la 
 
 ## Conclusión
 
-El programa METT Barcelona demuestra que los uniformes hoteleros funcionan mejor cuando se tratan como un sistema integrado y no como prendas aisladas. Al alinear el diseño con la identidad del hotel, elegir tejidos adecuados para un uso intensivo, diferenciar soluciones por rol y simplificar el mantenimiento, el uniforme apoya al mismo tiempo la operativa y la percepción de marca.
+El programa demuestra que los uniformes hoteleros funcionan mejor cuando se tratan como un sistema integrado y no como prendas aisladas. Al alinear el diseño con la identidad del hotel, elegir tejidos adecuados para un uso intensivo, diferenciar soluciones por rol y simplificar el mantenimiento, el uniforme apoya al mismo tiempo la operativa y la percepción de marca.
 
 Para los equipos de hostelería, el punto clave es invertir desde el principio en calidad de materiales y en una lógica de diseño guiada por la función. Los beneficios aparecen con el tiempo: mayor durabilidad, más confianza del personal y una mejor experiencia para el huésped. También puede explorar nuestro proceso y nuestros proyectos seleccionados.
