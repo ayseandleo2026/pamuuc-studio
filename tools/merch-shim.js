@@ -409,6 +409,28 @@
     }
   });
 
+  /* The toasts are drawn outside #root, so neither pass ever reached them.
+     paintToasts() appends #toasts to <body>, the MutationObserver below
+     watches #root, and five of the six call sites read `render(); toast(…)` —
+     so the translation pass had already run by the time the message painted.
+     A Spanish visitor clicked "Añadir al presupuesto" and was told "Added to
+     your quote".
+
+     The one that did work, the artwork toast, is written the other way round —
+     toast(…) then render() — which is what identified the cause.
+
+     Same mechanism as render() below: a top-level function declaration in a
+     classic script is a property of the global object, so it can be replaced
+     without editing app.js. */
+  if (typeof paintToasts === 'function') {
+    var innerPaint = paintToasts;
+    paintToasts = function () {
+      var out = innerPaint.apply(this, arguments);
+      try { retext(document.getElementById('toasts')); } catch (e) {}
+      return out;
+    };
+  }
+
   /* Both corrections belong after every draw, not just the first, so render
      itself is wrapped. It is a top-level function declaration in a classic
      script, which makes it a global property and therefore replaceable. */
