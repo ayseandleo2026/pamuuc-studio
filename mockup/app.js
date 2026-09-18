@@ -12971,8 +12971,14 @@ function render(){
 
   $('root').innerHTML = html + surfaceSwitch();
   try{ applySeo(ROUTE); }catch(err){}
-  /* the fixed action bar needs the body to reserve room for it */
+  /* The fixed action bar needs the body to reserve room for it, and the room
+     it needs is not a constant: the figure and the button wrap on a narrow
+     screen, and they wrap differently in every language. At 320 in Italian the
+     bar stands 119px against the 96 the stylesheet reserved, so the last 23px
+     of the page could never be scrolled clear of it. Measured after the paint
+     rather than guessed, with the stylesheet's value as the fallback. */
   document.body.classList.toggle('has-bar', html.indexOf('class="buybar') > -1);
+  measureBarSoon();
   /* the public site has no bottom mobile nav, so the surface switcher can stay
      at the bottom there instead of covering the top of a hero */
   document.body.classList.toggle('is-public', r.surface === 'public');
@@ -13124,6 +13130,49 @@ function paintToasts(){
   if(!el){ el = document.createElement('div'); el.id = 'toasts'; el.className = 'toasts'; document.body.appendChild(el); }
   el.innerHTML = TOASTS.map(t => `<div class="toast"><div class="toast-t">${esc(t.title)}</div>
     ${t.detail?`<div class="toast-d">${esc(t.detail)}</div>`:''}</div>`).join('');
+}
+
+/* The action bar's real height, published to the stylesheet. Read after the
+   paint and again whenever the viewport changes, because a resize rewraps it. */
+let BAR_RO = null;
+function measureBar(){
+  /* The builder runs this file in a stub DOM that has no layout and no
+     CSSStyleDeclaration, so every step here is guarded: a measurement is a
+     browser-only thing and the page must still render without one. */
+  try {
+    const st = document.documentElement && document.documentElement.style;
+    if(!st || typeof st.setProperty !== 'function') return;
+    const bar = document.querySelector('.buybar');
+    const box = bar && typeof bar.getBoundingClientRect === 'function'
+      ? bar.getBoundingClientRect() : null;
+    const want = box && box.height ? Math.ceil(box.height) + 'px' : '';
+    /* Only on a change, because writing --barh moves the body's padding, which
+       can move the bar, which would call this again. */
+    if(st.getPropertyValue('--barh') !== want) st.setProperty('--barh', want);
+    /* One reading is not enough: the bar rewraps after its own content settles
+       — the price arriving, a webfont landing, a longer word in another
+       language — and the first measurement caught it at 101px when it came to
+       rest at 119. Watch it instead of trusting the reading. */
+    if(bar && typeof ResizeObserver === 'function'){
+      if(!BAR_RO) BAR_RO = new ResizeObserver(() => measureBar());
+      BAR_RO.disconnect();
+      BAR_RO.observe(bar);
+    }
+  } catch (e) {}
+}
+/* The reading taken immediately after innerHTML is of a bar that has not
+   finished laying out — it came back 101px for a bar that settles at 119, and
+   the observer above did not fire for that first settle. A frame later the
+   layout is done, so the measurement is taken again there. The write is
+   change-guarded, so this costs nothing once the value is right. */
+function measureBarSoon(){
+  try {
+    measureBar();
+    if(typeof requestAnimationFrame === 'function') requestAnimationFrame(measureBar);
+  } catch (e) {}
+}
+if(typeof addEventListener === 'function'){
+  addEventListener('resize', () => { try { measureBar(); } catch(e){} });
 }
 
 function paintModal(){

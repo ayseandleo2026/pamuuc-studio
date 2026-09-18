@@ -758,8 +758,15 @@ textarea.inp{min-height:84px;resize:vertical;line-height:1.5}
 
 /* placement cards */
 .place-card{border:var(--card-border);background:var(--surface);margin-bottom:var(--sp-3)}
-.place-card-h{display:flex;align-items:center;gap:var(--sp-2);padding:var(--sp-3);
+/* The second placement onward gets this header row, and it was a nowrap flex
+   line: badge, the position select on flex:1 with no floor, the cost, and a
+   Remove button whose word is longer in every language but English. At 320 the
+   select was left 45px — "Davanti" was not merely truncated, it was invisible.
+   The row wraps and the select keeps a floor, so the button drops to its own
+   line rather than crushing the control it sits beside. */
+.place-card-h{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-2);padding:var(--sp-3);
   border-bottom:1px solid var(--line);background:var(--surface-2)}
+.place-card-h select{min-width:11ch}
 .place-badge{width:22px;height:22px;border-radius:50%;background:var(--navy);color:var(--paper);
   display:flex;align-items:center;justify-content:center;font-size:var(--fs-micro);font-weight:700;flex:none}
 .place-opts{padding:var(--sp-4);display:grid;gap:0}
@@ -3181,7 +3188,11 @@ main[data-page="product"] .pdp-cfg .btn--primary{margin-top:var(--sp-6)!importan
 /* The prototype's surface switcher lives at the bottom centre too, so on a
    product page it steps above the action capsule rather than over it. */
 body.is-public.has-bar .switch{bottom:calc(var(--sp-4) + 72px)}
-body.has-bar{padding-bottom:96px}
+/* This flat 96px sat after the @media (max-width:1080px) rule that reserves
+   132, at the same specificity, so it won — the public site kept 96px at every
+   width, which is where the shortfall came from. --barh is the bar's measured
+   height; the 96 stays only as the value before the first measurement. */
+body.has-bar{padding-bottom:calc(var(--barh, 96px) + var(--sp-3))}
 
 /* A <picture> has to fill its media box exactly as a bare <img> would. */
 .media picture{display:block;width:100%;height:100%}
