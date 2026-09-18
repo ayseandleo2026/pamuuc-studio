@@ -5876,6 +5876,11 @@ function garmentCardShot(m){
   return src ? {src: src, colour: pick.colour} : null;
 }
 
+/* No composite aria-label. It joined the title and the product name with an
+   em dash, and neither pass splits on one — so a screen reader heard the title
+   in Spanish and "Custom T-Shirt" in English, while the card's own meta line
+   said "Camiseta personalizada" two lines below. The button's content is its
+   name, and every part of that content is translated. */
 function gbCard(p, m){
   const cols = (m.colours || []).filter(c => COLOURS[c]);
   const title = gbTitle(p, m);
@@ -5886,8 +5891,7 @@ function gbCard(p, m){
   const band = bandOf(p.id, m.w);
   const swatch = cols.slice(0, 5);
   return `
-  <button class="gb-c" data-go="public:product:${p.id}:${esc(m.sku)}"
-    aria-label="${esc(title + ' — ' + p.name)}">
+  <button class="gb-c" data-go="public:product:${p.id}:${esc(m.sku)}">
     <span class="gb-im media">
       ${shot
         ? `<img src="${esc(shot.src)}" alt="" loading="lazy" decoding="async">`
@@ -12736,7 +12740,7 @@ function assistedEnquiry(kind, fields){
           queue with the questions we still need to ask marked against it.</div></div></div>
       <p class="t-sm muted">If a uniform project is what you need, the nine topic brief asks the questions we
         would ask on a first call, and it is faster than a conversation that has to cover them anyway.</p></div>`,
-    actions:`<button class="btn btn--quiet" data-act="closeModal">Close</button>
+    foot:`<button class="btn btn--quiet" data-act="closeModal">Close</button>
       <button class="btn btn--primary" data-go="public:form">Start your project brief</button>`});
 }
 
@@ -14375,11 +14379,19 @@ document.addEventListener('click', (e) => {
           </div>
           <p class="t-xs muted">Any chargeable design work is scoped and approved before it starts. We do not
             offer free original design or unlimited revisions.</p></div>`,
-        actions:`<button class="btn btn--quiet" data-act="closeModal">Close</button>
+        foot:`<button class="btn btn--quiet" data-act="closeModal">Close</button>
           <button class="btn btn--primary" data-go="public:merchhelp">Describe what you need</button>`});
       return; }
-    if(a === 'askEarlier'){ modalStub('Ask about an earlier date',
-      'An earlier date is assessed against production capacity and material availability for your configuration, so it is a question rather than an option to select. Add the date you need to your quote request and we will answer it with the quote.'); return; }
+    /* This was a modalStub, so clicking "Need it by a date?" on any of fifty
+       product pages answered a customer with "Specified, not built in this
+       prototype" — internal scaffolding, in English, on a Spanish page. The
+       copy underneath it was always a real answer; it just needed to stop
+       calling itself unbuilt. */
+    if(a === 'askEarlier'){ openModal({
+      title:'Ask about an earlier date',
+      body:`<p class="t-sm">An earlier date is assessed against production capacity and material availability for your configuration, so it is a question rather than an option to select. Add the date you need to your quote request and we will answer it with the quote.</p>`,
+      foot:`<button class="btn btn--primary" data-act="closeModal">Understood</button>`});
+      return; }
     if(a === 'qRemove'){
       const l = (UI.quote || [])[+d.i]; if(!l) return;
       UI.quote.splice(+d.i, 1); render();

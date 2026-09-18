@@ -461,6 +461,20 @@
     };
   }
 
+  /* The modal has the same shape of fault as the toasts, and it was found the
+     same way: paintModal() appends #modal to <body>, which the observer below
+     does not watch, so a Spanish visitor asking about an earlier delivery date
+     got the whole answer in English. Wrapped rather than moved, because where
+     the modal is mounted is app.js's business. */
+  if (typeof paintModal === 'function') {
+    var innerModal = paintModal;
+    paintModal = function () {
+      var out = innerModal.apply(this, arguments);
+      try { retext(document.getElementById('modal')); } catch (e) {}
+      return out;
+    };
+  }
+
   /* Both corrections belong after every draw, not just the first, so render
      itself is wrapped. It is a top-level function declaration in a classic
      script, which makes it a global property and therefore replaceable. */

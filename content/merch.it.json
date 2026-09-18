@@ -332,6 +332,58 @@
   [
    "^Show all (\\d+) options$",
    "Vedi tutte le $1 opzioni"
+  ],
+  [
+   "^Showing (\\d+) of (\\d+)$",
+   "Mostrati $1 di $2"
+  ],
+  [
+   "^Showing (\\d+) of (\\d+) · (\\d+) in the catalogue$",
+   "Mostrati $1 di $2 · $3 a catalogo"
+  ],
+  [
+   "^Results for “(.+)”$",
+   "Risultati per “$1”"
+  ],
+  [
+   "^(\\d+) products? match this term\\. Search covers product names, references and categories\\.$",
+   "$1 prodotti corrispondono a questo termine. La ricerca copre nomi di prodotto, referenze e categorie."
+  ],
+  [
+   "^We couldn’t find a match for “(.+)”\\.$",
+   "Nessun risultato per “$1”."
+  ],
+  [
+   "^Colours — (\\d+)$",
+   "Colori — $1"
+  ],
+  [
+   "^\\+ Add placement (\\d+) of (\\d+)$",
+   "+ Aggiungere posizione $1 di $2"
+  ],
+  [
+   "^Where placement (\\d+) goes$",
+   "Dove va il posizionamento $1"
+  ],
+  [
+   "^Quantity in size (.+)$",
+   "Quantità nella taglia $1"
+  ],
+  [
+   "^Quantity for (.+)$",
+   "Quantità per $1"
+  ],
+  [
+   "^Remove (.+) from your quote$",
+   "Rimuovere $1 dal preventivo"
+  ],
+  [
+   "^(\\d+) of (\\d+) garments$",
+   "$1 di $2 capi"
+  ],
+  [
+   "^Your quote request \\((\\d+)\\)$",
+   "La sua richiesta di preventivo ($1)"
   ]
  ],
  "copy": {
@@ -481,7 +533,6 @@
   "1 placement · one included": "1 posizionamento · uno incluso",
   "Request help with this item": "Chiedi aiuto per questo articolo",
   "up to 99 mm": "fino a 99 mm",
-  "Where placement 1 goes": "Dove va il posizionamento 1",
   "Add to quote": "Aggiungere al preventivo",
   "Custom Padded Jacket": "Giacca imbottita personalizzata",
   "Custom Softshell Jacket": "Giacca softshell personalizzata",
@@ -533,7 +584,6 @@
   "Screen print": "Serigrafia",
   "Guidance": "Indicazioni",
   "8 products in accessories, on the same basis.": "8 prodotti in accessori, sulla stessa base.",
-  "+ Add placement 2 of 3": "+ Aggiungere posizione 2 di 3",
   "Build yours · 3 styles": "Componga la sua · 3 modelli",
   "Build yours · 4 weights": "Componga la sua · 4 grammature",
   "More in accessories": "Altro in accessori",
@@ -664,7 +714,6 @@
   "Interlock · Panel washed": "Interlock · Pannelli lavati",
   "Read our Privacy Notice.": "Consulti l’informativa privacy.",
   "Show 7 more questions": "Altre 7 domande",
-  "Showing 10 of 10": "10 di 10 prodotti",
   "Build your accessory": "Scelga il suo accessorio",
   "Build your jacket": "Scelga la sua giacca",
   "Company or organisation": "Azienda o organizzazione",
@@ -1233,12 +1282,6 @@
   "Restaurants and food service": "Ristoranti e bar",
   "Retail and guest services": "Retail e accoglienza",
   "Short-sleeve · 210 g/m²": "Maniche corte · 210 g/m²",
-  "Showing 13 of 13": "13 di 13 prodotti",
-  "Showing 24 of 28": "24 di 28 prodotti",
-  "Showing 24 of 31": "24 di 31 prodotti",
-  "Showing 24 of 36": "24 di 36 prodotti",
-  "Showing 24 of 50": "24 di 50 prodotti",
-  "Showing 6 of 6": "6 di 6 prodotti",
   "Size or colour limits": "Limitazioni di taglia o colore",
   "Sizes 0-3 m/56-62cm–18-24 m/86-92cm": "Taglie 0-3 m/56-62cm–18-24 m/86-92cm",
   "Two services, one workshop.": "Due servizi, un laboratorio.",
@@ -1589,7 +1632,51 @@
   "Finish": "Finitura",
   "Quarter zip": "Quarto zip",
   "Finish or detail": "Finitura o dettaglio",
-  "Fabric": "Tessuto"
+  "Fabric": "Tessuto",
+  "Answer the four above and the rest of the page opens against that cloth — each one is a different reference, with its own colours, sizes and price.": "Risponda alle quattro domande qui sopra e il resto della pagina si apre su quel tessuto: ognuno è un riferimento diverso, con i suoi colori, le sue taglie e il suo prezzo.",
+  "Ask about an earlier date": "Chiedere una data anticipata",
+  "An earlier date is assessed against production capacity and material availability for your configuration, so it is a question rather than an option to select. Add the date you need to your quote request and we will answer it with the quote.": "Una data anticipata si valuta in base alla capacità produttiva e alla disponibilità dei materiali per la sua configurazione: è quindi una domanda, non un’opzione da selezionare. Aggiunga la data che le serve alla richiesta di preventivo e le risponderemo insieme al preventivo.",
+  "Understood": "Ho capito",
+  "Max colours": "Colori max",
+  "No decoration limits recorded for this product.": "Nessun limite di decorazione registrato per questo prodotto.",
+  "Maximums are the printable area, not a recommendation. We proof every placement before production.": "I massimi indicano l’area stampabile, non un consiglio. Validiamo ogni posizionamento prima della produzione.",
+  "Size splits are confirmed on the order, not now. Larger sizes may carry a surcharge, shown on the quote.": "La ripartizione delle taglie si conferma all’ordine, non adesso. Le taglie grandi possono avere un supplemento, indicato nel preventivo.",
+  "Configure and request": "Configuri e richieda",
+  "Pick the colour, the quantity and where your identity goes. Send it as a quote request — nothing is ordered.": "Scelga il colore, la quantità e dove va la sua identità. Lo invii come richiesta di preventivo: non si ordina nulla.",
+  "We come back with a firm price and a placement proof showing your artwork at real size on the garment.": "Le rispondiamo con un prezzo definitivo e una prova di posizionamento che mostra la sua grafica a grandezza reale sul capo.",
+  "You approve": "Lei approva",
+  "Approve the proof and the price. That approval is what authorises production, and it is recorded.": "Approvi la prova e il prezzo. Quell’approvazione è ciò che autorizza la produzione, e resta registrata.",
+  "Made, quality-checked and shipped. Your artwork stays on file, so the next run matches this one.": "Prodotto, controllato e spedito. La sua grafica resta in archivio, così la tiratura successiva corrisponde a questa.",
+  "Setup is charged once, not per piece": "La preparazione si paga una volta, non a pezzo",
+  "Embroidery setup is €35 and screen setup €40, per job. Reorder the same artwork later and you do not pay it again.": "La preparazione del ricamo è di 35 € e quella della serigrafia di 40 €, per lavorazione. Se riordina la stessa grafica, non la paga di nuovo.",
+  "Not in this cut": "Non in questo taglio",
+  "Leave it blank and tell us the sizes later — the quantity above still applies.": "Lo lasci vuoto e ci dica le taglie più avanti: la quantità qui sopra resta valida.",
+  "Ink colours": "Colori d’inchiostro",
+  "Direct to film (DTF)": "Direct to film (DTF)",
+  "Direct to garment (DTG)": "Direct to garment (DTG)",
+  "Artwork is reviewed before anything is set up. If a method will not hold on the fabric you chose, we say so with the quote rather than after production.": "La grafica viene esaminata prima di preparare qualsiasi cosa. Se un metodo non tiene sul tessuto scelto, glielo diciamo con il preventivo e non dopo la produzione.",
+  "Products in your quote": "Prodotti nel suo preventivo",
+  "Add it": "Aggiungere",
+  "Open the full quote": "Apri il preventivo completo",
+  "View quote": "Vedi preventivo",
+  "No payment is needed yet. This is a request.": "Non è ancora richiesto alcun pagamento. Questa è una richiesta.",
+  "Your quote request": "La sua richiesta di preventivo",
+  "A visual of your artwork on the garments you chose, sent before anything goes into production. One charge for the whole request, not per piece.": "Un’immagine della sua grafica sui capi scelti, inviata prima che qualsiasi cosa entri in produzione. Un solo addebito per l’intera richiesta, non a pezzo.",
+  "This is an indicative amount for the products and personalisation shown. Setup and delivery are confirmed on review.": "Questo importo è indicativo per i prodotti e la personalizzazione mostrati. Preparazione e consegna si confermano in fase di revisione.",
+  "Check the spelling, try a garment type such as hoodie or polo, or browse the collections.": "Controlli l’ortografia, provi con un tipo di capo come felpa o polo, oppure esplori le collezioni.",
+  "Browse collections": "Esplora le collezioni",
+  "Price at the minimum": "Prezzo al minimo",
+  "Cloth weight": "Grammatura",
+  "Quantity you need": "Quantità che le serve",
+  "Any": "Qualsiasi",
+  "Under €20": "Meno di 20 €",
+  "€20–40": "20–40 €",
+  "€40 and over": "40 € e oltre",
+  "Show fewer questions": "Mostra meno domande",
+  "The other service": "L’altro servizio",
+  "What help do you need? Your colour, quantity and placements stay on the request.": "Di quale aiuto ha bisogno? Colore, quantità e posizionamenti restano nella richiesta.",
+  "Any chargeable design work is scoped and approved before it starts. We do not offer free original design or unlimited revisions.": "Qualsiasi lavoro di design a pagamento viene definito e approvato prima di iniziare. Non offriamo design originale gratuito né revisioni illimitate.",
+  "your configuration is kept": "la sua configurazione viene mantenuta"
  },
  "_translated": 1071,
  "_of": 1078,
