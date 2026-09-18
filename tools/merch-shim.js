@@ -269,7 +269,16 @@
     if (key.indexOf(' \u00b7 ') > -1) {
       var parts = key.split(' \u00b7 '), moved = false;
       var out = parts.map(function (p) {
+        /* the exact map AND the rules: a composition is "85% organic cotton /
+           15% recycled polyester", which is a pattern, never a fixed key, so
+           an exact-only pass left it in English beside a translated product
+           name and a translated cloth band */
         var h = COPY[p];
+        if (!h || h === p) {
+          for (var j = 0; j < PATTERNS.length; j++) {
+            if (PATTERNS[j][0].test(p)) { h = p.replace(PATTERNS[j][0], PATTERNS[j][1]); break; }
+          }
+        }
         if (h && h !== p) { moved = true; return h; }
         return p;
       });

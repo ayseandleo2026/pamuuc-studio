@@ -4815,9 +4815,24 @@ function fPool(scope){
 }
 /* A beanie carries no recorded weight. Banding it as "light cloth" puts it
    under a filter it has no claim to, so no weight means no band. */
-const WT_BAND = (w) => { w = +w || 0; return !w ? null : w < 200 ? 'light' : w < 350 ? 'mid' : 'heavy'; };
+/* The cloth filter has to bucket a garment the way its card labels it, or the
+   two contradict each other on one screen: a 180 g tee reads "Classic" on the
+   card while this counted it light, so filtering to Light returned cards that
+   did not say Light. bandOf is the same function the builder and the garment
+   card use. Families it has no table for — outerwear, headwear, where 38 g and
+   450 g mean different things — keep the flat thresholds.
+   The stored keys stay light/mid/heavy so a filter held in the URL or in UI
+   state still matches; only the words shown change. */
+const WT_KEY = {Light: 'light', Classic: 'mid', Heavy: 'heavy'};
+const WT_BAND = (pid, w) => {
+  w = +w || 0;
+  if(!w) return null;
+  const named = bandOf(pid, w);
+  if(named) return WT_KEY[named] || null;
+  return w < 200 ? 'light' : w < 350 ? 'mid' : 'heavy';
+};
 /* how many products an option would leave — 0 means do not offer it */
-function fCount(pool, test){ return pool.filter(p => (p.matrix || []).some(test)).length; }
+function fCount(pool, test){ return pool.filter(p => (p.matrix || []).some(m => test(m, p))).length; }
 
 function filterBar(scope){
   const f = listState(), chips = activeChips();
@@ -4833,8 +4848,8 @@ function filterBar(scope){
     .map(m => [m, fCount(pool, x => (x.pers || []).includes(m))]).filter(([, n]) => n);
   const segs = GENDERS.map(g => [g, fCount(pool, x => serves(g.k, x.g))]).filter(([, n]) => n);
   const fits = FITS.map(x => [x, fCount(pool, m => m.f === x.k)]).filter(([, n]) => n);
-  const wts  = [['light','Light'],['mid','Mid'],['heavy','Heavy']]
-    .map(([v, nm]) => [v, nm, fCount(pool, m => WT_BAND(m.w) === v)]).filter(([, , n]) => n);
+  const wts  = [['light','Light'],['mid','Classic'],['heavy','Heavy']]
+    .map(([v, nm]) => [v, nm, fCount(pool, (m, p) => WT_BAND(p.id, m.w) === v)]).filter(([, , n]) => n);
   /* the price a filter sorts on is the price the card shows */
   const priceN = {
     u20:  pool.filter(p => { const v = catLow(p); return v != null && v < 20; }).length,
@@ -5514,7 +5529,7 @@ function gbPass(p, m, g, skip){
   }
   if(skip !== 'seg' && g.seg.length && !g.seg.some(w => serves(w, m.g))) return false;
   if(skip !== 'fit' && g.fit.length && !g.fit.includes(m.f)) return false;
-  if(skip !== 'wt'  && g.wt && WT_BAND(m.w) !== g.wt) return false;
+  if(skip !== 'wt'  && g.wt && WT_BAND(p.id, m.w) !== g.wt) return false;
   return true;
 }
 /* a garment with no price sorts last whichever way the list is pointing */
@@ -5816,41 +5831,80 @@ function compOf(m){
   return bits.map(one).join(' / ');
 }
 
-/* ---- the line ------------------------------------------------------------
-   A commercial position, not a property of the cloth, so it belongs in the
-   sheet: a `line` value on the garment wins outright. Until the sheet carries
-   one this is derived from where the garment sits on price within its own
-   product — which is what the label means to a buyer, and is at least never
-   in contradiction with the price printed beside it. */
-const LINES = ['Essential', 'Mid tier', 'Premium'];
-function lineOf(p, m){
-  if(m.line && LINES.indexOf(m.line) > -1) return m.line;
-  const low = (x) => { const b = x.breaks || []; return b.length ? b[b.length - 1].price : null; };
-  const ranked = (p.matrix || []).map(x => ({sku:x.sku, v:low(x)}))
-    .filter(x => x.v != null).sort((a, b) => a.v - b.v);
-  if(ranked.length < 3) return null;          /* too few to rank meaningfully */
-  const i = ranked.findIndex(x => x.sku === m.sku);
-  if(i < 0) return null;
-  const t = i / ranked.length;
-  return t < 1/3 ? LINES[0] : t < 2/3 ? LINES[1] : LINES[2];
+
+/* Which colour each GARMENT card shows. The product grid already spreads its
+   colours this way; this is the same rule one level down, because a collection
+   lists thirty-six t-shirts and picking each one's first palette entry made
+   thirty-six near-identical black cards. A colour the grid has already spent
+   counts against itself, so the page reads as a range.
+
+   The photograph is always of the colour named, never a stand-in: the pick is
+   made from the colours that actually have a shot. */
+let GARMENT_PICK = null, GARMENT_PICK_FOR = null;
+function garmentPicks(){
+  const P = S.merchProducts || [];
+  if(GARMENT_PICK && GARMENT_PICK_FOR === P) return GARMENT_PICK;
+  const picks = {}, used = {};
+  P.forEach((p) => (p.matrix || []).forEach((m) => {
+    let list = null, exact = true;
+    for(const want of [true, false]){
+      const c = (m.colours || [])
+        .filter((x) => garmentPhoto(m.sku, x, 'studio-01', want))
+        .sort((a, b) => paletteRank(a) - paletteRank(b));
+      if(c.length){ list = c; exact = want; break; }
+    }
+    if(!list) return;
+    let best = list[0], bestScore = Infinity;
+    list.forEach((c, i) => {
+      const nm = (COLOURS[c] || {}).name || c;
+      /* how often the grid already shows this colour dominates; position in
+         the palette only separates colours it has used equally often */
+      const score = (used[nm] || 0) * 1000 + i;
+      if(score < bestScore){ bestScore = score; best = c; }
+    });
+    const nm = (COLOURS[best] || {}).name || best;
+    used[nm] = (used[nm] || 0) + 1;
+    picks[m.sku] = {colour: best, exact: exact};
+  }));
+  GARMENT_PICK = picks; GARMENT_PICK_FOR = P;
+  return picks;
+}
+function garmentCardShot(m){
+  const pick = m && garmentPicks()[m.sku];
+  if(!pick) return null;
+  const src = garmentPhoto(m.sku, pick.colour, 'studio-01', pick.exact);
+  return src ? {src: src, colour: pick.colour} : null;
 }
 
 function gbCard(p, m){
   const cols = (m.colours || []).filter(c => COLOURS[c]);
   const title = gbTitle(p, m);
   const lo = gLow(m);
+  const shot = garmentCardShot(m);
+  /* the same word the builder uses for this cloth, so one catalogue does not
+     speak two vocabularies */
+  const band = bandOf(p.id, m.w);
+  const swatch = cols.slice(0, 5);
   return `
   <button class="gb-c" data-go="public:product:${p.id}:${esc(m.sku)}"
     aria-label="${esc(title + ' — ' + p.name)}">
+    <span class="gb-im media">
+      ${shot
+        ? `<img src="${esc(shot.src)}" alt="" loading="lazy" decoding="async">`
+        : `<span class="gb-ph" aria-hidden="true">${p.glyph || '·'}</span>`}
+    </span>
     <span class="gb-b">
       <span class="gb-t">${esc(title)}</span>
-      <span class="gb-m">${esc([p.name, compOf(m), lineOf(p, m)]
+      <span class="gb-m">${esc([p.name, compOf(m), band]
         .filter(Boolean).join(' · '))}</span>
       <span class="gb-f">
         <span class="gb-pr">${lo
           ? `<em>From</em>${money(lo.price)}`
           : '<em class="gb-req">Price on request</em>'}</span>
-        ${cols.length ? `<span class="gb-n">${cols.length} colour${cols.length === 1 ? '' : 's'}</span>` : ''}
+        ${cols.length ? `<span class="gb-sw" aria-label="${cols.length} colour${
+          cols.length === 1 ? '' : 's'}">${
+          swatch.map(c => `<i style="background:${COLOURS[c].hex}"></i>`).join('')}${
+          cols.length > swatch.length ? `<em>+${cols.length - swatch.length}</em>` : ''}</span>` : ''}
       </span>
     </span>
   </button>`;
@@ -5901,7 +5955,7 @@ function garmentBrowser(cat){
   const rest  = hit.length - shown;
   const live  = !!(g.q.trim() || g.seg.length || g.fit.length || g.wt);
 
-  const count = (skip, test) => rows.filter(([p, m]) => gbPass(p, m, g, skip) && test(m)).length;
+  const count = (skip, test) => rows.filter(([p, m]) => gbPass(p, m, g, skip) && test(m, p)).length;
   const pill = (on, act, v, label, n) => n
     ? `<button class="fp fp--sm ${on ? 'fp--on' : ''}" data-act="${act}" data-v="${esc(v)}"
         aria-pressed="${on}">${esc(label)}<em>${n}</em></button>` : '';
@@ -5912,9 +5966,9 @@ function garmentBrowser(cat){
                  count('seg', m => serves(x.k, m.g)))).join('');
   const fits = FITS.map(x => pill(g.fit.includes(x.k), 'gbFit', x.k, fitName(x.k),
                  count('fit', m => m.f === x.k))).join('');
-  const wts  = [['light','Light'], ['mid','Mid weight'], ['heavy','Heavy']]
+  const wts  = [['light','Light'], ['mid','Classic'], ['heavy','Heavy']]
                  .map(([v, nm]) => pill(g.wt === v, 'gbWt', v, nm,
-                   count('wt', m => WT_BAND(m.w) === v))).join('');
+                   count('wt', (m, p) => WT_BAND(p.id, m.w) === v))).join('');
 
   /* a category name is already plural, the generic noun is not */
   const what = pick ? catName(pick).toLowerCase() : 'garments';
@@ -6176,7 +6230,7 @@ function applyFilters(list){
      function the option counts use, so a chip promising six cannot return none */
   if(f.seg.length)     out = out.filter(p => gendersOf(p).some(g => f.seg.some(w => serves(w, g))));
   if(f.fit.length)     out = out.filter(p => fitsOf(p).some(x => f.fit.includes(x)));
-  if(f.wt)             out = out.filter(p => (p.matrix || []).some(m => WT_BAND(m.w) === f.wt));
+  if(f.wt)             out = out.filter(p => (p.matrix || []).some(m => WT_BAND(p.id, m.w) === f.wt));
   if(f.qty)            out = out.filter(p => p.moq <= (+f.qty || 0));
   if(f.price === 'u20')   out = out.filter(p => { const v = catLow(p); return v != null && v < 20; });
   if(f.price === '20_40') out = out.filter(p => { const v = catLow(p); return v != null && v >= 20 && v < 40; });
@@ -6194,7 +6248,7 @@ function activeChips(){
   f.methods.forEach(m => out.push([(S.personalization[m] || {}).name || m, 'rmMethod', m]));
   f.seg.forEach(g => out.push([genderName(g), 'rmSeg', g]));
   f.fit.forEach(k => out.push([fitName(k), 'rmFit', k]));
-  if(f.wt) out.push([{light:'Light cloth', mid:'Mid weight', heavy:'Heavy cloth'}[f.wt], 'rmWt', '']);
+  if(f.wt) out.push([{light:'Light cloth', mid:'Classic cloth', heavy:'Heavy cloth'}[f.wt], 'rmWt', '']);
   if(f.qty) out.push([`Quantity ${f.qty}`, 'rmQty', '']);
   if(f.price) out.push([{u20:'Under €20', '20_40':'€20–€40', o40:'€40 and over', req:'Price on request'}[f.price], 'rmPrice', '']);
   return out;

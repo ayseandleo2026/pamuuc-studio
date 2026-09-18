@@ -147,9 +147,20 @@ export function translate(html, dict, colours) {
   const colourSet = colours instanceof Set ? colours : new Set(colours || []);
   const miss = new Set();
 
-  const out = mapCopy(html, (key) => {
+  /* One string, by the exact map then by rule. Split out so the joined form
+     below can ask the same question of each of its parts. */
+  const one = (key) => {
     const hit = copy[key];
     if (hit != null && hit !== '') return hit;
+    for (const [re, to] of patterns) {
+      if (re.test(key)) return key.replace(re, to);
+    }
+    return null;
+  };
+
+  const out = mapCopy(html, (key) => {
+    const hit = one(key);
+    if (hit != null) return hit;
 
     const m = /^(.+) in (.+)$/.exec(key);
     if (m && colourSet.has(m[2])) {
@@ -159,9 +170,25 @@ export function translate(html, dict, colours) {
       return null;
     }
 
-    for (const [re, to] of patterns) {
-      if (re.test(key)) return key.replace(re, to);
+    /* A card's meta line is several facts joined with " · " — a product name,
+       a composition, a cloth band. Each is translatable on its own and the
+       join is the only thing defeating the lookup, so translate the parts.
+       This used to be covered by writing the whole joined sentence into the
+       dictionary by hand; those broke the moment the band words changed, and
+       the line came back English in the static HTML of every collection page.
+       A rule does not break that way. */
+    if (key.indexOf(' \u00b7 ') > -1) {
+      const parts = key.split(' \u00b7 ');
+      let moved = false;
+      const done = parts.map((part) => {
+        const t = one(part);
+        if (t != null && t !== part) { moved = true; return t; }
+        if (!colourSet.has(part)) miss.add(part);
+        return part;
+      });
+      if (moved) return done.join(' \u00b7 ');
     }
+
     /* a bare colour name is left alone on purpose, not missing */
     if (colourSet.has(key)) return null;
 

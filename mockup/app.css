@@ -2543,6 +2543,18 @@ main[data-page="merch"] .pub-sec--flush:not(.mph),
 main[data-page="products"] .pub-sec--flush:not(.mph),
 main[data-page="collection"] .pub-sec--flush:not(.mph),
 main[data-page="collections"] .pub-sec--flush:not(.mph){padding-top:0}
+/* ...and the section that FOLLOWS the page head is not one of those either.
+   The head is a band closed by a 2px rule, so a flush section under it set its
+   first row of cards directly on that rule — on the collections index and on
+   every product-family page, the grid began the pixel the line ended. Only the
+   opener gets to run up under the header; whatever comes after the head takes
+   the same air as any other chapter. .mph exists only on these pages, so the
+   two scopes without one are unaffected. */
+main[data-branch] .mph + .pub-sec--flush,
+main[data-page="merch"] .mph + .pub-sec--flush,
+main[data-page="products"] .mph + .pub-sec--flush,
+main[data-page="collection"] .mph + .pub-sec--flush,
+main[data-page="collections"] .mph + .pub-sec--flush{padding-top:clamp(48px,7.5vh,80px)}
 main[data-branch] .shero,
 main[data-page="merch"] .shero{padding:clamp(32px,5vh,56px) 0 clamp(40px,6vh,56px)}
 
@@ -2753,8 +2765,18 @@ main[data-branch] .mph{padding:clamp(36px,4.6vh,60px) 0 clamp(32px,4vh,52px)}
 
 .gb-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(216px,1fr));
   gap:var(--sp-4);margin-top:var(--sp-5)}
-/* The colour band that used to head this card is gone — the space is reserved
-   for the garment's own photograph once there is one. */
+/* The space the colour band used to hold is the garment's photograph now,
+   square like the product card's, and of the colour the card names. */
+.gb-im{aspect-ratio:1;border:0;background:var(--surface-2);
+  box-shadow:inset 0 0 0 1px var(--line);display:block}
+.gb-im img{object-position:center top}
+.gb-ph{font-size:34px;display:grid;place-items:center;height:100%;color:var(--faint)}
+/* the colours this garment comes in, read as colour rather than as a number */
+.gb-sw{display:flex;align-items:center;gap:4px;flex:none;margin-left:auto;padding-bottom:2px}
+.gb-sw i{width:11px;height:11px;border-radius:50%;display:block;
+  box-shadow:inset 0 0 0 1px color-mix(in srgb,#011251 22%,transparent)}
+.gb-sw em{font-style:normal;font-size:var(--fs-micro);color:var(--faint);margin-left:2px;
+  font-variant-numeric:tabular-nums}
 .gb-c{display:flex;flex-direction:column;text-align:left;font:inherit;color:inherit;
   cursor:pointer;padding:0;overflow:hidden;background:var(--surface);
   border:1px solid var(--line);border-radius:var(--r-media);
