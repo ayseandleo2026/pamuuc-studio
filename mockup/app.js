@@ -5750,28 +5750,70 @@ function optionName(p, m, opts){
    are the composition. Two halves of the same fibre read as one statement
    ("50/50 organic + recycled cotton") rather than as two. */
 function compOf(m){
-  const t = (m && m.materials) || '';
-  const parts = t.replace(/^Shell:\s*/i, '').split(',')
-    .map(x => x.trim()).filter(x => /%/.test(x));
+  const raw = (m && m.materials) || '';
+  /* "Shell: French Terry, 85% Cotton ... | Lining: Sherpa, 100% Polyester".
+     The pipe separates whole SECTIONS, and nothing here ever split on it, so a
+     lining's percentages joined the shell's and the card read "80% cotton /
+     20% polyester / 100% cotton" — three figures summing to 200. Only the
+     shell is the cloth a buyer feels, so only the shell is quoted. */
+  /* A slash can start a section too, when what follows is a named colourway:
+     "100% Cotton - Organic Combed Ring Spun / Heather Haze: 70% Organic Cotton
+     - 30% Recycled Cotton" is one cloth, plus what that ONE colour is made of.
+     Read straight through it and the card claimed 130%. */
+  const shell = raw.split('|')[0]
+    .split(/\s\/\s*[A-Z][A-Za-z' ]*\s*:/)[0]
+    .replace(/^[A-Za-z ]+:\s*/, '');
+  /* Commas separate components. So does " - ", but only when a percentage
+     follows it: "94% Recycled Polyester - 6% Elastane" is two fibres, while
+     "100% Cotton - Organic Ring Spun Combed" is one fibre and its treatment. */
+  const parts = shell.split(/,|\s-\s(?=\d+\s*%)/)
+    .map(x => x.trim()).filter(x => /\d\s*%/.test(x));
   if(!parts.length) return null;
-  const bits = parts.map(x => ({
-    pct: +(x.match(/(\d+)\s*%/) || [])[1],
-    fib: ((x.match(/%\s*([A-Za-z\- ]+?)(?:\s*-|$)/) || [])[1] || '').trim().toLowerCase(),
-    org: /organic/i.test(x), rec: /recycled/i.test(x),
-  })).filter(b => b.pct);
+
+  /* Spinning and finishing words describe how the yarn was made, not what it
+     is; left in, they turned one fibre into "cotton organic ringspun combed". */
+  const NOISE = /\b(?:organic|recycled|ring\s*spun|ringspun|combed|carded|brushed|sueded|bonded|washed|light|fabric|weave|plain|twill|jersey|terry|rib|ripstop|canvas|sherpa|fleece|open\s*end|slub|raw|heather|haze|melange|marl)\b/gi;
+
+  const bits = parts.map((x) => {
+    const pct = +(x.match(/(\d+)\s*%/) || [])[1];
+    const tail = (x.match(/\d+\s*%\s*(.*)$/) || [])[1] || '';
+    const fib = tail.replace(NOISE, ' ').replace(/[^A-Za-z ]/g, ' ')
+      .replace(/\s{2,}/g, ' ').trim().toLowerCase();
+    return {
+      pct, fib,
+      org: /\borganic\b/i.test(tail), rec: /\brecycled\b/i.test(tail),
+      /* A membrane or coating is laminated on; it is not part of the 100%,
+         and counting it made "100% polyester / 8% tpu recycled membrane". */
+      skip: /\b(?:membrane|coating|laminate|dwr)\b/i.test(x),
+    };
+  }).filter(b => b.pct && b.fib && !b.skip);
   if(!bits.length) return null;
-  if(bits.length === 1){
-    const b = bits[0];
-    return (b.pct + '% ' + (b.org ? 'organic ' : '') + (b.rec ? 'recycled ' : '') + b.fib)
-      .replace(/\s+/g, ' ').trim();
-  }
-  if(bits.every(b => b.fib === bits[0].fib)){
-    const tags = [...new Set(bits.map(b => b.org ? 'organic' : b.rec ? 'recycled' : '')
-      .filter(Boolean))];
+
+  /* Heaviest fibre first. The sheet lists them in its own order, which put the
+     1% elastane of a rib knit ahead of the 90% cotton. */
+  bits.sort((a, b) => b.pct - a.pct);
+  const tag = (b) => (b.org ? 'organic ' : '') + (b.rec ? 'recycled ' : '');
+  const one = (b) => (b.pct + '% ' + tag(b) + b.fib).replace(/\s+/g, ' ').trim();
+
+  if(bits.length === 1) return one(bits[0]);
+
+  /* One fibre from two sources — 50% organic cotton and 50% recycled cotton —
+     reads as one statement about the cloth, not as two components. It only
+     holds when the parts actually make up the whole and the sources differ. */
+  const sameFibre = bits.every(b => b.fib === bits[0].fib);
+  /* The same 50/50 cloth arrived as "organic + recycled" on one garment and
+     "recycled + organic" on the next, purely because the sheet listed the two
+     halves in a different order. One cloth, one way of saying it. */
+  const ORDER = ['organic', 'recycled'];
+  const tags = [...new Set(bits.map(b => b.org ? 'organic' : b.rec ? 'recycled' : '')
+    .filter(Boolean))].sort((a, b) => ORDER.indexOf(a) - ORDER.indexOf(b));
+  const sums = bits.reduce((n, b) => n + b.pct, 0) === 100;
+  if(sameFibre && sums && tags.length > 1){
     return (bits.map(b => b.pct + '%').join('/') + ' ' + tags.join(' + ') + ' ' + bits[0].fib)
       .replace(/\s+/g, ' ').trim();
   }
-  return bits.map(b => b.pct + '% ' + b.fib).join(' / ');
+  if(sameFibre) return one({...bits[0], pct: bits.reduce((n, b) => n + b.pct, 0)});
+  return bits.map(one).join(' / ');
 }
 
 /* ---- the line ------------------------------------------------------------
@@ -7386,70 +7428,150 @@ function demoSteps(p){
      sleeve crewneck" — which is the thing that tells two options of the same
      weight apart. It is the garment's description, not the supplier's name.
      Where it is missing, fall back to numbering them. */
-  const sig = (r) => [r.w, rowPrice(r), (r.colours||[]).length, (r.sizes||[]).join('/')].join('|');
-  const seen = {};
-  opts.forEach(r => { const k = sig(r); (seen[k] = seen[k] || []).push(r.sku); });
+  /* THE GARMENT CARD.
+     ---------------------------------------------------------------------
+     This step used to answer a question nobody asked. Six t-shirts arrived
+     as "Lightweight", "Lightweight \u00b7 Unisex cut \u00b7 Fabric washed",
+     "Garment dyed mid-light" \u2014 headlines made of weight words sitting next
+     to the weight itself, one of them contradicting our own scale, and three
+     of the six reading "100% organic cotton" at within 30 g/m\u00b2 of each
+     other. Under that came a relative weight bar, a Lighter\u2013Heavier
+     legend, a colour count, a size range and an expandable note.
 
-  /* Three t-shirts at 155 g/m² are not three weights, they are three cuts, and
-     leading the card with the number made them look like the same thing listed
-     thrice. The style leads; the weight becomes a position on a bar, so
-     "thinner or thicker than the others" is readable without knowing what a
-     gram per square metre feels like. The bar is relative to THIS list, so it
-     never has to claim an absolute scale across bags, fleece and jersey. */
-  const ws     = opts.map(r => +r.w).filter(Boolean);
-  const wMin   = ws.length ? Math.min(...ws) : 0;
-  const wMax   = ws.length ? Math.max(...ws) : 0;
-  const spread = wMax > wMin;
-  const wPos   = (r) => Math.round(((+r.w - wMin) / (wMax - wMin)) * 100);
-  /* lightest first: the list then reads as a scale rather than a sheet order */
+     A buyer choosing a t-shirt is not ranking grams per square metre. They
+     want to know which one is the cheap one and which one is the good one.
+     So the card leads with where the garment sits in the range \u2014 Essential,
+     Premium, Luxury \u2014 says what it is made of, and puts the weight where a
+     number belongs when only some people want it: small, last and quiet.
+
+     The tier is price rank inside THIS product's options, not a claim about
+     the wider market, so it never has to defend an absolute scale. */
+
+  /* A garment we have not costed still has to sit somewhere in the column.
+     Its own weight places it: it borrows the price of the priced garments
+     nearest to it in grams. That figure orders the card and nothing else \u2014
+     the card still reads "Price on request", because it still is. Without it
+     every uncosted garment fell to the bottom and came back Luxury, which is
+     a claim about a price we do not have. */
+  const wPriced = opts.filter((r) => rowPrice(r) != null && +r.w);
+  const sortKey = (r) => {
+    const pr = rowPrice(r);
+    if(pr != null) return pr;
+    const w = +r.w;
+    if(!w || !wPriced.length) return Infinity;
+    const gaps = wPriced.map((x) => Math.abs(+x.w - w));
+    const near = Math.min(...gaps);
+    const peers = wPriced.filter((x, i) => gaps[i] === near).map(rowPrice);
+    return peers.reduce((a, b) => a + b, 0) / peers.length;
+  };
+  /* Cheapest first. The list used to run lightest-first so it read as a scale,
+     but the headline is the tier now, and a column whose badge reads Essential,
+     Premium, Essential, Luxury, Premium looks broken however true it is. */
   const shown = opts.slice().sort((a, b) =>
-    ((+a.w || 0) - (+b.w || 0)) || ((rowPrice(a) ?? 1e9) - (rowPrice(b) ?? 1e9)));
+    (sortKey(a) - sortKey(b)) || ((+a.w || 0) - (+b.w || 0)));
 
-  const optCards = shown.map((r, ix) => {
+  /* Even thirds by POSITION, not by where a price lands inside its range. A
+     value-based split gave 2/1/2 on six options and 2/1/1 on four; a buyer
+     reading a column of cards expects the bands to be about equal. */
+  const TIERS = ['Essential', 'Premium', 'Luxury'];
+  const tierOf = (r) => {
+    const n = shown.length;
+    if(n < 2) return null;                       /* one option is not a range */
+    const i = shown.indexOf(r);
+    if(n === 2) return i === 0 ? 'Essential' : 'Premium';
+    return TIERS[Math.min(2, Math.floor(i * 3 / n))];
+  };
+
+  /* What the garment's own name still says once the weight words are out of
+     it \u2014 "Garment dyed", "Side pocket", "V-neck". Those are real differences
+     between two garments in the same tier; "Heavyweight" beside 240 g/m\u00b2 is
+     not. Three rules earn their place:
+
+       only COMPOUND weight words go. An earlier pass took the bare adjective
+       too and turned "Medium fit" into "fit", because medium is a fit here and
+       a weight three fields away. "weigth" is in the sheet and is matched as
+       spelt, not corrected in it;
+
+       the tier word never survives, or the cheapest t-shirt reads
+       "Essential / Essential";
+
+       "unisex" goes, and a segment left as a bare "cut" goes with it, so
+       "Lightweight \u00b7 Unisex cut \u00b7 Fabric washed" arrives as "Fabric washed".
+       "Men's cut" keeps its own word and stays. */
+  const WEIGHTY = /\b(?:ultra|extra)?[- ]?(?:light|mid|medium|heavy)[- ]?(?:weight|weigth)\b|\bmid[- ]light\b/gi;
+  const GRAMMAGE = /\b\d{2,4}\s*g\s*\/?\s*m²?\b|\b\d{2,4}\s*gsm\b/gi;
+  const qualifier = (cut, tier) => {
+    const segs = String(cut || '').split(/\s*\u00b7\s*/).map((seg) => seg
+      .replace(WEIGHTY, ' ')
+      .replace(GRAMMAGE, ' ')
+      /* The tier words go whether or not this list has a tier: a single-option
+         product has none to compare against, and its card still read
+         "Essential" twice over. */
+      .replace(/\b(?:essential|premium|luxury)\b/gi, ' ')
+      .replace(/\bunisex\b/gi, ' ')
+      /* "Long-midweight polo" loses its middle and leaves "Long- polo"; the
+         hyphen belonged to the word that went. */
+      .replace(/(^|\s)-+|-+(?=\s|$)/g, '$1')
+      .replace(/\s{2,}/g, ' ').trim()
+    ).filter((seg) => seg.length > 2 && !/^cut$/i.test(seg));
+    if(!segs.length) return '';
+    /* Two descriptors at most. "Zip-through \u00b7 Recycled \u00b7 Fabric washed" is
+       38 characters of small grey type beside a tier and a price, and it wraps
+       to a second line on a phone. Dropping the third costs nothing: across
+       every product and filter the site can show, capping here leaves exactly
+       the same cards distinguishable as no cap at all. */
+    const out = segs.slice(0, 2).join(' \u00b7 ');
+    return out.charAt(0).toUpperCase() + out.slice(1);
+  };
+
+  /* Beanies and bags carry no grammage at all, and three cards each reading
+     "Weight to confirm" is three lines of nothing. The line only appears where
+     the range actually has weights to compare. */
+  const anyW = shown.some((r) => +r.w);
+
+  const optCards = shown.map((r) => {
     const pr = rowPrice(r);
     const on = c.sku === r.sku;
-    const twin = seen[sig(r)].length > 1 && !r.style2;
-    /* the noun is in the page heading; what is left is how it differs */
-    const cut  = optionName(p, r, opts);
-    const note = [weightNote(p, r, cut), compNote(r)].filter(Boolean).join(' ');
-    const openNote = UI.gInfo === r.sku;
-    const meta = [compOf(r), lineOf(p, r),
-                  (r.colours || []).length ? (r.colours.length + ' colours') : '',
-                  sizeRange(r.sizes)].filter(Boolean).join(' · ');
+    const cut = optionName(p, r, opts);
+    const tier = tierOf(r);
+    const qual = qualifier(cut, tier);
+    const comp = compOf(r);
+    /* One option is not a range, so there is no tier to name and nothing to
+       compare it against. The garment's own qualifier leads instead, and
+       where it has none the card just says what every garment here is. */
+    const head = tier || qual || 'Standard';
+    const sub  = tier ? qual : '';
+    /* No hand-built aria-label. The old card needed one, because its weight
+       sat in a bar and its detail in a collapsed note, so the visible text did
+       not say what the card meant. This one says everything in text, and a
+       composite label joined with ". " matches no dictionary key or pattern —
+       so on the French site a screen reader read the card out in English while
+       the page showed French. The button's own content is its name, and that
+       content is translated. */
     return `
     <button class="gopt ${on ? 'gopt--on' : ''}" data-act="dSku" data-v="${esc(r.sku)}"
-      aria-pressed="${on}" aria-label="${esc(cut + '. ' + meta + (note ? '. ' + note : ''))}">
-      <span class="gopt-t">${esc(cut)}${
-        twin ? `<em class="gopt-x">Option ${ix + 1}</em>` : ''}${
-        note ? `<span class="gopt-q ${openNote ? 'gopt-q--on' : ''}" data-act="gInfo"
-          data-v="${esc(r.sku)}" role="img"
-          aria-label="What ${esc(cut)} means">?</span>` : ''}</span>
-      <span class="gopt-wq">
-        <span class="gopt-w">${r.w
-          ? esc(r.w) + ' <i>g/m²</i>' + (() => {
-              const ww = weightWord(p, r);
-              /* The supplier may already call it heavyweight while our own
-                 scale, read against this product's range, calls it mid — and
-                 "Heavyweight … Mid-weight" on one card reads as a fault. Where
-                 the name carries a weight already, it is the one that speaks. */
-              if(!ww || /light|mid|heavy|weight/i.test(cut)) return '';
-              return ' <i>· ' + esc(ww) + '</i>';
-            })()
-          : 'Weight to confirm'}</span>
-        ${spread && r.w ? `<span class="gopt-bar" aria-hidden="true">
-          <i style="left:${wPos(r)}%"></i></span>` : ''}
-      </span>
-      ${meta ? `<span class="gopt-m">${esc(meta)}</span>` : ''}
-      ${openNote && note ? `<span class="gopt-i">${esc(note)}</span>` : ''}
+      aria-pressed="${on}">
+      <span class="gopt-t">${esc(head)}${
+        /* the space is for the accessible name: without it the two spans run
+           together and the card announces itself as "EssentielFabric washed".
+           Whitespace between flex items is not itself an item, so the
+           rendered row is unchanged. */
+        sub ? ` <em class="gopt-x">${esc(sub)}</em>` : ''}</span>
+      ${comp ? `<span class="gopt-m">${esc(comp)}</span>` : ''}
+      ${anyW ? `<span class="gopt-w">${
+        r.w ? esc(r.w) + ' g/m²' : 'Weight to confirm'}</span>` : ''}
       ${r.provisional ? `<span class="gopt-f">Indicative</span>` : ''}
-      <span class="gopt-p num">${pr != null ? `<em>From</em>${money(pr)}`
+      <span class="gopt-p num">${pr != null
+        /* The figure gets its own element so the whitespace before it is a
+           node of its own: as a bare text run it joined the caption and the
+           card announced "À partir de€11.49". .gopt-p is a flex column, so a
+           whitespace-only node between two items is not rendered. */
+        ? `<em>From</em> <span>${money(pr)}</span>`
         : '<span class="gopt-r">Price on request</span>'}</span>
     </button>`;}).join('');
 
-  /* one legend for the column, rather than a label on every bar */
-  const optScale = spread ? `
-    <div class="gopt-key"><span>Lighter</span><i></i><span>Heavier</span>
-      <em>${wMin}–${wMax} g/m²</em></div>` : '';
+  /* The Lighter–Heavier legend went with the bar it explained. */
+  const optScale = '';
 
   const out = [];
   if(j.needG) out.push(step('g', nextN(), 'Who wears it', c.g ? genderName(c.g) : null,
@@ -7465,8 +7587,16 @@ function demoSteps(p){
           !rs.length ? 'Not in this cut' : lo != null ? 'From ' + money(lo) : 'Price on request',
           !rs.length); }).join('')));
 
+  /* Once the step collapses, this line is all that is left of it — so it has
+     to speak the card's language. It was still printing optionName() raw, so
+     choosing the polo closed the step down to "Mid-light · 185 g/m²": the
+     weight word sitting beside the weight, which is the whole reason the card
+     changed. Built from the same pieces the chosen card shows. */
+  const chosenTier = chosen ? tierOf(chosen) : null;
+  const chosenQual = chosen ? qualifier(optionName(p, chosen, opts), chosenTier) : '';
   out.push(step('s', nextN(), 'The garment', chosen
-      ? [optionName(p, chosen, opts), chosen.w ? chosen.w + ' g/m²' : '']
+      ? [chosenTier || chosenQual || 'Standard', chosenTier ? chosenQual : '',
+         (anyW && chosen.w) ? chosen.w + ' g/m²' : '']
           .filter(Boolean).join(' · ') || 'Chosen'
       : null,
     opts.length ? optScale + `<div class="gopts">${optCards}</div>`

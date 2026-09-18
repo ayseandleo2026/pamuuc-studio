@@ -232,6 +232,24 @@ a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center
   .pub-hd-in{gap:var(--sp-2);padding:0 var(--sp-3)}
 }
 
+/* The garment card, rebuilt around a tier rather than a weight.
+   ---------------------------------------------------------------------------
+   The tier is the headline and carries the weight of the type; the
+   composition is the reading line; the actual grams are a footnote, because
+   only some buyers want them and none of them want them first. */
+.gopt{grid-template-rows:auto auto auto}
+.gopt-t{display:flex;align-items:baseline;gap:var(--sp-2);flex-wrap:wrap;
+  font-size:var(--fs-md);font-weight:500;letter-spacing:-.008em}
+/* the qualifier — "Garment dyed", "Recycled" — is a note on the tier, not a
+   second heading competing with it */
+.gopt-x{font-style:normal;font-size:var(--fs-xs);font-weight:400;color:var(--muted);
+  letter-spacing:0}
+.gopt-m{grid-column:1;font-size:var(--fs-sm);color:var(--ink);line-height:1.4;
+  margin-top:2px}
+/* quiet, and last */
+.gopt-w{grid-column:1;font-size:var(--fs-micro);color:var(--faint);
+  font-variant-numeric:tabular-nums;letter-spacing:.02em;margin-top:4px}
+
 /* The breadcrumb, given the same air on every page.
    ---------------------------------------------------------------------------
    Measured across the templates it was 41px clear of the band above it on the

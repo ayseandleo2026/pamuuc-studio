@@ -260,6 +260,74 @@
   [
    "^Embroidery — setup €([\\d.,]+) per job · priced by size$",
    "Stickerei — Einrichtung €$1 pro Auftrag · nach Größe berechnet"
+  ],
+  [
+   "^(\\d+)% organic cotton$",
+   "$1% Bio-Baumwolle"
+  ],
+  [
+   "^(\\d+)% recycled cotton$",
+   "$1% recycelte Baumwolle"
+  ],
+  [
+   "^(\\d+)% recycled polyester$",
+   "$1% recyceltes Polyester"
+  ],
+  [
+   "^(\\d+)% recycled nylon$",
+   "$1% recyceltes Nylon"
+  ],
+  [
+   "^(\\d+)% recycled polyamide$",
+   "$1% recyceltes Polyamid"
+  ],
+  [
+   "^(\\d+)% elastane$",
+   "$1% Elasthan"
+  ],
+  [
+   "^(\\d+)% modal$",
+   "$1% Modal"
+  ],
+  [
+   "^(\\d+)% cotton$",
+   "$1% Baumwolle"
+  ],
+  [
+   "^(\\d+)% polyester$",
+   "$1% Polyester"
+  ],
+  [
+   "^(\\d+)% polyamide$",
+   "$1% Polyamid"
+  ],
+  [
+   "^(\\d+)% nylon$",
+   "$1% Nylon"
+  ],
+  [
+   "^(\\d+)% organic cotton / (\\d+)% modal$",
+   "$1% Bio-Baumwolle / $2% Modal"
+  ],
+  [
+   "^(\\d+)% recycled cotton / (\\d+)% recycled polyester$",
+   "$1% recycelte Baumwolle / $2% recyceltes Polyester"
+  ],
+  [
+   "^(\\d+)% organic cotton / (\\d+)% recycled polyester$",
+   "$1% Bio-Baumwolle / $2% recyceltes Polyester"
+  ],
+  [
+   "^(\\d+)% recycled polyester / (\\d+)% elastane$",
+   "$1% recyceltes Polyester / $2% Elasthan"
+  ],
+  [
+   "^(\\d+)% organic cotton / (\\d+)% recycled polyamide / (\\d+)% elastane$",
+   "$1% Bio-Baumwolle / $2% recyceltes Polyamid / $3% Elasthan"
+  ],
+  [
+   "^(\\d+)%/(\\d+)% organic \\+ recycled cotton$",
+   "$1%/$2% Bio-Baumwolle + recycelte Baumwolle"
   ]
  ],
  "copy": {
@@ -1436,7 +1504,70 @@
   "12 August 2026": "12. August 2026",
   "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 Artikel. Geschrieben von dem Studio, das die Kleidung herstellt, nicht von einer Agentur, die darüber schreibt.",
   "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcelona",
-  "includes one placement — small or medium embroidery or DTF": "enthält eine Platzierung — Stickerei oder DTF, klein oder mittel"
+  "includes one placement — small or medium embroidery or DTF": "enthält eine Platzierung — Stickerei oder DTF, klein oder mittel",
+  "Essential": "Basis",
+  "Premium": "Premium",
+  "Luxury": "Luxus",
+  "Standard": "Standard",
+  "Baby cut": "Babyschnitt",
+  "Body warmer": "Bodywarmer",
+  "Boxy": "Boxy",
+  "Boxy dry hand feel": "Boxy Trockengriff",
+  "Boxy dry hand feel crew neck": "Boxy Trockengriff Rundhals",
+  "Canvas": "Canvas",
+  "Classic": "Klassisch",
+  "Cropped": "Cropped",
+  "Denim": "Denim",
+  "Denim over": "Denim-Overshirt",
+  "Dry-handfeel": "Trockengriff",
+  "Dry-handfeel boxy quarter-zip": "Boxy Trockengriff Viertel-Zip",
+  "Dry-handfeel jogger": "Jogger Trockengriff",
+  "Fabric washed": "Gewaschen",
+  "Fitted": "Tailliert",
+  "Fitted cropped": "Tailliert cropped",
+  "Garment dyed": "Garment-dyed",
+  "Garment-dyed": "Garment-dyed",
+  "Hooded": "Mit Kapuze",
+  "Hooded puffer": "Puffer mit Kapuze",
+  "Jacket": "Jacke",
+  "Jogger": "Jogger",
+  "Kids' cut": "Kinderschnitt",
+  "Long polo": "Langarm-Polo",
+  "Long-sleeve": "Langarm",
+  "Medium fit": "Regular Fit",
+  "Medium fit garment dyed": "Regular Fit Garment-dyed",
+  "Men's cut": "Herrenschnitt",
+  "Oversized garment dyed": "Oversize Garment-dyed",
+  "Oversized garment dyed crew neck": "Oversize Garment-dyed Rundhals",
+  "Oversized high neck": "Oversize Stehkragen",
+  "Oversized rolled-sleeve": "Oversize Rollärmel",
+  "Oxford": "Oxford",
+  "Panel washed": "Panel gewaschen",
+  "Poplin": "Poplin",
+  "Puffer gilet": "Puffer-Weste",
+  "Quarter-zip": "Viertel-Zip",
+  "Raglan-sleeve": "Raglan-Ärmel",
+  "Recycled": "Recycelt",
+  "Relaxed": "Lockerer Schnitt",
+  "Relaxed garment-dyed": "Lockerer Schnitt Garment-dyed",
+  "Relaxed poplin": "Lockerer Schnitt Poplin",
+  "Relaxed raglan-sleeve": "Lockerer Schnitt Raglan-Ärmel",
+  "Scoop neck": "U-Ausschnitt",
+  "Sherpa-lined": "Sherpa gefüttert",
+  "Short-sleeve": "Kurzarm",
+  "Side pocket": "Seitentasche",
+  "Sleeveless fleece": "Ärmelloses Fleece",
+  "Sleeveless sherpa": "Ärmelloser Sherpa",
+  "Sleeveless softshell": "Ärmelloser Softshell",
+  "Straight leg jogger": "Straight-Leg-Jogger",
+  "V-neck": "V-Ausschnitt",
+  "Vintage": "Vintage",
+  "Women's cut": "Damenschnitt",
+  "Woven bag": "Gewebte Tasche",
+  "Woven shopper": "Shopper",
+  "Zip": "Reißverschluss",
+  "Zip-through": "Full-Zip",
+  "Women’s fitted": "Damen tailliert"
  },
  "_translated": 1065,
  "_of": 1078,

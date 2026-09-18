@@ -1081,6 +1081,10 @@
   "Reference": "Reference",
   "Rib-knit": "Rib-knit",
   "Sort": "Sort",
-  "Woven": "Woven"
+  "Woven": "Woven",
+  "Essential": "Essential",
+  "Premium": "Premium",
+  "Luxury": "Luxury",
+  "Standard": "Standard"
  }
 }

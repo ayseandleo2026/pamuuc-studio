@@ -1174,7 +1174,70 @@
   "12 August 2026": "12 de agosto de 2026",
   "2 articles. Written by the studio that makes the garments, not by an agency writing about them.": "2 artículos. Escritos por el estudio que fabrica las prendas, no por una agencia que escribe sobre ellas.",
   "PAMUUC Studio, Barcelona": "PAMUUC Studio, Barcelona",
-  "includes one placement — small or medium embroidery or DTF": "incluye una colocación — bordado o DTF, tamaño pequeño o mediano"
+  "includes one placement — small or medium embroidery or DTF": "incluye una colocación — bordado o DTF, tamaño pequeño o mediano",
+  "Essential": "Esencial",
+  "Premium": "Premium",
+  "Luxury": "Lujo",
+  "Standard": "Estándar",
+  "Baby cut": "Corte bebé",
+  "Body warmer": "Chaleco",
+  "Boxy": "Boxy",
+  "Boxy dry hand feel": "Boxy tacto seco",
+  "Boxy dry hand feel crew neck": "Boxy tacto seco cuello redondo",
+  "Canvas": "Lona",
+  "Classic": "Clásico",
+  "Cropped": "Cropped",
+  "Denim": "Denim",
+  "Denim over": "Camisa de denim",
+  "Dry-handfeel": "Tacto seco",
+  "Dry-handfeel boxy quarter-zip": "Boxy tacto seco quarter zip",
+  "Dry-handfeel jogger": "Jogger tacto seco",
+  "Fabric washed": "Tela lavada",
+  "Fitted": "Entallado",
+  "Fitted cropped": "Entallado cropped",
+  "Garment dyed": "Teñido en prenda",
+  "Garment-dyed": "Teñido en prenda",
+  "Hooded": "Con capucha",
+  "Hooded puffer": "Plumífero con capucha",
+  "Jacket": "Chaqueta",
+  "Jogger": "Jogger",
+  "Kids' cut": "Corte infantil",
+  "Long polo": "Polo de manga larga",
+  "Long-sleeve": "Manga larga",
+  "Medium fit": "Corte regular",
+  "Medium fit garment dyed": "Corte regular teñido en prenda",
+  "Men's cut": "Corte de hombre",
+  "Oversized garment dyed": "Oversize teñido en prenda",
+  "Oversized garment dyed crew neck": "Oversize teñido en prenda cuello redondo",
+  "Oversized high neck": "Oversize cuello alto",
+  "Oversized rolled-sleeve": "Oversize manga enrollada",
+  "Oxford": "Oxford",
+  "Panel washed": "Panel lavado",
+  "Poplin": "Poplin",
+  "Puffer gilet": "Chaleco de plumón",
+  "Quarter-zip": "Quarter zip",
+  "Raglan-sleeve": "Manga raglan",
+  "Recycled": "Reciclado",
+  "Relaxed": "Holgado",
+  "Relaxed garment-dyed": "Holgado teñido en prenda",
+  "Relaxed poplin": "Poplin holgado",
+  "Relaxed raglan-sleeve": "Manga raglan holgada",
+  "Scoop neck": "Escote amplio",
+  "Sherpa-lined": "Forrado de sherpa",
+  "Short-sleeve": "Manga corta",
+  "Side pocket": "Bolsillo lateral",
+  "Sleeveless fleece": "Polar sin mangas",
+  "Sleeveless sherpa": "Sherpa sin mangas",
+  "Sleeveless softshell": "Softshell sin mangas",
+  "Straight leg jogger": "Jogger pierna recta",
+  "V-neck": "Escote en V",
+  "Vintage": "Vintage",
+  "Women's cut": "Corte de mujer",
+  "Woven bag": "Bolsa tejida",
+  "Woven shopper": "Bolso shopper",
+  "Zip": "Cremallera",
+  "Zip-through": "Cremallera completa",
+  "Women’s fitted": "Entallado para mujer"
  },
  "patterns": [
   [
@@ -1436,6 +1499,74 @@
   [
    "^Embroidery — setup €([\\d.,]+) per job · priced by size$",
    "Bordado — preparación €$1 por trabajo · según el tamaño"
+  ],
+  [
+   "^(\\d+)% organic cotton$",
+   "$1% algodón orgánico"
+  ],
+  [
+   "^(\\d+)% recycled cotton$",
+   "$1% algodón reciclado"
+  ],
+  [
+   "^(\\d+)% recycled polyester$",
+   "$1% poliéster reciclado"
+  ],
+  [
+   "^(\\d+)% recycled nylon$",
+   "$1% nailon reciclado"
+  ],
+  [
+   "^(\\d+)% recycled polyamide$",
+   "$1% poliamida reciclada"
+  ],
+  [
+   "^(\\d+)% elastane$",
+   "$1% elastano"
+  ],
+  [
+   "^(\\d+)% modal$",
+   "$1% modal"
+  ],
+  [
+   "^(\\d+)% cotton$",
+   "$1% algodón"
+  ],
+  [
+   "^(\\d+)% polyester$",
+   "$1% poliéster"
+  ],
+  [
+   "^(\\d+)% polyamide$",
+   "$1% poliamida"
+  ],
+  [
+   "^(\\d+)% nylon$",
+   "$1% nailon"
+  ],
+  [
+   "^(\\d+)% organic cotton / (\\d+)% modal$",
+   "$1% algodón orgánico / $2% modal"
+  ],
+  [
+   "^(\\d+)% recycled cotton / (\\d+)% recycled polyester$",
+   "$1% algodón reciclado / $2% poliéster reciclado"
+  ],
+  [
+   "^(\\d+)% organic cotton / (\\d+)% recycled polyester$",
+   "$1% algodón orgánico / $2% poliéster reciclado"
+  ],
+  [
+   "^(\\d+)% recycled polyester / (\\d+)% elastane$",
+   "$1% poliéster reciclado / $2% elastano"
+  ],
+  [
+   "^(\\d+)% organic cotton / (\\d+)% recycled polyamide / (\\d+)% elastane$",
+   "$1% algodón orgánico / $2% poliamida reciclada / $3% elastano"
+  ],
+  [
+   "^(\\d+)%/(\\d+)% organic \\+ recycled cotton$",
+   "$1%/$2% algodón orgánico + reciclado"
   ]
  ],
  "_translated": 1069,
