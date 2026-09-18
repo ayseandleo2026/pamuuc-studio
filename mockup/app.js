@@ -7472,6 +7472,9 @@ function settleJourney(p){
   if(row){
     if(row.g && !servesCut(c.g, row.g)) c.g = row.g;
     if(row.f) c.f = row.f;
+    /* and the style it is, or step 3 reads "Choose" under a garment that has
+       already answered it */
+    if(styles.length > 1) c.style = styleOf(optionName(p, row, opts));
   }
 }
 
@@ -7520,8 +7523,15 @@ function applyDemoVariant(p){
 function demoSteps(p){
   const c = UI.cfg || {};
   const j = journeyPlan(p);
-  /* the first question this product still has to ask */
-  const open = c.open || ((j.needG && !c.g) ? 'g' : (j.needF && !c.f) ? 'f' : !c.sku ? 's' : null);
+  /* The first question this product still has to ask. The chain ran g -> f ->
+     s and the style step was never added to it, so answering the fit opened
+     the garment step and stepped straight over the question in between: the
+     page showed 3 Finish "Choose", closed, with 4 open beneath it. */
+  const askY = stylesFor(p, c.g, c.f).length > 1;
+  const open = c.open || ((j.needG && !c.g) ? 'g'
+    : (j.needF && !c.f) ? 'f'
+    : (askY && !c.style) ? 'y'
+    : !c.sku ? 's' : null);
   /* steps are numbered by what is shown, not by a fixed 1-2-3 */
   let n = 0; const nextN = () => ++n;
   const lowest = (rs) => { const xs = rs.map(rowPrice).filter(v => v != null);
