@@ -527,12 +527,44 @@ const SIZE_MM = {small:80, medium:130, large:200};
    read as "you are getting a screen print" by anyone who had chosen
    embroidery three controls further up. Naming it as a rate says the same
    thing about the money and stops implying anything about the product. */
+/* Pricing guide §5: round UP to the next permitted ending, .49 or .99, and
+   never down below the margin that produced the number. */
+function roundEnding(v){
+  const c = Math.ceil(v * 100) / 100;
+  const cents = Math.round((c - Math.floor(c)) * 100);
+  if(cents === 49 || cents === 99) return c;
+  return Math.floor(c) + (cents < 49 ? 0.49 : (cents < 99 ? 0.99 : 1.49));
+}
+
+/* §2: the base price carries ONE placement, and the customer chooses which —
+   small or medium embroidery, or small or medium DTF. Screen print and DTG are
+   never included; choosing one is a paid upgrade even when it costs less. */
+function includedEligible(rc, pl){
+  const inc = (rc && rc.included) || {};
+  const methods = inc.methods || [];
+  const bands = inc.bands || [];
+  return methods.indexOf(pl.method) > -1 && bands.indexOf(pl.size || 'small') > -1;
+}
+
+/* §8B: replacing the included placement is charged on the difference between
+   what the replacement costs and the allowance the base price already
+   reserved — not on the replacement's full selling rate. Excluded methods
+   carry a floor so they are never silently free. */
+function upgradeUnit(rc, pl, qty){
+  if(includedEligible(rc, pl)) return 0;
+  const c = decoCost(rc, pl.method, qty, pl.colours || 1, SIZE_MM[pl.size] || 80, 'cost');
+  const m = (rc.methods || {})[pl.method] || {};
+  const floor = m.eligible ? 0 : (rc.upgradeMin || 0);
+  if(!c || c.unit == null) return floor || null;
+  const driven = Math.max(0, c.unit - (rc.included.allowance || 0)) / (1 - (rc.margin || 0.4));
+  return Math.max(floor, driven > 0 ? roundEnding(driven) : 0);
+}
+
 function includedNote(rc){
   const i = rc && rc.included;
   if(!i || !i.placements) return 'personalisation priced separately';
-  const meth = (SEED.personalization[i.method] || {}).name || i.method;
   return 'includes ' + nWord(i.placements) + ' placement' + (i.placements === 1 ? '' : 's')
-    + ' at the ' + meth.toLowerCase() + ' rate, ' + (i.ink || 1) + ' colour, ' + (i.band || 'small');
+    + ' — small or medium embroidery or DTF';
 }
 function includedShort(rc){
   const i = rc && rc.included;
@@ -547,10 +579,12 @@ function placementUnit(rc, pl, qty){
 }
 /* What the list price already covers. The sheet says one placement, screen,
    one ink colour, small — not the two the prototype used to give away. */
+/* Kept for the one caller that asks "is this slot the included one". The
+   money is now in upgradeUnit(): the old model credited the included screen
+   rate against whatever you chose, which is not what the guide describes. */
 function includedUnit(rc, qty, slot){
   const inc = rc.included;
-  if(!inc || slot >= (inc.placements || 0)) return 0;
-  return placementUnit(rc, {method:inc.method, size:inc.band || 'small', colours:inc.ink || 1}, qty);
+  return (!inc || slot >= (inc.placements || 0)) ? 0 : (inc.allowance || 0);
 }
 /* a method we cannot price yet — it goes on the request, not on the total */
 function methodQuoteOnly(rc, method){
@@ -565,10 +599,11 @@ function quoteLines(p, rc, cfg){
   out.lines.push({label:'Garment, printed', note:includedNote(rc), unit:b.price});
 
   (cfg.placements || []).forEach((pl, i) => {
-    const full = placementUnit(rc, pl, qty);
-    const inc  = includedUnit(rc, qty, i);
-    /* the rate card is priced, not costed — nothing is marked up here */
-    const extra = Math.max(0, full - inc);
+    /* §12: the first placement is included when it is one of the eligible
+       methods at an eligible size, a paid upgrade when it is not, and every
+       later placement is charged in full whatever it is. */
+    const firstSlot = i < ((rc.included && rc.included.placements) || 1);
+    const extra = firstSlot ? (upgradeUnit(rc, pl, qty) || 0) : placementUnit(rc, pl, qty);
     if(methodQuoteOnly(rc, pl.method)){
       /* no rate exists for this one yet, and a placement that prices to zero
          would read as included rather than as unanswered */
@@ -585,11 +620,27 @@ function quoteLines(p, rc, cfg){
       unit: extra});
   });
 
-  const methods = [...new Set((cfg.placements || []).map(x => x.method))];
-  methods.forEach(m => {
-    const meta = rc.methods[m];
+  /* Pricing guide §9: setup is charged once per unique production-ready
+     artwork AND method, not once per method. The same logo repeated on the
+     chest and the sleeve is one setup and two paid placements; a different
+     logo on the back is a second setup. The same logo embroidered and screen
+     printed is two setups, because the methods differ.
+
+     Keying on method alone — which is what this did, and what §1 names as one
+     of the rules being replaced — undercharged every order carrying more than
+     one design. A placement with no artwork attached yet still needs its
+     method's setup, so it keys on the method alone and merges with others
+     like it rather than inventing a second charge. */
+  const seen = new Set();
+  (cfg.placements || []).forEach(pl => {
+    const art = pl.art || '';
+    const key = pl.method + '|' + art;
+    if(seen.has(key)) return;
+    seen.add(key);
+    const meta = rc.methods[pl.method];
     const s = meta ? meta.setup : null;
-    out.setup.push({method:m, name:(SEED.personalization[m]||{}).name || m,
+    out.setup.push({method:pl.method, art:art || null,
+                    name:(SEED.personalization[pl.method]||{}).name || pl.method,
                     cost:s, unknown:s == null});
     if(s) out.setupTotal += s;
   });
@@ -606,7 +657,12 @@ function quoteLines(p, rc, cfg){
    is gone — and screen print is an exact lookup on quantity AND ink colours
    rather than a percentage applied to a one-colour rate. A method with no
    price is not free: it comes back marked for quoting. */
-function decoCost(rc, method, qty, colours, longestMm){
+/* field is 'price' for what a customer pays and 'cost' for what it costs us.
+   The upgrade surcharge in the 2026 pricing guide is computed from cost —
+   (cost - allowance) / 0.60 — so both have to come out of the same ladder or
+   they will drift apart the first time a rate changes. */
+function decoCost(rc, method, qty, colours, longestMm, field){
+  field = field || 'price';
   const m = rc.methods[method];
   if(!m) return null;
   if(m.status && m.status !== 'priced') return {setup:m.setup, unit:null, quote:true};
@@ -616,14 +672,14 @@ function decoCost(rc, method, qty, colours, longestMm){
       : longestMm <= (m.bandSmall || 99) ? 'small'
       : longestMm <= (m.bandMedium || 150) ? 'medium' : 'large';
     const r = rc.rates.find(x => x.method === method && x.band === band);
-    if(r){ unit = r.price; provisional = r.provisional; }
+    if(r){ unit = r[field] == null ? null : r[field]; provisional = r.provisional; }
   } else {
     const ink = Math.min(Math.max(colours || 1, 1), m.maxColours || 4);
     const ladder = rc.rates.filter(x => x.method === method && x.ink === ink && x.qtyMin != null)
       .sort((a,b) => a.qtyMin - b.qtyMin);
     let hit = ladder.length ? ladder[0] : null;
     for(const r of ladder) if(qty >= r.qtyMin) hit = r;
-    if(hit){ unit = hit.price; provisional = hit.provisional; }
+    if(hit){ unit = hit[field] == null ? null : hit[field]; provisional = hit.provisional; }
   }
   if(unit == null) return {setup:m.setup, unit:null, quote:true};
   return {setup: m.setup, unit, total: (m.setup || 0) + unit * qty, provisional};

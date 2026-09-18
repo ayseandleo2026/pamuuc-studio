@@ -202,6 +202,10 @@ export function loadMockup(mockupDir, manifest, covers) {
         builder has no navigation history to have set it. Leaving it to the
         order pages happen to be rendered in would work today and break the day
         somebody reorders the list. */
+    /** Runs an expression inside the app's own scope, so a pricing check
+        exercises the real quoteLines() rather than a copy of it. */
+    evalIn(expr) { return vm.runInContext(expr, ctx); },
+
     setUI(patch) {
       vm.runInContext('Object.assign(UI, ' + JSON.stringify(patch) + ');', ctx);
     },

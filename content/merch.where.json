@@ -155,7 +155,6 @@
   "What are these?": 11,
   "Custom Bodywarmer": 11,
   "Artwork": 11,
-  "included": 11,
   "Large": 11,
   "Medium": 11,
   "Method": 11,
@@ -165,8 +164,8 @@
   "Small": 11,
   "Minimum 1 piece. The tiers are shortcuts — type any number and the price follows it. What is shown is per piece for the garment with the included spec, before personalisation and before VAT; sizes are split later.": 10,
   "Production time is not an arrival date — destination and schedule are confirmed with the quote.": 10,
-  "includes one placement at the screen print rate, 1 colour, small": 10,
   "Embroidery — setup €35.49 per job · priced by size": 10,
+  "includes one placement — small or medium embroidery or DTF": 10,
   "Build yours · 2 fits · 4 weights": 10,
   "one-off, per job — not per piece": 10,
   "Build yours · 2 styles": 10,
@@ -275,13 +274,13 @@
   "The quantity you order decides the decoration method": 3,
   "Fabric weight decides more than price does": 3,
   "View the Trousers and shorts collection": 3,
-  "1 product · from €36.99": 3,
-  "2 products · from €15.49": 3,
-  "2 products · from €17.99": 3,
-  "4 products · from €7.99": 3,
-  "5 products · from €16.99": 3,
-  "8 products · from €5.49": 3,
-  "9 products · from €31.49": 3,
+  "1 product · from €40.49": 3,
+  "2 products · from €18.99": 3,
+  "2 products · from €21.49": 3,
+  "4 products · from €11.49": 3,
+  "5 products · from €20.49": 3,
+  "8 products · from €8.99": 3,
+  "9 products · from €35.49": 3,
   "View the Accessories collection": 3,
   "View the Outerwear collection": 3,
   "View the Polos collection": 3,
@@ -364,10 +363,11 @@
   "· Mid-weight": 2,
   "10 garments": 2,
   "2 minutes": 2,
-  "From €27.49": 2,
-  "From €32.49": 2,
-  "From €36.99": 2,
-  "From €9.49": 2,
+  "From €12.99": 2,
+  "From €30.99": 2,
+  "From €35.49": 2,
+  "From €35.99": 2,
+  "From €40.49": 2,
   "Keep reading": 2,
   "Left leg": 2,
   "Reading time": 2,
@@ -561,16 +561,16 @@
   "Women · Sleeveless softshell bodywarmer · Slim fit · 315 g/m² — Custom Bodywarmer": 1,
   "Women · Softshell jacket · Regular fit · 342 g/m² — Custom Softshell Jacket": 1,
   "Women · Tank top · Regular fit · 155 g/m² — Custom Tank Top": 1,
-  "€110.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€48.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€131.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
   "€49.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
   "€49.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€51.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€53.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€59.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€66.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€69.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
-  "€80.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€52.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€54.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€58.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€62.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€71.48 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€74.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
+  "€88.98 per piece with the setup spread over 1 piece · excludes VAT": 1,
   "80% cotton / 20% polyester · Mid tier · 4 colours · OS": 1,
   "93% cotton / 1% elastane / 6% polyamide · 8 colours · OS": 1,
   "Baby · Hoodie · Regular fit · 280 g/m² — Custom Pullover Hoodie": 1,
@@ -685,17 +685,17 @@
   "Women · Scoop neck t-shirt · Regular fit · 155 g/m²": 1,
   "Women · Sleeveless fleece jacket · Slim fit · 300 g/m²": 1,
   "Women · Sleeveless softshell bodywarmer · Slim fit · 315 g/m²": 1,
-  "10 garments across 1 product · from €36.99 per piece": 1,
-  "10 garments across 2 products · from €17.99 per piece": 1,
+  "10 garments across 1 product · from €40.49 per piece": 1,
+  "10 garments across 2 products · from €21.49 per piece": 1,
   "100% organic cotton · Essential · 17 colours · OS": 1,
   "100% recycled cotton · Essential · 21 colours · OS": 1,
   "100% recycled cotton · Premium · 16 colours · OS": 1,
-  "13 garments across 8 products · from €5.49 per piece": 1,
+  "13 garments across 8 products · from €8.99 per piece": 1,
   "153 garments in the catalogue. Choose what you are after.": 1,
-  "28 garments across 9 products · from €31.49 per piece": 1,
-  "36 garments across 4 products · from €7.99 per piece": 1,
-  "50 garments across 5 products · from €16.99 per piece": 1,
-  "6 garments across 2 products · from €15.49 per piece": 1,
+  "28 garments across 9 products · from €35.49 per piece": 1,
+  "36 garments across 4 products · from €11.49 per piece": 1,
+  "50 garments across 5 products · from €20.49 per piece": 1,
+  "6 garments across 2 products · from €18.99 per piece": 1,
   "A tailored jacket and trouser in daylight, worn on shift": 1,
   "Assess material, size and fit, under the approved sample policy": 1,
   "Baby · Bib · 210 g/m² — Custom Baby Bib": 1,
@@ -765,16 +765,16 @@
   "Women · Softshell jacket · Regular fit · 342 g/m²": 1,
   "Women · Tank top · Regular fit · 155 g/m²": 1,
   "Women · V-neck t-shirt · Regular fit · 155 g/m²": 1,
-  "€110.48 per piece · 1 piece · 1 placement": 1,
-  "€48.98 per piece · 1 piece · 1 placement": 1,
+  "€131.98 per piece · 1 piece · 1 placement": 1,
   "€49.48 per piece · 1 piece · 1 placement": 1,
   "€49.98 per piece · 1 piece · 1 placement": 1,
-  "€51.98 per piece · 1 piece · 1 placement": 1,
-  "€53.98 per piece · 1 piece · 1 placement": 1,
-  "€59.98 per piece · 1 piece · 1 placement": 1,
-  "€66.48 per piece · 1 piece · 1 placement": 1,
-  "€69.98 per piece · 1 piece · 1 placement": 1,
-  "€80.98 per piece · 1 piece · 1 placement": 1,
+  "€52.48 per piece · 1 piece · 1 placement": 1,
+  "€54.98 per piece · 1 piece · 1 placement": 1,
+  "€58.48 per piece · 1 piece · 1 placement": 1,
+  "€62.48 per piece · 1 piece · 1 placement": 1,
+  "€71.48 per piece · 1 piece · 1 placement": 1,
+  "€74.98 per piece · 1 piece · 1 placement": 1,
+  "€88.98 per piece · 1 piece · 1 placement": 1,
   "All 10 shirts we make, listed one by one.": 1,
   "All 13 accessories we make, listed one by one.": 1,
   "All 28 outerwear we make, listed one by one.": 1,
@@ -919,15 +919,15 @@
   "What weight does to a decoration": 1,
   "What With polar fleece lining means": 1,
   "1 left after your answers.": 1,
-  "10 garments · from €17.99": 1,
-  "10 garments · from €36.99": 1,
-  "13 garments · from €5.49": 1,
-  "28 garments · from €31.49": 1,
-  "36 garments · from €7.99": 1,
+  "10 garments · from €21.49": 1,
+  "10 garments · from €40.49": 1,
+  "13 garments · from €8.99": 1,
+  "28 garments · from €35.49": 1,
+  "36 garments · from €11.49": 1,
   "4 left after your answers.": 1,
   "5 left after your answers.": 1,
-  "50 garments · from €16.99": 1,
-  "6 garments · from €15.49": 1,
+  "50 garments · from €20.49": 1,
+  "6 garments · from €18.99": 1,
   "8 left after your answers.": 1,
   "9 left after your answers.": 1,
   "Branded merchandise by product family.": 1,
@@ -964,7 +964,7 @@
   "Dental and private clinics": 1,
   "Durable when cured correctly": 1,
   "Embroidery is priced differently": 1,
-  "From €7.99 per piece": 1,
+  "From €11.49 per piece": 1,
   "How to compare honestly": 1,
   "Maintenance and support teams": 1,
   "Not sure which service": 1,
@@ -1071,35 +1071,33 @@
   "Decoration sample": 1,
   "Digital proof": 1,
   "Direct routes": 1,
-  "From €10.49": 1,
-  "From €112.49": 1,
+  "From €11.49": 1,
+  "From €11.99": 1,
+  "From €116.49": 1,
   "From €13.99": 1,
-  "From €15.49": 1,
-  "From €16.49": 1,
-  "From €16.99": 1,
-  "From €17.99": 1,
+  "From €17.49": 1,
+  "From €18.99": 1,
+  "From €19.99": 1,
   "From €20.49": 1,
-  "From €20.99": 1,
   "From €21.49": 1,
-  "From €21.99": 1,
-  "From €22.99": 1,
-  "From €25.99": 1,
-  "From €26.99": 1,
-  "From €29.49": 1,
-  "From €31.49": 1,
-  "From €31.99": 1,
-  "From €36.49": 1,
-  "From €37.49": 1,
-  "From €38.99": 1,
-  "From €40.49": 1,
-  "From €43.49": 1,
-  "From €49.99": 1,
-  "From €59.49": 1,
-  "From €60.99": 1,
-  "From €7.99": 1,
-  "From €77.49": 1,
-  "From €8.49": 1,
-  "From €80.99": 1,
+  "From €23.99": 1,
+  "From €24.49": 1,
+  "From €24.99": 1,
+  "From €25.49": 1,
+  "From €26.49": 1,
+  "From €28.99": 1,
+  "From €30.49": 1,
+  "From €32.99": 1,
+  "From €39.99": 1,
+  "From €40.99": 1,
+  "From €42.49": 1,
+  "From €43.99": 1,
+  "From €46.99": 1,
+  "From €53.49": 1,
+  "From €63.49": 1,
+  "From €64.99": 1,
+  "From €81.49": 1,
+  "From €84.99": 1,
   "Light woven": 1,
   "Log in": 1,
   "Meet PAMUUC.": 1,
@@ -1142,6 +1140,7 @@
   "Fisherman": 1,
   "Heavyweight": 1,
   "Help": 1,
+  "included": 1,
   "Latest": 1,
   "Minimum": 1,
   "Multifunctional": 1,
@@ -2235,13 +2234,6 @@
    "product:m_padded_parkas",
    "product:m_baby_bodysuits"
   ],
-  "included": [
-   "product:m_zip_sweatshirts",
-   "product:m_long_sleeve_polo_shirts",
-   "product:m_sherpa_jackets",
-   "product:m_padded_parkas",
-   "product:m_baby_bodysuits"
-  ],
   "Large": [
    "product:m_zip_sweatshirts",
    "product:m_long_sleeve_polo_shirts",
@@ -2305,14 +2297,14 @@
    "product:m_baby_bodysuits",
    "product:m_baby_bibs"
   ],
-  "includes one placement at the screen print rate, 1 colour, small": [
+  "Embroidery — setup €35.49 per job · priced by size": [
    "product:m_zip_sweatshirts",
    "product:m_long_sleeve_polo_shirts",
    "product:m_sherpa_jackets",
    "product:m_baby_bodysuits",
    "product:m_baby_bibs"
   ],
-  "Embroidery — setup €35.49 per job · priced by size": [
+  "includes one placement — small or medium embroidery or DTF": [
    "product:m_zip_sweatshirts",
    "product:m_long_sleeve_polo_shirts",
    "product:m_sherpa_jackets",
@@ -3047,37 +3039,37 @@
    "collections",
    "search"
   ],
-  "1 product · from €36.99": [
+  "1 product · from €40.49": [
    "merch",
    "collections",
    "search"
   ],
-  "2 products · from €15.49": [
+  "2 products · from €18.99": [
    "merch",
    "collections",
    "search"
   ],
-  "2 products · from €17.99": [
+  "2 products · from €21.49": [
    "merch",
    "collections",
    "search"
   ],
-  "4 products · from €7.99": [
+  "4 products · from €11.49": [
    "merch",
    "collections",
    "search"
   ],
-  "5 products · from €16.99": [
+  "5 products · from €20.49": [
    "merch",
    "collections",
    "search"
   ],
-  "8 products · from €5.49": [
+  "8 products · from €8.99": [
    "merch",
    "collections",
    "search"
   ],
-  "9 products · from €31.49": [
+  "9 products · from €35.49": [
    "merch",
    "collections",
    "search"
@@ -3430,21 +3422,25 @@
    "merchpost:weight-vs-price",
    "merchpost:quantity-changes-method"
   ],
-  "From €27.49": [
+  "From €12.99": [
+   "product:m_t_shirts",
+   "product:m_tank_tops"
+  ],
+  "From €30.99": [
    "product:m_crewneck_sweatshirts",
    "product:m_pullover_hoodies"
   ],
-  "From €32.49": [
+  "From €35.49": [
+   "product:m_pullover_hoodies",
+   "product:m_bodywarmers"
+  ],
+  "From €35.99": [
    "product:m_zip_hoodies",
    "product:m_joggers"
   ],
-  "From €36.99": [
+  "From €40.49": [
    "product:m_shirts",
    "product:m_quarter_zip_sweatshirts"
-  ],
-  "From €9.49": [
-   "product:m_t_shirts",
-   "product:m_tank_tops"
   ],
   "Keep reading": [
    "merchpost:weight-vs-price",
@@ -4037,34 +4033,34 @@
   "Women · Tank top · Regular fit · 155 g/m² — Custom Tank Top": [
    "collection:t-shirts"
   ],
-  "€110.48 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€131.98 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_sherpa_jackets"
   ],
-  "€48.98 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€49.48 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_baby_bibs"
   ],
-  "€49.48 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€49.98 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_pencil_cases"
   ],
-  "€49.98 per piece with the setup spread over 1 piece · excludes VAT": [
-   "product:m_bucket_hats"
-  ],
-  "€51.98 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€52.48 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_baby_bodysuits"
   ],
-  "€53.98 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€54.98 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_drawstring_gym_bags"
   ],
-  "€59.98 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€58.48 per piece with the setup spread over 1 piece · excludes VAT": [
+   "product:m_bucket_hats"
+  ],
+  "€62.48 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_belt_bags"
   ],
-  "€66.48 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€71.48 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_long_sleeve_polo_shirts"
   ],
-  "€69.98 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€74.98 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_duffle_bags"
   ],
-  "€80.98 per piece with the setup spread over 1 piece · excludes VAT": [
+  "€88.98 per piece with the setup spread over 1 piece · excludes VAT": [
    "product:m_zip_sweatshirts"
   ],
   "80% cotton / 20% polyester · Mid tier · 4 colours · OS": [
@@ -4409,10 +4405,10 @@
   "Women · Sleeveless softshell bodywarmer · Slim fit · 315 g/m²": [
    "collection:jackets"
   ],
-  "10 garments across 1 product · from €36.99 per piece": [
+  "10 garments across 1 product · from €40.49 per piece": [
    "collection:shirts"
   ],
-  "10 garments across 2 products · from €17.99 per piece": [
+  "10 garments across 2 products · from €21.49 per piece": [
    "collection:joggers-and-shorts"
   ],
   "100% organic cotton · Essential · 17 colours · OS": [
@@ -4424,22 +4420,22 @@
   "100% recycled cotton · Premium · 16 colours · OS": [
    "product:m_tote_bags"
   ],
-  "13 garments across 8 products · from €5.49 per piece": [
+  "13 garments across 8 products · from €8.99 per piece": [
    "collection:accessories"
   ],
   "153 garments in the catalogue. Choose what you are after.": [
    "products"
   ],
-  "28 garments across 9 products · from €31.49 per piece": [
+  "28 garments across 9 products · from €35.49 per piece": [
    "collection:jackets"
   ],
-  "36 garments across 4 products · from €7.99 per piece": [
+  "36 garments across 4 products · from €11.49 per piece": [
    "collection:t-shirts"
   ],
-  "50 garments across 5 products · from €16.99 per piece": [
+  "50 garments across 5 products · from €20.49 per piece": [
    "collection:sweatshirts"
   ],
-  "6 garments across 2 products · from €15.49 per piece": [
+  "6 garments across 2 products · from €18.99 per piece": [
    "collection:polo-shirts"
   ],
   "A tailored jacket and trouser in daylight, worn on shift": [
@@ -4649,34 +4645,34 @@
   "Women · V-neck t-shirt · Regular fit · 155 g/m²": [
    "collection:t-shirts"
   ],
-  "€110.48 per piece · 1 piece · 1 placement": [
+  "€131.98 per piece · 1 piece · 1 placement": [
    "product:m_sherpa_jackets"
   ],
-  "€48.98 per piece · 1 piece · 1 placement": [
+  "€49.48 per piece · 1 piece · 1 placement": [
    "product:m_baby_bibs"
   ],
-  "€49.48 per piece · 1 piece · 1 placement": [
+  "€49.98 per piece · 1 piece · 1 placement": [
    "product:m_pencil_cases"
   ],
-  "€49.98 per piece · 1 piece · 1 placement": [
-   "product:m_bucket_hats"
-  ],
-  "€51.98 per piece · 1 piece · 1 placement": [
+  "€52.48 per piece · 1 piece · 1 placement": [
    "product:m_baby_bodysuits"
   ],
-  "€53.98 per piece · 1 piece · 1 placement": [
+  "€54.98 per piece · 1 piece · 1 placement": [
    "product:m_drawstring_gym_bags"
   ],
-  "€59.98 per piece · 1 piece · 1 placement": [
+  "€58.48 per piece · 1 piece · 1 placement": [
+   "product:m_bucket_hats"
+  ],
+  "€62.48 per piece · 1 piece · 1 placement": [
    "product:m_belt_bags"
   ],
-  "€66.48 per piece · 1 piece · 1 placement": [
+  "€71.48 per piece · 1 piece · 1 placement": [
    "product:m_long_sleeve_polo_shirts"
   ],
-  "€69.98 per piece · 1 piece · 1 placement": [
+  "€74.98 per piece · 1 piece · 1 placement": [
    "product:m_duffle_bags"
   ],
-  "€80.98 per piece · 1 piece · 1 placement": [
+  "€88.98 per piece · 1 piece · 1 placement": [
    "product:m_zip_sweatshirts"
   ],
   "All 10 shirts we make, listed one by one.": [
@@ -5111,19 +5107,19 @@
   "1 left after your answers.": [
    "build:shirts"
   ],
-  "10 garments · from €17.99": [
+  "10 garments · from €21.49": [
    "products"
   ],
-  "10 garments · from €36.99": [
+  "10 garments · from €40.49": [
    "products"
   ],
-  "13 garments · from €5.49": [
+  "13 garments · from €8.99": [
    "products"
   ],
-  "28 garments · from €31.49": [
+  "28 garments · from €35.49": [
    "products"
   ],
-  "36 garments · from €7.99": [
+  "36 garments · from €11.49": [
    "products"
   ],
   "4 left after your answers.": [
@@ -5132,10 +5128,10 @@
   "5 left after your answers.": [
    "build:sweatshirts"
   ],
-  "50 garments · from €16.99": [
+  "50 garments · from €20.49": [
    "products"
   ],
-  "6 garments · from €15.49": [
+  "6 garments · from €18.99": [
    "products"
   ],
   "8 left after your answers.": [
@@ -5246,7 +5242,7 @@
   "Embroidery is priced differently": [
    "merchpost:quantity-changes-method"
   ],
-  "From €7.99 per piece": [
+  "From €11.49 per piece": [
    "merch"
   ],
   "How to compare honestly": [
@@ -5567,91 +5563,85 @@
   "Direct routes": [
    "contact"
   ],
-  "From €10.49": [
-   "product:m_tank_tops"
+  "From €11.49": [
+   "product:m_t_shirts"
   ],
-  "From €112.49": [
+  "From €11.99": [
+   "product:m_t_shirts"
+  ],
+  "From €116.49": [
    "product:m_padded_jackets_parkas"
   ],
   "From €13.99": [
+   "product:m_tank_tops"
+  ],
+  "From €17.49": [
    "product:m_long_sleeve_t_shirts"
   ],
-  "From €15.49": [
+  "From €18.99": [
    "product:m_polo_shirts"
   ],
-  "From €16.49": [
+  "From €19.99": [
    "product:m_polo_shirts"
-  ],
-  "From €16.99": [
-   "product:m_crewneck_sweatshirts"
-  ],
-  "From €17.99": [
-   "product:m_joggers"
   ],
   "From €20.49": [
-   "product:m_pullover_hoodies"
-  ],
-  "From €20.99": [
-   "product:m_polo_shirts"
+   "product:m_crewneck_sweatshirts"
   ],
   "From €21.49": [
-   "product:m_zip_hoodies"
-  ],
-  "From €21.99": [
-   "product:m_sweat_shorts"
-  ],
-  "From €22.99": [
-   "product:m_crewneck_sweatshirts"
-  ],
-  "From €25.99": [
-   "product:m_crewneck_sweatshirts"
-  ],
-  "From €26.99": [
    "product:m_joggers"
   ],
-  "From €29.49": [
+  "From €23.99": [
+   "product:m_pullover_hoodies"
+  ],
+  "From €24.49": [
+   "product:m_polo_shirts"
+  ],
+  "From €24.99": [
+   "product:m_zip_hoodies"
+  ],
+  "From €25.49": [
    "product:m_sweat_shorts"
   ],
-  "From €31.49": [
-   "product:m_bodywarmers"
+  "From €26.49": [
+   "product:m_crewneck_sweatshirts"
   ],
-  "From €31.99": [
-   "product:m_pullover_hoodies"
+  "From €28.99": [
+   "product:m_crewneck_sweatshirts"
   ],
-  "From €36.49": [
+  "From €30.49": [
+   "product:m_joggers"
+  ],
+  "From €32.99": [
+   "product:m_sweat_shorts"
+  ],
+  "From €39.99": [
    "product:m_fleece_jackets"
   ],
-  "From €37.49": [
+  "From €40.99": [
    "product:m_zip_hoodies"
   ],
-  "From €38.99": [
+  "From €42.49": [
    "product:m_pullover_hoodies"
   ],
-  "From €40.49": [
+  "From €43.99": [
    "product:m_zip_hoodies"
   ],
-  "From €43.49": [
+  "From €46.99": [
    "product:m_shirts"
   ],
-  "From €49.99": [
+  "From €53.49": [
    "product:m_quarter_zip_sweatshirts"
   ],
-  "From €59.49": [
+  "From €63.49": [
    "product:m_fleece_jackets"
   ],
-  "From €60.99": [
+  "From €64.99": [
    "product:m_bodywarmers"
   ],
-  "From €7.99": [
-   "product:m_t_shirts"
-  ],
-  "From €77.49": [
+  "From €81.49": [
    "product:m_softshell_jackets"
   ],
-  "From €8.49": [
-   "product:m_t_shirts"
-  ],
-  "From €80.99": [
+  "From €84.99": [
    "product:m_padded_jackets_parkas"
   ],
   "Light woven": [
@@ -5779,6 +5769,9 @@
   ],
   "Help": [
    "merchhelp"
+  ],
+  "included": [
+   "product:m_padded_parkas"
   ],
   "Latest": [
    "merchblog"
