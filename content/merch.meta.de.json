@@ -224,6 +224,18 @@
   "build:accessories": {
    "title": "Taschen und Accessoires mit Logo auswählen | PAMUUC",
    "description": "Finden Sie Taschen und Accessoires mit Logo für Ihr Unternehmen. Vergleichen Sie Produkte, Materialien und Logooptionen und fragen Sie ein Angebot an."
+  },
+  "merchblog": {
+   "title": "Merchandise-Journal, PAMUUC",
+   "description": "Notizen aus unserer Werkstatt zu Flächengewicht, Veredelungstechniken und Nachbestellungen von Werbeartikeln."
+  },
+  "merchpost:weight-vs-price": {
+   "title": "Das Flächengewicht entscheidet mehr als der Preis | PAMUUC",
+   "description": "Zwei T-Shirts zum gleichen Preis verhalten sich unter demselben Druck oft völlig anders. Das Flächengewicht, nicht der Preis, ist die erste Zahl zum Vergleichen."
+  },
+  "merchpost:quantity-changes-method": {
+   "title": "Die Bestellmenge entscheidet über die Veredelung | PAMUUC",
+   "description": "Siebdruck hat Einrichtungskosten, die sich bei kleinen Auflagen nicht amortisieren. Unter etwa hundert Stück ändert allein diese Tatsache die richtige Antwort."
   }
  },
  "templates": {

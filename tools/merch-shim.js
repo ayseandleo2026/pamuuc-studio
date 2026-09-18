@@ -457,6 +457,20 @@
      script, which makes it a global property and therefore replaceable. */
   var innerRender = render;
   render = function () {
+    /* pubBlog() and pubPost() ask UI.lastBranch which journal they are, and
+       PUB_BRANCH has no entry for either — in the app you always arrive from a
+       branch, so it is set by the page you came from. Land on the journal
+       directly and nothing has set it, so the merchandise journal rendered the
+       UNIFORMS one: hotel laundry articles under a PAMUUC STUDIO header, over
+       correct server-rendered HTML.
+
+       This bundle routes exactly one journal, the merchandise one, so for these
+       two pages the answer is not ambiguous. The builder declares the same
+       thing through setUI; this is the runtime half of it. */
+    try {
+      if (ROUTE && (ROUTE.page === 'blog' || ROUTE.page === 'post')
+          && typeof UI !== 'undefined' && UI) UI.lastBranch = 'merch';
+    } catch (e) {}
     var r = innerRender.apply(this, arguments);
     try { retext(); applyMeta(); relink(); relang(); saveQuote(); saveOffers(); } catch (e) {}
     return r;

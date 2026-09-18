@@ -224,6 +224,18 @@
   "build:accessories": {
    "title": "Scegliere: borse e accessori personalizzati | PAMUUC",
    "description": "Trovi borse e accessori personalizzati per la sua azienda. Confronti prodotti, materiali e opzioni del logo e prepari la sua richiesta."
+  },
+  "merchblog": {
+   "title": "Journal dei gadget aziendali, PAMUUC",
+   "description": "Note dal nostro laboratorio su grammatura, tecniche di personalizzazione e riordino dei gadget aziendali."
+  },
+  "merchpost:weight-vs-price": {
+   "title": "La grammatura decide più del prezzo | PAMUUC",
+   "description": "Due magliette allo stesso prezzo possono comportarsi in modo molto diverso sotto la stessa stampa. La grammatura, non il costo, è il primo numero da confrontare."
+  },
+  "merchpost:quantity-changes-method": {
+   "title": "La quantità che ordina decide la tecnica | PAMUUC",
+   "description": "La serigrafia ha un costo di preparazione che non si ammortizza su tirature brevi. Sotto il centinaio di pezzi, questo solo fatto cambia la risposta giusta."
   }
  },
  "templates": {

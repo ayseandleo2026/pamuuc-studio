@@ -88,7 +88,13 @@ export function urlFor(target, loc, site, cats) {
     case 'contact':       return `${p}contact/`;
 
     /* already live, already ranking — the mockup's copies map onto these */
-    case 'blog':          return site.locales[loc].blog;
+    /* The MERCHANDISE journal. The mockup has always had two — pubBlog() reads
+       the branch and postsFor() splits on cat === 'Merchandise' — but only the
+       custom uniforms one was ever built, mapped onto the blog that already
+       ranked. Both are published now, so this one gets its own address inside
+       the merchandise family, where the rest of its pages live. The uniforms
+       journal keeps /blog/ and every ranking it has. */
+    case 'blog':          return `${p}merchandise/journal/`;
     case 'post':          return postURL(param, loc, site);
     case 'privacy':       return `${site.legalPrefix[loc]}#privacy`;
     case 'cookies':       return `${site.legalPrefix[loc]}#cookies`;
@@ -103,6 +109,13 @@ export function urlFor(target, loc, site, cats) {
    uses; site.postSlugs keys by a short name. Match on the English slug so the
    two stay in step without a second mapping to maintain. */
 function postURL(id, loc, site) {
+  /* A merchandise note lives under the merchandise journal, not under the
+     uniforms blog. Checked first, because the two sets are keyed differently:
+     these by the mockup's own id, the uniforms ones by the English slug the
+     live site already uses. */
+  const merch = (site.merchPostSlugs || {})[id];
+  if (merch) return `${prefix(site, loc)}merchandise/journal/${merch[loc] || merch.en}/`;
+
   const key = Object.keys(site.postSlugs).find((k) => site.postSlugs[k].en === id) || id;
   const slugs = site.postSlugs[key];
   if (!slugs) return null;
@@ -143,7 +156,18 @@ export function pageList(M, site, loc) {
     { id: 'contact',     url: urlFor('public:contact', loc, site),     render: 'pubContact',     priority: '0.6' },
     /* search has nothing to index — it is a form over the catalogue */
     { id: 'search',      url: urlFor('public:search', loc, site),      render: 'pubSearch',      noindex: true },
+    /* The merchandise journal and its notes. branch is declared rather than
+       inferred: pubBlog() and pubPost() both read UI.lastBranch to decide which
+       journal they are, and a builder has no navigation history to have set it. */
+    { id: 'merchblog',   url: urlFor('public:blog', loc, site),        render: 'pubBlog',
+      branch: 'merch', priority: '0.6' },
   ];
+  for (const id of Object.keys(site.merchPostSlugs || {})) {
+    out.push({
+      id: 'merchpost:' + id, url: urlFor('public:post:' + id, loc, site),
+      render: 'pubPost', arg: id, branch: 'merch', priority: '0.6',
+    });
+  }
   for (const p of P) {
     out.push({
       id: 'product:' + p.id, url: urlFor('public:product:' + p.id, loc, site),

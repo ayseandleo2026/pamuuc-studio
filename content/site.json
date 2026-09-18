@@ -363,5 +363,21 @@
  "intake": {
   "_comment": "The Cloudflare Worker the forms post to. The subdomain was assigned by Cloudflare when the account's first Worker was deployed; it is also in the CSP, so it cannot be discovered at runtime.",
   "endpoint": "https://pamuuc-intake.black-butterfly-384c.workers.dev"
+ },
+ "merchPostSlugs": {
+  "weight-vs-price": {
+   "en": "fabric-weight-versus-price",
+   "es": "gramaje-frente-al-precio",
+   "fr": "grammage-plutot-que-prix",
+   "it": "grammatura-invece-del-prezzo",
+   "de": "flaechengewicht-statt-preis"
+  },
+  "quantity-changes-method": {
+   "en": "quantity-decides-the-method",
+   "es": "la-cantidad-decide-la-tecnica",
+   "fr": "la-quantite-decide-la-technique",
+   "it": "la-quantita-decide-la-tecnica",
+   "de": "menge-entscheidet-die-veredelung"
+  }
  }
 }

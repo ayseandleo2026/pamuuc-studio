@@ -196,6 +196,16 @@ export function loadMockup(mockupDir, manifest, covers) {
   return {
     S,
     swapped,
+    /** Sets a field on the app's UI state before a render.
+        The journal is the one place whose output depends on which branch you
+        arrived from — pubBlog() and pubPost() both read UI.lastBranch — and a
+        builder has no navigation history to have set it. Leaving it to the
+        order pages happen to be rendered in would work today and break the day
+        somebody reorders the list. */
+    setUI(patch) {
+      vm.runInContext('Object.assign(UI, ' + JSON.stringify(patch) + ');', ctx);
+    },
+
     /** Calls a pub* renderer and returns its HTML. */
     render(name, ...args) {
       const f = fn(name);

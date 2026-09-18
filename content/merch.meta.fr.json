@@ -224,6 +224,18 @@
   "build:accessories": {
    "title": "Choisir : sacs et accessoires personnalisés | PAMUUC",
    "description": "Trouvez des sacs et accessoires personnalisés pour votre entreprise. Comparez les produits, les matières et les options du logo, puis demandez un devis."
+  },
+  "merchblog": {
+   "title": "Journal des objets publicitaires, PAMUUC",
+   "description": "Notes de notre atelier sur le grammage, les techniques de personnalisation et le réassort des objets publicitaires."
+  },
+  "merchpost:weight-vs-price": {
+   "title": "Le grammage décide plus que le prix | PAMUUC",
+   "description": "Deux t-shirts au même prix peuvent se comporter très différemment sous la même impression. Le grammage, et non le coût, est le premier chiffre à comparer."
+  },
+  "merchpost:quantity-changes-method": {
+   "title": "La quantité commandée décide de la technique | PAMUUC",
+   "description": "La sérigraphie a un coût de préparation qui ne s’amortit pas sur une petite série. En dessous d’une centaine de pièces, ce seul fait change la bonne réponse."
   }
  },
  "templates": {

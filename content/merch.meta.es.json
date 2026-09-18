@@ -224,6 +224,18 @@
   "build:accessories": {
    "title": "Elegir: bolsas y accesorios personalizados | PAMUUC",
    "description": "Encuentre bolsas y accesorios personalizados para su empresa. Compare productos, materiales y opciones del logo y prepare su solicitud."
+  },
+  "merchblog": {
+   "title": "Journal de merchandising, PAMUUC",
+   "description": "Notas de nuestro taller sobre gramaje, técnicas de personalización y repetición de pedidos de merchandising."
+  },
+  "merchpost:weight-vs-price": {
+   "title": "El gramaje decide más que el precio | PAMUUC",
+   "description": "Dos camisetas al mismo precio pueden comportarse de forma muy distinta bajo la misma estampación. El gramaje, no el coste, es el primer número que comparar."
+  },
+  "merchpost:quantity-changes-method": {
+   "title": "La cantidad que pide decide la técnica | PAMUUC",
+   "description": "La serigrafía tiene un coste de preparación que no se amortiza en tiradas cortas. Por debajo de unas cien unidades, ese único hecho cambia la respuesta correcta."
   }
  },
  "templates": {

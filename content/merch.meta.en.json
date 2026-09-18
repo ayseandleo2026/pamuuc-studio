@@ -224,6 +224,18 @@
   "build:accessories": {
    "title": "Choose your accessories | PAMUUC",
    "description": "Find the right accessories for your company. Choose who it is for, the fit and fabric, then compare matching products and logo options."
+  },
+  "merchblog": {
+   "title": "Merchandise journal, PAMUUC",
+   "description": "Notes from our workshop on fabric weight, personalisation methods and reordering branded merchandise."
+  },
+  "merchpost:weight-vs-price": {
+   "title": "Fabric weight decides more than price does | PAMUUC",
+   "description": "Two t-shirts at the same price can behave completely differently under the same print. Weight, not cost, is the first number to compare."
+  },
+  "merchpost:quantity-changes-method": {
+   "title": "The quantity you order decides the decoration method | PAMUUC",
+   "description": "Screens have a setup cost with nowhere to amortise on a short run. Below about a hundred pieces, that single fact changes the right answer."
   }
  },
  "templates": {

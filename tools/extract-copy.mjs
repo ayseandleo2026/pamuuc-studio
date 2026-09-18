@@ -28,6 +28,9 @@ const M = loadMockup(join(ROOT, 'mockup'), manifest);
 /* English is the source; the other languages are translations of it */
 const pages = [];
 for (const p of pageList(M, site, 'en')) {
+  /* Same reason as the builder: the journal renders whichever branch
+     UI.lastBranch says, and an extractor has no navigation history either. */
+  if (p.branch) { try { M.setUI({ lastBranch: p.branch }); } catch (e) {} }
   try { pages.push({ id: p.id, html: p.arg ? M.render(p.render, p.arg) : M.render(p.render) }); }
   catch (e) { console.log(`  could not render ${p.id}: ${e.message}`); }
 }

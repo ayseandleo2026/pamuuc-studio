@@ -63,14 +63,15 @@ function offsiteLinks(site, LOCALES) {
 const PAGE_OF = { chooser: 'home', merch: 'merch', products: 'products',
   collections: 'collections', method: 'method', howto: 'howto',
   merchhelp: 'merchhelp', quote: 'quote', about: 'about', contact: 'contact',
-  search: 'search', product: 'product', collection: 'collection', build: 'build' };
+  search: 'search', product: 'product', collection: 'collection', build: 'build',
+  merchblog: 'blog', merchpost: 'post' };
 
 /** page|id for one entry of pageList — the key both tables below are cut on. */
 function routeKey(p) {
   const [kind, arg] = p.id.split(':');
   const page = PAGE_OF[kind];
   if (!page) return null;
-  const id = kind === 'product' || kind === 'build' ? p.arg : arg;
+  const id = kind === 'product' || kind === 'build' || kind === 'merchpost' ? p.arg : arg;
   return { page, id, key: page + '|' + (id || '') };
 }
 

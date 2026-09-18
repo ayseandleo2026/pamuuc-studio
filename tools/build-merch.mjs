@@ -294,6 +294,8 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
   for (const loc of LOCALES) {
     for (const p of pageList(M, site, loc)) {
       let body;
+      /* Declared, not inferred from render order — see setUI in merch-render. */
+      if (p.branch) { try { M.setUI({ lastBranch: p.branch }); } catch (e) {} }
       try { body = p.arg ? M.render(p.render, p.arg) : M.render(p.render); }
       catch (e) { problems.push(`${p.id} (${loc}) did not render: ${e.message}`); continue; }
 
