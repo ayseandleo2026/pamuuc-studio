@@ -33,6 +33,39 @@
    the prefix rather than one version means a future v13 cannot reintroduce
    this.
    ========================================================================= */
+/* ---------------------------------------------------------------------------
+   And the flash.
+
+   app.js ends in a boot IIFE that calls readHash() and render(). At that
+   moment the shim has not loaded, so readHash() is still the mockup's own — it
+   reads location.hash, finds none, and returns the HOME page. render() then
+   writes the home page into #root, over the correct server-rendered HTML,
+   and a fraction of a second later the shim installs the real router and
+   renders the page you actually asked for. That is the "it shows another page
+   for a moment" — it is not a cache, it is the app briefly disagreeing with
+   the URL.
+
+   render() writes through $('root'), and $ is document.getElementById. So the
+   first render is given a detached element to write into. Nothing is painted,
+   the server-rendered HTML stays exactly where it is, and the shim hands the
+   real #root back before the first render that knows the route. The static
+   markup and the app's markup are the same markup, so the swap is invisible.
+
+   If the shim never loads, the decoy is never handed back and the page stays
+   as served: not interactive, but correct and fully navigable, because every
+   control was turned into a real link at build time. That is the right way to
+   fail.
+   ------------------------------------------------------------------------ */
+(function () {
+  try {
+    var real = document.getElementById.bind(document);
+    var decoy = document.createElement('div');
+    decoy.id = 'root';
+    document.getElementById = function (id) { return id === 'root' ? decoy : real(id); };
+    window.__MERCH_REAL_ROOT__ = function () { document.getElementById = real; };
+  } catch (e) { /* nothing to undo: the app renders as it did before */ }
+})();
+
 (function () {
   try {
     for (var i = localStorage.length - 1; i >= 0; i--) {

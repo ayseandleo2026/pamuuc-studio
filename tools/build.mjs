@@ -60,6 +60,9 @@ const chooserURL = (loc) => site.locales[loc].prefix;
 const blogURL = (loc) => site.locales[loc].blog;
 const postURL = (key, loc) => blogURL(loc) + site.postSlugs[key][loc] + '/';
 const legalURL = (loc) => site.legalPrefix[loc];
+/* The other side of the site, from this side. Same shape as the merchandise
+   builder's own urlFor('merch'), so the two cannot name different addresses. */
+const merchURL = (loc) => `${site.locales[loc].prefix}merchandise/`;
 
 /* Built before the cluster list, because the merchandise pages bring their own
    clusters — one per page id, holding that page's URL in all five languages. */
@@ -385,7 +388,11 @@ function header(loc, current) {
   /* The site's own localized navigation, from content/home.<loc>.json.
      The last entry is the call to action, not a nav item. */
   const navSource = HOME[loc].nav;
-  const nav = navSource.slice(0, -1).map((n) => ({ label: n.label, href: n.href }));
+  const nav = navSource.slice(0, -1).map((n) => ({ label: n.label, href: n.href }))
+    /* In the nav rather than beside the call to action: the nav already
+       collapses into the burger below 900px, so this costs the header no
+       width on a phone — which it has none of to spare. */
+    .concat([{ label: S(loc).merchandise, href: merchURL(loc) }]);
   const cta = navSource[navSource.length - 1];
   const langLinks = LOCALES.map((l) => {
     const target = current?.urls?.[l] || homeURL(l);
@@ -442,6 +449,17 @@ function footer(loc) {
       { label: 'RSS', href: loc === DEFAULT ? '/feed.xml' : `/${loc}/feed.xml` },
     ]},
     { title: str.legal, links: LEGAL[loc].sections.map((s) => ({ label: s.title, href: legalURL(loc) + '#' + s.id })) },
+    /* The way off this side of the site. Until this existed, the custom
+       uniforms page, every legal page and the whole journal linked to
+       /merchandise/ exactly zero times and to the chooser zero times — so a
+       visitor who arrived on a policy from a search result, or followed a
+       privacy link out of the merchandise side, could not get back. The brand
+       mark goes to /custom-uniforms/, which is the right home for this side
+       and no help at all if you wanted the other one. */
+    { title: str.chooseService, links: [
+      { label: str.merchandise, href: merchURL(loc) },
+      { label: str.chooseService, href: chooserURL(loc) },
+    ] },
   ];
   return `<footer class="ftr">
 <div class="wrap">

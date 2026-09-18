@@ -251,11 +251,14 @@ async function handleSubscribe(request, env, origin) {
   const email = clean(fields.email, 200);
   /* which offer they joined — an internal reference, never shown to them */
   const offer = clean(fields.offer, 40) || clean(fields.code, 40) || 'of_first';
+  /* The pop-up has always sent the page's language with the address; nothing
+     read it until the confirmation was translated. */
+  const locale = clean(fields.locale, 8) || 'en';
   if (!isEmail(email)) return json({ ok: false, error: 'email' }, 400, origin);
 
-  await store(env, `SUB-${Date.now()}-${email}`, { kind: 'subscribe', email, offer, at: new Date().toISOString() });
+  await store(env, `SUB-${Date.now()}-${email}`, { kind: 'subscribe', email, offer, locale, at: new Date().toISOString() });
 
-  const m = offerEmail(offer, env.OFFER_TIERS ? JSON.parse(env.OFFER_TIERS) : null);
+  const m = offerEmail(offer, env.OFFER_TIERS ? JSON.parse(env.OFFER_TIERS) : null, locale);
   try {
     await sendMail(env, {
       to: email, replyTo: env.STUDIO_TO,
@@ -268,7 +271,7 @@ async function handleSubscribe(request, env, origin) {
 
   await appendSheet(env, {
     Reference: '', Received: new Date().toISOString(), Type: 'Subscriber',
-    Email: email, Offer: offer, Source: origin || '', Status: 'Subscribed',
+    Email: email, Offer: offer, Locale: locale, Source: origin || '', Status: 'Subscribed',
   });
   return json({ ok: true }, 200, origin);
 }

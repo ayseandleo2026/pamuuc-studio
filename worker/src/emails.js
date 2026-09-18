@@ -9,7 +9,15 @@
 
    One shell, three bodies. The same functions render the preview and the live
    mail, so what is approved is what sends. §18
+
+   Two of the three are written in the customer's language. Their copy is in
+   ./email-copy.js, keyed by locale, and reaches here through copyFor(f.locale)
+   — English when the locale is missing or unknown. The studio notification is
+   not translated: it is read by PAMUUC staff and stays in English whatever
+   language the request came in.
    ========================================================================= */
+
+import { copyFor, langOf } from './email-copy.js';
 
 const NAVY = '#011251';
 const PAPER = '#F4F2ED';
@@ -30,12 +38,12 @@ const preheader = (s) => `<div style="display:none;max-height:0;overflow:hidden;
   '&#8203;'.repeat(90) + '</div>';
 
 /**
- * @param {object} o {accent, eyebrow, preheader, body, footNote}
+ * @param {object} o {accent, eyebrow, preheader, body, footNote, lang}
  */
 function shell(o) {
   const accent = o.accent || NAVY;
   return `<!doctype html>
-<html lang="en"><head>
+<html lang="${esc(o.lang || 'en')}"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="light only">
@@ -132,18 +140,24 @@ function group(label, rows, opts) {
 /* A datetime-local field arrives as "2026-10-02T14:30". Printed raw it looks
    like a database dump; and parsing it with Date() alone would read it as UTC,
    which is not what the customer picked. So: pull the parts out by hand and
-   only use Date for the weekday. */
-function when(v) {
+   only use Date for the weekday.
+
+   The weekday and the month are words, so they follow the language of the mail
+   they are printed in — English for the studio, the customer's own for the
+   confirmation. Locale defaults to English, and the numeric fallback stands if
+   a runtime has no data for the language asked for. */
+function when(v, locale) {
   const m = /^(\d{4})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?$/.exec(String(v || '').trim());
   if (!m) return String(v || '');
+  const t = copyFor(locale);
   const [, y, mo, d, hh, mm] = m;
   let day = '';
   try {
-    day = new Date(Date.UTC(+y, +mo - 1, +d)).toLocaleDateString('en-GB', {
+    day = new Date(Date.UTC(+y, +mo - 1, +d)).toLocaleDateString(t.dateLocale, {
       weekday: 'long', day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
     });
   } catch { day = `${d}/${mo}/${y}`; }
-  return hh ? `${day} at ${hh}:${mm}` : day;
+  return hh ? `${day} ${t.atTime} ${hh}:${mm}` : day;
 }
 
 /* The plain-text half of every message. Same sections, same order — a client
@@ -287,13 +301,14 @@ export function studioEmail(kind, ref, f, artworkUrl) {
 }
 
 /* ---- 2. to the customer: we have it ------------------------------------- */
+/* Written in the language the request was made in. f.locale carries it. */
 export function customerEmail(kind, ref, f) {
   const merch = kind === 'quote';
   const accent = merch ? RED : NAVY;
-  const head = merch ? 'We have your request.' : 'We have your enquiry.';
-  const next = merch
-    ? 'We price it by hand and come back to you, usually within two working days. Nothing is ordered and nothing is charged until you approve the quote.'
-    : 'One of us reads it properly and comes back to you, usually within two working days.';
+  const loc = f.locale;
+  const t = copyFor(loc);
+  const head = merch ? t.headQuote : t.headEnquiry;
+  const next = merch ? t.nextQuote : t.nextEnquiry;
 
   const body = `
     <tr><td style="padding:10px 32px 0">
@@ -301,74 +316,75 @@ export function customerEmail(kind, ref, f) {
       <p style="margin:12px 0 0;font:400 16px/1.6 ${FONT};color:${INK}">${esc(next)}</p>
     </td></tr>
 
-    ${group('Your reference', [], {
+    ${group(t.yourReference, [], {
       box: true, accent,
       extra: `<span style="font:500 20px/1.3 ${FONT};color:${INK}">${esc(ref)}</span>`,
       first: true,
     })}
 
-    ${merch ? group('What you asked for', [
-      row('Product', esc(f.product)),
-      row('Colour', esc(f.colour)),
-      row('Fit', esc(f.fit)),
-      row('Quantity', f.quantity ? `${esc(f.quantity)} <span style="color:${MUTED};font-weight:400">pieces</span>` : ''),
-      row('Personalisation', esc(f.personalisation)),
-      row('Placement', esc(f.placement)),
-      row('Your artwork', f.artworkName ? `${esc(f.artworkName)}<span style="color:${MUTED};font-weight:400">${f.artworkSize ? ' &middot; ' + fileSize(f.artworkSize) : ''} &middot; received</span>` : ''),
+    ${merch ? group(t.askedFor, [
+      row(t.lProduct, esc(f.product)),
+      row(t.lColour, esc(f.colour)),
+      row(t.lFit, esc(f.fit)),
+      row(t.lQuantity, f.quantity ? `${esc(f.quantity)} <span style="color:${MUTED};font-weight:400">${esc(t.pieces)}</span>` : ''),
+      row(t.lPersonalisation, esc(f.personalisation)),
+      row(t.lPlacement, esc(f.placement)),
+      row(t.lArtwork, f.artworkName ? `${esc(f.artworkName)}<span style="color:${MUTED};font-weight:400">${f.artworkSize ? ' &middot; ' + fileSize(f.artworkSize) : ''} &middot; ${esc(t.received)}</span>` : ''),
     ]) : ''}
 
-    ${!merch ? group('What you told us', [
-      row('Looking for', esc(f.projectType)),
-      row('Team size', esc(f.teamSize)),
-      row('Timeline', esc(f.timeline)),
+    ${!merch ? group(t.toldUs, [
+      row(t.lLookingFor, esc(f.projectType)),
+      row(t.lTeamSize, esc(f.teamSize)),
+      row(t.lTimeline, esc(f.timeline)),
     ]) : ''}
 
-    ${!merch && f.meeting ? group('The call you proposed', [], {
+    ${!merch && f.meeting ? group(t.callProposed, [], {
       box: true, accent,
-      extra: `<span style="font:500 16px/1.4 ${FONT};color:${INK}">${esc(when(f.meeting))}</span>
-        <p style="margin:6px 0 0;font:400 13px/1.5 ${FONT};color:${MUTED}">We confirm the time when we reply.</p>`,
+      extra: `<span style="font:500 16px/1.4 ${FONT};color:${INK}">${esc(when(f.meeting, loc))}</span>
+        <p style="margin:6px 0 0;font:400 13px/1.5 ${FONT};color:${MUTED}">${esc(t.confirmTime)}</p>`,
     }) : ''}
 
     ${f.firstOrder ? `<tr><td style="padding:24px 32px 0">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
              style="border-left:3px solid ${accent};background:${PAPER}">
         <tr><td style="padding:13px 18px;font:400 14px/1.5 ${FONT};color:${INK}">
-          Your first order discount is on this request. There is no code to quote — we apply it
-          when we price the quote, before you approve it.
+          ${esc(t.firstOrderHtml)}
         </td></tr>
       </table>
     </td></tr>` : ''}
 
     <tr><td style="padding:24px 32px 0">
       <p style="margin:0;font:400 14px/1.6 ${FONT};color:${MUTED}">
-        If anything above is wrong, reply to this email — it reaches the person handling it.
+        ${esc(t.ifWrong)}
       </p>
     </td></tr>
   `;
 
   const text =
-    `${head}\n\n${next}\n\nYour reference is ${ref}.\n` +
+    `${head}\n\n${next}\n\n${t.referenceLine.replace('{ref}', ref)}\n` +
 
-    (merch ? tsec('What you asked for', [
-      tline('Product', f.product), tline('Colour', f.colour), tline('Fit', f.fit),
-      tline('Quantity', f.quantity && `${f.quantity} pieces`),
-      tline('Personalisation', f.personalisation), tline('Placement', f.placement),
-      tline('Your artwork', f.artworkName && `${f.artworkName} — received`),
-    ]) : tsec('What you told us', [
-      tline('Looking for', f.projectType), tline('Team size', f.teamSize),
-      tline('Timeline', f.timeline),
-      tline('The call you proposed', f.meeting && when(f.meeting)),
+    (merch ? tsec(t.askedFor, [
+      tline(t.lProduct, f.product), tline(t.lColour, f.colour), tline(t.lFit, f.fit),
+      tline(t.lQuantity, f.quantity && `${f.quantity} ${t.pieces}`),
+      tline(t.lPersonalisation, f.personalisation), tline(t.lPlacement, f.placement),
+      tline(t.lArtwork, f.artworkName && `${f.artworkName} — ${t.received}`),
+    ]) : tsec(t.toldUs, [
+      tline(t.lLookingFor, f.projectType), tline(t.lTeamSize, f.teamSize),
+      tline(t.lTimeline, f.timeline),
+      tline(t.callProposed, f.meeting && when(f.meeting, loc)),
     ])) +
 
-    (f.firstOrder ? `\nYour first order discount is on this request. There is no code to quote — we apply it when we price the quote.\n` : '') +
-    `\nIf anything above is wrong, reply to this email — it reaches the person handling it.\n\n` +
+    (f.firstOrder ? `\n${t.firstOrderText}\n` : '') +
+    `\n${t.ifWrong}\n\n` +
+    /* the legal entity, which is a name and does not translate */
     `Pamuk Studio S.L, trading as PAMUUC — Barcelona\n`;
 
   return {
-    subject: `${ref} — we have your ${merch ? 'request' : 'enquiry'}`,
+    subject: `${ref} — ${merch ? t.subjectQuote : t.subjectEnquiry}`,
     text,
     html: shell({
-      title: head, accent, eyebrow: merch ? 'Merchandise' : 'Custom uniforms',
+      title: head, accent, lang: langOf(loc),
+      eyebrow: merch ? t.eyebrowMerch : t.eyebrowUniforms,
       preheader: `${next.split('.')[0]}.`,
       body,
     }),
@@ -376,35 +392,41 @@ export function customerEmail(kind, ref, f) {
 }
 
 /* ---- 3. to the customer: the offer code --------------------------------- */
-export function offerEmail(code, tiers) {
+/* Also written in the customer's language. The pop-up that collects the
+   address already sends the page's locale with it. */
+export function offerEmail(code, tiers, locale) {
+  const t = copyFor(locale);
   const list = tiers && tiers.length ? tiers : [
     { pct: 5, say: 'Under 100 pieces' },
     { pct: 7, say: '100 to 499 pieces' },
     { pct: 10, say: '500 pieces and over' },
   ];
-  const best = list.reduce((a, t) => Math.max(a, t.pct), 0);
+  /* The bands are keyed on their English label, so the three that ship
+     translate and a band configured through OFFER_TIERS passes through as the
+     studio wrote it. */
+  const say = (s) => t.tierSay[s] || s;
+  const best = list.reduce((a, x) => Math.max(a, x.pct), 0);
 
   const body = `
     <tr><td style="padding:10px 32px 0">
       <h1 style="margin:0;font:400 28px/1.2 ${FONT};color:${INK};letter-spacing:-.01em">
-        Your first order discount is set up.
+        ${esc(t.offerHead)}
       </h1>
       <p style="margin:12px 0 0;font:400 16px/1.6 ${FONT};color:${INK}">
-        There is nothing to remember and no code to quote. Send us a request and we apply the
-        discount when we price it, before you approve anything. The rate follows the quantity.
+        ${esc(t.offerIntro)}
       </p>
     </td></tr>
 
     <tr><td style="padding:24px 32px 0">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
-        ${list.map((t) => `<tr><td style="padding:0 0 8px">
+        ${list.map((x) => `<tr><td style="padding:0 0 8px">
           <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"
                  style="background:${PAPER};border-left:3px solid ${RED}">
             <tr>
               <td width="78" style="padding:13px 0 13px 18px;font:500 24px/1 ${FONT};color:${RED};white-space:nowrap">
-                ${t.pct}<span style="font-size:14px">%</span>
+                ${x.pct}<span style="font-size:14px">%</span>
               </td>
-              <td style="padding:13px 18px 13px 0;font:400 14px/1.4 ${FONT};color:${INK}">${esc(t.say)}</td>
+              <td style="padding:13px 18px 13px 0;font:400 14px/1.4 ${FONT};color:${INK}">${esc(say(x.say))}</td>
             </tr>
           </table>
         </td></tr>`).join('')}
@@ -414,37 +436,37 @@ export function offerEmail(code, tiers) {
     <tr><td style="padding:16px 32px 0">
       <table role="presentation" cellpadding="0" cellspacing="0" border="0">
         <tr><td style="background:${NAVY}">
-          <a href="https://pamuuc-studio.com/merchandise/"
+          <a href="https://pamuuc-studio.com${esc(t.merchPath)}"
              style="display:inline-block;padding:12px 22px;font:500 14px/1 ${FONT};color:#FFFFFF;text-decoration:none">
-            Start choosing</a>
+            ${esc(t.offerCta)}</a>
         </td></tr>
       </table>
     </td></tr>
 
     <tr><td style="padding:20px 32px 0">
       <p style="margin:0;font:400 14px/1.6 ${FONT};color:${MUTED}">
-        One discount per account, on the first order. Nothing is charged when you request a quote —
-        a person prices it and you decide.
+        ${esc(t.offerSmall)}
       </p>
     </td></tr>
   `;
 
   const text =
-    `Your first order discount is set up.\n\n` +
-    `There is nothing to remember and no code to quote. Send us a request and we apply the discount when we price it, before you approve anything.\n\n` +
-    list.map((t) => `${t.say}: ${t.pct}%`).join('\n') + '\n\n' +
-    `One discount per account, on the first order. Nothing is charged when you request a quote.\n\n` +
+    `${t.offerHead}\n\n` +
+    `${t.offerIntroText}\n\n` +
+    list.map((x) => `${say(x.say)}: ${x.pct}%`).join('\n') + '\n\n' +
+    `${t.offerSmallText}\n\n` +
+    /* the legal entity, which is a name and does not translate */
     `Pamuk Studio S.L, trading as PAMUUC — Barcelona\n`;
 
   return {
-    subject: 'Your first order discount is set up',
+    subject: t.offerSubject,
     text,
     html: shell({
-      title: 'Your first order discount', accent: RED, eyebrow: 'First order',
-      preheader: `Up to ${best}% off your first order, by quantity.`,
+      title: t.offerTitle, accent: RED, eyebrow: t.offerEyebrow, lang: langOf(locale),
+      preheader: t.offerPreheader.replace('{pct}', best),
       body,
-      footNote: 'You are getting this because you asked about the first order discount on pamuuc-studio.com. ' +
-        '<a href="{{unsubscribe}}" style="color:' + MUTED + ';text-decoration:underline">Unsubscribe</a>.',
+      footNote: esc(t.offerFootNote) +
+        `<a href="{{unsubscribe}}" style="color:${MUTED};text-decoration:underline">${esc(t.unsubscribe)}</a>.`,
     }),
   };
 }

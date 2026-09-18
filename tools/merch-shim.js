@@ -415,7 +415,7 @@
   var innerRender = render;
   render = function () {
     var r = innerRender.apply(this, arguments);
-    try { retext(); applyMeta(); relink(); relang(); saveQuote(); } catch (e) {}
+    try { retext(); applyMeta(); relink(); relang(); saveQuote(); saveOffers(); } catch (e) {}
     return r;
   };
 
@@ -642,6 +642,69 @@
      including the submit that empties it. */
   var QKEY = 'pamuuc_merch_quote';
 
+  /* ---- the offer, remembered for a day -------------------------------------
+     The bar and the pop-up are gated on S.offerSeen, and S is the mockup's
+     state — which tools/merch-seed-guard.js now clears on every load and
+     save() no longer writes. So "I have seen this" lasted exactly one page.
+     Changing language is a fresh document, so it came back then too.
+
+     Two other things kept it coming back even within a session. It was only
+     recorded when the pop-up was CLOSED, so a visitor who navigated away
+     instead had never seen it; and UI.popupArmed lives in memory, so every new
+     page re-armed the timer. Being SHOWN counts as being seen here.
+
+     A day, from the moment it was seen. Not "tomorrow": dismissing something
+     at 23:50 and meeting it again at midnight is the same annoyance with a
+     tidier implementation. */
+  var OKEY = 'pamuuc_offer_seen';
+  var DAY = 24 * 60 * 60 * 1000;
+  var STAMPS = {};
+
+  function restoreOffers() {
+    try {
+      var raw = localStorage.getItem(OKEY);
+      if (raw) {
+        var saved = JSON.parse(raw), now = Date.now();
+        for (var id in saved) {
+          for (var what in saved[id]) {
+            if (now - saved[id][what] < DAY) {
+              (STAMPS[id] = STAMPS[id] || {})[what] = saved[id][what];
+            }
+          }
+        }
+      }
+    } catch (e) { STAMPS = {}; }
+    /* The app only ever asks whether the value is truthy. */
+    if (typeof S === 'undefined' || !S) return;
+    S.offerSeen = S.offerSeen || {};
+    for (var i in STAMPS) {
+      S.offerSeen[i] = S.offerSeen[i] || {};
+      for (var w in STAMPS[i]) S.offerSeen[i][w] = STAMPS[i][w];
+    }
+  }
+
+  function saveOffers() {
+    if (typeof S === 'undefined' || !S) return;
+    var changed = false;
+    /* on screen is seen: the timer must not re-arm on the next page */
+    if (typeof UI !== 'undefined' && UI && UI.popup) {
+      S.offerSeen = S.offerSeen || {};
+      S.offerSeen[UI.popup] = S.offerSeen[UI.popup] || {};
+      if (!S.offerSeen[UI.popup].popup) S.offerSeen[UI.popup].popup = Date.now();
+    }
+    var seen = S.offerSeen || {};
+    for (var id in seen) {
+      for (var what in seen[id]) {
+        if (!seen[id][what]) continue;
+        if (!STAMPS[id]) { STAMPS[id] = {}; }
+        /* the app writes a display string; the clock is kept here */
+        if (!STAMPS[id][what]) { STAMPS[id][what] = Date.now(); changed = true; }
+      }
+    }
+    if (!changed) return;
+    try { localStorage.setItem(OKEY, JSON.stringify(STAMPS)); } catch (e) {}
+  }
+
   function saveQuote() {
     try {
       var lines = (typeof UI !== 'undefined' && UI.quote) || [];
@@ -663,6 +726,9 @@
   }
 
   restoreQuote();
+  /* Before the first render, so a bar or pop-up already seen today never
+     paints at all rather than painting and then being taken away. */
+  restoreOffers();
 
   /* app.js boots at the end of its own file, which is BEFORE this shim exists,
      so it has already read the (empty) hash and rendered the home page over
@@ -670,6 +736,12 @@
      is the wrong page — so now that the real router is installed, the route is
      read again and the page drawn once more. One extra render at boot is the
      price of not editing app.js, which is a price worth paying. */
+  /* The real #root, handed back now that the router knows where it is. Until
+     this line the app has been rendering into a detached element and the
+     server-rendered HTML has been what the visitor sees — see the note in
+     tools/merch-seed-guard.js. */
+  try { if (window.__MERCH_REAL_ROOT__) window.__MERCH_REAL_ROOT__(); } catch (e) {}
+
   try {
     ROUTE = readHash();
     render();

@@ -231,6 +231,24 @@ a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center
   .pub-hd-in{gap:var(--sp-2);padding:0 var(--sp-3)}
 }
 
+/* The breadcrumb, given the same air on every page.
+   ---------------------------------------------------------------------------
+   Measured across the templates it was 41px clear of the band above it on the
+   listings, 56px on the flat pages and ZERO on the product page — where its
+   section carries no top padding, so the first line of navigation sat flush
+   against the bottom edge of the red offer bar. That is the one that looked
+   wrong, and it is the page most people land on.
+
+   The product page gets the listings' 40px. The bottom is levelled to 24px
+   everywhere, so the breadcrumb reads as its own band rather than as a caption
+   belonging to whatever happens to be above or below it. */
+.pdp-crumb{margin-top:var(--sp-8)}
+.crumb{margin-bottom:var(--sp-6)}
+.mph .crumb,.pdp-crumb{margin-bottom:var(--sp-6)}
+/* The separator was 24% opacity — close to invisible against the page and
+   doing none of the work a separator exists to do. */
+.crumb-sep{color:color-mix(in srgb,var(--ink) 40%,transparent)}
+
 /* A product name is not a caption, and four of the five languages are longer
    than English. The card title was one line with an ellipsis, which is fine for
    "Custom T-Shirt" and cuts "Camiseta de manga larga personalizada" and

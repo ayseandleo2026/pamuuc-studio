@@ -176,7 +176,9 @@
    "faqLess": "Show fewer questions",
    "sectionShow": "Show this section",
    "sectionHide": "Hide this section",
-   "breadcrumb": "Breadcrumb"
+   "breadcrumb": "Breadcrumb",
+   "chooseService": "Choose a service",
+   "merchandise": "PAMUUC Merchandise"
   },
   "es": {
    "takeaways": "Puntos clave",
@@ -213,7 +215,9 @@
    "faqLess": "Ver menos preguntas",
    "sectionShow": "Ver esta sección",
    "sectionHide": "Ocultar esta sección",
-   "breadcrumb": "Migas de pan"
+   "breadcrumb": "Migas de pan",
+   "chooseService": "Elija un servicio",
+   "merchandise": "PAMUUC Merchandise"
   },
   "fr": {
    "takeaways": "À retenir",
@@ -250,7 +254,9 @@
    "faqLess": "Voir moins de questions",
    "sectionShow": "Voir cette section",
    "sectionHide": "Masquer cette section",
-   "breadcrumb": "Fil d'Ariane"
+   "breadcrumb": "Fil d'Ariane",
+   "chooseService": "Choisissez un service",
+   "merchandise": "PAMUUC Merchandise"
   },
   "it": {
    "takeaways": "In sintesi",
@@ -287,7 +293,9 @@
    "faqLess": "Mostra meno domande",
    "sectionShow": "Mostra questa sezione",
    "sectionHide": "Nascondi questa sezione",
-   "breadcrumb": "Percorso"
+   "breadcrumb": "Percorso",
+   "chooseService": "Scelga un servizio",
+   "merchandise": "PAMUUC Merchandise"
   },
   "de": {
    "takeaways": "Das Wichtigste",
@@ -324,7 +332,9 @@
    "faqLess": "Weniger Fragen anzeigen",
    "sectionShow": "Diesen Abschnitt anzeigen",
    "sectionHide": "Diesen Abschnitt ausblenden",
-   "breadcrumb": "Brotkrümelnavigation"
+   "breadcrumb": "Brotkrümelnavigation",
+   "chooseService": "Leistung wählen",
+   "merchandise": "PAMUUC Merchandise"
   }
  },
  "legacyRedirects": {
