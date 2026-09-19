@@ -4709,7 +4709,9 @@ function buildLine(p){
    change price because someone once opened it. */
 function catFrom(p){
   let best = null;
-  (p.matrix || []).forEach(m => (m.breaks || []).forEach(b => {
+  /* Only the garments the journey can actually land on — see reachableRows().
+     Reading the whole matrix advertised a floor nobody could buy. */
+  (reachableRows(p) || []).forEach(m => (m.breaks || []).forEach(b => {
     if(b.price != null && (!best || b.price < best.price)) best = {price:b.price, qty:b.qty};
   }));
   /* a product with no matrix at all still has its own ladder */
@@ -5165,8 +5167,6 @@ const servesCut = (want, g) => !want || (BUILDER_SERVES[want] || [want]).include
 
 const gendersOf = (p) => [...new Set((p.matrix || []).map(m => m.g).filter(Boolean))];
 const fitsOf    = (p) => [...new Set((p.matrix || []).map(m => m.f).filter(Boolean))];
-const hasGender = (p, k) => gendersOf(p).some(g => serves(k, g));
-const hasFit    = (p, k) => fitsOf(p).includes(k);
 const genderOf  = (p) => gendersOf(p)[0] || '';
 const genderName = (k) => (GENDERS.find(g => g.k === k) || {}).n || 'Other';
 
@@ -5198,14 +5198,21 @@ function buildState(){
    a t-shirt carries it as 155 while the range runs 130 to 220 — so filtering
    products by it threw away almost everything: the weight step offered a
    single button and the style step after it had nothing left to show. */
-const gWeights = (p) => [...new Set((p.matrix || []).map(m => +m.w).filter(Boolean))];
 
 /* A weight is a property of a garment, so its price has to come from the
    garments at that weight — not from the products that contain one. A
    product's matrix spans the whole range (the t-shirts run 150 to 370), so
    pricing a weight by its products handed every weight the cheapest product
    in the category and all nine buttons read the same number. */
-const gRows  = (list, w) => list.flatMap(p => (p.matrix || []).filter(m => +m.w === +w));
+/* The garments of a product that still answer everything asked so far. The
+   cards used to price the whole product, so asking for 280 g/m² and landing on
+   a card reading "From €11.49" — the price of a 155 g baby tee — was the norm
+   rather than the exception: 476 of the 655 weight screens did it. A price on
+   this page has to belong to a garment that survived the questions above it. */
+const buildRows = (p, b) => (p.matrix || []).filter(m =>
+  (!b.gender || serves(b.gender, m.g))
+  && (!b.fit    || m.f === b.fit)
+  && (!b.weight || +m.w === +b.weight));
 const rowLow = (rows) => {
   let best = null;
   rows.forEach(m => (m.breaks || []).forEach(x => {
@@ -5215,13 +5222,25 @@ const rowLow = (rows) => {
 };
 function buildPool(b, upTo){
   let list = S.merchProducts.filter(p => p.cat === b.cat && p.status !== 'archived');
-  if(upTo > 0 && b.gender) list = list.filter(p => hasGender(p, b.gender));
-  if(upTo > 1 && b.fit)    list = list.filter(p => hasFit(p, b.fit));
-  if(upTo > 2 && b.weight) list = list.filter(p => gWeights(p).includes(+b.weight));
-  if(upTo > 3 && b.style)  list = list.filter(p => p.id === b.style);
+  /* The answers have to hold together on ONE garment. Each was tested on its
+     own against the whole product before: a product stayed in for "fitted"
+     because some garment is fitted, and for "200 g" because some garment is
+     200 g, even where no single garment is both. The card then had nothing to
+     price and fell back to the product's global floor, so a fitted 200 g
+     screen offered a style "From €11.49" — a 155 g regular baby tee. */
+  const asked = askedSoFar(b, upTo);
+  if(asked.gender || asked.fit || asked.weight)
+    list = list.filter(p => buildRows(p, asked).length);
+  if(upTo > 3 && b.style) list = list.filter(p => p.id === b.style);
   return list;
 }
-const poolFrom = (list) => poolLow(list);
+/* Which answers are settled at a given step. A step counts its own options
+   against the answers ABOVE it, never against itself. */
+function askedSoFar(b, upTo){
+  return {gender: upTo > 0 ? b.gender : null,
+          fit:    upTo > 1 ? b.fit    : null,
+          weight: upTo > 2 ? b.weight : null};
+}
 
 function buildStep(ix, label, help, open, chosen, body){
   return `
@@ -5250,12 +5269,21 @@ function pubBuild(cat){
 
   const step = b.gender ? (b.fit ? (b.weight ? (b.style ? 4 : 3) : 2) : 1) : 0;
   const pool = buildPool(b, 9);
-  const from = poolFrom(pool);
+  /* "lowest of what is left" has to mean what is left after the answers, so it
+     reads the surviving garments rather than each product's global floor. */
+  const from = (() => {
+    let best = null;
+    pool.forEach(p => { const v = rowLow(buildRows(p, b));
+      if(v != null && (best == null || v < best)) best = v; });
+    return best;
+  })();
   const chosen = b.style ? by(S.merchProducts, b.style) : null;
 
   /* 01 who wears it */
   const genderBody = GENDERS.map(g => {
-    const list = buildPool({cat:b.cat}, 0).filter(p => hasGender(p, g.k));
+    /* counted the way the pool counts, so the number on the chip is the number
+       of styles the next step actually shows */
+    const list = buildPool({cat:b.cat, gender:g.k}, 1);
     if(!list.length) return '';
     return buildChip(b.gender === g.k, 'bGender', g.k, g.n,
       list.length + ' style' + (list.length === 1 ? '' : 's'), false);
@@ -5263,16 +5291,20 @@ function pubBuild(cat){
 
   /* 02 fit */
   const fitBody = FITS.map(f => {
-    const list = buildPool(b, 1).filter(p => hasFit(p, f.k));
+    const list = buildPool({cat:b.cat, gender:b.gender, fit:f.k}, 2);
     return buildChip(b.fit === f.k, 'bFit', f.k, f.n,
       list.length ? list.length + ' style' + (list.length === 1 ? '' : 's') : 'None here', !list.length);
   }).join('');
 
   /* 03 weight */
-  const weights = [...new Set(buildPool(b, 2).flatMap(gWeights))].sort((a, b2) => a - b2);
+  /* the weights the surviving GARMENTS carry, not every weight their products
+     carry: a 370 g tee does not make 370 g an answer to "Women, fitted" */
+  const wAsked = askedSoFar(b, 2);
+  const weights = [...new Set(buildPool(b, 2)
+    .flatMap(p => buildRows(p, wAsked).map(m => +m.w).filter(Boolean)))].sort((a, b2) => a - b2);
   const weightBody = weights.map(w => {
-    const list = buildPool(b, 2).filter(p => gWeights(p).includes(w));
-    const lo = rowLow(gRows(list, w));
+    const list = buildPool(b, 2).filter(p => buildRows(p, wAsked).some(m => +m.w === +w));
+    const lo = rowLow(list.flatMap(p => buildRows(p, wAsked).filter(m => +m.w === +w)));
     return buildChip(String(b.weight) === String(w), 'bWeight', String(w), w + ' g/m²',
       lo != null ? 'from ' + money(lo) : list.length + ' style' + (list.length === 1 ? '' : 's'), false);
   }).join('');
@@ -5285,8 +5317,11 @@ function pubBuild(cat){
       <span class="bst-b">
         <span class="bst-t">${esc(p.name)}</span>
         <span class="bst-d">${esc(p.ref)} · ${p.colours.length} colour${p.colours.length === 1 ? '' : 's'}</span>
-        <span class="bst-p">${(() => { const b = catFrom(p);
-          return b ? 'From ' + money(b.price) : 'Price on request'; })()}</span>
+        <span class="bst-p">${(() => {
+          /* the cheapest garment of this product that still matches the
+             answers, not the cheapest the product has anywhere */
+          const lo = rowLow(buildRows(p, b));
+          return lo != null ? 'From ' + money(lo) : 'Price on request'; })()}</span>
       </span>
     </button>`).join('')}</div>`;
 
@@ -7636,7 +7671,7 @@ function applyDemoVariant(p){
   const c = UI.cfg || {};
   const row = demoRow(p, c.sku);
   if(!row){                                   /* nothing chosen yet: show the range's floor */
-    const priced = (p.matrix || []).filter(m => m.breaks && m.breaks.length);
+    const priced = reachableRows(p).filter(m => m.breaks && m.breaks.length);
     if(priced.length){
       const lo = priced.reduce((a, b) => (a.price <= b.price ? a : b));
       p.from = lo.price; p.breaks = lo.breaks; p.quoteOnly = false;
@@ -7659,6 +7694,92 @@ function applyDemoVariant(p){
    its answer the moment it is given, so the column spends its height on the
    question being asked rather than on the ones already answered. Clicking a
    collapsed step reopens it. */
+/* ============================================================================
+   WHICH GARMENTS A BUYER CAN ACTUALLY END UP WITH
+   ---------------------------------------------------------------------------
+   A product's matrix holds more garments than the journey will ever offer: the
+   last step shows one garment per weight band, so the rest never become a card
+   at all. Ten of the twenty-nine t-shirts are in that position.
+
+   That mattered because the price was being read off the whole matrix. The
+   page said "From EUR 11.49", the two garments carrying 11.49 are not the ones
+   their bands send, and the cheapest a buyer can actually reach is 12.99 — so
+   the figure vanished the moment an audience was picked. The same number went
+   onto the catalogue cards and into the offer we hand Google.
+
+   So the rule lives here now, in one place, and everything that quotes a floor
+   quotes a floor somebody can buy.
+   ========================================================================= */
+
+/* Which garment speaks for its band: the lightest of the Light, the heaviest
+   of the Heavy, the middle of the Classic — then the widest colour range, then
+   the cheaper. Picking the cheapest outright hid the flagships. */
+function bandSpeaker(group, band){
+  const ws = group.map((r) => +r.w || 0);
+  const lo = Math.min(...ws), hi = Math.max(...ws);
+  const target = band === 'Light' ? lo : band === 'Heavy' ? hi : (lo + hi) / 2;
+  /* anything within a twentieth of the target counts as being at it, and then
+     the colour range decides: a 150 g style in five colours should not beat a
+     155 g one in forty-one */
+  const best = Math.min(...group.map((r) => Math.abs((+r.w || 0) - target)));
+  const window = Math.max(best, target * 0.05);
+  const at = group.filter((r) => Math.abs((+r.w || 0) - target) <= window);
+  return at.slice().sort((x, y) =>
+    ((y.colours || []).length - (x.colours || []).length)
+    || ((rowPrice(x) ?? 1e9) - (rowPrice(y) ?? 1e9)))[0];
+}
+
+/* Weight families group by band. The rest — outerwear, headwear — have no
+   usable weight, so they group by what the garment is. */
+function bandKeyOf(p, r, ctx){
+  return bandOf(p.id, r.w)
+    || pickWord(DETAILS, optionName(p, r, ctx || [r])) || 'Classic';
+}
+
+/* The garments a pool would actually put on screen, one per band. */
+function bandReps(p, pool, ctx){
+  const groups = new Map();
+  pool.forEach((r) => {
+    const k = bandKeyOf(p, r, ctx);
+    if(!groups.has(k)) groups.set(k, []);
+    groups.get(k).push(r);
+  });
+  return [...groups.entries()]
+    .map(([k, g]) => ({k, r: bandSpeaker(g, k)}))
+    .sort((x, y) => {
+      const ix = BAND_ORDER.indexOf(x.k), iy = BAND_ORDER.indexOf(y.k);
+      if(ix > -1 && iy > -1) return ix - iy;            /* Light -> Heavy */
+      return ((+x.r.w || 0) - (+y.r.w || 0))
+        || ((rowPrice(x.r) ?? 1e9) - (rowPrice(y.r) ?? 1e9));
+    })
+    .map((x) => x.r);
+}
+
+/* Every garment reachable by some set of answers: walk the audiences the page
+   would offer, the fits under each, the style answers under those, and collect
+   what each leaves on screen. A product whose journey asks nothing answers
+   with its whole matrix. */
+const REACHABLE = new Map();
+function reachableRows(p){
+  if(!p || !p.matrix || !p.matrix.length) return [];
+  if(REACHABLE.has(p.id)) return REACHABLE.get(p.id);
+  const j = journeyPlan(p);
+  const gens = j.genders.length ? (j.needG ? j.genders : [j.genders[0]]) : [null];
+  const fits = j.fits.length    ? (j.needF ? j.fits    : [j.fits[0]])    : [null];
+  const out = new Map();
+  for(const g of gens) for(const f of fits){
+    const pool = demoOptions(p, g, f);
+    if(!pool.length) continue;
+    for(const k of [...new Set(pool.map((r) => styleOf(p, r, pool)))]){
+      bandReps(p, pool.filter((x) => styleOf(p, x, pool) === k), pool)
+        .forEach((r) => { if(r) out.set(r.sku, r); });
+    }
+  }
+  const rows = out.size ? [...out.values()] : p.matrix.slice();
+  REACHABLE.set(p.id, rows);
+  return rows;
+}
+
 function demoSteps(p){
   const c = UI.cfg || {};
   const j = journeyPlan(p);
@@ -7766,52 +7887,42 @@ function demoSteps(p){
      Among garments at that weight, the widest colour range wins, then the
      cheaper. On the hoodie that is the same €42.49 for eleven colours or
      fifty-one. */
-  const speaksFor = (group, band) => {
-    const ws = group.map((r) => +r.w || 0);
-    const lo = Math.min(...ws), hi = Math.max(...ws);
-    const target = band === 'Light' ? lo
-      : band === 'Heavy' ? hi
-      : (lo + hi) / 2;
-    /* "Nearest the target" has to mean nearest a buyer could feel. Taking the
-       single closest gram made the Light t-shirt a 150 g style carried in five
-       colours over a 155 g one carried in forty-one — a three per cent
-       difference in cloth against an eightfold difference in what you can
-       actually order. Anything within a twentieth of the target counts as
-       being at it, and then the colour range decides. */
-    const best = Math.min(...group.map((r) => Math.abs((+r.w || 0) - target)));
-    const window = Math.max(best, target * 0.05);
-    const at = group.filter((r) => Math.abs((+r.w || 0) - target) <= window);
-    return at.slice().sort((x, y) =>
-      ((y.colours || []).length - (x.colours || []).length)
-      || ((rowPrice(x) ?? 1e9) - (rowPrice(y) ?? 1e9)))[0];
-  };
-
-  /* Weight families group by band. The rest — outerwear, headwear — have no
-     usable weight, so they group by what the garment is. */
-  const groupOf = (r) => bandOf(p.id, r.w)
-    || pickWord(DETAILS, optionName(p, r, opts)) || 'Classic';
-  /* The garments a pool would actually put on screen, one per band. The style
-     chips price themselves from this too: reading the whole pool instead had
-     the Standard chip promising "From €11.49" above a first card of €12.99,
-     because the €11.49 garment is not the one its band sends. */
-  const representatives = (pool) => {
-    const groups = new Map();
-    pool.forEach((r) => {
-      const k = groupOf(r);
-      if(!groups.has(k)) groups.set(k, []);
-      groups.get(k).push(r);
-    });
-    return [...groups.entries()]
-      .map(([k, g]) => ({k, r: speaksFor(g, k)}))
-      .sort((x, y) => {
-        const ix = BAND_ORDER.indexOf(x.k), iy = BAND_ORDER.indexOf(y.k);
-        if(ix > -1 && iy > -1) return ix - iy;          /* Light -> Heavy */
-        return ((+x.r.w || 0) - (+y.r.w || 0))
-          || ((rowPrice(x.r) ?? 1e9) - (rowPrice(y.r) ?? 1e9));
-      })
-      .map((x) => x.r);
-  };
+  /* These three moved to module scope: the price a CARD shows and the price a
+     LISTING shows have to be decided by the same rule, and they were not. */
+  const speaksFor      = (group, band) => bandSpeaker(group, band);
+  const groupOf        = (r, ctx)      => bandKeyOf(p, r, ctx || opts);
+  const representatives = (pool, ctx)  => bandReps(p, pool, ctx || opts);
   const ordered = representatives(stylePool);
+
+  /* THE PRICE A STEP IS ALLOWED TO ADVERTISE.
+     ---------------------------------------------------------------------
+     "From X" is a promise that X is still on the table. What is still on the
+     table is what a band SENDS to the last step — one garment each — and not
+     everything that survived the filter, because the rest never become a card
+     at all. Pricing the raw pool had the Unisex chip promising €11.49 over a
+     journey whose cheapest reachable t-shirt is €12.99, and the heavy hoodie
+     chip promising €47.49 over €49.49: the cheap garment exists, it is simply
+     not the one its band sends, so the number vanished one click later.
+
+     The style chips were already corrected for exactly this. The audience and
+     fit chips were not, so the promise broke a step earlier instead. This
+     walks the answers that are still open below the chip and asks what could
+     actually be held at the end of each. */
+  const lowReach = (g, f) => {
+    const fits = f != null ? [f] : (j.needF && j.fits.length ? j.fits : [null]);
+    let best = null;
+    for(const fk of fits){
+      const pool = demoOptions(p, g, fk);
+      if(!pool.length) continue;
+      for(const k of [...new Set(pool.map((r) => styleOf(p, r, pool)))]){
+        for(const r of representatives(pool.filter((x) => styleOf(p, x, pool) === k), pool)){
+          const v = rowPrice(r);
+          if(v != null && (best == null || v < best)) best = v;
+        }
+      }
+    }
+    return best;
+  };
 
   /* Three is the whole point. A weight family cannot exceed it; the type-led
      families can, and the rest wait behind one button. */
@@ -7886,13 +7997,13 @@ function demoSteps(p){
   const out = [];
   if(j.needG) out.push(step('g', nextN(), 'Who wears it', c.g ? genderName(c.g) : null,
       GENDERS.map(x => x.k).filter(k => j.genders.includes(k)).map(k => {
-        const rs = demoOptions(p, k, null); const lo = lowest(rs);
+        const lo = lowReach(k, null);
         return chip(c.g === k, 'dGender', k, genderName(k),
           lo != null ? 'From ' + money(lo) : 'Price on request', false); }).join('')));
 
   if(j.needF) out.push(step('f', nextN(), 'Fit', c.f ? fitName(c.f) : null,
       FITS.map(x => x.k).filter(k => j.fits.includes(k)).map(k => {
-        const rs = demoOptions(p, c.g, k); const lo = lowest(rs);
+        const rs = demoOptions(p, c.g, k); const lo = lowReach(c.g, k);
         return chip(c.f === k, 'dFit', k, fitName(k),
           !rs.length ? 'Not in this cut' : lo != null ? 'From ' + money(lo) : 'Price on request',
           !rs.length); }).join('')));
