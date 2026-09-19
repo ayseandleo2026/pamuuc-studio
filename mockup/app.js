@@ -606,8 +606,14 @@ function quoteLines(p, rc, cfg){
     /* §12: the first placement is included when it is one of the eligible
        methods at an eligible size, a paid upgrade when it is not, and every
        later placement is charged in full whatever it is. */
-    const extra = placementPrice(rc, pl, qty, i) || 0;
-    if(methodQuoteOnly(rc, pl.method)){
+    /* null is NOT zero here. placementPrice returns 0 for the included
+       placement, which is genuinely free, and null when we hold no cost for
+       that method at that quantity — screen print below ten pieces has no
+       cost in the rate card at all. Treating the two alike made a screen
+       print on an order of five silently free. */
+    const priced = placementPrice(rc, pl, qty, i);
+    const extra = priced || 0;
+    if(methodQuoteOnly(rc, pl.method) || priced === null){
       /* no rate exists for this one yet, and a placement that prices to zero
          would read as included rather than as unanswered */
       out.lines.push({
@@ -8086,6 +8092,9 @@ function pubProduct(id){
      allowance — and so showed "+€0.09" on a small embroidery that the quote
      itself was charging nothing for. One rule, one answer. */
   const extraFor = (pl, i) => placementPrice(rc, pl, cfg.qty, i) || 0;
+  /* whether we can price it at all, kept apart from what it costs */
+  const pricedFor = (pl, i) => !rc || methodQuoteOnly(rc, pl.method)
+    ? false : placementPrice(rc, pl, cfg.qty, i) !== null;
 
   return pubShell(`
   <section class="pub-sec pub-sec--flush pdp-sec">
@@ -8234,8 +8243,9 @@ function pubProduct(id){
                     ${P_POS.map(x => `<option value="${x}" ${x===pl.pos?'selected':''}
                       ${used.includes(x)&&x!==pl.pos?'disabled':''}>${esc(S.positions_lib[x]||x)}</option>`).join('')}
                   </select>`;
+              const canPrice = pricedFor(pl, i);
               const cost = `<span class="t-sm num ${extra>0.004?'':'muted'}">${
-                    extra>0.004?'+'+money(extra):'included'}</span>`;
+                    !canPrice ? 'quoted' : extra>0.004 ? '+'+money(extra) : 'included'}</span>`;
               return `
               <div class="${solo ? 'place-flat' : 'place-card'}">
                 ${solo ? `<div class="orow"><span class="opt-lbl">Placement</span>
@@ -8456,7 +8466,10 @@ const FLATS = {
   pants: {
     front: 'M36 16 L84 16 L88 60 L80 142 L64 142 L60 74 L56 142 L40 142 L32 60 Z',
     back:  'M36 16 L84 16 L88 60 L80 142 L64 142 L60 74 L56 142 L40 142 L32 60 Z',
-    f: {left_chest:[44,32], pocket:[44,46], left_leg:[46,104], right_leg:[74,104], hem:[46,134]},
+    /* the waistband mark and the pocket were 14 units apart with a 9-unit
+       radius each, so the two dots touched; the pocket moves to the other hip
+       where it is on a real pair anyway */
+    f: {left_chest:[44,30], pocket:[76,50], left_leg:[46,104], right_leg:[74,104], hem:[46,134]},
     b: {back:[60,34], nape:[60,20]},
   },
   acc: {
@@ -15676,19 +15689,26 @@ const canonicalFor = (r) => {
   if(r.page === 'merch')       return M + '/';
   if(r.page === 'products')    return M + '/products/';
   if(r.page === 'collections') return M + '/collections/';
-  if(r.page === 'collection')  return M + '/' + merchSlug(catFromSlug(r.params.id) || r.params.id) + '/';
+  /* These four described a site that was never built. A product lives at
+     /merchandise/products/<id-slug>/ and a collection at
+     /merchandise/collections/<slug>/ — tools/merch-routes.mjs is what decides,
+     and this has to agree with it. It did not, so every product page published
+     an og:url pointing at /merchandise/t-shirts/custom-t-shirt/, an address
+     that has never existed. The canonical and the hreflang set escaped only
+     because the runtime shim rewrites them afterwards; og:url it does not. */
+  if(r.page === 'collection')  return M + '/collections/' + (r.params.id || '') + '/';
   if(r.page === 'product'){
     const pr = by(S.merchProducts, r.params.id);
     if(!pr) return M + '/products/';
-    /* The supplied handles are category-shaped ("t-shirts" inside T-shirts),
-       so the product slug comes from its name instead: it cannot collide with
-       the category above it, and it carries the term people search for. */
-    return M + '/' + merchSlug(pr.cat) + '/' + merchSlug(pr.name) + '/';
+    return M + '/products/' + String(pr.id).replace(/^m_/, '').replace(/_/g, '-') + '/';
   }
-  if(r.page === 'method')    return M + '/personalisation/';
+  if(r.page === 'method')    return M + '/how-it-works/';
   if(r.page === 'howto')     return M + '/how-to-order/';
   if(r.page === 'quote')     return M + '/quote/';
-  if(r.page === 'build')     return M + '/find-a-product/';
+  /* the guided builder is scoped to a family; with none named there is no
+     page to point at, so the merchandise home is the honest canonical */
+  if(r.page === 'build')     return r.params.id
+    ? M + '/build/' + merchSlug(catFromSlug(r.params.id) || r.params.id) + '/' : M + '/';
   if(r.page === 'merchhelp') return M + '/help/';
   return o + '/';
 };

@@ -352,10 +352,19 @@ export function buildMerch({ ROOT, site, LOCALES, intakeEndpoint }) {
       /* The picture the page actually leads with, so the markup points at the
          same image a reader sees rather than a different one. */
       const firstImg = (a.html.match(/<img\b[^>]*\ssrc="([^"]+)"/) || [])[1] || null;
-      /* the "From" figure the page prints, so the markup can quote the same one */
+      /* The "From" figure the page prints, so the markup can quote the same one.
+         The number is NOT one text run: moneyBig() splits the cents into their
+         own element — €11<i class="cts">.49</i> — to give the decimal point air
+         at display size. Reading up to the first non-digit therefore captured
+         "11" and every one of the 29 priced products advertised a whole-euro
+         lowPrice to search engines, always short by its real cents. Take the
+         whole figure and strip the markup out of it instead. */
       const printedFrom = (() => {
-        const m = /class="pdp-from"[\s\S]{0,200}?<b[^>]*>\s*€\s*([\d.,]+)/.exec(a.html);
-        return m ? Number(String(m[1]).replace(',', '.')) : null;
+        const m = /class="pdp-from"[\s\S]{0,300}?<b[^>]*>([\s\S]*?)<\/b>/.exec(a.html);
+        if (!m) return null;
+        const txt = m[1].replace(/<[^>]*>/g, '').replace(/[^\d.,]/g, '').replace(/,/g, '');
+        const n = Number(txt);
+        return Number.isFinite(n) && n > 0 ? n : null;
       })();
       const extraLD = structuredData(p, M, meta, site, loc, firstImg, (t) => {
         const d = (dicts[loc] || {}).copy;
