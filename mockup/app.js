@@ -7606,6 +7606,18 @@ function settleJourney(p){
 }
 
 const demoRow = (p, sku) => (p.matrix || []).find(r => r.sku === sku);
+/* The placements the CHOSEN garment carries, falling back to the union across
+   the range until a garment is settled. The page and the add-placement handler
+   have to read the SAME list. They did not: the page took the garment's spots
+   while the handler took the product-level union, so on a garment with fewer
+   spots than the range the handler picked one the garment does not have, the
+   guard on the way into the next render clamped it to the garment's first
+   spot, and the same spot was sold twice and three times over — each copy
+   charged, and indistinguishable in the quote. */
+const posFor = (p, sku) => {
+  const row = demoRow(p, sku);
+  return (row && row.pos && row.pos.length) ? row.pos : ((p && p.pos) || []);
+};
 const demoOptions = (p, g, f) => (p.matrix || []).filter(r => servesCut(g, r.g) && (!f || r.f === f));
 /* The price a garment is quoted at anywhere on this page is the lowest it can
    be bought at — the same figure the card that led here showed. The price of a
@@ -8025,7 +8037,7 @@ function pubProduct(id){
      them, which is what the catalogue and the filters index. */
   const P_COLS  = mRow && mRow.colours && mRow.colours.length ? mRow.colours : p.colours;
   const P_PERS  = mRow && mRow.pers    && mRow.pers.length    ? mRow.pers    : p.pers;
-  const P_POS   = mRow && mRow.pos     && mRow.pos.length     ? mRow.pos     : p.pos;
+  const P_POS   = posFor(p, cfg.sku);
   const P_SIZES = mRow && mRow.sizes   && mRow.sizes.length   ? mRow.sizes   : (p.sizes || []);
   const mReady = !p.matrix || !!demoRow(p, cfg.sku);
   /* animate only the moment it opens, not on every later keystroke */
@@ -8042,9 +8054,25 @@ function pubProduct(id){
   if(!P_COLS.includes(cfg.colour)) cfg.colour = P_COLS[0];
   /* the same guard for the placement, whose method or position may not exist
      on the garment that was just chosen */
-  cfg.placements.forEach(pl => {
+  /* Changing an earlier answer can leave a placement on a spot the newly
+     chosen garment does not have. Clamping each stray to the garment's FIRST
+     spot put them all on the same one: three placements reading "Front", the
+     dropdown showing nothing disabled because the duplicates were the
+     selection, and the quote billing every copy. So a displaced placement
+     takes the first spot not already spoken for, in order, and one that cannot
+     be placed at all is dropped rather than stacked on top of another. */
+  const taken = [];
+  const held = cfg.placements.map(pl => {
     if(!P_PERS.includes(pl.method)) pl.method = P_PERS[0];
-    if(!P_POS.includes(pl.pos))     pl.pos    = P_POS[0];
+    const ok = P_POS.includes(pl.pos) && !taken.includes(pl.pos);
+    if(ok) taken.push(pl.pos);
+    return ok;
+  });
+  cfg.placements = cfg.placements.filter((pl, i) => {
+    if(held[i]) return true;
+    const free = P_POS.find(x => !taken.includes(x));
+    if(!free) return false;
+    pl.pos = free; taken.push(free); return true;
   });
 
   /* A split cannot hold sizes the chosen garment does not come in, so changing
@@ -8109,7 +8137,12 @@ function pubProduct(id){
      itself was charging nothing for. One rule, one answer. */
   const extraFor = (pl, i) => placementPrice(rc, pl, cfg.qty, i) || 0;
   /* whether we can price it at all, kept apart from what it costs */
-  const pricedFor = (pl, i) => !rc || methodQuoteOnly(rc, pl.method)
+  /* On a garment we price by hand there is no per-piece figure for a placement
+     to be added to, and the quote panel below lists nothing at all — so a firm
+     "+EUR 0.88" on the card asserted a price that nothing on the page
+     confirmed. The decoration rate is known; what it attaches to is not, so it
+     goes back into the same quote rather than standing on its own. */
+  const pricedFor = (pl, i) => !rc || p.quoteOnly || methodQuoteOnly(rc, pl.method)
     ? false : placementPrice(rc, pl, cfg.qty, i) !== null;
 
   return pubShell(`
@@ -8313,9 +8346,15 @@ function pubProduct(id){
 
             ${canAdd ? `<div class="orow orow--add"><span></span><div><button class="lnk" data-act="addPlace">
               + Add placement ${cfg.placements.length + 1} of 3</button></div></div>`
-              : `<p class="opt-hint">${cfg.placements.length >= 3
-                  ? 'Three placements is the maximum on one garment.'
-                  : 'Every placement on this product is in use.'}</p>`}
+              : `<p class="opt-hint">${!P_POS.length
+                  /* Two products carry no placement at all. They used to fall
+                     to the sentence below and claim every placement was taken
+                     when there were none, under a step whose controls had
+                     nothing to offer. */
+                  ? 'This one is supplied plain — no logo placement is offered on it.'
+                  : cfg.placements.length >= 3
+                    ? 'Three placements is the maximum on one garment.'
+                    : 'Every placement on this product is in use.'}</p>`}
           </div>
 
           ${p.quoteOnly ? `
@@ -14728,7 +14767,7 @@ document.addEventListener('click', (e) => {
     if(a === 'pdpTab'){ UI.pdpTab = d.t; render(); return; }
     if(a === 'addPlace'){
       const p = by(S.merchProducts, UI.cfg.id);
-      const free = p.pos.find(x => !UI.cfg.placements.some(y => y.pos === x));
+      const free = posFor(p, UI.cfg.sku).find(x => !UI.cfg.placements.some(y => y.pos === x));
       if(free) UI.cfg.placements.push({pos:free, method:p.pers[0], size:'small', colours:1, art:null});
       render(); return;
     }
