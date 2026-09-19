@@ -569,6 +569,14 @@ function placementPrice(rc, pl, qty, slot){
   if(!rc) return 0;
   const free = (rc.included && rc.included.placements) || 1;
   if(slot < free && includedEligible(rc, pl)) return 0;
+  /* The public bundle ships `sell` — this same sum, done once at build time —
+     and no `cost` at all, because what we pay is not the browser's business.
+     The static build runs against the internal catalogue, where only `cost`
+     exists. Both are honoured here, and they agree by construction: `sell` IS
+     cost plus DECO_MARKUP, rounded the same way, computed by this formula in
+     tools/merch-bundle.mjs. */
+  const sell = decoCost(rc, pl.method, qty, pl.colours || 1, SIZE_MM[pl.size] || 80, 'sell');
+  if(sell && sell.unit != null) return sell.unit;
   const c = decoCost(rc, pl.method, qty, pl.colours || 1, SIZE_MM[pl.size] || 80, 'cost');
   if(!c || c.unit == null) return null;
   return Math.round(c.unit * (1 + DECO_MARKUP) * 100) / 100;
@@ -5136,7 +5144,7 @@ const GENDERS = [
   {k:'B', n:'Baby',    d:'The smallest sizes'},
 ];
 /* A product spans several garments now, so it does not HAVE one gender or one
-   fit — it offers a set of them. These used to read a Stanley/Stella style code
+   fit — it offers a set of them. These used to read a supplier style code
    off the product (p.ss[3]), which no product carries any more: every gender
    test silently returned '' and every gender filter returned nothing. */
 /* A unisex garment is cut to be worn by men and women alike, so asking for
@@ -7525,6 +7533,11 @@ const CLOTH_ANSWERS = ['Poplin', 'Oxford', 'Denim'];
    one, and it is an answer, not the absence of one. */
 const PLAIN_STYLE = 'Standard';
 function styleOf(p, r, opts){
+  /* Deriving the finish reads the supplier's own product name, which the
+     public bundle does not carry — so there it arrives already derived, and
+     the word travels instead of the name. Set only when a finish was actually
+     found, so the neckline fallback below still runs when one was not. */
+  if(r && r.finish) return r.finish;
   /* the supplier's own product type, never the materials */
   const line = String((r && r.style2) || '') + ' ' + String((r && r.style) || '');
   return pickWord(LINE_FINISHES, line)
@@ -8007,7 +8020,7 @@ function pubProduct(id){
      hand actually costs is the ladder and the ticket below. */
   const lowNow = mRow ? gLow(mRow) : catFrom(p);
   /* Colours, sizes, methods and placements belong to the garment, not to the
-     page: a Roly tee and a Stanley tee under the same heading carry different
+     page: two tees from different mills under one heading carry different
      ones. Until a garment is chosen the page shows the union across all of
      them, which is what the catalogue and the filters index. */
   const P_COLS  = mRow && mRow.colours && mRow.colours.length ? mRow.colours : p.colours;

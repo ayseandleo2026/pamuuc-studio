@@ -365,11 +365,115 @@ a[data-blk].fp,.fp{display:inline-flex;align-items:center;justify-content:center
 .mlang-row i{font-style:normal;opacity:.5}
 `;
 
+/* ============================================================================
+   What the browser is allowed to know
+   ---------------------------------------------------------------------------
+   Everything in this bundle is readable by anyone who opens a product page, so
+   the catalogue is stripped on the way in. Three things never ship:
+
+     what PAMUUC pays   every rate row carried `cost` next to `price`, and the
+                        table carried `margin`, `setupCost`, `allowance`,
+                        `labels` and `upgradeMin`. Five of those six were read
+                        by nothing at all — they were pure leak.
+
+     who makes it       every garment carried the supplier's brand, their
+                        product name and their reference code. The pages never
+                        showed any of it; it simply travelled with the data.
+
+     where it came from the generated header naming the source spreadsheet.
+
+   The runtime still needs two things those fields were feeding, so both are
+   computed HERE, by the app's own functions, and only the answers ship:
+
+     sell     the charged rate — cost + DECO_MARKUP, rounded once. The static
+              build runs against the internal catalogue and still computes it
+              from `cost`, so the two paths agree by construction rather than
+              by being kept in step by hand. `price` is overwritten with the
+              same number so the rate card and the quote cannot disagree.
+
+     finish   the one word the style question asks about ("Garment dyed",
+              "Vintage"). Deriving it needs the supplier's own product name,
+              which is exactly what does not ship — so it is derived here and
+              the word travels instead of the name.
+
+   `style2` stays. It is a plain description of the garment type — "Boxy
+   t-shirt in recycled cotton" — not a supplier product name, and it is what
+   the garment cards actually print.
+   ========================================================================= */
+const DECO_MARKUP = 0.10;
+const money2 = (n) => Math.round(n * 100) / 100;
+
+function readAssign(src, name) {
+  const key = `SEED.${name} = `;
+  const at = src.indexOf(key);
+  if (at < 0) return null;
+  const start = at + key.length;
+  let end = src.indexOf('\n', start);
+  if (end < 0) end = src.length;
+  let text = src.slice(start, end).trimEnd();
+  if (text.endsWith(';')) text = text.slice(0, -1);
+  return { start, end: start + text.length, text };
+}
+
+export function sanitiseCatalogue(src, M) {
+  const report = { rates: 0, costsDropped: 0, rows: 0, finishes: 0, fieldsDropped: 0 };
+
+  /* the finish word, from the app's own vocabulary, before the name it needs
+     is taken away */
+  const finishes = M.evalIn(`(() => {
+    const out = {};
+    S.merchProducts.forEach(p => (p.matrix || []).forEach(r => {
+      const line = String(r.style2 || '') + ' ' + String(r.style || '');
+      const w = pickWord(LINE_FINISHES, line);
+      if (w) out[r.sku] = w;
+    }));
+    return out;
+  })()`);
+
+  /* later assignment first, so the earlier one's offsets still hold */
+  const rates = readAssign(src, 'decoRatesSeed');
+  if (rates) {
+    const o = JSON.parse(rates.text);
+    delete o.margin; delete o.labels; delete o.upgradeMin;
+    if (o.included) delete o.included.allowance;
+    Object.values(o.methods || {}).forEach((m) => { delete m.setupCost; });
+    (o.rates || []).forEach((r) => {
+      report.rates++;
+      if (r.cost != null) { r.sell = money2(r.cost * (1 + DECO_MARKUP)); r.price = r.sell; report.costsDropped++; }
+      delete r.cost;
+    });
+    src = src.slice(0, rates.start) + JSON.stringify(o) + src.slice(rates.end);
+  }
+
+  const prods = readAssign(src, 'merchProducts');
+  if (prods) {
+    const list = JSON.parse(prods.text);
+    list.forEach((p) => {
+      delete p.cost;
+      (p.matrix || []).forEach((r) => {
+        report.rows++;
+        const f = finishes[r.sku];
+        if (f) { r.finish = f; report.finishes++; }
+        for (const k of ['brand', 'style', 'ref']) if (k in r) { delete r[k]; report.fieldsDropped++; }
+      });
+    });
+    src = src.slice(0, prods.start) + JSON.stringify(list) + src.slice(prods.end);
+  }
+
+  /* the generated header names the source spreadsheet */
+  src = src.replace(/^\/\*[\s\S]*?\*\/\s*/, '');
+  return { src, report };
+}
+
 export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake, covers }) {
   const mockupDir = join(ROOT, 'mockup');
-  const app = APP_FILES.map((f) => readFileSync(join(mockupDir, f), 'utf8')).join('\n;\n');
+  const app = APP_FILES.map((f) => {
+    const text = readFileSync(join(mockupDir, f), 'utf8');
+    if (f !== 'catalogue.js') return text;
+    return sanitiseCatalogue(text, M).src;
+  }).join('\n;\n');
   const table = routeTable(M, site, LOCALES);
-  return [
+  const out = [
     '/* PAMUUC merchandise — generated by tools/merch-bundle.mjs. Do not edit. */',
     packSource(manifest, covers),
     `window.__MERCH_ROUTES__ = ${JSON.stringify(table)};`,
@@ -387,4 +491,23 @@ export function merchJS({ ROOT, site, LOCALES, M, manifest, metaByUrl, intake, c
     app,
     SHIM,
   ].join('\n;\n');
+
+  /* This bundle is public. It has carried the supplier's name and PAMUUC's own
+     cost basis before now, and the way that happened was quiet: a field was
+     added upstream and simply travelled. So the finished text is searched, and
+     a build that would ship any of it fails here rather than on the website. */
+  const leaks = [
+    [/"brand":"(?!PAMUUC)/, 'a supplier brand on a garment'],
+    [/"cost":\s*[0-9]/, 'a procurement cost'],
+    [/"(setupCost|upgradeMin)"/, 'an internal pricing lever'],
+    [/"margin":\s*[0-9]/, 'the margin multiplier'],
+    [/\bSTT[UWMKB]\d{3}\b/, 'a supplier reference code'],
+    [/Stanley\s*\/\s*Stella/i, 'the supplier by name'],
+  ].filter(([re]) => re.test(out));
+  if (leaks.length) {
+    throw new Error('the public bundle would ship internal data: '
+      + leaks.map(([, what]) => what).join(', ')
+      + '\n  see sanitiseCatalogue() in tools/merch-bundle.mjs');
+  }
+  return out;
 }

@@ -139,11 +139,11 @@ const COLOURS = {
   terracotta: {name:'Terracotta',       hex:'#9C4A2F'},
   black:      {name:'Black',            hex:'#0E0E0E'},
 
-  /* ---- Stanley/Stella live palette, keyed by their colour code -----------
-     The NAME and the code are authoritative, taken from their catalogue.
-     The hex is approximated from the name for the mockup swatch only —
-     replace with Stanley/Stella's published values before a customer sees
-     one. `ss` carries the supplier code so the mapping stays traceable. */
+  /* ---- the live palette, keyed by the mill's own colour code -------------
+     The NAME and the code are authoritative, taken from the supplier
+     catalogue. The hex is approximated from the name for the mockup swatch
+     only — replace with the published values before a customer sees one.
+     `ss` carries the mill's code so the mapping stays traceable. */
   c001:    {name:'White'                   , hex:'#F7F4EE', ss:'C001'},
   c002:    {name:'Black'                   , hex:'#0E0E0E', ss:'C002'},
   c004:    {name:'Red'                     , hex:'#C0242E', ss:'C004'},
