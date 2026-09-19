@@ -5123,17 +5123,10 @@ function merchHow(ix){
    become one. The price follows every answer, because each answer removes
    styles and the cheapest of what is left changes with them.
 
-   WHO WEARS IT is real data. Stanley/Stella encode the segment in the fourth
-   character of the style code — STTU078 is unisex, STTW is women, STTM men,
-   STTK kids, STTB baby — and the naming corroborates it: every W is a
-   Stella, every M a Stanley, every K a Mini, every B a Baby. Nothing is
-   guessed.
-
-   FIT IS NOT IN THIS DATA. The supplier publishes it, but this catalogue
-   export does not carry it, so FIT_BY_STYLE below is a draft: the entries
-   are seeded from cloth weight, which correlates with fit without deciding
-   it. Replace it with the real mapping and nothing else on this page needs
-   to change — that is why it is a table and not a rule.
+   WHO WEARS IT and FIT are both real per-garment data: every row in the
+   matrix carries its own segment and its own cut, so neither is inferred
+   here. Fit used to be seeded from cloth weight and carried a note on the
+   page saying so; it no longer is, and the note is gone with it.
    ========================================================================= */
 const GENDERS = [
   {k:'U', n:'Unisex',  d:'One cut for the whole team'},
@@ -5179,8 +5172,6 @@ const FITS = [
   {k:'relaxed', n:'Relaxed fit', d:'Roomy through the body, easy shoulder'},
   {k:'heavy',   n:'Oversized',   d:'Boxy and long, deliberately loose'},
 ];
-/* Draft. Replace with the supplier's published fit per style code. */
-const FIT_BY_STYLE = {};
 function fitOf(p){ return fitsOf(p)[0] || 'regular'; }
 const fitName = (k) => (FITS.find(f => f.k === k) || {}).n || k;
 const methodLabel = (k) => ((S.personalization || {})[k] || {}).name || k;
@@ -5200,6 +5191,20 @@ function buildState(){
    products by it threw away almost everything: the weight step offered a
    single button and the style step after it had nothing left to show. */
 const gWeights = (p) => [...new Set((p.matrix || []).map(m => +m.w).filter(Boolean))];
+
+/* A weight is a property of a garment, so its price has to come from the
+   garments at that weight — not from the products that contain one. A
+   product's matrix spans the whole range (the t-shirts run 150 to 370), so
+   pricing a weight by its products handed every weight the cheapest product
+   in the category and all nine buttons read the same number. */
+const gRows  = (list, w) => list.flatMap(p => (p.matrix || []).filter(m => +m.w === +w));
+const rowLow = (rows) => {
+  let best = null;
+  rows.forEach(m => (m.breaks || []).forEach(x => {
+    if(x.price != null && (best == null || x.price < best)) best = x.price;
+  }));
+  return best;
+};
 function buildPool(b, upTo){
   let list = S.merchProducts.filter(p => p.cat === b.cat && p.status !== 'archived');
   if(upTo > 0 && b.gender) list = list.filter(p => hasGender(p, b.gender));
@@ -5259,7 +5264,7 @@ function pubBuild(cat){
   const weights = [...new Set(buildPool(b, 2).flatMap(gWeights))].sort((a, b2) => a - b2);
   const weightBody = weights.map(w => {
     const list = buildPool(b, 2).filter(p => gWeights(p).includes(w));
-    const lo = poolFrom(list);
+    const lo = rowLow(gRows(list, w));
     return buildChip(String(b.weight) === String(w), 'bWeight', String(w), w + ' g/m²',
       lo != null ? 'from ' + money(lo) : list.length + ' style' + (list.length === 1 ? '' : 's'), false);
   }).join('');
@@ -5309,9 +5314,7 @@ function pubBuild(cat){
           ${buildStep(1, 'Who wears it', 'The segment the style is cut for.', step === 0 || !b.gender,
             b.gender ? genderName(b.gender) : null, `<div class="bchs">${genderBody}</div>`)}
           ${buildStep(2, 'Fit', 'How close the cut sits to the body.', !!b.gender && !b.fit,
-            b.fit ? fitName(b.fit) : null, `<div class="bchs">${fitBody}</div>
-              <p class="bs-note bs-note--draft">Fit is not in this catalogue export. These groupings are seeded
-                from cloth weight until the supplier’s published fit is mapped in.</p>`)}
+            b.fit ? fitName(b.fit) : null, `<div class="bchs">${fitBody}</div>`)}
           ${buildStep(3, 'Weight', 'Grams per square metre. Heavier wears longer and prints differently.',
             !!b.fit && !b.weight, b.weight ? b.weight + ' g/m²' : null, `<div class="bchs">${weightBody}</div>`)}
           ${buildStep(4, chosen ? 'The style' : 'Choose the style',
