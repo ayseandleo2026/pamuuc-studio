@@ -4526,3 +4526,31 @@ main[data-branch] .pdp-step--pers{box-shadow:var(--lift-1)}
   .opop{animation:opop-in var(--dur-focus) var(--ease)}
   @keyframes opop-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 }
+
+/* ---- the placement diagram ---------------------------------------------
+   A flat of the garment with a dot on every spot it takes a mark, sitting
+   between the product and its specification. Drawn, not photographed: it
+   reads at any size, themes with the page, and costs no image request. */
+.fd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:var(--sp-7);
+  align-items:center}
+.fd-copy .eyebrow{color:var(--red)}
+.fd-copy h2{margin-top:var(--sp-2)}
+.fd-copy p{margin-top:var(--sp-3);max-width:46ch}
+.fd-key{list-style:none;margin:var(--sp-5) 0 0;padding:0;display:flex;flex-wrap:wrap;
+  gap:var(--sp-2) var(--sp-4)}
+.fd-key li{display:flex;align-items:center;gap:8px;font-size:var(--fs-sm)}
+.fd-n{width:20px;height:20px;border-radius:50%;background:var(--navy);color:var(--paper);
+  display:grid;place-items:center;font-size:var(--fs-micro);font-weight:700;flex:none}
+.fd-art{display:flex;gap:var(--sp-5);justify-content:center}
+.fd-fig{margin:0;flex:1;max-width:240px;text-align:center;color:var(--ink)}
+.fd-fig svg{width:100%;height:auto;display:block}
+.fd-fig figcaption{margin-top:var(--sp-2);font-size:var(--fs-micro);letter-spacing:.06em;
+  text-transform:uppercase;color:var(--faint)}
+.fd-pt circle{fill:var(--navy)}
+.fd-pt text{fill:var(--paper);font-size:10px;font-weight:700;
+  font-family:inherit;dominant-baseline:auto}
+@media (max-width:860px){
+  .fd{grid-template-columns:1fr;gap:var(--sp-5)}
+  .fd-art{order:-1}
+  .fd-fig{max-width:180px}
+}

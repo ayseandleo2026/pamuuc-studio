@@ -1290,7 +1290,11 @@
   "The other service": "El otro servicio",
   "What help do you need? Your colour, quantity and placements stay on the request.": "¿Qué ayuda necesita? Su color, cantidad y colocaciones se mantienen en la solicitud.",
   "Any chargeable design work is scoped and approved before it starts. We do not offer free original design or unlimited revisions.": "Cualquier trabajo de diseño facturable se define y se aprueba antes de empezar. No ofrecemos diseño original gratuito ni revisiones ilimitadas.",
-  "your configuration is kept": "se conserva su configuración"
+  "your configuration is kept": "se conserva su configuración",
+  "Where your logo can go on this one": "Dónde puede ir su logotipo en esta prenda",
+  "Every spot this garment takes a mark, front and back. One is included with the price; you choose which when you configure it.": "Todos los puntos donde esta prenda admite una marca, delante y detrás. Uno va incluido en el precio; usted elige cuál al configurarla.",
+  "includes one placement — one small embroidery or one small DTF": "incluye un posicionamiento: un bordado pequeño o un DTF pequeño",
+  "additional placement": "posicionamiento adicional"
  },
  "patterns": [
   [

@@ -536,35 +536,49 @@ function roundEnding(v){
   return Math.floor(c) + (cents < 49 ? 0.49 : (cents < 99 ? 0.99 : 1.49));
 }
 
-/* §2: the base price carries ONE placement, and the customer chooses which —
-   small or medium embroidery, or small or medium DTF. Screen print and DTG are
-   never included; choosing one is a paid upgrade even when it costs less. */
+/* WHAT A PLACEMENT COSTS.
+   ---------------------------------------------------------------------
+   One placement comes with the garment: a SMALL embroidery, or a small DTF.
+   Everything else — a bigger one, a different method, and every second and
+   third placement whatever it is — is charged at what it costs us plus ten
+   per cent, on all sizes and variations.
+
+   This replaces two older ideas at once. The rate card's selling prices were
+   built on a 40% gross margin, and the first placement was credited against a
+   €1.40 allowance rather than being free, which is where the "+€0.09" on a
+   small embroidery came from: its selling rate was €1.49 and the allowance
+   €1.40. Neither survives. Cost plus ten is the whole rule.
+
+   Money is rounded to the cent, not up to a .49/.99 ending. That ladder is for
+   garment prices, where it is a pricing device; on an 88-cent decoration line
+   it would be a 12% jump and the sum would stop being cost plus ten. */
+const DECO_MARKUP = 0.10;
+
+/* The one included placement. Small only — a medium or large of either method
+   is a paid upgrade, like any other change from the included spec. */
 function includedEligible(rc, pl){
   const inc = (rc && rc.included) || {};
   const methods = inc.methods || [];
-  const bands = inc.bands || [];
-  return methods.indexOf(pl.method) > -1 && bands.indexOf(pl.size || 'small') > -1;
+  return methods.indexOf(pl.method) > -1 && (pl.size || 'small') === 'small';
 }
 
-/* §8B: replacing the included placement is charged on the difference between
-   what the replacement costs and the allowance the base price already
-   reserved — not on the replacement's full selling rate. Excluded methods
-   carry a floor so they are never silently free. */
-function upgradeUnit(rc, pl, qty){
-  if(includedEligible(rc, pl)) return 0;
+/* The price of one placement in one slot. Slot 0 is the included one when it
+   qualifies; every other placement, and every slot after the first, is cost
+   plus ten. null means we hold no cost for it and it goes out for quoting. */
+function placementPrice(rc, pl, qty, slot){
+  if(!rc) return 0;
+  const free = (rc.included && rc.included.placements) || 1;
+  if(slot < free && includedEligible(rc, pl)) return 0;
   const c = decoCost(rc, pl.method, qty, pl.colours || 1, SIZE_MM[pl.size] || 80, 'cost');
-  const m = (rc.methods || {})[pl.method] || {};
-  const floor = m.eligible ? 0 : (rc.upgradeMin || 0);
-  if(!c || c.unit == null) return floor || null;
-  const driven = Math.max(0, c.unit - (rc.included.allowance || 0)) / (1 - (rc.margin || 0.4));
-  return Math.max(floor, driven > 0 ? roundEnding(driven) : 0);
+  if(!c || c.unit == null) return null;
+  return Math.round(c.unit * (1 + DECO_MARKUP) * 100) / 100;
 }
 
 function includedNote(rc){
   const i = rc && rc.included;
   if(!i || !i.placements) return 'personalisation priced separately';
   return 'includes ' + nWord(i.placements) + ' placement' + (i.placements === 1 ? '' : 's')
-    + ' — small or medium embroidery or DTF';
+    + ' — one small embroidery or one small DTF';
 }
 function includedShort(rc){
   const i = rc && rc.included;
@@ -573,19 +587,9 @@ function includedShort(rc){
 }
 const STD = {method:'embroidery', size:'small', colours:1};
 
-function placementUnit(rc, pl, qty){
-  const c = decoCost(rc, pl.method, qty, pl.colours || 1, SIZE_MM[pl.size] || 80);
-  return c && c.unit != null ? c.unit : 0;
-}
-/* What the list price already covers. The sheet says one placement, screen,
-   one ink colour, small — not the two the prototype used to give away. */
-/* Kept for the one caller that asks "is this slot the included one". The
-   money is now in upgradeUnit(): the old model credited the included screen
-   rate against whatever you chose, which is not what the guide describes. */
-function includedUnit(rc, qty, slot){
-  const inc = rc.included;
-  return (!inc || slot >= (inc.placements || 0)) ? 0 : (inc.allowance || 0);
-}
+/* placementUnit, includedUnit and upgradeUnit are gone with the allowance
+   model they belonged to. placementPrice above answers for all of them, and
+   it is the only thing that prices a placement now. */
 /* a method we cannot price yet — it goes on the request, not on the total */
 function methodQuoteOnly(rc, method){
   const m = rc && rc.methods && rc.methods[method];
@@ -602,8 +606,7 @@ function quoteLines(p, rc, cfg){
     /* §12: the first placement is included when it is one of the eligible
        methods at an eligible size, a paid upgrade when it is not, and every
        later placement is charged in full whatever it is. */
-    const firstSlot = i < ((rc.included && rc.included.placements) || 1);
-    const extra = firstSlot ? (upgradeUnit(rc, pl, qty) || 0) : placementUnit(rc, pl, qty);
+    const extra = placementPrice(rc, pl, qty, i) || 0;
     if(methodQuoteOnly(rc, pl.method)){
       /* no rate exists for this one yet, and a placement that prices to zero
          would read as included rather than as unanswered */
@@ -616,7 +619,7 @@ function quoteLines(p, rc, cfg){
       label: (SEED.positions_lib[pl.pos] || pl.pos),
       note: (SEED.personalization[pl.method] || {}).name + ', ' + pl.size +
             (pl.method === 'screen' ? ', ' + pl.colours + ' colour' + (pl.colours>1?'s':'') : '') +
-            (i > 1 ? ' — third placement' : ' — above the included spec'),
+            (i > 0 ? ' — additional placement' : ' — above the included spec'),
       unit: extra});
   });
 
@@ -8046,6 +8049,27 @@ function pubProduct(id){
       const u = garmentPhoto(mRow.sku, cfg.colour, view);
       if(u) return {src: u, colour: cfg.colour};
     }
+    /* Before a garment is settled the answers already given still narrow the
+       picture. Choosing "Women" and being left looking at a men's photograph
+       while every other part of the page has moved on reads as the page not
+       having heard you. Any garment matching what has been answered will do,
+       and the widest-stocked one speaks best for the range. */
+    if(cfg.g || cfg.f){
+      const pool = demoOptions(p, cfg.g, cfg.f).slice()
+        .sort((a, b) => (b.colours || []).length - (a.colours || []).length);
+      for(const r of pool){
+        /* the colour they picked, if this garment is made in it */
+        if(cfg.colour){
+          const own = garmentPhoto(r.sku, cfg.colour, view);
+          if(own) return {src: own, colour: cfg.colour};
+        }
+        const pk = garmentPicks()[r.sku];
+        if(pk){
+          const u = garmentPhoto(r.sku, pk.colour, view, pk.exact);
+          if(u) return {src: u, colour: pk.colour};
+        }
+      }
+    }
     const pick = productShot(p, view);
     if(pick) return pick;
     return {src: IM[cfg.colour] || (imgs.length ? IM[imgs[0]] : null) || PLACEHOLDER,
@@ -8057,12 +8081,11 @@ function pubProduct(id){
   const canAdd = cfg.placements.length < 3 && P_POS.some(x => !used.includes(x));
   const xp = 1;
 
-  /* cost of one placement as configured, above what the price already covers */
-  const extraFor = (pl, i) => {
-    if(!rc) return 0;
-    const full = placementUnit(rc, pl, cfg.qty);
-    return Math.max(0, full - includedUnit(rc, cfg.qty, i));
-  };
+  /* What this placement costs, asked of the same function the quote asks.
+     The page used to work it out separately — the selling rate less the
+     allowance — and so showed "+€0.09" on a small embroidery that the quote
+     itself was charging nothing for. One rule, one answer. */
+  const extraFor = (pl, i) => placementPrice(rc, pl, cfg.qty, i) || 0;
 
   return pubShell(`
   <section class="pub-sec pub-sec--flush pdp-sec">
@@ -8099,21 +8122,6 @@ function pubProduct(id){
               <button class="pdp-thumb ${c===cfg.colour?'on':''}" data-act="cfgColour" data-c="${c}"
                 aria-label="${esc(COLOURS[c]?COLOURS[c].name:c)}"><img src="${u}" alt="" loading="lazy"></button>`).join('')}
           </div>` : ''; })()}
-          <div class="place-map">
-            <div class="place-map-h">
-              <span class="fgrp-l">Where your identity goes</span>
-              <span class="t-xs muted">${cfg.placements.length} of 3</span>
-            </div>
-            <div class="place-grid">
-              ${P_POS.map(x => {
-                const ix = used.indexOf(x);
-                const full = ix === -1 && cfg.placements.length >= 3;
-                return `<button class="place-cell ${ix>-1?'on':''}" data-act="togglePlace" data-p="${x}"
-                  ${full?'disabled':''}>
-                  <span class="place-n">${ix>-1 ? ix+1 : '+'}</span>
-                  <span>${esc(S.positions_lib[x]||x)}</span></button>`;}).join('')}
-            </div>
-          </div>
         </div>
 
         <!-- what you decide -------------------------------------------- -->
@@ -8339,6 +8347,8 @@ function pubProduct(id){
     </div>
   </section>
 
+  ${placementDiagram(p)}
+
   <section class="pub-sec pub-sec--tight">
     <div class="pub-wrap">
       <div class="pdp-tabs">
@@ -8395,6 +8405,112 @@ function pubProduct(id){
     </div>
   </div>`}
   `, 'product');
+}
+
+/* WHERE THE LOGO CAN GO, DRAWN.
+   ---------------------------------------------------------------------
+   The picker that used to sit beside the photograph asked people to choose a
+   placement before they had decided on the garment, in a step numbered after
+   the one that needs it. It is gone. What is useful is the FACT — these are
+   the places this garment takes a mark — and a flat drawing says that faster
+   than five buttons do.
+
+   One outline per garment family, front and back, with a dot on each position
+   the product actually carries. Drawn rather than photographed so it reads at
+   any size, themes with the page, and costs no image request. */
+const FLAT_FAMILY = {
+  'T-shirts': 'tee', 'Polos': 'polo', 'Sweatshirts': 'sweat', 'Shirts': 'shirt',
+  'Outerwear': 'outer', 'Pants & shorts': 'pants', 'Accessories': 'acc',
+};
+const FLATS = {
+  tee: {
+    front: 'M42 16 L22 25 L10 56 L27 62 L33 49 L33 141 L87 141 L87 49 L93 62 L110 56 L98 25 L78 16 Q60 31 42 16 Z',
+    back:  'M42 16 L22 25 L10 56 L27 62 L33 49 L33 141 L87 141 L87 49 L93 62 L110 56 L98 25 L78 16 Q60 25 42 16 Z',
+    f: {front:[60,72], left_chest:[76,46], sleeve:[19,45], pocket:[45,96], hem:[60,132], cuff:[20,58]},
+    b: {back:[60,74], nape:[60,27]},
+  },
+  polo: {
+    front: 'M42 16 L22 25 L10 56 L27 62 L33 49 L33 141 L87 141 L87 49 L93 62 L110 56 L98 25 L78 16 L69 30 L60 44 L51 30 Z',
+    back:  'M42 16 L22 25 L10 56 L27 62 L33 49 L33 141 L87 141 L87 49 L93 62 L110 56 L98 25 L78 16 Q60 25 42 16 Z',
+    f: {front:[60,82], left_chest:[78,50], sleeve:[19,45], hem:[60,132], cuff:[20,58]},
+    b: {back:[60,74], nape:[60,27]},
+  },
+  sweat: {
+    front: 'M42 18 L20 28 L8 62 L26 69 L32 54 L32 142 L88 142 L88 54 L94 69 L112 62 L100 28 L78 18 Q60 36 42 18 Z',
+    back:  'M42 18 L20 28 L8 62 L26 69 L32 54 L32 142 L88 142 L88 54 L94 69 L112 62 L100 28 L78 18 Q60 28 42 18 Z',
+    f: {front:[60,78], left_chest:[77,50], sleeve:[18,50], pocket:[60,112], hem:[60,134], cuff:[19,64]},
+    b: {back:[60,78], nape:[60,30]},
+  },
+  shirt: {
+    front: 'M42 16 L22 25 L10 56 L27 62 L33 49 L33 141 L87 141 L87 49 L93 62 L110 56 L98 25 L78 16 L68 28 L60 40 L52 28 Z',
+    back:  'M42 16 L22 25 L10 56 L27 62 L33 49 L33 141 L87 141 L87 49 L93 62 L110 56 L98 25 L78 16 Q60 25 42 16 Z',
+    f: {front:[60,84], left_chest:[78,52], sleeve:[19,45], pocket:[44,58], hem:[60,132], cuff:[20,58]},
+    b: {back:[60,74], nape:[60,27]},
+  },
+  outer: {
+    front: 'M42 16 L20 26 L8 60 L26 67 L32 52 L32 142 L88 142 L88 52 L94 67 L112 60 L100 26 L78 16 Q60 28 42 16 Z M60 24 L60 142',
+    back:  'M42 16 L20 26 L8 60 L26 67 L32 52 L32 142 L88 142 L88 52 L94 67 L112 60 L100 26 L78 16 Q60 26 42 16 Z',
+    f: {front:[44,80], left_chest:[78,48], sleeve:[18,48], pocket:[42,104], hem:[44,132], cuff:[19,62]},
+    b: {back:[60,76], nape:[60,28]},
+  },
+  pants: {
+    front: 'M36 16 L84 16 L88 60 L80 142 L64 142 L60 74 L56 142 L40 142 L32 60 Z',
+    back:  'M36 16 L84 16 L88 60 L80 142 L64 142 L60 74 L56 142 L40 142 L32 60 Z',
+    f: {left_chest:[44,32], pocket:[44,46], left_leg:[46,104], right_leg:[74,104], hem:[46,134]},
+    b: {back:[60,34], nape:[60,20]},
+  },
+  acc: {
+    front: 'M34 40 L86 40 L92 142 L28 142 Z M46 40 Q46 18 60 18 Q74 18 74 40',
+    back:  'M34 40 L86 40 L92 142 L28 142 Z',
+    f: {front:[60,92], left_chest:[46,62], pocket:[60,118]},
+    b: {back:[60,92]},
+  },
+};
+function flatView(shape, map, pos, startAt){
+  const pts = pos.filter((x) => map[x]);
+  if(!pts.length) return null;
+  return {
+    svg: `<svg viewBox="0 0 120 158" role="img" aria-hidden="true" focusable="false">
+      <path d="${shape}" fill="none" stroke="currentColor" stroke-width="2.4"
+        stroke-linejoin="round" stroke-linecap="round" opacity=".55"/>
+      ${pts.map((x, i) => {
+        const [cx, cy] = map[x];
+        return `<g class="fd-pt"><circle cx="${cx}" cy="${cy}" r="9"/>
+          <text x="${cx}" y="${cy + 3.4}" text-anchor="middle">${startAt + i + 1}</text></g>`;
+      }).join('')}
+    </svg>`,
+    pts,
+  };
+}
+function placementDiagram(p){
+  const lib = S.positions_lib || {};
+  const pos = (p.pos || []).filter((x) => lib[x]);
+  if(!pos.length) return '';
+  const flat = FLATS[FLAT_FAMILY[p.cat] || 'tee'];
+  const front = flatView(flat.front, flat.f, pos, 0);
+  const back = flatView(flat.back, flat.b, pos, front ? front.pts.length : 0);
+  const order = [...(front ? front.pts : []), ...(back ? back.pts : [])];
+  if(!order.length) return '';
+  return `
+  <section class="pub-sec pub-sec--tight fd-sec">
+    <div class="pub-wrap">
+      <div class="fd">
+        <div class="fd-copy">
+          <span class="eyebrow">Placement</span>
+          <h2 class="t-h4">Where your logo can go on this one</h2>
+          <p class="t-sm muted">Every spot this garment takes a mark, front and back. One is
+            included with the price; you choose which when you configure it.</p>
+          <ol class="fd-key">
+            ${order.map((x, i) => `<li><span class="fd-n">${i + 1}</span>${esc(lib[x])}</li>`).join('')}
+          </ol>
+        </div>
+        <div class="fd-art">
+          ${front ? `<figure class="fd-fig">${front.svg}<figcaption>Front</figcaption></figure>` : ''}
+          ${back ? `<figure class="fd-fig">${back.svg}<figcaption>Back</figcaption></figure>` : ''}
+        </div>
+      </div>
+    </div>
+  </section>`;
 }
 
 function pdpTabBody(p, decoRows){
@@ -14588,14 +14704,6 @@ document.addEventListener('click', (e) => {
       render(); return;
     }
     if(a === 'rmPlace'){ UI.cfg.placements.splice(+d.i,1); render(); return; }
-    if(a === 'togglePlace'){
-      const p = by(S.merchProducts, UI.cfg.id);
-      const ix = UI.cfg.placements.findIndex(x => x.pos === d.p);
-      if(ix > -1){ if(UI.cfg.placements.length > 1) UI.cfg.placements.splice(ix,1); }
-      else if(UI.cfg.placements.length < 3)
-        UI.cfg.placements.push({pos:d.p, method:p.pers[0], size:'small', colours:1, art:null});
-      render(); return;
-    }
     if(a === 'mHelp'){ UI.mHelp = !UI.mHelp; render(); return; }
     if(a === 'qPres'){ UI.quotePres = !UI.quotePres; render();
       toast(UI.quotePres ? 'Branded presentation added' : 'Branded presentation removed',
